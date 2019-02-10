@@ -1,0 +1,33 @@
+{
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint:latest",
+    "tslint-config-standard",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
+  "linterOptions": {
+    "exclude": [ "node_modules/**/*.ts" ]
+  },
+  "rules": {
+    "eofline": true,
+    "member-access": [true, "no-public"],
+    "ordered-imports":false,
+    "member-ordering":false,
+    "object-literal-sort-keys":false,
+    "jsx-no-lambda": false,
+    "jsx-wrap-multiline": false,
+    "jsx-boolean-value": false,
+    "jsx-no-multiline-js": false,
+    "no-submodule-imports": false,
+    "interface-name": [true, "never-prefix"],
+    "quotemark": [true, "single", "jsx-single"],
+    "no-implicit-dependencies": [true, ["routes", "components"]],
+    "typedef": [
+      true,
+      "parameter",
+      "property-declaration",
+      "member-variable-declaration"
+    ]
+  }
+}

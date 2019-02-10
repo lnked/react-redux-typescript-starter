@@ -1,0 +1,18 @@
+[production staging]
+>0.25%
+safari > 8
+not ie < 11
+not op_mini all
+
+[development]
+last 1 chrome version
+last 1 firefox version
+
+[modern]
+Firefox >= 53
+Edge >= 15
+Chrome >= 58
+iOS >= 10.1
+
+[legacy]
+> 0.25%

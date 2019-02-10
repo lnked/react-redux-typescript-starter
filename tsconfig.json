@@ -1,0 +1,41 @@
+{
+  "buildOnSave": false,
+  "compileOnSave": false,
+  "compilerOptions": {
+    "noEmit": true,
+    "allowJs": true,
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "stripInternal": true,
+    "removeComments": true,
+    "noUnusedParameters": true,
+    "preserveConstEnums": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "pretty": true,
+    "jsx": "react",
+    "lib": ["es2015", "dom"],
+    "suppressImplicitAnyIndexErrors": true,
+    "typeRoots": ["node_modules/@types"]
+  },
+  "paths": {
+    "*": ["./*"],
+    "routes/*": ["./routes/*"],
+    "components/*": ["./components/*"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "configs", "dist", "**/node_modules/*", "src/**/*.test.tsx"]
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./",
+    "baseUrl": "src",
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "dist",
+    "jsx": "react",
+    "target": "esnext",
+    "module": "commonjs",
+    "moduleResolution": "node"
+  }
+}
