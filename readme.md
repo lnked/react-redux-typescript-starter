@@ -1,14 +1,8 @@
-# react-starter
-
-An introduction to Webpack 4 for Sitepoint.
+# react-mobx-typescript-starter
 
 ```bash
-git clone git@github.com:markbrown4/webpack-demo.git
-cd webpack
-yarn
-
 # Start a development server
-yarn develop
+yarn start
 
 # Build for production
 yarn build
