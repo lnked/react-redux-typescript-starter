@@ -7,7 +7,7 @@ const { options } = require('../options');
 module.exports = {
   target: 'web',
   entry: {
-    app: './src/index.tsx'
+    app: path.resolve('src/index.tsx'),
   },
   output: {
     pathinfo: false,
@@ -21,14 +21,17 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
 
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(options.env)
+      'process.env': {
+        'NODE_ENV': JSON.stringify(options.env),
+      },
     }),
 
     new HtmlWebpackPlugin({
       title: 'React app',
+      inject: true,
       filename: 'index.html',
       template: 'public/index.html',
-      // favicon: 'public/favicon.ico',
+      PUBLIC_URL: '/',
 
       // production
       hash: false,

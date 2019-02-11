@@ -1,8 +1,10 @@
 const webpack = require('webpack')
 
 module.exports = {
+  debug: true,
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
+  noInfo: false,
   devServer: {
     hot: true,
     open: true,
@@ -11,6 +13,7 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
   ],
   module: {
     rules: [
