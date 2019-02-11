@@ -22,7 +22,7 @@
     "no-submodule-imports": false,
     "interface-name": [true, "never-prefix"],
     "quotemark": [true, "single", "jsx-single"],
-    "no-implicit-dependencies": [true, ["routes", "components"]],
+    "no-implicit-dependencies": [true, ["pages", "components"]],
     "typedef": [
       true,
       "parameter",

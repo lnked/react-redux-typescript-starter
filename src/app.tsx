@@ -1,12 +1,12 @@
 import * as React from 'react'
 import { createGlobalStyle, ThemeProvider  } from 'styled-components'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
-const Home = React.lazy(() => import(/* webpackChunkName: 'home' */ 'routes/home'));
-const About = React.lazy(() => import(/* webpackChunkName: 'about' */ 'routes/about'));
-const Topics = React.lazy(() => import(/* webpackChunkName: 'topics' */ 'routes/topics'));
-const Counter = React.lazy(() => import(/* webpackChunkName: 'counter' */ 'routes/counter'));
-const NoMatch = React.lazy(() => import(/* webpackChunkName: 'nomatch' */ 'routes/nomatch'));
+const Home = React.lazy(() => import(/* webpackChunkName: 'home' */ 'pages/home'));
+const About = React.lazy(() => import(/* webpackChunkName: 'about' */ 'pages/about'));
+const Topics = React.lazy(() => import(/* webpackChunkName: 'topics' */ 'pages/topics'));
+const Counter = React.lazy(() => import(/* webpackChunkName: 'counter' */ 'pages/counter'));
+const NoMatch = React.lazy(() => import(/* webpackChunkName: 'nomatch' */ 'pages/nomatch'));
 
 const bluegrey: string = '#2b3a44'
 
@@ -54,16 +54,19 @@ export default class App extends React.Component<{}, {}> {
               <li><Link to='/about'>About</Link></li>
               <li><Link to='/topics'>Topics</Link></li>
               <li><Link to='/counter'>Counter</Link></li>
+              <li><Link to='/error-page'>404</Link></li>
             </ul>
 
             <hr />
 
             <React.Suspense fallback={<div>Loading...</div>}>
-              <Route exact path='/' component={Home} />
-              <Route path='/about' component={About} />
-              <Route path='/topics' component={Topics} />
-              <Route path='/counter' component={Counter} />
-              <Route path='(.*)' component={NoMatch} />
+              <Switch>
+                <Route path='/' component={Home} exact />
+                <Route path='/about' component={About} />
+                <Route path='/topics' component={Topics} />
+                <Route path='/counter' component={Counter} />
+                <Route path='*' component={NoMatch} exact />
+              </Switch>
             </React.Suspense>
           </div>
         </Router>

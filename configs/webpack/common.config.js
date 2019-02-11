@@ -11,8 +11,8 @@ module.exports = {
   },
   output: {
     pathinfo: false,
-    filename: 'static/[name].[chunkhash:8].js',
-    chunkFilename: 'static/[name].[chunkhash:8].chunk.js',
+    filename: 'static/[name].[chunkhash:4].m.js',
+    chunkFilename: 'static/[name].[chunkhash:4].c.js',
     path: path.resolve(process.cwd(), 'dist'),
     publicPath: '/',
   },

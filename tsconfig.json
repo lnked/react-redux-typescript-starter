@@ -33,7 +33,7 @@
   },
   "paths": {
     "*": ["./*"],
-    "routes/*": ["./routes/*"],
+    "pages/*": ["./pages/*"],
     "components/*": ["./components/*"]
   },
   "include": ["src"],
