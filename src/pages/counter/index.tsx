@@ -8,21 +8,23 @@ export interface P {
 const StyledCounter = styled.div`
   border: 1px solid lime;
 `
+
 const Paragraph = styled.p`
   color: green;
   margin: 0;
   font-size: 1.8rem;
 `
+
 const Button = styled.button`
   padding: 5px 10px;
   background: #eee;
-  border: 1px solid rgba(#000, .1);
+  border: 1px solid rgba(#000, .1)
   border-radius: 2px;
   font: inherit;
   color: #000;
   outline: 0;
   cursor: pointer;
-  text-shadow: 0 1px 0 rgba(#000, .3), 0 1px 1px rgba(#000, .2);
+  text-shadow: 0 1px 0 rgba(#000, .3), 0 1px 1px rgba(#000, .2)
 `
 
 export default function Counter ({ initialCount = 0 }: P) {

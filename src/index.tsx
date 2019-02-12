@@ -16,6 +16,7 @@ serviceWorker.unregister()
 if (module.hot) {
   module.hot.accept()
 }
+
 // import { AppContainer } from 'react-hot-loader'
 // import React from 'react'
 // import ReactDOM from 'react-dom'
@@ -33,7 +34,6 @@ if (module.hot) {
 
 // // Webpack Hot Module Replacement API
 // if (module.hot) module.hot.accept('./components/App', () => render(App))
-
 
 // import React from 'react'
 // import ReactDOM from 'react-dom'

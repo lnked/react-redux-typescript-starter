@@ -125,6 +125,8 @@ module.exports = {
     splitChunks: {
       chunks: 'all',
       maxAsyncRequests: 20,
+      maxInitialRequests: Infinity,
+      minSize: 0,
       cacheGroups: {
         default: {
           minChunks: 2,
@@ -182,8 +184,6 @@ module.exports = {
     //   basePath: define.rs_output_path,
     //   fileName: '../webpack-manifest.json',
     // }),
-
-    new webpack.HashedModuleIdsPlugin(),
 
     ...plugins,
   ]

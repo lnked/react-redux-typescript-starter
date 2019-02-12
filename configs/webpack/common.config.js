@@ -12,12 +12,13 @@ module.exports = {
   },
   output: {
     pathinfo: false,
-    filename: 'static/[name].[chunkhash:4].m.js',
-    chunkFilename: 'static/[name].[chunkhash:4].c.js',
-    path: path.resolve(process.cwd(), 'dist'),
+    path: path.resolve(options.base, 'dist'),
+    filename: 'static/[name].[contenthash:4].m.js',
+    chunkFilename: 'static/[name].[contenthash:4].c.js',
     publicPath: '/',
   },
   plugins: [
+    new webpack.HashedModuleIdsPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
 
@@ -90,7 +91,7 @@ module.exports = {
       // utils: path.resolve(options.root, 'utils'),
       // store: path.resolve(options.root, 'store'),
       // theme: path.resolve(options.root, 'theme'),
-      routes: path.resolve(options.root, 'routes'),
+      pages: path.resolve(options.root, 'pages'),
       // config: path.resolve(options.root, 'config'),
       // typings: path.resolve(options.root, 'typings'),
       // helpers: path.resolve(options.root, 'helpers'),
@@ -103,7 +104,7 @@ module.exports = {
       // styles: path.resolve(options.root, 'assets/styles'),
       // scripts: path.resolve(options.root, 'assets/scripts'),
       // svgstore: path.resolve(options.root, 'assets/svgstore'),
-      'styled-components': path.resolve(process.cwd(), 'node_modules/styled-components'),
+      'styled-components': path.resolve(options.base, 'node_modules/styled-components'),
     },
   },
   module: {
@@ -116,7 +117,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            cacheDirectory: path.resolve(process.cwd(), '.cache'),
+            cacheDirectory: path.resolve(options.base, '.cache'),
           }
         }
       },

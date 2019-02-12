@@ -1,12 +1,12 @@
 import * as React from 'react'
-import { createGlobalStyle, ThemeProvider  } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
-const Home = React.lazy(() => import(/* webpackChunkName: 'home' */ 'pages/home'));
-const About = React.lazy(() => import(/* webpackChunkName: 'about' */ 'pages/about'));
-const Topics = React.lazy(() => import(/* webpackChunkName: 'topics' */ 'pages/topics'));
-const Counter = React.lazy(() => import(/* webpackChunkName: 'counter' */ 'pages/counter'));
-const NoMatch = React.lazy(() => import(/* webpackChunkName: 'nomatch' */ 'pages/nomatch'));
+const Home = React.lazy(() => import(/* webpackChunkName: 'home' */ 'pages/home'))
+const About = React.lazy(() => import(/* webpackChunkName: 'about' */ 'pages/about'))
+const Topics = React.lazy(() => import(/* webpackChunkName: 'topics' */ 'pages/topics'))
+const Counter = React.lazy(() => import(/* webpackChunkName: 'counter' */ 'pages/counter'))
+const NoMatch = React.lazy(() => import(/* webpackChunkName: 'nomatch' */ 'pages/nomatch'))
 
 const bluegrey: string = '#2b3a44'
 
@@ -18,9 +18,9 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-size: 1.4rem;
-    font-family: ${(p: any) => p.theme.fontFamily};
-    color: ${(p: any) => (p.theme.whiteColor ? 'white' : 'black')};
-    background-color: ${(p: any) => (p.theme.whiteColor ? 'black' : 'white')};
+    font-family: ${(p: any) => p.theme.fontFamily}
+    color: ${(p: any) => (p.theme.whiteColor ? 'white' : 'black')}
+    background-color: ${(p: any) => (p.theme.whiteColor ? 'black' : 'white')}
   }
 
   h1 {
@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h3 {
-    color: ${bluegrey};
+    color: ${bluegrey}
     margin: 0;
     font-size: 1.6rem;
   }
