@@ -8,6 +8,8 @@ const basePath = path.resolve(__dirname, '..')
 module.exports.options = {
   env,
   root: path.resolve(basePath, 'src'),
+  dist: path.resolve(basePath, 'dist'),
+  analyze: true,
   sourceMap: false,
   compression: false,
 }

@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const { options } = require('../options');
 
@@ -20,6 +21,19 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
 
+    new CopyWebpackPlugin([
+      {
+        context: 'public',
+        from: { glob: '**/*', dot: true },
+        to: options.dist,
+        force: true,
+        cache: true,
+      },
+    ], {
+      ignore: ['.gitkeep', '.DS_Store', 'index.html'],
+      copyUnmodified: true,
+    }),
+
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify(options.env),
@@ -31,7 +45,7 @@ module.exports = {
       inject: true,
       filename: 'index.html',
       template: 'public/index.html',
-      PUBLIC_URL: '/',
+      PUBLIC_URL: '/assets',
 
       // production
       hash: false,
@@ -94,10 +108,8 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
+      { test: /\.js$/, use: ['source-map-loader'], enforce: 'pre' },
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
       {
         test: /\.(ts|js)x?$/,
         exclude: /(node_modules|bower_components)/,
@@ -167,5 +179,9 @@ module.exports = {
         ]
       },
     ]
-  }
+  },
+  // externals: {
+  //   'react': 'React',
+  //   'react-dom': 'ReactDOM'
+  // },
 }

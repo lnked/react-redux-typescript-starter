@@ -16,10 +16,10 @@ serviceWorker.unregister()
 if (module.hot) {
   module.hot.accept()
 }
-// import { AppContainer } from 'react-hot-loader';
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import App from './components/App';
+// import { AppContainer } from 'react-hot-loader'
+// import React from 'react'
+// import ReactDOM from 'react-dom'
+// import App from './components/App'
 
 // const render = Component =>
 //   ReactDOM.render(
@@ -27,21 +27,21 @@ if (module.hot) {
 //       <Component />
 //     </AppContainer>,
 //     document.getElementById('root')
-//   );
+//   )
 
-// render(App);
+// render(App)
 
 // // Webpack Hot Module Replacement API
-// if (module.hot) module.hot.accept('./components/App', () => render(App));
+// if (module.hot) module.hot.accept('./components/App', () => render(App))
 
 
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import { BrowserRouter, Switch, Route } from 'react-router-dom';
-// import App from './App';
-// import registerServiceWorker from './registerServiceWorker';
+// import React from 'react'
+// import ReactDOM from 'react-dom'
+// import { BrowserRouter, Switch, Route } from 'react-router-dom'
+// import App from './App'
+// import registerServiceWorker from './registerServiceWorker'
 
-// import Home from './layout/home/home';
+// import Home from './layout/home/home'
 
 // ReactDOM.render((
 //   <BrowserRouter>
@@ -51,5 +51,5 @@ if (module.hot) {
 //       </Switch>
 //     </App>
 //   </BrowserRouter>
-// ), document.getElementById('root'));
-// registerServiceWorker();
+// ), document.getElementById('root'))
+// registerServiceWorker()

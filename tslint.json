@@ -11,6 +11,7 @@
   },
   "rules": {
     "eofline": true,
+    "no-console": false,
     "member-access": [true, "no-public"],
     "ordered-imports":false,
     "member-ordering":false,

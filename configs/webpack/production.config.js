@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const WebpackChunkHash = require('webpack-chunk-hash');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 // const ExtractTextPlugin = require('extract-text-webpack-plugin')
 // const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -20,6 +21,14 @@ if (options.compression) {
       test: /\.js$|\.html$/,
       threshold: 10240,
       minRatio: 0.8
+    }),
+  )
+}
+
+if (options.analyze) {
+  plugins.push(
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
     }),
   )
 }

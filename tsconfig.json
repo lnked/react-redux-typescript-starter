@@ -36,6 +36,6 @@
     "pages/*": ["./pages/*"],
     "components/*": ["./components/*"]
   },
-  "include": ["src"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "configs", "dist", "**/node_modules/*", "src/**/*.test.tsx"]
 }
