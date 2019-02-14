@@ -11,9 +11,9 @@ const env = options.env || 'development'
 
 process.env.NODE_ENV = process.env.BABEL_ENV = env;
 
-console.log('handler: ', options);
-
 dotenv.init()
+
+console.log('handler: ', options, process.env.BASIC);
 
 module.exports = merge(
   common,

@@ -1,4 +1,9 @@
+const path = require('path')
 const dotenv = require('dotenv')
-const dotenvExpand = require('dotenv-expand')
+const variableExpansion = require('dotenv-expand')
 
-module.exports.init = () => dotenvExpand(dotenv.config())
+const envName = '.example'
+
+module.exports.init = () => variableExpansion(dotenv.config({
+  path: path.resolve(process.cwd(), `.env${envName}`)
+}))
