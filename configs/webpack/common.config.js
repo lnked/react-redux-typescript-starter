@@ -92,6 +92,7 @@ module.exports = {
       // store: path.resolve(options.root, 'store'),
       // theme: path.resolve(options.root, 'theme'),
       pages: path.resolve(options.root, 'pages'),
+      services: path.resolve(options.root, 'services'),
       // config: path.resolve(options.root, 'config'),
       // typings: path.resolve(options.root, 'typings'),
       // helpers: path.resolve(options.root, 'helpers'),

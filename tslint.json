@@ -28,7 +28,7 @@
     "quotemark": [true, "single", "jsx-single"],
     "arrow-parens": [true, "ban-single-arg-parens"],
     "semicolon": [true, "never", "ignore-interfaces"],
-    "no-implicit-dependencies": [true, ["pages", "components"]],
+    "no-implicit-dependencies": [true, ["pages", "services", "components"]],
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
     "typedef": [
       true,

@@ -1,7 +1,14 @@
 {
   "buildOnSave": false,
-  "compileOnSave": false,
+  "compileOnSave": true,
   "compilerOptions": {
+    "rootDir": "./",
+    "baseUrl": "src",
+    "outDir": "dist",
+    "target": "esnext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+
     "noEmit": true,
     "allowJs": true,
     "importHelpers": true,
@@ -29,11 +36,12 @@
     "jsx": "react",
     "lib": ["es2015", "dom"],
     "suppressImplicitAnyIndexErrors": true,
-    "typeRoots": ["node_modules/@types"]
+    "typeRoots": ["node_modules/@types", "typings/*"]
   },
   "paths": {
     "*": ["./*"],
     "pages/*": ["./pages/*"],
+    "services/*": ["./services/*"],
     "components/*": ["./components/*"]
   },
   "include": ["src/**/*"],
