@@ -13,7 +13,9 @@ git clone -b master https://github.com/lnked/react-mobx-typescript-starter.git .
 # OR download the latest release at: https://github.com/lnked/react-mobx-typescript-starter/releases/latest
 
 # Install
-yarn / npm i
+yarn
+# or
+npm i
 
 # Start a development server
 yarn start
