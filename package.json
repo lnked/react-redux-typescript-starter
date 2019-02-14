@@ -10,6 +10,7 @@
     "start": "webpack-dev-server --config configs/run --env development",
     "build": "env NODE_ENV=production webpack --config configs/run --env production",
     "build:display": "env NODE_ENV=production webpack --display-modules --config configs/run --env production",
+    "analyze": "yarn build --analyze",
     "profile": "webpack --config configs/run --env production --profile --json > stats.json",
     "lint": "tslint -p tsconfig.json 'src/**/*.{ts,tsx}'",
     "lint:fix": "yarn lint --fix",

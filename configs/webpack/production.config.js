@@ -9,7 +9,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 // const ExtractTextPlugin = require('extract-text-webpack-plugin')
 // const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-const { options } = require('../options');
+const options = require('../options');
 
 const plugins = []
 
