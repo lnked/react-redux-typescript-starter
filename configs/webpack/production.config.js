@@ -56,16 +56,6 @@ module.exports = {
     ]
   },
   optimization: {
-    minimizer: [
-      new TerserPlugin({
-        test: /\.js(\?.*)?$/i,
-        cache: true,
-        parallel: true,
-        sourceMap: options.sourceMap, // Must be set to true if using source-maps in production
-        extractComments: false,
-        terserOptions,
-      }),
-    ],
     minimize: true,
     chunkIds: 'named',
     nodeEnv: 'production',
@@ -101,8 +91,24 @@ module.exports = {
         },
       },
     },
+    minimizer: [
+      new TerserPlugin({
+        test: /\.js(\?.*)?$/i,
+        cache: true,
+        parallel: true,
+        sourceMap: options.sourceMap, // Must be set to true if using source-maps in production
+        extractComments: false,
+        terserOptions,
+      }),
+    ],
   },
   plugins: [
+    new webpack.HashedModuleIdsPlugin({
+      hashFunction: 'md4',
+      hashDigest: 'base64',
+      hashDigestLength: 5,
+    }),
+
     new CleanWebpackPlugin(['dist'], {
       root: process.cwd(),
       verbose: false,
@@ -135,7 +141,7 @@ module.exports = {
 
     new webpack.optimize.ModuleConcatenationPlugin(),
 
-    new webpack.IgnorePlugin(/^\.\/locale\/(en|ru)\.js$/, /moment$/),
+    // new webpack.IgnorePlugin(/^\.\/locale\/(en|ru)\.js$/, /moment$/),
 
     new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en|ru/),
 

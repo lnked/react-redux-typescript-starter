@@ -22,4 +22,5 @@ module.exports = {
   publicPath,
   sourceMap: false,
   compression: false,
+  cacheDirectory: path.resolve(base, '.cache'),
 }
