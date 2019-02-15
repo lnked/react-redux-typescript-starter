@@ -46,8 +46,6 @@ module.exports = function (api) {
 
   // const overrides = []
 
-  // const sourceMaps = production
-
   // const env = getEnv()
 
   return {
@@ -96,7 +94,6 @@ module.exports = function (api) {
         ]
       }],
     ],
-    sourceMaps: true,
     overrides: [
       {
         test: ['./src/**/*.ts'],
@@ -114,10 +111,9 @@ module.exports = function (api) {
     ],
     env: {
       test: {
-        presets: ['@babel/preset-env', '@babel/preset-react'],
+        presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
         plugins: [
           '@babel/plugin-transform-runtime',
-          // 'dynamic-import-node',
           '@babel/plugin-syntax-dynamic-import',
           '@babel/plugin-proposal-object-rest-spread',
           '@babel/plugin-proposal-class-properties',
@@ -127,7 +123,7 @@ module.exports = function (api) {
       },
     },
     ignore: [],
-    // comments: true,
+    // comments: false,
     // ignore: ignore.filter(Boolean),
     // presets: presets.filter(Boolean),
     // plugins: plugins.filter(Boolean),

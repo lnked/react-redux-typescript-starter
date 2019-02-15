@@ -29,7 +29,7 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "strictNullChecks": true,
     "strict": true,
     "pretty": true,
