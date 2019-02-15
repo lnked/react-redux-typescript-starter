@@ -10,5 +10,5 @@ export default function Example (props: any) {
       <Modal />
       <Container />
     </Provider>
-  );
+  )
 }

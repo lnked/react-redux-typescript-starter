@@ -29,9 +29,11 @@ module.exports = function (api) {
   // const web = api.caller((caller) => Boolean(caller && caller.target === 'web'))
   // const babel = api.caller((caller) => Boolean(caller && caller.name === 'babel-loader'))
 
-  // const test = api.env('test')
-  // const production = api.env('production')
-  // const development = api.env('development')
+  const test = api.env('test')
+  const production = api.env('production')
+  const development = api.env('development')
+
+  console.log('is: ', { development, production, test })
 
   // const loose = true
   // const legacy = true
@@ -58,7 +60,9 @@ module.exports = function (api) {
           node: 'current',
         },
       }],
-      '@babel/preset-react',
+      ['@babel/preset-react', {
+        development,
+      }],
       '@babel/preset-typescript',
     ],
     plugins: [
@@ -69,6 +73,8 @@ module.exports = function (api) {
       '@babel/plugin-proposal-object-rest-spread',
       ['@babel/plugin-proposal-decorators', { legacy: true }],
       ['@babel/plugin-proposal-class-properties', { loose: true }],
+      '@babel/plugin-proposal-export-default-from',
+      '@babel/plugin-proposal-export-namespace-from',
       // ['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }],
       '@babel/plugin-transform-react-constant-elements',
       '@babel/plugin-transform-react-inline-elements',
@@ -92,6 +98,36 @@ module.exports = function (api) {
       }],
     ],
     sourceMaps: true,
+    overrides: [
+      {
+        test: ['./src/**/*.ts'],
+        presets: [
+          '@babel/preset-typescript',
+          [
+            '@babel/preset-env',
+            {
+              modules: false,
+            },
+          ],
+          '@babel/preset-react',
+        ],
+      },
+    ],
+    env: {
+      test: {
+        presets: ['@babel/preset-env', '@babel/preset-react'],
+        plugins: [
+          '@babel/plugin-transform-runtime',
+          // 'dynamic-import-node',
+          '@babel/plugin-syntax-dynamic-import',
+          '@babel/plugin-proposal-object-rest-spread',
+          '@babel/plugin-proposal-class-properties',
+          '@babel/plugin-proposal-export-default-from',
+          '@babel/plugin-proposal-export-namespace-from',
+        ],
+      },
+    },
+    ignore: [],
     // comments: true,
     // ignore: ignore.filter(Boolean),
     // presets: presets.filter(Boolean),

@@ -13,8 +13,8 @@ class Provider extends React.Component<{}, {}> {
 
   toggleModal = () => this.setState(state => ({ isOpenModal: !state.isOpenModal }))
 
-  render() {
-    const { options, children } = this.props;
+  render () {
+    const { options, children } = this.props
 
     return (
       <CropContext.Provider
@@ -32,4 +32,4 @@ class Provider extends React.Component<{}, {}> {
 
 }
 
-export default Provider;
+export default Provider

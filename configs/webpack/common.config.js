@@ -16,7 +16,7 @@ module.exports = {
   },
   output: {
     pathinfo: false,
-    path: path.resolve(options.base, 'dist'),
+    path: path.resolve(options.root, 'dist'),
     filename: 'static/[name].[contenthash:4].m.js',
     chunkFilename: 'static/[name].[contenthash:4].c.js',
     publicPath: '/',

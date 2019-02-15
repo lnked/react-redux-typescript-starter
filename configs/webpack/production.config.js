@@ -110,7 +110,7 @@ module.exports = {
     }),
 
     new CleanWebpackPlugin(['dist'], {
-      root: process.cwd(),
+      root: options.root,
       verbose: false,
     }),
 

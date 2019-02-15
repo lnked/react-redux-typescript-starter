@@ -15,4 +15,4 @@ class Container extends React.Component<{}, {}> {
 
 }
 
-export default withContext(Container);
+export default withContext(Container)
