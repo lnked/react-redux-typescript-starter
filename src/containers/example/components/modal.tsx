@@ -2,7 +2,7 @@ import * as React from 'react'
 // import ReactCrop from 'react-image-crop'
 // import Modal from 'react-modal'
 
-import withContext from './context/hoc'
+import { withContext } from './context/hoc'
 
 class ModalEditor extends React.Component<{}, {}> {
 

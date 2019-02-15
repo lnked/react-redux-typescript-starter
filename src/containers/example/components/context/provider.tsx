@@ -1,32 +1,42 @@
 import * as React from 'react'
 
-import CropContext from './context'
+import { Context } from './context'
 
-class Provider extends React.Component<{}, {}> {
+export interface Props {
+  options: any;
+  children: any;
+}
+
+export interface State {
+  isOpenModal: boolean;
+  imageSource: string | null;
+}
+
+class Provider extends React.Component<Props, State> {
 
   state = {
+    imageSource: '',
     isOpenModal: false,
-    imageSource: null,
   }
 
-  uploadImage = imageSource => this.setState({ imageSource, isOpenModal: true })
+  // uploadImage = (imageSource: string) => this.setState({ imageSource, isOpenModal: true })
 
-  toggleModal = () => this.setState(state => ({ isOpenModal: !state.isOpenModal }))
+  // toggleModal = () => this.setState(state => ({ isOpenModal: !state.isOpenModal }))
 
   render () {
     const { options, children } = this.props
 
+    const props = {
+      ...this.state,
+      options,
+      // toggleModal: this.toggleModal,
+      // uploadImage: this.uploadImage,
+    }
+
     return (
-      <CropContext.Provider
-        value={{
-          ...this.state,
-          options,
-          toggleModal: this.toggleModal,
-          uploadImage: this.uploadImage,
-        }}
-      >
+      <Context.Provider value={props}>
         {children}
-      </CropContext.Provider>
+      </Context.Provider>
     )
   }
 

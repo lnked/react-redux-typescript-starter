@@ -1,14 +1,14 @@
 import * as React from 'react'
 
-const CropContext = React.createContext({
-  imageSource: null,
+const initialState = {
+  imageSource: '',
   isOpenModal: false,
-  uploadImage: () => {
-    console.log('uploadImage')
+  uploadImage: (source: string) => {
+    return (initialState.imageSource = source)
   },
   toggleModal: () => {
-    console.log('toggleModal')
+    return (initialState.isOpenModal = !initialState.isOpenModal)
   },
-})
+}
 
-export default CropContext
+export const Context = React.createContext(initialState)

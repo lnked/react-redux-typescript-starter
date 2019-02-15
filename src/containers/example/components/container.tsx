@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import withContext from './context/hoc'
+import { withContext } from './context/hoc'
 import UploadButton from './upload-button'
 
 class Container extends React.Component<{}, {}> {

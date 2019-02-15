@@ -1,13 +1,13 @@
 import * as React from 'react'
 
-import CropContext from './context'
+import { Context } from './context'
 
-export default function withContext (Component) {
-  return function ContextComponent (props) {
+export const withContext = <P extends object>(Component: React.ComponentType<P>) => {
+  return function ContextComponent (props: P) {
     return (
-      <CropContext.Consumer>
-        {context => <Component {...props} {...context} />}
-      </CropContext.Consumer>
+      <Context.Consumer>
+        {context => <Component {...props as P} {...context} />}
+      </Context.Consumer>
     )
   }
 }
