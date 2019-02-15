@@ -6,11 +6,10 @@ module.exports = function (api) {
   // api.cache(true);
 
   // Don't cache at all. Not recommended because it will be very slow.
-  api.cache(false);
+  // api.cache(false);
 
   // // Cached based on the value of some function. If this function returns a value different from
   // // a previously-encountered value, the plugins will re-evaluate.
-  // var env = api.cache(() => process.env.NODE_ENV);
 
   // // If testing for a specific env, we recommend specifics to avoid instantiating a plugin for
   // // any possible NODE_ENV value that might come up during plugin execution.
@@ -73,8 +72,8 @@ module.exports = function (api) {
       '@babel/plugin-proposal-object-rest-spread',
       ['@babel/plugin-proposal-decorators', { legacy: true }],
       ['@babel/plugin-proposal-class-properties', { loose: true }],
-      '@babel/plugin-proposal-export-default-from',
-      '@babel/plugin-proposal-export-namespace-from',
+      // '@babel/plugin-proposal-export-default-from',
+      // '@babel/plugin-proposal-export-namespace-from',
       // ['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }],
       '@babel/plugin-transform-react-constant-elements',
       '@babel/plugin-transform-react-inline-elements',
