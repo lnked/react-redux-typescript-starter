@@ -18,7 +18,8 @@ module.exports = {
     pathinfo: false,
     path: path.resolve(options.root, 'dist'),
     filename: 'static/[name].[contenthash:4].m.js',
-    chunkFilename: 'static/[name].[contenthash:4].c.js',
+    chunkFilename: 'static/[name].[chunkhash].c.js',
+    // chunkFilename: 'static/[name].[contenthash:4].c.js',
     publicPath: '/',
   },
   plugins: [

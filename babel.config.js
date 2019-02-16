@@ -12,15 +12,16 @@ module.exports = function (api) {
 
   const loose = false
   const legacy = true
+  const comments = true // webpackChunkName doesn't work if the value is false
   const targets = !web ? { node: 'current' } : undefined
   const modules = babel ? false : 'commonjs'
   const useBuiltIns = web ? 'usage' : undefined
 
   return {
+    comments,
     presets: presets({ development, production, test, loose, useBuiltIns, modules, targets }),
     plugins: plugins({ development, production, test, loose, legacy }),
     overrides: overrides({ development, production, test }),
-    comments: false,
     ignore: [],
   }
 }
