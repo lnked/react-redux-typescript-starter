@@ -51,7 +51,7 @@ module.exports = {
       inject: true,
       filename: 'index.html',
       template: 'public/index.html',
-      PUBLIC_URL: '/assets',
+      PUBLIC_URL: '',
 
       // production
       hash: false,

@@ -5,7 +5,8 @@ import App from './app'
 
 ReactDOM.render(<App />, document.getElementById('app-root'))
 
-serviceWorker.unregister()
+// serviceWorker.unregister()
+serviceWorker.register({})
 
 // <Provider store={store}>
 //   <ConnectedRouter history={history}>

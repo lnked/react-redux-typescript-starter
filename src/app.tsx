@@ -2,7 +2,8 @@ import * as React from 'react'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
-const Home = React.lazy(() => import(/* webpackChunkName: "home" */ 'pages/home'))
+import Home from 'pages/home'
+// const Home = React.lazy(() => import(/* webpackChunkName: "home" */ 'pages/home'))
 const About = React.lazy(() => import(/* webpackChunkName: "about" */ 'pages/about'))
 const Topics = React.lazy(() => import(/* webpackChunkName: "topics" */ 'pages/topics'))
 const Counter = React.lazy(() => import(/* webpackChunkName: "counter" */ 'pages/counter'))
@@ -61,13 +62,13 @@ export default class App extends React.Component<{}, {}> {
 
             <React.Suspense fallback={<div>Loading...</div>}>
               <Switch>
-                {/* <Route path='/' component={Home} exact /> */}
+                <Route path='/' component={Home} exact />
                 {/* <Route path='/about' component={About} /> */}
                 {/* <Route path='/topics' component={Topics} /> */}
                 {/* <Route path='/counter' component={Counter} /> */}
                 {/* <Route path='*' component={NoMatch} exact /> */}
 
-                <Route path='/' render={(props: any) => <Home {...props} />} exact />
+                {/* <Route path='/' render={(props: any) => <Home {...props} />} exact /> */}
                 <Route path='/about' render={(props: any) => <About {...props} />} />
                 <Route path='/topics' render={(props: any) => <Topics {...props} />} />
                 <Route path='/counter' render={(props: any) => <Counter {...props} />} />
