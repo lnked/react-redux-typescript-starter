@@ -2,7 +2,7 @@ const { cacheDirectory } = require('../options');
 
 module.exports = () => {
   return {
-    loader: 'json-loader',
+    loader: 'html-loader',
     options: {}
   };
 }

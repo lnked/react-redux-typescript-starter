@@ -1,5 +1,5 @@
-import cache from '../loaders/cache'
-import babel from '../loaders/babel'
+const cache = require('../loaders/cache-loader')
+const babel = require('../loaders/babel-loader')
 
 module.exports = {
   test: /\.(ts|js)x?$/,

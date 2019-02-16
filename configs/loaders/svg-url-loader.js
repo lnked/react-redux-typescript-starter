@@ -1,10 +1,11 @@
 const { cacheDirectory } = require('../options');
+// const marked = require('marked');
+// const renderer = new marked.Renderer();
 
 module.exports = () => {
   return {
-    loader: 'babel-loader',
+    loader: 'svg-url-loader',
     options: {
-      cacheDirectory,
     }
   };
 }
