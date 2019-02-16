@@ -1,5 +1,7 @@
 node_modules
 dist
+fabfile.py
+fabfile.pyc
 examples
 .DS_Store
 .cache
