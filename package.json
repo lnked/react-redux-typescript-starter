@@ -40,8 +40,10 @@
       "pre-push": "yarn ci"
     }
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react"
+  ],
+  "author": "Edik Bulikyan <ed.proff@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "7.2.3",
