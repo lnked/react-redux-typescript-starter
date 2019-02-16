@@ -28,7 +28,7 @@ module.exports = {
       babelConfig: false,
       diagnostics: false,
       enableInternalCache: true,
-      disableSourceMapSupport: true,
+      disableSourceMapSupport: false,
       ignoreCoverageForDecorators: false,
       ignoreCoverageForAllDecorators: true,
       useExperimentalLanguageServer: false,

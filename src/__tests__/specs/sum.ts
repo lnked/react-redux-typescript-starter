@@ -1,4 +1,5 @@
 import { sum } from '../../sum'
+
 test('summ without props', () => {
   expect(sum()).toBe(0)
 })

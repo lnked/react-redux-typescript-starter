@@ -1,5 +1,5 @@
 [production staging]
->0.25%
+> 0.25%
 safari > 8
 not ie < 11
 not op_mini all

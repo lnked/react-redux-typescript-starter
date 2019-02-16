@@ -86,8 +86,6 @@
     "dotenv": "6.2.0",
     "dotenv-expand": "4.2.0",
     "duplicate-package-checker-webpack-plugin": "3.0.0",
-    "enzyme": "3.8.0",
-    "enzyme-adapter-react-16": "1.9.1",
     "enzyme-to-json": "3.3.5",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "file-loader": "3.0.1",
@@ -98,7 +96,6 @@
     "lint-staged": "8.1.4",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "react-hot-loader": "4.6.5",
-    "react-test-renderer": "16.8.2",
     "size-limit": "0.21.1",
     "source-map-loader": "0.2.4",
     "terser-webpack-plugin": "1.2.2",
@@ -116,10 +113,13 @@
     "webpack-merge": "4.2.1"
   },
   "dependencies": {
+    "enzyme": "3.8.0",
+    "enzyme-adapter-react-16": "1.9.1",
     "react": "16.8.2",
     "react-dom": "16.8.2",
     "react-loading-skeleton": "1.0.0",
     "react-router-dom": "4.3.1",
+    "react-test-renderer": "16.8.2",
     "storage.io": "1.2.0",
     "styled-components": "4.1.3"
   }
