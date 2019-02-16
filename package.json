@@ -1,6 +1,6 @@
 {
   "name": "react-mobx-typescript-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,7 @@
     "pretest": "cross-env NODE_ENV=test yarn lint",
     "test": "jest",
     "test:watch": "yarn test -- --watch",
+    "ci": "yarn test & yarn typecheck & yarn lint",
     "a": "rm -rf ./dist/test && node ./component.js"
   },
   "size-limit": [
@@ -35,7 +36,8 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn ci"
     }
   },
   "keywords": [],
