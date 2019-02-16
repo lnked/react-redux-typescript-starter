@@ -12,6 +12,7 @@
   "rules": {
     "eofline": true,
     "import-name": false,
+    "no-default-export": false,
     "no-console": false,
     "trailing-comma": true,
     "member-access": [true, "no-public"],

@@ -1,19 +1,16 @@
-const webpack = require('webpack')
+const webpack = require("webpack");
 
 module.exports = {
-  debug: true,
-  mode: 'development',
-  devtool: 'cheap-module-eval-source-map',
-  noInfo: false,
+  mode: "development",
+  devtool: "cheap-module-eval-source-map",
   devServer: {
     hot: true,
     open: true,
-    contentBase: './dist',
+    contentBase: "./dist",
     historyApiFallback: true,
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
   ],
   module: {
     rules: [
@@ -29,6 +26,6 @@ module.exports = {
       //     }
       //   ]
       // }
-    ]
-  }
-}
+    ],
+  },
+};
