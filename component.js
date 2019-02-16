@@ -1,13 +1,13 @@
-const fs = require('fs')
-const path = require('path')
+const fs = require("fs");
+const path = require("path");
 
-const dir = path.resolve(__dirname, 'dist', 'test')
+const dir = path.resolve(__dirname, "dist", "test");
 
 const files = [
-  'index.tsx',
-  'index.test.tsx',
-  'styles.ts',
-]
+  "index.tsx",
+  "index.test.tsx",
+  "styles.ts",
+];
 
 const getContent = ({ name, ComponentName }) => {
   return [
@@ -20,11 +20,11 @@ const getContent = ({ name, ComponentName }) => {
     `\t}\n`,
     `}\n`,
     `export default ${ComponentName}\n`,
-  ].join('\n').replace(/\t/g, '  ')
-}
+  ].join("\n").replace(/\t/g, "  ");
+};
 
-fs.mkdirSync(dir)
+fs.mkdirSync(dir);
 
 files.forEach(name => {
-  fs.writeFileSync(path.resolve(dir, name), getContent({ name, ComponentName: 'App' }))
-})
+  fs.writeFileSync(path.resolve(dir, name), getContent({ name, ComponentName: "Checkbox" }));
+});
