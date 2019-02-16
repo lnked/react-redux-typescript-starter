@@ -7,3 +7,4 @@ examples
 .cache
 yarn-*
 readme.todo
+**/__snapshots__/**
