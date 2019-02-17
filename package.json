@@ -116,7 +116,7 @@
     "webpack-merge": "4.2.1"
   },
   "dependencies": {
-    "enzyme": "3.8.0",
+    "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.9.1",
     "mobx": "5.9.0",
     "mobx-react": "5.4.3",
