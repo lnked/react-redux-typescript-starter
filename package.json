@@ -118,6 +118,8 @@
   "dependencies": {
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.9.1",
+    "mobx": "5.9.0",
+    "mobx-react": "5.4.3",
     "react": "16.8.2",
     "react-dom": "16.8.2",
     "react-loading-skeleton": "1.0.0",
