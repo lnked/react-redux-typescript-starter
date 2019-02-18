@@ -22,7 +22,7 @@
     "test:watch": "yarn test -- --watch",
     "ci": "yarn test & yarn typecheck & yarn lint",
     "b": "rm -rf ./dist/test && node ./component.js",
-    "a": "rm -rf ./dist/test && yarn analyze"
+    "a": "rm -rf ./.cache && yarn analyze"
   },
   "size-limit": [
     {
