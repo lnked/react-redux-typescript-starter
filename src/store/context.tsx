@@ -7,7 +7,7 @@ export const Context = React.createContext({
   },
 })
 
-export function Provider ({ children, defaultState }: any) {
+export default function Provider ({ children, defaultState }: any) {
   return (
     <Context.Provider value={defaultState}>
       {children}
@@ -226,4 +226,4 @@ export function Provider ({ children, defaultState }: any) {
 
 // }
 
-// export { App };
+// export default App

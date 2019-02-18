@@ -1,11 +1,11 @@
 import * as React from 'react'
 
-import { E } from '@/containers'
-import { Image } from '@/components'
+import { E } from 'containers'
+import { Image } from 'components'
 
 import { A, B, AB, AnotherBuild } from './components'
 
-export const About = () => (
+const About = () => (
   <div>
     <h2>About</h2>
     <A />
@@ -17,3 +17,5 @@ export const About = () => (
     <Image src='https://via.placeholder.com/300/09f/fff.png' alt='xxx' circle />
   </div>
 )
+
+export default About

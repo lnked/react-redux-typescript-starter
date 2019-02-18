@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export function AnotherBuild () {
+export default function AnotherBuild () {
   alert('AnotherBuild')
 
   return (

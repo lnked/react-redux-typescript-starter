@@ -12,7 +12,7 @@
   "rules": {
     "eofline": true,
     "import-name": false,
-    "no-default-export": true,
+    "no-default-export": false,
     "no-console": false,
     "trailing-comma": true,
     "member-access": [true, "no-public"],
@@ -30,8 +30,8 @@
     "semicolon": [true, "never", "ignore-interfaces"],
 
     "export-name": false,
-    "no-submodule-imports": [true, "@"],
-    "no-implicit-dependencies": [true, ["@"]],
+    "no-submodule-imports": [true, "app", "pages", "services", "fragments", "components", "containers"],
+    "no-implicit-dependencies": [true, ["app", "pages", "services", "fragments", "components", "containers"]],
     "no-import-side-effect": [true, { "ignore-module": "(\\.css)$" }],
 
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],

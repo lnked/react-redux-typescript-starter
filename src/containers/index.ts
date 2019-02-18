@@ -1,3 +1,3 @@
-export { E } from './e'
-export { F } from './f'
-export { J } from './j'
+export { default as E } from './e'
+export { default as F } from './f'
+export { default as J } from './j'

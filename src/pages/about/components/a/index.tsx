@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export function A () {
+export default function A () {
   alert('A')
 
   return (

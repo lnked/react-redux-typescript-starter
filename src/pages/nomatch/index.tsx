@@ -6,4 +6,4 @@ const NoMatch = ({ match }: any) => (
   </div>
 )
 
-export { NoMatch }
+export default NoMatch

@@ -42,4 +42,4 @@ function Counter ({ initialCount = 0 }: P) {
 
 }
 
-export { Counter }
+export default Counter

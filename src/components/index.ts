@@ -1,2 +1,2 @@
-export { Image } from './image'
-export { CheckboxWithLabel } from './checkbox'
+export { default as Image } from './image'
+export { default as CheckboxWithLabel } from './checkbox'

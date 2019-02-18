@@ -37,4 +37,4 @@ function Image ({ src, alt = '', ...attrs }: P) {
   )
 }
 
-export { Image }
+export default Image

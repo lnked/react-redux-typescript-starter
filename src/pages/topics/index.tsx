@@ -31,4 +31,4 @@ const Topics = ({ match }: any) => (
   </div>
 )
 
-export { Topics }
+export default Topics

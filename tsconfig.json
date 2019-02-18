@@ -39,12 +39,12 @@
     "typeRoots": ["node_modules/@types", "typings/*"]
   },
   "paths": {
-    "@/*": ["./*"],
-    "@/app/*": ["app/*"],
-    "@/pages/*": ["pages/*"],
-    "@/services/*": ["services/*"],
-    "@/components/*": ["components/*"],
-    "@/containers/*": ["containers/*"]
+    "*": ["./*"],
+    "app/*": ["app/*"],
+    "pages/*": ["pages/*"],
+    "services/*": ["services/*"],
+    "components/*": ["components/*"],
+    "containers/*": ["containers/*"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "configs", "dist", "**/node_modules/*", "src/**/*.test.tsx", "src/**/*.spec.tsx"]
