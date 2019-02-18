@@ -1,6 +1,9 @@
 const transform = (prefix, preventFullImport) => {
   return {
-    transform: importName => `${prefix}/${importName.toLowerCase()}`,
+    transform: importName => {
+      const name = importName.replace(/\.?([A-Z])/g, (x, y) => `-${y.toLowerCase()}`).replace(/^-/, "")
+      return `${prefix}/${name}`
+    },
     preventFullImport,
   };
 };

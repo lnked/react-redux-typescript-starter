@@ -1,3 +1,5 @@
 export { A } from './a'
 export { B } from './b'
 export { C } from './c'
+export { AB } from './a-b'
+export { AnotherBuild } from './another-build'
