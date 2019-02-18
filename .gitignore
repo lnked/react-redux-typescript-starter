@@ -5,6 +5,8 @@ fabfile.pyc
 examples
 .DS_Store
 .cache
+.vscode
+stats.json
 yarn-*
 readme.todo
 **/__snapshots__/**

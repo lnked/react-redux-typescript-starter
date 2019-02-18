@@ -16,7 +16,6 @@
     "lint:fix": "yarn lint --fix",
     "typecheck": "tsc",
     "size": "size-limit",
-    "test2": "jest --env=jsdom",
     "pretest": "cross-env NODE_ENV=test yarn lint",
     "test": "jest",
     "test:watch": "yarn test -- --watch",
