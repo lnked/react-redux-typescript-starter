@@ -21,7 +21,8 @@
     "test": "jest",
     "test:watch": "yarn test -- --watch",
     "ci": "yarn test & yarn typecheck & yarn lint",
-    "a": "rm -rf ./dist/test && node ./component.js"
+    "b": "rm -rf ./dist/test && node ./component.js",
+    "a": "rm -rf ./dist/test && yarn analyze"
   },
   "size-limit": [
     {
@@ -74,6 +75,7 @@
     "babel-loader": "8.0.5",
     "babel-plugin-module-resolver": "3.2.0",
     "babel-plugin-styled-components": "1.10.0",
+    "babel-plugin-transform-imports": "1.5.1",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "cache-loader": "2.0.1",
     "clean-webpack-plugin": "1.0.1",
@@ -89,6 +91,7 @@
     "html-loader": "0.5.5",
     "html-webpack-plugin": "3.2.0",
     "husky": "1.3.1",
+    "image-webpack-loader": "4.6.0",
     "jest": "23.5.0",
     "json-loader": "0.5.7",
     "lint-staged": "8.1.4",

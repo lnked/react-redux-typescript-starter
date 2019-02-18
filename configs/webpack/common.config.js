@@ -1,25 +1,25 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
 
-const alias = require('../aliaces');
-const rules = require('../loaders');
-const options = require('../options');
-const externals = require('../externals');
+const alias = require("../aliaces");
+const rules = require("../loaders");
+const options = require("../options");
+const externals = require("../externals");
 
 module.exports = {
-  target: 'web',
+  target: "web",
   entry: {
-    app: path.resolve('src/index.tsx'),
+    app: path.resolve("src/index.tsx"),
   },
   output: {
     pathinfo: false,
-    path: path.resolve(options.root, 'dist'),
-    filename: 'static/[name].[contenthash:4].m.js',
-    chunkFilename: 'static/[name].[contenthash:4].c.js',
-    publicPath: '/',
+    path: path.resolve(options.root, "dist"),
+    filename: "static/[name].[contenthash:4].m.js",
+    chunkFilename: "static/[name].[contenthash:4].c.js",
+    publicPath: "/",
   },
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
@@ -29,38 +29,38 @@ module.exports = {
 
     new CopyWebpackPlugin([
       {
-        context: 'public',
-        from: { glob: '**/*', dot: true },
+        context: "public",
+        from: { glob: "**/*", dot: true },
         to: options.dist,
         force: true,
         cache: true,
       },
     ], {
-      ignore: ['.gitkeep', '.DS_Store', 'index.html'],
+      ignore: [".gitkeep", ".DS_Store", "index.html"],
       copyUnmodified: true,
     }),
 
     new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify(options.env),
+      "process.env": {
+        "NODE_ENV": JSON.stringify(options.env),
       },
     }),
 
     new HtmlWebpackPlugin({
-      title: 'React app',
+      title: "React app",
       inject: true,
-      filename: 'index.html',
-      template: 'public/index.html',
-      PUBLIC_URL: '',
+      filename: "index.html",
+      template: "public/index.html",
+      PUBLIC_URL: "",
 
       // production
       hash: false,
       cache: true,
       inject: true,
       compile: false,
-      prefetch: ['**/*.js'],
-      preload: ['**/*.js'],
-      chunksSortMode: 'dependency',
+      prefetch: ["**/*.js"],
+      preload: ["**/*.js"],
+      chunksSortMode: "dependency",
       production: true,
       minify: {
         html5: true,
@@ -89,11 +89,12 @@ module.exports = {
   ],
   resolve: {
     alias,
-    mainFiles: ['index'],
-    extensions: ['.ts', '.tsx', '.js', '.json'],
+    mainFiles: ["index"],
+    extensions: [".ts", ".tsx", ".js", ".json"],
   },
   module: {
     rules,
   },
   externals,
-}
+  node: false, // remove Node polyfills
+};

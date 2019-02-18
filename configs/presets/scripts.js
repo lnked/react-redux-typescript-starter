@@ -1,11 +1,15 @@
-const cache = require('../loaders/cache-loader')
-const babel = require('../loaders/babel-loader')
+const cache = require("../loaders/cache-loader");
+const babel = require("../loaders/babel-loader");
 
-module.exports = {
-  test: /\.(ts|js)x?$/,
-  exclude: /(node_modules|bower_components)/,
-  use: [
-    cache(),
-    babel(),
-  ],
-}
+module.exports = () => {
+  return [
+    {
+      test: /\.(ts|js)x?$/,
+      exclude: /node_modules/,
+      use: [
+        cache(),
+        babel(),
+      ],
+    },
+  ];
+};

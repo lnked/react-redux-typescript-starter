@@ -24,10 +24,10 @@ const Button = styled.button`
   color: #000;
   outline: 0;
   cursor: pointer;
-  text-shadow: 0 1px 0 rgba(#000, .3), 0 1px 1px rgba(#000, .2)
+  text-shadow: 0 1px 0 rgba(#000, .3), 0 1px 1px rgba(#000, .2);
 `
 
-export default function Counter ({ initialCount = 0 }: P) {
+function Counter ({ initialCount = 0 }: P) {
 
   const [count, setCount] = useState(initialCount)
 
@@ -41,3 +41,5 @@ export default function Counter ({ initialCount = 0 }: P) {
   )
 
 }
+
+export { Counter }

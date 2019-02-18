@@ -1,18 +1,18 @@
-const path = require("path")
-const webpack = require("webpack")
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
-const WebpackChunkHash = require('webpack-chunk-hash');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const path = require("path");
+const webpack = require("webpack");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
+const WebpackChunkHash = require("webpack-chunk-hash");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 // const ExtractTextPlugin = require('extract-text-webpack-plugin')
 // const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-const options = require('../options');
-const terserOptions = require('../terser-options');
+const options = require("../options");
+const terserOptions = require("../terser-options");
 
-const plugins = []
+const plugins = [];
 
 if (options.compression) {
   plugins.push(
@@ -21,45 +21,38 @@ if (options.compression) {
       algorithm: "gzip",
       test: /\.js$|\.html$/,
       threshold: 10240,
-      minRatio: 0.8
+      minRatio: 0.8,
     }),
-  )
+  );
 }
 
 if (options.analyze) {
   plugins.push(
     new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
+      analyzerMode: "static",
     }),
-  )
+  );
 }
 
 module.exports = {
-  mode: 'production',
-  devtool: 'cheap-module-source-map',
+  mode: "production",
+  devtool: "cheap-module-source-map",
   bail: true,
   performance: {
-    hints: 'warning',
+    hints: "warning",
     maxAssetSize: 500000,
     maxEntrypointSize: 500000,
     assetFilter: assetFilename => !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
   },
-  module: {
-    rules: [
-      // {
-      //   test: /\.scss$/,
-      //   use: ExtractTextPlugin.extract({
-      //     fallback: 'style-loader',
-      //     use: ['css-loader', 'sass-loader']
-      //   })
-      // }
-    ]
-  },
+  // module: {
+  //   rules: [
+  //   ]
+  // },
   optimization: {
+    nodeEnv: "production",
     minimize: true,
-    chunkIds: 'named',
-    nodeEnv: 'production',
-    moduleIds: 'hashed',
+    chunkIds: "named",
+    moduleIds: "hashed",
     sideEffects: true,
     usedExports: true,
     namedChunks: true,
@@ -69,10 +62,10 @@ module.exports = {
     occurrenceOrder: false,
     concatenateModules: true,
     runtimeChunk: {
-      name: 'runtime',
+      name: "runtime",
     },
     splitChunks: {
-      chunks: 'all',
+      chunks: "all",
       maxAsyncRequests: 20,
       maxInitialRequests: Infinity,
       minSize: 0,
@@ -84,8 +77,8 @@ module.exports = {
         },
         vendors: {
           test: /[\\/]node_modules[\\/]/,
-          chunks: 'all',
-          name: 'vendors',
+          chunks: "all",
+          name: "vendors",
           priority: -10,
           enforce: true,
         },
@@ -104,18 +97,18 @@ module.exports = {
   },
   plugins: [
     new webpack.HashedModuleIdsPlugin({
-      hashFunction: 'md4',
-      hashDigest: 'base64',
+      hashFunction: "md4",
+      hashDigest: "base64",
       hashDigestLength: 5,
     }),
 
-    new CleanWebpackPlugin(['dist'], {
+    new CleanWebpackPlugin(["dist"], {
       root: options.root,
       verbose: false,
     }),
 
     new WebpackChunkHash({
-      algorithm: 'md5',
+      algorithm: "md5",
     }),
 
     // new ExtractTextPlugin('style.css')
@@ -129,17 +122,15 @@ module.exports = {
     //   canPrint: true
     // }),
 
-    new webpack.LoaderOptionsPlugin({
-      debug: false,
-      minimize: true,
-      options: {},
-    }),
+    // new webpack.LoaderOptionsPlugin({
+    //   debug: false,
+    //   minimize: true,
+    //   options: {},
+    // }),
 
     new webpack.optimize.AggressiveMergingPlugin({
       minSizeReduce: 1.6,
     }),
-
-    new webpack.optimize.ModuleConcatenationPlugin(),
 
     // new webpack.IgnorePlugin(/^\.\/locale\/(en|ru)\.js$/, /moment$/),
 
@@ -151,5 +142,5 @@ module.exports = {
     // }),
 
     ...plugins,
-  ]
-}
+  ],
+};

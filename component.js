@@ -19,7 +19,7 @@ const getContent = ({ name, ComponentName }) => {
     `\t\treturn (<div />)`,
     `\t}\n`,
     `}\n`,
-    `export default ${ComponentName}\n`,
+    `export { ${ComponentName} }\n`,
   ].join("\n").replace(/\t/g, "  ");
 };
 

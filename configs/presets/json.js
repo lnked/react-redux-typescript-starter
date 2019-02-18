@@ -1,8 +1,12 @@
-const json = require('../loaders/json-loader')
+const json = require("../loaders/json-loader");
 
-module.exports = {
-  test: /\.json$/,
-  use: [
-    json(),
-  ],
-}
+module.exports = () => {
+  return [
+    {
+      test: /\.json$/,
+      use: [
+        json(),
+      ],
+    },
+  ];
+};
