@@ -5,6 +5,8 @@ const TerserPlugin = require("terser-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const WebpackChunkHash = require("webpack-chunk-hash");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const imageminMozjpeg = require('imagemin-mozjpeg');
 
 // const ExtractTextPlugin = require('extract-text-webpack-plugin')
 // const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -109,6 +111,11 @@ module.exports = {
 
     new WebpackChunkHash({
       algorithm: "md5",
+    }),
+
+    new ImageminPlugin({
+      pngquant: ({ quality: '50' }),
+      plugins: [imageminMozjpeg({ quality: '50' })]
     }),
 
     // new ExtractTextPlugin('style.css')
