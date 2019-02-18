@@ -38,7 +38,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push2": "yarn ci"
+      "pre-push": "yarn ci"
     }
   },
   "keywords": [
