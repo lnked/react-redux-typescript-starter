@@ -31,7 +31,7 @@
 
     "export-name": false,
     "no-submodule-imports": [true, "@"],
-    "no-implicit-dependencies": [true, ["@", "@/app"]],
+    "no-implicit-dependencies": [true, ["@"]],
     "no-import-side-effect": [true, { "ignore-module": "(\\.css)$" }],
 
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],

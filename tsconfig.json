@@ -2,8 +2,9 @@
   "buildOnSave": false,
   "compileOnSave": true,
   "compilerOptions": {
-    "baseUrl": "./src",
-    "outDir": "./dist",
+    "rootDir": "./",
+    "baseUrl": "src",
+    "outDir": "dist",
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
@@ -38,12 +39,13 @@
     "typeRoots": ["node_modules/@types", "typings/*"]
   },
   "paths": {
+    "@/*": ["./*"],
     "@/app/*": ["app/*"],
     "@/pages/*": ["pages/*"],
     "@/services/*": ["services/*"],
     "@/components/*": ["components/*"],
     "@/containers/*": ["containers/*"]
   },
-  "include": ["./src/**/*"],
-  "exclude": ["node_modules", "configs", "dist", "**/node_modules/*", "./src/**/*.test.tsx", "./src/**/*.spec.tsx"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "configs", "dist", "**/node_modules/*", "src/**/*.test.tsx", "src/**/*.spec.tsx"]
 }

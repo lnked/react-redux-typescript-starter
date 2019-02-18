@@ -9,6 +9,7 @@ const duplicates = {
 module.exports = {
   ...duplicates,
   "@": options.source,
+  "@app": path.resolve(options.source, "app"),
   "@/app": path.resolve(options.source, "app"),
   // hocs: path.resolve(options.source, 'hocs'),
   // utils: path.resolve(options.source, 'utils'),
