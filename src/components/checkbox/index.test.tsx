@@ -1,37 +1,33 @@
 import * as React from 'react'
-import styled from 'styled-components'
-// import renderer from 'react-test-renderer'
-import { shallow } from 'enzyme'
+// import { shallow } from 'enzyme'
+import renderer from 'react-test-renderer'
+import { render } from 'react-testing-library'
+
 import Checkbox from './'
-import 'jest-styled-components'
 
-test('Checkbox changes the text after click', () => {
-  const checkbox = shallow(<Checkbox labelOn='On' labelOff='Off' />)
-  // const checkbox = styled(Checkbox)``
-  const input = checkbox.find(styled.input)
+const tree: any = renderer.create(<Checkbox />).toJSON()
 
-  // // Interaction demo
-  // expect(checkbox.text()).toEqual('Off')
+test('it works', () => {
+  const input = tree.children.find((item: any) => item.type === 'input')
 
-  console.log('input.length: ', input.length)
+  // console.log(input, input.props)
 
-  // expect(input.length).toEqual(1)
+  expect(input.props.value).toBe(1)
+  expect(input.props.checked).toBeFalsy()
+  // expect(input.props.checked).toBeTruthy()
 
-  // input.simulate('ca', {keyCode: 27})
-  // input.simulate('change')
-
-  // expect(store.getActions()[0]).to.deep.equal(expectedAction);
-
-  console.log(checkbox.debug())
-  console.log(checkbox.find('styled.input'))
-  console.log(input)
-
-  // checkbox.find('styled.input').simulate('change')
-
-  // // checkbox.find('styled.input').simulate('change')
-
-  // // expect(checkbox.text()).toEqual('On')
-
-  // // Snapshot demo
-  // expect(checkbox).toMatchSnapshot()
+  // input.simulate('change', { target: { value: 'Hello' } })
 })
+
+test('renders correctly', () => {
+  const { container } = render(<Checkbox checked />)
+  expect(container.firstChild).toMatchSnapshot()
+})
+
+// it('renders correctly', () => {
+//   const wrapper = shallow(<Checkbox labelOn='On' labelOff='Off' />)
+//   expect(wrapper).toMatchSnapshot()
+//   // const tree = renderer.create(<StyledCheckbox labelOn='On' labelOff='Off' />).toJSON()
+//   // expect(tree).toMatchSnapshot()
+//   // expect(tree).toHaveStyleRule('labelOn', 'On')
+// })

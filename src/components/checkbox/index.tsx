@@ -3,8 +3,7 @@ import * as React from 'react'
 import { StyledLabel, StyledInput, StyledBox, StyledText } from './styles'
 
 export interface Props {
-  labelOn: string;
-  labelOff: string;
+  checked?: boolean;
 }
 
 export interface State {
@@ -14,12 +13,11 @@ export interface State {
 export default class Checkbox extends React.Component<Props, State> {
 
   static defaultProps = {
-    labelOn: 'On',
-    labelOff: 'Off',
+    checked: false,
   }
 
   state = {
-    isChecked: false,
+    isChecked: this.props.checked || false,
   }
 
   onChange = () => {
@@ -28,12 +26,12 @@ export default class Checkbox extends React.Component<Props, State> {
 
   render () {
     const { isChecked } = this.state
-    const { labelOn, labelOff } = this.props
 
     return (
       <StyledLabel>
         <StyledInput
           type='checkbox'
+          value={1}
           checked={isChecked}
           onChange={this.onChange}
         />
@@ -41,7 +39,7 @@ export default class Checkbox extends React.Component<Props, State> {
         <StyledBox />
 
         <StyledText>
-          {isChecked ? labelOn : labelOff}
+          {isChecked ? 'checked' : 'UnChecked'}
         </StyledText>
       </StyledLabel>
     )

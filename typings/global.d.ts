@@ -3,6 +3,8 @@
 // }
 
 declare var process: {
+  on: any;
+
   env: {
     [key: string]: string | undefined;
     PUBLIC_URL: string;

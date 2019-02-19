@@ -15,6 +15,8 @@ module.exports = {
 
   clearMocks: false,
 
+  updateSnapshot: true,
+
   moduleDirectories: ['node_modules', 'src'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   transform: {

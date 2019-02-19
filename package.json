@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "cross-env NODE_ENV=development ",
+    "prestart": "cross-env NODE_ENV=development",
     "prebuild": "cross-env NODE_ENV=production yarn lint",
     "postbuild": "yarn size",
     "start": "webpack-dev-server --config configs/run --env development",
@@ -132,6 +132,7 @@
     "react-loading-skeleton": "1.0.0",
     "react-router-dom": "4.3.1",
     "react-test-renderer": "16.8.2",
+    "react-testing-library": "5.9.0",
     "storage.io": "1.2.0",
     "styled-components": "4.1.3"
   }
