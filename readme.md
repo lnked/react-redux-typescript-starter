@@ -1,4 +1,13 @@
+[![license](https://img.shields.io/github/license/lnked/react-mobx-typescript-starter.svg)](https://github.com/lnked/react-mobx-typescript-starter/blob/fastest/LICENSE)
+[![Build Status](https://travis-ci.org/lnked/react-mobx-typescript-starter.svg?branch=master)](https://travis-ci.org/lnked/react-mobx-typescript-starter)
+
+---
+
 # react-mobx-typescript-starter
+
+## Installation
+
+#### GIT
 
 ```bash
 # Create project folder
@@ -11,15 +20,39 @@ cd app
 git clone -b master https://github.com/lnked/react-mobx-typescript-starter.git .
 
 # OR download the latest release at: https://github.com/lnked/react-mobx-typescript-starter/releases/latest
+```
 
+OR
+
+```bash
+git init
+git remote add origin git@github.com:lnked/react-starter.git
+git fetch origin
+git pull origin master
+```
+
+```bash
 # Install
 yarn
 # or
 npm i
+```
 
+## Run tasks
+
+```
 # Start a development server
 yarn start
 
 # Build for production
 yarn build
+
+# Build for anayze
+yarn analyze
+
+# Lint
+yarn lint
+
+# Lint fix
+yarn lint:fix
 ```

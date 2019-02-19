@@ -34,7 +34,7 @@ install:
 script:
   - yarn lint
   - yarn test
-  - yarn example-build
+  - yarn build
 
 after_success:
   # - yarn deploy
