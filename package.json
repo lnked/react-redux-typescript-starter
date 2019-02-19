@@ -100,7 +100,7 @@
     "lighthousebot": "https://github.com/GoogleChromeLabs/lighthousebot",
     "lint-staged": "8.1.4",
     "markdown-loader": "5.0.0",
-    "marked": "0.6.0",
+    "marked": "0.6.1",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "raw-loader": "1.0.0",
     "react-hot-loader": "4.7.0",
