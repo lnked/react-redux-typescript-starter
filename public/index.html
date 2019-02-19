@@ -9,7 +9,7 @@
   <base href="<%= htmlWebpackPlugin.options.PUBLIC_URL %>">
 
   <link rel="dns-prefetch" href="https://cdn.polyfill.io">
-  <link rel="preload" href="https://cdn.polyfill.io/v2/polyfill.min.js" as="script">
+  <link rel="preload" href="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default" as="script">
   <meta name="fragment" content="!">
   <meta name="google" content="notranslate">
   <meta name="mobile-web-app-capable" content="yes">
@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
   <link rel="shortcut icon" href="./favicons/favicon.ico">
-  <script src="https://cdn.polyfill.io/v2/polyfill.min.js" async=""></script>
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default"></script>
 
   <title><%= htmlWebpackPlugin.options.title %></title>
 <head>
