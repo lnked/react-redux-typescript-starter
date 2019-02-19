@@ -11,7 +11,7 @@ export interface State {
   isChecked: boolean;
 }
 
-export default class CheckboxWithLabel extends React.Component<Props, State> {
+export default class Checkbox extends React.Component<Props, State> {
 
   static defaultProps = {
     labelOn: 'On',

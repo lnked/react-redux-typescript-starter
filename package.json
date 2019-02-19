@@ -21,6 +21,7 @@
     "test:watch": "yarn test -- --watch",
     "ci2": "yarn test & yarn typecheck & yarn lint",
     "ci": "yarn test & yarn lint",
+    "lh": "lighthousebot -- --perf=96 --pwa=100",
     "b": "rm -rf ./dist/test && node ./component.js",
     "a": "rm -rf ./.cache && yarn analyze"
   },
@@ -96,6 +97,7 @@
     "imagemin-webpack-plugin": "2.4.2",
     "jest": "24.1.0",
     "json-loader": "0.5.7",
+    "lighthousebot": "https://github.com/GoogleChromeLabs/lighthousebot",
     "lint-staged": "8.1.4",
     "markdown-loader": "5.0.0",
     "marked": "0.6.0",
@@ -122,6 +124,7 @@
   "dependencies": {
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.9.1",
+    "jest-styled-components": "6.3.1",
     "mobx": "5.9.0",
     "mobx-react": "5.4.3",
     "react": "16.8.2",
