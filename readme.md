@@ -26,7 +26,7 @@ OR
 
 ```bash
 git init
-git remote add origin git@github.com:lnked/react-starter.git
+git remote add origin git@github.com:lnked/react-mobx-typescript-starter.git
 git fetch origin
 git pull origin master
 ```
