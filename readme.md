@@ -1,4 +1,4 @@
-[![license](https://img.shields.io/github/license/lnked/react-mobx-typescript-starter.svg)](https://github.com/lnked/react-mobx-typescript-starter/blob/fastest/LICENSE)
+[![license](https://img.shields.io/github/license/lnked/react-mobx-typescript-starter.svg)](https://github.com/lnked/react-mobx-typescript-starter/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/lnked/react-mobx-typescript-starter.svg?branch=master)](https://travis-ci.org/lnked/react-mobx-typescript-starter)
 
 ---
