@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import { StyledLabel, StyledInput, StyledBox, StyledText } from './styles'
+
 export interface Props {
   labelOn: string;
   labelOff: string;
@@ -29,15 +31,19 @@ export default class CheckboxWithLabel extends React.Component<Props, State> {
     const { labelOn, labelOff } = this.props
 
     return (
-      <label>
-        <input
+      <StyledLabel>
+        <StyledInput
           type='checkbox'
           checked={isChecked}
           onChange={this.onChange}
         />
 
-        {isChecked ? labelOn : labelOff}
-      </label>
+        <StyledBox />
+
+        <StyledText>
+          {isChecked ? labelOn : labelOff}
+        </StyledText>
+      </StyledLabel>
     )
   }
 
