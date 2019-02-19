@@ -10,6 +10,7 @@ module.exports = {
   ...duplicates,
   src: options.source,
   app: path.resolve(options.source, 'app'),
+  i18n: path.resolve(options.source, 'i18n'),
   utils: path.resolve(options.source, 'utils'),
   store: path.resolve(options.source, 'store'),
   pages: path.resolve(options.source, 'pages'),

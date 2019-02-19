@@ -41,9 +41,14 @@
   "paths": {
     "*": ["./*"],
     "app/*": ["app/*"],
+    "i18n/*": ["i18n/*"],
+    "utils/*": ["utils/*"],
     "pages/*": ["pages/*"],
+    "assets/*": ["assets/*"],
     "layouts/*": ["layouts/*"],
+    "settings/*": ["settings/*"],
     "services/*": ["services/*"],
+    "fragments/*": ["fragments/*"],
     "components/*": ["components/*"]
   },
   "include": ["src/**/*"],
