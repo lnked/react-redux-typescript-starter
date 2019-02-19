@@ -30,8 +30,8 @@
     "semicolon": [true, "never", "ignore-interfaces"],
 
     "export-name": false,
-    "no-submodule-imports": [true, "app", "pages", "services", "fragments", "components", "containers"],
-    "no-implicit-dependencies": [true, ["app", "pages", "services", "fragments", "components", "containers"]],
+    "no-submodule-imports": [true, "app", "utils", "pages", "assets", "layouts", "settings", "services", "fragments", "components"],
+    "no-implicit-dependencies": [true, ["app", "utils", "pages", "assets", "layouts", "settings", "services", "fragments", "components"]],
     "no-import-side-effect": [true, { "ignore-module": "(\\.css)$" }],
 
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],

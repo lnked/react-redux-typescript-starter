@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { E } from 'containers'
+import { E } from 'layouts'
 import { Image } from 'components'
 
 import { A, B, AB, AnotherBuild } from './components'

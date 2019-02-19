@@ -42,9 +42,9 @@
     "*": ["./*"],
     "app/*": ["app/*"],
     "pages/*": ["pages/*"],
+    "layouts/*": ["layouts/*"],
     "services/*": ["services/*"],
-    "components/*": ["components/*"],
-    "containers/*": ["containers/*"]
+    "components/*": ["components/*"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "configs", "dist", "**/node_modules/*", "src/**/*.test.tsx", "src/**/*.spec.tsx"]
