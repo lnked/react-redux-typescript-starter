@@ -19,7 +19,8 @@
     "pretest": "cross-env NODE_ENV=test yarn lint",
     "test": "jest",
     "test:watch": "yarn test -- --watch",
-    "ci": "yarn test & yarn typecheck & yarn lint",
+    "ci2": "yarn test & yarn typecheck & yarn lint",
+    "ci": "yarn test & yarn lint",
     "b": "rm -rf ./dist/test && node ./component.js",
     "a": "rm -rf ./.cache && yarn analyze"
   },
