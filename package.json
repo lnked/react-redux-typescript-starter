@@ -19,10 +19,9 @@
     "pretest": "cross-env NODE_ENV=test yarn lint",
     "test": "jest",
     "test:watch": "yarn test -- --watch",
-    "ci2": "yarn test & yarn typecheck & yarn lint",
-    "ci": "yarn test & yarn lint",
+    "ci": "yarn test & yarn typecheck & yarn lint",
     "lh": "lighthousebot -- --perf=96 --pwa=100",
-    "b": "rm -rf ./dist/test && node ./component.js",
+    "c": "rm -rf ./dist/test && node ./component.js",
     "a": "rm -rf ./.cache && yarn analyze"
   },
   "size-limit": [

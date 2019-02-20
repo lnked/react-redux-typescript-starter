@@ -7,7 +7,12 @@
     "tslint-react"
   ],
   "linterOptions": {
-    "exclude": ["node_modules/**/*", "dist/**/*", "public/**/*"]
+    "exclude": [
+      "node_modules/**/*",
+      "**/__test__/**",
+      "public/**/*",
+      "dist/**/*"
+    ]
   },
   "rules": {
     "eofline": true,
