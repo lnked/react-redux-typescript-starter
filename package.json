@@ -81,7 +81,7 @@
     "cache-loader": "2.0.1",
     "clean-webpack-plugin": "1.0.1",
     "compression-webpack-plugin": "2.0.0",
-    "copy-webpack-plugin": "4.6.0",
+    "copy-webpack-plugin": "5.0.0",
     "cross-env": "5.2.0",
     "dotenv": "6.2.0",
     "dotenv-expand": "4.2.0",
