@@ -5,7 +5,7 @@ import Checkbox from './'
 
 const tree: any = renderer.create(<Checkbox />).toJSON()
 
-test('it works', () => {
+test('it works', done => {
   const input = tree.children.find((item: any) => item.type === 'input')
 
   // console.log(input, input.props)
@@ -15,4 +15,6 @@ test('it works', () => {
   // expect(input.props.checked).toBeTruthy()
 
   // input.simulate('change', { target: { value: 'Hello' } })
+
+  done()
 })
