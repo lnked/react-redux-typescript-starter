@@ -1,6 +1,5 @@
 {
-  "buildOnSave": false,
-  "compileOnSave": true,
+  "compileOnSave": false,
   "compilerOptions": {
     "rootDir": "./",
     "baseUrl": "src",
@@ -34,7 +33,7 @@
     "strict": true,
     "pretty": true,
     "jsx": "react",
-    "lib": ["es2015", "dom"],
+    "lib": ["es2017", "dom"],
     "suppressImplicitAnyIndexErrors": true,
     "typeRoots": ["node_modules/@types", "typings/*"]
   },

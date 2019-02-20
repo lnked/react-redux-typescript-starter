@@ -11,7 +11,7 @@ const isDevelopment = env === 'development'
 
 const publicPath = isDevelopment ? '/' : '/react-mobx-typescript-starter/'
 
-console.log('options: ', options);
+// console.log('options: ', options);
 
 module.exports = {
   env,

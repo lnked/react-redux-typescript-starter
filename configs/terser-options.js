@@ -17,6 +17,7 @@ module.exports = {
     html5_comments: false,
   },
   compress: {
+    ecma: 5,
     inline: false,
     sequences: true,
     comparisons: true,
@@ -36,8 +37,10 @@ module.exports = {
     global_defs: {
       DEBUG: false,
     },
+    passes: 5,
   },
   output: {
+    ecma: 5,
     ascii_only: true,
     comments: false,
     beautify: false,
