@@ -1,7 +1,5 @@
 import * as React from 'react'
-// import { shallow } from 'enzyme'
 import renderer from 'react-test-renderer'
-import { render } from 'react-testing-library'
 
 import Checkbox from './'
 
@@ -18,16 +16,3 @@ test('it works', () => {
 
   // input.simulate('change', { target: { value: 'Hello' } })
 })
-
-test('renders correctly', () => {
-  const { container } = render(<Checkbox checked />)
-  expect(container.firstChild).toMatchSnapshot()
-})
-
-// it('renders correctly', () => {
-//   const wrapper = shallow(<Checkbox labelOn='On' labelOff='Off' />)
-//   expect(wrapper).toMatchSnapshot()
-//   // const tree = renderer.create(<StyledCheckbox labelOn='On' labelOff='Off' />).toJSON()
-//   // expect(tree).toMatchSnapshot()
-//   // expect(tree).toHaveStyleRule('labelOn', 'On')
-// })
