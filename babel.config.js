@@ -15,7 +15,7 @@ module.exports = function (api) {
   const comments = true // webpackChunkName doesn't work if the value is false
   const targets = !web ? { node: 'current' } : undefined
   const modules = babel ? false : 'commonjs'
-  const useBuiltIns = web ? 'usage' : undefined
+  const useBuiltIns = web ? 'entry' : undefined
 
   return {
     comments,
