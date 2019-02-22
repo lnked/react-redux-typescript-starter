@@ -5,7 +5,7 @@ module.exports = ({ prefix = '', ...props }) => {
     loader: 'file-loader',
     options: {
       ...props,
-      name: `${prefix}/[hash].[ext]`
+      name: `${prefix}/[name].[hash:6].[ext]`,
     }
   };
 }

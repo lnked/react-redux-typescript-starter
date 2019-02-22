@@ -129,11 +129,12 @@ module.exports = {
     //   canPrint: true
     // }),
 
-    // new webpack.LoaderOptionsPlugin({
-    //   debug: false,
-    //   minimize: true,
-    //   options: {},
-    // }),
+    new webpack.LoaderOptionsPlugin({
+      debug: options.development,
+      context: options.source,
+      minimize: true,
+      options: {},
+    }),
 
     new webpack.optimize.AggressiveMergingPlugin({
       minSizeReduce: 1.6,

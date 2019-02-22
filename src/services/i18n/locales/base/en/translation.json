@@ -1,4 +1,5 @@
 {
+  "title": "Title text: {{count}}",
   "age": { "label": "Age" },
   "home": { "label": "Home" },
   "name": { "label": "Name" }

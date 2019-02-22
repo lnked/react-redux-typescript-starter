@@ -1,4 +1,5 @@
 {
+  "title": "Заголовок text: {{count}}",
   "age": { "label": "Возраст" },
   "home": { "label": "Дом" },
   "name": { "label": "Имя" }

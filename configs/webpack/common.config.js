@@ -17,13 +17,12 @@ module.exports = {
   output: {
     pathinfo: false,
     path: path.resolve(options.root, 'dist'),
-    filename: 'static/[name].[contenthash:4].m.js',
-    chunkFilename: 'static/[name].[contenthash:4].c.js',
+    filename: `static/${options.hashName}.m.js`,
+    chunkFilename: `static/${options.hashName}.c.js`,
     publicPath: '/',
   },
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.optimize.OccurrenceOrderPlugin(),
 
     new DuplicatePackageCheckerPlugin(),
 

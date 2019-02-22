@@ -2,6 +2,8 @@ import * as React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
+import * as i18n from 'services/i18n'
+
 import Home from 'pages/home'
 // const Home = React.lazy(() => import(/* webpackChunkName: "home" */ 'pages/home'))
 const About = React.lazy(() => import(/* webpackChunkName: "about" */ 'pages/about'))
@@ -12,6 +14,14 @@ const NoMatch = React.lazy(() => import(/* webpackChunkName: "nomatch" */ 'pages
 import GlobalStyle from './styles'
 
 export default class App extends React.Component<{}, {}> {
+
+  componentDidMount () {
+    i18n.init()
+  }
+
+  componentWillUnmount () {
+    i18n.unload()
+  }
 
   render () {
     return (
