@@ -13,15 +13,15 @@ module.exports = function({ development, production, test, loose, legacy }) {
   }
 
   return [
-    // ['@babel/plugin-transform-runtime', {
-    //   'corejs': false,
-    //   'helpers': true,
-    //   'regenerator': true,
-    //   'useESModules': false,
-    // }],
-    "@babel/plugin-syntax-async-generators",
-    "@babel/plugin-transform-regenerator",
+    ['@babel/plugin-transform-runtime', {
+      // corejs: false,
+      corejs: 2,
+      helpers: true,
+      regenerator: true,
+      useESModules: false,
+    }],
     ['transform-imports', transforms],
+    "@babel/plugin-syntax-async-generators",
     '@babel/plugin-syntax-dynamic-import',
 
     '@babel/plugin-transform-arrow-functions',

@@ -5,7 +5,8 @@ const options = require("../options");
 const use = []
 
 if (options.production) {
-  use.push(file({ prefix: 'configs' }))
+  use.push(file({ prefix: '' }))
+  // use.push(file({ prefix: 'configs' }))
 }
 
 use.push(json())

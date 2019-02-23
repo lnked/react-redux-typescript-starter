@@ -19,6 +19,15 @@ const polyfills = []
  * BROWSER POLYFILLS
  */
 
+// import 'core-js/features/array/from'; // <- at the top of your entry point
+// import 'core-js/features/array/flat'; // <- at the top of your entry point
+// import 'core-js/features/set';        // <- at the top of your entry point
+// import 'core-js/features/promise';    // <- at the top of your entry point
+
+// import from from 'core-js-pure/features/array/from';
+// import Set from 'core-js-pure/features/set';
+// import Promise from 'core-js-pure/features/promise';
+
 /** IE9, IE10 and IE11 requires all of the following polyfills. **/
 polyfills.push('core-js/es6/symbol'); // 'es6-symbol/implement'
 polyfills.push('core-js/es6/object');

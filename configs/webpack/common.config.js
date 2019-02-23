@@ -17,6 +17,7 @@ module.exports = {
       // 'core-js',
       // ...polyfills,
       // '@babel/polyfill',
+      // '@babel/runtime-corejs2',
       // '@babel/runtime/regenerator',
       path.resolve(options.source, 'index.tsx'),
     ],

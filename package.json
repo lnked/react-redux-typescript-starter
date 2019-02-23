@@ -10,6 +10,7 @@
     "start": "webpack-dev-server --config configs/run --env development",
     "build": "env NODE_ENV=production webpack --config configs/run --env production",
     "build:display": "env NODE_ENV=production webpack --display-modules --config configs/run --env production",
+    "preanalyze": "rimraf -rf ./.cache/*",
     "analyze": "yarn build --analyze",
     "profile": "webpack --config configs/run --env production --profile --json > stats.json",
     "lint": "tslint -p tsconfig.json 'src/**/*.{ts,tsx}'",
@@ -21,8 +22,8 @@
     "test:watch": "yarn test -- --watch",
     "ci": "yarn test & yarn typecheck & yarn lint",
     "lh": "lighthousebot -- --perf=96 --pwa=100",
-    "c": "rm -rf ./dist/test && node ./component.js",
-    "a": "rm -rf ./.cache && yarn analyze"
+    "c": "rimraf -rf ./dist/test && node ./component.js",
+    "a": "rimraf -rf ./.cache && yarn analyze"
   },
   "size-limit": [
     {
@@ -133,6 +134,7 @@
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "raw-loader": "1.0.0",
     "react-hot-loader": "4.7.1",
+    "rimraf": "2.6.3",
     "size-limit": "0.21.1",
     "source-map-loader": "0.2.4",
     "svg-url-loader": "2.3.2",
@@ -153,6 +155,7 @@
   "dependencies": {
     "@babel/polyfill": "7.2.5",
     "@babel/runtime": "7.3.1",
+    "@babel/runtime-corejs2": "7.3.1",
     "core-js": "2.6.5",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.9.1",
