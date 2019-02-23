@@ -153,8 +153,6 @@
     "webpack-merge": "4.2.1"
   },
   "dependencies": {
-    "@babel/polyfill": "7.2.5",
-    "@babel/runtime": "7.3.1",
     "@babel/runtime-corejs2": "7.3.1",
     "core-js": "2.6.5",
     "enzyme": "3.9.0",
