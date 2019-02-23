@@ -18,7 +18,9 @@ module.exports = function({ development, production, test, loose, legacy }) {
     //   'helpers': true,
     //   'regenerator': true,
     //   'useESModules': false,
-    // }]
+    // }],
+    "@babel/plugin-syntax-async-generators",
+    "@babel/plugin-transform-regenerator",
     ['transform-imports', transforms],
     '@babel/plugin-syntax-dynamic-import',
 

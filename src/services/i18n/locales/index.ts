@@ -6,8 +6,8 @@ import ru from './base/ru/translation.json'
 //   console.log({ json })
 //   return json
 // }
-const loadLocale = (url: string) => {
-  const json = fetch(url).then(res => res.json())
+const loadLocale = async (url: string) => {
+  const json = await fetch(url).then(res => res.json())
   console.log({ json })
   return json
 }

@@ -8,11 +8,18 @@ const alias = require('../aliaces');
 const rules = require('../loaders');
 const options = require('../options');
 const externals = require('../externals');
+const { polyfills } = require('../polyfills')
 
 module.exports = {
   target: 'web',
   entry: {
-    app: path.resolve(options.source, 'index.tsx'),
+    app: [
+      // 'core-js',
+      // ...polyfills,
+      // '@babel/polyfill',
+      // '@babel/runtime/regenerator',
+      path.resolve(options.source, 'index.tsx'),
+    ],
   },
   output: {
     pathinfo: false,
