@@ -13,6 +13,7 @@ module.exports = function({ development, production, test, loose, legacy }) {
   }
 
   return [
+    ['emotion', { sourceMap: true }],
     ['@babel/plugin-transform-runtime', {
       corejs: 2,
       helpers: false,
@@ -20,7 +21,7 @@ module.exports = function({ development, production, test, loose, legacy }) {
       useESModules: false,
     }],
     ['transform-imports', transforms],
-    "@babel/plugin-syntax-async-generators",
+    '@babel/plugin-syntax-async-generators',
     '@babel/plugin-syntax-dynamic-import',
 
     '@babel/plugin-transform-arrow-functions',
