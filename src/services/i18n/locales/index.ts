@@ -35,16 +35,14 @@ import ru from './base/ru/translation.json'
 //   }
 // })();
 
-const loadLocale = async (url: string) => {
-  const json = await fetch(url).then(res => res.json())
-  console.log({ json })
-  return json
-}
+// const loadLocale = async (url: string) => {
+//   const json = await fetch(url).then(res => res.json())
+//   console.log({ json })
+//   return json
+// }
 
-const en2 = loadLocale('./base/en/translation.json')
-const ru2 = loadLocale('./base/ru/translation.json')
-
-console.log(en2, ru2)
+// const en2 = loadLocale('./base/en/translation.json')
+// const ru2 = loadLocale('./base/ru/translation.json')
 
 export default {
   en: {
