@@ -2,6 +2,8 @@ import * as React from 'react'
 // import { ThemeProvider } from 'styled-components'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import { Global } from '@emotion/core'
+// import { withTheme } from 'emotion-theming'
+import { ThemeProvider } from 'emotion-theming'
 
 import * as i18n from 'services/i18n'
 
@@ -57,7 +59,9 @@ export default class App extends React.Component<{}, {}> {
           </div>
         </Router>
 
-        <Global styles={GlobalStyle} />
+        <ThemeProvider theme={{ whiteColor: true, fontFamily: 'Helvetica Neue' }}>
+          <Global styles={GlobalStyle} />
+        </ThemeProvider>
 
         {/*
         <ThemeProvider theme={{ whiteColor: true, fontFamily: 'Helvetica Neue' }}>

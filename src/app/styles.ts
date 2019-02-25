@@ -12,26 +12,28 @@ const GlobalStyle = css`
   body {
     margin: 0;
     font-size: 1.4rem;
-    font-family: ${(p: any) => p.theme.fontFamily}
-    color: ${(p: any) => (p.theme.whiteColor ? 'white' : 'black')}
-    background-color: ${(p: any) => (p.theme.whiteColor ? 'black' : 'white')}
+    font-family: arial, sans-serif;
+    /* color: ${(p: any) => (p.theme.whiteColor ? 'white' : 'black')}; */
+    /* font-family: ${(p: any) => p.theme.fontFamily};
+    background-color: ${(p: any) => (p.theme.whiteColor ? 'black' : 'white')}; */
+  }
+
+  h1, h2, h3 {
+    margin: 0;
   }
 
   h1 {
     color: red;
-    margin: 0;
     font-size: 2rem;
   }
 
   h2 {
     color: green;
-    margin: 0;
     font-size: 1.8rem;
   }
 
   h3 {
-    color: ${bluegrey}
-    margin: 0;
+    color: ${bluegrey};
     font-size: 1.6rem;
   }
 `

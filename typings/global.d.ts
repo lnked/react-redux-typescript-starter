@@ -1,3 +1,3 @@
-// declare global {
-//   type unknown = { [key: string]: any } | object | number | string | boolean | symbol | undefined | null | void
-// }
+declare module 'emotion-theming'
+declare module '@emotion/core'
+declare module '@emotion/styled'

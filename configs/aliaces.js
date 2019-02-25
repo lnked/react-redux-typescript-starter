@@ -21,5 +21,4 @@ module.exports = {
   components: path.resolve(options.source, 'components'),
   assets: path.resolve(options.source, 'assets'),
   svgstore: path.resolve(options.source, 'assets/svgstore'),
-  'styled-components': path.resolve(options.root, 'node_modules/styled-components'),
 };

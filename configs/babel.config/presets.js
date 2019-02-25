@@ -16,5 +16,11 @@ module.exports = function ({ development, production, test, loose, useBuiltIns, 
     ...configs,
     ['@babel/preset-react', { development }],
     '@babel/preset-typescript',
+    ['@emotion/babel-preset-css-prop', {
+      autoLabel: true,
+      labelFormat: '[local]',
+      useBuiltIns: false,
+      throwIfNamespace: true,
+    }],
   ]
 }

@@ -23,6 +23,7 @@ module.exports = function({ development, production, test, loose, legacy }) {
     ['transform-imports', transforms],
     '@babel/plugin-syntax-async-generators',
     '@babel/plugin-syntax-dynamic-import',
+    '@babel/plugin-transform-react-jsx',
 
     '@babel/plugin-transform-arrow-functions',
     '@babel/plugin-transform-block-scoped-functions',
@@ -61,13 +62,6 @@ module.exports = function({ development, production, test, loose, legacy }) {
     '@babel/plugin-transform-react-inline-elements',
     ['@babel/plugin-proposal-decorators', { legacy }],
     ['@babel/plugin-proposal-class-properties', { loose }],
-    ['babel-plugin-styled-components', {
-      ssr: true,
-      pure: true,
-      minify: true,
-      fileName: false,
-      displayName: true,
-    }],
     ['module-resolver', {
       'extensions': ['.ts', '.js', '.tsx', '.jsx'],
       'root': ['./src'],

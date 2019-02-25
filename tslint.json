@@ -38,7 +38,7 @@
     "export-name": false,
     "no-submodule-imports": [true, "app", "i18n", "utils", "pages", "assets", "layouts", "settings", "services", "fragments", "components"],
     "no-implicit-dependencies": [true, ["app", "i18n", "utils", "pages", "assets", "layouts", "settings", "services", "fragments", "components"]],
-    "no-import-side-effect": [true, { "ignore-module": "(jest-styled-components|\\.html|\\.css|\\.test.tsx?)$" }],
+    "no-import-side-effect": [true, { "ignore-module": "(jest-emotion|\\.html|\\.css|\\.test.tsx?)$" }],
 
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
     "typedef": [
