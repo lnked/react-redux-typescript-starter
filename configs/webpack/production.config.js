@@ -118,7 +118,7 @@ module.exports = {
       swDest: 'sw.js',
       include: [/\.html$/, /\.js$/, /\.json$/],
       exclude: [/\.jpg$/, /\.png$/, /\.map$/, /^manifest.*\.js(?:on)?$/],
-      precacheManifestFilename: 'precache-manifest[manifestHash].js',
+      precacheManifestFilename: 'precache-manifest.[manifestHash].js',
     }),
 
     new ImageminPlugin({
