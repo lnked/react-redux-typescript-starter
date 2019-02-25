@@ -1,8 +1,10 @@
-import { createGlobalStyle } from 'styled-components'
+// import { createGlobalStyle } from 'styled-components'
+import { css } from '@emotion/core'
 
 const bluegrey: string = '#2b3a44'
 
-const GlobalStyle = createGlobalStyle`
+// const GlobalStyle = createGlobalStyle`
+const GlobalStyle = css`
   html {
     font-size: 10px;
   }

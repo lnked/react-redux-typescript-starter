@@ -1,6 +1,7 @@
 import * as React from 'react'
-import { ThemeProvider } from 'styled-components'
+// import { ThemeProvider } from 'styled-components'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { Global } from '@emotion/core'
 
 import * as i18n from 'services/i18n'
 
@@ -56,9 +57,13 @@ export default class App extends React.Component<{}, {}> {
           </div>
         </Router>
 
+        <Global styles={GlobalStyle} />
+
+        {/*
         <ThemeProvider theme={{ whiteColor: true, fontFamily: 'Helvetica Neue' }}>
           <GlobalStyle />
         </ThemeProvider>
+        */}
       </React.Fragment>
     )
   }
