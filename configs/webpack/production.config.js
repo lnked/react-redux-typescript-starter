@@ -7,6 +7,7 @@ const WebpackChunkHash = require("webpack-chunk-hash");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
+const { GenerateSW } = require('workbox-webpack-plugin');
 
 // const ExtractTextPlugin = require('extract-text-webpack-plugin')
 // const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -111,6 +112,13 @@ module.exports = {
 
     new WebpackChunkHash({
       algorithm: "md5",
+    }),
+
+    new GenerateSW({
+      swDest: 'sw.js',
+      include: [/\.html$/, /\.js$/, /\.json$/],
+      exclude: [/\.jpg$/, /\.png$/, /\.map$/, /^manifest.*\.js(?:on)?$/],
+      precacheManifestFilename: 'precache-manifest[manifestHash].js',
     }),
 
     new ImageminPlugin({

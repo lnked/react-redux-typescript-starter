@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "cross-env NODE_ENV=development",
     "prebuild": "cross-env NODE_ENV=production yarn lint",
-    "postbuild": "yarn size",
+    "postbuild": "react-snap && yarn size",
     "start": "webpack-dev-server --config configs/run --env development",
     "build": "env NODE_ENV=production webpack --config configs/run --env production",
     "build:display": "env NODE_ENV=production webpack --display-modules --config configs/run --env production",
@@ -24,6 +24,14 @@
     "lh": "lighthousebot -- --perf=96 --pwa=100",
     "c": "rimraf -rf ./dist/test && node ./component.js",
     "a": "rimraf -rf ./.cache && yarn analyze"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "inlineCss": false,
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": true
+    }
   },
   "size-limit": [
     {
@@ -135,6 +143,7 @@
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "raw-loader": "1.0.0",
     "react-hot-loader": "4.7.1",
+    "react-snap": "1.23.0",
     "rimraf": "2.6.3",
     "size-limit": "0.21.1",
     "source-map-loader": "0.2.4",
@@ -151,7 +160,8 @@
     "webpack-chunk-hash": "0.6.0",
     "webpack-cli": "3.2.3",
     "webpack-dev-server": "3.2.0",
-    "webpack-merge": "4.2.1"
+    "webpack-merge": "4.2.1",
+    "workbox-webpack-plugin": "3.6.3"
   },
   "dependencies": {
     "@babel/runtime-corejs2": "7.3.1",
