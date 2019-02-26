@@ -173,7 +173,7 @@
     "emotion": "10.0.7",
     "emotion-theming": "10.0.7",
     "enzyme": "3.9.0",
-    "enzyme-adapter-react-16": "1.9.1",
+    "enzyme-adapter-react-16": "1.10.0",
     "i18next": "15.0.4",
     "jest-emotion": "10.0.7",
     "mobx": "5.9.0",
