@@ -2,7 +2,7 @@ const path = require('path');
 const options = require('./options');
 
 module.exports = {
-  ecma: 6,
+  ecma: 5,
   warnings: false,
   mangle: true, // Note `mangle.properties` is `false` by default.
   module: false,

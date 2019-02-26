@@ -21,6 +21,12 @@ module.exports = function({ development, production, test, loose, legacy }) {
       useESModules: false,
     }],
     ['transform-imports', transforms],
+    ['transform-react-remove-prop-types', {
+      mode: 'remove',
+      removeImport: true,
+      ignoreFilenames: ['node_modules'],
+    }],
+
     '@babel/plugin-syntax-async-generators',
     '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-transform-react-jsx',
@@ -49,12 +55,12 @@ module.exports = function({ development, production, test, loose, legacy }) {
     '@babel/plugin-transform-exponentiation-operator',
     '@babel/plugin-transform-regenerator',
     '@babel/plugin-transform-async-to-generator',
-    '@babel/plugin-proposal-async-generator-functions',
     '@babel/plugin-transform-dotall-regex',
+
+    '@babel/plugin-proposal-async-generator-functions',
     '@babel/plugin-proposal-optional-catch-binding',
     '@babel/plugin-proposal-unicode-property-regex',
 
-    'transform-react-remove-prop-types',
     '@babel/plugin-proposal-object-rest-spread',
     '@babel/plugin-proposal-export-default-from',
     '@babel/plugin-proposal-export-namespace-from',
