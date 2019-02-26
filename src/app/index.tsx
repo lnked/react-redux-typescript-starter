@@ -36,7 +36,7 @@ export default class App extends React.Component<{}, {}> {
               <li><Link to='/about'>About</Link></li>
               <li><Link to='/topics'>Topics</Link></li>
               <li><Link to='/counter'>Counter</Link></li>
-              <li><Link to='/error-page'>404</Link></li>
+              <li><Link to='/error-page'>Page not found (code 404)</Link></li>
             </ul>
 
             <hr />
