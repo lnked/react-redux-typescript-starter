@@ -14,7 +14,7 @@ module.exports = {
   target: 'web',
   entry: {
     app: [
-      // ...polyfills,
+      ...polyfills,
       path.resolve(options.source, 'index.tsx'),
     ],
   },
