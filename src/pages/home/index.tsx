@@ -35,7 +35,7 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
           i18n.changeLanguage('ru')
         }}
       >
-        en
+        ru
       </Button>
 
       <div>{i18n.t('name.label')}</div>

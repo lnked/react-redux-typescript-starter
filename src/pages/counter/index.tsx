@@ -19,7 +19,7 @@ const Paragraph = styled.p`
 const Button = styled.button`
   padding: 5px 10px;
   background: #eee;
-  border: 1px solid rgba(#000, .1)
+  border: 1px solid rgba(#000, .1);
   border-radius: 2px;
   font: inherit;
   color: #000;
@@ -35,9 +35,9 @@ function Counter ({ initialCount = 0 }: P) {
   return (
     <StyledCounter>
       <Paragraph>{count}</Paragraph>
+      <Button onClick={() => setCount(prevCount => prevCount - 1)}>-</Button>
       <Button onClick={() => setCount(0)}>Reset</Button>
       <Button onClick={() => setCount(prevCount => prevCount + 1)}>+</Button>
-      <Button onClick={() => setCount(prevCount => prevCount - 1)}>-</Button>
     </StyledCounter>
   )
 
