@@ -1,5 +1,10 @@
 const { cacheDirectory } = require('../options');
 
-module.exports = () => {
-  return {};
+module.exports = ({ prefix = '', ...props }) => {
+  return {
+    loader: 'style-loader',
+    options: {
+      ...props,
+    }
+  };
 }

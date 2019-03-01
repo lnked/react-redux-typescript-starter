@@ -4,10 +4,13 @@ const css = require("../loaders/css-loader");
 module.exports = () => {
   return [
     {
-      test: /\.css$/,
+      test: /\.s?(a|c)?ss$/,
       use: [
         style(),
-        css(),
+        css({
+          modules: true,
+          importLoaders: 0,
+        }),
       ],
     },
   ];

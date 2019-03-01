@@ -1,31 +1,22 @@
-const webpack = require("webpack");
+const webpack = require('webpack');
 
 module.exports = {
-  mode: "development",
-  devtool: "cheap-module-eval-source-map",
+  mode: 'development',
+  devtool: 'cheap-module-eval-source-map',
   devServer: {
     hot: true,
     open: true,
-    contentBase: "./dist",
+    overlay: true,
+    compress: true,
+    publicPath: '/',
+    contentBase: ['./dist'],
     historyApiFallback: true,
+    clientLogLevel: 'error',
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    },
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
   ],
-  module: {
-    rules: [
-      // {
-      //   test: /\.scss$/,
-      //   use: [
-      //     {
-      //       loader: 'style-loader'
-      //     }, {
-      //       loader: 'css-loader'
-      //     }, {
-      //       loader: 'sass-loader'
-      //     }
-      //   ]
-      // }
-    ],
-  },
 };
