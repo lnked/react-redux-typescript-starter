@@ -4,6 +4,7 @@ module.exports = function ({ development, production, test, loose, useBuiltIns, 
   production && configs.push(
     ['@babel/preset-env', {
       loose,
+      debug: true,
       modules,
       targets,
       useBuiltIns,

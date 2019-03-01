@@ -2,6 +2,7 @@ const transforms = require('./transform');
 
 module.exports = function({ development, production, test, loose, legacy }) {
   if (test) {
+    console.log('is test');
     return [
       '@babel/plugin-transform-runtime',
       '@babel/plugin-syntax-dynamic-import',
@@ -26,6 +27,9 @@ module.exports = function({ development, production, test, loose, legacy }) {
       removeImport: true,
       ignoreFilenames: ['node_modules'],
     }],
+
+    ['@babel/plugin-proposal-decorators', { legacy }],
+    ['@babel/plugin-proposal-class-properties', { loose }],
 
     '@babel/plugin-syntax-async-generators',
     '@babel/plugin-syntax-dynamic-import',
@@ -66,8 +70,6 @@ module.exports = function({ development, production, test, loose, legacy }) {
     '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-transform-react-constant-elements',
     '@babel/plugin-transform-react-inline-elements',
-    ['@babel/plugin-proposal-decorators', { legacy }],
-    ['@babel/plugin-proposal-class-properties', { loose }],
     ['module-resolver', {
       'extensions': ['.ts', '.js', '.tsx', '.jsx'],
       'root': ['./src'],

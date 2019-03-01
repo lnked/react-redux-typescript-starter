@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clear:cache": "rimraf -rf ./.cache/*",
     "prestart": "cross-env NODE_ENV=development",
     "prebuild": "cross-env NODE_ENV=production yarn lint",
     "postbuild": "yarn size",
@@ -11,7 +12,7 @@
     "start": "webpack-dev-server --config configs/run --env development",
     "build": "env NODE_ENV=production webpack --config configs/run --env production",
     "build:display": "env NODE_ENV=production webpack --display-modules --config configs/run --env production",
-    "preanalyze": "rimraf -rf ./.cache/*",
+    "preanalyze": "yarn clear:cache",
     "analyze": "yarn build --analyze",
     "release": "yarn build --release",
     "profile": "webpack --config configs/run --env production --profile --json > stats.json",
@@ -25,7 +26,7 @@
     "ci": "yarn test & yarn typecheck & yarn lint",
     "lh": "lighthousebot -- --perf=96 --pwa=100",
     "c": "rimraf -rf ./dist/test && node ./component.js",
-    "a": "rimraf -rf ./.cache && yarn analyze"
+    "a": "yarn clear:cache && yarn analyze"
   },
   "reactSnap": {
     "source": "dist",
