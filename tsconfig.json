@@ -34,7 +34,7 @@
     "strict": true,
     "pretty": true,
     "jsx": "react",
-    "lib": ["es2017", "dom"],
+    "lib": ["es6", "dom"],
     "suppressImplicitAnyIndexErrors": true,
     "typeRoots": ["node_modules/@types", "typings/*"]
   },

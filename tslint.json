@@ -1,6 +1,6 @@
 {
   "project": "./tsconfig.json",
-  "defaultSeverity": "error",
+  "defaultSeverity": "warning",
   "extends": [
     "tslint:latest",
     "tslint-config-standard",
@@ -8,6 +8,7 @@
   ],
   "linterOptions": {
     "exclude": [
+      "configs/**/*",
       "node_modules/**/*",
       "**/__test__/**",
       "public/**/*",
