@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#000">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,7 +21,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
   <link rel="shortcut icon" href="./favicons/favicon.ico">
-  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 
   <title><%= htmlWebpackPlugin.options.title %></title>
 <head>
@@ -29,6 +28,9 @@
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
+
   <div id='app-root'></div>
+
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js" defer></script>
 </body>
 </html>

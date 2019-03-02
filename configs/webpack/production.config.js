@@ -5,6 +5,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const WebpackChunkHash = require("webpack-chunk-hash");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const { GenerateSW } = require('workbox-webpack-plugin');
@@ -112,6 +113,12 @@ module.exports = {
 
     new WebpackChunkHash({
       algorithm: "md5",
+    }),
+
+    new ScriptExtHtmlWebpackPlugin({
+      defer: [/vendors/, /bundle/, /.*bundle/],
+      inline: 'runtime',
+      defaultAttribute: 'async',
     }),
 
     new GenerateSW({

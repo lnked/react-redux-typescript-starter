@@ -10,6 +10,7 @@ import * as i18n from 'services/i18n'
 
 import Home from 'pages/home'
 // const Home = React.lazy(() => import(/* webpackChunkName: "home" */ 'pages/home'))
+const Cart = React.lazy(() => import(/* webpackChunkName: "cart" */ 'pages/cart'))
 const About = React.lazy(() => import(/* webpackChunkName: "about" */ 'pages/about'))
 const Topics = React.lazy(() => import(/* webpackChunkName: "topics" */ 'pages/topics'))
 const Context = React.lazy(() => import(/* webpackChunkName: "context" */ 'pages/context'))
@@ -55,6 +56,7 @@ export default class App extends React.Component<{}, {}> {
             <StyledList>
               <li><StyledLink to='/' exact>Home</StyledLink></li>
               <li><StyledLink to='/about'>About</StyledLink></li>
+              <li><StyledLink to='/cart'>Cart</StyledLink></li>
               <li><StyledLink to='/topics'>Topics</StyledLink></li>
               <li><StyledLink to='/context'>Context</StyledLink></li>
               <li><StyledLink to='/counter'>Counter</StyledLink></li>
@@ -66,6 +68,7 @@ export default class App extends React.Component<{}, {}> {
             <React.Suspense fallback={<div>Loading...</div>}>
               <Switch>
                 <Route path='/' component={Home} exact />
+                <Route path='/cart' render={(props: any) => <Cart {...props} />} />
                 <Route path='/about' render={(props: any) => <About {...props} />} />
                 <Route path='/context' render={(props: any) => <Context {...props} />} />
                 <Route path='/topics' render={(props: any) => <Topics {...props} />} />
