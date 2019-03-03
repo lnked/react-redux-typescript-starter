@@ -9,9 +9,8 @@ import styled from '@emotion/styled'
 // import withContext from './store/hoc'
 import StateProvider from './components/store/provider'
 import Order from './components/order'
-
-// import Right from './right'
-// import Center from './center'
+import Right from './components/right'
+import Center from './components/center'
 
 const StyledContainer = styled.div`
   padding: 10px;
@@ -43,8 +42,8 @@ export function Cart () {
         Адрес доставки */}
 
         <Order />
-        {/* <Right /> */}
-        {/* <Center /> */}
+        <Right />
+        <Center />
       </StyledContainer>
     </StateProvider>
   )

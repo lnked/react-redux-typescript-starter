@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
+import MaskedInput from 'react-text-mask'
 
 import withContext from '../store/hoc'
 
@@ -16,6 +17,10 @@ const StyledBlock = styled.div`
 const StyledInput = styled.input`
   width: 100%;
   outline: 0;
+  height: 32px;
+  padding: 0 10px;
+  font-size: 1.3rem;
+  box-sizing: border-box;
   border: 1px solid #ddd;
 
   &:not(:last-child) {
@@ -30,6 +35,17 @@ export function Order (props: any) {
   return (
     <StyledBlock>
       Фото Товары Количество Стоимость
+
+      <MaskedInput
+        mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
+        placeholder='Enter a phone number'
+        // guide={false}
+        // onBlur={() => {}}
+        // onChange={() => {}}
+        render={(ref, props) => (
+          <StyledInput innerRef={ref} {...props} />
+        )}
+      />
 
       <StyledInput
         value={left}
