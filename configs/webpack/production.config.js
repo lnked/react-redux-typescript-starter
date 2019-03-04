@@ -102,7 +102,8 @@ module.exports = {
       hashDigestLength: 5,
     }),
 
-    new CleanWebpackPlugin(['dist'], {
+    new CleanWebpackPlugin({
+      // cleanOnceBeforeBuildPatterns: ['dist/**/*'],
       root: options.root,
       verbose: false,
     }),
