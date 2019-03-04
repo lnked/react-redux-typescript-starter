@@ -103,7 +103,6 @@ module.exports = {
     }),
 
     new CleanWebpackPlugin({
-      // cleanOnceBeforeBuildPatterns: ['dist/**/*'],
       root: options.root,
       verbose: false,
     }),
