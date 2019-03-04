@@ -2,29 +2,50 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const { GenerateSW } = require('workbox-webpack-plugin');
+const WebpackChunkHash = require("webpack-chunk-hash");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
 
-const alias = require('../aliaces');
-const rules = require('../loaders');
 const options = require('../options');
-const { polyfills } = require('../polyfills')
+const terserOptions = require("../terser-options");
+
+const plugins = [];
+
+if (options.development) {
+  plugins.push(new webpack.HotModuleReplacementPlugin());
+}
+
+if (options.compression) {
+  plugins.push(
+    new CompressionPlugin({
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.js$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8,
+    }),
+  );
+}
+
+if (options.analyze) {
+  plugins.push(
+    new BundleAnalyzerPlugin({
+      analyzerMode: "static",
+    }),
+  );
+}
 
 module.exports = {
-  target: 'web',
-  entry: {
-    app: [
-      ...polyfills,
-      path.resolve(options.source, 'index.tsx'),
-    ],
-  },
-  output: {
-    pathinfo: false,
-    path: path.resolve(options.root, 'dist'),
-    filename: `static/${options.hashName}.m.js`,
-    chunkFilename: `static/${options.hashName}.c.js`,
-    publicPath: '/',
-  },
   plugins: [
+    ...plugins,
+
     new webpack.NoEmitOnErrorsPlugin(),
 
     new DuplicatePackageCheckerPlugin(),
@@ -89,16 +110,4 @@ module.exports = {
       },
     }),
   ],
-  resolve: {
-    alias,
-    mainFiles: ['index'],
-    extensions: ['.ts', '.tsx', '.js', '.json'],
-  },
-  module: {
-    rules,
-  },
-  stats: {
-    maxModules: 0,
-  },
-  node: false, // remove Node polyfills
-};
+}

@@ -47,7 +47,7 @@ export function Order (props: any) {
         // guide={false}
         // onBlur={() => {}}
         // onChange={() => {}}
-        render={(ref, props) => (
+        render={(ref: any, props: any) => (
           <StyledInput innerRef={ref} {...props} />
         )}
       />
