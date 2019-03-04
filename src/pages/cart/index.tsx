@@ -29,16 +29,13 @@ export function Cart () {
   return (
     <StateProvider>
       <StyledContainer>
-        {/* Оформление заказа
+        {/*
 
+        Оформление заказа
         Количество приборов
-
         Ваше имя *
-
         Ваш e-mail
-
         Ваш телефон *
-
         Адрес доставки */}
 
         <Order />
