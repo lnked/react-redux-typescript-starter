@@ -56,3 +56,6 @@ yarn lint
 # Lint fix
 yarn lint:fix
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/custom%2B9130%2Fgit%40github.com%3Alnked%2Freact-mobx-typescript-starter.git.svg?type=shield)](https://app.fossa.io/projects/custom%2B9130%2Fgit%40github.com%3Alnked%2Freact-mobx-typescript-starter.git?ref=badge_shield)
