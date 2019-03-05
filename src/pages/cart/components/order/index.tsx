@@ -36,10 +36,10 @@ export function Order (props: any) {
     <StyledBlock>
       Фото Товары Количество Стоимость
 
-      <img src='http://www.to2ko.ru/upload_dir/f251e28a_4820_sm_crop.jpg' alt='' />
-      <img src='http://www.to2ko.ru/upload_dir/2110c843_7732_sm_crop.jpg' alt='' />
-      <img src='http://www.to2ko.ru/upload_dir/add8e305_16a6_sm_crop.jpg' alt='' />
-      <img src='http://www.to2ko.ru/upload_dir/0bbf7c4c_4c5f_sm_crop.jpg' alt='' />
+      {/* <img src='http://www.to2ko.ru/upload_dir/f251e28a_4820_sm_crop.jpg' alt='' /> */}
+      {/* <img src='http://www.to2ko.ru/upload_dir/2110c843_7732_sm_crop.jpg' alt='' /> */}
+      {/* <img src='http://www.to2ko.ru/upload_dir/add8e305_16a6_sm_crop.jpg' alt='' /> */}
+      {/* <img src='http://www.to2ko.ru/upload_dir/0bbf7c4c_4c5f_sm_crop.jpg' alt='' /> */}
 
       <MaskedInput
         mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
