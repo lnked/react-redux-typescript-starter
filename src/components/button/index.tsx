@@ -8,8 +8,8 @@ export interface Props {
 const Button = styled.button`
   color: hotpink;
 `
-
-export default ({ children, ...props }: Props) => <Button {...props}>{children}</Button>
+// children, onClick, className, disabled, active, ...attrs
+export default ({ children, ...attrs }: Props) => <Button {...attrs}>{children}</Button>
 
 // import { css } from 'emotion'
 
