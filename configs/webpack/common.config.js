@@ -54,6 +54,7 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve(options.root, 'public/index.html'),
       PUBLIC_URL: '',
+      description: 'React starter',
 
       // production
       hash: false,

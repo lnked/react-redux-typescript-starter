@@ -5335,10 +5335,10 @@ husky@1.3.1:
     run-node "^1.0.0"
     slash "^2.0.0"
 
-i18next@15.0.5:
-  version "15.0.5"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-15.0.5.tgz#9dfaeaa70b6bc0da49c6b8f1790be3646f8cfe2c"
-  integrity sha512-JqcoIM20BuYq0iQm8VLlq2pqhCNoG60+QuOxLE9PCDGZZc+in9kWofw1qLUazo4B53jJDca1ARd2YLmhXcx2uw==
+i18next@15.0.6:
+  version "15.0.6"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-15.0.6.tgz#2bad22b180043dce4ebc89763b07b752a5379675"
+  integrity sha512-pFka7P9InL0UvvQeKKxXR9khyblG6wB4QSQliIRJII2BiWv8OXXYUPeXIa+4rSnZJFhq86aMl4d0hRF0Lgs6Jw==
   dependencies:
     "@babel/runtime" "^7.3.1"
 
@@ -8927,10 +8927,10 @@ react-hot-loader@4.7.2:
     shallowequal "^1.0.2"
     source-map "^0.7.3"
 
-react-i18next@10.2.1:
-  version "10.2.1"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-10.2.1.tgz#004fc82642dad2b49144ed9fa967076c6682bf85"
-  integrity sha512-5upJtZ0WvCWI/C9+NTITuzlAGdte1rSCexT3rHpisLcdEk+RZ/zvjSLzgqbB/6AGLU2SNHomErMVpibcY8U6Zg==
+react-i18next@10.3.0:
+  version "10.3.0"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-10.3.0.tgz#252c32fcc22c7f79f60480564330b0bb44881212"
+  integrity sha512-QbhN21x5hM2M6ibD86hW7afgXIfKLQnwdQLUll5OVQowwjlgb/YYO9iMiNl/Obbrh6C4ZQD+ejqiwJLhEYkL0g==
   dependencies:
     "@babel/runtime" "^7.3.1"
     html-parse-stringify2 "2.0.1"
