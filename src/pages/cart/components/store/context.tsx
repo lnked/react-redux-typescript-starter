@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import getState from './reducers/get-state'
+import getState from './get-state'
 
 const initialState = {
   left: '',

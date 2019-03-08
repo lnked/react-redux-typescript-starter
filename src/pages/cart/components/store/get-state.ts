@@ -1,5 +1,5 @@
 import { ucFirst } from 'utils'
-import * as reducers from './'
+import * as reducers from './reducers'
 
 const getState = (state: any, action: any) => {
   const [ name, method ] = action.type.toLowerCase().split('/')
