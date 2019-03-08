@@ -2,13 +2,18 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import MaskedInput from 'react-text-mask'
 
-import { Quantity } from 'components'
+import { Stepper, Button } from 'components'
 
 import withContext from '../store/hoc'
 
 export interface P {
   children?: JSX.Element[] | JSX.Element | any;
 }
+
+const Box = styled.div`
+  padding: 10px;
+  margin-bottom: 10px;
+`
 
 const StyledBlock = styled.div`
   width: 32%;
@@ -37,7 +42,14 @@ export function Order (props: any) {
   return (
     <StyledBlock>
       Фото Товары Количество Стоимость
-      <Quantity value={1} />
+
+      <Box>
+        <Stepper value={1} />
+      </Box>
+
+      <Box>
+        <Button>Next</Button>
+      </Box>
 
       {/* <img src='http://www.to2ko.ru/upload_dir/f251e28a_4820_sm_crop.jpg' alt='' /> */}
       {/* <img src='http://www.to2ko.ru/upload_dir/2110c843_7732_sm_crop.jpg' alt='' /> */}

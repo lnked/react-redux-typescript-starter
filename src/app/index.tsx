@@ -6,16 +6,18 @@ import { Global } from '@emotion/core'
 import { ThemeProvider } from 'emotion-theming'
 import styled from '@emotion/styled'
 
+import { lazyWithPreload } from 'utils'
+
 import * as i18n from 'services/i18n'
 
 import Home from 'pages/home'
-// const Home = React.lazy(() => import(/* webpackChunkName: "home" */ 'pages/home'))
-const Cart = React.lazy(() => import(/* webpackChunkName: "cart" */ 'pages/cart'))
-const About = React.lazy(() => import(/* webpackChunkName: "about" */ 'pages/about'))
-const Topics = React.lazy(() => import(/* webpackChunkName: "topics" */ 'pages/topics'))
-const Context = React.lazy(() => import(/* webpackChunkName: "context" */ 'pages/context'))
-const Counter = React.lazy(() => import(/* webpackChunkName: "counter" */ 'pages/counter'))
-const NoMatch = React.lazy(() => import(/* webpackChunkName: "nomatch" */ 'pages/nomatch'))
+
+const Cart = lazyWithPreload(() => import(/* webpackChunkName: "cart" */ 'pages/cart'))
+const About = lazyWithPreload(() => import(/* webpackChunkName: "about" */ 'pages/about'))
+const Topics = lazyWithPreload(() => import(/* webpackChunkName: "topics" */ 'pages/topics'))
+const Context = lazyWithPreload(() => import(/* webpackChunkName: "context" */ 'pages/context'))
+const Counter = lazyWithPreload(() => import(/* webpackChunkName: "counter" */ 'pages/counter'))
+const NoMatch = lazyWithPreload(() => import(/* webpackChunkName: "nomatch" */ 'pages/nomatch'))
 
 const StyledContainer = styled.div`
   padding: 15px;
@@ -49,18 +51,28 @@ export default class App extends React.Component<{}, {}> {
   }
 
   render () {
+    const links = [
+      { label: 'Home', to: '/', exact: true },
+      { label: 'About', to: '/about', component: About },
+      { label: 'Cart', to: '/cart', component: Cart },
+      { label: 'Topics', to: '/topics', component: Topics },
+      { label: 'Context', to: '/context', component: Context },
+      { label: 'Counter', to: '/counter', component: Counter },
+      { label: 'Page not found (code 404)', to: '/error-page' },
+    ]
+
     return (
       <React.Fragment>
         <Router>
           <StyledContainer>
             <StyledList>
-              <li><StyledLink to='/' exact>Home</StyledLink></li>
-              <li><StyledLink to='/about'>About</StyledLink></li>
-              <li><StyledLink to='/cart'>Cart</StyledLink></li>
-              <li><StyledLink to='/topics'>Topics</StyledLink></li>
-              <li><StyledLink to='/context'>Context</StyledLink></li>
-              <li><StyledLink to='/counter'>Counter</StyledLink></li>
-              <li><StyledLink to='/error-page'>Page not found (code 404)</StyledLink></li>
+              {links && links.map(({ label, component: Component, ...link }: any) => (
+                <li key={link.to}>
+                  <StyledLink {...link} onMouseEnter={() => Component && Component.preload()}>
+                    {label}
+                  </StyledLink>
+                </li>
+              ))}
             </StyledList>
 
             <hr />

@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
 
+import { colors } from 'settings/variables'
+
 export interface P {
+  step?: number;
   value?: number;
 }
 
-const StyledQuantity = styled.div`
+const StyledStepper = styled.div`
   border: 1px solid lime;
+  user-select: none;
 `
 
 const Paragraph = styled.p`
@@ -21,7 +25,7 @@ const StylesInput = styled.input`
   outline: none;
   text-align: center;
   appearance: none;
-  border: 1px solid #ddd;
+  border: 1px solid ${colors.border};
 `
 
 const Button = styled.button`
@@ -36,24 +40,26 @@ const Button = styled.button`
   text-shadow: 0 1px 0 rgba(#000, .3), 0 1px 1px rgba(#000, .2);
 `
 
-function Quantity ({ value = 0 }: P) {
-
+function Stepper ({ value = 0, step = 1 }: P) {
   const [count, setCount] = useState(value)
 
+  const textInput = React.createRef<HTMLInputElement>()
+
   return (
-    <StyledQuantity>
+    <StyledStepper>
       <Paragraph>{count}</Paragraph>
-      <Button onClick={() => setCount(prevCount => prevCount - 1)}>-</Button>
+      <Button onClick={() => setCount(prevCount => prevCount - step)}>-</Button>
       <StylesInput
+        ref={textInput}
         type='text'
         value={count}
         onChange={(e: any) => setCount(e.targer.value)}
       />
       <Button onClick={() => setCount(0)}>x</Button>
-      <Button onClick={() => setCount(prevCount => prevCount + 1)}>+</Button>
-    </StyledQuantity>
+      <Button onClick={() => setCount(prevCount => prevCount + step)}>+</Button>
+    </StyledStepper>
   )
 
 }
 
-export default Quantity
+export default Stepper

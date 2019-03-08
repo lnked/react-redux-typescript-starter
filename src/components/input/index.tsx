@@ -7,7 +7,13 @@ export interface P {
   required?: boolean;
 }
 
-export default function Input ({ id, label = '', error = '', ...attrs }: P){
+export default function Input ({ id, label = '', error = '', ...attrs }: P) {
+  const textInput = React.createRef<HTMLInputElement>()
+
+  React.useEffect(() => {
+    textInput.current!.focus()
+  }, [])
+
   return (
     <div className='inputWrapper'>
       <div className='labelsWrapper'>
@@ -20,6 +26,7 @@ export default function Input ({ id, label = '', error = '', ...attrs }: P){
       </div>
 
       <input
+        ref={textInput}
         name={id}
         id={id}
         {...attrs}
