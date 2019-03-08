@@ -6,8 +6,7 @@ import styled from '@emotion/styled'
 // import Home from 'pages/home'
 // const Cart = React.lazy(() => import(/* webpackChunkName: "cart" */ 'pages/cart'))
 
-// import withContext from './store/hoc'
-import StateProvider from './components/store/provider'
+import Provider from './components/store/context'
 import Order from './components/order'
 import Right from './components/right'
 import Center from './components/center'
@@ -27,7 +26,7 @@ export interface P {
 export function Cart () {
 
   return (
-    <StateProvider>
+    <Provider>
       <StyledContainer>
         {/*
 
@@ -42,7 +41,7 @@ export function Cart () {
         <Right />
         <Center />
       </StyledContainer>
-    </StateProvider>
+    </Provider>
   )
 
 }

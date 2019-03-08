@@ -1,20 +1,48 @@
 import * as React from 'react'
 
-import { ucFirst } from 'utils'
-import * as reducers from './reducers'
+import getState from './reducers/get-state'
 
-const initialState = {}
+const initialState = {
+  left: '',
+  right: '',
+  center: '',
+}
 
-export const { Provider, Consumer } = React.createContext(initialState)
+export interface Props {
+  children: any;
+}
 
-export const reducer = (state: any, action: any) => {
-  const [ name, method ] = action.type.toLowerCase().split('/')
+export interface State {
+  left?: any;
+  right?: any;
+  center?: any;
+}
 
-  const fn = `reducer${ucFirst(method || name)}`
+export const Context = React.createContext(initialState as State)
 
-  if (typeof reducers[fn] === 'function') {
-    return reducers[fn].apply(null, [state, action])
+export const Consumer = Context.Consumer
+
+export default class Provider extends React.Component<Props, State> {
+
+  state = initialState
+
+  dispatch = (action: any) => {
+    this.setState(state => getState(state, action))
   }
 
-  return { ...state }
+  render () {
+    const { children } = this.props
+
+    const store = {
+      ...this.state,
+      dispatch: this.dispatch,
+    }
+
+    return (
+      <Context.Provider value={store}>
+        {children}
+      </Context.Provider>
+    )
+  }
+
 }
