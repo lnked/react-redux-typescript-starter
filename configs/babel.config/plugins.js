@@ -14,7 +14,10 @@ module.exports = function({ development, production, test, loose, legacy }) {
   }
 
   return [
-    ['emotion', { sourceMap: true }],
+    ['emotion', {
+      sourceMap: true,
+      // extractStatic: true,
+    }],
     ['@babel/plugin-transform-runtime', {
       corejs: 2,
       helpers: false,

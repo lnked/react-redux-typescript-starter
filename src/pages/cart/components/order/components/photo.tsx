@@ -6,9 +6,10 @@ export interface PhotoProps {
   link?: string;
   width?: number;
   height?: number;
+  title?: string;
 }
 
-export function Photo ({ id, src, link, width = 100, height = 100 }: PhotoProps) {
+export function Photo ({ id, src, link, width = 100, height = 100, title = '' }: PhotoProps) {
   return (
     <div className='checkout__block__item _item-photo'>
       <div className='checkout__block__item__content _p-photo'>
@@ -17,7 +18,8 @@ export function Photo ({ id, src, link, width = 100, height = 100 }: PhotoProps)
             src={src}
             width={width}
             height={height}
-            className='checkout__block__item__image__src' alt=''
+            className='checkout__block__item__image__src'
+            alt={title}
           />
         </a>
       </div>
