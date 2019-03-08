@@ -7,6 +7,7 @@ module.exports = function ({ development, production, test, loose, useBuiltIns, 
       modules,
       targets,
       useBuiltIns,
+      forceAllTransforms: true,
     }]
   )
 

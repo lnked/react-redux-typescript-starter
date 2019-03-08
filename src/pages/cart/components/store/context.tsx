@@ -1,30 +1,21 @@
 import * as React from 'react'
 
-const initialState = {
-  left: '',
-  right: '',
-  center: '',
-}
+import * as reducers from './reducers'
 
-const { Provider, Consumer } = React.createContext(initialState)
+const initialState = {}
 
-const Reducer = (state: any, action: any) => {
-  console.log({ state, action })
+export const { Provider, Consumer } = React.createContext(initialState)
 
-  switch (action.type) {
-    case 'LEFT':
-      return { ...state, left: action.value }
-    case 'RIGHT':
-      return { ...state, right: action.value }
-    case 'CENTER':
-      return { ...state, center: action.value }
-    default:
-      return { ...state }
+const ucfirst = (s: string) => `${s.charAt(0).toUpperCase()}${s.slice(1)}`
+
+export const reducer = (state: any, action: any) => {
+  const [ name, method ] = action.type.toLowerCase().split('/')
+
+  const functionName = `reducer${ucfirst(method || name)}`
+
+  if (typeof reducers[functionName] === 'function') {
+    return reducers[functionName].apply(null, [state, action])
   }
-}
 
-export {
-  Reducer,
-  Provider,
-  Consumer,
+  return { ...state }
 }

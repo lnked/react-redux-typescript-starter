@@ -1,5 +1,5 @@
 const path = require("path");
-const { parseArguments } = require('./tools/helpers');
+const { parseArguments} = require('./tools/helpers');
 
 const env = process.env.NODE_ENV || 'development';
 const root = path.resolve(__dirname, '..');

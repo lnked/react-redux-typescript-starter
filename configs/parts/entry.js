@@ -1,6 +1,6 @@
 const path = require('path');
 const options = require('../options');
-const { polyfills } = require('../polyfills');
+const { polyfills} = require('../polyfills');
 
 module.exports = {
   entry: {

@@ -1,4 +1,4 @@
-const { cacheDirectory } = require('../options');
+const {cacheDirectory} = require('../options');
 // const marked = require('marked');
 // const renderer = new marked.Renderer();
 

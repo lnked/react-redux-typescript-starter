@@ -7,7 +7,7 @@ const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack
 const alias = require('../aliaces');
 const rules = require('../loaders');
 const options = require('../options');
-const { polyfills } = require('../polyfills')
+const { polyfills} = require('../polyfills')
 
 module.exports = {
   target: 'web',

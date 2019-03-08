@@ -50,17 +50,17 @@ export default function Provider ({ children, defaultState }: any) {
 //   }
 // }
 
-// import React, {Component} from 'react';
+// import React, {Component } from 'react';
 // import "./scss/style.scss";
 // import Layout from "./components/Layout";
-// import {BrowserRouter as Router, Route} from "react-router-dom";
+// import { BrowserRouter as Router, Route } from "react-router-dom";
 // import Popup from "./components/Popup";
 // import AddItem from "./components/AddItem";
-// import {ElementType} from "./constants";
+// import { ElementType } from "./constants";
 // import Store from "./Store";
 // import uuid from "uuid/v4";
-// import {clone} from "./helpers/utils";
-// import {duration} from "moment";
+// import { clone } from "./helpers/utils";
+// import { duration } from "moment";
 
 // class App extends Component {
 //   constructor(props) {

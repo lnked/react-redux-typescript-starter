@@ -2,7 +2,8 @@ const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-eval-source-map', // cheap-module-eval-source-map
+  devtool: 'cheap-source-map',
   devServer: {
     hot: true,
     open: true,

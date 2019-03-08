@@ -2,6 +2,8 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import MaskedInput from 'react-text-mask'
 
+import { Quantity } from 'components'
+
 import withContext from '../store/hoc'
 
 export interface P {
@@ -35,6 +37,7 @@ export function Order (props: any) {
   return (
     <StyledBlock>
       Фото Товары Количество Стоимость
+      <Quantity value={1} />
 
       {/* <img src='http://www.to2ko.ru/upload_dir/f251e28a_4820_sm_crop.jpg' alt='' /> */}
       {/* <img src='http://www.to2ko.ru/upload_dir/2110c843_7732_sm_crop.jpg' alt='' /> */}
@@ -48,19 +51,19 @@ export function Order (props: any) {
         // onBlur={() => {}}
         // onChange={() => {}}
         render={(ref: any, props: any) => (
-          <StyledInput innerRef={ref} {...props} />
+          <StyledInput ref={ref} {...props} />
         )}
       />
 
       <StyledInput
         value={left}
         placeholder='LEFT'
-        onChange={({ target: { value } }: any) => dispatch({ type: 'LEFT', value })}
+        onChange={({ target: { value } }: any) => dispatch({ type: 'change/LEFT', value })}
       />
       <StyledInput
         value={right}
         placeholder='RIGHT'
-        onChange={({ target: { value } }: any) => dispatch({ type: 'RIGHT', value })}
+        onChange={({ target: { value } }: any) => dispatch({ type: 'change/RIGHT', value })}
       />
       <StyledInput
         value={center}

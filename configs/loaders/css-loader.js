@@ -1,4 +1,4 @@
-const { cacheDirectory } = require('../options');
+const {cacheDirectory} = require('../options');
 
 module.exports = ({ importLoaders = 1, ...props }) => {
   return {

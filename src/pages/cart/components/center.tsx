@@ -32,12 +32,12 @@ export function Center (props: any) {
       <StyledInput
         value={left}
         placeholder='LEFT'
-        onChange={({ target: { value } }: any) => dispatch({ type: 'LEFT', value })}
+        onChange={({ target: { value } }: any) => dispatch({ type: 'change/LEFT', value })}
       />
       <StyledInput
         value={right}
         placeholder='RIGHT'
-        onChange={({ target: { value } }: any) => dispatch({ type: 'RIGHT', value })}
+        onChange={({ target: { value } }: any) => dispatch({ type: 'change/RIGHT', value })}
       />
       <StyledInput
         value={center}

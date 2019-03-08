@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Reducer, Provider } from './context'
+import { reducer, Provider } from './context'
 
 export interface Props {
   children: any;
@@ -19,7 +19,7 @@ export default class StateProvider extends React.Component<Props, State> {
     right: '',
     center: '',
     dispatch: (action: any) => {
-      this.setState(state => Reducer(state, action))
+      this.setState(state => reducer(state, action))
     }
   }
 
