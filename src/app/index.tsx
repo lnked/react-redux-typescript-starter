@@ -42,12 +42,19 @@ import GlobalStyle from './styles'
 
 export default class App extends React.Component<{}, {}> {
 
+  timeout: any = null
+
   componentDidMount () {
     i18n.init()
   }
 
   componentWillUnmount () {
     i18n.unload()
+  }
+
+  handleMouseOver = (component: any = null) => {
+    clearTimeout(this.timeout)
+    this.timeout = setTimeout(() => component && component.preload(), 250)
   }
 
   render () {
@@ -66,9 +73,9 @@ export default class App extends React.Component<{}, {}> {
         <Router>
           <StyledContainer>
             <StyledList>
-              {links && links.map(({ label, component: Component, ...link }: any) => (
+              {links && links.map(({ label, component, ...link }: any) => (
                 <li key={link.to}>
-                  <StyledLink {...link} onMouseEnter={() => Component && Component.preload()}>
+                  <StyledLink {...link} onMouseEnter={() => this.handleMouseOver(component)}>
                     {label}
                   </StyledLink>
                 </li>
