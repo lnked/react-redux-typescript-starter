@@ -1,10 +1,21 @@
-// import { createGlobalStyle } from 'styled-components'
 import { css } from '@emotion/core'
+import { colors } from 'settings/variables'
 
-const bluegrey: string = '#2b3a44'
-
-// const GlobalStyle = createGlobalStyle`
 const GlobalStyle = css`
+  *,
+  &:after,
+  &:before {
+    box-sizing: border-box;
+  }
+
+  #app-root {
+    min-height: 100%;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
   html {
     font-size: 10px;
   }
@@ -12,10 +23,6 @@ const GlobalStyle = css`
   body {
     margin: 0;
     font-size: 1.4rem;
-    font-family: arial, sans-serif;
-    /* color: ${(p: any) => (p.theme.whiteColor ? 'white' : 'black')}; */
-    /* font-family: ${(p: any) => p.theme.fontFamily};
-    background-color: ${(p: any) => (p.theme.whiteColor ? 'black' : 'white')}; */
   }
 
   h1, h2, h3 {
@@ -33,7 +40,7 @@ const GlobalStyle = css`
   }
 
   h3 {
-    color: ${bluegrey};
+    color: ${colors.primary};
     font-size: 1.6rem;
   }
 `
