@@ -4,6 +4,7 @@ const options = require('./options');
 const duplicates = {
   lodash: path.resolve(options.root, 'node_modules/lodash'),
   warning: path.resolve(options.root, 'node_modules/warning'),
+  'hoist-non-react-statics': path.resolve(options.root, 'node_modules/hoist-non-react-statics'),
 };
 
 module.exports = {
