@@ -13,6 +13,9 @@ module.exports = {
   keep_classnames: undefined,
   keep_fnames: false,
   safari10: true,
+  compressor: {
+    warnings: false,
+  },
   parse: {
     html5_comments: false,
   },
