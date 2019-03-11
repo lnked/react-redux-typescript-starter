@@ -54,7 +54,7 @@ export const StyledContainer = styled.div`
   font-family: arial, sans-serif;
   color: ${(p: any) => (p.theme.whiteColor ? '#3F51B5' : '#E3F2FD')};
   font-family: ${(p: any) => p.theme.fontFamily};
-  background-color: ${(p: any) => (p.theme.whiteColor ? '#E3F2FD' : '#3F51B5')};
+  background-color: ${(p: any) => (p.theme.whiteColor ? colors.white : '#3F51B5')};
 `
 
 export const StyledList = styled.ul`
