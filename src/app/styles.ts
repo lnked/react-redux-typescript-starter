@@ -1,4 +1,7 @@
+import styled from '@emotion/styled'
 import { css } from '@emotion/core'
+import { NavLink } from 'react-router-dom'
+
 import { colors } from 'settings/variables'
 
 const GlobalStyle = css`
@@ -42,6 +45,33 @@ const GlobalStyle = css`
   h3 {
     color: ${colors.primary};
     font-size: 1.6rem;
+  }
+`
+
+export const StyledContainer = styled.div`
+  padding: 15px;
+  min-height: 100vh;
+  font-family: arial, sans-serif;
+  color: ${(p: any) => (p.theme.whiteColor ? '#3F51B5' : '#E3F2FD')};
+  font-family: ${(p: any) => p.theme.fontFamily};
+  background-color: ${(p: any) => (p.theme.whiteColor ? '#E3F2FD' : '#3F51B5')};
+`
+
+export const StyledList = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+`
+
+export const StyledLink = styled(NavLink)`
+  color: ${(p: any) => p.theme.whiteColor ? colors.primary : colors.white};
+  padding: 2px 0;
+  font-weight: 500;
+  display: inline-block;
+  text-decoration: none;
+
+  &.active {
+    color: ${colors.success};
   }
 `
 
