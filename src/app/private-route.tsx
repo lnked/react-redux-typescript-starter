@@ -17,7 +17,7 @@ const PrivateRoute = ({ component: Component, alternative = '/', ...rest }: any)
   <Route
     {...rest}
     render={(props: any) => (
-      fakeAuth.isAuthenticated === true
+      fakeAuth.isAuthenticated
         ? <Component {...props} />
         : <Redirect to={alternative} />
     )}

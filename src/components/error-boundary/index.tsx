@@ -1,9 +1,10 @@
 import * as React from 'react'
+// import Raven from 'raven-js'
 
 import { StyledError, StyledDetails } from './styles'
 
 export interface P {
-  children?: JSX.Element | JSX.Element[];
+  children: JSX.Element | JSX.Element[] | string;
 }
 
 export interface S {
@@ -17,8 +18,14 @@ export default class ErrorBoundary extends React.PureComponent<P, S> {
     error: false,
   }
 
+  static getDerivedStateFromError (error: Error | boolean) {
+    return { hasError: true, info: error }
+  }
+
   componentDidCatch (error: Error | boolean, info: any) {
-    this.setState({ error, info })
+    this.setState({ error, info }, () => {
+      // Raven.captureException(error, { extra: info })
+    })
   }
 
   render () {
