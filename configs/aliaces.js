@@ -15,6 +15,7 @@ module.exports = {
   utils: path.resolve(options.source, 'utils'),
   store: path.resolve(options.source, 'store'),
   pages: path.resolve(options.source, 'pages'),
+  theme: path.resolve(options.source, 'theme'),
   layouts: path.resolve(options.source, 'layouts'),
   services: path.resolve(options.source, 'services'),
   settings: path.resolve(options.source, 'settings'),

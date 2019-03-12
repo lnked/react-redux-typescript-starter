@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="theme-color" content="#000">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <base href="<%= htmlWebpackPlugin.options.PUBLIC_URL %>">
   <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
@@ -33,5 +33,12 @@
   <div id='app-root'></div>
 
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+    .register('/sw.js')
+    .then(function() { console.log("Service Worker Registered"); });
+    }
+  </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
 
-import { colors } from 'settings/variables'
+import { colors } from 'theme'
 
 export interface P {
   step?: number;

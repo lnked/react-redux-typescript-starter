@@ -20,7 +20,7 @@ export const links = [
   { label: 'Topics', to: '/topics', component: Topics },
   { label: 'Context', to: '/context', component: Context },
   { label: 'Counter', to: '/counter', component: Counter },
-  { label: 'Page not found (code 404)', to: '/error-page' },
+  { label: 'Page not found', to: '/error-page' },
 ]
 
 export default function Routes () {

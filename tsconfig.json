@@ -43,6 +43,7 @@
     "app/*": ["app/*"],
     "i18n/*": ["i18n/*"],
     "utils/*": ["utils/*"],
+    "theme/*": ["theme/*"],
     "pages/*": ["pages/*"],
     "assets/*": ["assets/*"],
     "layouts/*": ["layouts/*"],

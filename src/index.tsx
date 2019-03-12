@@ -1,6 +1,8 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
+import { environment } from 'settings'
+
 // import * as serviceWorker from 'services/workers'
 import App from 'app'
 
@@ -15,8 +17,14 @@ ReactDOM.render(<App />, document.getElementById('app-root'))
 //   </ConnectedRouter>
 // </Provider>
 
-if (module.hot) {
+if (environment.development && module.hot) {
   module.hot.accept()
+} else if (environment.production) {
+  const isHttps = location.protocol.includes('https')
+
+  if ('serviceWorker' in navigator && isHttps) {
+    navigator.serviceWorker.register('/sw.js')
+  }
 }
 
 // import { AppContainer } from 'react-hot-loader'

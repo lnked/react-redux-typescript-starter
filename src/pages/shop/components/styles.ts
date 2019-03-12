@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { colors } from 'settings/variables'
+import { colors } from 'theme'
 
 export const StylesProducts = styled.div`
   display: flex;

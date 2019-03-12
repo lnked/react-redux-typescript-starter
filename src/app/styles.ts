@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/core'
 import { NavLink } from 'react-router-dom'
 
-import { colors } from 'settings/variables'
+import { colors } from 'theme'
 
 const GlobalStyle = css`
   *,

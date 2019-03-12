@@ -2,19 +2,18 @@ import * as React from 'react'
 import { ThemeProvider } from 'emotion-theming'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Global } from '@emotion/core'
+import { hot } from 'react-hot-loader'
 
 import * as i18n from 'services/i18n'
+
+import Theme from 'theme'
+import { ErrorBoundary } from 'components'
 
 import Routes from './routes'
 import Navigation from './navigation'
 import GlobalStyle, { StyledContainer } from './styles'
 
-const themes = {
-  dark: { whiteColor: false, fontFamily: 'Roboto, sans-serif' },
-  light: { whiteColor: true, fontFamily: 'Helvetica Neue' },
-}
-
-export default class App extends React.Component<{}, {}> {
+class App extends React.Component<{}, {}> {
   timeout: any = null
 
   componentDidMount () {
@@ -33,9 +32,9 @@ export default class App extends React.Component<{}, {}> {
 
   render () {
     return (
-      <React.Fragment>
+      <ErrorBoundary>
         <Router>
-          <ThemeProvider theme={themes.light}>
+          <ThemeProvider theme={Theme.light}>
             <Global styles={GlobalStyle} />
 
             <StyledContainer>
@@ -49,7 +48,9 @@ export default class App extends React.Component<{}, {}> {
             </StyledContainer>
           </ThemeProvider>
         </Router>
-      </React.Fragment>
+      </ErrorBoundary>
     )
   }
 }
+
+export default hot(module)(App)
