@@ -1,75 +1,122 @@
 import styled from '@emotion/styled'
+import { NavLink } from 'react-router-dom'
+
 import { colors } from 'theme'
 
-export const StylesProducts = styled.div`
+const margin = 6
+
+export const Container = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+`
+
+export const Sidebar = styled.aside`
+  flex: 0 0 220px;
+  min-height: 1px;
+  position: sticky;
+  top: 0;
+  margin-right: ${margin * 2}px;
+`
+
+export const Categories = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-top: 10px;
+
+  li {
+    margin-bottom: 5px;
+  }
+`
+
+export const Products = styled.div`
+  flex: 1 1 auto;
+  margin-left: -${margin}px;
+  margin-right: -${margin}px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
 `
 
-export const StyledProduct = styled.article`
-  width: 20%;
-  max-width: 215px;
+export const ProductItem = styled.article`
+  width: calc(20% - ${margin * 2}px);
   margin: 0;
   border: none;
   flex: 0 0 auto;
-  position: relative;
-  font-size: 14px;
-  margin: 0 10px 10px;
-  font-family: Verlag,Helvetica,Arial,sans-serif;
+  margin: 0 ${margin}px 20px;
   background-color: ${colors.white};
+`
 
-  &:first-child {
-    margin-left: 0;
+export const Link = styled(NavLink)`
+  display: block;
+  user-select: none;
+  text-decoration: none;
+`
+
+export const Upper = styled.div`
+  position: relative;
+  margin-bottom: 15px;
+  background-color: #fff;
+
+  &:before {
+    content: '';
+    display: block;
+    background: rgba(0,0,0,.04);
+    padding-bottom: 120%;
   }
 `
 
-export const StyledDescription = styled.div`
-  padding: 12px;
-  text-align: left;
-`
-
-export const StyledBrand = styled.div`
-  color: #1f1f1f;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font: 400 16px Verlag,Helvetica,Arial,sans-serif;
-`
-
-export const StyledImage = styled.div`
+export const Image = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 250px;
-  padding: 12px;
+  height: 100%;
   user-select: none;
-  text-align: center;
-  line-height: 250px;
-  background-color: #F5F5F5;
 `
 
-export const StyledSource = styled.img`
-  max-width: 100%;
+export const Source = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
   outline: 0;
   pointer-events: none;
   display: inline-block;
   vertical-align: middle;
 `
 
-export const StyledName = styled.div`
+export const Description = styled.div`
+  text-align: left;
+  font-size: 14px;
+`
+
+export const Brand = styled.div`
+  color: #1f1f1f;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
+`
+
+export const Name = styled.div`
   max-width: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: pointer;
   color: #1f1f1f;
-  font: 400 16px Verlag,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  margin-bottom: 5px;
   font-feature-settings: "lnum";
   font-weight: 600;
 `
 
-export const StyledFooter = styled.div`
+export const Footer = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -77,7 +124,7 @@ export const StyledFooter = styled.div`
   height: 20px;
 `
 
-export const StyledPrice = styled.div`
+export const Price = styled.div`
   color: ${(p: any) => p.discount ? '#707070' : '#ae4343'};
   font-weight: 400;
   font-size: ${(p: any) => p.discount ? '13px' : '16px'};
@@ -87,17 +134,18 @@ export const StyledPrice = styled.div`
   }
 `
 
-export const StyledLabel = styled.div`
-  line-height: normal;
+export const Label = styled.div`
+  height: 20px;
+  line-height: 22px;
   margin: 0;
-  background-color: rgba(174,67,67,.1);
-  color: #ae4343;
-  font-feature-settings: "lnum";
+  background: rgba(48,149,75,0.8);
+  color: #fff;
+  font-size: 11px;
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 42px;
+  left: 0;
   z-index: 2;
-  padding: 2px 4px;
-  border-radius: 2px;
-  font: 400 14px Verlag,Helvetica,Arial,sans-serif;
+  letter-spacing: 0.02ex;
+  padding: 0 8px;
+  text-transform: uppercase;
 `

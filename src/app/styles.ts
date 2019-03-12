@@ -51,7 +51,6 @@ const GlobalStyle = css`
 export const StyledContainer = styled.div`
   padding: 15px;
   min-height: 100vh;
-  font-family: arial, sans-serif;
   color: ${(p: any) => (p.theme.whiteColor ? '#3F51B5' : '#E3F2FD')};
   font-family: ${(p: any) => p.theme.fontFamily};
   background-color: ${(p: any) => (p.theme.whiteColor ? colors.white : '#3F51B5')};

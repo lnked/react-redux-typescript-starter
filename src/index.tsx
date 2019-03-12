@@ -1,21 +1,18 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
+import { setConfig } from 'react-hot-loader'
 
 import { environment } from 'settings'
 
-// import * as serviceWorker from 'services/workers'
 import App from 'app'
 
+setConfig({
+  pureSFC: true,
+  ignoreSFC: true, // RHL will be __completely__ disabled for SFC
+  pureRender: true // RHL will not change render method
+})
+
 ReactDOM.render(<App />, document.getElementById('app-root'))
-
-// serviceWorker.unregister()
-// serviceWorker.register({})
-
-// <Provider store={store}>
-//   <ConnectedRouter history={history}>
-//     <App />
-//   </ConnectedRouter>
-// </Provider>
 
 if (environment.development && module.hot) {
   module.hot.accept()
@@ -26,40 +23,3 @@ if (environment.development && module.hot) {
     navigator.serviceWorker.register('/sw.js')
   }
 }
-
-// import { AppContainer } from 'react-hot-loader'
-// import React from 'react'
-// import ReactDOM from 'react-dom'
-// import App from './components/App'
-
-// const render = Component =>
-//   ReactDOM.render(
-//     <AppContainer>
-//       <Component />
-//     </AppContainer>,
-//     document.getElementById('root')
-//   )
-
-// render(App)
-
-// // Webpack Hot Module Replacement API
-// if (module.hot) module.hot.accept('./components/App', () => render(App))
-
-// import React from 'react'
-// import ReactDOM from 'react-dom'
-// import { BrowserRouter, Switch, Route } from 'react-router-dom'
-// import App from './App'
-// import registerServiceWorker from './registerServiceWorker'
-
-// import Home from './layout/home/home'
-
-// ReactDOM.render((
-//   <BrowserRouter>
-//     <App>
-//       <Switch>
-//         <Route exact path="/" component={Home} />
-//       </Switch>
-//     </App>
-//   </BrowserRouter>
-// ), document.getElementById('root'))
-// registerServiceWorker()

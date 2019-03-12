@@ -1,41 +1,53 @@
 import * as React from 'react'
 
 import {
-  StyledDescription,
-  StyledProduct,
-  StyledLabel,
-  StyledBrand,
-  StyledName,
-  StyledImage,
-  StyledSource,
-  StyledFooter,
-  StyledPrice,
+  Description,
+  ProductItem,
+  Upper,
+  Link,
+  Label,
+  Brand,
+  Name,
+  Image,
+  Source,
+  Footer,
+  Price,
 } from './styles'
 
 export interface ProductProps {
   name: string;
+  slug: string;
   image: string;
+  badge?: string;
 }
 
-export default function Product ({ name, image }: ProductProps) {
+export default function Product ({ slug = '', badge, name, image }: ProductProps) {
+  const root = '/shop'
+
   return (
-    <StyledProduct itemscope itemtype='http://schema.org/Product'>
-      <StyledLabel>New</StyledLabel>
+    <ProductItem itemscope itemtype='http://schema.org/Product'>
+      <Link to={`${root}/${slug}`}>
+        <Upper>
+          {badge && <Label>{badge}</Label>}
 
-      <StyledImage>
-        <StyledSource src={image} alt={name} />
-      </StyledImage>
+          {image &&
+            <Image>
+              <Source src={image} alt={name} />
+            </Image>
+          }
+        </Upper>
+      </Link>
 
-      <StyledDescription>
+      <Description>
         {/* <button>Like <span>0</span></button> */}
-        <StyledBrand>Deer Stags</StyledBrand>
-        <StyledName>Shae</StyledName>
+        <Brand>Deer Stags</Brand>
+        <Name>Shae</Name>
 
-        <StyledFooter>
-          <StyledPrice>$45.99</StyledPrice>
-          <StyledPrice discount>MSRP: $65.00</StyledPrice>
-        </StyledFooter>
-      </StyledDescription>
-    </StyledProduct>
+        <Footer>
+          <Price>$45.99</Price>
+          <Price discount>MSRP: $65.00</Price>
+        </Footer>
+      </Description>
+    </ProductItem>
   )
 }

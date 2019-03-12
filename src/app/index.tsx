@@ -2,7 +2,7 @@ import * as React from 'react'
 import { ThemeProvider } from 'emotion-theming'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Global } from '@emotion/core'
-import { hot } from 'react-hot-loader'
+import { hot } from 'react-hot-loader/root'
 
 import * as i18n from 'services/i18n'
 
@@ -53,4 +53,5 @@ class App extends React.Component<{}, {}> {
   }
 }
 
-export default hot(module)(App)
+export default hot(App)
+// export default hot(module)(App)
