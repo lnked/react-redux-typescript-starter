@@ -63,7 +63,7 @@ export const StyledList = styled.ul`
 `
 
 export const StyledLink = styled(NavLink)`
-  color: ${(p: any) => p.theme.whiteColor ? colors.primary : colors.white};
+  color: ${(p: any) => p.theme.whiteColor ? colors.link : colors.white};
   padding: 2px 0;
   font-weight: 500;
   display: inline-block;
