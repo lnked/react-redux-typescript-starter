@@ -273,26 +273,16 @@ FileETag None
 </IfModule>
 
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
+  RewriteEngine On
+  RewriteBase /
 
-    RewriteCond %{HTTP_USER_AGENT} .*\{.* [NC]
-    RewriteRule .* - [F,L]
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)/$ /$1 [L,R=301]
 
-    # Удаляет слэш на конце URL
-    RewriteCond %{HTTP_HOST} (.*)
-    RewriteCond %{REQUEST_URI} /$ [NC]
-    RewriteCond %{QUERY_STRING} ^$ [NC]
-    RewriteRule (.+)/$ /$1 [L,QSA,R=301]
-
-    RewriteCond %{THE_REQUEST} \.html
-    RewriteRule ^(.*)\.html$ /$1 [R=301,L]
-
-    RewriteRule ^index\.html$ - [L]
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-l
-    RewriteCond %{REQUEST_FILENAME} !^favicon\.ico
-    RewriteRule ^(.+?)/?$ /$1.html [L,R=301]
-    # RewriteRule . /index.html [L]
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !^favicon\.ico
+  RewriteRule . /index.html [L]
 </IfModule>
