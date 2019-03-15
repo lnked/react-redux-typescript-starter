@@ -1,5 +1,13 @@
 export const colors = {
   border: '#ddd',
+  green: '#00aa55',
+  blue: '#009fd4',
+  purple: '#b381b3',
+  gray: '#939393',
+  gold: '#aa8f00',
+  orange: '#d47500',
+  red: '#ef4836',
+
   white: '#fff',
   muted: '#F7F7F7',
   link: '#0019a0',

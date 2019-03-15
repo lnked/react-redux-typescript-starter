@@ -27,7 +27,6 @@ function Forms () {
   return (
     <div>
       <Form onSubmit={() => alert('submit')}>
-        <Autosuggest name="" rules="" />
         <Input name='name' value='xx' rules={['rule1']} validate={e => console.log(e)} placeholder='Name' />
         <Input name='value' placeholder='Value' />
         <Select name='value' placeholder='Value' />
