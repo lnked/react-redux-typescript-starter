@@ -1,17 +1,17 @@
 import * as React from 'react'
 
-export const Context = React.createContext({
+export const { Provider, Consumer } = React.createContext({
   theme: 'dark',
   toggleTheme: () => {
     console.log('theme')
   },
 })
 
-export default function Provider ({ children, defaultState }: any) {
+export default function StoreProvider ({ children, defaultState }: any) {
   return (
-    <Context.Provider value={defaultState}>
+    <Provider value={defaultState}>
       {children}
-    </Context.Provider>
+    </Provider>
   )
 }
 

@@ -9,6 +9,7 @@ import Home from 'pages/home'
 export const Cart = lazyWithPreload(() => import(/* webpackChunkName: "cart" */ 'pages/cart'))
 export const Shop = lazyWithPreload(() => import(/* webpackChunkName: "shop" */ 'pages/shop'))
 export const About = lazyWithPreload(() => import(/* webpackChunkName: "about" */ 'pages/about'))
+export const Forms = lazyWithPreload(() => import(/* webpackChunkName: "forms" */ 'pages/forms'))
 export const Topics = lazyWithPreload(() => import(/* webpackChunkName: "topics" */ 'pages/topics'))
 export const Context = lazyWithPreload(() => import(/* webpackChunkName: "context" */ 'pages/context'))
 export const Counter = lazyWithPreload(() => import(/* webpackChunkName: "counter" */ 'pages/counter'))
@@ -19,6 +20,7 @@ export const links = [
   { label: 'About', to: '/about', component: About },
   { label: 'Shop', to: '/shop', component: Shop },
   { label: 'Cart', to: '/cart', component: Cart },
+  { label: 'Forms', to: '/forms', component: Forms },
   { label: 'Topics', to: '/topics', component: Topics },
   { label: 'Context', to: '/context', component: Context },
   { label: 'Counter', to: '/counter', component: Counter },
@@ -32,6 +34,7 @@ export default function Routes () {
       <Route path='/' component={Home} exact />
       <Route path='/shop/:product?' render={(props: any) => <Shop {...props} />} />
       <Route path='/cart' render={(props: any) => <Cart {...props} />} />
+      <Route path='/forms' render={(props: any) => <Forms {...props} />} />
       <Route path='/about' render={(props: any) => <About {...props} />} />
       <Route path='/context' render={(props: any) => <Context {...props} />} />
       <Route path='/topics' render={(props: any) => <Topics {...props} />} />
