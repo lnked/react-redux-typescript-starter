@@ -5,6 +5,8 @@ const duplicates = {
   lodash: path.resolve(options.root, 'node_modules/lodash'),
   warning: path.resolve(options.root, 'node_modules/warning'),
   'hoist-non-react-statics': path.resolve(options.root, 'node_modules/hoist-non-react-statics'),
+  '@babel/runtime': path.resolve(options.root, 'node_modules/@babel/runtime'),
+  'react-is': path.resolve(options.root, 'node_modules/react-is'),
 };
 
 module.exports = {

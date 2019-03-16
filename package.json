@@ -155,7 +155,7 @@
     "webpack-cli": "3.3.0",
     "webpack-dev-server": "3.2.1",
     "webpack-merge": "4.2.1",
-    "workbox-webpack-plugin": "4.1.0"
+    "workbox-webpack-plugin": "4.1.1"
   },
   "dependencies": {
     "@babel/runtime-corejs2": "7.3.4",
@@ -184,7 +184,7 @@
     "react-dom": "npm:@hot-loader/react-dom@exotic",
     "react-hot-loader": "4.8.0",
     "react-i18next": "10.5.1",
-    "react-router-dom": "4.3.1",
+    "react-router-dom": "4.4.0",
     "react-test-renderer": "16.8.4",
     "react-testing-library": "6.0.0",
     "react-text-mask": "5.4.3",
