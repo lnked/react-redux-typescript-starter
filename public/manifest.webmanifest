@@ -1,4 +1,7 @@
 {
+  "name": "React starter",
+  "short_name": "RS-PWA",
+  "lang": "ru-RU",
   "icons": [
     {
       "src": "/icons/android/icon_144x144.svg",
@@ -61,13 +64,10 @@
       "type": "image/svg+xml"
     }
   ],
-  "name": "React starter",
-  "short_name": "RS-PWA",
+  "dir": "auto",
+  "start_url": ".",
   "orientation": "any",
   "display": "standalone",
-  "start_url": ".",
-  "dir": "auto",
-  "lang": "ru-RU",
   "description": "React-starter a react web sterter kit!",
   "theme_color": "#3367D6",
   "background_color": "#2185d0",

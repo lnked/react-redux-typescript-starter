@@ -6,23 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
+  <base href="<%= htmlWebpackPlugin.options.PUBLIC_URL %>">
+
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="mask-icon" href="./icons/android/icon_144x144.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
   <link rel="shortcut icon" href="./favicon.ico">
-
-  <base href="<%= htmlWebpackPlugin.options.PUBLIC_URL %>">
-  <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
-
   <link rel="dns-prefetch" href="https://cdn.polyfill.io">
   <link rel="preload" href="https://cdn.polyfill.io/v2/polyfill.min.js" as="script">
+
   <meta name="fragment" content="!">
   <meta name="google" content="notranslate">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="robots" content="index,follow">
   <meta name="author" content="Edik Bulikyan <ed.proff@gmail.com>">
   <meta name="theme-color" content="#3367D6">
+  <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
 
   <title><%= htmlWebpackPlugin.options.title %></title>
 <head>
