@@ -1,8 +1,9 @@
 const transforms = require('./transform');
 
 module.exports = function({ development, production, test, loose, legacy }) {
+  const plugins = [];
+
   if (test) {
-    console.log('is test');
     return [
       '@babel/plugin-transform-runtime',
       '@babel/plugin-syntax-dynamic-import',
@@ -13,7 +14,12 @@ module.exports = function({ development, production, test, loose, legacy }) {
     ];
   }
 
+  if (development) {
+    plugins.push('react-hot-loader/babel')
+  }
+
   return [
+    ...plugins,
     ['emotion', {
       sourceMap: true,
       // extractStatic: true,
