@@ -9207,10 +9207,10 @@ react-hot-loader@4.8.0:
     shallowequal "^1.0.2"
     source-map "^0.7.3"
 
-react-i18next@10.5.1:
-  version "10.5.1"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-10.5.1.tgz#551b6f34694059833ebf93823be27105d56dd3b2"
-  integrity sha512-kyRS7A1ihVZvoPvwpehio7fKf24H6DyYn+6XVU56ECyy/mBkOEfo7NGm5UiRkefkG7WkpdTow534L6/HhPy9zA==
+react-i18next@10.5.2:
+  version "10.5.2"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-10.5.2.tgz#056ee9988137ef9296397d7bb55bbe8d8952a06d"
+  integrity sha512-9sTW1nxW6YCDBW6RLebXu3qlhWe4iV8cHrlTzJ223QWOWM38g392jajOl3J39vyD6JMeM6wdDIAhS0cuubBChg==
   dependencies:
     "@babel/runtime" "^7.3.1"
     html-parse-stringify2 "2.0.1"
@@ -9310,10 +9310,10 @@ react-text-mask@5.4.3:
   dependencies:
     prop-types "^15.5.6"
 
-react-use-localstorage@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/react-use-localstorage/-/react-use-localstorage-3.0.0.tgz#b309ddd58a3b4b94c5b57b7bc3c6a04c71091eba"
-  integrity sha512-MLaVep/W/DZNVDp4CakFe5opzy1RBOtYAYkni4Nx4Ks7HK05/Fr1VCppd2BU0wl8YfwCKBI4dU04X9WaXLSUnw==
+react-use-localstorage@3.0.1-alpha.0:
+  version "3.0.1-alpha.0"
+  resolved "https://registry.yarnpkg.com/react-use-localstorage/-/react-use-localstorage-3.0.1-alpha.0.tgz#b53268f9c3ec908afe9a79a92d3f1d5bd5ae03a2"
+  integrity sha512-2rVIepBi3RrFtzoclpTDDIjLxXPQEWpVMrgrLO0EunQJDv5g5M9ORE+gXXnPYf0Zs7kg/+khQiDZajCgyILz3w==
 
 react@16.8.4:
   version "16.8.4"
