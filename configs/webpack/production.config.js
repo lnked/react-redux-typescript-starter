@@ -70,10 +70,12 @@ module.exports = {
       maxInitialRequests: Infinity,
       minSize: 0,
       cacheGroups: {
-        default: {
+        commons: {
+          test: /\.(j|t)sx?$/,
+          chunks: 'all',
           minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true,
+          name: 'commons',
+          enforce: true,
         },
         vendors: {
           test: /[\\/]node_modules[\\/]/,
@@ -81,7 +83,9 @@ module.exports = {
           name: 'vendors',
           priority: -10,
           enforce: true,
+          reuseExistingChunk: true,
         },
+        default: false,
       },
     },
     minimizer: [
