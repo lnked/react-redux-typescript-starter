@@ -1,5 +1,7 @@
 const svg = require("../loaders/svg-url-loader");
+const url = require("../loaders/url-loader");
 const file = require("../loaders/file-loader");
+const imageWebpack = require("../loaders/image-webpack-loader");
 
 module.exports = () => {
   return [
@@ -9,6 +11,7 @@ module.exports = () => {
         file({
           outputPath: "assets/",
         }),
+        imageWebpack(),
       ],
     },
     {
@@ -22,10 +25,11 @@ module.exports = () => {
     },
     // {
     //   test: /\.(jpe?g|png|gif)$/,
-    //   loader: 'url-loader',
-    //   options: {
-    //     limit: 10 * 1024
-    //   }
+    //   use: [
+    //     url({
+    //       limit: 10 * 1024,
+    //     }),
+    //   ]
     // },
   ];
 };

@@ -1,4 +1,4 @@
-const {cacheDirectory} = require('../options');
+const { cacheDirectory } = require('../options');
 
 module.exports = ({ prefix = '', limit, ...props }) => {
   return {
@@ -6,7 +6,7 @@ module.exports = ({ prefix = '', limit, ...props }) => {
     options: {
       ...props,
       limit,
-      name: `${prefix}/[hash].[ext]`
+      name: `${prefix}/[hash].[ext]`,
     }
   };
 }

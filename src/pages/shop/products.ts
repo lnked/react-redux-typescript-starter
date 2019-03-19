@@ -1,3 +1,5 @@
+import image from './product.png'
+
 export const productsList = [
   {
     id: 1,
@@ -6,7 +8,7 @@ export const productsList = [
     code: 83429,
     discountPrice: '95.00',
     brand: 'Tasty',
-    image: 'https://loremflickr.com/200/240/fashion'
+    image,
   },
   {
     id: 2,
@@ -15,7 +17,7 @@ export const productsList = [
     code: 41034,
     discountPrice: '890.00',
     brand: 'Handcrafted',
-    image: 'https://loremflickr.com/200/240/nightlife'
+    image,
   },
   {
     id: 3,
@@ -24,7 +26,7 @@ export const productsList = [
     code: 12891,
     discountPrice: '483.00',
     brand: 'Small',
-    image: 'https://loremflickr.com/200/240/nature'
+    image,
   },
   {
     id: 4,
@@ -33,7 +35,7 @@ export const productsList = [
     code: 48806,
     discountPrice: '390.00',
     brand: 'Ergonomic',
-    image: 'https://loremflickr.com/200/240/business'
+    image,
   },
   {
     id: 5,
@@ -42,7 +44,7 @@ export const productsList = [
     code: 32593,
     discountPrice: '324.00',
     brand: 'Unbranded',
-    image: 'https://loremflickr.com/200/240/nightlife'
+    image,
   },
   {
     id: 6,
@@ -51,7 +53,7 @@ export const productsList = [
     code: 786,
     discountPrice: '786.00',
     brand: 'Rustic',
-    image: 'https://loremflickr.com/200/240/sports'
+    image,
   },
   {
     id: 7,
@@ -60,7 +62,7 @@ export const productsList = [
     code: 68299,
     discountPrice: '251.00',
     brand: 'Fantastic',
-    image: 'https://loremflickr.com/200/240/sports'
+    image,
   },
   {
     id: 8,
@@ -69,7 +71,7 @@ export const productsList = [
     code: 98657,
     discountPrice: '523.00',
     brand: 'Gorgeous',
-    image: 'https://loremflickr.com/200/240/business'
+    image,
   },
   {
     id: 9,
@@ -78,7 +80,7 @@ export const productsList = [
     code: 84938,
     discountPrice: '45.00',
     brand: 'Handcrafted',
-    image: 'https://loremflickr.com/200/240/city'
+    image,
   },
   {
     id: 10,
@@ -87,7 +89,7 @@ export const productsList = [
     code: 6772,
     discountPrice: '822.00',
     brand: 'Sleek',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 11,
@@ -96,7 +98,7 @@ export const productsList = [
     code: 40394,
     discountPrice: '516.00',
     brand: 'Refined',
-    image: 'https://loremflickr.com/200/240/technics'
+    image,
   },
   {
     id: 12,
@@ -105,7 +107,7 @@ export const productsList = [
     code: 37879,
     discountPrice: '114.00',
     brand: 'Gorgeous',
-    image: 'https://loremflickr.com/200/240/nature'
+    image,
   },
   {
     id: 13,
@@ -114,7 +116,7 @@ export const productsList = [
     code: 96621,
     discountPrice: '571.00',
     brand: 'Awesome',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 14,
@@ -123,7 +125,7 @@ export const productsList = [
     code: 82892,
     discountPrice: '840.00',
     brand: 'Tasty',
-    image: 'https://loremflickr.com/200/240/business'
+    image,
   },
   {
     id: 15,
@@ -132,7 +134,7 @@ export const productsList = [
     code: 34142,
     discountPrice: '21.00',
     brand: 'Awesome',
-    image: 'https://loremflickr.com/200/240/business'
+    image,
   },
   {
     id: 16,
@@ -141,7 +143,7 @@ export const productsList = [
     code: 12148,
     discountPrice: '819.00',
     brand: 'Practical',
-    image: 'https://loremflickr.com/200/240/food'
+    image,
   },
   {
     id: 17,
@@ -150,7 +152,7 @@ export const productsList = [
     code: 83671,
     discountPrice: '677.00',
     brand: 'Generic',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 18,
@@ -159,7 +161,7 @@ export const productsList = [
     code: 65574,
     discountPrice: '353.00',
     brand: 'Fantastic',
-    image: 'https://loremflickr.com/200/240/nightlife'
+    image,
   },
   {
     id: 19,
@@ -168,7 +170,7 @@ export const productsList = [
     code: 79208,
     discountPrice: '307.00',
     brand: 'Refined',
-    image: 'https://loremflickr.com/200/240/cats'
+    image,
   },
   {
     id: 20,
@@ -177,7 +179,7 @@ export const productsList = [
     code: 91293,
     discountPrice: '749.00',
     brand: 'Ergonomic',
-    image: 'https://loremflickr.com/200/240/animals'
+    image,
   },
   {
     id: 21,
@@ -186,7 +188,7 @@ export const productsList = [
     code: 14356,
     discountPrice: '871.00',
     brand: 'Gorgeous',
-    image: 'https://loremflickr.com/200/240/animals'
+    image,
   },
   {
     id: 22,
@@ -195,7 +197,7 @@ export const productsList = [
     code: 96741,
     discountPrice: '211.00',
     brand: 'Incredible',
-    image: 'https://loremflickr.com/200/240/cats'
+    image,
   },
   {
     id: 23,
@@ -204,7 +206,7 @@ export const productsList = [
     code: 99845,
     discountPrice: '723.00',
     brand: 'Fantastic',
-    image: 'https://loremflickr.com/200/240/sports'
+    image,
   },
   {
     id: 24,
@@ -213,7 +215,7 @@ export const productsList = [
     code: 85050,
     discountPrice: '883.00',
     brand: 'Small',
-    image: 'https://loremflickr.com/200/240/business'
+    image,
   },
   {
     id: 25,
@@ -222,7 +224,7 @@ export const productsList = [
     code: 46135,
     discountPrice: '583.00',
     brand: 'Gorgeous',
-    image: 'https://loremflickr.com/200/240/transport'
+    image,
   },
   {
     id: 26,
@@ -231,7 +233,7 @@ export const productsList = [
     code: 57106,
     discountPrice: '146.00',
     brand: 'Practical',
-    image: 'https://loremflickr.com/200/240/technics'
+    image,
   },
   {
     id: 27,
@@ -240,7 +242,7 @@ export const productsList = [
     code: 50762,
     discountPrice: '983.00',
     brand: 'Tasty',
-    image: 'https://loremflickr.com/200/240/fashion'
+    image,
   },
   {
     id: 28,
@@ -249,7 +251,7 @@ export const productsList = [
     code: 55891,
     discountPrice: '732.00',
     brand: 'Handcrafted',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 29,
@@ -258,7 +260,7 @@ export const productsList = [
     code: 93478,
     discountPrice: '415.00',
     brand: 'Awesome',
-    image: 'https://loremflickr.com/200/240/city'
+    image,
   },
   {
     id: 30,
@@ -267,7 +269,7 @@ export const productsList = [
     code: 47180,
     discountPrice: '15.00',
     brand: 'Generic',
-    image: 'https://loremflickr.com/200/240/abstract'
+    image,
   },
   {
     id: 31,
@@ -276,7 +278,7 @@ export const productsList = [
     code: 38286,
     discountPrice: '749.00',
     brand: 'Awesome',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 32,
@@ -285,7 +287,7 @@ export const productsList = [
     code: 65237,
     discountPrice: '326.00',
     brand: 'Refined',
-    image: 'https://loremflickr.com/200/240/business'
+    image,
   },
   {
     id: 33,
@@ -294,7 +296,7 @@ export const productsList = [
     code: 96947,
     discountPrice: '631.00',
     brand: 'Awesome',
-    image: 'https://loremflickr.com/200/240/city'
+    image,
   },
   {
     id: 34,
@@ -303,7 +305,7 @@ export const productsList = [
     code: 62452,
     discountPrice: '849.00',
     brand: 'Generic',
-    image: 'https://loremflickr.com/200/240/cats'
+    image,
   },
   {
     id: 35,
@@ -312,7 +314,7 @@ export const productsList = [
     code: 1283,
     discountPrice: '0.00',
     brand: 'Small',
-    image: 'https://loremflickr.com/200/240/sports'
+    image,
   },
   {
     id: 36,
@@ -321,7 +323,7 @@ export const productsList = [
     code: 2435,
     discountPrice: '201.00',
     brand: 'Awesome',
-    image: 'https://loremflickr.com/200/240/nightlife'
+    image,
   },
   {
     id: 37,
@@ -330,7 +332,7 @@ export const productsList = [
     code: 98957,
     discountPrice: '496.00',
     brand: 'Rustic',
-    image: 'https://loremflickr.com/200/240/abstract'
+    image,
   },
   {
     id: 38,
@@ -339,7 +341,7 @@ export const productsList = [
     code: 98166,
     discountPrice: '920.00',
     brand: 'Rustic',
-    image: 'https://loremflickr.com/200/240/technics'
+    image,
   },
   {
     id: 39,
@@ -348,7 +350,7 @@ export const productsList = [
     code: 76143,
     discountPrice: '253.00',
     brand: 'Refined',
-    image: 'https://loremflickr.com/200/240/food'
+    image,
   },
   {
     id: 40,
@@ -357,7 +359,7 @@ export const productsList = [
     code: 84390,
     discountPrice: '298.00',
     brand: 'Intelligent',
-    image: 'https://loremflickr.com/200/240/fashion'
+    image,
   },
   {
     id: 41,
@@ -366,7 +368,7 @@ export const productsList = [
     code: 11553,
     discountPrice: '574.00',
     brand: 'Sleek',
-    image: 'https://loremflickr.com/200/240/city'
+    image,
   },
   {
     id: 42,
@@ -375,7 +377,7 @@ export const productsList = [
     code: 38929,
     discountPrice: '582.00',
     brand: 'Small',
-    image: 'https://loremflickr.com/200/240/nature'
+    image,
   },
   {
     id: 43,
@@ -384,7 +386,7 @@ export const productsList = [
     code: 67184,
     discountPrice: '932.00',
     brand: 'Fantastic',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 44,
@@ -393,7 +395,7 @@ export const productsList = [
     code: 81744,
     discountPrice: '950.00',
     brand: 'Gorgeous',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 45,
@@ -402,7 +404,7 @@ export const productsList = [
     code: 97666,
     discountPrice: '364.00',
     brand: 'Handcrafted',
-    image: 'https://loremflickr.com/200/240/abstract'
+    image,
   },
   {
     id: 46,
@@ -411,7 +413,7 @@ export const productsList = [
     code: 66791,
     discountPrice: '936.00',
     brand: 'Handmade',
-    image: 'https://loremflickr.com/200/240/transport'
+    image,
   },
   {
     id: 47,
@@ -420,7 +422,7 @@ export const productsList = [
     code: 83663,
     discountPrice: '161.00',
     brand: 'Incredible',
-    image: 'https://loremflickr.com/200/240/business'
+    image,
   },
   {
     id: 48,
@@ -429,7 +431,7 @@ export const productsList = [
     code: 81827,
     discountPrice: '4.00',
     brand: 'Ergonomic',
-    image: 'https://loremflickr.com/200/240/sports'
+    image,
   },
   {
     id: 49,
@@ -438,7 +440,7 @@ export const productsList = [
     code: 17978,
     discountPrice: '174.00',
     brand: 'Small',
-    image: 'https://loremflickr.com/200/240/animals'
+    image,
   },
   {
     id: 50,
@@ -447,7 +449,7 @@ export const productsList = [
     code: 74618,
     discountPrice: '452.00',
     brand: 'Refined',
-    image: 'https://loremflickr.com/200/240/animals'
+    image,
   },
   {
     id: 51,
@@ -456,7 +458,7 @@ export const productsList = [
     code: 46911,
     discountPrice: '705.00',
     brand: 'Refined',
-    image: 'https://loremflickr.com/200/240/nightlife'
+    image,
   },
   {
     id: 52,
@@ -465,7 +467,7 @@ export const productsList = [
     code: 4328,
     discountPrice: '203.00',
     brand: 'Refined',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 53,
@@ -474,7 +476,7 @@ export const productsList = [
     code: 1491,
     discountPrice: '427.00',
     brand: 'Ergonomic',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 54,
@@ -483,7 +485,7 @@ export const productsList = [
     code: 59074,
     discountPrice: '976.00',
     brand: 'Gorgeous',
-    image: 'https://loremflickr.com/200/240/business'
+    image,
   },
   {
     id: 55,
@@ -492,7 +494,7 @@ export const productsList = [
     code: 19274,
     discountPrice: '600.00',
     brand: 'Practical',
-    image: 'https://loremflickr.com/200/240/nature'
+    image,
   },
   {
     id: 56,
@@ -501,7 +503,7 @@ export const productsList = [
     code: 53882,
     discountPrice: '853.00',
     brand: 'Rustic',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 57,
@@ -510,7 +512,7 @@ export const productsList = [
     code: 61718,
     discountPrice: '806.00',
     brand: 'Handmade',
-    image: 'https://loremflickr.com/200/240/cats'
+    image,
   },
   {
     id: 58,
@@ -519,7 +521,7 @@ export const productsList = [
     code: 83383,
     discountPrice: '836.00',
     brand: 'Awesome',
-    image: 'https://loremflickr.com/200/240/abstract'
+    image,
   },
   {
     id: 59,
@@ -528,7 +530,7 @@ export const productsList = [
     code: 15717,
     discountPrice: '279.00',
     brand: 'Sleek',
-    image: 'https://loremflickr.com/200/240/fashion'
+    image,
   },
   {
     id: 60,
@@ -537,7 +539,7 @@ export const productsList = [
     code: 18993,
     discountPrice: '577.00',
     brand: 'Handmade',
-    image: 'https://loremflickr.com/200/240/animals'
+    image,
   },
   {
     id: 61,
@@ -546,7 +548,7 @@ export const productsList = [
     code: 1808,
     discountPrice: '313.00',
     brand: 'Generic',
-    image: 'https://loremflickr.com/200/240/sports'
+    image,
   },
   {
     id: 62,
@@ -555,7 +557,7 @@ export const productsList = [
     code: 49821,
     discountPrice: '186.00',
     brand: 'Sleek',
-    image: 'https://loremflickr.com/200/240/food'
+    image,
   },
   {
     id: 63,
@@ -564,7 +566,7 @@ export const productsList = [
     code: 96594,
     discountPrice: '184.00',
     brand: 'Awesome',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 64,
@@ -573,7 +575,7 @@ export const productsList = [
     code: 68550,
     discountPrice: '109.00',
     brand: 'Unbranded',
-    image: 'https://loremflickr.com/200/240/transport'
+    image,
   },
   {
     id: 65,
@@ -582,7 +584,7 @@ export const productsList = [
     code: 49074,
     discountPrice: '459.00',
     brand: 'Fantastic',
-    image: 'https://loremflickr.com/200/240/nature'
+    image,
   },
   {
     id: 66,
@@ -591,7 +593,7 @@ export const productsList = [
     code: 45920,
     discountPrice: '521.00',
     brand: 'Licensed',
-    image: 'https://loremflickr.com/200/240/nightlife'
+    image,
   },
   {
     id: 67,
@@ -600,7 +602,7 @@ export const productsList = [
     code: 22139,
     discountPrice: '985.00',
     brand: 'Ergonomic',
-    image: 'https://loremflickr.com/200/240/nightlife'
+    image,
   },
   {
     id: 68,
@@ -609,7 +611,7 @@ export const productsList = [
     code: 92075,
     discountPrice: '332.00',
     brand: 'Rustic',
-    image: 'https://loremflickr.com/200/240/nightlife'
+    image,
   },
   {
     id: 69,
@@ -618,7 +620,7 @@ export const productsList = [
     code: 95251,
     discountPrice: '565.00',
     brand: 'Awesome',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 70,
@@ -627,7 +629,7 @@ export const productsList = [
     code: 32103,
     discountPrice: '535.00',
     brand: 'Rustic',
-    image: 'https://loremflickr.com/200/240/fashion'
+    image,
   },
   {
     id: 71,
@@ -636,7 +638,7 @@ export const productsList = [
     code: 12319,
     discountPrice: '929.00',
     brand: 'Handmade',
-    image: 'https://loremflickr.com/200/240/nightlife'
+    image,
   },
   {
     id: 72,
@@ -645,7 +647,7 @@ export const productsList = [
     code: 44469,
     discountPrice: '676.00',
     brand: 'Gorgeous',
-    image: 'https://loremflickr.com/200/240/sports'
+    image,
   },
   {
     id: 73,
@@ -654,7 +656,7 @@ export const productsList = [
     code: 5157,
     discountPrice: '6.00',
     brand: 'Handcrafted',
-    image: 'https://loremflickr.com/200/240/sports'
+    image,
   },
   {
     id: 74,
@@ -663,7 +665,7 @@ export const productsList = [
     code: 66805,
     discountPrice: '841.00',
     brand: 'Generic',
-    image: 'https://loremflickr.com/200/240/city'
+    image,
   },
   {
     id: 75,
@@ -672,7 +674,7 @@ export const productsList = [
     code: 51675,
     discountPrice: '140.00',
     brand: 'Tasty',
-    image: 'https://loremflickr.com/200/240/food'
+    image,
   },
   {
     id: 76,
@@ -681,7 +683,7 @@ export const productsList = [
     code: 51639,
     discountPrice: '767.00',
     brand: 'Awesome',
-    image: 'https://loremflickr.com/200/240/nature'
+    image,
   },
   {
     id: 77,
@@ -690,7 +692,7 @@ export const productsList = [
     code: 21077,
     discountPrice: '103.00',
     brand: 'Refined',
-    image: 'https://loremflickr.com/200/240/food'
+    image,
   },
   {
     id: 78,
@@ -699,7 +701,7 @@ export const productsList = [
     code: 26210,
     discountPrice: '253.00',
     brand: 'Incredible',
-    image: 'https://loremflickr.com/200/240/technics'
+    image,
   },
   {
     id: 79,
@@ -708,7 +710,7 @@ export const productsList = [
     code: 15332,
     discountPrice: '786.00',
     brand: 'Licensed',
-    image: 'https://loremflickr.com/200/240/animals'
+    image,
   },
   {
     id: 80,
@@ -717,7 +719,7 @@ export const productsList = [
     code: 43142,
     discountPrice: '208.00',
     brand: 'Sleek',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 81,
@@ -726,7 +728,7 @@ export const productsList = [
     code: 52188,
     discountPrice: '198.00',
     brand: 'Intelligent',
-    image: 'https://loremflickr.com/200/240/sports'
+    image,
   },
   {
     id: 82,
@@ -735,7 +737,7 @@ export const productsList = [
     code: 33555,
     discountPrice: '240.00',
     brand: 'Handmade',
-    image: 'https://loremflickr.com/200/240/nature'
+    image,
   },
   {
     id: 83,
@@ -744,7 +746,7 @@ export const productsList = [
     code: 84827,
     discountPrice: '999.00',
     brand: 'Handcrafted',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 84,
@@ -753,7 +755,7 @@ export const productsList = [
     code: 36824,
     discountPrice: '939.00',
     brand: 'Refined',
-    image: 'https://loremflickr.com/200/240/food'
+    image,
   },
   {
     id: 85,
@@ -762,7 +764,7 @@ export const productsList = [
     code: 51749,
     discountPrice: '893.00',
     brand: 'Small',
-    image: 'https://loremflickr.com/200/240/abstract'
+    image,
   },
   {
     id: 86,
@@ -771,7 +773,7 @@ export const productsList = [
     code: 66169,
     discountPrice: '16.00',
     brand: 'Handmade',
-    image: 'https://loremflickr.com/200/240/transport'
+    image,
   },
   {
     id: 87,
@@ -780,7 +782,7 @@ export const productsList = [
     code: 92157,
     discountPrice: '865.00',
     brand: 'Awesome',
-    image: 'https://loremflickr.com/200/240/fashion'
+    image,
   },
   {
     id: 88,
@@ -789,7 +791,7 @@ export const productsList = [
     code: 6188,
     discountPrice: '419.00',
     brand: 'Ergonomic',
-    image: 'https://loremflickr.com/200/240/nature'
+    image,
   },
   {
     id: 89,
@@ -798,7 +800,7 @@ export const productsList = [
     code: 14415,
     discountPrice: '752.00',
     brand: 'Incredible',
-    image: 'https://loremflickr.com/200/240/business'
+    image,
   },
   {
     id: 90,
@@ -807,7 +809,7 @@ export const productsList = [
     code: 83540,
     discountPrice: '424.00',
     brand: 'Generic',
-    image: 'https://loremflickr.com/200/240/abstract'
+    image,
   },
   {
     id: 91,
@@ -816,7 +818,7 @@ export const productsList = [
     code: 81399,
     discountPrice: '994.00',
     brand: 'Handcrafted',
-    image: 'https://loremflickr.com/200/240/technics'
+    image,
   },
   {
     id: 92,
@@ -825,7 +827,7 @@ export const productsList = [
     code: 52677,
     discountPrice: '728.00',
     brand: 'Unbranded',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 93,
@@ -834,7 +836,7 @@ export const productsList = [
     code: 56064,
     discountPrice: '668.00',
     brand: 'Refined',
-    image: 'https://loremflickr.com/200/240/fashion'
+    image,
   },
   {
     id: 94,
@@ -843,7 +845,7 @@ export const productsList = [
     code: 1890,
     discountPrice: '705.00',
     brand: 'Handcrafted',
-    image: 'https://loremflickr.com/200/240/nature'
+    image,
   },
   {
     id: 95,
@@ -852,7 +854,7 @@ export const productsList = [
     code: 33674,
     discountPrice: '687.00',
     brand: 'Generic',
-    image: 'https://loremflickr.com/200/240/city'
+    image,
   },
   {
     id: 96,
@@ -861,7 +863,7 @@ export const productsList = [
     code: 33476,
     discountPrice: '393.00',
     brand: 'Handcrafted',
-    image: 'https://loremflickr.com/200/240/people'
+    image,
   },
   {
     id: 97,
@@ -870,7 +872,7 @@ export const productsList = [
     code: 53810,
     discountPrice: '112.00',
     brand: 'Refined',
-    image: 'https://loremflickr.com/200/240/food'
+    image,
   },
   {
     id: 98,
@@ -879,7 +881,7 @@ export const productsList = [
     code: 63242,
     discountPrice: '847.00',
     brand: 'Generic',
-    image: 'https://loremflickr.com/200/240/fashion'
+    image,
   },
   {
     id: 99,
@@ -888,7 +890,7 @@ export const productsList = [
     code: 70734,
     discountPrice: '935.00',
     brand: 'Fantastic',
-    image: 'https://loremflickr.com/200/240/animals'
+    image,
   },
   {
     id: 100,
@@ -897,6 +899,6 @@ export const productsList = [
     code: 10280,
     discountPrice: '26.00',
     brand: 'Awesome',
-    image: 'https://loremflickr.com/200/240/fashion'
+    image,
   }
 ]

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { NavLink, RouteComponentProps } from 'react-router-dom'
 
 import Product from './components/product'
-import { Container, Categories, Sidebar, Products } from './components/styles'
+import { Container, Categories, Sidebar, Products } from './styles'
 
 // export interface P extends RouteComponentProps {}
 
