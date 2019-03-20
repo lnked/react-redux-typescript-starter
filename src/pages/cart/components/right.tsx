@@ -10,7 +10,8 @@ export interface P {
 const StyledBlock = styled.div`
   width: 32%;
   padding: 10px;
-  border: 1px solid blue;
+  font-size: 1.6rem;
+  border: 1px solid violet;
 `
 
 const StyledInput = styled.input`
@@ -29,6 +30,7 @@ export function Right (props: any) {
 
   return (
     <StyledBlock>
+      <div>xxx</div>
       <StyledInput
         value={left}
         placeholder='LEFT'

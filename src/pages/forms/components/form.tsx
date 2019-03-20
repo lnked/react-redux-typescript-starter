@@ -6,16 +6,14 @@ export interface P {
 }
 
 export interface S {
-  visible: boolean;
+  values: any;
 }
 
 export class Form extends React.Component<P, S> {
   static defaultProps = {}
 
   state = {
-    values: [
-      { name: 'text', value: 'xx' },
-    ],
+    values: {},
   }
 
   handleFocus = (e: Event | any) => {
@@ -27,16 +25,25 @@ export class Form extends React.Component<P, S> {
   }
 
   handleChange = (e: Event | any) => {
-    console.log('handleChange', e.target.name, e.target.value)
+    const { name, value } = e.target
+
+    this.setState(state => ({
+      values: {
+        ...state.values, [name]: value,
+      },
+    }))
   }
 
   render () {
     const { children } = this.props
 
+    console.error('render: ', this.state.values)
+
     return React.Children.map(children, (node: React.ReactNode | any) =>
       React.cloneElement(node, {
-        onFocus: this.handleFocus,
         onBlur: this.handleBlur,
+        onFocus: this.handleFocus,
+        onInput: this.handleChange,
         onChange: this.handleChange,
       })
     )

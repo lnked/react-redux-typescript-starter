@@ -8,7 +8,6 @@ export interface P {
 }
 
 export default function Navigation ({ onMouseEnter }: P) {
-
   return (
     <StyledList>
       {links && links.map(({ label, component, ...link }: any) => (
