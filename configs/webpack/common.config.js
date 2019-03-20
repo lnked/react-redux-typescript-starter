@@ -13,8 +13,8 @@ module.exports = {
   target: 'web',
   entry: {
     app: [
-      ...polyfills,
-      path.resolve(options.source, 'index.tsx'),
+      // ...polyfills,
+      path.resolve(options.source, 'client.tsx'),
     ],
   },
   output: {
