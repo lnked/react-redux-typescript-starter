@@ -27,7 +27,7 @@ function Forms () {
   return (
     <div>
       <Form onSubmit={() => alert('submit')}>
-        <Input name='name' value='xx' rules={['rule1']} validate={e => console.log(e)} placeholder='Name' />
+        <Input name='text' value='xx' rules={['rule1']} validate={e => console.log(e)} placeholder='Name' />
         <Input name='value' placeholder='Value' />
         <Select name='value' placeholder='Value' />
       </Form>

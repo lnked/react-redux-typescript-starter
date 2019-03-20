@@ -14,7 +14,7 @@ export class Form extends React.Component<P, S> {
 
   state = {
     values: [
-      { name: '', },
+      { name: 'text', value: 'xx' },
     ],
   }
 
