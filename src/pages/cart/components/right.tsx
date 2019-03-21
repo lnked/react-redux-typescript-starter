@@ -11,7 +11,7 @@ const StyledBlock = styled.div`
   width: 32%;
   padding: 10px;
   font-size: 1.6rem;
-  border: 1px solid violet;
+  border: 1px solid gold;
 `
 
 const StyledInput = styled.input`

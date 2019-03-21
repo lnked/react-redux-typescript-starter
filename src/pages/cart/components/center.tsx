@@ -10,7 +10,7 @@ export interface P {
 const StyledBlock = styled.div`
   width: 32%;
   padding: 10px;
-  border: 1px solid blue;
+  border: 1px solid red;
 `
 
 const StyledInput = styled.input`

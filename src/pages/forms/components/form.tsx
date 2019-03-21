@@ -1,12 +1,28 @@
 import * as React from 'react'
 
 export interface P {
-  onSubmit?: () => void;
+  onSubmit?: (e?: React.FormEvent<HTMLFormElement>) => void;
+  handleReset: () => void;
+  handleBlur (e: React.FocusEvent<any>): void;
+  handleBlur<T = string | any> (fieldOrEvent: T): T extends string ? ((e: any) => void) : void;
+  handleChange (e: React.ChangeEvent<any>): void;
+  handleChange<T = string | React.ChangeEvent<any>> (
+    field: T
+  ): T extends React.ChangeEvent<any>
+    ? void
+    : ((e: string | React.ChangeEvent<any>) => void);
   className?: string;
+  initialValues: any;
 }
 
 export interface S {
   values: any;
+  errors: any[];
+  touched: any[];
+  status?: any;
+  isValidating: boolean;
+  isSubmitting: boolean;
+  submitCount: number;
 }
 
 export class Form extends React.Component<P, S> {
@@ -14,6 +30,20 @@ export class Form extends React.Component<P, S> {
 
   state = {
     values: {},
+    errors: [],
+    touched: [],
+    status: false,
+    isValidating: false,
+    isSubmitting: false,
+    submitCount: 0,
+  }
+
+  handleSubmit = (e: React.FormEvent<HTMLFormElement> | undefined) => {
+    if (e && e.preventDefault) {
+      e.preventDefault()
+    }
+
+    console.log('handleSubmit: ', e)
   }
 
   handleFocus = (e: Event | any) => {

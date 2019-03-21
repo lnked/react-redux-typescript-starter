@@ -40,7 +40,9 @@ if (options.analyze) {
 
 module.exports = {
   mode: 'production',
-  devtool: 'cheap-module-source-map',
+  // devtool: 'cheap-source-map',
+  // devtool: 'cheap-module-source-map',
+  devtool: false,
   bail: true,
   performance: {
     hints: 'warning',
