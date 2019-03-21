@@ -183,7 +183,7 @@
     "mobx": "5.9.0",
     "mobx-react": "5.4.3",
     "react": "16.8.4",
-    "react-dom": "npm:@hot-loader/react-dom@exotic",
+    "react-dom": "npm:@hot-loader/react-dom",
     "react-hot-loader": "4.8.0",
     "react-i18next": "10.5.2",
     "react-router-dom": "5.0.0",
