@@ -185,7 +185,7 @@
     "react": "16.8.4",
     "react-dom": "npm:@hot-loader/react-dom",
     "react-hot-loader": "4.8.0",
-    "react-i18next": "10.5.2",
+    "react-i18next": "10.5.3",
     "react-router-dom": "5.0.0",
     "react-test-renderer": "16.8.4",
     "react-testing-library": "6.0.2",

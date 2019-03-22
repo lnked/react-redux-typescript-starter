@@ -1,44 +1,47 @@
 import * as React from 'react'
-import styled from '@emotion/styled'
 
-import Form from './components/form'
-
-const StyledForm = styled(Form)`
-  border: 1px solid lime;
-`
-
-const Input = styled.input`
-  width: 100%;
-  outline: 0;
-  padding: 5px 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-`
-
-const Textarea = styled.textarea`
-  width: 100%;
-  outline: 0;
-  padding: 5px 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-`
-
-const Select = styled.select`
-  width: 100%;
-  outline: 0;
-  padding: 5px 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-`
+import { Form, Input, Textarea, Select } from './styles'
 
 export interface P {
   initialCount?: number;
 }
 
+export interface HandlerProps {
+  handleClick: (e: React.ChangeEvent<any>) => void;
+  handleChange: (e: React.ChangeEvent<any>) => void;
+  children: (handleClick: any, handleChange: any) => Element;
+}
+
+class Handler extends React.Component<HandlerProps, any> {
+  handleChange = (e: React.ChangeEvent<any>) => {
+    console.log(e)
+    alert('handleChange')
+  }
+
+  handleClick = (e: React.ChangeEvent<any>) => {
+    console.log(e)
+    alert('handle click')
+  }
+
+  render () {
+    return this.props.children(this.handleClick, this.handleChange)
+  }
+}
+
+/* tslint:disable */
 function Forms () {
   return (
     <div>
-      <StyledForm onSubmit={() => alert('submit')}>
+      <Form onSubmit={() => alert('submit')}>
+        <Handler>
+          {(handleClick, handleChange) => (
+            <div>
+              <input onChange={handleChange} />
+              <button onClick={handleClick}>button</button>
+            </div>
+          )}
+        </Handler>
+
         {/* <Input name='text' value='xx' rules={['rule1']} validate={e => console.log(e)} placeholder='Name' /> */}
         <Input name='name' placeholder='Name' />
 
@@ -72,7 +75,7 @@ function Forms () {
         </Select>
 
         <button type='submit'>Submit</button>
-      </StyledForm>
+      </Form>
     </div>
   )
 }
