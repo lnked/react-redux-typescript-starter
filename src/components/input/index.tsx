@@ -1,40 +1,56 @@
 import * as React from 'react'
 
-export interface P {
-  id: string,
+import {
+  Wrapper,
+  Label,
+  StyledInput,
+} from './styles'
+
+export interface P extends React.HTMLProps<HTMLInputElement> {
   label?: string;
   error?: string;
   required?: boolean;
+  className?: string;
+  inputClassName?: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default function Input ({ id, label = '', error = '', ...attrs }: P) {
+const Input: React.FC<P> = ({ label, className, inputClassName, error, ...attrs }) => {
   const textInput = React.createRef<HTMLInputElement>()
 
   React.useEffect(() => {
     textInput.current!.focus()
   }, [])
 
-  return (
-    <div className='inputWrapper'>
-      <div className='labelsWrapper'>
-        {label
-          && <label className='inputLabel' htmlFor={id}>{label}</label>
-        }
-        {attrs.required
-          && <span className='inputRequired'>Required</span>
-        }
-      </div>
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => console.error('onChange: ', e.target.value)
 
-      <input
-        ref={textInput}
-        name={id}
-        id={id}
+  return (
+    <Wrapper className={className}>
+      {label
+        && <Label>{label}</Label>
+      }
+
+      {attrs.required
+        && <span>Required</span>
+      }
+
+      <StyledInput
         {...attrs}
+        ref={textInput}
+        onInput={onChange}
+        className={inputClassName}
       />
 
       {error
-        && <span className='inputError'>{error}</span>
+        && <span>{error}</span>
       }
-    </div>
+    </Wrapper>
   )
 }
+
+Input.defaultProps = {
+  label: '',
+  error: '',
+}
+
+export default Input

@@ -11,7 +11,7 @@ module.exports = {
     overlay: true,
     compress: true,
     publicPath: '/',
-    contentBase: ['./dist'],
+    // contentBase: ['./dist'],
     historyApiFallback: true,
     clientLogLevel: 'error',
     headers: {

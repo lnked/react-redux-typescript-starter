@@ -7,7 +7,7 @@ export interface P {
 }
 
 export interface HandlerProps {
-  handleClick: (e: React.ChangeEvent<any>) => void;
+  handleClick: () => void;
   handleChange: (e: React.ChangeEvent<any>) => void;
   children: (handleClick: any, handleChange: any) => Element;
 }

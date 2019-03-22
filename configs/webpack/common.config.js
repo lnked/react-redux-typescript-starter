@@ -53,7 +53,7 @@ module.exports = {
       inject: true,
       filename: 'index.html',
       template: path.resolve(options.root, 'public/index.html'),
-      PUBLIC_URL: '',
+      PUBLIC_URL: '/',
       description: 'React starter',
 
       // production

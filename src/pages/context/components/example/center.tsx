@@ -1,6 +1,8 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 
+import { Input } from 'components'
+
 import withContext from './store/hoc'
 
 export interface P {
@@ -13,13 +15,11 @@ const StyledBlock = styled.div`
   border: 1px solid blue;
 `
 
-const StyledInput = styled.input`
+const StyledInput = styled(Input)`
   width: 100%;
-  outline: 0;
-  border: 1px solid #ddd;
 
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 `
 
@@ -31,16 +31,19 @@ export function Center (props: any) {
     <StyledBlock>
       <StyledInput
         value={left}
+        label="Left"
         placeholder='LEFT'
         onChange={({ target: { value } }: any) => dispatch({ type: 'LEFT', value })}
       />
       <StyledInput
         value={right}
+        label="Right"
         placeholder='RIGHT'
         onChange={({ target: { value } }: any) => dispatch({ type: 'RIGHT', value })}
       />
       <StyledInput
         value={center}
+        label="Center"
         placeholder='CENTER'
         onChange={({ target: { value } }: any) => dispatch({ type: 'CENTER', value })}
       />

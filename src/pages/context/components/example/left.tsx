@@ -1,6 +1,8 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 
+import { Input } from 'components'
+
 import withContext from './store/hoc'
 
 export interface P {
@@ -13,10 +15,8 @@ const StyledBlock = styled.div`
   border: 1px solid blue;
 `
 
-const StyledInput = styled.input`
+const StyledInput = styled(Input)`
   width: 100%;
-  outline: 0;
-  border: 1px solid #ddd;
 
   &:not(:last-child) {
     margin-bottom: 10px;
