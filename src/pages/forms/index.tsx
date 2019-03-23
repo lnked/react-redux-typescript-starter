@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Form } from 'components'
+import { Form, JsonPretty } from 'components'
 
 import {
   Input,
@@ -29,8 +29,8 @@ function Forms () {
       }}
     >
       {({ values, isValid, dirty, handleSubmit, handleChange, isSubmitting }) => (
-        <div>
-          {JSON.stringify(values)}
+        <React.Fragment>
+          <JsonPretty json={values} />
 
           <Input name='text' value={values.text} onChange={handleChange} />
 
@@ -38,7 +38,7 @@ function Forms () {
 
           <Input name='value' value={values.value} placeholder='Value' onChange={handleChange} />
 
-          <Input name='number' value={values.number} type='number' onChange={handleChange} />
+          <Input name='number' type='number' value={values.number} type='number' onChange={handleChange} />
 
           <Input name='checkbox' type='checkbox' onChange={handleChange} />
 
@@ -66,14 +66,10 @@ function Forms () {
             <option value={6}>Option 6</option>
           </Select>
 
-          <button
-            type='submit'
-            onClick={handleSubmit}
-            disabled={isSubmitting || !isValid || !dirty}
-          >
+          <button type='submit' onClick={handleSubmit} disabled={isSubmitting || !isValid || !dirty}>
             Submit
           </button>
-        </div>
+        </React.Fragment>
       )}
     </Form>
   )

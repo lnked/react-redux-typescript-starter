@@ -1,13 +1,6 @@
 import * as React from 'react'
 
-import { isObject, isFunction, isEmptyChildren } from 'utils/assertions'
-
-export interface HandlerProps {
-  children: (props: any) => any;
-  onSubmit?: (values: any, props: any) => void;
-  initialValues?: any;
-  validationSchema?: any;
-}
+import { isObject, isEmptyChildren } from 'utils/assertions'
 
 export interface HandlerState {
   initialized: boolean,
@@ -19,6 +12,13 @@ export interface HandlerState {
   submitCount: number,
   isSubmitting: boolean;
   isValidating: boolean;
+}
+
+export interface HandlerProps {
+  children: (props: HandlerState) => any;
+  onSubmit?: (values: any, props: any) => void;
+  initialValues?: any;
+  validationSchema?: any;
 }
 
 class Form extends React.Component<HandlerProps, HandlerState> {
@@ -75,12 +75,14 @@ class Form extends React.Component<HandlerProps, HandlerState> {
   }
 
   handleSubmit = (e?: React.FormEvent<HTMLFormElement>) => {
-    console.log(e)
-    this.setState({ isSubmitting: true })
+    const { values } = this.state
+    const { onSubmit } = this.props
 
-    if (this.props.onSubmit) {
-      this.props.onSubmit(this.state.values, { setSubmitting: this.state.setSubmitting })
-    }
+    this.setState({ isSubmitting: true }, () => {
+      if (onSubmit) {
+        onSubmit(values, { e, setSubmitting: this.setSubmitting })
+      }
+    })
   }
 
   handleReset = () => {
@@ -98,11 +100,16 @@ class Form extends React.Component<HandlerProps, HandlerState> {
       isSubmitting,
     } = this.state
 
-    console.error(
-      isObject(children),
-      isFunction(children),
-      isEmptyChildren(children),
-    )
+    if (isObject(children) && !isEmptyChildren(children)) {
+      return React.Children.map(children, (node: React.ReactNode | any) =>
+        React.cloneElement(node, {
+          onBlur: this.handleBlur,
+          onFocus: this.handleFocus,
+          onInput: this.handleChange,
+          onChange: this.handleChange,
+        })
+      )
+    }
 
     return children({
       dirty,
