@@ -2,33 +2,46 @@ import * as React from 'react'
 
 import { isObject, isEmptyChildren } from 'utils/assertions'
 
-export interface HandlerState {
-  initialized: boolean,
-  errors: any,
-  values: any,
-  touched: any,
-  dirty: boolean,
-  isValid: boolean,
-  submitCount: number,
+export interface PassedMethods {
+  handleBlur?: (e?: React.FormEvent<HTMLInputElement>) => void;
+  handleFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  handleInput?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleReset?: (e?: React.FormEvent<HTMLFormElement>) => void;
+  handleSubmit?: (e?: React.FormEvent<HTMLFormElement>) => void;
+  setSubmitting?: (isSubmitting: boolean) => void;
+}
+
+export interface PassedState {
+  errors: any;
+  values: any;
+  touched: any;
+  dirty: boolean;
+  isValid: boolean;
+  submitCount: number;
   isSubmitting: boolean;
   isValidating: boolean;
 }
 
-export interface HandlerProps {
-  children: (props: HandlerState) => any;
+export interface Props {
+  children: (props: PassedState & PassedMethods) => any;
   onSubmit?: (values: any, props: any) => void;
   initialValues?: any;
   validationSchema?: any;
 }
 
-class Form extends React.Component<HandlerProps, HandlerState> {
+export interface State extends PassedState {
+  initialized: boolean;
+}
+
+class Form extends React.Component<Props, State> {
   static defaultProps = {
     initialValues: {},
     validateOnBlur: true,
     validateOnChange: true,
   }
 
-  static getDerivedStateFromProps (nextProps: HandlerProps, prevState: HandlerState) {
+  static getDerivedStateFromProps (nextProps: Props, prevState: State) {
     const { initialized } = prevState
     const { initialValues } = nextProps
 
@@ -60,9 +73,8 @@ class Form extends React.Component<HandlerProps, HandlerState> {
     this.setState(state => ({ values: { ...state.values, [name]: value } }))
   }
 
-  handleBlur = (e: React.FormEvent<HTMLInputElement>) => {
-    console.log(e)
-    console.log('handleBlur 1')
+  handleBlur = (e?: React.FormEvent<HTMLInputElement>) => {
+    console.log(e, 'handleBlur 1')
   }
 
   handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
@@ -85,8 +97,8 @@ class Form extends React.Component<HandlerProps, HandlerState> {
     })
   }
 
-  handleReset = () => {
-    console.log('reset')
+  handleReset = (e?: React.FormEvent<HTMLFormElement>) => {
+    console.log('reset', e)
   }
 
   render () {
@@ -97,7 +109,9 @@ class Form extends React.Component<HandlerProps, HandlerState> {
       values,
       touched,
       isValid,
+      submitCount,
       isSubmitting,
+      isValidating,
     } = this.state
 
     if (isObject(children) && !isEmptyChildren(children)) {
@@ -117,7 +131,9 @@ class Form extends React.Component<HandlerProps, HandlerState> {
       values,
       touched,
       isValid,
+      submitCount,
       isSubmitting,
+      isValidating,
       handleBlur: this.handleBlur,
       handleFocus: this.handleFocus,
       handleReset: this.handleReset,

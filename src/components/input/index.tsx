@@ -7,6 +7,7 @@ import {
 } from './styles'
 
 export interface P extends React.HTMLProps<HTMLInputElement> {
+  type?: string;
   label?: string;
   error?: string;
   value?: string | number | null;
@@ -50,6 +51,7 @@ const Input: React.FC<P> = ({ label, value, className, onChange, inputClassName,
 }
 
 Input.defaultProps = {
+  type: 'text',
   label: '',
   error: '',
   value: '',

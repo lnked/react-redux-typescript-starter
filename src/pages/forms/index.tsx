@@ -12,7 +12,6 @@ export interface P {
   initialCount?: number;
 }
 
-/* tslint:disable */
 function Forms () {
   return (
     <Form
