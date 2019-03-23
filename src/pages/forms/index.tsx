@@ -12,19 +12,96 @@ export interface HandlerProps {
   children: (handleClick: any, handleChange: any) => Element;
 }
 
-class Handler extends React.Component<HandlerProps, any> {
-  handleChange = (e: React.ChangeEvent<any>) => {
-    console.log(e)
-    alert('handleChange')
+export interface HandlerState {
+  initialCount?: number;
+}
+
+class Handler extends React.Component<HandlerProps, HandlerState> {
+  static defaultProps = {
+    initialValues: {},
+    validateOnBlur: true,
+    validateOnChange: true,
   }
 
-  handleClick = (e: React.ChangeEvent<any>) => {
+  // static getDerivedStateFromProps (nextProps: HandlerProps, prevState: HandlerState) {
+  //   if (prevState.values === nextProps.values) {
+  //     return null
+  //   }
+
+  //   return {
+  //     ...prevState,
+  //     ...nextProps,
+  //   }
+  // }
+
+  state = {
+    errors: {},
+    values: {},
+    touched: {},
+    dirty: false,
+    isValid: false,
+    submitCount: 0,
+    isSubmitting: false,
+    isValidating: false,
+  }
+
+  componentDidMount() {
+    this.setState({ values: this.props.initialValues })
+  }
+
+  handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e)
-    alert('handle click')
+    alert('handleChange 1')
+  }
+
+  handleBlur = (e: React.BlurEvent<HTMLInputElement>) => {
+    console.log(e)
+    alert('handleBlur 1')
+  }
+
+  handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+    console.log(e)
+    alert('handleFocus 1')
+  }
+
+  setSubmitting = (isSubmitting) => {
+    this.setState({ isSubmitting: true })
+  }
+
+  handleSubmit = (e?: React.FormEvent<HTMLFormElement>) => {
+    console.log(e)
+    this.setState({ isSubmitting: true })
+
+    if (this.props.onSubmit) {
+      this.props.onSubmit(this.state.values, { setSubmitting: this.state.setSubmitting })
+    }
+  }
+
+  handleReset = () => {
+    alert('reset')
   }
 
   render () {
-    return this.props.children(this.handleClick, this.handleChange)
+    const { children } = this.props;
+    const {
+      errors,
+      values,
+      touched,
+      isSubmitting,
+    } = this.state;
+
+    return children({
+      errors,
+      values,
+      touched,
+      isSubmitting,
+      handleBlur: this.handleBlur,
+      handleFocus: this.handleFocus,
+      handleReset: this.handleReset,
+      handleInput: this.handleChange,
+      handleChange: this.handleChange,
+      handleSubmit: this.handleSubmit,
+    })
   }
 }
 
@@ -33,11 +110,25 @@ function Forms () {
   return (
     <div>
       <Form onSubmit={() => alert('submit')}>
-        <Handler>
-          {(handleClick, handleChange) => (
+        <Handler
+          initialValues={{ text: 'test' }}
+          onSubmit={(values, { setSubmitting }) => {
+            alert('submit')
+            setTimeout(() => {
+              alert(JSON.stringify(values, null, 2));
+              setSubmitting(false);
+            }, 500);
+          }}
+          // validationSchema={Yup.object().shape({
+          //   email: Yup.string()
+          //   .email()
+          //   .required('Required'),
+          // })}
+        >
+          {({ values, handleSubmit, handleChange, isSubmitting }) => (
             <div>
-              <input onChange={handleChange} />
-              <button onClick={handleClick}>button</button>
+              <input name='text' value={values.text} onChange={handleChange} />
+              <button type='submit' disabled={isSubmitting} onClick={handleSubmit}>Submit</button>
             </div>
           )}
         </Handler>
