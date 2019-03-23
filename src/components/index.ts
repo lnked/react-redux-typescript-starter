@@ -1,3 +1,4 @@
+export { default as Form } from './form'
 export { default as Chip } from './chip'
 export { default as Input } from './input'
 export { default as Image } from './image'

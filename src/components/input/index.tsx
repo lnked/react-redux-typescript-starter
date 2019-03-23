@@ -9,20 +9,19 @@ import {
 export interface P extends React.HTMLProps<HTMLInputElement> {
   label?: string;
   error?: string;
+  value?: string | number | null;
   required?: boolean;
   className?: string;
   inputClassName?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: React.FC<P> = ({ label, className, inputClassName, error, ...attrs }) => {
+const Input: React.FC<P> = ({ label, value, className, onChange, inputClassName, error, ...attrs }) => {
   const textInput = React.createRef<HTMLInputElement>()
 
   React.useEffect(() => {
     textInput.current!.focus()
   }, [])
-
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => console.error('onChange: ', e.target.value)
 
   return (
     <Wrapper className={className}>
@@ -37,7 +36,9 @@ const Input: React.FC<P> = ({ label, className, inputClassName, error, ...attrs 
       <StyledInput
         {...attrs}
         ref={textInput}
+        value={value}
         onInput={onChange}
+        onChange={onChange}
         className={inputClassName}
       />
 
@@ -51,6 +52,7 @@ const Input: React.FC<P> = ({ label, className, inputClassName, error, ...attrs 
 Input.defaultProps = {
   label: '',
   error: '',
+  value: '',
 }
 
 export default Input
