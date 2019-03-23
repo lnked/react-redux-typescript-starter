@@ -14,29 +14,29 @@ describe('<Counter />', () => {
   })
 })
 
-// it("should increment a counter", () => {
-//   const el = document.createElement("div");
+// it('should increment a counter', () => {
+//   const el = document.createElement('div');
 //   document.body.appendChild(el);
 //   // we attach the element to document.body to ensure events work
 //   ReactDOM.render(<App />, el);
 //   const button = el.childNodes[0];
 //   for (let i = 0; i < 3; i++) {
-//     button.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+//     button.dispatchEvent(new MouseEvent('click', { bubbles: true }));
 //   }
-//   expect(button.innerHTML).toBe("3");
+//   expect(button.innerHTML).toBe('3');
 // });
 
-// it("should render 1", () => {
-//   const el = document.createElement("div");
+// it('should render 1', () => {
+//   const el = document.createElement('div');
 //   act(() => {
 //     ReactDOM.render(<App />, el);
 //   });
-//   expect(el.innerHTML).toBe("1"); // this passes!
+//   expect(el.innerHTML).toBe('1'); // this passes!
 // });
 
 // act(() => {
 //   for (let i = 0; i < 3; i++) {
-//     button.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+//     button.dispatchEvent(new MouseEvent('click', { bubbles: true }));
 //   }
 // });
-// expect(button.innerHTML).toBe(3); // this fails, it's actually "1"!
+// expect(button.innerHTML).toBe(3); // this fails, it's actually '1'!

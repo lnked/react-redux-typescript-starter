@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 // import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
 
 // import Home from 'pages/home'
-// const Cart = React.lazy(() => import(/* webpackChunkName: "cart" */ 'pages/cart'))
+// const Cart = React.lazy(() => import(/* webpackChunkName: 'cart' */ 'pages/cart'))
 
 import Provider from './components/store/context'
 import Order from './components/order'

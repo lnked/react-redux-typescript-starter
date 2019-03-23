@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import { isObject, isFunction, isEmptyChildren } from 'utils/assertions'
+
 export interface HandlerProps {
   children: (props: any) => any;
   onSubmit?: (values: any, props: any) => void;
@@ -86,7 +88,7 @@ class Form extends React.Component<HandlerProps, HandlerState> {
   }
 
   render () {
-    const { children } = this.props;
+    const { children } = this.props
     const {
       dirty,
       errors,
@@ -94,7 +96,13 @@ class Form extends React.Component<HandlerProps, HandlerState> {
       touched,
       isValid,
       isSubmitting,
-    } = this.state;
+    } = this.state
+
+    console.error(
+      isObject(children),
+      isFunction(children),
+      isEmptyChildren(children),
+    )
 
     return children({
       dirty,

@@ -62,14 +62,14 @@ export default Image
 
 //   render() {
 //     return (
-//       <div className="iron-image-container">
+//       <div className='iron-image-container'>
 
 //         <div
-//           className="iron-image-loaded"
+//           className='iron-image-loaded'
 //           ref={imageLoadedElem => this.ironImageHd = imageLoadedElem}>
 //         </div>
 //         <div
-//           className="iron-image-preload"
+//           className='iron-image-preload'
 //           style={{ backgroundImage: `url('${this.props.srcPreload}')` }}>
 //         </div>
 

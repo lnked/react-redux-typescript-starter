@@ -78,7 +78,7 @@ export const Name = styled.div`
   color: #1f1f1f;
   font-size: 16px;
   margin-bottom: 5px;
-  font-feature-settings: "lnum";
+  font-feature-settings: 'lnum';
   font-weight: 600;
 `
 
