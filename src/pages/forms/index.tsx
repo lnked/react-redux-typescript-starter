@@ -1,9 +1,8 @@
 import * as React from 'react'
 
 import { JsonPretty } from 'components'
-import { SyntheticForm, NaturalForm } from './form'
-
-console.log(SyntheticForm, NaturalForm)
+import { SyntheticForm } from './form'
+// import { SyntheticForm, NaturalForm } from './form'
 
 import {
   Input,
@@ -18,11 +17,13 @@ export interface P {
 function Forms () {
   return (
     <React.Fragment>
+      {/*
       <NaturalForm style={{ border: '1px solid lime', padding: 10 }}>
         {({ values }) => (
           <div>{JSON.stringify(values)}</div>
         )}
       </NaturalForm>
+      */}
 
       <SyntheticForm
         onSubmit={(values, { setSubmitting }) => {
@@ -37,8 +38,8 @@ function Forms () {
           email: ['notEmpty', 'isEmail'],
         }}
       >
-        {({ values, isValid, isDirty, handleChange, isSubmitted, isValidated }) => (
-          <React.Fragment>
+        {({ values, isValid, isDirty, handleSubmit, handleReset, handleChange, isSubmitted, isValidated }) => (
+          <form onSubmit={handleSubmit} onReset={handleReset}>
             <JsonPretty json={{ ...values, isValid, isDirty, isSubmitted, isValidated }} />
 
             <Input name='text' value={values.text} onChange={handleChange} />
@@ -81,7 +82,7 @@ function Forms () {
             <button type='submit' disabled={!(isSubmitted && isValidated) || !isValid || !isDirty}>
               Submit
             </button>
-          </React.Fragment>
+          </form>
         )}
       </SyntheticForm>
     </React.Fragment>

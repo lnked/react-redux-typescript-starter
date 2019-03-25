@@ -8,6 +8,7 @@ module.exports = function ({ development, production, test, loose, useBuiltIns, 
       targets,
       useBuiltIns,
       forceAllTransforms: true,
+      exclude: ['transform-typeof-symbol'],
     }]
   )
 

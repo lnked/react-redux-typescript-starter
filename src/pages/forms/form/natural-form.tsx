@@ -1,5 +1,6 @@
 import * as React from 'react'
-import Form from './form'
+
+import Form from './'
 
 export interface FormProps {
   children: (props: { values: any }) => any;
