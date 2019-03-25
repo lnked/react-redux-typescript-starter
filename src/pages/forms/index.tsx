@@ -1,6 +1,9 @@
 import * as React from 'react'
 
-import { Form, JsonPretty } from 'components'
+import { JsonPretty } from 'components'
+import { SyntheticForm, NaturalForm } from './form'
+
+console.log(SyntheticForm, NaturalForm)
 
 import {
   Input,
@@ -14,63 +17,74 @@ export interface P {
 
 function Forms () {
   return (
-    <Form
-      onSubmit={(values, { setSubmitting }) => {
-        alert('submit')
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 500);
-      }}
-      initialValues={{ text: 'test' }}
-      validationSchema={{
-        email: ['notEmpty', 'isEmail'],
-      }}
-    >
-      {({ values, isValid, dirty, handleSubmit, handleChange, isSubmitting }) => (
-        <React.Fragment>
-          <JsonPretty json={values} />
+    <React.Fragment>
+      <NaturalForm style={{ border: '1px solid lime', padding: 10 }}>
+        {({ values }) => (
+          <div>{JSON.stringify(values)}</div>
+        )}
+      </NaturalForm>
 
-          <Input name='text' value={values.text} onChange={handleChange} />
+      <SyntheticForm
+        onSubmit={(values, { setSubmitting }) => {
+          alert('submit')
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2))
+            setSubmitting(false)
+          }, 500)
+        }}
+        initialValues={{ text: 'test' }}
+        validationSchema={{
+          email: ['notEmpty', 'isEmail'],
+        }}
+      >
+        {({ values, isValid, isDirty, handleChange, isSubmitted, isValidated }) => (
+          <React.Fragment>
+            <JsonPretty json={{ ...values, isValid, isDirty, isSubmitted, isValidated }} />
 
-          <Input name='name' value={values.name} placeholder='Name' onChange={handleChange} />
+            <Input name='text' value={values.text} onChange={handleChange} />
 
-          <Input name='value' value={values.value} placeholder='Value' onChange={handleChange} />
+            <Input name='name' value={values.name} placeholder='Name' onChange={handleChange} />
 
-          <Input name='number' type='number' value={values.number} type='number' onChange={handleChange} />
+            <Input name='value' value={values.value} placeholder='Value' onChange={handleChange} />
 
-          <Input name='checkbox' type='checkbox' onChange={handleChange} />
+            <Input name='number' type='number' value={values.number} type='number' onChange={handleChange} />
 
-          <Input name='radio' type='radio' value={1} onChange={handleChange} />
-          <Input name='radio' type='radio' value={2} onChange={handleChange} />
-          <Input name='radio' type='radio' value={3} onChange={handleChange} />
+            <Input name='checkbox' type='checkbox' onChange={handleChange} />
 
-          <Textarea name='textarea' placeholder='Textarea' onChange={handleChange} />
+            <Input name='radio' type='radio' value={1} onChange={handleChange} />
+            <Input name='radio' type='radio' value={2} onChange={handleChange} />
+            <Input name='radio' type='radio' value={3} onChange={handleChange} />
 
-          <Select name='select' onChange={handleChange} >
-            <option value={1}>Option 1</option>
-            <option value={2}>Option 2</option>
-            <option value={3}>Option 3</option>
-            <option value={4}>Option 4</option>
-            <option value={5}>Option 5</option>
-            <option value={6}>Option 6</option>
-          </Select>
+            <Textarea name='textarea' placeholder='Textarea' onChange={handleChange} />
 
-          <Select name='multiSelect' onChange={handleChange} multiple>
-            <option value={1}>Option 1</option>
-            <option value={2}>Option 2</option>
-            <option value={3}>Option 3</option>
-            <option value={4}>Option 4</option>
-            <option value={5}>Option 5</option>
-            <option value={6}>Option 6</option>
-          </Select>
+            <Select name='select' onChange={handleChange} >
+              <option value={1}>Option 1</option>
+              <option value={2}>Option 2</option>
+              <option value={3}>Option 3</option>
+              <option value={4}>Option 4</option>
+              <option value={5}>Option 5</option>
+              <option value={6}>Option 6</option>
+            </Select>
 
-          <button type='submit' onClick={handleSubmit} disabled={isSubmitting || !isValid || !dirty}>
-            Submit
-          </button>
-        </React.Fragment>
-      )}
-    </Form>
+            <Select name='multiSelect' onChange={handleChange} multiple>
+              <option value={1}>Option 1</option>
+              <option value={2}>Option 2</option>
+              <option value={3}>Option 3</option>
+              <option value={4}>Option 4</option>
+              <option value={5}>Option 5</option>
+              <option value={6}>Option 6</option>
+            </Select>
+
+            <button type='reset'>Reset test</button>
+            <button type='submit'>Submit test</button>
+
+            <button type='submit' disabled={!(isSubmitted && isValidated) || !isValid || !isDirty}>
+              Submit
+            </button>
+          </React.Fragment>
+        )}
+      </SyntheticForm>
+    </React.Fragment>
   )
 }
 

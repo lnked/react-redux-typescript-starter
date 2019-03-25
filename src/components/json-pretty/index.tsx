@@ -16,11 +16,11 @@ export const Wrapper = styled.div`
   }
 `
 
-export interface P {
+export interface OuterProps {
   json: any;
 }
 
-const JsonPretty: React.FC<P> = ({ json }) => (
+const JsonPretty: React.FC<OuterProps> = ({ json }: OuterProps) => (
   <Wrapper>
     <ReactJson
       src={json}

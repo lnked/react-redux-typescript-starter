@@ -3,11 +3,12 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
+const { DuplicatesPlugin } = require('inspectpack/plugin');
 
 const alias = require('../aliaces');
 const rules = require('../loaders');
 const options = require('../options');
-const { polyfills} = require('../polyfills')
+const { polyfills } = require('../polyfills')
 
 module.exports = {
   target: 'web',
@@ -28,6 +29,16 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
 
     new DuplicatePackageCheckerPlugin(),
+
+    new DuplicatesPlugin({
+      // Emit compilation warning or error? (Default: `false`)
+      emitErrors: false,
+      // Handle all messages with handler function (`(report: string)`)
+      // Overrides `emitErrors` output.
+      emitHandler: undefined,
+      // Display full duplicates information? (Default: `false`)
+      verbose: false
+    }),
 
     new CopyWebpackPlugin([
       {

@@ -1,4 +1,5 @@
 import * as React from 'react'
+import isEqual from 'react-fast-compare'
 
 import { isObject, isEmptyChildren } from 'utils/assertions'
 
@@ -7,8 +8,8 @@ export interface PassedMethods {
   handleFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
   handleInput?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleReset?: (e?: React.FormEvent<HTMLFormElement>) => void;
-  handleSubmit?: (e?: React.FormEvent<HTMLFormElement>) => void;
+  handleReset?: (e: React.FormEvent<HTMLFormElement>) => void;
+  handleSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
   setSubmitting?: (isSubmitting: boolean) => void;
 }
 
@@ -16,38 +17,50 @@ export interface PassedState {
   errors: any;
   values: any;
   touched: any;
-  dirty: boolean;
+  isDirty: boolean;
   isValid: boolean;
   submitCount: number;
-  isSubmitting: boolean;
-  isValidating: boolean;
+  isSubmitted: boolean;
+  isValidated: boolean;
 }
 
-export interface Props {
+export interface OuterProps {
   children: (props: PassedState & PassedMethods) => any;
+  onReset?: (values: any, props: any) => void;
   onSubmit?: (values: any, props: any) => void;
+  className?: string;
   initialValues?: any;
   validationSchema?: any;
 }
 
-export interface State extends PassedState {
+export interface OuterState extends PassedState {
   initialized: boolean;
+  isSubmitting: boolean;
+  isValidating: boolean;
 }
 
-class Form extends React.Component<Props, State> {
+export class SyntheticForm extends React.Component<OuterProps, OuterState> {
   static defaultProps = {
+    className: '',
     initialValues: {},
     validateOnBlur: true,
     validateOnChange: true,
   }
 
-  static getDerivedStateFromProps (nextProps: Props, prevState: State) {
+  static getDerivedStateFromProps (nextProps: OuterProps, prevState: OuterState) {
     const { initialized } = prevState
     const { initialValues } = nextProps
+
+    console.error(isEqual(prevState.values, prevState.values))
 
     if (initialized || !Object.keys(initialValues).length) {
       return null
     }
+
+    // const isDirty = useMemo(() => !isEqual(lastValues, values), [
+    //   lastValues,
+    //   values,
+    // ])
 
     return {
       ...prevState,
@@ -61,11 +74,13 @@ class Form extends React.Component<Props, State> {
     errors: {},
     values: {},
     touched: {},
-    dirty: false,
+    isDirty: false,
     isValid: false,
     submitCount: 0,
     isSubmitting: false,
     isValidating: false,
+    isSubmitted: false,
+    isValidated: false,
   }
 
   handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -86,7 +101,9 @@ class Form extends React.Component<Props, State> {
     this.setState({ isSubmitting })
   }
 
-  handleSubmit = (e?: React.FormEvent<HTMLFormElement>) => {
+  handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
     const { values } = this.state
     const { onSubmit } = this.props
 
@@ -97,21 +114,23 @@ class Form extends React.Component<Props, State> {
     })
   }
 
-  handleReset = (e?: React.FormEvent<HTMLFormElement>) => {
+  handleReset = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
     console.log('reset', e)
   }
 
   render () {
     const { children } = this.props
     const {
-      dirty,
       errors,
       values,
       touched,
+      isDirty,
       isValid,
       submitCount,
-      isSubmitting,
-      isValidating,
+      isSubmitted,
+      isValidated,
     } = this.state
 
     if (isObject(children) && !isEmptyChildren(children)) {
@@ -126,14 +145,14 @@ class Form extends React.Component<Props, State> {
     }
 
     return children({
-      dirty,
       errors,
       values,
       touched,
+      isDirty,
       isValid,
       submitCount,
-      isSubmitting,
-      isValidating,
+      isSubmitted,
+      isValidated,
       handleBlur: this.handleBlur,
       handleFocus: this.handleFocus,
       handleReset: this.handleReset,
@@ -144,4 +163,4 @@ class Form extends React.Component<Props, State> {
   }
 }
 
-export default Form
+export default SyntheticForm

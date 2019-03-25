@@ -6,7 +6,7 @@ import {
   StyledInput,
 } from './styles'
 
-export interface P extends React.HTMLProps<HTMLInputElement> {
+export interface OuterProps {
   type?: string;
   label?: string;
   error?: string;
@@ -17,8 +17,18 @@ export interface P extends React.HTMLProps<HTMLInputElement> {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: React.FC<P> = ({ label, value, className, onChange, inputClassName, error, ...attrs }) => {
+const Input: React.FC<OuterProps> = (props: OuterProps) => {
   const textInput = React.createRef<HTMLInputElement>()
+
+  const {
+    label,
+    value,
+    error,
+    onChange,
+    className,
+    inputClassName,
+    ...attrs
+  } = props
 
   React.useEffect(() => {
     textInput.current!.focus()
