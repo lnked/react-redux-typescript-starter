@@ -10,6 +10,8 @@
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read http://bit.ly/CRA-PWA
 
+import { environment } from 'settings'
+
 const PUBLIC_URL = ''
 
 /* tslint:disable */
@@ -23,8 +25,10 @@ const isLocalhost = Boolean(
     )
 )
 
-export function register(config: any) {
-  if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+export function register(config?: any) {
+  const isHttps = location.protocol.includes('https')
+
+  if (isHttps && environment.production && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(PUBLIC_URL, window.location.href)
     if (publicUrl.origin !== window.location.origin) {

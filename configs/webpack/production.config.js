@@ -123,12 +123,12 @@ module.exports = {
       defaultAttribute: 'async',
     }),
 
-    new GenerateSW({
-      swDest: 'sw.js',
-      include: [/\.html$/, /\.js$/, /\.json$/],
-      exclude: [/\.jpg$/, /\.png$/, /\.map$/, /^manifest.*\.js(?:on)?$/],
-      precacheManifestFilename: 'manifest.[manifestHash].js',
-    }),
+    // new GenerateSW({
+    //   swDest: 'sw.js',
+    //   include: [/\.html$/, /\.js$/, /\.json$/],
+    //   exclude: [/\.jpg$/, /\.png$/, /\.map$/, /^manifest.*\.js(?:on)?$/],
+    //   precacheManifestFilename: 'manifest.[manifestHash].js',
+    // }),
 
     new ImageminPlugin({
       pngquant: ({ quality: '50' }),

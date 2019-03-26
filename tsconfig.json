@@ -42,6 +42,7 @@
     "*": ["./*"],
     "app/*": ["app/*"],
     "i18n/*": ["i18n/*"],
+    "store/*": ["store/*"],
     "utils/*": ["utils/*"],
     "theme/*": ["theme/*"],
     "pages/*": ["pages/*"],

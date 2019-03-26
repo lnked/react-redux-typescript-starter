@@ -21,9 +21,9 @@ export default function StoreProvider ({ children, defaultState }: any) {
 //   render() {
 //     // Use a Provider to pass the current theme to the tree below.
 //     // Any component can read it, no matter how deep it is.
-//     // In this example, we're passing "dark" as the current value.
+//     // In this example, we're passing 'dark' as the current value.
 //     return (
-//       <ThemeContext.Provider value="dark">
+//       <ThemeContext.Provider value='dark'>
 //         <Toolbar />
 //       </ThemeContext.Provider>
 //     )
@@ -43,7 +43,7 @@ export default function StoreProvider ({ children, defaultState }: any) {
 // class ThemedButton extends React.Component {
 //   // Assign a contextType to read the current theme context.
 //   // React will find the closest theme Provider above and use its value.
-//   // In this example, the current theme is "dark".
+//   // In this example, the current theme is 'dark'.
 //   static contextType = ThemeContext
 //   render() {
 //     return <Button theme={this.context} />
@@ -51,16 +51,16 @@ export default function StoreProvider ({ children, defaultState }: any) {
 // }
 
 // import React, {Component } from 'react';
-// import "./scss/style.scss";
-// import Layout from "./components/Layout";
-// import { BrowserRouter as Router, Route } from "react-router-dom";
-// import Popup from "./components/Popup";
-// import AddItem from "./components/AddItem";
-// import { ElementType } from "./constants";
-// import Store from "./Store";
-// import uuid from "uuid/v4";
-// import { clone } from "./helpers/utils";
-// import { duration } from "moment";
+// import './scss/style.scss';
+// import Layout from './components/Layout';
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import Popup from './components/Popup';
+// import AddItem from './components/AddItem';
+// import { ElementType } from './constants';
+// import Store from './Store';
+// import uuid from 'uuid/v4';
+// import { clone } from './helpers/utils';
+// import { duration } from 'moment';
 
 // class App extends Component {
 //   constructor(props) {
@@ -99,7 +99,7 @@ export default function StoreProvider ({ children, defaultState }: any) {
 //         <Store.Provider value={Object.assign({}, this.state, this.api)}>
 //           <Layout/>
 //           <AddItem type={ElementType.STAGE}/>
-//           <Route path="/(add|edit)/:type/:parentKey?" component={Popup}/>
+//           <Route path='/(add|edit)/:type/:parentKey?' component={Popup}/>
 //         </Store.Provider>
 //       </Router>
 //     );

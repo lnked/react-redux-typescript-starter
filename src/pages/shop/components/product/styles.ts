@@ -40,18 +40,20 @@ export const Image = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  font-size: 0;
+  line-height: 0;
   user-select: none;
 `
 
 export const Source = styled(ImageSource)`
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  min-height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
-  outline: 0;
   pointer-events: none;
   display: inline-block;
   vertical-align: middle;
+  outline: 0;
 `
 
 export const Description = styled.div`

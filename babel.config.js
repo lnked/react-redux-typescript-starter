@@ -10,7 +10,7 @@ module.exports = function (api) {
   const production = api.env('production')
   const development = api.env('development')
 
-  const loose = false
+  const loose = true
   const legacy = true
   const comments = true // webpackChunkName doesn't work if the value is false
   const targets = !web ? { node: 'current' } : undefined

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { ThemeProvider } from 'emotion-theming'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { Router, RouteComponentProps } from 'react-router-dom'
 import { Global } from '@emotion/core'
 import { hot } from 'react-hot-loader/root'
 
@@ -13,7 +13,13 @@ import Routes from './routes'
 import Navigation from './navigation'
 import GlobalStyle, { StyledContainer } from './styles'
 
-class App extends React.Component<{}, {}> {
+export interface OuterProps {
+  history: {
+    location: any,
+  };
+}
+
+class App extends React.Component<OuterProps, {}> {
   timeout: any = null
 
   componentDidMount () {
@@ -31,9 +37,11 @@ class App extends React.Component<{}, {}> {
   }
 
   render () {
+    const { history } = this.props
+
     return (
       <ErrorBoundary>
-        <Router>
+        <Router history={history}>
           <ThemeProvider theme={Theme.light}>
             <Global styles={GlobalStyle} />
 

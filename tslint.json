@@ -40,7 +40,7 @@
     "no-shadowed-variable": false,
     "export-name": false,
     "no-submodule-imports": false,
-    "no-implicit-dependencies": [true, ["app", "i18n", "utils", "theme", "pages", "assets", "layouts", "settings", "services", "fragments", "components"]],
+    "no-implicit-dependencies": [true, ["app", "i18n", "store", "utils", "theme", "pages", "assets", "layouts", "settings", "services", "fragments", "components"]],
     "no-import-side-effect": [true, { "ignore-module": "(jest-emotion|\\.html|\\.css|\\.test.tsx?)$" }],
 
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],

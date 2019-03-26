@@ -1,10 +1,12 @@
 import * as React from 'react'
 import { render } from 'react-dom'
+import { Provider } from 'mobx-react'
 import { setConfig } from 'react-hot-loader'
+import { RouterStore, syncHistoryWithStore } from 'mobx-react-router'
 
-// import { Provider } from 'store'
+import { createStore } from 'store'
 import { environment } from 'settings'
-// import configureStore from './redux/configureStore'
+import { browserHistory } from 'utils'
 
 import App from 'app'
 
@@ -13,19 +15,16 @@ setConfig({
   pureRender: true,
 })
 
-// const initialState = {
-//   page: {
-//       type: 'home'
-//   }
-// }
+const routingStore = new RouterStore()
 
-// const store = configureStore(initialState)
+const history = syncHistoryWithStore(browserHistory, routingStore)
 
-// <Provider store={store}>
-//   <App/>
-// </Provider>
-
-render(<App />, document.getElementById('app-root'))
+render(
+  <Provider {...createStore(routingStore)}>
+    <App history={history} />
+  </Provider>,
+  document.getElementById('app-root')
+)
 
 if (environment.production) {
   const isHttps = location.protocol.includes('https')

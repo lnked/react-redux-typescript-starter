@@ -1,15 +1,19 @@
 import * as React from 'react'
 import { NavLink, RouteComponentProps } from 'react-router-dom'
+import { observer } from 'mobx-react'
 
 import Product from './components/product'
 import { Container, Categories, Sidebar, Products } from './styles'
 
-// export interface P extends RouteComponentProps {}
+export interface OuterProps extends RouteComponentProps {
+  history: any;
+}
 
 import { productsList } from './products'
 import { categoriesList } from './categories'
 
-export default class Shop extends React.Component<RouteComponentProps, {}> {
+@observer
+class Shop extends React.Component<OuterProps, {}> {
   render () {
     const { match: { params } } = this.props
 
@@ -44,3 +48,5 @@ export default class Shop extends React.Component<RouteComponentProps, {}> {
     )
   }
 }
+
+export default Shop

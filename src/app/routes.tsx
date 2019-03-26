@@ -32,7 +32,7 @@ export default function Routes () {
   return (
     <Switch>
       <Route path='/' component={Home} exact />
-      <Route path='/shop(/:product)?' render={(props: any) => <Shop {...props} />} />
+      <Route exact path={['/shop', '/shop/:product']} render={(props: any) => <Shop {...props} />} />
       <Route path='/cart' render={(props: any) => <Cart {...props} />} />
       <Route path='/forms' render={(props: any) => <Forms {...props} />} />
       <Route path='/about' render={(props: any) => <About {...props} />} />
