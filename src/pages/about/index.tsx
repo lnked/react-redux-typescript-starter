@@ -5,8 +5,10 @@ import { Image } from 'components'
 
 import { A, B, AB, AnotherBuild } from './components'
 
-const About = () => (
+const About = ({ ui, app }: any) => (
   <div>
+    <div>ui: {JSON.stringify(ui)}</div>
+    <div>app: {JSON.stringify(app)}</div>
     <h2>About</h2>
     <A />
     <B />

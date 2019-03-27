@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { NavLink, RouteComponentProps } from 'react-router-dom'
-import { observer } from 'mobx-react'
+// import { observer } from 'mobx-react'
 
 import Product from './components/product'
 import { Container, Categories, Sidebar, Products } from './styles'
@@ -12,7 +12,7 @@ export interface OuterProps extends RouteComponentProps {
 import { productsList } from './products'
 import { categoriesList } from './categories'
 
-@observer
+// @observer
 class Shop extends React.Component<OuterProps, {}> {
   render () {
     const { match: { params } } = this.props

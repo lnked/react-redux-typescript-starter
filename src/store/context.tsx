@@ -1,54 +1,33 @@
 import * as React from 'react'
 
-export const { Provider, Consumer } = React.createContext({
-  theme: 'dark',
-  toggleTheme: () => {
-    console.log('theme')
-  },
-})
+import {
+  STORE_UI,
+  STORE_APP,
+} from 'settings'
 
-export default function StoreProvider ({ children, defaultState }: any) {
-  return (
-    <Provider value={defaultState}>
-      {children}
-    </Provider>
-  )
+export interface OuterProps {
+  [STORE_UI]: any;
+  [STORE_APP]: any;
 }
 
-// const ThemeContext = React.createContext('light')
+const Context = React.createContext({
+  [STORE_UI]: {},
+  [STORE_APP]: {},
+})
 
-// class App extends React.Component {
-//   render() {
-//     // Use a Provider to pass the current theme to the tree below.
-//     // Any component can read it, no matter how deep it is.
-//     // In this example, we're passing 'dark' as the current value.
-//     return (
-//       <ThemeContext.Provider value='dark'>
-//         <Toolbar />
-//       </ThemeContext.Provider>
-//     )
-//   }
-// }
+export class Provider extends React.Component<OuterProps, any> {
+  render () {
+    const { children, ...props } = this.props
 
-// // A component in the middle doesn't have to
-// // pass the theme down explicitly anymore.
-// function Toolbar(props) {
-//   return (
-//     <div>
-//       <ThemedButton />
-//     </div>
-//   )
-// }
+    return (
+      <Context.Provider value={props}>
+        {children}
+      </Context.Provider>
+    )
+  }
+}
 
-// class ThemedButton extends React.Component {
-//   // Assign a contextType to read the current theme context.
-//   // React will find the closest theme Provider above and use its value.
-//   // In this example, the current theme is 'dark'.
-//   static contextType = ThemeContext
-//   render() {
-//     return <Button theme={this.context} />
-//   }
-// }
+export const Consumer = Context.Consumer
 
 // import React, {Component } from 'react';
 // import './scss/style.scss';
@@ -225,5 +204,3 @@ export default function StoreProvider ({ children, defaultState }: any) {
 //   }
 
 // }
-
-// export default App

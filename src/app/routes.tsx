@@ -15,8 +15,8 @@ export const Context = lazyWithPreload(() => import(/* webpackChunkName: "contex
 export const Counter = lazyWithPreload(() => import(/* webpackChunkName: "counter" */ 'pages/counter'))
 export const NoMatch = lazyWithPreload(() => import(/* webpackChunkName: "nomatch" */ 'pages/nomatch'))
 
-export const links = [
-  { label: 'Home', to: '/', exact: true },
+export const routes = [
+  { label: 'Home', to: '/', component: Home, exact: true },
   { label: 'About', to: '/about', component: About },
   { label: 'Shop', to: '/shop', component: Shop },
   { label: 'Cart', to: '/cart', component: Cart },
@@ -28,19 +28,28 @@ export const links = [
   { label: 'Page not found', to: '/error-page' },
 ]
 
-export default function Routes () {
+export default function Switcher (store: any) {
+  console.error(store)
+
   return (
     <Switch>
+      {/*
+      {routes.map((to, exact, component) => {
+        <Route path={to} component={component} exact={exact} />
+      })}
       <Route path='/' component={Home} exact />
-      <Route exact path={['/shop', '/shop/:product']} render={(props: any) => <Shop {...props} />} />
-      <Route path='/cart' render={(props: any) => <Cart {...props} />} />
-      <Route path='/forms' render={(props: any) => <Forms {...props} />} />
-      <Route path='/about' render={(props: any) => <About {...props} />} />
-      <Route path='/context' render={(props: any) => <Context {...props} />} />
-      <Route path='/topics' render={(props: any) => <Topics {...props} />} />
-      <Route path='/counter' render={(props: any) => <Counter {...props} />} />
+      */}
+
+      <Route exact path='/' render={(props: any) => <Home {...store} {...props} />} />
+      <Route exact path={['/shop', '/shop/:product']} render={(props: any) => <Shop {...store} {...props} />} />
+      <Route path='/cart' render={(props: any) => <Cart {...store} {...props} />} />
+      <Route path='/forms' render={(props: any) => <Forms {...store} {...props} />} />
+      <Route path='/about' render={(props: any) => <About {...store} {...props} />} />
+      <Route path='/context' render={(props: any) => <Context {...store} {...props} />} />
+      <Route path='/topics' render={(props: any) => <Topics {...store} {...props} />} />
+      <Route path='/counter' render={(props: any) => <Counter {...store} {...props} />} />
       <PrivateRoute path='/protected' alternative='/login' component={Home} />
-      <Route path='*' render={(props: any) => <NoMatch {...props} />} exact />
+      <Route path='*' render={(props: any) => <NoMatch {...store} {...props} />} exact />
     </Switch>
   )
 }

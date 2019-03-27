@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { links } from './routes'
+import { routes } from './routes'
 import { StyledList, StyledLink } from './styles'
 
 export interface P {
@@ -10,7 +10,7 @@ export interface P {
 export default function Navigation ({ onMouseEnter }: P) {
   return (
     <StyledList>
-      {links && links.map(({ label, component, ...link }: any) => (
+      {routes && routes.map(({ label, component, ...link }: any) => (
         <li key={link.to}>
           <StyledLink {...link} onMouseEnter={() => onMouseEnter(component)}>
             {label}

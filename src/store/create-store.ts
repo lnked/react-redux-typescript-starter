@@ -1,7 +1,3 @@
-import { configure } from 'mobx'
-
-import { enableLogging } from 'mobx-logger'
-
 import {
   UiStore,
   AppStore,
@@ -10,35 +6,22 @@ import {
 import {
   STORE_UI,
   STORE_APP,
-  STORE_ROUTER,
-  environment,
 } from 'settings'
 
-configure({
-  enforceActions: 'observed', // 'never' | 'always' | 'observed'
-})
+export const createStore = () => {
+  // const initialState = (window && window.__INITIAL_STATE__) || {}
 
-enableLogging({
-  predicate: () => environment.development && Boolean(window.navigator.userAgent),
-  action: true,
-  reaction: false,
-  transaction: false,
-  compute: false,
-})
+  // const { ui, app } = initialState
 
-export const createStore = (routerStore?: any) => {
-  const initialState = (window && window.__INITIAL_STATE__) || {}
+  // console.error(ui, app)
 
-  const { ui, app } = initialState
+  // const uiStore = UiStore
+  // const appStore = AppStore
 
-  const uiStore = new UiStore(ui)
-  const appStore = new AppStore(app)
-
-  Reflect.deleteProperty(window, '__INITIAL_STATE__')
+  // Reflect.deleteProperty(window, '__INITIAL_STATE__')
 
   return {
-    [STORE_UI]: uiStore,
-    [STORE_APP]: appStore,
-    [STORE_ROUTER]: routerStore,
+    [STORE_UI]: UiStore,
+    [STORE_APP]: AppStore,
   }
 }
