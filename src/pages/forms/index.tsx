@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { JsonPretty } from 'components'
+// import { JsonPretty } from 'components'
 import { SyntheticForm } from './form'
 // import { SyntheticForm, NaturalForm } from './form'
 
@@ -14,9 +14,11 @@ export interface P {
   initialCount?: number;
 }
 
-function Forms () {
+function Forms ({ ui, app }: any) {
   return (
     <React.Fragment>
+      <div>ui: {JSON.stringify(ui)}</div>
+      <div>app: {JSON.stringify(app)}</div>
       {/*
       <NaturalForm style={{ border: '1px solid lime', padding: 10 }}>
         {({ values }) => (
@@ -40,7 +42,9 @@ function Forms () {
       >
         {({ values, isValid, isDirty, handleSubmit, handleReset, handleChange, isSubmitted, isValidated }) => (
           <form onSubmit={handleSubmit} onReset={handleReset}>
-            <JsonPretty json={{ ...values, isValid, isDirty, isSubmitted, isValidated }} />
+            {/*
+              <JsonPretty json={{ ...values, isValid, isDirty, isSubmitted, isValidated }} />
+            */}
 
             <Input name='text' value={values.text} onChange={handleChange} />
 

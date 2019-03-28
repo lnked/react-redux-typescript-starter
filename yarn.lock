@@ -9143,14 +9143,14 @@ react-base16-styling@^0.6.0:
     pure-color "^1.2.0"
 
 "react-dom@npm:@hot-loader/react-dom":
-  version "16.8.4"
-  resolved "https://registry.yarnpkg.com/@hot-loader/react-dom/-/react-dom-16.8.4.tgz#aefe598ca26005c1ec3ac11d92d54ff3c1cd219c"
-  integrity sha512-S+5x4HJEMV7p2FzgUBEzrgiNJJeN4m5auTL3rZbmGsuyGt3Tgg8zgz6Mt1Udj8dKDxaryixDSNh0d/63TMqizg==
+  version "16.8.5"
+  resolved "https://registry.yarnpkg.com/@hot-loader/react-dom/-/react-dom-16.8.5.tgz#72d06837258335b9be8c735bc20ae4c53834649c"
+  integrity sha512-Euy9lji2CcZuLp2eO8g+rTdGo/2Ho4jha444Qi2yLP62IzZQi8GhjdSawKUukqLLNDSXmAozwhF2W02BaKVQTg==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.13.4"
+    scheduler "^0.13.5"
 
 react-fast-compare@2.0.4:
   version "2.0.4"
