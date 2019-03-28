@@ -1,5 +1,5 @@
 import * as React from 'react'
-import ReactJson from 'react-json-view'
+// import ReactJson from 'react-json-view'
 import styled from '@emotion/styled'
 
 const theme = 'monokai'
@@ -20,13 +20,15 @@ export interface OuterProps {
   json: any;
 }
 
+// <ReactJson
+//   src={json}
+//   theme={theme}
+//   displayObjectSize
+// />
+
 const JsonPretty: React.FC<OuterProps> = ({ json }: OuterProps) => (
   <Wrapper>
-    <ReactJson
-      src={json}
-      theme={theme}
-      displayObjectSize
-    />
+    {JSON.stringify(json)}
   </Wrapper>
 )
 

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-// import { JsonPretty } from 'components'
+import { JsonPretty } from 'components'
 import { SyntheticForm } from './form'
 // import { SyntheticForm, NaturalForm } from './form'
 
@@ -42,9 +42,7 @@ function Forms ({ ui, app }: any) {
       >
         {({ values, isValid, isDirty, handleSubmit, handleReset, handleChange, isSubmitted, isValidated }) => (
           <form onSubmit={handleSubmit} onReset={handleReset}>
-            {/*
-              <JsonPretty json={{ ...values, isValid, isDirty, isSubmitted, isValidated }} />
-            */}
+            <JsonPretty json={{ ...values, isValid, isDirty, isSubmitted, isValidated }} />
 
             <Input name='text' value={values.text} onChange={handleChange} />
 

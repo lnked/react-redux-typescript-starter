@@ -10,7 +10,7 @@ export interface OuterProps {
   [STORE_APP]: any;
 }
 
-const Context = React.createContext({
+export const GlobalContext = React.createContext({
   [STORE_UI]: {},
   [STORE_APP]: {},
 })
@@ -20,14 +20,14 @@ export class Provider extends React.Component<OuterProps, any> {
     const { children, ...props } = this.props
 
     return (
-      <Context.Provider value={props}>
+      <GlobalContext.Provider value={props}>
         {children}
-      </Context.Provider>
+      </GlobalContext.Provider>
     )
   }
 }
 
-export const Consumer = Context.Consumer
+export const Consumer = GlobalContext.Consumer
 
 // import React, {Component } from 'react';
 // import './scss/style.scss';
