@@ -20,43 +20,43 @@ const StyledContainer = styled.div`
   border: 1px solid #ddd;
 `
 
-export interface P {
-  children?: JSX.Element[] | JSX.Element | any;
+export interface OuterProps {
+  children?: React.ReactChild[];
+  initialCount: number;
 }
 
-function init(initialCount: number) {
-  return {count: initialCount};
+function init (initialCount: number) {
+  return { count: initialCount }
 }
 
-function reducer(state: any, action: any) {
+function reducer (state: any, action: any) {
   switch (action.type) {
     case 'increment':
-      return {count: state.count + 1};
+      return { count: state.count + 1 }
     case 'decrement':
-      return {count: state.count - 1};
+      return { count: state.count - 1 }
     case 'reset':
-      return init(action.payload);
+      return init(action.payload)
     default:
-      throw new Error();
+      throw new Error()
   }
 }
 
-function Cart ({ initialCount = 1 }) {
+const Cart: React.FC<OuterProps> = ({ initialCount = 1 }: OuterProps) => {
   const { ui, app } = React.useContext(GlobalContext)
-  const [state, dispatch] = React.useReducer(reducer, initialCount, init);
+  const [state, dispatch] = React.useReducer(reducer, initialCount, init)
 
   return (
     <Provider>
       <div>Count: {state.count}</div>
       <div>{JSON.stringify(ui)}</div>
       <div>{JSON.stringify(app)}</div>
-      <button onClick={() => dispatch({type: 'increment'})}>+</button>
-      <button onClick={() => dispatch({type: 'decrement'})}>-</button>
-      <button onClick={() => dispatch({type: 'reset', payload: initialCount})}>Reset</button>
+      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+      <button onClick={() => dispatch({ type: 'reset', payload: initialCount })}>Reset</button>
 
       <StyledContainer>
         {/*
-
         Оформление заказа
         Количество приборов
         Ваше имя *
