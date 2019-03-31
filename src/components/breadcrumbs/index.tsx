@@ -1,14 +1,7 @@
 import * as React from 'react'
 
 export interface OuterProps {
-  type?: string;
-  label?: string;
-  error?: string;
-  value?: string | number | null;
-  required?: boolean;
-  className?: string;
-  inputClassName?: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  items?: any[];
 }
 
 const list: OuterProps[] = [
