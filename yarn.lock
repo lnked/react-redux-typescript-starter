@@ -9072,7 +9072,7 @@ react-fast-compare@2.0.4:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
-react-hot-loader@4.8.1:
+react-hot-loader@4.8.2:
   version "4.8.2"
   resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.8.2.tgz#21a00cfca7fc848c53d78c34f6081f5ae3737dda"
   integrity sha512-W5I8ps/32q5zL0mKfGGdPgsZfgljs/tdCTYxM6P1N8GV4+rUAu4g6ysy//5/jJpAFM0Bpgr6HrVLWK9h0jMdrA==
@@ -9868,10 +9868,10 @@ sisteransi@^1.0.0:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.0.tgz#77d9622ff909080f1c19e5f4a1df0c1b0a27b88c"
   integrity sha512-N+z4pHB4AmUv0SjveWRd6q1Nj5w62m5jodv+GD8lvmbY/83T/rpbJGZOnK5T149OldDj4Db07BSv9xY4K6NTPQ==
 
-size-limit@0.22.0:
-  version "0.22.0"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-0.22.0.tgz#d168145948f0630356d8e92103b07ab1066df600"
-  integrity sha512-z8kGWGhUn0L0Y+BWZl7XWNz9gRzRd4NyP/IeXwQc7jWlcpVdoRXVhlN3aFJiPleKpCMhsaEkUnlvvgXnaVIXoA==
+size-limit@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-1.0.0.tgz#8eb0dd5be239f04c4f0115ab2b0a64107c539b1e"
+  integrity sha512-qaGCgzZX5NStjnT1yKW9TgnerHkGQJA8xHmLdrfLP8yTdACBuspIIwwFKDDG1HoKEPcpk+kB+rFGAbWu858QWA==
   dependencies:
     bytes "^3.1.0"
     chalk "^2.4.2"
