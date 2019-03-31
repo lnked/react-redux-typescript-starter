@@ -8,7 +8,7 @@ import { createStore } from 'store'
 import { environment } from 'settings'
 import { browserHistory } from 'utils'
 
-import App from 'app'
+import App from 'core'
 
 setConfig({
   ignoreSFC: true,

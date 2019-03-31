@@ -6,7 +6,7 @@ module.exports = {
   entry: {
     app: [
       ...polyfills,
-      path.resolve(options.source, 'index.tsx'),
+      path.resolve(options.sourcePath, 'index.tsx'),
     ],
   },
 }

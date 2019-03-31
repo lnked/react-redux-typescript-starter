@@ -14,7 +14,7 @@ module.exports = {
   entry: {
     app: [
       // ...polyfills,
-      path.resolve(options.source, 'client.tsx'),
+      path.resolve(options.sourcePath, 'client.tsx'),
     ],
   },
   output: {

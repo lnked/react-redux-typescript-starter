@@ -7,7 +7,7 @@ module.exports = {
   target: 'node',
   entry: {
     server: [
-      path.resolve(options.source, 'server.tsx'),
+      path.resolve(options.sourcePath, 'server.tsx'),
     ],
   },
   output: {

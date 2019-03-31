@@ -12,7 +12,7 @@ module.exports = () => {
 
     new webpack.LoaderOptionsPlugin({
       debug: options.development,
-      context: options.source,
+      context: options.sourcePath,
       minimize: true,
       options: {},
     }),

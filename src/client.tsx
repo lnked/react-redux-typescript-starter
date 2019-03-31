@@ -5,7 +5,7 @@ import { setConfig } from 'react-hot-loader'
 import { environment } from 'settings'
 import { Provider, createStore } from 'store'
 
-import App from 'app'
+import App from 'core'
 
 setConfig({
   ignoreSFC: true,

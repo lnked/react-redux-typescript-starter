@@ -7,8 +7,12 @@ module.exports = function ({ development, production, test, loose, useBuiltIns, 
       modules,
       targets,
       useBuiltIns,
-      forceAllTransforms: true,
-      exclude: ['transform-typeof-symbol'],
+      shippedProposals: true,
+      forceAllTransforms: production,
+      exclude: [
+        'transform-typeof-symbol',
+        '@babel/plugin-transform-regenerator',
+      ],
     }]
   )
 
