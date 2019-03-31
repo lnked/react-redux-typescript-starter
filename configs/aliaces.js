@@ -18,11 +18,12 @@ module.exports = {
   store: path.resolve(options.source, 'store'),
   pages: path.resolve(options.source, 'pages'),
   theme: path.resolve(options.source, 'theme'),
+  assets: path.resolve(options.source, 'assets'),
   layouts: path.resolve(options.source, 'layouts'),
   services: path.resolve(options.source, 'services'),
   settings: path.resolve(options.source, 'settings'),
   fragments: path.resolve(options.source, 'fragments'),
   components: path.resolve(options.source, 'components'),
-  assets: path.resolve(options.source, 'assets'),
+  decorators: path.resolve(options.source, 'decorators'),
   svgstore: path.resolve(options.source, 'assets/svgstore'),
 };

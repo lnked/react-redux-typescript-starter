@@ -51,7 +51,8 @@
     "settings/*": ["settings/*"],
     "services/*": ["services/*"],
     "fragments/*": ["fragments/*"],
-    "components/*": ["components/*"]
+    "components/*": ["components/*"],
+    "decorators/*": ["decorators/*"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "configs", "dist", "**/node_modules/*", "src/**/*.test.tsx", "src/**/*.spec.tsx"]

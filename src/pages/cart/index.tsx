@@ -42,6 +42,12 @@ function reducer (state: any, action: any) {
   }
 }
 
+// const errors = new Map([
+//   ['invalid-email', 'Неверно указан e-mail'],
+// ]);
+
+// return errors.get(error) || error;
+
 const Cart: React.FC<OuterProps> = ({ initialCount = 1 }: OuterProps) => {
   const { ui, app } = React.useContext(GlobalContext)
   const [state, dispatch] = React.useReducer(reducer, initialCount, init)

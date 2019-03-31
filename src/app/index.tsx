@@ -31,7 +31,6 @@ class App extends React.Component<OuterProps, {}> {
 
   handleMouseEnter = (component: any = null) => {
     clearTimeout(this.timeout)
-
     this.timeout = setTimeout(() => component && component.preload && component.preload(), 250)
   }
 
