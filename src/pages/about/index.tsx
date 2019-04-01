@@ -15,8 +15,8 @@ const About = ({ ui, app }: any) => (
     <E />
     <AB />
     <AnotherBuild />
-    <Image width={100} height={100} src='https://via.placeholder.com/300/09f/fff.png' alt='xxx' />
-    <Image src='https://via.placeholder.com/300/09f/fff.png' alt='xxx' circle />
+    <Image width={100} height={100} src="https://via.placeholder.com/300/09f/fff.png" alt="xxx" />
+    <Image src="https://via.placeholder.com/300/09f/fff.png" alt="xxx" circle />
   </div>
 )
 

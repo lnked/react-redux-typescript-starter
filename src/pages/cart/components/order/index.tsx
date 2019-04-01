@@ -58,7 +58,7 @@ export function Order (props: any) {
 
       <MaskedInput
         mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
-        placeholder='Enter a phone number'
+        placeholder="Enter a phone number"
         // guide={false}
         // onBlur={() => {}}
         // onChange={() => {}}
@@ -69,17 +69,17 @@ export function Order (props: any) {
 
       <StyledInput
         value={left}
-        placeholder='LEFT'
+        placeholder="LEFT"
         onChange={({ target: { value } }: any) => dispatch({ type: 'change/LEFT', value })}
       />
       <StyledInput
         value={right}
-        placeholder='RIGHT'
+        placeholder="RIGHT"
         onChange={({ target: { value } }: any) => dispatch({ type: 'change/RIGHT', value })}
       />
       <StyledInput
         value={center}
-        placeholder='CENTER'
+        placeholder="CENTER"
         onChange={({ target: { value } }: any) => dispatch({ type: 'CENTER', value })}
       />
     </StyledBlock>

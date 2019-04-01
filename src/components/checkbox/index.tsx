@@ -30,7 +30,7 @@ export default class Checkbox extends React.Component<Props, State> {
     return (
       <StyledLabel>
         <StyledInput
-          type='checkbox'
+          type="checkbox"
           value={1}
           checked={isChecked}
           onChange={this.onChange}

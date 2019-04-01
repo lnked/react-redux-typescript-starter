@@ -44,23 +44,23 @@ function Forms ({ ui, app }: any) {
           <form onSubmit={handleSubmit} onReset={handleReset}>
             <JsonPretty json={{ ...values, isValid, isDirty, isSubmitted, isValidated }} />
 
-            <Input name='text' value={values.text} onChange={handleChange} />
+            <Input name="text" value={values.text} onChange={handleChange} />
 
-            <Input name='name' value={values.name} placeholder='Name' onChange={handleChange} />
+            <Input name="name" value={values.name} placeholder="Name" onChange={handleChange} />
 
-            <Input name='value' value={values.value} placeholder='Value' onChange={handleChange} />
+            <Input name="value" value={values.value} placeholder="Value" onChange={handleChange} />
 
-            <Input name='number' type='number' value={values.number} type='number' onChange={handleChange} />
+            <Input name="number" type="number" value={values.number} type="number" onChange={handleChange} />
 
-            <Input name='checkbox' type='checkbox' onChange={handleChange} />
+            <Input name="checkbox" type="checkbox" onChange={handleChange} />
 
-            <Input name='radio' type='radio' value={1} onChange={handleChange} />
-            <Input name='radio' type='radio' value={2} onChange={handleChange} />
-            <Input name='radio' type='radio' value={3} onChange={handleChange} />
+            <Input name="radio" type="radio" value={1} onChange={handleChange} />
+            <Input name="radio" type="radio" value={2} onChange={handleChange} />
+            <Input name="radio" type="radio" value={3} onChange={handleChange} />
 
-            <Textarea name='textarea' placeholder='Textarea' onChange={handleChange} />
+            <Textarea name="textarea" placeholder="Textarea" onChange={handleChange} />
 
-            <Select name='select' onChange={handleChange} >
+            <Select name="select" onChange={handleChange} >
               <option value={1}>Option 1</option>
               <option value={2}>Option 2</option>
               <option value={3}>Option 3</option>
@@ -69,7 +69,7 @@ function Forms ({ ui, app }: any) {
               <option value={6}>Option 6</option>
             </Select>
 
-            <Select name='multiSelect' onChange={handleChange} multiple>
+            <Select name="multiSelect" onChange={handleChange} multiple>
               <option value={1}>Option 1</option>
               <option value={2}>Option 2</option>
               <option value={3}>Option 3</option>
@@ -78,10 +78,10 @@ function Forms ({ ui, app }: any) {
               <option value={6}>Option 6</option>
             </Select>
 
-            <button type='reset'>Reset test</button>
-            <button type='submit'>Submit test</button>
+            <button type="reset">Reset test</button>
+            <button type="submit">Submit test</button>
 
-            <button type='submit' disabled={!(isSubmitted && isValidated) || !isValid || !isDirty}>
+            <button type="submit" disabled={!(isSubmitted && isValidated) || !isValid || !isDirty}>
               Submit
             </button>
           </form>

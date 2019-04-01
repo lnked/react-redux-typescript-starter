@@ -25,7 +25,7 @@ export default function Product ({ slug = '', badge, name, image }: ProductProps
   const root = '/shop'
 
   return (
-    <ProductItem itemscope itemtype='http://schema.org/Product'>
+    <ProductItem itemscope itemtype="http://schema.org/Product">
       <Link to={`${root}/${slug}`}>
         <Upper>
           {badge && <Label>{badge}</Label>}

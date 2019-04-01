@@ -40,16 +40,16 @@ export default function Switcher (store: any) {
       <Route path='/' component={Home} exact />
       */}
 
-      <Route exact path='/' render={(props: any) => <Home {...store} {...props} />} />
+      <Route exact path="/" render={(props: any) => <Home {...store} {...props} />} />
       <Route exact path={['/shop', '/shop/:product']} render={(props: any) => <Shop {...store} {...props} />} />
-      <Route path='/cart' render={(props: any) => <Cart {...store} {...props} />} />
-      <Route path='/forms' render={(props: any) => <Forms {...store} {...props} />} />
-      <Route path='/about' render={(props: any) => <About {...store} {...props} />} />
-      <Route path='/context' render={(props: any) => <Context {...store} {...props} />} />
-      <Route path='/topics' render={(props: any) => <Topics {...store} {...props} />} />
-      <Route path='/counter' render={(props: any) => <Counter {...store} {...props} />} />
-      <PrivateRoute path='/protected' alternative='/login' component={Home} />
-      <Route path='*' render={(props: any) => <NoMatch {...store} {...props} />} exact />
+      <Route path="/cart" render={(props: any) => <Cart {...store} {...props} />} />
+      <Route path="/forms" render={(props: any) => <Forms {...store} {...props} />} />
+      <Route path="/about" render={(props: any) => <About {...store} {...props} />} />
+      <Route path="/context" render={(props: any) => <Context {...store} {...props} />} />
+      <Route path="/topics" render={(props: any) => <Topics {...store} {...props} />} />
+      <Route path="/counter" render={(props: any) => <Counter {...store} {...props} />} />
+      <PrivateRoute path="/protected" alternative="/login" component={Home} />
+      <Route path="*" render={(props: any) => <NoMatch {...store} {...props} />} exact />
     </Switch>
   )
 }

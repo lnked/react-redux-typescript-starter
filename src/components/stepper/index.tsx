@@ -51,7 +51,7 @@ function Stepper ({ value = 0, step = 1 }: P) {
       <Button onClick={() => setCount(prevCount => prevCount - step)}>-</Button>
       <StylesInput
         ref={textInput}
-        type='text'
+        type="text"
         value={count}
         onChange={(e: any) => setCount(e.targer.value)}
       />

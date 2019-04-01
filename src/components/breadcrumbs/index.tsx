@@ -1,14 +1,20 @@
 import * as React from 'react'
 
-export interface OuterProps {
-  items?: any[];
+interface BreadcrumbProps {
+  href?: string;
+  icon?: string;
+  text?: string;
 }
 
-const list: OuterProps[] = [
-  { href: "/users", icon: "folder-close", text: "Users" },
-  { href: "/users/janet", icon: "folder-close", text: "Janet" },
-  { icon: "document", text: "image.jpg" },
-];
+export interface OuterProps {
+  items?: BreadcrumbProps[];
+}
+
+const list: BreadcrumbProps[] = [
+  { href: '/users', icon: 'folder-close', text: 'Users' },
+  { href: '/users/janet', icon: 'folder-close', text: 'Janet' },
+  { icon: 'document', text: 'image.jpg' },
+]
 
 const Breadcrumbs: React.FC<OuterProps> = (props: OuterProps) => {
   return (
@@ -20,10 +26,7 @@ const Breadcrumbs: React.FC<OuterProps> = (props: OuterProps) => {
 }
 
 Breadcrumbs.defaultProps = {
-  type: 'text',
-  label: '',
-  error: '',
-  value: '',
+  items: [],
 }
 
 export default Breadcrumbs

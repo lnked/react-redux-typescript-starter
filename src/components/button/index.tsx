@@ -33,7 +33,7 @@ const Button: React.FC<OuterProps> = ({ children, label, ...props }: OuterProps)
 //   }
 // }
 
-Button.displayName = 'Button';
+Button.displayName = 'Button'
 
 Button.defaultProps = {
   children: '',

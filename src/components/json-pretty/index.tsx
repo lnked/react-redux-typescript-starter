@@ -2,7 +2,7 @@ import * as React from 'react'
 // import ReactJson from 'react-json-view'
 import styled from '@emotion/styled'
 
-const theme = 'monokai'
+// const theme = 'monokai'
 
 export const Wrapper = styled.div`
   width: 100%;
