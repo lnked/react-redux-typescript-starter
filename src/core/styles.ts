@@ -51,9 +51,9 @@ const GlobalStyle = css`
 export const StyledContainer = styled.div`
   padding: 15px;
   min-height: 100vh;
-  color: ${(p: any) => (p.theme.whiteColor ? '#3F51B5' : '#E3F2FD')};
+  color: ${(p: any) => (p.theme.whiteColor ? colors.gray : colors.black)};
   font-family: ${(p: any) => p.theme.fontFamily};
-  background-color: ${(p: any) => (p.theme.whiteColor ? colors.white : '#3F51B5')};
+  background-color: ${(p: any) => (p.theme.whiteColor ? colors.white : colors.white)};
 `
 
 export const StyledList = styled.ul`
@@ -63,7 +63,7 @@ export const StyledList = styled.ul`
 `
 
 export const StyledLink = styled(NavLink)`
-  color: ${(p: any) => p.theme.whiteColor ? colors.gray : colors.white};
+  color: ${(p: any) => p.theme.whiteColor ? colors.gray : colors.black};
   padding: 2px 0;
   font-weight: 500;
   display: inline-block;

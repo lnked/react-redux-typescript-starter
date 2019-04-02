@@ -1,11 +1,19 @@
 import styled from '@emotion/styled'
 
-const margin = 6
+import { default as ProductCard } from './components/product'
+
+const margin = 5
 
 export const Container = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+`
+
+export const Product = styled(ProductCard)`
+  flex: 0 0 auto;
+  width: calc(20% - ${margin * 2}px);
+  margin: 0 ${margin}px ${margin * 2}px;
 `
 
 export const Sidebar = styled.aside`
@@ -33,6 +41,6 @@ export const Products = styled.div`
   margin-right: -${margin}px;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: flex-start;
 `

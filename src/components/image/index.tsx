@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import { Picture, Source, Loading } from './styles'
 
-export interface P {
+export interface OuterProps {
   src: string;
   alt?: string;
   width?: number;
   height?: number;
   circle?: boolean;
+  className?: string;
 }
 
 const loadedStack = {}
 
-function Image ({ src, alt = '', ...attrs }: P) {
+const Image: React.FC<OuterProps> = ({ src, className, ...props }: OuterProps) => {
   const [loaded, setLoaded] = useState(loadedStack[src] || false)
 
   const onLoad = () => {
@@ -20,17 +21,23 @@ function Image ({ src, alt = '', ...attrs }: P) {
   }
 
   return (
-    <Picture>
+    <Picture className={className}>
       {/* <source srcSet='[hash].webp' type='image/webp' /> */}
       {loaded || <Loading>Loading...</Loading>}
       <Source
-        {...attrs}
+        {...props}
         src={src}
-        alt={alt}
         onLoad={onLoad}
       />
     </Picture>
   )
+}
+
+Image.displayName = 'Image'
+
+Image.defaultProps = {
+  alt: '',
+  className: '',
 }
 
 export default Image

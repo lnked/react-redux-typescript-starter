@@ -1,53 +1,57 @@
 import * as React from 'react'
 
 import {
+  Card,
   Description,
-  ProductItem,
-  Upper,
-  Link,
-  Label,
-  Brand,
   Name,
+  Brand,
+  Link,
   Image,
-  Source,
+  Label,
   Footer,
   Price,
+  Like,
 } from './styles'
 
-export interface ProductProps {
+export interface OuterProps {
   name: string;
   slug: string;
+  brand?: string;
   image: string;
   badge?: string;
 }
 
-export default function Product ({ slug = '', badge, name, image }: ProductProps) {
+const Product: React.FC<OuterProps> = ({ slug, name, badge, brand, image, ...props }: OuterProps) => {
   const root = '/shop'
 
   return (
-    <ProductItem itemscope itemtype="http://schema.org/Product">
+    <Card {...props} itemscope itemtype="http://schema.org/Product">
       <Link to={`${root}/${slug}`}>
-        <Upper>
-          {badge && <Label>{badge}</Label>}
+        {badge && <Label>{badge}</Label>}
 
-          {image &&
-            <Image>
-              <Source src={image} alt={name} />
-            </Image>
-          }
-        </Upper>
+        {image &&
+          <Image src={image} alt={name} />
+        }
       </Link>
 
       <Description>
-        {/* <button>Like <span>0</span></button> */}
-        <Brand>Deer Stags</Brand>
-        <Name>Shae</Name>
+        <Like>Like <span>0</span></Like>
+        <Brand>{brand}</Brand>
+        <Name>{name}</Name>
 
         <Footer>
           <Price>$45.99</Price>
           <Price discount>MSRP: $65.00</Price>
         </Footer>
       </Description>
-    </ProductItem>
+    </Card>
   )
 }
+
+Product.displayName = 'Product'
+
+Product.defaultProps = {
+  slug: '',
+}
+
+export default Product

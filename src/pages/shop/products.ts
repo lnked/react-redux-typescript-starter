@@ -900,5 +900,5 @@ export const productsList = [
     discountPrice: '26.00',
     brand: 'Awesome',
     image,
-  }
+  },
 ]

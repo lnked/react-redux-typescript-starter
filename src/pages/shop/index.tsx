@@ -2,8 +2,13 @@ import * as React from 'react'
 import { NavLink, RouteComponentProps } from 'react-router-dom'
 // import { observer } from 'mobx-react'
 
-import Product from './components/product'
-import { Container, Categories, Sidebar, Products } from './styles'
+import {
+  Container,
+  Categories,
+  Sidebar,
+  Products,
+  Product,
+} from './styles'
 
 export interface OuterProps extends RouteComponentProps {
   history: any;

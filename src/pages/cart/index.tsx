@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { GlobalContext } from 'store'
+import { Store } from 'store'
 
 // import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
 
@@ -49,7 +49,7 @@ function reducer (state: any, action: any) {
 // return errors.get(error) || error;
 
 const Cart: React.FC<OuterProps> = ({ initialCount = 1 }: OuterProps) => {
-  const { ui, app } = React.useContext(GlobalContext)
+  const { ui, app } = React.useContext(Store)
   const [state, dispatch] = React.useReducer(reducer, initialCount, init)
 
   return (

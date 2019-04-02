@@ -4,71 +4,71 @@ import { NavLink } from 'react-router-dom'
 import { Image as ImageSource } from 'components'
 import { colors } from 'theme'
 
-const margin = 6
-
-export const ProductItem = styled.article`
-  width: calc(20% - ${margin * 2}px);
-  margin: 0;
+export const Card = styled.article`
+  padding: 0;
+  font-size: 1.6rem;
   border: none;
-  flex: 0 0 auto;
-  margin: 0 ${margin}px 20px;
-  background-color: ${colors.white};
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  background-color: ${colors.lightGray};
 `
 
 export const Link = styled(NavLink)`
+  line-height: 0;
   display: block;
+  position: relative;
   user-select: none;
   text-decoration: none;
 `
 
-export const Upper = styled.div`
-  position: relative;
-  margin-bottom: 15px;
-  background-color: #fff;
+export const Image = styled(ImageSource)`
+  width: 100%;
+  user-select: none;
 
   &:before {
     content: '';
     display: block;
     background: rgba(0,0,0,.04);
-    padding-bottom: 120%;
+    padding-bottom: 100%;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    pointer-events: none;
+    display: inline-block;
+    vertical-align: middle;
+    outline: 0;
   }
 `
 
-export const Image = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 0;
-  line-height: 0;
-  user-select: none;
-`
-
-export const Source = styled(ImageSource)`
-  max-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-  pointer-events: none;
-  display: inline-block;
-  vertical-align: middle;
-  outline: 0;
-`
-
 export const Description = styled.div`
+  padding: 20px 12px 12px;
+  position: relative;
   text-align: left;
-  font-size: 14px;
+  border-width: 0 1px 1px;
+  border-style: solid;
+  border-color: #ddd;
 `
 
 export const Brand = styled.div`
-  color: #1f1f1f;
+  color: #666;
   max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  font-size: 16px;
+  font-size: .9em;
+  line-height: 1;
   text-overflow: ellipsis;
-  margin-bottom: 5px;
+
+  &:not(:last-child) {
+    margin-bottom: .35em;
+  }
 `
 
 export const Name = styled.div`
@@ -77,11 +77,14 @@ export const Name = styled.div`
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: pointer;
-  color: #1f1f1f;
-  font-size: 16px;
-  margin-bottom: 5px;
+  color: #222;
+  font-size: 1.1em;
+  font-weight: 500;
   font-feature-settings: 'lnum';
-  font-weight: 600;
+
+  &:not(:last-child) {
+    margin-bottom: .35em;
+  }
 `
 
 export const Footer = styled.div`
@@ -90,6 +93,14 @@ export const Footer = styled.div`
   flex-wrap: wrap;
   overflow: hidden;
   height: 20px;
+`
+
+export const Like = styled.button`
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  border: 0;
+  outline: 0;
 `
 
 export const Price = styled.div`
@@ -110,10 +121,11 @@ export const Label = styled.div`
   color: #fff;
   font-size: 11px;
   position: absolute;
-  top: 42px;
+  top: 22px;
   left: 0;
   z-index: 2;
   letter-spacing: 0.02ex;
   padding: 0 8px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
   text-transform: uppercase;
 `
