@@ -31,8 +31,19 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
   } = props
 
   React.useEffect(() => {
+    // component did mount code here
     textInput.current!.focus()
-  }, [])
+
+    return () => {
+      // component will unmount code here
+    };
+  }, []);
+
+  // React.useEffect(() => {
+  //   return () => {
+  //     // component will update or unmount code here
+  //   };
+  // });
 
   return (
     <Wrapper className={className}>
