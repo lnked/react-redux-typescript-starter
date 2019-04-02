@@ -5,10 +5,11 @@ import { StyledButton } from './styles'
 export interface OuterProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label?: React.ReactChild[] | string;
   children?: React.ReactChild[] | string;
+  disabled?: boolean;
 }
 
-const Button: React.FC<OuterProps> = ({ children, label, ...props }: OuterProps) => (
-  <StyledButton type="button" {...props}>
+const Button: React.FC<OuterProps> = ({ children, label, disabled, ...props }: OuterProps) => (
+  <StyledButton type="button" aria-disabled={disabled} {...props}>
     {children || label}
   </StyledButton>
 )
@@ -36,6 +37,7 @@ const Button: React.FC<OuterProps> = ({ children, label, ...props }: OuterProps)
 Button.displayName = 'Button'
 
 Button.defaultProps = {
+  disabled: false,
   children: '',
 }
 
