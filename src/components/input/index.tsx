@@ -7,6 +7,7 @@ import {
 } from './styles'
 
 export interface OuterProps {
+  name?: string;
   type?: string;
   label?: string;
   error?: string;
@@ -14,13 +15,14 @@ export interface OuterProps {
   required?: boolean;
   className?: string;
   inputClassName?: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Input: React.FC<OuterProps> = (props: OuterProps) => {
   const textInput = React.createRef<HTMLInputElement>()
 
   const {
+    name,
     label,
     value,
     error,
@@ -58,6 +60,7 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
       <StyledInput
         {...attrs}
         ref={textInput}
+        name={name}
         value={value}
         onInput={onChange}
         onChange={onChange}
