@@ -111,7 +111,7 @@
     "@types/i18next": "12.1.0",
     "@types/jest": "24.0.11",
     "@types/node": "11.13.0",
-    "@types/react": "16.8.10",
+    "@types/react": "16.8.11",
     "@types/react-dom": "16.8.3",
     "@types/react-hot-loader": "4.1.0",
     "@types/react-router-dom": "4.3.1",
@@ -169,7 +169,7 @@
     "webpack-cli": "3.3.0",
     "webpack-dev-server": "3.2.1",
     "webpack-merge": "4.2.1",
-    "workbox-webpack-plugin": "4.1.1"
+    "workbox-webpack-plugin": "4.2.0"
   },
   "dependencies": {
     "@babel/runtime-corejs2": "7.4.3",
