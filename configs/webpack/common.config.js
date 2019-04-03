@@ -1,8 +1,9 @@
 const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { DuplicatesPlugin } = require('inspectpack/plugin');
+
+const WebpackPlugins = require('../plugins/common/webpack-plugins');
+const DuplicatesPlugin = require('../plugins/common/duplicates-plugin');
+const CopyWebpackPlugin = require('../plugins/common/copy-webpack-plugin');
+const HtmlWebpackPlugin = require('../plugins/common/html-webpack-plugin');
 
 const alias = require('../aliaces');
 const rules = require('../loaders');
@@ -25,78 +26,10 @@ module.exports = {
     publicPath: '/',
   },
   plugins: [
-    new webpack.NoEmitOnErrorsPlugin(),
-
-    new DuplicatesPlugin({
-      // Emit compilation warning or error? (Default: `false`)
-      emitErrors: false,
-      // Handle all messages with handler function (`(report: string)`)
-      // Overrides `emitErrors` output.
-      emitHandler: undefined,
-      // Display full duplicates information? (Default: `false`)
-      verbose: false,
-    }),
-
-    new CopyWebpackPlugin([
-      {
-        context: 'public',
-        from: { glob: '**/*', dot: true },
-        to: options.dist,
-        force: true,
-        cache: true,
-      },
-    ], {
-      ignore: ['.gitkeep', '.DS_Store', 'index.html'],
-      copyUnmodified: true,
-    }),
-
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify(options.env),
-      },
-    }),
-
-    new HtmlWebpackPlugin({
-      title: 'React app',
-      inject: true,
-      filename: 'index.html',
-      template: path.resolve(options.root, 'public/index.html'),
-      PUBLIC_URL: '/',
-      description: 'React starter',
-
-      // production
-      hash: false,
-      cache: true,
-      inject: true,
-      compile: false,
-      prefetch: ['**/*.js'],
-      preload: ['**/*.js'],
-      chunksSortMode: 'dependency',
-      production: true,
-      minify: {
-        html5: true,
-        caseSensitive: true,
-        keepClosingSlash: true,
-        removeComments: true,
-        decodeEntities: true,
-        customAttrAssign: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true,
-        removeEmptyAttributes: true,
-        preventAttributesEscaping: true,
-        processConditionalComments: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        collapseBooleanAttributes: true,
-        collapseInlineTagWhitespace: true,
-        trimCustomFragments: true,
-        useShortDoctype: true,
-        minifyJS: true,
-        minifyCSS: true,
-        minifyURLs: true,
-      },
-    }),
+    ...WebpackPlugins(),
+    ...DuplicatesPlugin(),
+    ...CopyWebpackPlugin(),
+    ...HtmlWebpackPlugin(),
   ],
   resolve: {
     alias,

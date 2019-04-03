@@ -10,7 +10,9 @@ import {
   Box,
 } from './styles'
 
-export interface OuterProps {}
+export interface OuterProps {
+  name?: any;
+}
 
 class Login extends React.Component<OuterProps, {}> {
   render () {

@@ -8,7 +8,9 @@ import {
   Header,
 } from './styles'
 
-export interface OuterProps {}
+export interface OuterProps {
+  name?: any;
+}
 
 class Profile extends React.Component<OuterProps, {}> {
   render () {

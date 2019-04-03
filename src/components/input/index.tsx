@@ -38,14 +38,14 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
 
     return () => {
       // component will unmount code here
-    };
-  }, []);
+    }
+  }, [])
 
   // React.useEffect(() => {
   //   return () => {
   //     // component will update or unmount code here
-  //   };
-  // });
+  //   }
+  // })
 
   return (
     <Wrapper className={className}>
