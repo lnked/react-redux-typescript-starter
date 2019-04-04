@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-const sidebarWidth = 260;
+const sidebarWidth = 260
 
 export const Wrapper = styled.div`
   display: flex;
