@@ -1,6 +1,8 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
+
 import { Store } from 'store'
+import { JsonPretty } from 'components'
 
 // import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
 
@@ -55,8 +57,8 @@ const Cart: React.FC<OuterProps> = ({ initialCount = 1 }: OuterProps) => {
   return (
     <Provider>
       <div>Count: {state.count}</div>
-      <div>{JSON.stringify(ui)}</div>
-      <div>{JSON.stringify(app)}</div>
+      <JsonPretty json={ui} />
+      <JsonPretty json={app} />
       <button onClick={() => dispatch({ type: 'increment' })}>+</button>
       <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
       <button onClick={() => dispatch({ type: 'reset', payload: initialCount })}>Reset</button>

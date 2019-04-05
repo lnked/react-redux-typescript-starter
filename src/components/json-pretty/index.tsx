@@ -1,34 +1,36 @@
 import * as React from 'react'
-// import ReactJson from 'react-json-view'
 import styled from '@emotion/styled'
 
 // const theme = 'monokai'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.pre`
   width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
 
   &:not(:last-child) {
     margin-bottom: 10px;
   }
+`
 
-  & > div {
-    padding: 10px;
-  }
+export const Code = styled.code`
+  color: #333;
+  display: inline-block;
+  font-size: 1.4rem;
+  line-height: 1.54;
 `
 
 export interface OuterProps {
   json: any;
+  theme?: string;
 }
-
-// <ReactJson
-//   src={json}
-//   theme={theme}
-//   displayObjectSize
-// />
 
 const JsonPretty: React.FC<OuterProps> = ({ json }: OuterProps) => (
   <Wrapper>
-    {JSON.stringify(json)}
+    <Code lang="json">
+      {JSON.stringify(json, null, '  ')}
+    </Code>
   </Wrapper>
 )
 

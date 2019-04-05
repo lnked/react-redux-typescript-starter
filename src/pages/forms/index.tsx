@@ -17,8 +17,8 @@ export interface P {
 function Forms ({ ui, app }: any) {
   return (
     <React.Fragment>
-      <div>ui: {JSON.stringify(ui)}</div>
-      <div>app: {JSON.stringify(app)}</div>
+      <JsonPretty json={ui} />
+      <JsonPretty json={app} />
       {/*
       <NaturalForm style={{ border: '1px solid lime', padding: 10 }}>
         {({ values }) => (

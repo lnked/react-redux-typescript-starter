@@ -1,14 +1,14 @@
 import * as React from 'react'
 
 import { E } from 'layouts'
-import { Image } from 'components'
+import { Image, JsonPretty } from 'components'
 
 import { A, B, AB, AnotherBuild } from './components'
 
 const About = ({ ui, app }: any) => (
   <div>
-    <div>ui: {JSON.stringify(ui)}</div>
-    <div>app: {JSON.stringify(app)}</div>
+    <JsonPretty json={ui} />
+    <JsonPretty json={app} />
     <h2>About</h2>
     <A />
     <B />
