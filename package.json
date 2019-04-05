@@ -196,7 +196,7 @@
     "react-json-view": "1.19.1",
     "react-router-dom": "5.0.0",
     "react-test-renderer": "16.8.6",
-    "react-testing-library": "6.1.0",
+    "react-testing-library": "6.1.1",
     "react-text-mask": "5.4.3",
     "react-use-localstorage": "3.0.1-alpha.0",
     "storage.io": "1.2.0"
