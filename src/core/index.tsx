@@ -29,10 +29,10 @@ class App extends React.Component<OuterProps, {}> {
     i18n.unload()
   }
 
-  handleMouseEnter = (component: any = null) => {
-    clearTimeout(this.timeout)
-    this.timeout = setTimeout(() => component && component.preload && component.preload(), 250)
-  }
+  // handleMouseEnter = (component: any = null) => {
+  //   clearTimeout(this.timeout)
+  //   this.timeout = setTimeout(() => component && component.preload && component.preload(), 250)
+  // }
 
   render () {
     //

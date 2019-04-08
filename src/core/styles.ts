@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
-import { NavLink } from 'react-router-dom'
+import { PreloadLink } from 'components'
 
 import { colors } from 'theme'
 
@@ -62,7 +62,7 @@ export const StyledList = styled.ul`
   list-style-type: none;
 `
 
-export const StyledLink = styled(NavLink)`
+export const StyledLink = styled(PreloadLink)`
   color: ${(p: any) => p.theme.whiteColor ? colors.gray : colors.black};
   padding: 2px 0;
   font-weight: 500;

@@ -33,8 +33,6 @@ export const routes = [
 ]
 
 export default function Switcher (store: any) {
-  console.error(store)
-
   return (
     <Switch>
       {/*
