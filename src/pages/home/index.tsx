@@ -1,10 +1,15 @@
 import * as React from 'react'
-// import styled from 'styled-components'
 import styled from '@emotion/styled'
 import { useTranslation } from 'react-i18next'
 
+import { colors } from 'theme'
+
 const Button = styled.button`
-  color: hotpink;
+  padding: 5px 8px;
+  outline: 0;
+  color: ${colors.pink};
+  border: 1px solid;
+  cursor: pointer;
 `
 
 const Home = ({ initialLanguage = 'ru' }: any) => {
