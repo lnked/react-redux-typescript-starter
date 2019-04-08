@@ -1,8 +1,11 @@
 const CRYPTO = require('crypto');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
+const HtmlWebpackPolyfillIOPlugin = require('html-webpack-polyfill-io-plugin2');
 const CspHtmlWebpackPlugin = require('csp-html-webpack-plugin');
-// const SriPlugin = require('webpack-subresource-integrity-plugin');
+// const SriPlugin = require('webpack-subresource-integrity');
+
+const options = require('../../options');
 
 const SHA256 = (str) => CRYPTO.createHash('sha256').update( str, 'utf8').digest('base64');
 const sha256Str = SHA256( '' + Date.now() );
@@ -19,20 +22,37 @@ module.exports = () => {
         value: 'nonce-' + sha256Str,
       }],
     }),
+    new HtmlWebpackPolyfillIOPlugin({
+      minify: options.production,
+      // features: [
+      //   'Intl',
+      //   'Map',
+      //   'Set',
+      //   'Array.isArray',
+      //   'Array.prototype.find',
+      //   'Array.prototype.some',
+      //   'Object.assign',
+      //   'Promise',
+      // ],
+      // flags: 'always',
+      // unknown: 'polyfill',
+      // callback: 'polyfillHasLoaded',
+      // rum: false,
+    }),
     new HtmlWebpackExcludeAssetsPlugin(),
     new CspHtmlWebpackPlugin({
         'base-uri': '\'self\'',
         'object-src': '\'none\'',
-        'script-src': ['\'self\'', '\'unsafe-eval\'', '\'nonce-' + sha256Str + '\''],
+        'script-src': ['\'self\'', '\'unsafe-eval\'', '\'nonce-' + sha256Str + '\'', '*.polyfill.io'],
         'style-src': ['\'unsafe-inline\'', '\'self\'']
       }, {
-        enabled: true,
+        enabled: options.production,
         devAllowUnsafe: false,
         hashingMethod: 'sha256',
     }),
     // new SriPlugin({
     //   hashFuncNames: ['sha256', 'sha384'],
-    //   enabled: true,
+    //   enabled: options.production,
     // }),
   ]
 }
