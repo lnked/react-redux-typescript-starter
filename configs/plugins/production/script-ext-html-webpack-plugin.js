@@ -24,20 +24,6 @@ module.exports = () => {
     }),
     new HtmlWebpackPolyfillIOPlugin({
       minify: options.production,
-      // features: [
-      //   'Intl',
-      //   'Map',
-      //   'Set',
-      //   'Array.isArray',
-      //   'Array.prototype.find',
-      //   'Array.prototype.some',
-      //   'Object.assign',
-      //   'Promise',
-      // ],
-      // flags: 'always',
-      // unknown: 'polyfill',
-      // callback: 'polyfillHasLoaded',
-      // rum: false,
     }),
     new HtmlWebpackExcludeAssetsPlugin(),
     new CspHtmlWebpackPlugin({

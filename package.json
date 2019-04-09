@@ -26,7 +26,11 @@
     "ci": "yarn test & yarn typecheck & yarn lint",
     "lh": "lighthousebot -- --perf=96 --pwa=100",
     "c": "rimraf -rf ./dist/test && node ./component.js",
-    "a": "yarn clear:cache && yarn analyze"
+    "a": "yarn clear:cache && yarn analyze",
+    "add-component": "node configs/utils/add --essence component",
+    "add-page": "node configs/utils/add --essence page",
+    "add-layout": "node configs/utils/add --essence layout",
+    "add-fragment": "node configs/utils/add --essence fragment"
   },
   "reactSnap": {
     "source": "dist",
@@ -153,6 +157,7 @@
     "react-snap": "1.23.0",
     "rimraf": "2.6.3",
     "script-ext-html-webpack-plugin": "2.1.3",
+    "signale": "1.4.0",
     "size-limit": "1.0.1",
     "source-map-loader": "0.2.4",
     "svg-url-loader": "2.3.2",
@@ -168,8 +173,9 @@
     "webpack-bundle-analyzer": "3.2.0",
     "webpack-chunk-hash": "0.6.0",
     "webpack-cli": "3.3.0",
-    "webpack-dev-server": "3.3.0",
+    "webpack-dev-server": "3.3.1",
     "webpack-merge": "4.2.1",
+    "webpack-subresource-integrity": "1.3.2",
     "workbox-webpack-plugin": "4.2.0"
   },
   "dependencies": {
