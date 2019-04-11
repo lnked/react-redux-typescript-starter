@@ -1,20 +1,31 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
-import resources from './locales'
+import en from './locales/en.json'
+import ru from './locales/ru.json'
+
+const resources = {
+  en: {
+    translation: {
+      ...en,
+    },
+  },
+  ru: {
+    translation: {
+      ...ru,
+    },
+  },
+}
 
 i18n
   .use(initReactI18next)
   .init({
+    debug: true,
     lng: 'en',
-    debug: false,
     resources,
-    load: 'languageOnly',
-    defaultNS: 'translation',
-    fallbackNS: 'translation',
-    fallbackLng: 'en',
     whitelist: ['en', 'ru'],
-    saveMissing: true,
+    fallbackNS: 'translation',
+    fallbackLng: false,
     interpolation: {
       escapeValue: false,
     },

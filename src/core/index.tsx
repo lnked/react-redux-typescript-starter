@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { Global } from '@emotion/core'
 import { hot } from 'react-hot-loader/root'
 
-import * as i18n from 'services/i18n'
+import * as i18n from 'i18n'
 
 import { Consumer } from 'store'
 import { ErrorBoundary } from 'components'

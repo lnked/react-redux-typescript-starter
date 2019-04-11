@@ -1,53 +1,37 @@
 import styled from '@emotion/styled'
 
 export const StyledButton = styled.button`
-/* color: #fff; */
-/* background-color: #1890ff;
-border-color: #1890ff;
-text-shadow: 0 -1px 0 rgba(0,0,0,0.12);
--webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.045);
-box-shadow: 0 2px 0 rgba(0,0,0,0.045);
-appearance: button; */
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 0 10px;
+  text-align: left;
+  font-size: 1.3rem;
+  line-height: 1;
+  min-width: 26px;
+  min-height: 26px;
 
-/* &:hover {
-  color: #fff;
-  background-color: #40a9ff;
-  border-color: #40a9ff;
-} */
+  color: #182026;
+  background-color: #f5f8fa;
+  background-image: linear-gradient(180deg,hsla(0,0%,100%,.8),hsla(0,0%,100%,0));
+  box-shadow: inset 0 0 0 1px rgba(16,22,26,.2),inset 0 -1px 0 rgba(16,22,26,.1);
 
-outline: 0;
-line-height: 1.499;
-position: relative;
-display: inline-block;
-font-weight: 400;
-white-space: nowrap;
-text-align: center;
-background-image: none;
-border: 1px solid transparent;
-box-shadow: 0 2px 0 rgba(0,0,0,0.015);
-cursor: pointer;
-transition: all .2s cubic-bezier(.645, .045, .355, 1);
-user-select: none;
-touch-action: manipulation;
-height: 32px;
-padding: 0 15px;
-font-size: 14px;
-border-radius: 4px;
-color: rgba(0,0,0,0.65);
-background-color: #fff;
-border-color: #d9d9d9;
+  &:hover {
+    background-clip: padding-box;
+    background-color: #ebf1f5;
+    box-shadow: inset 0 0 0 1px rgba(16,22,26,.2), inset 0 -1px 0 rgba(16,22,26,.1);
+  }
 
-&:hover {
-  color: #40a9ff;
-  background-color: #fff;
-  border-color: #40a9ff;
-}
+  &:active {
+    box-shadow: inset 0 0 0 1px rgba(16,22,26,.2), inset 0 1px 2px rgba(16,22,26,.2);
+    background-color: #d8e1e8;
+    background-image: none;
+  }
 
-&:active {
-  color: #096dd9;
-  background-color: #fff;
-  border-color: #096dd9;
-  text-decoration: none;
-  background: #fff;
-}
+  & + & {
+    margin-left: 8px;
+  }
 `
