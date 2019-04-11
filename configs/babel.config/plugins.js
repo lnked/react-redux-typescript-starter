@@ -22,7 +22,7 @@ module.exports = function({ development, production, test, loose, legacy }) {
     ...plugins,
     ['emotion', {
       sourceMap: true,
-      // extractStatic: true,
+      extractStatic: false,
     }],
     ['@babel/plugin-transform-runtime', {
       corejs: 2,
