@@ -40,8 +40,8 @@
   },
   "paths": {
     "*": ["./*"],
+    "app/*": ["app/*"],
     "i18n/*": ["i18n/*"],
-    "core/*": ["core/*"],
     "store/*": ["store/*"],
     "utils/*": ["utils/*"],
     "theme/*": ["theme/*"],

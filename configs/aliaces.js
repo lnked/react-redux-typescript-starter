@@ -12,7 +12,7 @@ const duplicates = {
 module.exports = {
   ...duplicates,
   src: options.sourcePath,
-  core: path.resolve(options.sourcePath, 'core'),
+  app: path.resolve(options.sourcePath, 'app'),
   i18n: path.resolve(options.sourcePath, 'i18n'),
   utils: path.resolve(options.sourcePath, 'utils'),
   store: path.resolve(options.sourcePath, 'store'),
