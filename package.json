@@ -155,7 +155,7 @@
     "markdown-loader": "5.0.0",
     "marked": "0.6.2",
     "raw-loader": "2.0.0",
-    "react-hot-loader": "4.8.3",
+    "react-hot-loader": "4.8.4",
     "react-snap": "1.23.0",
     "react-styleguidist": "9.0.7",
     "rimraf": "2.6.3",
