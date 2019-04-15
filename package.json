@@ -23,6 +23,7 @@
     "pretest": "cross-env NODE_ENV=test yarn lint",
     "test": "jest",
     "test:watch": "yarn test -- --watch",
+    "deploy": "",
     "ci": "yarn test & yarn typecheck & yarn lint",
     "lh": "lighthousebot -- --perf=96 --pwa=100",
     "c": "rimraf -rf ./dist/test && node ./component.js",

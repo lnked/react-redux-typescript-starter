@@ -37,9 +37,8 @@ script:
   - yarn build
 
 after_success:
-  # - yarn deploy
-  # - ./deploy.sh
   # - firebase deploy --token $FIREBASE_TOKEN --non-interactive
+  - yarn deploy
   - yarn lh -- https://yoga.createone.ru
 
 addons:
