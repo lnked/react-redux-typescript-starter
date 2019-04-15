@@ -19,7 +19,7 @@ import {
 } from 'settings'
 
 configure({
-  enforceActions: 'strict', // 'never' | 'always' | 'observed'
+  enforceActions: 'always', // 'never' | 'always' | 'observed'
 })
 
 enableLogging({
