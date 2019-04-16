@@ -2,7 +2,7 @@
   "project": "./tsconfig.json",
   "defaultSeverity": "warning",
   "extends": [
-    "tslint:latest",
+    "tslint:recommended",
     "tslint-config-standard",
     "tslint-react",
     "tslint-react-hooks"
