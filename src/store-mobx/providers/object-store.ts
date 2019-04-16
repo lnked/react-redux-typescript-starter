@@ -17,8 +17,8 @@ export const ObjectStore = observable({
     this.age--
   },
 }, {
-  increment: action ('Plus one'),
-  decrement: action ('Minus one'),
+  increment: action('Plus one'),
+  decrement: action('Minus one'),
 }, {
   name: 'nickNameObservableObject',
 })
