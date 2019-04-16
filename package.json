@@ -198,6 +198,7 @@
     "mobx": "5.9.4",
     "mobx-logger": "0.7.1",
     "mobx-react": "5.4.3",
+    "mobx-react-devtools": "6.1.1",
     "mobx-react-router": "4.0.7",
     "nanoid": "2.0.1",
     "react": "16.8.6",
