@@ -4,17 +4,21 @@ export const ObjectStore = observable({
   firstName: 'Yauhen',
   age: 30,
 
-  get nickName() {
+  get nickName () {
     console.log('Generate nickName!')
     return `${this.firstName}${this.age}`
   },
 
-  increment() { this.age++ },
+  increment () {
+    this.age++
+  },
 
-  decrement() { this.age-- },
+  decrement () {
+    this.age--
+  },
 }, {
-  increment: action('Plus one'),
-  decrement: action('Minus one'),
+  increment: action ('Plus one'),
+  decrement: action ('Minus one'),
 }, {
   name: 'nickNameObservableObject',
 })
