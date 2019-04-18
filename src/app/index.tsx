@@ -11,7 +11,6 @@ import { ErrorBoundary } from 'components'
 import { browserHistory } from 'utils'
 
 import Switcher from './routes'
-import Navigation from './navigation'
 import GlobalStyle from './styles'
 
 export interface OuterProps {
@@ -37,8 +36,6 @@ class App extends React.Component<OuterProps, {}> {
       <ErrorBoundary>
         <Router history={browserHistory}>
           <CoreLayout>
-            <Navigation />
-
             <React.Suspense fallback={<div>Loading...</div>}>
               <Consumer>
                 {context => <Switcher {...context} />}

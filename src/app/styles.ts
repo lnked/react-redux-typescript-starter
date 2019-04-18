@@ -1,7 +1,4 @@
-import styled from '@emotion/styled'
 import { css } from '@emotion/core'
-import { PreloadLink } from 'components'
-
 import { colors } from 'theme'
 
 const GlobalStyle = css`
@@ -21,6 +18,10 @@ const GlobalStyle = css`
 
   html {
     font-size: 10px;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
   }
 
   body {
@@ -45,24 +46,6 @@ const GlobalStyle = css`
   h3 {
     color: ${colors.primary};
     font-size: 1.6rem;
-  }
-`
-
-export const StyledList = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-`
-
-export const StyledLink = styled(PreloadLink)`
-  color: ${(p: any) => p.theme.whiteColor ? colors.gray : colors.black};
-  padding: 2px 0;
-  font-weight: 500;
-  display: inline-block;
-  text-decoration: none;
-
-  &.active {
-    color: ${colors.red};
   }
 `
 

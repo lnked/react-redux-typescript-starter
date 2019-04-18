@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
 
+import { Navigation } from 'fragments'
+
 import { Layout, Section } from './styles'
 
 export interface OuterProps extends RouteComponentProps {
@@ -31,6 +33,8 @@ class CoreLayout extends React.Component<OuterProps, {}> {
 
     return (
       <Layout>
+        <Navigation />
+
         <Section>{children}</Section>
       </Layout>
     )

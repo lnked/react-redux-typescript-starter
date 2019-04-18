@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { colors } from 'theme'
 
 export const Layout = styled.div`
-  padding: 15px;
+  padding: 0;
   min-height: 100vh;
   color: ${(p: any) => (p.theme.whiteColor ? colors.gray : colors.black)};
   font-family: ${(p: any) => p.theme.fontFamily};
@@ -12,5 +12,5 @@ export const Layout = styled.div`
 
 export const Section = styled.div`
   margin: 0;
-  padding: 0;
+  padding: 15px 20px;
 `
