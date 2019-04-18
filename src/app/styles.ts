@@ -48,14 +48,6 @@ const GlobalStyle = css`
   }
 `
 
-export const StyledContainer = styled.div`
-  padding: 15px;
-  min-height: 100vh;
-  color: ${(p: any) => (p.theme.whiteColor ? colors.gray : colors.black)};
-  font-family: ${(p: any) => p.theme.fontFamily};
-  background-color: ${(p: any) => (p.theme.whiteColor ? colors.white : colors.white)};
-`
-
 export const StyledList = styled.ul`
   margin: 0;
   padding: 0;

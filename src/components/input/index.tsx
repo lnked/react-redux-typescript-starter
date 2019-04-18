@@ -34,7 +34,7 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
 
   React.useEffect(() => {
     // component did mount code here
-    textInput.current!.focus()
+    // textInput.current!.focus()
 
     return () => {
       // component will unmount code here

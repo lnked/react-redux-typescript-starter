@@ -1,16 +1,18 @@
 import * as React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { Router } from 'react-router-dom'
 import { Global } from '@emotion/core'
 import { hot } from 'react-hot-loader/root'
 
 import * as i18n from 'i18n'
 
 import { Consumer } from 'store'
+import { CoreLayout } from 'layouts'
 import { ErrorBoundary } from 'components'
+import { browserHistory } from 'utils'
 
 import Switcher from './routes'
 import Navigation from './navigation'
-import GlobalStyle, { StyledContainer } from './styles'
+import GlobalStyle from './styles'
 
 export interface OuterProps {
   history?: {
@@ -19,6 +21,7 @@ export interface OuterProps {
 }
 
 class App extends React.Component<OuterProps, {}> {
+
   timeout: any = null
 
   componentDidMount () {
@@ -29,33 +32,26 @@ class App extends React.Component<OuterProps, {}> {
     i18n.unload()
   }
 
-  // handleMouseEnter = (component: any = null) => {
-  //   clearTimeout(this.timeout)
-  //   this.timeout = setTimeout(() => component && component.preload && component.preload(), 250)
-  // }
-
   render () {
-    //
     return (
       <ErrorBoundary>
-        <Router>
-          <Global styles={GlobalStyle} />
-
-          <StyledContainer>
-            <Navigation onMouseEnter={this.handleMouseEnter} />
-
-            <hr />
+        <Router history={browserHistory}>
+          <CoreLayout>
+            <Navigation />
 
             <React.Suspense fallback={<div>Loading...</div>}>
               <Consumer>
                 {context => <Switcher {...context} />}
               </Consumer>
             </React.Suspense>
-          </StyledContainer>
+          </CoreLayout>
+
+          <Global styles={GlobalStyle} />
         </Router>
       </ErrorBoundary>
     )
   }
+
 }
 
 export default hot(App)
