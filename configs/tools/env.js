@@ -1,11 +1,19 @@
-const path = require('path')
+const fs = require('fs')
+const { resolve } = require('path')
 const dotenv = require('dotenv')
-const variableExpansion = require('dotenv-expand')
 
-const envName = '.example'
+const { env, root } = require('../options');
 
-variableExpansion(
-  dotenv.config({
-    path: path.resolve(process.cwd(), `.env${envName}`)
-  })
-)
+const defaultFile = resolve(root, '.env')
+
+let envFile = resolve(root, `.env.${env}`)
+
+if (!fs.existsSync(envFile)) {
+  envFile = defaultFile;
+}
+
+const { parsed } = dotenv.config({
+  path: envFile,
+})
+
+module.exports.config = parsed

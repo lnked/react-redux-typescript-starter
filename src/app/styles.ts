@@ -1,6 +1,7 @@
 import { css } from '@emotion/core'
 import { colors } from 'theme'
 
+/* tslint:disable: max-line-length */
 const GlobalStyle = css`
   *,
   &:after,

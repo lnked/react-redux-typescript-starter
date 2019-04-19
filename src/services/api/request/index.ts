@@ -1,0 +1,24 @@
+import axios from 'axios'
+
+import { API_URL } from './api'
+import Token from './token'
+
+const headers: any = {
+  'Accept': 'application/json',
+  'Content-Type': 'application/json',
+}
+
+export const request = (withToken: boolean = true) => {
+  if (withToken) {
+    const authorizationToken = Token.get()
+
+    if (authorizationToken) {
+      headers['x-access-token'] = `Auth ${authorizationToken}`
+    }
+  }
+
+  return axios.create({
+    baseURL: API_URL,
+    headers,
+  })
+}

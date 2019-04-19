@@ -3,6 +3,11 @@ import { useTranslation } from 'react-i18next'
 
 import { Button } from 'components'
 
+import {
+  API_URL,
+  REACT_APP_SECRET,
+} from 'settings'
+
 const Home = ({ initialLanguage = 'ru' }: any) => {
   const [lng, setLanguage] = React.useState(initialLanguage)
   const { t, i18n } = useTranslation(lng)
@@ -14,6 +19,9 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
 
       <br/>
       <br/>
+
+      <div>API_URL: {API_URL}</div>
+      <div>REACT_APP_SECRET: {REACT_APP_SECRET}</div>
 
       <h2>{t('title', { count: 10 })}</h2>
       <h2>{t('age.label', { count: 10 })}</h2>
