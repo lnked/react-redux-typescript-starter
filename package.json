@@ -171,7 +171,7 @@
     "tslint": "5.16.0",
     "tslint-config-standard": "8.0.1",
     "tslint-react": "4.0.0",
-    "tslint-react-hooks": "2.0.0",
+    "tslint-react-hooks": "2.1.0",
     "typescript": "3.4.4",
     "url-loader": "1.1.2",
     "webpack": "4.30.0",
