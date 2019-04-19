@@ -3,8 +3,8 @@ import styled from '@emotion/styled'
 
 import withContext from './store/hoc'
 
-export interface P {
-  children?: JSX.Element[] | JSX.Element | any;
+export interface OuterProps {
+  children?: React.ReactChild[] | React.ReactChild;
 }
 
 const StyledBlock = styled.div`
@@ -24,9 +24,14 @@ const StyledInput = styled.input`
   }
 `
 
-export function Right (props: any) {
+export type ChangeEvent = React.ChangeEvent<HTMLInputElement>
+
+export function Right(props: any) {
 
   const { dispatch, left, right, center } = props
+
+  const handleChange = (type: string, { target: { value } }: ChangeEvent) =>
+    dispatch({ type, value })
 
   return (
     <StyledBlock>
@@ -34,17 +39,17 @@ export function Right (props: any) {
       <StyledInput
         value={left}
         placeholder="LEFT"
-        onChange={({ target: { value } }: any) => dispatch({ type: 'change/LEFT', value })}
+        onChange={(e: ChangeEvent) => handleChange('change/LEFT', e)}
       />
       <StyledInput
         value={right}
         placeholder="RIGHT"
-        onChange={({ target: { value } }: any) => dispatch({ type: 'change/RIGHT', value })}
+        onChange={(e: ChangeEvent) => handleChange('change/RIGHT', e)}
       />
       <StyledInput
         value={center}
         placeholder="CENTER"
-        onChange={({ target: { value } }: any) => dispatch({ type: 'CENTER', value })}
+        onChange={(e: ChangeEvent) => handleChange('CENTER', e)}
       />
     </StyledBlock>
   )

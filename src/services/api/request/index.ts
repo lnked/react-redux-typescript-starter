@@ -4,7 +4,7 @@ import { API_URL } from './api'
 import Token from './token'
 
 const headers: any = {
-  'Accept': 'application/json',
+  Accept: 'application/json',
   'Content-Type': 'application/json',
 }
 
@@ -18,7 +18,7 @@ export const request = (withToken: boolean = true) => {
   }
 
   return axios.create({
-    baseURL: API_URL,
     headers,
+    baseURL: API_URL,
   })
 }

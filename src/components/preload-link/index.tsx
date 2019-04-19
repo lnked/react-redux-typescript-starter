@@ -18,7 +18,7 @@ class PreloadLink extends React.Component<OuterProps, void> {
 
     this.timeout = setTimeout(() =>
       component && component.preload && component.preload()
-    , 250)
+    ,                         250)
   }
 
   render () {

@@ -1,7 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 
-import withContext from './store/hoc'
 import StateProvider from './store/provider'
 
 import Left from './left'
@@ -16,11 +15,11 @@ const StyledContainer = styled.div`
   border: 1px solid #ddd;
 `
 
-export interface P {
-  children?: JSX.Element[] | JSX.Element | any;
+export interface OuterProps {
+  children?: React.ReactChild[] | React.ReactChild;
 }
 
-export function Example () {
+export function Example() {
 
   return (
     <StateProvider>

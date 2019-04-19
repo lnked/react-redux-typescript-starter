@@ -20,9 +20,9 @@ const resources = {
 i18n
   .use(initReactI18next)
   .init({
-    debug: true,
     lng: 'en',
     resources,
+    debug: true,
     whitelist: ['en', 'ru'],
     fallbackNS: 'translation',
     fallbackLng: false,
@@ -31,14 +31,10 @@ i18n
     },
   })
 
-export function init () {
-  i18n.on('languageChanged', lng => {
-    console.log('languageChanged: ', lng)
-  })
+export function init() {
+  i18n.on('languageChanged', lng => console.log('languageChanged: ', lng))
 }
 
-export function unload () {
-  i18n.off('languageChanged', lng => {
-    console.log('languageChanged: ', lng)
-  })
+export function unload() {
+  i18n.off('languageChanged', lng => console.log('languageChanged: ', lng))
 }

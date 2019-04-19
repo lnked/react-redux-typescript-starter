@@ -3,7 +3,7 @@ import isEqual from 'react-fast-compare'
 
 import { isObject, isEmptyChildren } from 'utils/assertions'
 
-export interface PassedMethods {
+export interface OuterPropsassedMethods {
   handleBlur?: (e?: React.FormEvent<HTMLInputElement>) => void;
   handleFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
   handleInput?: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -13,7 +13,7 @@ export interface PassedMethods {
   setSubmitting?: (isSubmitting: boolean) => void;
 }
 
-export interface PassedState {
+export interface OuterPropsassedState {
   errors: any;
   values: any;
   touched: any;

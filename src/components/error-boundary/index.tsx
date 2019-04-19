@@ -3,16 +3,16 @@ import * as React from 'react'
 
 import { StyledError, StyledDetails } from './styles'
 
-export interface P {
+export interface OuterProps {
   children: JSX.Element | JSX.Element[] | string;
 }
 
-export interface S {
+export interface InnerState {
   error: Error | boolean;
   info: any;
 }
 
-export default class ErrorBoundary extends React.PureComponent<P, S> {
+export default class ErrorBoundary extends React.PureComponent<OuterProps, InnerState> {
   state = {
     info: null,
     error: false,

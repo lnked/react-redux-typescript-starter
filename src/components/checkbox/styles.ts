@@ -1,4 +1,4 @@
-// import styled from 'styled-components'
+/* tslint:disable: max-line-length */
 import styled from '@emotion/styled'
 
 export const StyledLabel = styled.label`

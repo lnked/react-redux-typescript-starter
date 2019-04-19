@@ -7,7 +7,7 @@ import {
   NavigationLink,
 } from './styles'
 
-function Navigation () {
+function Navigation() {
   return (
     <NavigationList>
       {routes && routes.map(({ label, component, ...link }: any) => (

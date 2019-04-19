@@ -1,18 +1,20 @@
 import * as React from 'react'
 
-export interface P {
-  children?: JSX.Element[] | JSX.Element | any;
+export interface OuterProps {
+  children?: React.ReactChild[] | React.ReactChild;
 }
 
-export function Steps ({ children }: P) {
+function Steps({ children }: OuterProps) {
   return (
     <nav>
       <ol>
-        <li className="steps__item is-passed"><a href="/cart/checkout">ваш заказ</a></li>
-        <li className="steps__item is-passed"><a href="/cart/delivery">адрес доставки</a></li>
-        <li className="steps__item">оплата</li>
-        <li className="steps__item">подтверждение</li>
+        <li><a href="/cart/checkout">ваш заказ</a></li>
+        <li><a href="/cart/delivery">адрес доставки</a></li>
+        <li>оплата</li>
+        <li>подтверждение</li>
       </ol>
+
+      {children}
     </nav>
   )
 }

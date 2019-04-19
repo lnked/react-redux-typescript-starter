@@ -10,11 +10,11 @@ import {
   Textarea,
 } from './styles'
 
-export interface P {
+export interface OuterProps {
   initialCount?: number;
 }
 
-function Forms ({ ui, app }: any) {
+function Forms({ ui, app }: any) {
   return (
     <React.Fragment>
       <JsonPretty json={ui} />
@@ -33,7 +33,7 @@ function Forms ({ ui, app }: any) {
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2))
             setSubmitting(false)
-          }, 500)
+          },         500)
         }}
         initialValues={{ text: 'test' }}
         validationSchema={{

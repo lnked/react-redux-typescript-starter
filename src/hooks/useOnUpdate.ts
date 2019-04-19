@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-export function useOnUpdate<T> (onUpdate: (prevValue: T) => void, value: T) {
+export function useOnUpdate<T>(onUpdate: (prevValue: T) => void, value: T) {
   // Flag that inditcates whether we are in a mount or update phase
   const isMounted = useRef<boolean>(false)
 
@@ -17,5 +17,5 @@ export function useOnUpdate<T> (onUpdate: (prevValue: T) => void, value: T) {
     }
     // Update the ref object each time the value is updated
     valueRef.current = value
-  }, [value]) // Run only when the value updates
+  },        [value]) // Run only when the value updates
 }

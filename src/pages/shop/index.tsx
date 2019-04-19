@@ -37,17 +37,14 @@ class Shop extends React.Component<OuterProps, {}> {
         </Sidebar>
 
         <Products>
-          {productsList.map(product => {
-            const props = {
-              ...product,
-              slug: `product-${product.id}`,
-              badge: 'Хит продаж',
-            }
-
-            return (
-              <Product key={product.id} {...props} />
-            )
-          })}
+          {productsList.map(product => (
+            <Product
+              {...product}
+              key={product.id}
+              slug={`product-${product.id}`}
+              badge="Хит продаж"
+            />
+          ))}
         </Products>
       </Container>
     )

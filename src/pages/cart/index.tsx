@@ -27,11 +27,11 @@ export interface OuterProps {
   initialCount: number;
 }
 
-function init (initialCount: number) {
+function init(initialCount: number) {
   return { count: initialCount }
 }
 
-function reducer (state: any, action: any) {
+function reducer(state: any, action: any) {
   switch (action.type) {
     case 'increment':
       return { count: state.count + 1 }

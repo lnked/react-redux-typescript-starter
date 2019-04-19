@@ -2,15 +2,15 @@ import * as React from 'react'
 
 import { StyledLabel, StyledInput, StyledBox, StyledText } from './styles'
 
-export interface Props {
+export interface OuterProps {
   checked?: boolean;
 }
 
-export interface State {
+export interface InnerState {
   isChecked: boolean;
 }
 
-export default class Checkbox extends React.Component<Props, State> {
+export default class Checkbox extends React.Component<OuterProps, InnerState> {
 
   static defaultProps = {
     checked: false,

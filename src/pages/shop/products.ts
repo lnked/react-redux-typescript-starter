@@ -3,21 +3,21 @@ import image from './product.png'
 export const productsList = [
   {
     id: 1,
+    image,
+    code: 83429,
     name: 'Sleek Granite Gloves',
     price: '928.00',
-    code: 83429,
-    discountPrice: '95.00',
     brand: 'Tasty',
-    image,
+    discountPrice: '95.00',
   },
   {
     id: 2,
+    image,
     name: 'Sleek Metal Salad',
-    price: '787.00',
     code: 41034,
+    price: '787.00',
     discountPrice: '890.00',
     brand: 'Handcrafted',
-    image,
   },
   {
     id: 3,

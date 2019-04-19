@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export interface PhotoProps {
+export interface OuterPropshotoProps {
   src: string;
   id?: number;
   link?: string;
@@ -9,16 +9,16 @@ export interface PhotoProps {
   title?: string;
 }
 
-export function Photo ({ id, src, link, width = 100, height = 100, title = '' }: PhotoProps) {
+export function Photo({ id, src, link, width = 100, height = 100, title = '' }: PhotoProps) {
   return (
-    <div className="checkout__block__item _item-photo">
-      <div className="checkout__block__item__content _p-photo">
-        <a href={link} className="checkout__block__item__image" data-product={id}>
+    <div>
+      <div>
+        <a href={link} data-product={id}>
           <img
             src={src}
             width={width}
             height={height}
-            className="checkout__block__item__image__src"
+
             alt={title}
           />
         </a>

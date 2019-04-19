@@ -16,13 +16,14 @@ import {
 export interface OuterProps {
   name: string;
   slug: string;
-  brand?: string;
   image: string;
+  brand?: string;
   badge?: string;
 }
 
-const Product: React.FC<OuterProps> = ({ slug, name, badge, brand, image, ...props }: OuterProps) => {
+const Product: React.FC<OuterProps> = (props: OuterProps) => {
   const root = '/shop'
+  const { slug, name, badge, brand, image } = props
 
   return (
     <Card {...props} itemscope itemtype="http://schema.org/Product">

@@ -6,16 +6,16 @@ import { lazyWithPreload } from 'utils'
 import PrivateRoute from './private-route'
 
 import Home from 'pages/home'
-export const Cart = lazyWithPreload(() => import(/* webpackChunkName: "cart" */ 'pages/cart'))
-export const Shop = lazyWithPreload(() => import(/* webpackChunkName: "shop" */ 'pages/shop'))
-export const About = lazyWithPreload(() => import(/* webpackChunkName: "about" */ 'pages/about'))
-export const Forms = lazyWithPreload(() => import(/* webpackChunkName: "forms" */ 'pages/forms'))
-export const Login = lazyWithPreload(() => import(/* webpackChunkName: "login" */ 'pages/login'))
-export const Topics = lazyWithPreload(() => import(/* webpackChunkName: "topics" */ 'pages/topics'))
-export const Profile = lazyWithPreload(() => import(/* webpackChunkName: "profile" */ 'pages/profile'))
-export const Context = lazyWithPreload(() => import(/* webpackChunkName: "context" */ 'pages/context'))
-export const Counter = lazyWithPreload(() => import(/* webpackChunkName: "counter" */ 'pages/counter'))
-export const NoMatch = lazyWithPreload(() => import(/* webpackChunkName: "nomatch" */ 'pages/nomatch'))
+export const Cart = lazyWithPreload(() => import('pages/cart'))
+export const Shop = lazyWithPreload(() => import('pages/shop'))
+export const About = lazyWithPreload(() => import('pages/about'))
+export const Forms = lazyWithPreload(() => import('pages/forms'))
+export const Login = lazyWithPreload(() => import('pages/login'))
+export const Topics = lazyWithPreload(() => import('pages/topics'))
+export const Profile = lazyWithPreload(() => import('pages/profile'))
+export const Context = lazyWithPreload(() => import('pages/context'))
+export const Counter = lazyWithPreload(() => import('pages/counter'))
+export const NoMatch = lazyWithPreload(() => import('pages/nomatch'))
 
 export const routes = [
   { label: 'Home', to: '/', component: Home, exact: true },
@@ -32,7 +32,7 @@ export const routes = [
   { label: 'Page not found', to: '/error-page' },
 ]
 
-export default function Switcher (store: any) {
+function Switcher(store: any) {
   return (
     <Switch>
       {/*
@@ -43,7 +43,11 @@ export default function Switcher (store: any) {
       */}
 
       <Route exact path="/" render={(props: any) => <Home {...store} {...props} />} />
-      <Route exact path={['/shop', '/shop/:product']} render={(props: any) => <Shop {...store} {...props} />} />
+      <Route
+        exact
+        path={['/shop', '/shop/:product']}
+        render={(props: any) => <Shop {...store} {...props} />}
+      />
       <Route path="/cart" render={(props: any) => <Cart {...store} {...props} />} />
       <Route path="/forms" render={(props: any) => <Forms {...store} {...props} />} />
       <Route path="/about" render={(props: any) => <About {...store} {...props} />} />
@@ -57,3 +61,4 @@ export default function Switcher (store: any) {
     </Switch>
   )
 }
+export default Switcher

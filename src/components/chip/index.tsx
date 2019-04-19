@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-function Chip () {
+function Chip() {
   return (
     <div>
       Chip

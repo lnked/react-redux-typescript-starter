@@ -3,7 +3,7 @@
   "defaultSeverity": "warning",
   "extends": [
     "tslint:recommended",
-    "tslint-config-standard",
+    "tslint-config-airbnb",
     "tslint-react",
     "tslint-react-hooks"
   ],
@@ -39,10 +39,19 @@
     "no-floating-promises": [false],
     "no-shadowed-variable": false,
     "export-name": false,
+    "max-line-length": [true, 120],
     "no-submodule-imports": false,
+    "object-shorthand-properties-first": false,
+    "no-unused-expression": [true, "allow-fast-null-checks"],
     "no-implicit-dependencies": [true, "dev", ["app", "i18n", "store", "utils", "theme", "pages", "assets", "layouts", "settings", "services", "fragments", "components", "decorators"]],
     "no-import-side-effect": [true, { "ignore-module": "(jest-emotion|\\.html|\\.css|\\.test.tsx?)$" }],
-
+    "function-name": [true, {
+      "method-regex": "^\\*?\\[?[a-zA-Z][\\w\\d\\.]*\\]?$",
+      "private-method-regex": "^\\*?\\[?[a-zA-Z][\\w\\d\\.]*\\]?$",
+      "protected-method-regex": "^\\*?\\[?[a-zA-Z][\\w\\d\\.]*\\]?$",
+      "static-method-regex": "^\\*?\\[?[a-zA-Z][\\w\\d\\.]*\\]?$",
+      "function-regex": "^\\*?\\[?[a-zA-Z][\\w\\d\\.]*\\]?$"
+    }],
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
     "typedef": [
       true,

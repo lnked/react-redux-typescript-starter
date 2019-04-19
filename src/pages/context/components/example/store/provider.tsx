@@ -2,17 +2,17 @@ import * as React from 'react'
 
 import { Reducer, Provider } from './context'
 
-export interface Props {
+export interface OuterProps {
   children: any;
 }
 
-export interface State {
+export interface InnerState {
   left?: any;
   right?: any;
   center?: any;
 }
 
-export default class StateProvider extends React.Component<Props, State> {
+export default class StateProvider extends React.Component<OuterProps, InnerState> {
 
   state = {
     left: '',

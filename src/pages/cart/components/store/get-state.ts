@@ -2,7 +2,7 @@ import { ucFirst } from 'utils'
 import * as reducers from './reducers'
 
 const getState = (state: any, action: any) => {
-  const [ name, method ] = action.type.toLowerCase().split('/')
+  const [name, method] = action.type.toLowerCase().split('/')
 
   const fn = `reducer${ucFirst(method || name)}`
 

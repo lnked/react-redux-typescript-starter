@@ -8,21 +8,21 @@ const initialState = {
   center: '',
 }
 
-export interface Props {
+export interface OuterProps {
   children: any;
 }
 
-export interface State {
+export interface InnerState {
   left?: any;
   right?: any;
   center?: any;
 }
 
-export const Context = React.createContext(initialState as State)
+export const Context = React.createContext(initialState as InnerState)
 
 export const Consumer = Context.Consumer
 
-export default class Provider extends React.Component<Props, State> {
+export default class Provider extends React.Component<OuterProps, InnerState> {
 
   state = initialState
 

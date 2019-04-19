@@ -5,8 +5,8 @@ import { Input } from 'components'
 
 import withContext from './store/hoc'
 
-export interface P {
-  children?: JSX.Element[] | JSX.Element | any;
+export interface OuterProps {
+  children?: React.ReactChild[] | React.ReactChild;
 }
 
 const StyledBlock = styled.div`
@@ -23,7 +23,7 @@ const StyledInput = styled(Input)`
   }
 `
 
-export function Left (props: any) {
+export function Left(props: any) {
 
   const { dispatch, left, right, center } = props
 

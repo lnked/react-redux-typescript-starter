@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 
 import { colors } from 'theme'
 
-export interface P {
+export interface OuterProps {
   step?: number;
   value?: number;
 }
@@ -40,7 +40,7 @@ const Button = styled.button`
   text-shadow: 0 1px 0 rgba(#000, .3), 0 1px 1px rgba(#000, .2);
 `
 
-function Stepper ({ value = 0, step = 1 }: P) {
+function Stepper({ value = 0, step = 1 }: OuterProps) {
   const [count, setCount] = useState(value)
 
   const textInput = React.createRef<HTMLInputElement>()
