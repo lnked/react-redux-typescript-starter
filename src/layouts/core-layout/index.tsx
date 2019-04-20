@@ -34,7 +34,6 @@ class CoreLayout extends React.Component<OuterProps, {}> {
     return (
       <Layout>
         <Navigation />
-
         <Section>{children}</Section>
       </Layout>
     )

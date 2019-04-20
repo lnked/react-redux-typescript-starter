@@ -6,7 +6,8 @@ module.exports = {
     pathinfo: false,
     path: path.resolve(options.root, 'dist'),
     filename: `static/${options.hashName}.m.js`,
-    chunkFilename: `static/${options.hashName}.c.js`,
     publicPath: '/',
+    chunkFilename: `static/${options.hashName}.c.js`,
+    crossOriginLoading: 'anonymous',
   },
 }

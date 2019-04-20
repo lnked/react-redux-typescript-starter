@@ -7,8 +7,8 @@ import * as i18n from 'i18n'
 
 import { Consumer } from 'store'
 import { CoreLayout } from 'layouts'
-import { ErrorBoundary } from 'components'
 import { browserHistory } from 'utils'
+import { ErrorBoundary } from 'components'
 
 import Switcher from './routes'
 import GlobalStyle from './styles'
