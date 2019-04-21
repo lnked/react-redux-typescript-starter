@@ -4,7 +4,7 @@ import { Provider } from 'mobx-react';
 import { setConfig } from 'react-hot-loader';
 import { RouterStore, syncHistoryWithStore } from 'mobx-react-router';
 
-import { createStore } from 'store';
+import { createStore } from 'store-mobx';
 import { environment } from 'settings';
 import { browserHistory } from 'utils';
 
