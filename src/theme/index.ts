@@ -1,6 +1,6 @@
-import { Theme } from './theme'
+import { Theme } from './theme';
 
-export { box } from './box'
-export { colors } from './colors'
+export { box } from './box';
+export { colors } from './colors';
 
-export default Theme
+export default Theme;

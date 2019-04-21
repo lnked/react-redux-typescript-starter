@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export interface OuterPropshotoProps {
   src: string;
@@ -24,7 +24,7 @@ export function Photo({ id, src, link, width = 100, height = 100, title = '' }: 
         </a>
       </div>
     </div>
-  )
+  );
 }
 
-export default Photo
+export default Photo;

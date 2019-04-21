@@ -1,14 +1,14 @@
-import * as React from 'react'
+import * as React from 'react';
 
 import {
   Input,
   Button,
-} from 'components'
+} from 'components';
 
 import {
   Container,
   Box,
-} from './styles'
+} from './styles';
 
 export interface OuterProps {
   name?: any;
@@ -32,8 +32,8 @@ class Login extends React.Component<OuterProps, {}> {
           Запомнить меня
         </Box>
       </Container>
-    )
+    );
   }
 }
 
-export default Login
+export default Login;

@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 export const Container = styled.div`
   display: flex;
@@ -7,7 +7,7 @@ export const Container = styled.div`
   border: 1px solid lime;
   min-height: 50vh;
   background-color: #f3f3f3;
-`
+`;
 
 export const Box = styled.div`
   max-width: 340px;
@@ -15,4 +15,4 @@ export const Box = styled.div`
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
-`
+`;

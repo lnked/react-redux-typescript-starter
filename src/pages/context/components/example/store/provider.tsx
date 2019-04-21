@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import { Reducer, Provider } from './context'
+import { Reducer, Provider } from './context';
 
 export interface OuterProps {
   children: any;
@@ -19,22 +19,22 @@ export default class StateProvider extends React.Component<OuterProps, InnerStat
     right: '',
     center: '',
     dispatch: (action: any) => {
-      this.setState(state => Reducer(state, action))
-    }
-  }
+      this.setState(state => Reducer(state, action));
+    },
+  };
 
   render () {
-    const { children } = this.props
+    const { children } = this.props;
 
     const props = {
       ...this.state,
-    }
+    };
 
     return (
       <Provider value={props}>
         {children}
       </Provider>
-    )
+    );
   }
 
 }

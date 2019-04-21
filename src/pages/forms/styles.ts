@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
-import { Input as InputComponent } from 'components'
+import styled from '@emotion/styled';
+import { Input as InputComponent } from 'components';
 
 export const Input = styled(InputComponent)`
   clear: both;
@@ -7,7 +7,7 @@ export const Input = styled(InputComponent)`
   &:not(:last-child) {
     margin-bottom: 10px;
   }
-`
+`;
 
 export const Textarea = styled.textarea`
   width: 100%;
@@ -15,7 +15,7 @@ export const Textarea = styled.textarea`
   padding: 5px 10px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
-`
+`;
 
 export const Select = styled.select`
   width: 100%;
@@ -23,4 +23,4 @@ export const Select = styled.select`
   padding: 5px 10px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
-`
+`;

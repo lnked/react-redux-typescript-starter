@@ -1,2 +1,2 @@
-export { UiStore } from './ui-store'
-export { AppStore } from './app-store'
+export { UiStore } from './ui-store';
+export { AppStore } from './app-store';

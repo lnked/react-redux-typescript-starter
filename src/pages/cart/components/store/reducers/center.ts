@@ -1,5 +1,5 @@
 export function reducerCenter(state: any, action: any) {
-  const { value } = action
+  const { value } = action;
 
-  return { ...state, center: value }
+  return { ...state, center: value };
 }

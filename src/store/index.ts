@@ -1,2 +1,2 @@
-export * from './context'
-export { createStore } from './create-store'
+export * from './context';
+export { createStore } from './create-store';

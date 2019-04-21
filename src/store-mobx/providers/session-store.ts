@@ -1,4 +1,4 @@
-import { observable, action, computed } from 'mobx'
+import { observable, action, computed } from 'mobx';
 
 export interface UserProps {
   id: number;
@@ -9,17 +9,17 @@ export class SessionStore {
   @observable user: UserProps = {
     id: 0,
     name: 'grid',
-  }
+  };
 
   constructor (initialState?: any) {
-    console.log({ initialState })
+    console.log({ initialState });
   }
 
   @computed get getUser () {
-    return this.user
+    return this.user;
   }
 
   @action set (user: UserProps) {
-    this.user = user
+    this.user = user;
   }
 }

@@ -1,12 +1,12 @@
 import {
   UiStore,
   AppStore,
-} from './providers'
+} from './providers';
 
 import {
   STORE_UI,
   STORE_APP,
-} from 'settings'
+} from 'settings';
 
 export const createStore = () => {
   // const initialState = (window && window.__INITIAL_STATE__) || {}
@@ -23,5 +23,5 @@ export const createStore = () => {
   return {
     [STORE_UI]: UiStore,
     [STORE_APP]: AppStore,
-  }
-}
+  };
+};

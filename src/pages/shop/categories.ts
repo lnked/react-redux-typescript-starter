@@ -115,4 +115,4 @@ export const categoriesList = [
     id: 29,
     name: 'Ball',
   },
-]
+];

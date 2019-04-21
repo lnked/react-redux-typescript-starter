@@ -1,11 +1,11 @@
-import * as React from 'react'
-import { Route, Link } from 'react-router-dom'
+import * as React from 'react';
+import { Route, Link } from 'react-router-dom';
 
 const Topic = ({ match }: any) => (
   <div>
     <h3>{match.params.topicId}</h3>
   </div>
-)
+);
 
 const Topics = ({ match }: any) => (
   <div>
@@ -29,6 +29,6 @@ const Topics = ({ match }: any) => (
       render={() => <h3>Please select a topic.</h3>}
     />
   </div>
-)
+);
 
-export default Topics
+export default Topics;

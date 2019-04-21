@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import { StyledLabel, StyledInput, StyledBox, StyledText } from './styles'
+import { StyledLabel, StyledInput, StyledBox, StyledText } from './styles';
 
 export interface OuterProps {
   checked?: boolean;
@@ -14,18 +14,18 @@ export default class Checkbox extends React.Component<OuterProps, InnerState> {
 
   static defaultProps = {
     checked: false,
-  }
+  };
 
   state = {
     isChecked: this.props.checked || false,
-  }
+  };
 
   onChange = () => {
-    this.setState(state => ({ isChecked: !state.isChecked }))
+    this.setState(state => ({ isChecked: !state.isChecked }));
   }
 
   render () {
-    const { isChecked } = this.state
+    const { isChecked } = this.state;
 
     return (
       <StyledLabel>
@@ -42,7 +42,7 @@ export default class Checkbox extends React.Component<OuterProps, InnerState> {
           {isChecked ? 'checked' : 'UnChecked'}
         </StyledText>
       </StyledLabel>
-    )
+    );
   }
 
 }

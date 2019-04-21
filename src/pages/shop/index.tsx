@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { NavLink, RouteComponentProps } from 'react-router-dom'
+import * as React from 'react';
+import { NavLink, RouteComponentProps } from 'react-router-dom';
 // import { observer } from 'mobx-react'
 
 import {
@@ -8,19 +8,19 @@ import {
   Sidebar,
   Products,
   Product,
-} from './styles'
+} from './styles';
 
 export interface OuterProps extends RouteComponentProps {
   history: any;
 }
 
-import { productsList } from './products'
-import { categoriesList } from './categories'
+import { productsList } from './products';
+import { categoriesList } from './categories';
 
 // @observer
 class Shop extends React.Component<OuterProps, {}> {
   render () {
-    const { match: { params } } = this.props
+    const { match: { params } } = this.props;
 
     return (
       <Container>
@@ -47,8 +47,8 @@ class Shop extends React.Component<OuterProps, {}> {
           ))}
         </Products>
       </Container>
-    )
+    );
   }
 }
 
-export default Shop
+export default Shop;

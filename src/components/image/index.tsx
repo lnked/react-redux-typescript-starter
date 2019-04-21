@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Picture, Source, Loading } from './styles'
+import React, { useState } from 'react';
+import { Picture, Source, Loading } from './styles';
 
 export interface OuterProps {
   src: string;
@@ -10,15 +10,15 @@ export interface OuterProps {
   className?: string;
 }
 
-const loadedStack = {}
+const loadedStack = {};
 
 const Image: React.FC<OuterProps> = ({ src, className, ...props }: OuterProps) => {
-  const [loaded, setLoaded] = useState(loadedStack[src] || false)
+  const [loaded, setLoaded] = useState(loadedStack[src] || false);
 
   const onLoad = () => {
-    setLoaded(true)
-    loadedStack[src] = true
-  }
+    setLoaded(true);
+    loadedStack[src] = true;
+  };
 
   return (
     <Picture className={className}>
@@ -30,17 +30,17 @@ const Image: React.FC<OuterProps> = ({ src, className, ...props }: OuterProps) =
         onLoad={onLoad}
       />
     </Picture>
-  )
-}
+  );
+};
 
-Image.displayName = 'Image'
+Image.displayName = 'Image';
 
 Image.defaultProps = {
   alt: '',
   className: '',
-}
+};
 
-export default Image
+export default Image;
 
 // export default ImageLoader;
 

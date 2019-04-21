@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 import {
   Card,
@@ -11,7 +11,7 @@ import {
   Footer,
   Price,
   Like,
-} from './styles'
+} from './styles';
 
 export interface OuterProps {
   name: string;
@@ -22,8 +22,8 @@ export interface OuterProps {
 }
 
 const Product: React.FC<OuterProps> = (props: OuterProps) => {
-  const root = '/shop'
-  const { slug, name, badge, brand, image } = props
+  const root = '/shop';
+  const { slug, name, badge, brand, image } = props;
 
   return (
     <Card {...props} itemscope itemtype="http://schema.org/Product">
@@ -46,13 +46,13 @@ const Product: React.FC<OuterProps> = (props: OuterProps) => {
         </Footer>
       </Description>
     </Card>
-  )
-}
+  );
+};
 
-Product.displayName = 'Product'
+Product.displayName = 'Product';
 
 Product.defaultProps = {
   slug: '',
-}
+};
 
-export default Product
+export default Product;

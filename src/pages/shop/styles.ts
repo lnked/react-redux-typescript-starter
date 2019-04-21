@@ -1,20 +1,20 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
-import { default as ProductCard } from './components/product'
+import { default as ProductCard } from './components/product';
 
-const margin = 5
+const margin = 5;
 
 export const Container = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-`
+`;
 
 export const Product = styled(ProductCard)`
   flex: 0 0 auto;
   width: calc(20% - ${margin * 2}px);
   margin: 0 ${margin}px ${margin * 2}px;
-`
+`;
 
 export const Sidebar = styled.aside`
   flex: 0 0 220px;
@@ -22,7 +22,7 @@ export const Sidebar = styled.aside`
   position: sticky;
   top: 0;
   margin-right: ${margin * 2}px;
-`
+`;
 
 export const Categories = styled.ul`
   margin: 0;
@@ -33,7 +33,7 @@ export const Categories = styled.ul`
   li {
     margin-bottom: 5px;
   }
-`
+`;
 
 export const Products = styled.div`
   flex: 1 1 auto;
@@ -43,4 +43,4 @@ export const Products = styled.div`
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: flex-start;
-`
+`;

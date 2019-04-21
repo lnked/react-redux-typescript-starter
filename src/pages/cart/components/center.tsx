@@ -1,7 +1,7 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
+import * as React from 'react';
+import styled from '@emotion/styled';
 
-import withContext from './store/hoc'
+import withContext from './store/hoc';
 
 export interface OuterProps {
   children?: React.ReactChild[] | React.ReactChild;
@@ -11,7 +11,7 @@ const StyledBlock = styled.div`
   width: 32%;
   padding: 10px;
   border: 1px solid red;
-`
+`;
 
 const StyledInput = styled.input`
   width: 100%;
@@ -21,16 +21,16 @@ const StyledInput = styled.input`
   &:not(:last-child) {
     margin-bottom: 10px;
   }
-`
+`;
 
-export type ChangeEvent = React.ChangeEvent<HTMLInputElement>
+export type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
 
 export function Center(props: any) {
 
-  const { dispatch, left, right, center } = props
+  const { dispatch, left, right, center } = props;
 
   const handleChange = (type: string, { target: { value } }: ChangeEvent) =>
-    dispatch({ type, value })
+    dispatch({ type, value });
 
   return (
     <StyledBlock>
@@ -50,8 +50,8 @@ export function Center(props: any) {
         onChange={(e: ChangeEvent) => handleChange('CENTER', e)}
       />
     </StyledBlock>
-  )
+  );
 
 }
 
-export default withContext(Center)
+export default withContext(Center);

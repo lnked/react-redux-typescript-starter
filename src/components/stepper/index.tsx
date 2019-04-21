@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import styled from '@emotion/styled'
+import React, { useState } from 'react';
+import styled from '@emotion/styled';
 
-import { colors } from 'theme'
+import { colors } from 'theme';
 
 export interface OuterProps {
   step?: number;
@@ -11,13 +11,13 @@ export interface OuterProps {
 const StyledStepper = styled.div`
   border: 1px solid lime;
   user-select: none;
-`
+`;
 
 const Paragraph = styled.p`
   color: green;
   margin: 0;
   font-size: 1.8rem;
-`
+`;
 
 const StylesInput = styled.input`
   width: 30px;
@@ -26,7 +26,7 @@ const StylesInput = styled.input`
   text-align: center;
   appearance: none;
   border: 1px solid ${colors.border};
-`
+`;
 
 const Button = styled.button`
   padding: 5px 10px;
@@ -38,12 +38,12 @@ const Button = styled.button`
   outline: 0;
   cursor: pointer;
   text-shadow: 0 1px 0 rgba(#000, .3), 0 1px 1px rgba(#000, .2);
-`
+`;
 
 function Stepper({ value = 0, step = 1 }: OuterProps) {
-  const [count, setCount] = useState(value)
+  const [count, setCount] = useState(value);
 
-  const textInput = React.createRef<HTMLInputElement>()
+  const textInput = React.createRef<HTMLInputElement>();
 
   return (
     <StyledStepper>
@@ -58,8 +58,8 @@ function Stepper({ value = 0, step = 1 }: OuterProps) {
       <Button onClick={() => setCount(0)}>x</Button>
       <Button onClick={() => setCount(prevCount => prevCount + step)}>+</Button>
     </StyledStepper>
-  )
+  );
 
 }
 
-export default Stepper
+export default Stepper;

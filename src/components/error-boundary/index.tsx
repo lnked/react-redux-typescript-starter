@@ -1,7 +1,7 @@
-import * as React from 'react'
+import * as React from 'react';
 // import Raven from 'raven-js'
 
-import { StyledError, StyledDetails } from './styles'
+import { StyledError, StyledDetails } from './styles';
 
 export interface OuterProps {
   children: JSX.Element | JSX.Element[] | string;
@@ -16,20 +16,20 @@ export default class ErrorBoundary extends React.PureComponent<OuterProps, Inner
   state = {
     info: null,
     error: false,
-  }
+  };
 
   static getDerivedStateFromError (error: Error | boolean) {
-    return { hasError: true, info: error }
+    return { hasError: true, info: error };
   }
 
   componentDidCatch (error: Error | boolean, info: any) {
     this.setState({ error, info }, () => {
       // Raven.captureException(error, { extra: info })
-    })
+    });
   }
 
   render () {
-    const { error, info } = this.state
+    const { error, info } = this.state;
 
     if (error) {
       return (
@@ -40,9 +40,9 @@ export default class ErrorBoundary extends React.PureComponent<OuterProps, Inner
             {JSON.stringify(info)}
           </StyledDetails>
         </StyledError>
-      )
+      );
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }

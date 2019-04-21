@@ -1,17 +1,17 @@
-import * as React from 'react'
-import { Router } from 'react-router-dom'
-import { Global } from '@emotion/core'
-import { hot } from 'react-hot-loader/root'
+import * as React from 'react';
+import { Router } from 'react-router-dom';
+import { Global } from '@emotion/core';
+import { hot } from 'react-hot-loader/root';
 
-import * as i18n from 'i18n'
+import * as i18n from 'i18n';
 
-import { Consumer } from 'store'
-import { CoreLayout } from 'layouts'
-import { browserHistory } from 'utils'
-import { ErrorBoundary } from 'components'
+import { Consumer } from 'store';
+import { CoreLayout } from 'layouts';
+import { browserHistory } from 'utils';
+import { ErrorBoundary } from 'components';
 
-import Switcher from './routes'
-import GlobalStyle from './styles'
+import Switcher from './routes';
+import GlobalStyle from './styles';
 
 export interface OuterProps {
   history?: {
@@ -21,14 +21,14 @@ export interface OuterProps {
 
 class App extends React.Component<OuterProps, {}> {
 
-  timeout: any = null
+  timeout: any = null;
 
   componentDidMount () {
-    i18n.init()
+    i18n.init();
   }
 
   componentWillUnmount () {
-    i18n.unload()
+    i18n.unload();
   }
 
   render () {
@@ -46,9 +46,9 @@ class App extends React.Component<OuterProps, {}> {
           <Global styles={GlobalStyle} />
         </Router>
       </ErrorBoundary>
-    )
+    );
   }
 
 }
 
-export default hot(App)
+export default hot(App);

@@ -1,15 +1,15 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 const useInputState = (initialValue: string) => {
-  const [value, setValue] = useState(initialValue)
+  const [value, setValue] = useState(initialValue);
 
   return {
     value,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
-      setValue(e.target.value)
+      setValue(e.target.value);
     },
-    reset: () => setValue('')
-  }
-}
+    reset: () => setValue(''),
+  };
+};
 
-export default useInputState
+export default useInputState;

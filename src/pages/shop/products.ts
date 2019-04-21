@@ -1,4 +1,4 @@
-import image from './product.png'
+import image from './product.png';
 
 export const productsList = [
   {
@@ -901,4 +901,4 @@ export const productsList = [
     brand: 'Awesome',
     image,
   },
-]
+];

@@ -1,7 +1,7 @@
-import * as React from 'react'
-import isEqual from 'react-fast-compare'
+import * as React from 'react';
+import isEqual from 'react-fast-compare';
 
-import { isObject, isEmptyChildren } from 'utils/assertions'
+import { isObject, isEmptyChildren } from 'utils/assertions';
 
 export interface OuterPropsassedMethods {
   handleBlur?: (e?: React.FormEvent<HTMLInputElement>) => void;
@@ -45,16 +45,16 @@ export class SyntheticForm extends React.Component<OuterProps, OuterState> {
     initialValues: {},
     validateOnBlur: true,
     validateOnChange: true,
-  }
+  };
 
   static getDerivedStateFromProps (nextProps: OuterProps, prevState: OuterState) {
-    const { initialized } = prevState
-    const { initialValues } = nextProps
+    const { initialized } = prevState;
+    const { initialValues } = nextProps;
 
-    console.error(isEqual(prevState.values, prevState.values))
+    console.error(isEqual(prevState.values, prevState.values));
 
     if (initialized || !Object.keys(initialValues).length) {
-      return null
+      return null;
     }
 
     // const isDirty = useMemo(() => !isEqual(lastValues, values), [
@@ -66,7 +66,7 @@ export class SyntheticForm extends React.Component<OuterProps, OuterState> {
       ...prevState,
       values: initialValues,
       initialized: true,
-    }
+    };
   }
 
   state = {
@@ -81,47 +81,47 @@ export class SyntheticForm extends React.Component<OuterProps, OuterState> {
     isValidating: false,
     isSubmitted: false,
     isValidated: false,
-  }
+  };
 
   handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    this.setState(state => ({ values: { ...state.values, [name]: value } }))
+    const { name, value } = e.target;
+    this.setState(state => ({ values: { ...state.values, [name]: value } }));
   }
 
   handleBlur = (e?: React.FormEvent<HTMLInputElement>) => {
-    console.log(e, 'handleBlur 1')
+    console.log(e, 'handleBlur 1');
   }
 
   handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
-    console.log(e)
-    console.log('handleFocus 1')
+    console.log(e);
+    console.log('handleFocus 1');
   }
 
   setSubmitting = (isSubmitting: boolean) => {
-    this.setState({ isSubmitting })
+    this.setState({ isSubmitting });
   }
 
   handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    const { values } = this.state
-    const { onSubmit } = this.props
+    const { values } = this.state;
+    const { onSubmit } = this.props;
 
     this.setState({ isSubmitting: true }, () => {
       if (onSubmit) {
-        onSubmit(values, { e, setSubmitting: this.setSubmitting })
+        onSubmit(values, { e, setSubmitting: this.setSubmitting });
       }
-    })
+    });
   }
 
   handleReset = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    console.log('reset', e)
+    console.log('reset', e);
   }
 
   render () {
-    const { children } = this.props
+    const { children } = this.props;
     const {
       errors,
       values,
@@ -131,7 +131,7 @@ export class SyntheticForm extends React.Component<OuterProps, OuterState> {
       submitCount,
       isSubmitted,
       isValidated,
-    } = this.state
+    } = this.state;
 
     if (isObject(children) && !isEmptyChildren(children)) {
       return React.Children.map(children, (node: React.ReactNode | any) =>
@@ -140,8 +140,8 @@ export class SyntheticForm extends React.Component<OuterProps, OuterState> {
           onFocus: this.handleFocus,
           onInput: this.handleChange,
           onChange: this.handleChange,
-        })
-      )
+        }),
+      );
     }
 
     return children({
@@ -159,8 +159,8 @@ export class SyntheticForm extends React.Component<OuterProps, OuterState> {
       handleInput: this.handleChange,
       handleChange: this.handleChange,
       handleSubmit: this.handleSubmit,
-    })
+    });
   }
 }
 
-export default SyntheticForm
+export default SyntheticForm;

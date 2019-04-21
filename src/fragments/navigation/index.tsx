@@ -1,11 +1,11 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import { routes } from 'app/routes'
+import { routes } from 'app/routes';
 import {
   NavigationList,
   NavigationItem,
   NavigationLink,
-} from './styles'
+} from './styles';
 
 function Navigation() {
   return (
@@ -18,7 +18,7 @@ function Navigation() {
         </NavigationItem>
       ))}
     </NavigationList>
-  )
+  );
 }
 
-export default Navigation
+export default Navigation;

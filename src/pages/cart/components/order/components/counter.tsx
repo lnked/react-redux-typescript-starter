@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import styled from '@emotion/styled'
+import React, { useState } from 'react';
+import styled from '@emotion/styled';
 
 export interface OuterProps {
   initialCount?: number;
@@ -7,13 +7,13 @@ export interface OuterProps {
 
 const StyledCounter = styled.div`
   border: 1px solid lime;
-`
+`;
 
 const Paragraph = styled.p`
   color: green;
   margin: 0;
   font-size: 1.8rem;
-`
+`;
 
 const Button = styled.button`
   padding: 5px 10px;
@@ -25,11 +25,11 @@ const Button = styled.button`
   outline: 0;
   cursor: pointer;
   text-shadow: 0 1px 0 rgba(#000, .3), 0 1px 1px rgba(#000, .2);
-`
+`;
 
 function Counter({ initialCount = 0 }: OuterProps) {
 
-  const [count, setCount] = useState(initialCount)
+  const [count, setCount] = useState(initialCount);
 
   return (
     <StyledCounter>
@@ -38,8 +38,8 @@ function Counter({ initialCount = 0 }: OuterProps) {
       <Button onClick={() => setCount(0)}>Reset</Button>
       <Button onClick={() => setCount(prevCount => prevCount + 1)}>+</Button>
     </StyledCounter>
-  )
+  );
 
 }
 
-export default Counter
+export default Counter;

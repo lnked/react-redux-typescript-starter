@@ -1,16 +1,16 @@
-import * as React from 'react'
-import { useTranslation } from 'react-i18next'
+import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { Button } from 'components'
+import { Button } from 'components';
 
 import {
   API_URL,
   REACT_APP_SECRET,
-} from 'settings'
+} from 'settings';
 
 const Home = ({ initialLanguage = 'ru' }: any) => {
-  const [lng, setLanguage] = React.useState(initialLanguage)
-  const { t, i18n } = useTranslation(lng)
+  const [lng, setLanguage] = React.useState(initialLanguage);
+  const { t, i18n } = useTranslation(lng);
 
   return (
     <div>
@@ -33,8 +33,8 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
 
       <Button
         onClick={() => {
-          setLanguage('en')
-          i18n.changeLanguage('en')
+          setLanguage('en');
+          i18n.changeLanguage('en');
         }}
       >
         en
@@ -42,8 +42,8 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
 
       <Button
         onClick={() => {
-          setLanguage('ru')
-          i18n.changeLanguage('ru')
+          setLanguage('ru');
+          i18n.changeLanguage('ru');
         }}
       >
         ru
@@ -54,7 +54,7 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
       <div>{i18n.t('name.label')}</div>
       <div>{i18n.t('home.label')}</div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

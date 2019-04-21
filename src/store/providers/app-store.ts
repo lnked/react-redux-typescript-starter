@@ -1,7 +1,7 @@
 export const AppStore = {
   query: '',
   locale: 'en',
-}
+};
 
 // export class AppStore {
 //   static defaultState = {

@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import { Link } from './styles'
+import { Link } from './styles';
 
 export interface OuterProps {
   label?: string;
@@ -9,27 +9,27 @@ export interface OuterProps {
 }
 
 class PreloadLink extends React.Component<OuterProps, void> {
-  timeout: any = null
+  timeout: any = null;
 
   handleMouseEnter = () => {
-    const { component } = this.props
+    const { component } = this.props;
 
-    clearTimeout(this.timeout)
+    clearTimeout(this.timeout);
 
     this.timeout = setTimeout(() =>
       component && component.preload && component.preload()
-    ,                         250)
+    ,                         250);
   }
 
   render () {
-    const { label, children, component, ...props } = this.props
+    const { label, children, component, ...props } = this.props;
 
     return (
       <Link {...props} onMouseEnter={this.handleMouseEnter}>
         {children || label}
       </Link>
-    )
+    );
   }
 }
 
-export default PreloadLink
+export default PreloadLink;

@@ -4,7 +4,7 @@ export const UiStore = {
     light: { whiteColor: true, fontFamily: 'Roboto, sans-serif' },
   },
   type: 'grid',
-}
+};
 
 // export class UiStore {
 //   type: string = 'grid'

@@ -1,5 +1,5 @@
-import { css } from '@emotion/core'
-import { colors } from 'theme'
+import { css } from '@emotion/core';
+import { colors } from 'theme';
 
 /* tslint:disable: max-line-length */
 const GlobalStyle = css`
@@ -48,6 +48,6 @@ const GlobalStyle = css`
     color: ${colors.primary};
     font-size: 1.6rem;
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

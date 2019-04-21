@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 export const StyledButton = styled.button`
   display: inline-block;
@@ -34,4 +34,4 @@ export const StyledButton = styled.button`
   & + & {
     margin-left: 8px;
   }
-`
+`;

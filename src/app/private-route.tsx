@@ -1,17 +1,17 @@
-import * as React from 'react'
-import { Route, Redirect } from 'react-router-dom'
+import * as React from 'react';
+import { Route, Redirect } from 'react-router-dom';
 
 const fakeAuth = {
   isAuthenticated: false,
   authenticate (cb: any) {
-    this.isAuthenticated = true
-    setTimeout(cb, 100)
+    this.isAuthenticated = true;
+    setTimeout(cb, 100);
   },
   signout (cb: any) {
-    this.isAuthenticated = false
-    setTimeout(cb, 100)
-  }
-}
+    this.isAuthenticated = false;
+    setTimeout(cb, 100);
+  },
+};
 
 const PrivateRoute = ({ component: Component, alternative = '/', ...rest }: any) => (
   <Route
@@ -22,6 +22,6 @@ const PrivateRoute = ({ component: Component, alternative = '/', ...rest }: any)
         : <Redirect to={alternative} />
     )}
   />
-)
+);
 
-export default PrivateRoute
+export default PrivateRoute;

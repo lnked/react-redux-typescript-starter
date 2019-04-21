@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import { Consumer } from './context'
+import { Consumer } from './context';
 
 const withContext = <P extends object>(Component: React.ComponentType<P>) => {
 
@@ -9,9 +9,9 @@ const withContext = <P extends object>(Component: React.ComponentType<P>) => {
       <Consumer>
         {context => <Component {...props} {...context} />}
       </Consumer>
-    )
-  }
+    );
+  };
 
-}
+};
 
-export default withContext
+export default withContext;

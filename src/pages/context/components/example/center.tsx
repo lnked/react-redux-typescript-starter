@@ -1,9 +1,9 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
+import * as React from 'react';
+import styled from '@emotion/styled';
 
-import { Input } from 'components'
+import { Input } from 'components';
 
-import withContext from './store/hoc'
+import withContext from './store/hoc';
 
 export interface OuterProps {
   left: any;
@@ -17,7 +17,7 @@ const StyledBlock = styled.div`
   width: 32%;
   padding: 10px;
   border: 1px solid blue;
-`
+`;
 
 const StyledInput = styled(Input)`
   width: 100%;
@@ -25,10 +25,10 @@ const StyledInput = styled(Input)`
   &:not(:last-child) {
     margin-bottom: 15px;
   }
-`
+`;
 
 export function Center(props: OuterProps) {
-  const { dispatch, left, right, center } = props
+  const { dispatch, left, right, center } = props;
 
   return (
     <StyledBlock>
@@ -51,7 +51,7 @@ export function Center(props: OuterProps) {
         onChange={({ target: { value } }: any) => dispatch({ type: 'CENTER', value })}
       />
     </StyledBlock>
-  )
+  );
 }
 
-export default withContext(Center)
+export default withContext(Center);

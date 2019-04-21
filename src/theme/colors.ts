@@ -21,6 +21,6 @@ export const colors = {
     border: '#FFCF5E',
     background: '#fff5de',
   },
-}
+};
 
-export default colors
+export default colors;

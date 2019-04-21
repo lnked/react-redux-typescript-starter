@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 interface BreadcrumbProps {
   href?: string;
@@ -14,7 +14,7 @@ const list: BreadcrumbProps[] = [
   { href: '/users', icon: 'folder-close', text: 'Users' },
   { href: '/users/janet', icon: 'folder-close', text: 'Janet' },
   { icon: 'document', text: 'image.jpg' },
-]
+];
 
 const Breadcrumbs: React.FC<OuterProps> = (props: OuterProps) => {
   return (
@@ -22,11 +22,11 @@ const Breadcrumbs: React.FC<OuterProps> = (props: OuterProps) => {
       {JSON.stringify(props)}
       {JSON.stringify(list)}
     </div>
-  )
-}
+  );
+};
 
 Breadcrumbs.defaultProps = {
   items: [],
-}
+};
 
-export default Breadcrumbs
+export default Breadcrumbs;

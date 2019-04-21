@@ -1,7 +1,7 @@
-import styled from '@emotion/styled'
-import { PreloadLink } from 'components'
+import styled from '@emotion/styled';
+import { PreloadLink } from 'components';
 
-import { colors } from 'theme'
+import { colors } from 'theme';
 
 export const NavigationList = styled.ul`
   position: sticky;
@@ -15,13 +15,13 @@ export const NavigationList = styled.ul`
   align-items: center;
   justify-content: flex-start;
   background-color: #20232a;
-`
+`;
 
 export const NavigationItem = styled.li`
   &:not(:last-child) {
     margin-right: 30px;
   }
-`
+`;
 
 export const NavigationLink = styled(PreloadLink)`
   color: ${colors.white};
@@ -40,4 +40,4 @@ export const NavigationLink = styled(PreloadLink)`
   &.active {
     color: #61dafb;
   }
-`
+`;

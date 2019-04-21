@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import { StyledButton } from './styles'
+import { StyledButton } from './styles';
 
 export interface OuterProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label?: React.ReactChild[] | string;
@@ -12,7 +12,7 @@ const Button: React.FC<OuterProps> = ({ children, label, disabled, ...props }: O
   <StyledButton type="button" aria-disabled={disabled} {...props}>
     {children || label}
   </StyledButton>
-)
+);
 
 // export class AnchorButton extends AbstractButton<React.AnchorHTMLAttributes<HTMLAnchorElement>> {
 //   public static displayName = `AnchorButton`;
@@ -34,11 +34,11 @@ const Button: React.FC<OuterProps> = ({ children, label, disabled, ...props }: O
 //   }
 // }
 
-Button.displayName = 'Button'
+Button.displayName = 'Button';
 
 Button.defaultProps = {
   disabled: false,
   children: '',
-}
+};
 
-export default Button
+export default Button;

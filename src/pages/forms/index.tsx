@@ -1,14 +1,14 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import { JsonPretty } from 'components'
-import { SyntheticForm } from './form'
+import { JsonPretty } from 'components';
+import { SyntheticForm } from './form';
 // import { SyntheticForm, NaturalForm } from './form'
 
 import {
   Input,
   Select,
   Textarea,
-} from './styles'
+} from './styles';
 
 export interface OuterProps {
   initialCount?: number;
@@ -29,11 +29,11 @@ function Forms({ ui, app }: any) {
 
       <SyntheticForm
         onSubmit={(values, { setSubmitting }) => {
-          alert('submit')
+          alert('submit');
           setTimeout(() => {
-            alert(JSON.stringify(values, null, 2))
-            setSubmitting(false)
-          },         500)
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+          },         500);
         }}
         initialValues={{ text: 'test' }}
         validationSchema={{
@@ -88,7 +88,7 @@ function Forms({ ui, app }: any) {
         )}
       </SyntheticForm>
     </React.Fragment>
-  )
+  );
 }
 
-export default Forms
+export default Forms;

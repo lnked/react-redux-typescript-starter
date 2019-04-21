@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import Example from './components/example'
+import Example from './components/example';
 
 export interface OuterProps {
   initialCount?: number;
@@ -8,8 +8,8 @@ export interface OuterProps {
 
 function Context() {
 
-  return (<Example />)
+  return (<Example />);
 
 }
 
-export default Context
+export default Context;

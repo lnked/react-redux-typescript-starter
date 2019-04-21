@@ -1,4 +1,4 @@
-const { __DEV__, __PROD__, NODE_ENV = 'production' } = process.env
+const { __DEV__, __PROD__, NODE_ENV = 'production' } = process.env;
 
 export interface OuterProps {
   production: boolean;
@@ -8,4 +8,4 @@ export interface OuterProps {
 export const environment: OuterProps = {
   production: Boolean(__PROD__) || NODE_ENV === 'production',
   development: Boolean(__DEV__) || NODE_ENV === 'development',
-}
+};

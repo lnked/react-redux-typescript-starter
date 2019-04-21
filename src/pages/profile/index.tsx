@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 import {
   Wrapper,
@@ -6,7 +6,7 @@ import {
   Sidebar,
   Content,
   Header,
-} from './styles'
+} from './styles';
 
 export interface OuterProps {
   name?: any;
@@ -53,8 +53,8 @@ class Profile extends React.Component<OuterProps, {}> {
           </Content>
         </Container>
       </Wrapper>
-    )
+    );
   }
 }
 
-export default Profile
+export default Profile;

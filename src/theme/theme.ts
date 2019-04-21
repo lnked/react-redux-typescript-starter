@@ -2,7 +2,7 @@ const commonStyles = {
   fontFamily:
     `-apple-system,BlinkMacSystemFont,Segoe UI,` +
     `Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,Icons16,sans-serif`,
-}
+};
 
 export const Theme = {
   dark: {
@@ -13,6 +13,6 @@ export const Theme = {
     ...commonStyles,
     whiteColor: true,
   },
-}
+};
 
-export default Theme
+export default Theme;

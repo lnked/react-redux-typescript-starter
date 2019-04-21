@@ -5,6 +5,6 @@ export const box = {
   },
   padding: '15px 20px',
   borderRadius: '4px',
-}
+};
 
-export default box
+export default box;

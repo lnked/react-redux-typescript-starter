@@ -1,9 +1,9 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import { E } from 'layouts'
-import { Image, JsonPretty } from 'components'
+import { E } from 'layouts';
+import { Image, JsonPretty } from 'components';
 
-import { A, B, AB } from './components'
+import { A, B, AB } from './components';
 
 const About = ({ ui, app }: any) => (
   <div>
@@ -17,6 +17,6 @@ const About = ({ ui, app }: any) => (
     <Image width={100} height={100} src="https://via.placeholder.com/300/09f/fff.png" alt="xxx" />
     <Image src="https://via.placeholder.com/300/09f/fff.png" alt="xxx" circle />
   </div>
-)
+);
 
-export default About
+export default About;

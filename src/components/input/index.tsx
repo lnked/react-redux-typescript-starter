@@ -1,10 +1,10 @@
-import * as React from 'react'
+import * as React from 'react';
 
 import {
   Wrapper,
   Label,
   StyledInput,
-} from './styles'
+} from './styles';
 
 export interface OuterProps {
   name?: string;
@@ -19,7 +19,7 @@ export interface OuterProps {
 }
 
 const Input: React.FC<OuterProps> = (props: OuterProps) => {
-  const textInput = React.createRef<HTMLInputElement>()
+  const textInput = React.createRef<HTMLInputElement>();
 
   const {
     name,
@@ -29,8 +29,8 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
     onChange,
     className,
     inputClassName,
-    ...attrs
-  } = props
+    ...attrs,
+  } = props;
 
   React.useEffect(() => {
     // component did mount code here
@@ -38,8 +38,8 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
 
     return () => {
       // component will unmount code here
-    }
-  },              [])
+    };
+  },              []);
 
   // React.useEffect(() => {
   //   return () => {
@@ -71,14 +71,14 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
         && <span>{error}</span>
       }
     </Wrapper>
-  )
-}
+  );
+};
 
 Input.defaultProps = {
   type: 'text',
   label: '',
   error: '',
   value: '',
-}
+};
 
-export default Input
+export default Input;

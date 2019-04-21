@@ -1,2 +1,2 @@
-export * from './center'
-export * from './change'
+export * from './center';
+export * from './change';

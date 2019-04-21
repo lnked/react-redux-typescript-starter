@@ -1,11 +1,11 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
+import * as React from 'react';
+import styled from '@emotion/styled';
 
-import StateProvider from './store/provider'
+import StateProvider from './store/provider';
 
-import Left from './left'
-import Right from './right'
-import Center from './center'
+import Left from './left';
+import Right from './right';
+import Center from './center';
 
 const StyledContainer = styled.div`
   padding: 10px;
@@ -13,7 +13,7 @@ const StyledContainer = styled.div`
   align-items: stretch;
   justify-content: space-between;
   border: 1px solid #ddd;
-`
+`;
 
 export interface OuterProps {
   children?: React.ReactChild[] | React.ReactChild;
@@ -29,8 +29,8 @@ export function Example() {
         <Center />
       </StyledContainer>
     </StateProvider>
-  )
+  );
 
 }
 
-export default Example
+export default Example;

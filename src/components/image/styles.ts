@@ -1,15 +1,15 @@
 // import styled from 'styled-components'
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 export const Picture = styled.picture`
   position: relative;
   display: inline-block;
   border-radius: ${(p: any) => (p.circle ? '50%' : 0)};
-`
+`;
 
 export const Source = styled.img`
   border-radius: ${(p: any) => (p.circle ? '50%' : 0)};
-`
+`;
 
 export const Loading = styled.div`
   position: absolute;
@@ -25,7 +25,7 @@ export const Loading = styled.div`
   background-color: #eee;
   font-size: 1.6rem;
   color: #444;
-`
+`;
 
 // .iron-image-container {
 //   position: relative;

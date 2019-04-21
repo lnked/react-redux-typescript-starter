@@ -1,8 +1,8 @@
-import styled from '@emotion/styled'
-import { NavLink } from 'react-router-dom'
+import styled from '@emotion/styled';
+import { NavLink } from 'react-router-dom';
 
-import { Image as ImageSource } from 'components'
-import { colors } from 'theme'
+import { Image as ImageSource } from 'components';
+import { colors } from 'theme';
 
 export const Card = styled.article`
   padding: 0;
@@ -12,7 +12,7 @@ export const Card = styled.article`
   align-items: stretch;
   flex-direction: column;
   background-color: ${colors.lightGray};
-`
+`;
 
 export const Link = styled(NavLink)`
   line-height: 0;
@@ -20,7 +20,7 @@ export const Link = styled(NavLink)`
   position: relative;
   user-select: none;
   text-decoration: none;
-`
+`;
 
 export const Image = styled(ImageSource)`
   width: 100%;
@@ -46,7 +46,7 @@ export const Image = styled(ImageSource)`
     vertical-align: middle;
     outline: 0;
   }
-`
+`;
 
 export const Description = styled.div`
   padding: 20px 12px 12px;
@@ -55,7 +55,7 @@ export const Description = styled.div`
   border-width: 0 1px 1px;
   border-style: solid;
   border-color: #ddd;
-`
+`;
 
 export const Brand = styled.div`
   color: #666;
@@ -69,7 +69,7 @@ export const Brand = styled.div`
   &:not(:last-child) {
     margin-bottom: .35em;
   }
-`
+`;
 
 export const Name = styled.div`
   max-width: 100%;
@@ -85,7 +85,7 @@ export const Name = styled.div`
   &:not(:last-child) {
     margin-bottom: .35em;
   }
-`
+`;
 
 export const Footer = styled.div`
   display: flex;
@@ -93,7 +93,7 @@ export const Footer = styled.div`
   flex-wrap: wrap;
   overflow: hidden;
   height: 20px;
-`
+`;
 
 export const Like = styled.button`
   position: absolute;
@@ -101,7 +101,7 @@ export const Like = styled.button`
   top: 10px;
   border: 0;
   outline: 0;
-`
+`;
 
 export const Price = styled.div`
   color: ${(p: any) => p.discount ? '#707070' : '#ae4343'};
@@ -111,7 +111,7 @@ export const Price = styled.div`
   &:not(:last-child) {
     margin-right: 10px;
   }
-`
+`;
 
 export const Label = styled.div`
   height: 20px;
@@ -128,4 +128,4 @@ export const Label = styled.div`
   padding: 0 8px;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
   text-transform: uppercase;
-`
+`;

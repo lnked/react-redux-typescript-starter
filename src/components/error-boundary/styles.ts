@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 export const StyledError = styled.div`
   background: #f00;
@@ -9,8 +9,8 @@ export const StyledError = styled.div`
   cursor: pointer;
   margin: 0.5em 1em;
   padding: 0.25em 1em;
-`
+`;
 
 export const StyledDetails = styled.details`
   whiteSpace: 'pre-wrap';
-`
+`;

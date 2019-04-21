@@ -1,13 +1,13 @@
-import { configure } from 'mobx'
+import { configure } from 'mobx';
 
-import { enableLogging } from 'mobx-logger'
+import { enableLogging } from 'mobx-logger';
 
 import {
   UiStore,
   AppStore,
   DataStore,
   SessionStore,
-} from './providers'
+} from './providers';
 
 import {
   STORE_UI,
@@ -16,11 +16,11 @@ import {
   STORE_ROUTER,
   STORE_SESSION,
   environment,
-} from 'settings'
+} from 'settings';
 
 configure({
   enforceActions: 'observed', // 'never' | 'always' | 'observed'
-})
+});
 
 enableLogging({
   predicate: () => environment.development && Boolean(window.navigator.userAgent),
@@ -28,7 +28,7 @@ enableLogging({
   reaction: false,
   transaction: false,
   compute: false,
-})
+});
 
 export const createStore = (routerStore?: any) => {
   const {
@@ -36,14 +36,14 @@ export const createStore = (routerStore?: any) => {
     app = {},
     data = {},
     session = {},
-  } = (window && window.__INITIAL_STATE__) || {}
+  } = (window && window.__INITIAL_STATE__) || {};
 
-  const uiStore = new UiStore(ui)
-  const appStore = new AppStore(app)
-  const dataStore = new DataStore(data)
-  const sessionStore = new SessionStore(session)
+  const uiStore = new UiStore(ui);
+  const appStore = new AppStore(app);
+  const dataStore = new DataStore(data);
+  const sessionStore = new SessionStore(session);
 
-  Reflect.deleteProperty(window, '__INITIAL_STATE__')
+  Reflect.deleteProperty(window, '__INITIAL_STATE__');
 
   return {
     [STORE_UI]: uiStore,
@@ -51,5 +51,5 @@ export const createStore = (routerStore?: any) => {
     [STORE_DATA]: dataStore,
     [STORE_ROUTER]: routerStore,
     [STORE_SESSION]: sessionStore,
-  }
-}
+  };
+};

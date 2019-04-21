@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export interface OuterProps {
   children?: React.ReactChild[] | React.ReactChild;
@@ -16,7 +16,7 @@ function Steps({ children }: OuterProps) {
 
       {children}
     </nav>
-  )
+  );
 }
 
-export default Steps
+export default Steps;

@@ -1,10 +1,10 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import MaskedInput from 'react-text-mask'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import MaskedInput from 'react-text-mask';
 
-import { Stepper, Button } from 'components'
+import { Stepper, Button } from 'components';
 
-import withContext from '../store/hoc'
+import withContext from '../store/hoc';
 
 export interface OuterProps {
   children?: React.ReactChild[] | React.ReactChild;
@@ -13,13 +13,13 @@ export interface OuterProps {
 const Box = styled.div`
   padding: 10px;
   margin-bottom: 10px;
-`
+`;
 
 const StyledBlock = styled.div`
   width: 32%;
   padding: 10px;
   border: 1px solid blue;
-`
+`;
 
 const StyledInput = styled.input`
   width: 100%;
@@ -33,16 +33,16 @@ const StyledInput = styled.input`
   &:not(:last-child) {
     margin-bottom: 10px;
   }
-`
+`;
 
-export type ChangeEvent = React.ChangeEvent<HTMLInputElement>
+export type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
 
 export function Order(props: any) {
 
-  const { dispatch, left, right, center } = props
+  const { dispatch, left, right, center } = props;
 
   const handleChange = (type: string, { target: { value } }: ChangeEvent) =>
-    dispatch({ type, value })
+    dispatch({ type, value });
 
   return (
     <StyledBlock>
@@ -88,8 +88,8 @@ export function Order(props: any) {
         onChange={(e: ChangeEvent) => handleChange('CENTER', e)}
       />
     </StyledBlock>
-  )
+  );
 
 }
 
-export default withContext(Order)
+export default withContext(Order);
