@@ -23,8 +23,14 @@
     "no-default-export": false,
     "no-console": false,
     "trailing-comma": [true, {
-      "multiline": "always",
-      "singleline": "never"
+      "multiline": {
+        "arrays": "always",
+        "objects": "always",
+        "functions": "never",
+        "typeLiterals": "ignore"
+      },
+      "singleline": "never",
+      "esSpecCompliant": true
     }],
     "member-access": [true, "no-public"],
     "ordered-imports": false,

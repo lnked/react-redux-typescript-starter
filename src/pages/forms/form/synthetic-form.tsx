@@ -140,7 +140,7 @@ export class SyntheticForm extends React.Component<OuterProps, OuterState> {
           onFocus: this.handleFocus,
           onInput: this.handleChange,
           onChange: this.handleChange,
-        }),
+        })
       );
     }
 

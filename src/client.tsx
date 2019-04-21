@@ -16,7 +16,7 @@ render(
   <Provider {...createStore()}>
     <App />
   </Provider>,
-  document.getElementById('app-root'),
+  document.getElementById('app-root')
 );
 
 if (environment.production) {

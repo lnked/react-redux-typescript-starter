@@ -23,7 +23,7 @@ render(
   <Provider {...createStore(routingStore)}>
     <App history={history} />
   </Provider>,
-  document.getElementById('app-root'),
+  document.getElementById('app-root')
 );
 
 if (environment.production) {

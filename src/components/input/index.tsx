@@ -29,7 +29,7 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
     onChange,
     className,
     inputClassName,
-    ...attrs,
+    ...attrs
   } = props;
 
   React.useEffect(() => {
