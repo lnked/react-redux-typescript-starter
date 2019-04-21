@@ -1,6 +1,8 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
+import { environment } from 'settings';
+
 import en from './locales/en.json';
 import ru from './locales/ru.json';
 
@@ -22,7 +24,7 @@ i18n
   .init({
     lng: 'en',
     resources,
-    debug: true,
+    debug: environment.development,
     whitelist: ['en', 'ru'],
     fallbackNS: 'translation',
     fallbackLng: false,
