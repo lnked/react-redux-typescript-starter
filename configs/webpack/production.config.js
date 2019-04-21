@@ -9,17 +9,7 @@ const ImageminWebpackPlugin = require('../plugins/production/imagemin-webpack-pl
 const ScriptExtHtmlWebpackPlugin = require('../plugins/production/script-ext-html-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
-  // devtool: 'cheap-source-map',
-  // devtool: 'cheap-module-source-map',
-  devtool: false,
   bail: true,
-  performance: {
-    hints: 'warning',
-    maxAssetSize: 500000,
-    maxEntrypointSize: 500000,
-    assetFilter: assetFilename => !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
-  },
   optimization: {
     nodeEnv: 'production',
     minimize: true,
@@ -60,9 +50,13 @@ module.exports = {
         default: false,
       },
     },
-    minimizer: [
-      ...Minimizer(),
-    ],
+    minimizer: Minimizer(),
+  },
+  performance: {
+    hints: 'warning',
+    maxAssetSize: 500000,
+    maxEntrypointSize: 500000,
+    assetFilter: assetFilename => !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
   },
   plugins: [
     ...WebpackPlugins(),

@@ -14,3 +14,5 @@ export const Theme = {
     whiteColor: true,
   },
 }
+
+export default Theme

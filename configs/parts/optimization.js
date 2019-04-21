@@ -1,10 +1,6 @@
-const webpack = require('webpack');
+const Minimizer = require('../plugins/production/minimizer');
 
-const options = require('../options');
-const TerserPlugin = require('terser-webpack-plugin');
-const terserOptions = require('../terser-options');
-
-module.exports = options.production && {
+module.exports = {
   optimization: {
     nodeEnv: 'production',
     minimize: true,
@@ -27,10 +23,12 @@ module.exports = options.production && {
       maxInitialRequests: Infinity,
       minSize: 0,
       cacheGroups: {
-        default: {
+        commons: {
+          test: /\.(j|t)sx?$/,
+          chunks: 'all',
           minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true,
+          name: 'commons',
+          enforce: true,
         },
         vendors: {
           test: /[\\/]node_modules[\\/]/,
@@ -38,18 +36,13 @@ module.exports = options.production && {
           name: 'vendors',
           priority: -10,
           enforce: true,
+          reuseExistingChunk: true,
         },
+        default: false,
       },
     },
     minimizer: [
-      new TerserPlugin({
-        test: /\.js(\?.*)?$/i,
-        cache: true,
-        parallel: true,
-        sourceMap: options.sourceMap, // Must be set to true if using source-maps in production
-        extractComments: false,
-        terserOptions,
-      }),
+      ...Minimizer(),
     ],
   },
 }
