@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { setConfig } from 'react-hot-loader';
 
 import { environment } from 'settings';
-import { Provider, createStore } from 'store';
+import { Provider, configureStore } from 'store';
 
 import App from 'app';
 
@@ -13,7 +13,7 @@ setConfig({
 });
 
 render(
-  <Provider {...createStore()}>
+  <Provider {...configureStore()}>
     <App />
   </Provider>,
   document.getElementById('app-root')

@@ -24,7 +24,8 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
       <div>REACT_APP_SECRET: {REACT_APP_SECRET}</div>
 
       <h2>{t('title', { count: 10 })}</h2>
-      <h2>{t('age.label', { count: 10 })}</h2>
+      <h2>{t('example')}</h2>
+      <h2>age.label: {t('age.label')}</h2>
 
       <br/>
 

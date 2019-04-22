@@ -8,12 +8,12 @@ import ru from './locales/ru.json';
 
 const resources = {
   en: {
-    translation: {
+    translations: {
       ...en,
     },
   },
   ru: {
-    translation: {
+    translations: {
       ...ru,
     },
   },
@@ -26,17 +26,25 @@ i18n
     resources,
     debug: environment.development,
     whitelist: ['en', 'ru'],
-    fallbackNS: 'translation',
+    fallbackNS: `translations`,
+    nsSeparator: false,
     fallbackLng: false,
-    interpolation: {
-      escapeValue: false,
+    keySeparator: false,
+    // interpolation: {
+    //   escapeValue: false,
+    //   formatSeparator: '.',
+    // },
+    react: {
+      wait: true,
     },
   });
 
-export function init() {
+export const i18nInit = () => {
   i18n.on('languageChanged', lng => console.log('languageChanged: ', lng));
 }
 
-export function unload() {
+export const i18nUnload = () => {
   i18n.off('languageChanged', lng => console.log('languageChanged: ', lng));
 }
+
+export default i18n

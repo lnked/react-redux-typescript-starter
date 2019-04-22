@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { Router } from 'react-router-dom';
 import { Global } from '@emotion/core';
+import { I18nextProvider } from 'react-i18next';
 import { hot } from 'react-hot-loader/root';
 
-import * as i18n from 'i18n';
+import i18n, { i18nInit, i18nUnload } from 'i18n';
 
 import { Consumer } from 'store';
 import { CoreLayout } from 'layouts';
@@ -24,27 +25,29 @@ class App extends React.Component<OuterProps, {}> {
   timeout: any = null;
 
   componentDidMount () {
-    i18n.init();
+    i18nInit();
   }
 
   componentWillUnmount () {
-    i18n.unload();
+    i18nUnload();
   }
 
   render () {
     return (
       <ErrorBoundary>
-        <Router history={browserHistory}>
-          <CoreLayout>
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <Consumer>
-                {context => <Switcher {...context} />}
-              </Consumer>
-            </React.Suspense>
-          </CoreLayout>
+        <I18nextProvider i18n={i18n}>
+          <Router history={browserHistory}>
+            <CoreLayout>
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <Consumer>
+                  {context => <Switcher {...context} />}
+                </Consumer>
+              </React.Suspense>
+            </CoreLayout>
 
-          <Global styles={GlobalStyle} />
-        </Router>
+            <Global styles={GlobalStyle} />
+          </Router>
+        </I18nextProvider>
       </ErrorBoundary>
     );
   }

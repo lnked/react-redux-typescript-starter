@@ -30,7 +30,7 @@ enableLogging({
   compute: false,
 });
 
-export const createStore = (routerStore?: any) => {
+export const configureStore = (routerStore?: any) => {
   const {
     ui = {},
     app = {},

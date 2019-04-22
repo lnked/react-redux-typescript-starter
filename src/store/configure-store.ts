@@ -8,7 +8,7 @@ import {
   STORE_APP,
 } from 'settings';
 
-export const createStore = () => {
+export const configureStore = () => {
   // const initialState = (window && window.__INITIAL_STATE__) || {}
 
   // const { ui, app } = initialState
