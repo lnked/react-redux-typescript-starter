@@ -25,18 +25,16 @@ module.exports = function({ development, production, test, loose, legacy }) {
       extractStatic: false,
     }],
     ['@babel/plugin-transform-runtime', {
-      corejs: 2,
+      corejs: false,
       helpers: false,
       regenerator: true,
-      useESModules: false,
     }],
-    ['transform-imports', transforms],
     ['transform-react-remove-prop-types', {
       mode: 'remove',
       removeImport: true,
       ignoreFilenames: ['node_modules'],
     }],
-
+    ['transform-imports', transforms],
     ['@babel/plugin-proposal-decorators', { legacy }],
     ['@babel/plugin-proposal-class-properties', { loose }],
 
