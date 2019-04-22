@@ -1426,10 +1426,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.12.2.tgz#d7f302e74b10e9801d52852137f652d9ee235da8"
   integrity sha512-c82MtnqWB/CqqK7/zit74Ob8H1dBdV7bK+BcErwtXbe0+nUGkgzq5NTDmRW/pAv2lFtmeNmW95b0zK2hxpeklg==
 
-"@types/node@11.13.6":
-  version "11.13.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.6.tgz#37ec75690830acb0d74ce3c6c43caab787081e85"
-  integrity sha512-Xoo/EBzEe8HxTSwaZNLZjaW6M6tA/+GmD3/DZ6uo8qSaolE/9Oarko0oV1fVfrLqOz0tx0nXJB4rdD5c+vixLw==
+"@types/node@11.13.7":
+  version "11.13.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.7.tgz#85dbb71c510442d00c0631f99dae957ce44fd104"
+  integrity sha512-suFHr6hcA9mp8vFrZTgrmqW2ZU3mbWsryQtQlY/QvwTISCw7nw/j+bCQPPohqmskhmqa5wLNuMHTTsc+xf1MQg==
 
 "@types/prop-types@*":
   version "15.7.0"
@@ -11281,10 +11281,10 @@ sisteransi@^1.0.0:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.0.tgz#77d9622ff909080f1c19e5f4a1df0c1b0a27b88c"
   integrity sha512-N+z4pHB4AmUv0SjveWRd6q1Nj5w62m5jodv+GD8lvmbY/83T/rpbJGZOnK5T149OldDj4Db07BSv9xY4K6NTPQ==
 
-size-limit@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-1.1.1.tgz#6e51da5c74f357cd5e3fd930f3b19abf71b966cd"
-  integrity sha512-eHf7Xlo3zaD6651bXoxh8C7+723s89SRSGAPJquOw33QM0YXu4/rNjh+rZJNiJR3YccdC7+wXBOLFgMJqEn1Zg==
+size-limit@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-1.1.2.tgz#86f19bcb5d759b1de9509adb14c3a70d99e3e8ea"
+  integrity sha512-cDLXhv1tQqe+4UNmC7Gx/RLHaJgoy4lyDo/TUxi+QzYO6OhyMZiyZEWbGhKJdxdZsHCrxxSRwUxssNuKxmkqgg==
   dependencies:
     bytes "^3.1.0"
     chalk "^2.4.2"
