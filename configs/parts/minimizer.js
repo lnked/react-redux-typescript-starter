@@ -1,7 +1,7 @@
 const TerserPlugin = require('terser-webpack-plugin');
 
-const options = require('../../options');
-const terserOptions = require('../../terser-options');
+const options = require('../options');
+const terserOptions = require('../terser-options');
 
 module.exports = () => {
   return [

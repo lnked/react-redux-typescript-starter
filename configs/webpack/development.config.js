@@ -1,13 +1,7 @@
 const merge = require('webpack-merge');
-const webpack = require('webpack');
 
 const devServer = require('../parts/dev-server');
-
-const plugins = {
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-  ]
-};
+const plugins = require('../plugins/development');
 
 module.exports = merge(
   plugins,

@@ -1,4 +1,4 @@
-const Minimizer = require('../plugins/production/minimizer');
+const Minimizer = require('../parts/minimizer');
 
 module.exports = {
   optimization: {
@@ -41,8 +41,6 @@ module.exports = {
         default: false,
       },
     },
-    minimizer: [
-      ...Minimizer(),
-    ],
+    minimizer: Minimizer(),
   },
 }
