@@ -50,6 +50,7 @@
     "max-line-length": [true, 120],
     "no-submodule-imports": false,
     "object-shorthand-properties-first": false,
+    "align": [true, "elements", "parameters", "statements", "members"],
     "no-unused-expression": [true, "allow-fast-null-checks"],
     "no-implicit-dependencies": [true, "dev", ["app", "i18n", "store", "utils", "theme", "pages", "assets", "layouts", "settings", "services", "fragments", "components", "decorators"]],
     "no-import-side-effect": [true, { "ignore-module": "(jest-emotion|\\.html|\\.css|\\.test.tsx?)$" }],
