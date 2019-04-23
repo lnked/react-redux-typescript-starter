@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Button } from 'components';
+import { Input, Button } from 'components';
 
 import {
   API_URL,
@@ -19,6 +19,18 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
 
       <br/>
       <br/>
+
+      <div style={{ marginBottom: 20 }}>
+        <Input />
+      </div>
+
+      <div style={{ marginBottom: 20 }}>
+        <Input value={1} />
+      </div>
+
+      <div style={{ marginBottom: 20 }}>
+        <Input value="xxxx" />
+      </div>
 
       <div>API_URL: {API_URL}</div>
       <div>REACT_APP_SECRET: {REACT_APP_SECRET}</div>

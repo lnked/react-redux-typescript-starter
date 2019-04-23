@@ -1,22 +1,14 @@
 import * as React from 'react';
 
+import useInputState from './useInputState';
+
 import {
   Wrapper,
   Label,
   StyledInput,
 } from './styles';
 
-export interface OuterProps {
-  name?: string;
-  type?: string;
-  label?: string;
-  error?: string;
-  value?: string | number | null;
-  required?: boolean;
-  className?: string;
-  inputClassName?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
+import { OuterProps } from './types'
 
 const Input: React.FC<OuterProps> = (props: OuterProps) => {
   const textInput = React.createRef<HTMLInputElement>();
@@ -24,28 +16,25 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
   const {
     name,
     label,
-    value,
     error,
-    onChange,
+    focus,
     className,
     inputClassName,
     ...attrs
   } = props;
 
   React.useEffect(() => {
-    // component did mount code here
-    // textInput.current!.focus()
+    focus && textInput.current!.focus()
 
     return () => {
       // component will unmount code here
     };
-  },              []);
+  }, []);
 
-  // React.useEffect(() => {
-  //   return () => {
-  //     // component will update or unmount code here
-  //   }
-  // })
+  const { value, onChange } = useInputState({
+    defaultValue: props.value,
+    handleChange: props.onChange,
+  });
 
   return (
     <Wrapper className={className}>
@@ -62,7 +51,6 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
         ref={textInput}
         name={name}
         value={value}
-        onInput={onChange}
         onChange={onChange}
         className={inputClassName}
       />
@@ -79,6 +67,7 @@ Input.defaultProps = {
   label: '',
   error: '',
   value: '',
+  focus: false,
 };
 
 export default Input;
