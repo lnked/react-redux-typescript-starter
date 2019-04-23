@@ -1,9 +1,9 @@
-export type valueType = string | number
-export type onChangeType = (e: React.ChangeEvent<HTMLInputElement>, value?: valueType) => void;
+export type valueType = string | number;
+export type eventType = React.ChangeEvent<HTMLInputElement>;
 
 export interface InnerState {
   defaultValue?: valueType;
-  handleChange?: onChangeType;
+  handleChange?: (value: valueType, e: eventType) => void;
 }
 
 export interface OuterProps {
@@ -16,5 +16,5 @@ export interface OuterProps {
   required?: boolean;
   className?: string;
   inputClassName?: string;
-  onChange?: onChangeType;
+  onChange?: (e: eventType) => void;
 }

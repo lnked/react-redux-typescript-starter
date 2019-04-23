@@ -1,3 +1,4 @@
+/* tslint:disable: max-line-length */
 import styled from '@emotion/styled';
 
 export const Wrapper = styled.label`
@@ -19,7 +20,10 @@ export const StyledInput = styled.input`
   border: none;
   font-size: 1.4rem;
   border-radius: 2px;
-  box-shadow: 0 0 0 0 rgba(19,124,189,0),0 0 0 0 rgba(19,124,189,0),inset 0 0 0 1px rgba(16,22,26,.15),inset 0 1px 1px rgba(16,22,26,.2);
+  box-shadow: 0 0 0 0 rgba(19,124,189,0),
+              0 0 0 0 rgba(19,124,189,0),
+              inset 0 0 0 1px rgba(16,22,26,.15),
+              inset 0 1px 1px rgba(16,22,26,.2);
   background: #fff;
   padding: 6px 10px;
   vertical-align: middle;
@@ -34,7 +38,9 @@ export const StyledInput = styled.input`
   }
 
   &:focus {
-    box-shadow: 0 0 0 1px #137cbd, 0 0 0 3px rgba(19,124,189,.3), inset 0 1px 1px rgba(16,22,26,.2);
+    box-shadow: 0 0 0 1px #137cbd,
+                0 0 0 3px rgba(19,124,189,.3),
+                inset 0 1px 1px rgba(16,22,26,.2);
     outline-offset: 2px;
   }
 

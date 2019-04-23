@@ -8,7 +8,7 @@ import {
   StyledInput,
 } from './styles';
 
-import { OuterProps } from './types'
+import { OuterProps } from './types';
 
 const Input: React.FC<OuterProps> = (props: OuterProps) => {
   const textInput = React.createRef<HTMLInputElement>();
@@ -24,7 +24,7 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
   } = props;
 
   React.useEffect(() => {
-    focus && textInput.current!.focus()
+    focus && textInput.current!.focus();
 
     return () => {
       // component will unmount code here
