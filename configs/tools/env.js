@@ -1,12 +1,12 @@
-const fs = require('fs')
-const { resolve } = require('path')
-const dotenv = require('dotenv')
+const fs = require('fs');
+const dotenv = require('dotenv');
+const { resolve } = require('path');
 
 const { env, root } = require('../options');
 
-const defaultFile = resolve(root, '.env')
+const defaultFile = resolve(root, '.env');
 
-let envFile = resolve(root, `.env.${env}`)
+let envFile = resolve(root, `.env.${env}`);
 
 if (!fs.existsSync(envFile)) {
   envFile = defaultFile;
@@ -14,6 +14,6 @@ if (!fs.existsSync(envFile)) {
 
 const { parsed } = dotenv.config({
   path: envFile,
-})
+});
 
 module.exports.config = parsed

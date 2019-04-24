@@ -6,6 +6,8 @@ import {
   Wrapper,
   Label,
   StyledInput,
+  ResetButton,
+  InputWrapper,
 } from './styles';
 
 import { OuterProps } from './types';
@@ -14,7 +16,6 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
   const textInput = React.createRef<HTMLInputElement>();
 
   const {
-    name,
     label,
     error,
     focus,
@@ -23,7 +24,7 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
     ...attrs
   } = props;
 
-  const { touch, value, onChange, onFocus, onBlur } = useInputState({
+  const { touch, reset, ...stateProps } = useInputState({
     defaultValue: props.value,
     handleChange: props.onChange,
   });
@@ -44,16 +45,16 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
 
       <div>touch: {JSON.stringify(touch)}</div>
 
-      <StyledInput
-        {...attrs}
-        ref={textInput}
-        name={name}
-        value={value}
-        onBlur={onBlur}
-        onFocus={onFocus}
-        onChange={onChange}
-        className={inputClassName}
-      />
+      <InputWrapper>
+        <StyledInput
+          ref={textInput}
+          {...attrs}
+          {...stateProps}
+          className={inputClassName}
+        />
+
+        <ResetButton type="button" onClick={reset} />
+      </InputWrapper>
 
       {error
         && <span>{error}</span>

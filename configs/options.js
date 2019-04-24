@@ -12,8 +12,6 @@ const isProduction = env === 'production';
 
 const publicPath = isDevelopment ? '/' : '/react-mobx-typescript-starter/';
 
-// console.log('options: ', options);
-
 const hashName = isDevelopment
   ? '[name].[hash:4]'
   : '[name].[contenthash:4]';

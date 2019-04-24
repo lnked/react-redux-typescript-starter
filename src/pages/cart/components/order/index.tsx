@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import MaskedInput from 'react-text-mask';
+import MaskedInput from 'react-maskedinput';
 
 import { Stepper, Button } from 'components';
 
@@ -20,6 +20,20 @@ const StyledBlock = styled.div`
   padding: 10px;
   border: 1px solid blue;
 `;
+
+const StyledMaskedInput = styled(MaskedInput)`
+  width: 100%;
+  outline: 0;
+  height: 32px;
+  padding: 0 10px;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+`
 
 const StyledInput = styled.input`
   width: 100%;
@@ -61,15 +75,9 @@ export function Order(props: any) {
       {/* <img src='http://www.to2ko.ru/upload_dir/add8e305_16a6_sm_crop.jpg' alt='' /> */}
       {/* <img src='http://www.to2ko.ru/upload_dir/0bbf7c4c_4c5f_sm_crop.jpg' alt='' /> */}
 
-      <MaskedInput
-        mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
+      <StyledMaskedInput
+        mask="(111) 111-11-11"
         placeholder="Enter a phone number"
-        // guide={false}
-        // onBlur={() => {}}
-        // onChange={() => {}}
-        render={(ref: any, props: any) => (
-          <StyledInput ref={ref} {...props} />
-        )}
       />
 
       <StyledInput
