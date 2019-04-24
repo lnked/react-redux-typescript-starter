@@ -30,7 +30,7 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
 
   React.useEffect(() => {
     focus && textInput.current!.focus();
-  }, [value]);
+  }, []);
 
   return (
     <Wrapper className={className}>

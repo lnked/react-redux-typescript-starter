@@ -7,8 +7,9 @@ const useInputState = ({ defaultValue, handleChange }: InnerState) => {
   const [value, setValue] = useState(defaultValue);
 
   if (!touch && value !== defaultValue) {
-    setTouch(false)
+    console.error({ touch, value, defaultValue })
     setValue(defaultValue);
+    setTouch(false)
   }
 
   return {
@@ -17,8 +18,8 @@ const useInputState = ({ defaultValue, handleChange }: InnerState) => {
     onChange: (e: eventType) => {
       const { value } = e.target;
 
-      setTouch(true);
       setValue(value);
+      setTouch(true);
       handleChange && handleChange(e);
     },
 
