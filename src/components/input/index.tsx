@@ -23,18 +23,14 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
     ...attrs
   } = props;
 
-  React.useEffect(() => {
-    focus && textInput.current!.focus();
-
-    return () => {
-      // component will unmount code here
-    };
-  }, []);
-
-  const { value, onChange } = useInputState({
+  const { touch, value, onChange, onFocus, onBlur } = useInputState({
     defaultValue: props.value,
     handleChange: props.onChange,
   });
+
+  React.useEffect(() => {
+    focus && textInput.current!.focus();
+  }, [value]);
 
   return (
     <Wrapper className={className}>
@@ -46,11 +42,15 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
         && <span>Required</span>
       }
 
+      <div>touch: {JSON.stringify(touch)}</div>
+
       <StyledInput
         {...attrs}
         ref={textInput}
         name={name}
         value={value}
+        onBlur={onBlur}
+        onFocus={onFocus}
         onChange={onChange}
         className={inputClassName}
       />

@@ -1,16 +1,14 @@
 import * as React from 'react';
 
-const initialState = {
+export const initialState = {
   left: '',
   right: '',
   center: '',
 };
 
-const { Provider, Consumer } = React.createContext(initialState);
+export const { Provider, Consumer } = React.createContext(initialState);
 
-const Reducer = (state: any, action: any) => {
-  console.log({ state, action });
-
+export const getState = (state: any, action: any) => {
   switch (action.type) {
     case 'LEFT':
       return { ...state, left: action.value };
@@ -19,12 +17,6 @@ const Reducer = (state: any, action: any) => {
     case 'CENTER':
       return { ...state, center: action.value };
     default:
-      return { ...state };
+      return state;
   }
-};
-
-export {
-  Reducer,
-  Provider,
-  Consumer,
 };

@@ -21,7 +21,7 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
       <br/>
 
       <div style={{ marginBottom: 20 }}>
-        <Input />
+        <Input focus />
       </div>
 
       <div style={{ marginBottom: 20 }}>

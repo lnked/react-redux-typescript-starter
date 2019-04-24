@@ -15,6 +15,7 @@ module.exports = {
   app: path.resolve(options.sourcePath, 'app'),
   i18n: path.resolve(options.sourcePath, 'i18n'),
   utils: path.resolve(options.sourcePath, 'utils'),
+  hooks: path.resolve(options.sourcePath, 'hooks'),
   store: path.resolve(options.sourcePath, 'store'),
   pages: path.resolve(options.sourcePath, 'pages'),
   theme: path.resolve(options.sourcePath, 'theme'),

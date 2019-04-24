@@ -44,6 +44,7 @@
     "i18n/*": ["i18n/*"],
     "store/*": ["store/*"],
     "utils/*": ["utils/*"],
+    "hooks/*": ["hooks/*"],
     "theme/*": ["theme/*"],
     "pages/*": ["pages/*"],
     "assets/*": ["assets/*"],

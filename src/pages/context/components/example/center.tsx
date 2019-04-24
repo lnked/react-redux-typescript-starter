@@ -20,15 +20,19 @@ const StyledBlock = styled.div`
 `;
 
 const StyledInput = styled(Input)`
-  width: 100%;
-
   &:not(:last-child) {
     margin-bottom: 15px;
   }
 `;
 
+export type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
+
 export function Center(props: OuterProps) {
   const { dispatch, left, right, center } = props;
+
+  const handleChange = (type: string, { target: { value } }: ChangeEvent) => {
+    dispatch({ type, value });
+  }
 
   return (
     <StyledBlock>
@@ -36,19 +40,19 @@ export function Center(props: OuterProps) {
         value={left}
         label="Left"
         placeholder="LEFT"
-        onChange={({ target: { value } }: any) => dispatch({ type: 'LEFT', value })}
+        onChange={(e: ChangeEvent) => handleChange('LEFT', e)}
       />
       <StyledInput
         value={right}
         label="Right"
         placeholder="RIGHT"
-        onChange={({ target: { value } }: any) => dispatch({ type: 'RIGHT', value })}
+        onChange={(e: ChangeEvent) => handleChange('RIGHT', e)}
       />
       <StyledInput
         value={center}
         label="Center"
         placeholder="CENTER"
-        onChange={({ target: { value } }: any) => dispatch({ type: 'CENTER', value })}
+        onChange={(e: ChangeEvent) => handleChange('CENTER', e)}
       />
     </StyledBlock>
   );

@@ -25,8 +25,8 @@ export function Example() {
     <StateProvider>
       <StyledContainer>
         <Left />
-        <Right />
         <Center />
+        <Right />
       </StyledContainer>
     </StateProvider>
   );

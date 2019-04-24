@@ -3,7 +3,7 @@ export type eventType = React.ChangeEvent<HTMLInputElement>;
 
 export interface InnerState {
   defaultValue?: valueType;
-  handleChange?: (value: valueType, e: eventType) => void;
+  handleChange?: (e: eventType) => void;
 }
 
 export interface OuterProps {
