@@ -6,7 +6,6 @@ module.exports = {
   warnings: false,
   mangle: true, // Note `mangle.properties` is `false` by default.
   module: false,
-  output: null,
   toplevel: false,
   nameCache: null,
   ie8: false,
