@@ -5,10 +5,10 @@ import useInputState from './useInputState';
 import {
   Wrapper,
   Label,
-  StyledInput,
+  BaseInput,
   ResetButton,
   InputWrapper,
-} from './styles';
+} from './styled';
 
 import { OuterProps } from './types';
 
@@ -19,14 +19,17 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
     label,
     error,
     focus,
+    value,
     className,
+    defaultValue,
     inputClassName,
     ...attrs
   } = props;
 
-  const { touch, reset, ...stateProps } = useInputState({
-    defaultValue: props.value,
+  const { touched, reset, ...stateProps } = useInputState({
+    defaultValue,
     handleChange: props.onChange,
+    propsValue: value,
   });
 
   React.useEffect(() => {
@@ -43,10 +46,10 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
         && <span>Required</span>
       }
 
-      <div>touch: {JSON.stringify(touch)}</div>
+      <div>touched: {JSON.stringify(touched)}</div>
 
       <InputWrapper>
-        <StyledInput
+        <BaseInput
           ref={textInput}
           {...attrs}
           {...stateProps}

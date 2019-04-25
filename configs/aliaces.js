@@ -5,6 +5,10 @@ const duplicates = {
   lodash: path.resolve(options.root, 'node_modules/lodash'),
   warning: path.resolve(options.root, 'node_modules/warning'),
   'react-is': path.resolve(options.root, 'node_modules/react-is'),
+  'immutable': path.resolve(options.root, 'node_modules/immutable'),
+  'rc-trigger': path.resolve(options.root, 'node_modules/rc-trigger'),
+  'rc-animate': path.resolve(options.root, 'node_modules/rc-animate'),
+  'create-react-context': path.resolve(options.root, 'node_modules/create-react-context'),
   'hoist-non-react-statics': path.resolve(options.root, 'node_modules/hoist-non-react-statics'),
   '@babel/runtime': path.resolve(options.root, 'node_modules/@babel/runtime'),
 };

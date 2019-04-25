@@ -2,24 +2,32 @@ import { useState } from 'react';
 
 import { eventType, InnerState } from './types';
 
-const useInputState = ({ defaultValue, handleChange }: InnerState) => {
-  const [touch, setTouch] = useState(false);
+const useInputState = ({ propsValue, defaultValue, handleChange }: InnerState) => {
   const [value, setValue] = useState(defaultValue);
+  const [touched, setTouch] = useState(false);
 
-  if (!touch && value !== defaultValue) {
-    console.error({ touch, value, defaultValue })
-    setValue(defaultValue);
+  if (handleChange && value !== propsValue) {
+    console.error({ touched, value, propsValue, defaultValue })
+    setValue(propsValue);
     setTouch(false)
   }
 
   return {
-    touch,
-    value,
+    touched,
+    defaultValue: value,
     onChange: (e: eventType) => {
       const { value } = e.target;
 
-      setValue(value);
       setTouch(true);
+
+      console.error({ propsValue });
+
+      setValue(value);
+
+      if (!propsValue) {
+        console.error('xx')
+      }
+
       handleChange && handleChange(e);
     },
 

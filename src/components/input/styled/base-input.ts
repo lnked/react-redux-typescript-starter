@@ -1,25 +1,7 @@
 /* tslint:disable: max-line-length */
 import styled from '@emotion/styled';
 
-export const Wrapper = styled.label`
-  width: 100%;
-  display: inline-block;
-`;
-
-export const InputWrapper = styled.div`
-  position: relative;
-  width: 100%;
-`;
-
-export const Label = styled.span`
-  width: 100%;
-  color: #111;
-  display: block;
-  font-size: 1.4rem;
-  margin-bottom: 5px;
-`;
-
-export const StyledInput = styled.input`
+export const BaseInput = styled.input`
   width: 100%;
   outline: none;
   border: none;
@@ -55,17 +37,6 @@ export const StyledInput = styled.input`
     color: rgba(92,112,128,.5);
     resize: none
   }
-`;
-
-export const ResetButton = styled.button`
-  position: absolute;
-  right: 7px;
-  top: 7px;
-  width: 16px;
-  height: 16px;
-  outline: none;
-  display: inline-block;
-  border: 1px solid lime;
 `;
 
 // .bp3-input.bp3-active,.bp3-input:focus {
