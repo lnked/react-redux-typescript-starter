@@ -20,6 +20,8 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
       <br/>
       <br/>
 
+      <div>1&nbsp;&nbsp;&nbsp;2</div>
+
       <div style={{ marginBottom: 20 }}>
         <Input />
       </div>
