@@ -7,9 +7,9 @@ const useInputState = ({ propsValue, defaultValue, handleChange }: InnerState) =
   const [touched, setTouch] = useState(false);
 
   if (handleChange && value !== propsValue) {
-    console.error({ touched, value, propsValue, defaultValue })
+    console.error({ touched, value, propsValue, defaultValue });
     setValue(propsValue);
-    setTouch(false)
+    setTouch(false);
   }
 
   return {
@@ -25,7 +25,7 @@ const useInputState = ({ propsValue, defaultValue, handleChange }: InnerState) =
       setValue(value);
 
       if (!propsValue) {
-        console.error('xx')
+        console.error('xx');
       }
 
       handleChange && handleChange(e);

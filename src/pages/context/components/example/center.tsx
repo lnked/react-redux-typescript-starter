@@ -32,7 +32,7 @@ export function Center(props: OuterProps) {
 
   const handleChange = (type: string, { target: { value } }: ChangeEvent) => {
     dispatch({ type, value });
-  }
+  };
 
   return (
     <StyledBlock>

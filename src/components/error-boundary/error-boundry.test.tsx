@@ -5,8 +5,7 @@ import ErrorBoundary from './'
 
 function ProblemChild () {
   return (
-    // @ts-ignore
-    <div><input type='text' value={null} /></div>
+    <div><input type="text" value="" /></div>
   )
 }
 

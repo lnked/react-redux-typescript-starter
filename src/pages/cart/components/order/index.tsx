@@ -33,7 +33,7 @@ const StyledMaskedInput = styled(MaskedInput)`
   &:not(:last-child) {
     margin-bottom: 10px;
   }
-`
+`;
 
 const StyledInput = styled.input`
   width: 100%;
