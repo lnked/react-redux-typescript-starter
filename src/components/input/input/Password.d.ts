@@ -10,11 +10,11 @@ export interface PasswordState {
 }
 export default class Password extends React.Component<PasswordProps, PasswordState> {
   static defaultProps: {
-      inputPrefixCls: string;
-      prefixCls: string;
-      action: string;
-      visibilityToggle: boolean;
-    };
+    inputPrefixCls: string;
+    prefixCls: string;
+    action: string;
+    visibilityToggle: boolean;
+  };
   state: PasswordState;
   onChange: () => void;
   getIcon(): JSX.Element;

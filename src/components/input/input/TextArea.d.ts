@@ -16,8 +16,8 @@ export interface TextAreaState {
 declare class TextArea extends React.Component<TextAreaProps, TextAreaState> {
   nextFrameActionId: number;
   state: {
-      textareaStyles: {};
-    };
+    textareaStyles: {};
+  };
   private textAreaRef;
   componentDidMount(): void;
   componentDidUpdate(prevProps: TextAreaProps): void;

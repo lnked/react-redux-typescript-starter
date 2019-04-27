@@ -8,8 +8,8 @@ export interface SearchProps extends InputProps {
 }
 export default class Search extends React.Component<SearchProps, any> {
   static defaultProps: {
-      enterButton: boolean;
-    };
+    enterButton: boolean;
+  };
   private input;
   onSearch: (e: React.KeyboardEvent<HTMLInputElement> | React.MouseEvent<HTMLElement, MouseEvent>) => void;
   focus(): void;
