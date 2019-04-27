@@ -12,22 +12,28 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
   const [lng, setLanguage] = React.useState(initialLanguage);
   const { t, i18n } = useTranslation(lng);
 
+  const handleChange = (name: string) => {
+    return (e: any, value: any) => {
+      console.info('change: ', name, e, value);
+    }
+  }
+
   return (
     <div>
       <h2>Home</h2>
       <Button>This is a hotpink button.</Button>
-
-      <br/>
       <br/>
 
       <div>1&nbsp;&nbsp;&nbsp;2</div>
 
       <div style={{ marginBottom: 20 }}>
-        <Input />
+        <Input
+          onChange={handleChange('v1')}
+        />
       </div>
 
       <div style={{ marginBottom: 20 }}>
-        <Input value={1} />
+        <Input onChange={handleChange('v2')} value={1} />
       </div>
 
       <div style={{ marginBottom: 20 }}>

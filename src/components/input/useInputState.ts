@@ -28,7 +28,7 @@ const useInputState = ({ propsValue, defaultValue, handleChange }: InnerState) =
         console.error('xx');
       }
 
-      handleChange && handleChange(e);
+      handleChange && handleChange(e, value);
     },
 
     onFocus: () => setTouch(true),

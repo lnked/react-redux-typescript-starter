@@ -7,7 +7,7 @@ module.exports = [
       './dist/static/*.js',
     ],
     config: './configs/production.js',
-    webpack: true,
+    webpack: false,
     running: true,
   },
 ]
