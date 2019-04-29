@@ -193,7 +193,7 @@
     "mobx-react-devtools": "6.1.1",
     "mobx-react-router": "4.0.7",
     "nanoid": "2.0.1",
-    "rambda": "2.4.1",
+    "rambda": "2.5.0",
     "react": "16.8.6",
     "react-dom": "npm:@hot-loader/react-dom",
     "react-fast-compare": "2.0.4",
