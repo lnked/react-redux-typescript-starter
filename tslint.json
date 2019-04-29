@@ -26,7 +26,7 @@
       "multiline": {
         "arrays": "always",
         "objects": "always",
-        "functions": "never",
+        "functions": "ignore",
         "typeLiterals": "ignore"
       },
       "singleline": "never",

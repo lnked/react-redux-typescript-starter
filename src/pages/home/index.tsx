@@ -14,9 +14,16 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
 
   const handleChange = (name: string) => {
     return (e: any, value: any) => {
-      console.info('change: ', name, e, value);
-    }
-  }
+      console.info(
+        'change: ',
+        {
+          e,
+          name,
+          value,
+        }
+      );
+    };
+  };
 
   return (
     <div>

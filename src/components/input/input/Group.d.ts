@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 export interface GroupProps {
   className?: string;
   size?: 'large' | 'small' | 'default';
