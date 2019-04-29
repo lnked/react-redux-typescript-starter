@@ -1,19 +1,23 @@
 const Minimizer = require('../parts/minimizer');
 
+const { environment, development, production } = require('../options');
+
 module.exports = {
   optimization: {
-    nodeEnv: 'production',
+    nodeEnv: environment,
     minimize: true,
     chunkIds: 'named',
     moduleIds: 'hashed',
     sideEffects: true,
-    usedExports: true,
-    namedChunks: true,
-    namedModules: true,
+    namedChunks: development,
+    namedModules: development,
     noEmitOnErrors: true,
-    providedExports: false,
     occurrenceOrder: false,
-    concatenateModules: true,
+
+    usedExports: production,
+    providedExports: production,
+    concatenateModules: production,
+
     runtimeChunk: {
       name: 'runtime',
     },
