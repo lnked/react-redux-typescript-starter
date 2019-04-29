@@ -1,6 +1,6 @@
 module.exports = () => {
   return {
-    loader: "image-webpack-loader",
+    loader: 'image-webpack-loader',
     options: {
       mozjpeg: {
         progressive: true,

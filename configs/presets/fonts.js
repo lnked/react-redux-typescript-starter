@@ -1,5 +1,5 @@
-const url = require("../loaders/url-loader");
-const file = require("../loaders/file-loader");
+const url = require('../loaders/url-loader');
+const file = require('../loaders/file-loader');
 
 module.exports = () => {
   return [
@@ -7,9 +7,9 @@ module.exports = () => {
       test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       use: [
         url({
-          prefix: "fonts",
+          prefix: 'fonts',
           limit: 50000,
-          mimetype: "application/font-woff",
+          mimetype: 'application/font-woff',
         }),
       ],
     },
@@ -17,9 +17,9 @@ module.exports = () => {
       test: /\.svg$/,
       use: [
         url({
-          prefix: "static/images",
+          prefix: 'static/images',
           limit: 50000,
-          mimetype: "image/svg+xml",
+          mimetype: 'image/svg+xml',
         }),
       ],
     },
@@ -34,7 +34,7 @@ module.exports = () => {
     {
       test: /\.(ttf|eot|woff|woff2)(\?\S*)?$/,
       use: [
-        file({ prefix: "fonts" }),
+        file({ prefix: 'fonts' }),
       ],
     },
   ];

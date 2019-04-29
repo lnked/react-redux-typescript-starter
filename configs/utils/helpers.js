@@ -10,7 +10,7 @@ module.exports.getTemplate = (type = 'class', name) => {
       `\t{`,
       `\t\tpath: 'page',`,
       `\t\tcomponent: loadComponent(() =>`,
-      `\t\t\timport(\n\t\t\t\t/* webpackChunkName: "${name}", webpackMode: "lazy-once", webpackPrefetch: true */\n\t\t\t\t'./'\n\t\t\t)`,
+      `\t\t\timport(\n\t\t\t\t/* webpackChunkName: '${name}', webpackMode: 'lazy-once', webpackPrefetch: true */\n\t\t\t\t'./'\n\t\t\t)`,
       `\t\t),`,
       `\t\ttitle: 'Page title',`,
       `\t\tdescription: 'Page description',`,

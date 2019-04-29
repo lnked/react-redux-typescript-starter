@@ -1,34 +1,34 @@
-const path = require("path");
+const { resolve } = require('path');
 const { parseArguments } = require('./tools/helpers');
 
-const env = process.env.NODE_ENV || 'development';
-const root = path.resolve(__dirname, '..');
+const environment = process.env.NODE_ENV || 'development';
+const root = resolve(__dirname, '..');
 const options = parseArguments(process.argv);
 
-process.env.NODE_ENV = process.env.BABEL_ENV = env;
+process.env.NODE_ENV = process.env.BABEL_ENV = environment;
 
-const isDevelopment = env === 'development';
-const isProduction = env === 'production';
+const production = environment === 'production';
+const development = environment === 'development';
 
-const publicPath = isDevelopment ? '/' : '/react-mobx-typescript-starter/';
+const publicPath = development ? '/' : '/react-mobx-typescript-starter/';
 
-const hashName = isDevelopment
+const hashName = development
   ? '[name].[hash:4]'
   : '[name].[contenthash:4]';
 
 module.exports = {
-  env,
   root,
   hashName,
   publicPath,
+  production,
+  development,
+  environment,
   sourceMap: false,
-  production: isProduction,
-  development: isDevelopment,
-  environment: env,
+  publicPath: '/',
   analyze: options.analyze || false,
   compression: options.release || false,
-  dist: path.resolve(root, 'dist'),
-  sourcePath: path.resolve(root, 'src'),
-  serverPath: path.resolve(root, 'src/server'),
-  cacheDirectory: path.resolve(root, '.cache'),
+  dist: resolve(root, 'dist'),
+  sourcePath: resolve(root, 'src'),
+  serverPath: resolve(root, 'src/server'),
+  cacheDirectory: resolve(root, '.cache'),
 }

@@ -12,8 +12,8 @@ module.exports = () => {
     new webpack.DefinePlugin({
       'process.env': Object.assign(formatter(environment, true), {
         BROWSER: true,
-        NODE_ENV: JSON.stringify(options.env),
-        BABEL_ENV: JSON.stringify(options.env),
+        NODE_ENV: JSON.stringify(options.environment),
+        BABEL_ENV: JSON.stringify(options.environment),
       }),
       __DEV__: options.development,
       __PROD__: options.production,

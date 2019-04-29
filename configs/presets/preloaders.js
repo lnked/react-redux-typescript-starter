@@ -1,5 +1,5 @@
-const source = require("../loaders/source-map-loader");
-const imageWebpack = require("../loaders/image-webpack-loader");
+const source = require('../loaders/source-map-loader');
+const imageWebpack = require('../loaders/image-webpack-loader');
 
 module.exports = () => {
   return [
@@ -8,11 +8,11 @@ module.exports = () => {
       use: [
         imageWebpack(),
       ],
-      enforce: "pre",
+      enforce: 'pre',
     },
     {
       test: /\.js$/,
-      enforce: "pre",
+      enforce: 'pre',
       use: [
         source(),
       ],

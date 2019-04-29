@@ -2,19 +2,19 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const TerserPlugin = require("terser-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const { GenerateSW } = require('workbox-webpack-plugin');
-const WebpackChunkHash = require("webpack-chunk-hash");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const CompressionPlugin = require("compression-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const WebpackChunkHash = require('webpack-chunk-hash');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
 
 const options = require('../options');
-const terserOptions = require("../terser-options");
+const terserOptions = require('../terser-options');
 
 const plugins = [];
 
@@ -25,8 +25,8 @@ if (options.development) {
 if (options.compression) {
   plugins.push(
     new CompressionPlugin({
-      asset: "[path].gz[query]",
-      algorithm: "gzip",
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
       test: /\.js$|\.html$/,
       threshold: 10240,
       minRatio: 0.8,
@@ -37,7 +37,7 @@ if (options.compression) {
 if (options.analyze) {
   plugins.push(
     new BundleAnalyzerPlugin({
-      analyzerMode: "static",
+      analyzerMode: 'static',
     }),
   );
 }
@@ -65,7 +65,7 @@ module.exports = {
 
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify(options.env),
+        'NODE_ENV': JSON.stringify(options.environment),
       },
     }),
 

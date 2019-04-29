@@ -2,11 +2,11 @@ const fs = require('fs');
 const dotenv = require('dotenv');
 const { resolve } = require('path');
 
-const { env, root } = require('../options');
+const { environment, root } = require('../options');
 
 const defaultFile = resolve(root, '.env');
 
-let envFile = resolve(root, `.env.${env}`);
+let envFile = resolve(root, `.env.${environment}`);
 
 if (!fs.existsSync(envFile)) {
   envFile = defaultFile;

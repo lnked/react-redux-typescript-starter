@@ -5,17 +5,17 @@ module.exports = ({ prefix = '', ...props }) => {
     // {
     //   test: /\.(glsl|frag|vert)$/,
     //   exclude: /node_modules/,
-    //   loader: "glslify-import-loader
+    //   loader: 'glslify-import-loader
     // },
     {
       test: /\.(glsl|frag|vert)$/,
       exclude: /node_modules/,
-      loader: "raw-loader"
+      loader: 'raw-loader'
     },
     {
       test: /\.(glsl|frag|vert)$/,
       exclude: /node_modules/,
-      loader: "glslify-loader"
+      loader: 'glslify-loader'
     },
   ];
 }

@@ -1,6 +1,6 @@
-const cache = require("../loaders/cache-loader");
-const babel = require("../loaders/babel-loader");
-const sourceMap = require("../loaders/source-map-loader");
+const cache = require('../loaders/cache-loader');
+const babel = require('../loaders/babel-loader');
+const sourceMap = require('../loaders/source-map-loader');
 
 module.exports = () => {
   return [

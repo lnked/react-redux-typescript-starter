@@ -1,6 +1,6 @@
-const file = require("../loaders/file-loader");
-const json = require("../loaders/json-loader");
-const options = require("../options");
+const file = require('../loaders/file-loader');
+const json = require('../loaders/json-loader');
+const options = require('../options');
 
 const use = []
 

@@ -2,7 +2,7 @@ const fs = require('fs')
 const signale = require('signale')
 const { resolve } = require('path')
 
-const { sourcePath } = require("../options");
+const { sourcePath } = require('../options');
 const { folderName, componentName, getTemplate } = require('./helpers')
 const { parseArguments } = require('../functions')
 
