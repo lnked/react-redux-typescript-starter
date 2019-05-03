@@ -32,8 +32,7 @@
     "add-component": "node configs/utils/add --essence component",
     "add-page": "node configs/utils/add --essence page",
     "add-layout": "node configs/utils/add --essence layout",
-    "add-fragment": "node configs/utils/add --essence fragment",
-    "upd": "yarn install --no-lockfile"
+    "add-fragment": "node configs/utils/add --essence fragment"
   },
   "reactSnap": {
     "source": "dist",
