@@ -8,6 +8,7 @@ module.exports = {
     moduleIds: 'hashed',
 
     minimize: true,
+
     // sideEffects: true,
     // namedChunks: false,
     // namedModules: false,
@@ -16,8 +17,8 @@ module.exports = {
 
     // usedExports: true,
     // providedExports: true,
-    // concatenateModules: true,
 
+    concatenateModules: true,
     mergeDuplicateChunks: true,
 
     runtimeChunk: {
