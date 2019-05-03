@@ -25,7 +25,7 @@ module.exports = {
   environment,
   sourceMap: false,
   publicPath: '/',
-  release: options.release || false,
+  release: options.release || options.analyze || false,
   analyze: options.analyze || false,
   compression: options.release || false,
   dist: resolve(root, 'dist'),
