@@ -1,6 +1,6 @@
 import { observable, action } from 'mobx';
 
-export const ObjectStore = observable({
+const ObjectStore = observable({
   firstName: 'Yauhen',
   age: 30,
 
@@ -18,3 +18,5 @@ export const ObjectStore = observable({
 },                                    {
   name: 'nickNameObservableObject',
 });
+
+export default ObjectStore;

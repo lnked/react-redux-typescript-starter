@@ -1,32 +1,23 @@
-export const UiStore = {
-  theme: {
-    dark: { whiteColor: false, fontFamily: 'Roboto, sans-serif' },
-    light: { whiteColor: true, fontFamily: 'Roboto, sans-serif' },
-  },
-  type: 'grid',
-};
+import { observable, action, computed } from 'mobx';
 
-// export class UiStore {
-//   type: string = 'grid'
+class UiStore {
+  @observable type: string = 'grid';
 
-//   theme: any = {
-//     dark: { whiteColor: false, fontFamily: 'Roboto, sans-serif' },
-//     light: { whiteColor: true, fontFamily: 'Roboto, sans-serif' },
-//   }
+  constructor (initialState?: any) {
+    console.log({ initialState });
+  }
 
-//   constructor (initialState?: any) {
-//     console.log({ initialState })
-//   }
+  @computed get view_type () {
+    return this.type;
+  }
 
-//   get view_type () {
-//     return this.type
-//   }
+  @computed get getState () {
+    return this.type;
+  }
 
-//   get getState () {
-//     return this.type
-//   }
+  @action set (type: string) {
+    this.type = type;
+  }
+}
 
-//   set (type: string) {
-//     this.type = type
-//   }
-// }
+export default UiStore;

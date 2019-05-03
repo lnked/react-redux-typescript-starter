@@ -1,12 +1,12 @@
 import { observable, action, computed } from 'mobx';
 
-export interface UserProps {
+export interface DataProps {
   id: number;
   name: string;
 }
 
-export class DataStore {
-  @observable user: UserProps = {
+class DataStore {
+  @observable user: DataProps = {
     id: 0,
     name: 'grid',
   };
@@ -19,7 +19,9 @@ export class DataStore {
     return this.user;
   }
 
-  @action set (user: UserProps) {
+  @action set (user: DataProps) {
     this.user = user;
   }
 }
+
+export default DataStore;

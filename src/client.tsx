@@ -1,9 +1,12 @@
 import * as React from 'react';
 import { render } from 'react-dom';
+import { Provider } from 'mobx-react';
 import { setConfig } from 'react-hot-loader';
+import { RouterStore, syncHistoryWithStore } from 'mobx-react-router';
 
 import { environment } from 'settings';
-import { Provider, configureStore } from 'store';
+import { browserHistory } from 'utils';
+import { configureStore } from 'store';
 
 import App from 'app';
 
@@ -12,9 +15,13 @@ setConfig({
   pureRender: true,
 });
 
+const routingStore = new RouterStore();
+
+const history = syncHistoryWithStore(browserHistory, routingStore);
+
 render(
-  <Provider {...configureStore()}>
-    <App />
+  <Provider {...configureStore(routingStore)}>
+    <App history={history} />
   </Provider>,
   document.getElementById('app-root')
 );

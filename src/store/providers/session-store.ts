@@ -5,7 +5,7 @@ export interface UserProps {
   name: string;
 }
 
-export class SessionStore {
+class SessionStore {
   @observable user: UserProps = {
     id: 0,
     name: 'grid',
@@ -23,3 +23,5 @@ export class SessionStore {
     this.user = user;
   }
 }
+
+export default SessionStore;

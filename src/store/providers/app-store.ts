@@ -1,27 +1,41 @@
-export const AppStore = {
-  query: '',
-  locale: 'en',
-};
+import {
+  action,
+  computed,
+  observable,
+  extendObservable,
+} from 'mobx';
 
-// export class AppStore {
-//   static defaultState = {
-//     query: '',
-//     results: [],
-//   }
+class AppStore {
+  static mobxLoggerConfig: {
+    enabled: false,
+    methods: {
+      loadTags: true,
+    },
+  };
 
-//   query: string = ''
+  static defaultState = {
+    query: '',
+    results: [],
+  };
 
-//   isLoading: boolean = false
+  @observable query: string = '';
 
-//   constructor (initialState?: any) {
-//     console.log({ initialState })
-//   }
+  @observable isLoading: boolean = false;
 
-//   get getState () {
-//     return this.query
-//   }
+  constructor (initialState?: any) {
+    if (initialState && Object.keys(initialState).length) {
+      extendObservable(this, initialState);
+    }
+  }
 
-//   loadTags = (query: string) => {
-//     this.query = query
-//   }
-// }
+  @computed get getState () {
+    return this.query;
+  }
+
+  @action
+  loadTags = (query: string) => {
+    this.query = query;
+  }
+}
+
+export default AppStore;
