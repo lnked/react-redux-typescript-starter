@@ -6,7 +6,6 @@ import { hot } from 'react-hot-loader/root';
 
 import i18n, { i18nInit, i18nUnload } from 'i18n';
 
-import { Consumer } from 'store';
 import { CoreLayout } from 'layouts';
 import { browserHistory } from 'utils';
 import { ErrorBoundary } from 'components';
@@ -39,9 +38,7 @@ class App extends React.Component<OuterProps, {}> {
           <Router history={browserHistory}>
             <CoreLayout>
               <React.Suspense fallback={<div>Loading...</div>}>
-                <Consumer>
-                  {context => <Switcher {...context} />}
-                </Consumer>
+                <Switcher />
               </React.Suspense>
             </CoreLayout>
 
