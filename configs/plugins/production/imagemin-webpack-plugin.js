@@ -6,8 +6,8 @@ const options = require('../../options');
 module.exports = () => {
   return [
     new ImageminPlugin({
-      pngquant: ({ quality: '50' }),
-      plugins: [imageminMozjpeg({ quality: '50' })]
+      pngquant: ({ quality: '70' }),
+      plugins: [imageminMozjpeg({ quality: '70' })]
     }),
   ]
 }
