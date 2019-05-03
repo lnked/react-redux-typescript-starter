@@ -143,7 +143,7 @@
     "inspectpack": "4.2.1",
     "jest": "24.7.1",
     "json-loader": "0.5.7",
-    "lint-staged": "8.1.5",
+    "lint-staged": "8.1.6",
     "markdown-loader": "5.0.0",
     "marked": "0.6.2",
     "path": "0.12.7",
