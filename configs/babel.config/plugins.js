@@ -5,7 +5,6 @@ module.exports = function({ development, production, test, loose, legacy }) {
 
   if (test) {
     return [
-      '@babel/plugin-transform-runtime',
       '@babel/plugin-syntax-dynamic-import',
       '@babel/plugin-proposal-object-rest-spread',
       '@babel/plugin-proposal-class-properties',
@@ -15,7 +14,9 @@ module.exports = function({ development, production, test, loose, legacy }) {
   }
 
   if (development) {
-    plugins.push('react-hot-loader/babel')
+    plugins.push(
+      'react-hot-loader/babel'
+    );
   }
 
   return [
@@ -24,15 +25,15 @@ module.exports = function({ development, production, test, loose, legacy }) {
       sourceMap: true,
       extractStatic: false,
     }],
-    ['@babel/plugin-transform-runtime', {
-      corejs: false,
-      helpers: false,
-      regenerator: true,
-    }],
     ['transform-react-remove-prop-types', {
       mode: 'remove',
       removeImport: true,
       ignoreFilenames: ['node_modules'],
+    }],
+    ['@babel/plugin-transform-runtime', {
+      corejs: false,
+      helpers: false,
+      regenerator: true,
     }],
     ['transform-imports', transforms],
     ['@babel/plugin-proposal-decorators', { legacy }],
