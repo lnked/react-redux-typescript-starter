@@ -1,5 +1,6 @@
 const cache = require('../loaders/cache-loader');
 const babel = require('../loaders/babel-loader');
+const thread = require('../loaders/thread-loader');
 const sourceMap = require('../loaders/source-map-loader');
 
 module.exports = () => {
@@ -17,6 +18,7 @@ module.exports = () => {
       exclude: /(node_modules)/,
       use: [
         cache(),
+        thread(),
         babel(),
       ],
     },

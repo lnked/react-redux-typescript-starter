@@ -1,4 +1,3 @@
-const path = require('path');
 const options = require('./options');
 
 module.exports = {
@@ -10,8 +9,8 @@ module.exports = {
   nameCache: null,
   ie8: false,
   keep_classnames: undefined,
-  keep_fnames: false,
   safari10: true,
+  keep_fnames: !options.release,
   compressor: {
     warnings: false,
   },

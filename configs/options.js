@@ -13,7 +13,7 @@ const development = environment === 'development';
 const publicPath = development ? '/' : '/react-mobx-typescript-starter/';
 
 const hashName = development
-  ? '[name].[hash:4]'
+  ? '[name]'
   : '[name].[contenthash:4]';
 
 module.exports = {
@@ -25,6 +25,7 @@ module.exports = {
   environment,
   sourceMap: false,
   publicPath: '/',
+  release: options.release || false,
   analyze: options.analyze || false,
   compression: options.release || false,
   dist: resolve(root, 'dist'),

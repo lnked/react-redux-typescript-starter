@@ -11,6 +11,7 @@ const duplicates = {
   'create-react-context': path.resolve(options.root, 'node_modules/create-react-context'),
   'hoist-non-react-statics': path.resolve(options.root, 'node_modules/hoist-non-react-statics'),
   '@babel/runtime': path.resolve(options.root, 'node_modules/@babel/runtime'),
+  // 'react-dom': '@hot-loader/react-dom',
 };
 
 module.exports = {

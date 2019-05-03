@@ -1,22 +1,24 @@
 const Minimizer = require('../parts/minimizer');
 
-const { environment, development, production } = require('../options');
-
 module.exports = {
   optimization: {
-    nodeEnv: environment,
-    minimize: true,
+    nodeEnv: 'production',
+
     chunkIds: 'named',
     moduleIds: 'hashed',
-    sideEffects: true,
-    namedChunks: development,
-    namedModules: development,
-    noEmitOnErrors: true,
-    occurrenceOrder: false,
 
-    usedExports: production,
-    providedExports: production,
-    concatenateModules: production,
+    minimize: true,
+    // sideEffects: true,
+    // namedChunks: false,
+    // namedModules: false,
+    // noEmitOnErrors: true,
+    // occurrenceOrder: false,
+
+    // usedExports: true,
+    // providedExports: true,
+    // concatenateModules: true,
+
+    mergeDuplicateChunks: true,
 
     runtimeChunk: {
       name: 'runtime',
@@ -36,9 +38,9 @@ module.exports = {
         },
         vendors: {
           test: /[\\/]node_modules[\\/]/,
+          priority: -10,
           chunks: 'all',
           name: 'vendors',
-          priority: -10,
           enforce: true,
           reuseExistingChunk: true,
         },

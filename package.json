@@ -32,7 +32,8 @@
     "add-component": "node configs/utils/add --essence component",
     "add-page": "node configs/utils/add --essence page",
     "add-layout": "node configs/utils/add --essence layout",
-    "add-fragment": "node configs/utils/add --essence fragment"
+    "add-fragment": "node configs/utils/add --essence fragment",
+    "upd": "yarn install --no-lockfile"
   },
   "reactSnap": {
     "source": "dist",
@@ -159,6 +160,7 @@
     "source-map-loader": "0.2.4",
     "svg-url-loader": "2.3.2",
     "terser-webpack-plugin": "1.2.3",
+    "thread-loader": "2.1.2",
     "ts-jest": "24.0.2",
     "tslint": "5.16.0",
     "tslint-config-airbnb": "5.11.1",
