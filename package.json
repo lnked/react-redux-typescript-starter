@@ -110,7 +110,7 @@
     "@types/react-dom": "16.8.4",
     "@types/react-hot-loader": "4.1.0",
     "@types/react-maskedinput": "4.0.4",
-    "@types/react-router-dom": "4.3.2",
+    "@types/react-router-dom": "4.3.3",
     "@types/react-test-renderer": "16.8.1",
     "@types/webpack-env": "1.13.9",
     "babel-jest": "24.8.0",
