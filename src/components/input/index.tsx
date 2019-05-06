@@ -1,4 +1,5 @@
 import * as React from 'react';
+import nanoid from 'nanoid';
 
 import useInputState from './useInputState';
 
@@ -14,6 +15,8 @@ import { OuterProps } from './types';
 
 const Input: React.FC<OuterProps> = (props: OuterProps) => {
   const textInput = React.createRef<HTMLInputElement>();
+
+  const pair = nanoid();
 
   const {
     label,
@@ -39,17 +42,20 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
   return (
     <Wrapper className={className}>
       {label
-        && <Label>{label}</Label>
+        && <Label htmlFor={pair}>{label}</Label>
       }
 
       {attrs.required
         && <span>Required</span>
       }
 
-      <div>touched: {JSON.stringify(touched)}</div>
+      {/*
+      <span>touched: {JSON.stringify(touched)}</span>
+      */}
 
       <InputWrapper>
         <BaseInput
+          id={pair}
           ref={textInput}
           {...attrs}
           {...stateProps}

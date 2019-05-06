@@ -1,7 +1,7 @@
 /* tslint:disable: max-line-length */
 import styled from '@emotion/styled';
 
-export const Label = styled.span`
+export const Label = styled.label`
   width: 100%;
   color: #111;
   display: block;
