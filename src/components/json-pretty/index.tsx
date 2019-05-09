@@ -29,7 +29,7 @@ export interface OuterProps {
 
 const JsonPretty: React.FC<OuterProps> = ({ json }: OuterProps) => (
   <Wrapper>
-    <Code lang="json">
+    <Code>
       {JSON.stringify(json, null, '  ')}
     </Code>
   </Wrapper>

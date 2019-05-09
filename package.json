@@ -36,7 +36,9 @@
   },
   "reactSnap": {
     "source": "dist",
-    "inlineCss": false,
+    "inlineCss": true,
+    "cacheAjaxRequests": false,
+    "skipThirdPartyRequests": true,
     "minifyHtml": {
       "collapseWhitespace": false,
       "removeComments": true
