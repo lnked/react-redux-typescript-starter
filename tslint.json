@@ -17,7 +17,7 @@
     ]
   },
   "rules": {
-    "react-hooks-nesting": "error",
+    "react-hooks-nesting": false,
     "eofline": true,
     "import-name": false,
     "no-default-export": false,
