@@ -1,11 +1,13 @@
 const url = require('../loaders/url-loader');
 const file = require('../loaders/file-loader');
+const cache = require('../loaders/cache-loader');
 
 module.exports = () => {
   return [
     {
       test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       use: [
+        cache(),
         url({
           prefix: 'fonts',
           limit: 50000,
@@ -16,6 +18,7 @@ module.exports = () => {
     {
       test: /\.svg$/,
       use: [
+        cache(),
         url({
           prefix: 'static/images',
           limit: 50000,
@@ -23,17 +26,10 @@ module.exports = () => {
         }),
       ],
     },
-    // {
-    //   test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/,
-    //   use: [
-    //     url({
-    //       limit: 100000,
-    //     }),
-    //   ],
-    // },
     {
       test: /\.(ttf|eot|woff|woff2)(\?\S*)?$/,
       use: [
+        cache(),
         file({ prefix: 'fonts' }),
       ],
     },

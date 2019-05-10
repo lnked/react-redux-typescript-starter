@@ -1,4 +1,4 @@
-const {cacheDirectory} = require('../options');
+const { development } = require('../options');
 
 module.exports = ({ importLoaders = 1, ...props }) => {
   return {
@@ -6,7 +6,9 @@ module.exports = ({ importLoaders = 1, ...props }) => {
     options: {
       ...props,
       importLoaders,
-      localIdentName: '[folder]__[local]--[hash:base64:5]',
+      localIdentName: development
+        ? '[path][name][local]'
+        : '[hash:base64:5]',
     }
   };
 }
