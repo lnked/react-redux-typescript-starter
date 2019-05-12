@@ -62,7 +62,9 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
           className={inputClassName}
         />
 
-        <ResetButton type="button" onClick={reset} />
+        <ResetButton type="button" onClick={reset}>
+          Clear
+        </ResetButton>
       </InputWrapper>
 
       {error

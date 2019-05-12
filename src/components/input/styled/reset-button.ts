@@ -10,4 +10,7 @@ export const ResetButton = styled.button`
   outline: none;
   display: inline-block;
   border: 1px solid lime;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -100px;
 `;
