@@ -998,10 +998,10 @@
     reflect-metadata "^0.1.12"
     tslib "^1.8.1"
 
-"@gfx/zopfli@1.0.11":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@gfx/zopfli/-/zopfli-1.0.11.tgz#6ced06b4566a5feb0036fe6a1e0262ce6cb1d6c5"
-  integrity sha512-wW+hi+bqdYCpBIvL8g7RYub9YXf5crhZK9SNk/VZmbF177Em1VwFv488qyh8iBpCo6GptcP1Zam0bJfY3VmMbg==
+"@gfx/zopfli@1.0.12":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@gfx/zopfli/-/zopfli-1.0.12.tgz#32b20a96758a224f3a3756d72bbdaa0a4d69341c"
+  integrity sha512-PWULp7GMHuNVXiRsxrBTGDrYARIEvuAVobLywB7IaA6C/398Df7s6gZ7GxXcYSV8g+KozNnnbkmH5fUKvxMVDg==
   dependencies:
     base64-js "^1.3.0"
 
@@ -8393,10 +8393,10 @@ mobx-react-router@4.0.7:
   resolved "https://registry.yarnpkg.com/mobx-react-router/-/mobx-react-router-4.0.7.tgz#d248a0e0525049f0e37e94f2fb1ab09563be4c35"
   integrity sha512-x7eza70EimFyvF0VPyj5X2MYo9jksy61UVwz5ERXWnXVE911XRTL/V2kXiX7fvVtMHzp5m2q/kxBoti9uNixEw==
 
-mobx-react@5.4.3:
-  version "5.4.3"
-  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-5.4.3.tgz#6709b7dd89670c40e9815914ac2ca49cc02bfb47"
-  integrity sha512-WC8yFlwvJ91hy8j6CrydAuFteUafcuvdITFQeHl3LRIf5ayfT/4W3M/byhEYD2BcJWejeXr8y4Rh2H26RunCRQ==
+mobx-react@5.4.4:
+  version "5.4.4"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-5.4.4.tgz#b3de9c6eabcd0ed8a40036888cb0221ab9568b80"
+  integrity sha512-2mTzpyEjVB/RGk2i6KbcmP4HWcAUFox5ZRCrGvSyz49w20I4C4qql63grPpYrS9E9GKwgydBHQlA4y665LuRCQ==
   dependencies:
     hoist-non-react-statics "^3.0.0"
     react-lifecycles-compat "^3.0.2"
@@ -8470,7 +8470,12 @@ nan@^2.12.1:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.13.2.tgz#f51dc7ae66ba7d5d55e1e6d4d8092e802c9aefe7"
   integrity sha512-TghvYc72wlMGMVMluVo9WRJc0mB8KxxF/gZ4YYFy7V2ZQX9l7rgbPg7vjS9mt6U5HXODVFVI2bOduCzwOMv/lw==
 
-nanoid@2.0.1, nanoid@^2.0.1:
+nanoid@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.0.2.tgz#2163edc84828cd42f9b8e4578979a4b5ffc1bb18"
+  integrity sha512-X4yQ8VHoFvHcykGunT2Jxrsm1c4vH5UKtau7LLJYXO1istCRE3jD8JxDyGCzN+h7dpWBCvWaSYgloRuphKRqUQ==
+
+nanoid@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.0.1.tgz#deb55cac196e3f138071911dabbc3726eb048864"
   integrity sha512-k1u2uemjIGsn25zmujKnotgniC/gxQ9sdegdezeDiKdkDW56THUMqlz3urndKCXJxA6yPzSZbXx/QCMe/pxqsA==
@@ -10068,10 +10073,10 @@ railroad-diagrams@^1.0.0:
   resolved "https://registry.yarnpkg.com/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz#eb7e6267548ddedfb899c1b90e57374559cddb7e"
   integrity sha1-635iZ1SN3t+4mcG5Dlc3RVnN234=
 
-rambda@2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-2.6.0.tgz#d99f3a924e63e281332b7818a10b2f65126414fb"
-  integrity sha512-M4l2FCy37Ksy6sK+QuMFogtMK2ylDMlTYlUomnc/eV/8G0yz7jlAAvMkmcqtX0edZoEG1keeaTjDgQbQ5ROZrg==
+rambda@2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-2.7.1.tgz#56c3d4100131db0e252236a26bed75faffa229d8"
+  integrity sha512-EjTEdqAOqMWSgiyIs/7cd9ByCN1hlVq5YBxaTdlmGygIpvAtM+qv4rO2eptiTUIkP8E5lGusuq7hohtFM23knw==
 
 randexp@0.4.6:
   version "0.4.6"
@@ -10211,10 +10216,10 @@ react-group@^3.0.0:
   dependencies:
     prop-types "^15.6.2"
 
-react-hot-loader@4.8.4:
-  version "4.8.4"
-  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.8.4.tgz#357ba342e367fd42d6a870a9c0601c23fa0730c6"
-  integrity sha512-O98btZXcm24ZgP+aPBD0W9N+GEnkOg6vlLEy/IMZ53u3K/dGqO0I/RU4qrmQzE+wMDLpwNo5TwxaAjVw9Y+IBA==
+react-hot-loader@4.8.5:
+  version "4.8.5"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.8.5.tgz#9fb383345f8f059ed160c084f985744047e374d9"
+  integrity sha512-9Stc+7C2p23O9iOB78t+fKNxSxNfgXJpwsiToRuZZe7rNFJ0IMCyesXF2ls70XIxAzgnU36FzfW9c9mXhTz2xQ==
   dependencies:
     fast-levenshtein "^2.0.6"
     global "^4.3.0"
@@ -10226,10 +10231,10 @@ react-hot-loader@4.8.4:
     shallowequal "^1.0.2"
     source-map "^0.7.3"
 
-react-i18next@10.9.0:
-  version "10.9.0"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-10.9.0.tgz#fdbb83d0d7a5bc7638e58088833f55581ec13f4e"
-  integrity sha512-jnutkawC0UVUCwcMPtLiLmCi1HjcHkKla+QiAAYy23SR3mEJtDXvd7ztI08vOHYNT2eUPqdPrdiD6/Xc607CGA==
+react-i18next@10.9.1:
+  version "10.9.1"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-10.9.1.tgz#98d96954eb2249746e190b1fdd96782916b20d98"
+  integrity sha512-e00AJK6AImhqBY3diqbO2UI8Sq3rt4IF1LikadpIei+1fqNWobZ0gDAEXGxMoiG/rbd+JfpBI68Kg42pUf9m4A==
   dependencies:
     "@babel/runtime" "^7.3.1"
     html-parse-stringify2 "2.0.1"
@@ -10314,10 +10319,10 @@ react-snap@1.23.0:
     serve-static "1.13.2"
     sourcemapped-stacktrace-node "2.1.8"
 
-react-styleguidist@9.0.9:
-  version "9.0.9"
-  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-9.0.9.tgz#e8078e188a1c2c4a03cf70441a7b17bbd489a985"
-  integrity sha512-Vh/hFugGxATjrO6H9PQux5tR/qyqG1U2gcz7t0lR9fbR9C1XhnOSxMoVJoNrVE3epCGDH6pN590P675QfIX/sw==
+react-styleguidist@9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-9.1.0.tgz#a546b546052a3b684124fe44b1add87ccadf44a6"
+  integrity sha512-0HgX6BE6bMEjRVexWSV0otCbV8+VsVizC4wu6ADxeRgj5Pdfg+O+D+vaRL0CyIp0hRnhz7wzQkNTRiNB72AWVw==
   dependencies:
     "@vxna/mini-html-webpack-template" "^0.1.7"
     acorn "^6.1.1"
@@ -10373,6 +10378,7 @@ react-styleguidist@9.0.9:
     recast "^0.17.4"
     remark "^10.0.1"
     rewrite-imports "1.2.0"
+    strip-html-comments "^1.0.0"
     terser-webpack-plugin "^1.2.3"
     to-ast "^1.0.0"
     type-detect "^4.0.8"
@@ -11724,6 +11730,11 @@ strip-eof@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/strip-eof/-/strip-eof-1.0.0.tgz#bb43ff5598a6eb05d89b59fcd129c983313606bf"
   integrity sha1-u0P/VZim6wXYm1n80SnJgzE2Br8=
+
+strip-html-comments@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/strip-html-comments/-/strip-html-comments-1.0.0.tgz#0ae7dff0300a6075a4c293fb6111b4cb1d0cb7b7"
+  integrity sha1-Cuff8DAKYHWkwpP7YRG0yx0Mt7c=
 
 strip-indent@^1.0.1:
   version "1.0.1"
