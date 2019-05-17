@@ -7,8 +7,9 @@ module.exports = () => {
     new GenerateSW({
       swDest: 'sw.js',
       include: [/\.html$/, /\.js$/, /\.json$/],
-      exclude: [/\.jpg$/, /\.png$/, /\.map$/, /^manifest.*\.js(?:on)?$/],
+      exclude: [/\.jpg$/, /\.png$/, /\.map$/, /runtime.*\.js$/, /^manifest.*\.js(?:on)?$/],
       precacheManifestFilename: 'manifest.[manifestHash].js',
     }),
   ]
 }
+
