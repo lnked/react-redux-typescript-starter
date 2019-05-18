@@ -20,28 +20,42 @@ module.exports.getTemplate = (type = 'class', name) => {
     )
   }
 
+  if (type === 'test') {
+    template.push(
+      `import * as React from 'react';`,
+      `import renderer from 'react-test-renderer';\n`,
+      `import ${name} from './';\n`,
+      `test('it works', done => {`,
+      `\tconsole.log(done);`,
+      `\tconst tree: any = renderer.create(<${name} />).toJSON();`,
+      `\texpect(tree.props.value).toBe(1);`,
+      `});\n`,
+    )
+  }
+
   if (type === 'function') {
     template.push(
-      `import * as React from 'react'\n`,
+      `import * as React from 'react';\n`,
 
-      `import { OuterProps } from './types'`,
-      `import { StyledDiv } from './styled'\n`,
+      `import { OuterProps } from './types';`,
+      `import { StyledDiv } from './styled';\n`,
 
       `const ${name}: React.FC<OuterProps> = (props: OuterProps) => {`,
-      `\tconst itemReferer = React.createRef<HTMLInputElement>()`,
-      `\tconst [count, setCount] = useState(value)`
-      `\treturn <StyledDiv {...props} />`,
-      `}\n`,
-
-      `export default ${name}\n`,
+      `\t// const itemReferer = React.createRef<HTMLInputElement>();`,
+      `\t// const [count, setCount] = useState(value);\n`,
+      `\treturn (`,
+      `\t\t<StyledDiv {...props} />`,
+      `\t);`,
+      `};\n`,
+      `export default ${name};\n`,
     )
   }
 
   if (type === 'class') {
     template.push(
-      `import * as React from 'react'\n`,
-      `import { OuterProps, InnerState } from './types'`,
-      `import { StyledDiv, StyledButton } from './styled'\n`,
+      `import * as React from 'react';\n`,
+      `import { OuterProps, InnerState } from './types';`,
+      `import { StyledDiv, StyledButton } from './styled';\n`,
       `class ${name} extends React.Component<OuterProps, InnerState> {\n`,
 
       `\tstatic defaultProps = {`,
@@ -60,23 +74,23 @@ module.exports.getTemplate = (type = 'class', name) => {
       `\t\t\treturn {`,
       `\t\t\t\t...state,`,
       `\t\t\t\t...props,`,
-      `\t\t\t}`,
+      `\t\t\t};`,
       `\t\t}`,
 
-      `\t\treturn null`,
+      `\t\treturn null;`,
       `\t}\n`,
 
       `\tshouldComponentUpdate (props: OuterProps) {`,
-      `\t\tconst { value } = this.props`,
-      `\t\treturn !(value === props.value)`,
+      `\t\tconst { value } = this.props;`,
+      `\t\treturn !(value === props.value);`,
       `\t}\n`,
 
       `\tcomponentDidMount () {`,
-      `\t\tconsole.log('componentDidMount')`,
+      `\t\tconsole.log('componentDidMount');`,
       `\t}\n`,
 
       `\tcomponentDidUpdate (props: OuterProps, state: InnerState) {`,
-      `\t\tconsole.log('du', props, state)`,
+      `\t\tconsole.log('du', props, state);`,
       `\t}\n`,
 
       `\tcomponentWillUnmount () {}\n`,
@@ -84,20 +98,20 @@ module.exports.getTemplate = (type = 'class', name) => {
       `\thandleClick = (e: any) => {`,
       `\t\tthis.setState((state: InnerState) => ({ ...state, value: e.target.value }))\n`,
       `\t\tif (this.props.handleClick) {`,
-      `\t\t\tthis.props.handleClick(e)`,
+      `\t\t\tthis.props.handleClick(e);`,
       `\t\t}`,
       `\t}\n`,
 
       `\trender () {`,
-      `\t\tconst { className } = this.props\n`,
+      `\t\tconst { className } = this.props;\n`,
       `\t\treturn (`,
       `\t\t\t<StyledDiv className={cx({ test: true }, className)}>`,
       `\t\t\t\t<StyledButton onClick={this.handleClick} />`,
       `\t\t\t</StyledDiv>`,
-      `\t\t)`,
+      `\t\t);`,
       `\t}\n`,
       `}\n`,
-      `export default ${name}\n`,
+      `export default ${name};\n`,
     )
   }
 
@@ -125,13 +139,12 @@ module.exports.getTemplate = (type = 'class', name) => {
 
   if (type === 'styled') {
     template.push(
-      `import styled from '@emotion/styled'`,
-      `import CommonStyles from 'theme/common-styles'\n`,
+      `import styled from '@emotion/styled';\n`,
+      `import { CommonStyles } from 'theme';\n`,
       `export const StyledDiv = styled.div\``,
-      `\t\${CommonStyles.themeColor};`,
-      `\`\n`,
-
-      `export const StyledButton = styled.button\`\`\n`,
+      `\tcolor: \${CommonStyles.themeColor};`,
+      `\`;\n`,
+      `export const StyledButton = styled.button\`\`;\n`,
     )
   }
 
