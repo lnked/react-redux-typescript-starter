@@ -12,18 +12,12 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
   const [lng, setLanguage] = React.useState(initialLanguage);
   const { t, i18n } = useTranslation(lng);
 
-  const handleChange = (name: string) => {
-    return (e: any, value: any) => {
-      console.info(
-        'change: ',
-        {
-          e,
-          name,
-          value,
-        }
-      );
-    };
-  };
+  const handleChange = (name: string) => (e: any, value: any) =>
+    console.info('change: ', {
+      e,
+      name,
+      value,
+    });
 
   return (
     <div>
@@ -34,9 +28,7 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
       <div>1&nbsp;&nbsp;&nbsp;2</div>
 
       <div style={{ marginBottom: 20 }}>
-        <Input
-          onChange={handleChange('v1')}
-        />
+        <Input onChange={handleChange('v1')} />
       </div>
 
       <div style={{ marginBottom: 20 }}>

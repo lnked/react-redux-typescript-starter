@@ -1,7 +1,7 @@
 module.exports = {
   linters: {
     './src/**/*.{ts,tsx}': [
-      'yarn lint:fix',
+      'yarn lint',
       'git add -A'
     ],
     '**/*.{json,md,yaml,yml}': [

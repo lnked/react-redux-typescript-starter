@@ -5,7 +5,7 @@ const ObjectStore = observable({
   age: 30,
 
   get nickName() {
-    console.log('Generate nickName!');
+    // console.log('Generate nickName!');
     return `${this.firstName}${this.age}`;
   },
 

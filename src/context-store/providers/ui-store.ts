@@ -15,7 +15,7 @@ export const UiStore = {
 //   }
 
 //   constructor (initialState?: any) {
-//     console.log({ initialState })
+//     // console.log({ initialState })
 //   }
 
 //   get view_type () {

@@ -27,8 +27,5 @@ export default class CounterStore {
 }
 
 autorun(() => {
-  console.log('Completed %d of %d items',
-              appState.completedCount,
-              appState.todos.length
-  );
+  console.log('Completed %d of %d items', appState.completedCount, appState.todos.length);
 });

@@ -14,7 +14,7 @@ export const AppStore = {
 //   isLoading: boolean = false
 
 //   constructor (initialState?: any) {
-//     console.log({ initialState })
+//     // console.log({ initialState })
 //   }
 
 //   get getState () {

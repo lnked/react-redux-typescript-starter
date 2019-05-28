@@ -8,7 +8,7 @@
 // test('it works', done => {
 //   const input = tree.children.find((item: any) => item.type === 'input')
 
-//   // console.log(input, input.props)
+//   // // console.log(input, input.props)
 
 //   expect(input.props.value).toBe(1)
 //   expect(input.props.checked).toBeFalsy()

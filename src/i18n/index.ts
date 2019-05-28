@@ -40,11 +40,11 @@ i18n
   });
 
 export const i18nInit = () => {
-  i18n.on('languageChanged', lng => console.log('languageChanged: ', lng));
+  i18n.on('languageChanged', lng => alert(`languageChanged ${lng}`));
 };
 
 export const i18nUnload = () => {
-  i18n.off('languageChanged', lng => console.log('languageChanged: ', lng));
+  i18n.off('languageChanged', lng => alert(`languageChanged ${lng}`));
 };
 
 export default i18n;

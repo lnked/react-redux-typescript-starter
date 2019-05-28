@@ -19,5 +19,5 @@ export interface OuterProps {
   className?: string;
   defaultValue?: valueType;
   inputClassName?: string;
-  onChange?: (e: eventType) => void;
+  onChange?: (e: eventType, value?: valueType) => void;
 }

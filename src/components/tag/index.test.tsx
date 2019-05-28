@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import Tag from './';
 
 test('it works', done => {
-  console.log(done);
+  // console.log(done);
   const tree: any = renderer.create(<Tag />).toJSON();
   expect(tree.props.value).toBe(1);
 });

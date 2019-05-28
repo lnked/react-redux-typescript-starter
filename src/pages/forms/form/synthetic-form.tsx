@@ -89,12 +89,12 @@ export class SyntheticForm extends React.Component<OuterProps, OuterState> {
   }
 
   handleBlur = (e?: React.FormEvent<HTMLInputElement>) => {
-    console.log(e, 'handleBlur 1');
+    // console.log(e, 'handleBlur 1');
   }
 
   handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
-    console.log(e);
-    console.log('handleFocus 1');
+    // console.log(e);
+    // console.log('handleFocus 1');
   }
 
   setSubmitting = (isSubmitting: boolean) => {
@@ -117,7 +117,7 @@ export class SyntheticForm extends React.Component<OuterProps, OuterState> {
   handleReset = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log('reset', e);
+    // console.log('reset', e);
   }
 
   render () {
