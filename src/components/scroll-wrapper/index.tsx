@@ -1,30 +1,29 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
 import styles from './styles.module.scss';
 
-class ScrollWrapper extends Component {
-  static propTypes = {
-    children: PropTypes.oneOfType([
-      PropTypes.array,
-      PropTypes.object,
-    ]).isRequired,
-    forwardRef: PropTypes.object.isRequired,
-    className: PropTypes.string,
-    onStartScroll: PropTypes.func,
-    onEndScroll: PropTypes.func,
-  };
+export interface OuterTypes {
+  children: React.ReactChildren;
+  forwardRef: React.ReactElement;
+  className?: string;
+  onStartScroll?: () => {};
+  onEndScroll?: () => {};
+}
 
+export interface InnerState {
+  dragging: boolean;
+}
+
+class ScrollWrapper extends Component<OuterTypes, InnerState> {
   static defaultProps = {
     list: [],
     selected: [],
     loading: true,
-  };
+  }
 
   state = {
     dragging: false,
-  };
+  }
 
   moving = false;
 
