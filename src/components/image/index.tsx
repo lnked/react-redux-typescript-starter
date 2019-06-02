@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Picture, Source, Loading } from './styles';
+import ProgressiveImage from 'react-progressive-image';
 
 export interface OuterProps {
   src: string;
@@ -10,25 +11,25 @@ export interface OuterProps {
   className?: string;
 }
 
-const loadedStack = {};
-
 const Image: React.FC<OuterProps> = ({ src, className, ...props }: OuterProps) => {
-  const [loaded, setLoaded] = useState(loadedStack[src] || false);
-
-  const onLoad = () => {
-    setLoaded(true);
-    loadedStack[src] = true;
-  };
-
   return (
     <Picture className={className}>
-      {/* <source srcSet='[hash].webp' type='image/webp' /> */}
-      {loaded || <Loading>Loading...</Loading>}
-      <Source
-        {...props}
-        src={src}
-        onLoad={onLoad}
-      />
+      <ProgressiveImage src={src} placeholder={src}>
+        {(resource = '', loading = true) => {
+          if (loading) {
+            return (
+              <Loading>Loading...</Loading>
+            );
+          }
+
+          return (
+            <Source
+              {...props}
+              src={resource}
+            />
+          );
+        }}
+      </ProgressiveImage>
     </Picture>
   );
 };
@@ -41,49 +42,3 @@ Image.defaultProps = {
 };
 
 export default Image;
-
-// export default ImageLoader;
-
-// class IronImage extends Component {
-
-//   constructor(props) {
-//     super(props);
-//     this.ironImageHd = null;
-//   }
-
-//   componentDidMount() {
-
-//     const hdLoaderImg = new Image();
-
-//     hdLoaderImg.src = this.props.srcLoaded;
-
-//     hdLoaderImg.onload = () => {
-//       this.ironImageHd.setAttribute(
-//         'style',
-//         `background-image: url('${this.props.srcLoaded}')`
-//       );
-//       this.ironImageHd.classList.add('iron-image-fade-in');
-//     }
-
-//   };
-
-//   render() {
-//     return (
-//       <div className='iron-image-container'>
-
-//         <div
-//           className='iron-image-loaded'
-//           ref={imageLoadedElem => this.ironImageHd = imageLoadedElem}>
-//         </div>
-//         <div
-//           className='iron-image-preload'
-//           style={{ backgroundImage: `url('${this.props.srcPreload}')` }}>
-//         </div>
-
-//       </div>
-//     )
-//   }
-
-// }
-
-// export default IronImage;
