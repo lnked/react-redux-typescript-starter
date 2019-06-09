@@ -19,11 +19,11 @@ class ScrollWrapper extends Component<OuterTypes, InnerState> {
     list: [],
     selected: [],
     loading: true,
-  }
+  };
 
   state = {
     dragging: false,
-  }
+  };
 
   moving = false;
 
@@ -54,7 +54,7 @@ class ScrollWrapper extends Component<OuterTypes, InnerState> {
     }
   }
 
-  mouseDownHandle = (e) => {
+  mouseDownHandle = e => {
     e.preventDefault();
     const { dragging } = this.state;
     const { onStartScroll } = this.props;
@@ -68,7 +68,7 @@ class ScrollWrapper extends Component<OuterTypes, InnerState> {
     }
   }
 
-  mouseMoveHandle = (e) => {
+  mouseMoveHandle = e => {
     const { dragging } = this.state;
     const { forwardRef } = this.props;
 
@@ -81,7 +81,7 @@ class ScrollWrapper extends Component<OuterTypes, InnerState> {
     }
   }
 
-  handleClick = onClick => (e) => {
+  handleClick = onClick => e => {
     e.preventDefault();
     const { dragging } = this.state;
 
