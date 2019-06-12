@@ -1387,10 +1387,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.3.tgz#5d8d24e0033fc6393efadc85cb59c1f638095c9a"
   integrity sha512-zkOxCS/fA+3SsdA+9Yun0iANxzhQRiNwTvJSr6N95JhuJ/x27z9G2URx1Jpt3zYFfCGUXZGL5UDxt5eyLE7wgw==
 
-"@types/node@12.0.7":
-  version "12.0.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.7.tgz#4f2563bad652b2acb1722d7e7aae2b0ff62d192c"
-  integrity sha512-1YKeT4JitGgE4SOzyB9eMwO0nGVNkNEsm9qlIt1Lqm/tG2QEiSMTD4kS3aO6L+w5SClLVxALmIBESK6Mk5wX0A==
+"@types/node@12.0.8":
+  version "12.0.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.8.tgz#551466be11b2adc3f3d47156758f610bd9f6b1d8"
+  integrity sha512-b8bbUOTwzIY3V5vDTY1fIJ+ePKDUBqt2hC2woVGotdQQhG/2Sh62HOKHrT7ab+VerXAcPyAiTEipPu/FsreUtg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -6104,10 +6104,10 @@ https-proxy-agent@^2.2.1:
     agent-base "^4.1.0"
     debug "^3.1.0"
 
-husky@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-2.4.0.tgz#1bac7c44588f6e91f808b72efc82d24a57194f36"
-  integrity sha512-3k1wuZU20gFkphNWMjh2ISCFaqfbaLY7R9FST2Mj9HeRhUK9ydj9qQR8qfXlog3EctVGsyeilcZkIT7uBZDDVA==
+husky@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-2.4.1.tgz#dd00f9646f8693b93f7b3a12ba4be00be0eff7ab"
+  integrity sha512-ZRwMWHr7QruR22dQ5l3rEGXQ7rAQYsJYqaeCd+NyOsIFczAtqaApZQP3P4HwLZjCtFbm3SUNYoKuoBXX3AYYfw==
   dependencies:
     cosmiconfig "^5.2.0"
     execa "^1.0.0"
@@ -10410,10 +10410,10 @@ react-snap@1.23.0:
     serve-static "1.13.2"
     sourcemapped-stacktrace-node "2.1.8"
 
-react-styleguidist@9.1.5:
-  version "9.1.5"
-  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-9.1.5.tgz#0d39d8cc35971e2605605f434b58ac2e74f51d73"
-  integrity sha512-6kbSSXo9wov8p2GsvdtHqLYAkOhvLR+vXvl+4eKpNAAhiJWQ/IruxJl5UsJBp09yjqbNbTJZ8QeTp+kGAdasaA==
+react-styleguidist@9.1.6:
+  version "9.1.6"
+  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-9.1.6.tgz#bf6f4d1183aab59e0f13e8d7113632549769b8de"
+  integrity sha512-ALfa/8C/VgsTKMWqmB0qtpQ9taiyQeFrwkADzR12RsFrSCsboUFaOgioHO72Du32BzwzWNx/5gGsR7jbt432hg==
   dependencies:
     "@vxna/mini-html-webpack-template" "^0.1.7"
     acorn "^6.1.1"
@@ -10493,10 +10493,10 @@ react-testing-library@8.0.1:
   resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-8.0.1.tgz#b3dd43bce3fa88423cf0a23292fb819023c227cc"
   integrity sha512-Gq4JC9r3prA4hYwo7afcbHHMFckO29+5Nrh2KblAEPuK/DWaU0bJE1vtpAgLhzhY9bBirmcgjjIHljHEwGAXKw==
 
-react-use-localstorage@3.0.1-alpha.0:
-  version "3.0.1-alpha.0"
-  resolved "https://registry.yarnpkg.com/react-use-localstorage/-/react-use-localstorage-3.0.1-alpha.0.tgz#b53268f9c3ec908afe9a79a92d3f1d5bd5ae03a2"
-  integrity sha512-2rVIepBi3RrFtzoclpTDDIjLxXPQEWpVMrgrLO0EunQJDv5g5M9ORE+gXXnPYf0Zs7kg/+khQiDZajCgyILz3w==
+react-use-localstorage@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-use-localstorage/-/react-use-localstorage-3.1.0.tgz#68a99cacafdf350196e0f9643875ade4dc79e0e4"
+  integrity sha512-Ov9VqTnxiEd2mWK+27sX5vyfYRDeE7XCzqRy7SauwNHd2PuHN4QIF7rGQmBgz9dhkXV9bimfdajD5kpaI7ci+w==
 
 react@16.8.6:
   version "16.8.6"
