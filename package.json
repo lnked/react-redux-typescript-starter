@@ -195,7 +195,7 @@
     "i18next": "17.0.3",
     "mobx": "5.10.1",
     "mobx-logger": "0.7.1",
-    "mobx-react": "6.0.3",
+    "mobx-react": "6.0.4",
     "mobx-react-devtools": "6.1.1",
     "mobx-react-router": "4.0.7",
     "nanoid": "2.0.3",
