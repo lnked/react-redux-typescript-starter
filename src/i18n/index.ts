@@ -22,29 +22,19 @@ const resources = {
 i18n
   .use(initReactI18next)
   .init({
-    lng: 'en',
+    lng: 'ru',
     resources,
     debug: environment.development,
-    whitelist: ['en', 'ru'],
     fallbackNS: `translations`,
-    nsSeparator: false,
-    fallbackLng: false,
-    keySeparator: false,
-    // interpolation: {
-    //   escapeValue: false,
-    //   formatSeparator: '.',
-    // },
-    react: {
-      wait: true,
-    },
+    appendNamespaceToCIMode: true,
   });
 
 export const i18nInit = () => {
-  i18n.on('languageChanged', lng => alert(`languageChanged ${lng}`));
+  i18n.on('languageChanged', lng => console.info(`languageChanged ${lng}`));
 };
 
 export const i18nUnload = () => {
-  i18n.off('languageChanged', lng => alert(`languageChanged ${lng}`));
+  i18n.off('languageChanged', lng => console.info(`languageChanged ${lng}`));
 };
 
 export default i18n;
