@@ -10338,10 +10338,10 @@ react-hot-loader@4.11.1:
     shallowequal "^1.0.2"
     source-map "^0.7.3"
 
-react-i18next@10.11.1:
-  version "10.11.1"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-10.11.1.tgz#29b9be5161143a11a7d3ee28769c091b26c525a5"
-  integrity sha512-uzfMdGFbe0bZQkR8XyBUw1BV4rPBQ6X3+TgvMWdW94LeKrDrXBcyfokdejTYQpMlOMtf7TGrhQT9fLIfr+gftg==
+react-i18next@10.11.2:
+  version "10.11.2"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-10.11.2.tgz#d8bace8a6383533bd4e0f79a911012bbe5a37c7d"
+  integrity sha512-Ru+WonG9BLILDg/By7Pw0Lne2I7HVLRyhyvDtar22tNNu6de2D89zAKl2RzK2jgq7m7l+BFSnLpz4kX7ZPV+JQ==
   dependencies:
     "@babel/runtime" "^7.3.1"
     html-parse-stringify2 "2.0.1"
@@ -10431,10 +10431,10 @@ react-snap@1.23.0:
     serve-static "1.13.2"
     sourcemapped-stacktrace-node "2.1.8"
 
-react-styleguidist@9.1.8:
-  version "9.1.8"
-  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-9.1.8.tgz#bb161d3280d2f2cd641910ead8090c7f3fb76463"
-  integrity sha512-eF3v27cRNw26Jxwehh4iFofu2LJqam8b9wLoQQQ0eJ0qz6Ld4CH5nHO3YgWl3ULADHGI2RGwDQujhhAWBWn7tQ==
+react-styleguidist@9.1.9:
+  version "9.1.9"
+  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-9.1.9.tgz#31a910b0884587782b10bca03c20a62d96abce5c"
+  integrity sha512-VKatw7OZGzU8ahHdv0nN281TMw5dyRW1khzdLnyI3lqUqhLKroNEhrkZXTBlZqLUXmykdwc0fKGaDAdagXvP8w==
   dependencies:
     "@vxna/mini-html-webpack-template" "^0.1.7"
     acorn "^6.1.1"
