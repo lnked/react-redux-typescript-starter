@@ -1461,10 +1461,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/react@16.8.20":
-  version "16.8.20"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.20.tgz#4f633ecbd0a4d56d0ccc50fff6f9321bbcd7d583"
-  integrity sha512-ZLmI+ubSJpfUIlQuULDDrdyuFQORBuGOvNnMue8HeA0GVrAJbWtZQhcBvnBPNRBI/GrfSfrKPFhthzC2SLEtLQ==
+"@types/react@16.8.21":
+  version "16.8.21"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.21.tgz#aefb32519a4111964993be5b2bd3f172f81c34ff"
+  integrity sha512-+jAtgtJ3htE+VEP/bMzBBOANGkaTbMOGYWVrmhCVtp2WE//lNG6Irw9kBEaLR7lQGjjkt/BlSSHPgArFNOKhkg==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -4685,6 +4685,11 @@ estraverse@^4.1.0, estraverse@^4.1.1, estraverse@^4.2.0:
   resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-4.2.0.tgz#0dee3fed31fcd469618ce7342099fc1afa0bdb13"
   integrity sha1-De4/7TH81GlhjOc0IJn8GvoL2xM=
 
+estree-walker@^0.6.0:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-0.6.1.tgz#53049143f40c6eb918b23671d1fe3219f3a1b362"
+  integrity sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==
+
 esutils@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-1.1.6.tgz#c01ccaa9ae4b897c6d0c3e210ae52f3c7a844375"
@@ -6131,10 +6136,10 @@ hyphenate-style-name@^1.0.2:
   resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.3.tgz#097bb7fa0b8f1a9cf0bd5c734cf95899981a9b48"
   integrity sha512-EcuixamT82oplpoJ2XU4pDtKGWQ7b00CD9f1ug9IaQ3p1bkHMiKCZ9ut9QDI6qsa6cpUuB+A/I+zLtdNK4n2DQ==
 
-i18next@17.0.3:
-  version "17.0.3"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-17.0.3.tgz#82d67826d13e8ca2cd2a3c87871533414e952d03"
-  integrity sha512-vQyW6a4ZLt3Dxnd6GXSnhbW5DwGYC4uLPKk1MFE5pfFbR9CEiNatdwwUZDQfrcNOh2x0eOGDFYeCEyLlkLvDQA==
+i18next@17.0.4:
+  version "17.0.4"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-17.0.4.tgz#c690b9de0c950ff8abe626562d03c4144dd75030"
+  integrity sha512-+lwmv3FT8Sv/HwVPjkR6rtEFhgOqt9L/CTehzyxvL/NdkeUYbFZJfE57MsBToB6LFWg3d0sZJIVgYqCpWzUyLQ==
   dependencies:
     "@babel/runtime" "^7.3.1"
 
@@ -8471,10 +8476,10 @@ mobx-react-router@4.0.7:
   resolved "https://registry.yarnpkg.com/mobx-react-router/-/mobx-react-router-4.0.7.tgz#d248a0e0525049f0e37e94f2fb1ab09563be4c35"
   integrity sha512-x7eza70EimFyvF0VPyj5X2MYo9jksy61UVwz5ERXWnXVE911XRTL/V2kXiX7fvVtMHzp5m2q/kxBoti9uNixEw==
 
-mobx-react@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-6.1.0.tgz#83ced737728be4995f53fdd7421b67bd54d56d0a"
-  integrity sha512-Jv3YILPU1wmeRVJuBvTlMIMlSCHjIUHwyM8a4b8EjzL1s+uwBiGSH5ynlGrkIk2yU1yz8kwngU9UDOWgwhlleQ==
+mobx-react@6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-6.1.1.tgz#24a2c8a3393890fa732b4efd34cc6dcccf6e0e7a"
+  integrity sha512-hjACWCTpxZf9Sv1YgWF/r6HS6Nsly1SYF22qBJeUE3j+FMfoptgjf8Zmcx2d6uzA07Cezwap5Cobq9QYa0MKUw==
   dependencies:
     mobx-react-lite "1.4.0"
 
@@ -10426,10 +10431,10 @@ react-snap@1.23.0:
     serve-static "1.13.2"
     sourcemapped-stacktrace-node "2.1.8"
 
-react-styleguidist@9.1.7:
-  version "9.1.7"
-  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-9.1.7.tgz#48c45691b4b6a4340aee29e3061a57bfaf22be80"
-  integrity sha512-M1tAg20G1C2M1Vzm9gcJBcaTao7iQgdRE4ihMrnCRrJZJOioUejp6fALqIt+GTbLNDC7ds6UZb0ZJhf9dXyQWw==
+react-styleguidist@9.1.8:
+  version "9.1.8"
+  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-9.1.8.tgz#bb161d3280d2f2cd641910ead8090c7f3fb76463"
+  integrity sha512-eF3v27cRNw26Jxwehh4iFofu2LJqam8b9wLoQQQ0eJ0qz6Ld4CH5nHO3YgWl3ULADHGI2RGwDQujhhAWBWn7tQ==
   dependencies:
     "@vxna/mini-html-webpack-template" "^0.1.7"
     acorn "^6.1.1"
@@ -10446,6 +10451,7 @@ react-styleguidist@9.1.7:
     es6-object-assign "~1.1.0"
     es6-promise "^4.2.6"
     escodegen "^1.11.1"
+    estree-walker "^0.6.0"
     findup "^0.1.5"
     function.name-polyfill "^1.0.6"
     github-slugger "^1.2.1"
@@ -10490,7 +10496,6 @@ react-styleguidist@9.1.7:
     to-ast "^1.0.0"
     type-detect "^4.0.8"
     unist-util-visit "^1.4.0"
-    walkes "^0.2.1"
     webpack-dev-server "^3.2.1"
     webpack-merge "^4.2.1"
 
@@ -12823,11 +12828,6 @@ walker@^1.0.7, walker@~1.0.5:
   dependencies:
     makeerror "1.0.x"
 
-walkes@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/walkes/-/walkes-0.2.1.tgz#7eca144fe67ed32782fffe6e8e95fb4481864796"
-  integrity sha1-fsoUT+Z+0yeC//5ujpX7RIGGR5Y=
-
 warning@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
@@ -13029,7 +13029,37 @@ webpack-subresource-integrity@1.3.2:
   dependencies:
     webpack-sources "^1.3.0"
 
-webpack@4.34.0, webpack@^4.34.0:
+webpack@4.35.0:
+  version "4.35.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.35.0.tgz#ad3f0f8190876328806ccb7a36f3ce6e764b8378"
+  integrity sha512-M5hL3qpVvtr8d4YaJANbAQBc4uT01G33eDpl/psRTBCfjxFTihdhin1NtAKB1ruDwzeVdcsHHV3NX+QsAgOosw==
+  dependencies:
+    "@webassemblyjs/ast" "1.8.5"
+    "@webassemblyjs/helper-module-context" "1.8.5"
+    "@webassemblyjs/wasm-edit" "1.8.5"
+    "@webassemblyjs/wasm-parser" "1.8.5"
+    acorn "^6.0.5"
+    acorn-dynamic-import "^4.0.0"
+    ajv "^6.1.0"
+    ajv-keywords "^3.1.0"
+    chrome-trace-event "^1.0.0"
+    enhanced-resolve "^4.1.0"
+    eslint-scope "^4.0.0"
+    json-parse-better-errors "^1.0.2"
+    loader-runner "^2.3.0"
+    loader-utils "^1.1.0"
+    memory-fs "~0.4.1"
+    micromatch "^3.1.8"
+    mkdirp "~0.5.0"
+    neo-async "^2.5.0"
+    node-libs-browser "^2.0.0"
+    schema-utils "^1.0.0"
+    tapable "^1.1.0"
+    terser-webpack-plugin "^1.1.0"
+    watchpack "^1.5.0"
+    webpack-sources "^1.3.0"
+
+webpack@^4.34.0:
   version "4.34.0"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.34.0.tgz#a4c30129482f7b4ece4c0842002dedf2b56fab58"
   integrity sha512-ry2IQy1wJjOefLe1uJLzn5tG/DdIKzQqNlIAd2L84kcaADqNvQDTBlo8UcCNyDaT5FiaB+16jhAkb63YeG3H8Q==
