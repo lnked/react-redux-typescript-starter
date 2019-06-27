@@ -1,6 +1,7 @@
-const path = require('path');
+const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const { configs } = require('../../html-minify');
 const { root, production } = require('../../options');
 
 const options = production ? {
@@ -8,32 +9,12 @@ const options = production ? {
   cache: true,
   inject: true,
   compile: false,
-  prefetch: ['**/*.js'],
   preload: ['**/*.js'],
+  prefetch: ['**/*.js'],
   chunksSortMode: 'dependency',
   production: production,
   minify: {
-    html5: true,
-    caseSensitive: true,
-    keepClosingSlash: true,
-    removeComments: true,
-    decodeEntities: true,
-    customAttrAssign: true,
-    collapseWhitespace: true,
-    removeAttributeQuotes: true,
-    removeEmptyAttributes: true,
-    preventAttributesEscaping: true,
-    processConditionalComments: true,
-    removeRedundantAttributes: true,
-    removeScriptTypeAttributes: true,
-    removeStyleLinkTypeAttributes: true,
-    collapseBooleanAttributes: true,
-    collapseInlineTagWhitespace: true,
-    trimCustomFragments: true,
-    useShortDoctype: true,
-    minifyJS: true,
-    minifyCSS: true,
-    minifyURLs: true,
+    ...configs,
   },
 } : {
   minify: false,
@@ -45,7 +26,7 @@ module.exports = () => {
       title: 'React app',
       inject: true,
       filename: 'index.html',
-      template: path.resolve(root, 'public/index.html'),
+      template: resolve(root, 'public/index.html'),
       description: 'React starter',
       PUBLIC_URL: '/',
       ...options

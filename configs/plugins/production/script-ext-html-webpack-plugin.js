@@ -1,7 +1,6 @@
 const CRYPTO = require('crypto');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
-const HtmlWebpackPolyfillIOPlugin = require('html-webpack-polyfill-io-plugin2');
 const CspHtmlWebpackPlugin = require('csp-html-webpack-plugin');
 // const SriPlugin = require('webpack-subresource-integrity');
 
@@ -21,9 +20,6 @@ module.exports = () => {
         attribute: 'nonce',
         value: 'nonce-' + sha256Str,
       }],
-    }),
-    new HtmlWebpackPolyfillIOPlugin({
-      minify: options.production,
     }),
     new HtmlWebpackExcludeAssetsPlugin(),
     new CspHtmlWebpackPlugin({

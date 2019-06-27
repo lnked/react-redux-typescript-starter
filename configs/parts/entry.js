@@ -1,4 +1,5 @@
-const path = require('path');
+const { resolve } = require('path');
+
 const options = require('../options');
 const { polyfills } = require('../polyfills');
 
@@ -6,7 +7,7 @@ module.exports = {
   entry: {
     app: [
       // ...polyfills,
-      path.resolve(options.sourcePath, 'client.tsx'),
+      resolve(options.sourcePath, 'client.tsx'),
     ],
   },
 }

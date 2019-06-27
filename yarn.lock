@@ -5999,11 +5999,6 @@ html-webpack-plugin@3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
-html-webpack-polyfill-io-plugin2@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/html-webpack-polyfill-io-plugin2/-/html-webpack-polyfill-io-plugin2-0.0.2.tgz#24da97265dbd5ef32581d71efb285fd88892b5cf"
-  integrity sha512-8YUV4MvkRCKA20KBo6dhBcyzfiMSRuGZt1Bkcxw195Ff94xGKRyZGwsbds2FyZnRj0rUfa/4Hfh0sjJhzH8kKw==
-
 htmlparser2@^3.3.0, htmlparser2@^3.9.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-3.10.1.tgz#bd679dc3f59897b6a34bb10749c855bb53a9392f"

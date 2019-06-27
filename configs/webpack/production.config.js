@@ -1,4 +1,5 @@
 const merge = require('webpack-merge');
+
 const bail = require('../parts/bail');
 const performance = require('../parts/performance');
 const optimization = require('../parts/optimization');

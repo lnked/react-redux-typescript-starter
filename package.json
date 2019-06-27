@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clear:dist": "rimraf -rf ./dist/*",
     "clear:cache": "rimraf -rf ./.cache/*",
     "prestart": "cross-env NODE_ENV=development",
-    "prebuild": "cross-env NODE_ENV=production yarn lint",
-    "postrelease": "react-snap && yarn size",
+    "prebuild": "yarn clear:dist && cross-env NODE_ENV=production yarn lint",
+    "postrelease": "yarn snapshots && yarn size",
+    "snapshots": "node configs/snapshots",
     "start": "webpack-dev-server --config configs/run --env development",
     "build": "env NODE_ENV=production webpack --config configs/run --env production",
     "build:display": "env NODE_ENV=production webpack --display-modules --config configs/run --env production",
@@ -25,7 +27,6 @@
     "deploy": "",
     "ci": "yarn test & yarn typecheck & yarn lint",
     "lh": "lighthousebot -- --perf=96 --pwa=100",
-    "c": "rimraf -rf ./dist/test && node ./component.js",
     "a": "yarn clear:cache && yarn analyze",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
@@ -33,16 +34,6 @@
     "add-page": "node configs/utils/add --essence page",
     "add-layout": "node configs/utils/add --essence layout",
     "add-fragment": "node configs/utils/add --essence fragment"
-  },
-  "reactSnap": {
-    "source": "dist",
-    "inlineCss": true,
-    "cacheAjaxRequests": false,
-    "skipThirdPartyRequests": true,
-    "minifyHtml": {
-      "collapseWhitespace": false,
-      "removeComments": true
-    }
   },
   "husky": {
     "hooks": {
@@ -138,7 +129,6 @@
     "html-loader": "0.5.5",
     "html-webpack-exclude-assets-plugin": "0.0.7",
     "html-webpack-plugin": "3.2.0",
-    "html-webpack-polyfill-io-plugin2": "0.0.2",
     "husky": "2.7.0",
     "image-webpack-loader": "5.0.0",
     "imagemin-mozjpeg": "8.0.0",
