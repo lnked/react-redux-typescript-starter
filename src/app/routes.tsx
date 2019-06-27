@@ -8,52 +8,52 @@ import PrivateRoute from './private-route';
 import Home from 'pages/home';
 
 export const Cart = lazyWithPreload(() => import(
-  /* webpackChunkName: "cart" */
+  /* webpackChunkName: "cart", webpackPrefetch: true */
   'pages/cart'
 ));
 
 export const Shop = lazyWithPreload(() => import(
-  /* webpackChunkName: "shop" */
+  /* webpackChunkName: "shop", webpackPrefetch: true */
   'pages/shop'
 ));
 
 export const About = lazyWithPreload(() => import(
-  /* webpackChunkName: "about" */
+  /* webpackChunkName: "about", webpackPrefetch: true */
   'pages/about'
 ));
 
 export const Forms = lazyWithPreload(() => import(
-  /* webpackChunkName: "forms" */
+  /* webpackChunkName: "forms", webpackPrefetch: true */
   'pages/forms'
 ));
 
 export const Login = lazyWithPreload(() => import(
-  /* webpackChunkName: "login" */
+  /* webpackChunkName: "login", webpackPrefetch: true */
   'pages/login'
 ));
 
 export const Topics = lazyWithPreload(() => import(
-  /* webpackChunkName: "topics" */
+  /* webpackChunkName: "topics", webpackPrefetch: true */
   'pages/topics'
 ));
 
 export const Profile = lazyWithPreload(() => import(
-  /* webpackChunkName: "profile" */
+  /* webpackChunkName: "profile", webpackPrefetch: true */
   'pages/profile'
 ));
 
 export const Context = lazyWithPreload(() => import(
-  /* webpackChunkName: "context" */
+  /* webpackChunkName: "context", webpackPrefetch: true */
   'pages/context'
 ));
 
 export const Counter = lazyWithPreload(() => import(
-  /* webpackChunkName: "counter" */
+  /* webpackChunkName: "counter", webpackPrefetch: true */
   'pages/counter'
 ));
 
 export const NoMatch = lazyWithPreload(() => import(
-  /* webpackChunkName: "nomatch" */
+  /* webpackChunkName: "nomatch", webpackPrefetch: true */
   'pages/nomatch'
 ));
 
