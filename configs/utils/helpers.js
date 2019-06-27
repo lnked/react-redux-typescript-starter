@@ -28,7 +28,7 @@ module.exports.getTemplate = (type = 'class', name) => {
       `test('it works', done => {`,
       `\tconsole.log(done);`,
       `\tconst tree: any = renderer.create(<${name} />).toJSON();`,
-      `\texpect(tree.props.value).toBe(1);`,
+      `\texpect(tree.props.value).toEqual(1);`,
       `});\n`,
     )
   }

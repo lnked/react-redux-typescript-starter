@@ -6,5 +6,5 @@ import Tag from './';
 test('it works', done => {
   // console.log(done);
   const tree: any = renderer.create(<Tag />).toJSON();
-  expect(tree.props.value).toBe(1);
+  expect(tree.props.value).toEqual(1);
 });

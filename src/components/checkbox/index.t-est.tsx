@@ -10,7 +10,7 @@
 
 //   // // console.log(input, input.props)
 
-//   expect(input.props.value).toBe(1)
+//   expect(input.props.value).toEqual(1)
 //   expect(input.props.checked).toBeFalsy()
 //   // expect(input.props.checked).toBeTruthy()
 

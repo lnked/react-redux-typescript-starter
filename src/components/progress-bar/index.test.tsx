@@ -6,5 +6,5 @@ import ProgressBar from './';
 test('it works', done => {
   // console.log(done);
   const tree: any = renderer.create(<ProgressBar />).toJSON();
-  expect(tree.props.value).toBe(1);
+  expect(tree.props.value).toEqual(1);
 });

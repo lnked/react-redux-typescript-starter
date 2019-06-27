@@ -9,7 +9,7 @@ const tree: any = renderer.create(<Counter initialCount={3} />).toJSON()
 
 describe('<Counter />', () => {
   it('t-1', done => {
-    expect(tree.type).toBe('div')
+    expect(tree.type).toEqual('div')
     done()
   })
 })
@@ -23,7 +23,7 @@ describe('<Counter />', () => {
 //   for (let i = 0; i < 3; i++) {
 //     button.dispatchEvent(new MouseEvent('click', { bubbles: true }));
 //   }
-//   expect(button.innerHTML).toBe('3');
+//   expect(button.innerHTML).toEqual('3');
 // });
 
 // it('should render 1', () => {
@@ -31,7 +31,7 @@ describe('<Counter />', () => {
 //   act(() => {
 //     ReactDOM.render(<App />, el);
 //   });
-//   expect(el.innerHTML).toBe('1'); // this passes!
+//   expect(el.innerHTML).toEqual('1'); // this passes!
 // });
 
 // act(() => {
@@ -39,4 +39,4 @@ describe('<Counter />', () => {
 //     button.dispatchEvent(new MouseEvent('click', { bubbles: true }));
 //   }
 // });
-// expect(button.innerHTML).toBe(3); // this fails, it's actually '1'!
+// expect(button.innerHTML).toEqual(3); // this fails, it's actually '1'!
