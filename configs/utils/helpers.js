@@ -25,10 +25,10 @@ module.exports.getTemplate = (type = 'class', name) => {
       `import * as React from 'react';`,
       `import renderer from 'react-test-renderer';\n`,
       `import ${name} from './';\n`,
-      `test('it works', done => {`,
+      `test('it works', () => {`,
       `\tconsole.log(done);`,
-      `\tconst tree: any = renderer.create(<${name} />).toJSON();`,
-      `\texpect(tree.props.value).toEqual(1);`,
+      `\tconst rendered: any = renderer.create(<${name} />).toJSON();`,
+      `\texpect(rendered).toBeTruthy();`,
       `});\n`,
     )
   }
@@ -118,8 +118,8 @@ module.exports.getTemplate = (type = 'class', name) => {
   if (['types.class', 'types.function'].indexOf(type) >= 0) {
     template.push(
       `export interface OuterProps {`,
-      `\timg: any;`,
-      `\tvalue: string;`,
+      `\timg?: any;`,
+      `\tvalue?: string;`,
       `\tenum?: 'button' | 'text';`,
       `\twidth?: number;`,
       `\tsimple?: boolean;`,

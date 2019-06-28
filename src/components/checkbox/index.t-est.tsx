@@ -3,9 +3,9 @@
 
 // import Checkbox from './'
 
-// const tree: any = renderer.create(<Checkbox />).toJSON()
+// const rendered: any = renderer.create(<Checkbox />).toJSON()
 
-// test('it works', done => {
+// test('it works', () => {
 //   const input = tree.children.find((item: any) => item.type === 'input')
 
 //   // // console.log(input, input.props)

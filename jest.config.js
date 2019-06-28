@@ -1,6 +1,8 @@
 // https://jestjs.io/docs/en/configuration#setupfiles-array
 
 module.exports = {
+  cache: true,
+  verbose: false,
   // Modules can be explicitly auto-mocked using jest.mock(moduleName).
   // https://facebook.github.io/jest/docs/en/configuration.html#automock-boolean
   automock: false, // [boolean]
@@ -59,6 +61,4 @@ module.exports = {
   coverageDirectory: '<rootDir>/coverage',
   coveragePathIgnorePatterns: ['/node_modules/', '/configs/', '/typings/', '/public/', '/dist/'],
   collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx}', '!**/node_modules/**'],
-
-  verbose: false,
 };

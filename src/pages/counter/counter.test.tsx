@@ -5,12 +5,10 @@ import renderer from 'react-test-renderer'
 
 import Counter from './'
 
-const tree: any = renderer.create(<Counter initialCount={3} />).toJSON()
-
 describe('<Counter />', () => {
-  it('t-1', done => {
-    expect(tree.type).toEqual('div')
-    done()
+  it('t-1', () => {
+    const rendered: any = renderer.create(<Counter initialCount={3} />).toJSON()
+    expect(rendered.type).toEqual('div')
   })
 })
 

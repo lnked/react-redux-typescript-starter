@@ -1,6 +1,6 @@
 export interface OuterProps {
-  img: any;
-  value: string;
+  img?: any;
+  value?: string;
   enum?: 'button' | 'text';
   width?: number;
   simple?: boolean;

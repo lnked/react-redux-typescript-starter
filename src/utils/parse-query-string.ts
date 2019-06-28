@@ -1,4 +1,4 @@
-const x = "Categories=All&Search=Filus";
+const x = 'Categories=All&Search=Filus';
 
 const parseQueryString = (str: string) => str.split('&').reduce((acc, el) => {
   const [key, value] = el.split('=');
@@ -6,10 +6,10 @@ const parseQueryString = (str: string) => str.split('&').reduce((acc, el) => {
   return acc;
 }, {});
 
-const params = parseQueryString(x);
+// const params = parseQueryString(x);
 
-console.log(params); // { Categories: "All", Search: "Filus" }
+// console.log(params); // { Categories: "All", Search: "Filus" }
 
-const values = Object.values(params);
+// const values = Object.values(params);
 
-console.log(values); // [ "All", "Filus" ]
+// console.log(values); // [ "All", "Filus" ]
