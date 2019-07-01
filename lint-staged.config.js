@@ -1,9 +1,9 @@
 module.exports = {
   "./src/**/*.ts?(x)": [
     "yarn lint",
-    "git add -A"
+    "git add"
   ],
   "**/*.{json,md,yaml,yml}": [
-    "git add -A"
+    "git add"
   ]
 }

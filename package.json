@@ -17,7 +17,7 @@
     "analyze": "yarn build --analyze",
     "release": "yarn build --release",
     "profile": "webpack --config configs/run --env production --profile --json > stats.json",
-    "lint": "tslint -t stylish -p tsconfig.json 'src/**/*.{ts,tsx}'",
+    "lint": "tslint -t stylish -p tsconfig.json 'src/**/*.ts?(x)'",
     "lint:fix": "yarn lint --fix",
     "typecheck": "tsc",
     "size": "size-limit",
