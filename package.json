@@ -183,6 +183,7 @@
     "emotion-theming": "10.0.14",
     "history": "4.9.0",
     "i18next": "17.0.4",
+    "kuker-emitters": "6.7.4",
     "mobx": "5.10.1",
     "mobx-logger": "0.7.1",
     "mobx-react": "6.1.1",

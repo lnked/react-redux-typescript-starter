@@ -1,15 +1,7 @@
-import { configure } from 'mobx';
+import { spy, configure } from 'mobx';
+import { MobXEmitter } from 'kuker-emitters';
 
 import { enableLogging } from 'mobx-logger';
-
-import {
-  UiStore,
-  AppStore,
-  DataStore,
-  // ArrayStore,
-  // ObjectStore,
-  SessionStore,
-} from './providers';
 
 import {
   STORE_UI,
@@ -19,6 +11,15 @@ import {
   STORE_SESSION,
   environment,
 } from 'settings';
+
+import {
+  UiStore,
+  AppStore,
+  DataStore,
+  // ArrayStore,
+  // ObjectStore,
+  SessionStore,
+} from './providers';
 
 configure({
   enforceActions: 'observed', // 'never' | 'always' | 'observed'
@@ -48,6 +49,15 @@ export const configureStore = (routerStore?: any) => {
   // const arrayStore = new ArrayStore(array);
   // const objectStore = new ObjectStore(object);
   const sessionStore = new SessionStore(session);
+
+  if (environment.development) {
+    MobXEmitter(spy, [
+      uiStore,
+      appStore,
+      dataStore,
+      sessionStore,
+    ]);
+  }
 
   Reflect.deleteProperty(window, '__INITIAL_STATE__');
 
