@@ -23,8 +23,8 @@ module.exports = () => {
 
     new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en|ru/),
 
-    new webpack.IgnorePlugin({
-      resourceRegExp: /^(kuker-emitters|react-perftool-extension)$/,
-    }),
+    // new webpack.IgnorePlugin({
+    //   resourceRegExp: /^(kuker-emitters)$/,
+    // }),
   ]
 }
