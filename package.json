@@ -144,7 +144,7 @@
     "path": "0.12.7",
     "preload-webpack-plugin": "3.0.0-beta.3",
     "raw-loader": "3.0.0",
-    "react-hot-loader": "4.12.4",
+    "react-hot-loader": "4.12.5",
     "react-snap": "1.23.0",
     "react-styleguidist": "9.1.11",
     "react-test-renderer": "16.8.6",
