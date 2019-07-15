@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { helperRedirect } from 'utils/redirect';
+
 import {
   Wrapper,
   Container,
@@ -13,6 +15,10 @@ export interface OuterProps {
 }
 
 class Profile extends React.Component<OuterProps, {}> {
+  componentDidMount() {
+    helperRedirect('/login');
+  }
+
   render () {
     return (
       <Wrapper>

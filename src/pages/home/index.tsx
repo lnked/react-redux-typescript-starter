@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
+import useReactRouter from 'use-react-router';
 
 import { Input, Button } from 'components';
 
@@ -11,6 +12,7 @@ import {
 const Home = ({ initialLanguage = 'ru' }: any) => {
   const [lng, setLanguage] = React.useState(initialLanguage);
   const { t, i18n } = useTranslation(lng);
+  const { history, location, match } = useReactRouter();
 
   const handleChange = (name: string) => (e: any, value: any) =>
     console.info('change: ', {
@@ -21,6 +23,11 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
 
   return (
     <div>
+      <div>My location is {location.pathname}!</div>
+      <div>location: {JSON.stringify(location)}!</div>
+      <div>history: {JSON.stringify(history)}!</div>
+      <div>match: {JSON.stringify(match)}!</div>
+
       <h2>Home</h2>
       <Button>This is a hotpink button.</Button>
       <br/>

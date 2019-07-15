@@ -200,6 +200,7 @@
     "react-progressive-image": "0.6.0",
     "react-router-dom": "5.0.1",
     "react-use-localstorage": "3.2.0",
-    "storage.io": "1.2.0"
+    "storage.io": "1.2.0",
+    "use-react-router": "1.0.7"
   }
 }
