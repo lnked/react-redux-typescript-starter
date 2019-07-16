@@ -1490,10 +1490,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.10.tgz#51babf9c7deadd5343620055fc8aff7995c8b031"
   integrity sha512-LcsGbPomWsad6wmMNv7nBLw7YYYyfdYcz6xryKYQhx89c3XXan+8Q6AJ43G5XDIaklaVkK3mE4fCb0SBvMiPSQ==
 
-"@types/node@12.6.3":
-  version "12.6.3"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.6.3.tgz#44d507c5634f85e7164707ca36bba21b5213d487"
-  integrity sha512-7TEYTQT1/6PP53NftXXabIZDaZfaoBdeBm8Md/i7zsWRoBe0YwOXguyK8vhHs8ehgB/w9U4K/6EWuTyp0W6nIA==
+"@types/node@12.6.4":
+  version "12.6.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.6.4.tgz#e0b5ac3ccbf183cd3c230967c323632d6cf927ae"
+  integrity sha512-ZKrDzI6KhrqtLpccI1YxMh4d+qzNnftNtp6iL9c4mLTNgzguFu7VR7pXH/C/MfzikMeoXjvISL9mlIGNGGDXDg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -10394,10 +10394,10 @@ railroad-diagrams@^1.0.0:
   resolved "https://registry.yarnpkg.com/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz#eb7e6267548ddedfb899c1b90e57374559cddb7e"
   integrity sha1-635iZ1SN3t+4mcG5Dlc3RVnN234=
 
-rambda@2.11.2:
-  version "2.11.2"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-2.11.2.tgz#10f49a117c3509b91ab9cce8defa0d76dcc0fd2e"
-  integrity sha512-AbsCpfilce0dcf/HxDdda4AWXe0mPr3L8kIJ3TGimNMDABVYkZXCWYZ7grNNR30FZIIRjv5MIlHwc2dVj9RMqg==
+rambda@2.12.0:
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-2.12.0.tgz#907a9c39915722bde72368190d385ea08245a789"
+  integrity sha512-SljbcqY64vYV2W6QWpHathfPwcVe6igyB6cpCIW8HzPZ2RgQ8+PJXadhFEIUV/5lJUWsCtuJwTPw9kTiXt4rkQ==
 
 randexp@0.4.6:
   version "0.4.6"
