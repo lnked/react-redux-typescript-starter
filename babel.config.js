@@ -12,10 +12,12 @@ module.exports = function (api) {
 
   const loose = true
   const legacy = true
-  const targets = !web ? { node: 'current' } : undefined
+  const targets = !web
+    ? { node: 'current' }
+    : { esmodules: false }
   const modules = babel ? false : 'commonjs'
   const comments = true // webpackChunkName doesn't work if the value is false
-  const useBuiltIns = web ? 'entry' : undefined
+  const useBuiltIns = web ? 'usage' : undefined
 
   return {
     comments,
