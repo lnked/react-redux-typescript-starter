@@ -10,7 +10,7 @@ process.env.NODE_ENV = process.env.BABEL_ENV = environment;
 const production = environment === 'production';
 const development = environment === 'development';
 
-const publicPath = development ? '/' : '/react-mobx-typescript-starter/';
+const publicPath = development ? '/' : '';
 
 const hashName = development
   ? '[name]'
@@ -24,7 +24,6 @@ module.exports = {
   development,
   environment,
   sourceMap: false,
-  publicPath: '/',
   release: options.release || options.analyze || false,
   analyze: options.analyze || false,
   compression: options.release || false,

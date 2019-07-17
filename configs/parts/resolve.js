@@ -4,6 +4,6 @@ module.exports = {
   resolve: {
     alias,
     mainFiles: ['index'],
-    extensions: ['.ts', '.tsx', '.js', '.json'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
   },
 }
