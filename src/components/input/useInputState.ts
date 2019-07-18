@@ -7,7 +7,7 @@ const useInputState = ({ propsValue, defaultValue, handleChange }: InnerState) =
   const [touched, setTouch] = useState(false);
 
   if (handleChange && value !== propsValue) {
-    console.error({ touched, value, propsValue, defaultValue });
+    // console.error({ touched, value, propsValue, defaultValue });
     setValue(propsValue);
     setTouch(false);
   }
