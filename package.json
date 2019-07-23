@@ -23,6 +23,7 @@
     "size": "size-limit",
     "pretest": "cross-env NODE_ENV=test yarn lint",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "test:watch": "yarn test -- --watch",
     "deploy": "",
     "ci": "yarn test & yarn typecheck & yarn lint",
