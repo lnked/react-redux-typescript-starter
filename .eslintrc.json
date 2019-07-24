@@ -1,0 +1,27 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint/tslint"
+  ],
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "useJSXTextNode": true,
+    "tsconfigRootDir": "./",
+    "extraFileExtensions": [".ts", ".tsx"]
+  },
+  "rules": {
+    "@typescript-eslint/tslint/config": ["warn", {
+      "lintFile": "", // path to tslint.json of your project
+      "rules": {
+        // tslint rules (will be used if `lintFile` is not specified)
+      },
+      "rulesDirectory": [
+        // array of paths to directories with rules, e.g. 'node_modules/tslint/lib/rules' (will be used if `lintFile` is not specified)
+      ]
+    }],
+  }
+}
+
