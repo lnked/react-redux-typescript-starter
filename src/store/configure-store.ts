@@ -1,5 +1,4 @@
-import { spy, configure } from 'mobx';
-import { MobXEmitter } from 'kuker-emitters';
+import { configure } from 'mobx';
 
 import { enableLogging } from 'mobx-logger';
 
@@ -49,15 +48,6 @@ export const configureStore = (routerStore?: any) => {
   // const arrayStore = new ArrayStore(array);
   // const objectStore = new ObjectStore(object);
   const sessionStore = new SessionStore(session);
-
-  if (environment.development) {
-    MobXEmitter(spy, [
-      uiStore,
-      appStore,
-      dataStore,
-      sessionStore,
-    ]);
-  }
 
   Reflect.deleteProperty(window, '__INITIAL_STATE__');
 

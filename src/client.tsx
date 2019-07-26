@@ -3,7 +3,6 @@ import { render } from 'react-dom';
 import { Provider } from 'mobx-react';
 import { setConfig } from 'react-hot-loader';
 import { RouterStore, syncHistoryWithStore } from 'mobx-react-router';
-import { ReactEmitter } from 'kuker-emitters';
 
 import { environment } from 'settings';
 import { browserHistory } from 'utils';
@@ -37,8 +36,4 @@ if (environment.production) {
 
 if (environment.development && module.hot) {
   module.hot.accept();
-}
-
-if (environment.development) {
-  ReactEmitter();
 }
