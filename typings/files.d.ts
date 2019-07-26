@@ -4,12 +4,6 @@ declare module '*.json' {
   export default value;
 }
 
-declare module '*.json5' {
-  const value: any;
-  export const version: string;
-  export default value;
-}
-
 declare module '*.css' {
   const content: any;
   export default content;

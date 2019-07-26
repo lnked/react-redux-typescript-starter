@@ -31,8 +31,9 @@ module.exports = function({ development, production, test, loose, legacy }) {
       ignoreFilenames: ['node_modules'],
     }],
     ['@babel/plugin-transform-runtime', {
-      corejs: false,
+      corejs: 3,
       helpers: false,
+      proposals: true,
       regenerator: true,
     }],
     ['transform-imports', transforms],
