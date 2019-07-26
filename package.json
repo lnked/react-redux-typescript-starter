@@ -195,6 +195,7 @@
     "mobx-react-devtools": "6.1.1",
     "mobx-react-router": "4.0.7",
     "nanoid": "2.0.3",
+    "path-to-regexp": "3.0.0",
     "rambda": "2.13.0",
     "react": "16.8.6",
     "react-dom": "npm:@hot-loader/react-dom",
