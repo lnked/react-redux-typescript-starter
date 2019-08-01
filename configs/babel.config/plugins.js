@@ -79,9 +79,5 @@ module.exports = function({ development, production, test, loose, legacy }) {
     '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-transform-react-constant-elements',
     '@babel/plugin-transform-react-inline-elements',
-    ['module-resolver', {
-      'extensions': ['.ts', '.js', '.tsx', '.jsx'],
-      'root': ['./src'],
-    }],
   ];
 };
