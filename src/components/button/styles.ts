@@ -19,13 +19,17 @@ export const StyledButton = styled.button`
   background-image: linear-gradient(180deg,hsla(0,0%,100%,.8),hsla(0,0%,100%,0));
   box-shadow: inset 0 0 0 1px rgba(16,22,26,.2),inset 0 -1px 0 rgba(16,22,26,.1);
 
-  &:hover {
+  &:disabled {
+    opacity: .7;
+  }
+
+  &:not(:disabled):hover {
     background-clip: padding-box;
     background-color: #ebf1f5;
     box-shadow: inset 0 0 0 1px rgba(16,22,26,.2), inset 0 -1px 0 rgba(16,22,26,.1);
   }
 
-  &:active {
+  &:not(:disabled):active {
     box-shadow: inset 0 0 0 1px rgba(16,22,26,.2), inset 0 1px 2px rgba(16,22,26,.2);
     background-color: #d8e1e8;
     background-image: none;

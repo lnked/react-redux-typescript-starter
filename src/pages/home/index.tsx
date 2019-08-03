@@ -63,8 +63,9 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
           setLanguage('en');
           i18n.changeLanguage('en');
         }}
+        disabled={lng === 'en'}
       >
-        en
+        EN
       </Button>
 
       <Button
@@ -72,8 +73,9 @@ const Home = ({ initialLanguage = 'ru' }: any) => {
           setLanguage('ru');
           i18n.changeLanguage('ru');
         }}
+        disabled={lng === 'ru'}
       >
-        ru
+        RU
       </Button>
 
       <br/>

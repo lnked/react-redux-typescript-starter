@@ -33,7 +33,7 @@
     "noUnusedParameters": true,
     "sourceMap": false,
     "jsx": "react",
-    "lib": ["es6", "dom", "scripthost"],
+    "lib": ["es7", "dom", "scripthost"],
     "suppressImplicitAnyIndexErrors": true,
     "typeRoots": ["node_modules/@types", "typings/*"]
   },
