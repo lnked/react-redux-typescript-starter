@@ -45,7 +45,7 @@ module.exports = {
     '^app/(.*)': '<rootDir>/src/app/$1',
     '^utils/(.*)': '<rootDir>/src/utils/$1',
     '^pages/(.*)': '<rootDir>/src/pages/$1',
-    '^aassets/(.*)': '<rootDir>/src/aassets/$1',
+    '^assets/(.*)': '<rootDir>/src/assets/$1',
     '^layouts/(.*)': '<rootDir>/src/layouts/$1',
     '^settings/(.*)': '<rootDir>/src/settings/$1',
     '^services/(.*)': '<rootDir>/src/services/$1',
