@@ -67,7 +67,7 @@ export interface OuterProps {
   [key: string]: any;
 }
 
-const removeNonHTMLProps = (props: OuterProps) => {
+export const removeNonHTMLProps = (props: OuterProps) => {
   const entries = {};
 
   for (const name in props) {
@@ -77,6 +77,4 @@ const removeNonHTMLProps = (props: OuterProps) => {
   }
 
   return entries;
-}
-
-export default removeNonHTMLProps;
+};

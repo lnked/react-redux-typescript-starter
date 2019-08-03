@@ -1,5 +1,6 @@
-export { browserHistory } from './browser-history';
-export { lazyWithPreload } from './lazy-with-preload';
-export { removeTrailingSlash } from './remove-trailing-slash';
+export { browserHistory } from './browserHistory';
+export { lazyWithPreload } from './lazyWithPreload';
+export { removeNonHTMLProps } from './removeNonHTMLProps';
+export { removeTrailingSlash } from './removeTrailingSlash';
 
 export * from './uc-first';
