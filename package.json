@@ -187,6 +187,7 @@
     "emotion-theming": "10.0.14",
     "history": "4.9.0",
     "i18next": "17.0.8",
+    "localize-react": "1.2.1",
     "mobx": "5.13.0",
     "mobx-logger": "0.7.1",
     "mobx-react": "6.1.1",
