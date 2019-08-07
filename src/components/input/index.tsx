@@ -13,26 +13,25 @@ import {
 
 import { OuterProps } from './types';
 
-const Input: React.FC<OuterProps> = (props: OuterProps) => {
+const Input: React.FC<OuterProps> = ({
+  label,
+  error,
+  focus,
+  value,
+  onChange,
+  className,
+  defaultValue,
+  inputClassName,
+  ...attrs
+} = {}) => {
   const textInput = React.createRef<HTMLInputElement>();
 
   const pair = nanoid();
 
-  const {
-    label,
-    error,
-    focus,
-    value,
-    className,
-    defaultValue,
-    inputClassName,
-    ...attrs
-  } = props;
-
   const { touched, reset, ...stateProps } = useInputState({
     defaultValue,
-    handleChange: props.onChange,
     propsValue: value,
+    handleChange: onChange,
   });
 
   React.useEffect(() => {
@@ -67,9 +66,7 @@ const Input: React.FC<OuterProps> = (props: OuterProps) => {
         </ResetButton>
       </InputWrapper>
 
-      {error
-        && <span>{error}</span>
-      }
+      {error && <span>{error}</span>}
     </Wrapper>
   );
 };
