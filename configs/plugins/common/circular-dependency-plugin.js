@@ -2,6 +2,8 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = () => {
   return [
-    new CircularDependencyPlugin(),
+    new CircularDependencyPlugin({
+      exclude: /node_modules/,
+    }),
   ]
 }
