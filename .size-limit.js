@@ -1,13 +1,10 @@
 module.exports = [
   {
-    limit: '300 KB',
     gzip: true,
+    limit: '300 KB',
     path: [
-      './dist/static/*.css',
       './dist/static/*.js',
+      './dist/static/*.css',
     ],
-    config: './configs/production.js',
-    webpack: false,
-    running: true,
   },
 ]
