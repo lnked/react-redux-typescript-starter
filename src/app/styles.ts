@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components;
+import { createGlobalStyle } from 'styled-components';
+
 import { colors } from 'theme';
 
 /* tslint:disable: max-line-length */
