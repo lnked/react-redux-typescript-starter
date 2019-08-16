@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { Input as InputComponent } from 'components';
 
 export const Input = styled(InputComponent)`

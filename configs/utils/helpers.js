@@ -139,7 +139,7 @@ module.exports.getTemplate = (type = 'class', name) => {
 
   if (type === 'styled') {
     template.push(
-      `import styled from '@emotion/styled';\n`,
+      `import styled from 'styled-components';\n`,
       `import { CommonStyles } from 'theme';\n`,
       `export const StyledDiv = styled.div\``,
       `\tcolor: \${CommonStyles.themeColor};`,

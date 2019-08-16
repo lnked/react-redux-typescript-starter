@@ -3,6 +3,4 @@ interface Window {
   __DEVTOOLS_EXTENSION__: () => any;
 }
 
-declare module 'emotion-theming'
-declare module '@emotion/core'
-declare module '@emotion/styled'
+declare module 'styled-theming'

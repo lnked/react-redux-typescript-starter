@@ -21,9 +21,15 @@ module.exports = function({ development, production, test, loose, legacy }) {
 
   return [
     ...plugins,
-    ['emotion', {
+    ['babel-plugin-styled-components', {
+      ssr: production,
+      minify: production,
+      pure: true,
+      fileName: false,
       sourceMap: true,
+      displayName: false,
       extractStatic: false,
+      transpileTemplateLiterals: false,
     }],
     ['transform-react-remove-prop-types', {
       mode: 'remove',

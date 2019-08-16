@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Router } from 'react-router-dom';
-import { Global } from '@emotion/core';
 import { I18nextProvider } from 'react-i18next';
 import { hot } from 'react-hot-loader/root';
 
@@ -42,7 +41,7 @@ class App extends React.Component<OuterProps, {}> {
               </React.Suspense>
             </CoreLayout>
 
-            <Global styles={GlobalStyle} />
+            <GlobalStyle />
           </Router>
         </I18nextProvider>
       </ErrorBoundary>
