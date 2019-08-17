@@ -13,7 +13,7 @@ import {
 
 import { OuterProps } from './types';
 
-const Input: React.FC<OuterProps> = ({
+const Input: React.FC<OuterProps & React.HTMLProps<HTMLInputElement>> = ({
   label,
   error,
   focus,

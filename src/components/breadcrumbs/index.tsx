@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface BreadcrumbProps {
+export interface BreadcrumbProps {
   href?: string;
   icon?: string;
   text?: string;
