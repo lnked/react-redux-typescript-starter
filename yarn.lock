@@ -10592,10 +10592,10 @@ react-snap@1.23.0:
     serve-static "1.13.2"
     sourcemapped-stacktrace-node "2.1.8"
 
-react-styleguidist@9.1.14:
-  version "9.1.14"
-  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-9.1.14.tgz#f3280c6b0448ffff4b3b4e0dc485d9caf14b1ff6"
-  integrity sha512-ddhreptBree6x01mFyWVcefg8TGZuSROfCOrzV+YuQ/T0zDu7RDKPRMuf+YHiEl4RH1BlVsaKC5rJA7mO/kGgQ==
+react-styleguidist@9.1.15:
+  version "9.1.15"
+  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-9.1.15.tgz#8530b193b240ff1d716d21d8c7b82efaff62c0a0"
+  integrity sha512-FaElWPKo6TakEyuwGLWjeiNso3CV8o7muDlR9Y0ePZwjpw2QuJKcVDorNi6mHHNsKd2BmuQak/cOI0LmLiWXYA==
   dependencies:
     "@vxna/mini-html-webpack-template" "^0.1.7"
     acorn "^6.1.1"
