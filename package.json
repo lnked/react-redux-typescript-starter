@@ -144,6 +144,7 @@
     "imagemin-webpack-plugin": "2.4.2",
     "inspectpack": "4.2.2",
     "jest": "24.9.0",
+    "jest-styled-components": "6.3.3",
     "lint-staged": "9.2.3",
     "markdown-loader": "5.1.0",
     "marked": "0.7.0",
