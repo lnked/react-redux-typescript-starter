@@ -60,18 +60,18 @@ export const NoMatch = lazyWithPreload(() => import(
 ));
 
 export const routes = [
-  { label: 'Home', to: '/', component: Home, exact: true },
-  { label: 'About', to: '/about', component: About },
-  { label: 'Shop', to: '/shop', component: Shop },
-  { label: 'Cart', to: '/cart', component: Cart },
-  { label: 'Forms', to: '/forms', component: Forms },
-  { label: 'Login', to: '/login', component: Login },
-  { label: 'Topics', to: '/topics', component: Topics },
-  { label: 'Profile', to: '/profile', component: Profile },
-  { label: 'Context', to: '/context', component: Context },
-  { label: 'Counter', to: '/counter', component: Counter },
-  { label: 'Protected', to: '/protected', component: Counter },
-  { label: 'Page not found', to: '/error-page' },
+  { keyName: 'navigation.home', to: '/', component: Home, exact: true },
+  { keyName: 'navigation.about', to: '/about', component: About },
+  { keyName: 'navigation.shop', to: '/shop', component: Shop },
+  { keyName: 'navigation.cart', to: '/cart', component: Cart },
+  { keyName: 'navigation.forms', to: '/forms', component: Forms },
+  { keyName: 'navigation.login', to: '/login', component: Login },
+  { keyName: 'navigation.topics', to: '/topics', component: Topics },
+  { keyName: 'navigation.profile', to: '/profile', component: Profile },
+  { keyName: 'navigation.context', to: '/context', component: Context },
+  { keyName: 'navigation.counter', to: '/counter', component: Counter },
+  { keyName: 'navigation.protected', to: '/protected', component: Counter },
+  { keyName: 'navigation.page_not_found', to: '/error-page' },
 ];
 
 function HistorySetter({ history }: any) {

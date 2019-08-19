@@ -3,5 +3,19 @@
   "example": "Example text",
   "age": { "label": "Age" },
   "home": { "label": "Home" },
-  "name": { "label": "Name" }
+  "name": { "label": "Name" },
+  "navigation": {
+    "shop": "Shop",
+    "cart": "Cart",
+    "home": "Home",
+    "about": "About",
+    "forms": "Forms",
+    "login": "Login",
+    "topics": "Topics",
+    "profile": "Profile",
+    "counter": "Counter",
+    "context": "Context",
+    "protected": "Page Not Found",
+    "page_not_found": "Protected"
+  }
 }
