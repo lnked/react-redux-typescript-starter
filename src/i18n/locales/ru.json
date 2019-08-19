@@ -15,7 +15,7 @@
     "profile": "Профиль",
     "counter": "Счетчик",
     "context": "Контекст",
-    "protected": "Страница не найдена",
-    "page_not_found": "Защищенный"
+    "protected": "Защищенный",
+    "page_not_found": "Страница не найдена"
   }
 }

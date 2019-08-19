@@ -15,7 +15,7 @@
     "profile": "Profile",
     "counter": "Counter",
     "context": "Context",
-    "protected": "Page Not Found",
-    "page_not_found": "Protected"
+    "protected": "Protected",
+    "page_not_found": "Page Not Found"
   }
 }
