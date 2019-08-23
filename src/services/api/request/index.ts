@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-import { API_URL } from './api';
+import { API_URL } from 'settings';
+
 import Token from './token';
 
 const headers: any = {

@@ -23,7 +23,7 @@ const isLocalhost = Boolean(
     window.location.hostname.match(
       /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
     )
-)
+);
 
 export function register(config?: any) {
   const isHttps = location.protocol.includes('https')
@@ -35,8 +35,8 @@ export function register(config?: any) {
       // Our service worker won't work if PUBLIC_URL is on a different origin
       // from what our page is served on. This might happen if a CDN is used to
       // serve assets see https://github.com/facebook/create-react-app/issues/2374
-      return
-    }
+      return;
+    };
 
     window.addEventListener('load', () => {
       const swUrl = `${PUBLIC_URL}/sw.js`
@@ -48,11 +48,11 @@ export function register(config?: any) {
         // Add some additional logging to localhost, pointing developers to the
         // service worker/PWA documentation.
         navigator.serviceWorker.ready.then(() => {
-          // console.log(
+          console.log(
             'This web app is being served cache-first by a service ' +
               'worker. To learn more, visit http://bit.ly/CRA-PWA'
-          )
-        })
+          );
+        });
       } else {
         // Is not localhost. Just register service worker
         registerValidSW(swUrl, config)
@@ -76,10 +76,10 @@ function registerValidSW(swUrl: string, config: any) {
               // At this point, the updated precached content has been fetched,
               // but the previous service worker will still serve the older
               // content until all client tabs are closed.
-              // console.log(
+              console.log(
                 'New content is available and will be used when all ' +
                   'tabs for this page are closed. See http://bit.ly/CRA-PWA.'
-              )
+              );
 
               // Execute callback
               if (config && config.onUpdate) {
@@ -127,16 +127,16 @@ function checkValidServiceWorker(swUrl: string, config: any) {
       }
     })
     .catch(() => {
-      // console.log(
+      console.log(
         'No internet connection found. App is running in offline mode.'
       )
-    })
-}
+    });
+};
 
 export function unregister() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready.then(registration => {
       registration.unregister()
-    })
+    });
   }
-}
+};

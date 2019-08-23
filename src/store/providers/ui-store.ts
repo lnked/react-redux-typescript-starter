@@ -4,7 +4,7 @@ class UiStore {
   @observable type: string = 'grid';
 
   constructor (initialState?: any) {
-    // console.log({ initialState });
+    console.log({ initialState });
   }
 
   @computed get view_type () {

@@ -1,4 +1,4 @@
-import image from './product.png';
+import * as image from './product.png';
 
 export const productsList = [
   {
