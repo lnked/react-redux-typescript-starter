@@ -1,29 +1,41 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { PreloadLink } from 'components';
 
 import { colors } from 'theme';
 
-export const NavigationList = styled.ul`
+export const Nav: any = styled.nav`
   position: sticky;
   top: 0;
-  z-index: 10;
-  margin: 0;
-  border: 0;
+  z-index: 100;
   padding: 20px;
-  list-style-type: none;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   background-color: #20232a;
 `;
 
-export const NavigationItem = styled.li`
+export const Language: any = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`;
+
+export const NavigationList: any = styled.ul`
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  list-style-type: none;
+`;
+
+export const NavigationItem: any = styled.li`
   &:not(:last-child) {
     margin-right: 30px;
   }
 `;
 
-export const NavigationLink = styled(PreloadLink)`
+export const NavigationLink: any = styled(PreloadLink)`
   color: ${colors.white};
   padding: 0;
   font-size: 1.6rem;

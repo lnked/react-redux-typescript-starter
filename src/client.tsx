@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render } from 'react-dom';
+import * as ReactDOM from 'react-dom';
 import { Provider } from 'mobx-react';
 import { setConfig } from 'react-hot-loader';
 import { RouterStore, syncHistoryWithStore } from 'mobx-react-router';
@@ -19,7 +19,7 @@ const routingStore = new RouterStore();
 
 const history = syncHistoryWithStore(browserHistory, routingStore);
 
-render(
+ReactDOM.render(
   <Provider {...configureStore(routingStore)}>
     <App history={history} />
   </Provider>,

@@ -3,5 +3,19 @@
   "example": "Примерный текст",
   "age": { "label": "Возраст" },
   "home": { "label": "Дом" },
-  "name": { "label": "Имя" }
+  "name": { "label": "Имя" },
+  "navigation": {
+    "shop": "Магазин",
+    "cart": "Корзина",
+    "home": "Главная",
+    "about": "О Нас",
+    "forms": "Формы",
+    "login": "Вход",
+    "topics": "Темы",
+    "profile": "Профиль",
+    "counter": "Счетчик",
+    "context": "Контекст",
+    "protected": "Защищенный",
+    "page_not_found": "Страница не найдена"
+  }
 }

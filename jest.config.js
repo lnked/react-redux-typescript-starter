@@ -54,7 +54,7 @@ module.exports = {
   },
 
   // Setup Enzyme
-  snapshotSerializers: ['enzyme-to-json/serializer', 'jest-emotion'],
+  snapshotSerializers: ['enzyme-to-json/serializer', 'jest-styled-components'],
   setupFilesAfterEnv: ['<rootDir>/configs/jest/enzyme.setup.ts'],
 
   // Setup Coverage

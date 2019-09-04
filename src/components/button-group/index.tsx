@@ -1,15 +1,8 @@
 import * as React from 'react';
 
 import { OuterProps } from './types';
-import { StyledDiv } from './styled';
+import { Group } from './styled';
 
-const ButtonGroup: React.FC<OuterProps> = (props: OuterProps) => {
-  // const itemReferer = React.createRef<HTMLInputElement>();
-  // const [count, setCount] = useState(value);
-
-  return (
-    <StyledDiv {...props} />
-  );
-};
+const ButtonGroup: React.FC<OuterProps> = props => <Group {...props} />;
 
 export default ButtonGroup;

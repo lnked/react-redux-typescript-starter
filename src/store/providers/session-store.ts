@@ -12,7 +12,7 @@ class SessionStore {
   };
 
   constructor (initialState?: any) {
-    // console.log({ initialState });
+    console.log({ initialState });
   }
 
   @computed get getUser () {

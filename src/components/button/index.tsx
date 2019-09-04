@@ -8,8 +8,8 @@ export interface OuterProps extends React.ButtonHTMLAttributes<HTMLButtonElement
   disabled?: boolean;
 }
 
-const Button: React.FC<OuterProps> = ({ children, label, disabled, ...props }: OuterProps) => (
-  <StyledButton type="button" aria-disabled={disabled} {...props}>
+const Button: React.FC<OuterProps> = ({ children, label, disabled, ...props } = {}) => (
+  <StyledButton type="button" aria-disabled={disabled} disabled={disabled} {...props}>
     {children || label}
   </StyledButton>
 );

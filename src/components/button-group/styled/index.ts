@@ -1,9 +1,7 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import { CommonStyles } from 'theme';
 
-export const StyledDiv = styled.div`
+export const Group = styled.div`
   color: ${CommonStyles.themeColor};
 `;
-
-export const StyledButton = styled.button``;

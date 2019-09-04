@@ -1,5 +1,5 @@
 /* tslint:disable: max-line-length */
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const ResetButton = styled.button`
   position: absolute;
