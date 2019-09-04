@@ -23,7 +23,7 @@ module.exports.getTemplate = (type = 'class', name) => {
   if (type === 'test') {
     template.push(
       `import * as React from 'react';`,
-      `import renderer from 'react-test-renderer';\n`,
+      `import * as renderer from 'react-test-renderer';\n`,
       `import ${name} from './';\n`,
       `test('it works', () => {`,
       `\tconsole.log(done);`,

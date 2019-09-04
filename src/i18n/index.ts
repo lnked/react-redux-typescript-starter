@@ -1,4 +1,4 @@
-import i18n from 'i18next';
+import * as i18n from 'i18next';
 import { local } from 'storage.io';
 import { initReactI18next } from 'react-i18next';
 
