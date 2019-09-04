@@ -6,4 +6,4 @@ export const STORE_DATA = 'data';
 export const STORE_SESSION = 'session';
 export const STORE_ROUTER = 'router';
 
-export const SITE_LANGUAGE = local.get('language') || 'ru';
+export const SITE_LANGUAGE = local.get('language') || 'en';
