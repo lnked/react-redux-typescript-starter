@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import * as promiseFinally from 'promise.prototype.finally';
 import { Provider } from 'mobx-react';
 import { setConfig } from 'react-hot-loader';
 import { RouterStore, syncHistoryWithStore } from 'mobx-react-router';
@@ -24,8 +23,6 @@ const stores = configureStore(routingStore);
 
 // For easier debugging
 window.__APP_STATE__ = stores;
-
-promiseFinally.shim();
 
 ReactDOM.render(
   <Provider {...stores}>
