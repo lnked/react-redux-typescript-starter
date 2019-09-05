@@ -42,6 +42,6 @@ const Navigation: React.FC<OuterProps> = ({ ...props }) => {
       </Language>
     </Nav>
   );
-}
+};
 
 export default Navigation;

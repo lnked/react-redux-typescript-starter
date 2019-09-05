@@ -1,7 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import * as promiseFinally from 'promise.prototype.finally';
 import { Provider } from 'mobx-react';
-import { setConfig, cold } from 'react-hot-loader';
+import { setConfig } from 'react-hot-loader';
 import { RouterStore, syncHistoryWithStore } from 'mobx-react-router';
 
 import { environment } from 'settings';
@@ -19,8 +20,15 @@ const routingStore = new RouterStore();
 
 const history = syncHistoryWithStore(browserHistory, routingStore);
 
+const stores = configureStore(routingStore);
+
+// For easier debugging
+window.__APP_STATE__ = stores;
+
+promiseFinally.shim();
+
 ReactDOM.render(
-  <Provider {...configureStore(routingStore)}>
+  <Provider {...stores}>
     <App history={history} />
   </Provider>,
   document.getElementById('app-root')
