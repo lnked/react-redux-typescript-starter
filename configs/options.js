@@ -1,9 +1,11 @@
 const { resolve } = require('path');
 const { parseArguments } = require('./tools/helpers');
 
+const isModern = process.env.BROWSERS_ENV === 'modern';
 const environment = process.env.NODE_ENV || 'development';
 const root = resolve(__dirname, '..');
 const options = parseArguments(process.argv);
+const prefix = isModern ? 'modern' : 'fallback';
 
 process.env.NODE_ENV = process.env.BABEL_ENV = environment;
 
@@ -18,6 +20,8 @@ const hashName = development
 
 module.exports = {
   root,
+  prefix,
+  isModern,
   hashName,
   publicPath,
   production,
