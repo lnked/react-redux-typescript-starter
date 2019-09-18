@@ -82,6 +82,7 @@ cp -r ${SOURCE}/babel.config.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/jest.config.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/lint-staged.config.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/package.json ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/styleguide.config.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/tsconfig.build.json ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/tsconfig.jest.json ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/tsconfig.json ${PATH_ROOT}/$FOLDER_NAME

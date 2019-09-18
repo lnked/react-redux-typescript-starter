@@ -28,6 +28,7 @@ module.exports = {
   analyze: options.analyze || false,
   compression: options.release || false,
   dist: resolve(root, 'dist'),
+  staticPath: 'static',
   sourcePath: resolve(root, 'src'),
   serverPath: resolve(root, 'src/server'),
   cacheDirectory: resolve(root, '.cache'),

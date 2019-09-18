@@ -10,6 +10,7 @@ const options = production ? {
   inject: true,
   compile: false,
   preload: ['**/*.js'],
+  prefetch: ['**/*.js'],
   chunksSortMode: 'dependency',
   production: production,
   minify: {

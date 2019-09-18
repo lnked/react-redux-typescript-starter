@@ -11,7 +11,10 @@ module.exports = function ({ development, production, test, loose, useBuiltIns, 
       forceAllTransforms: production,
       exclude: [
         'transform-typeof-symbol',
+        'transform-regenerator',
+        'transform-async-to-generator',
         '@babel/plugin-transform-regenerator',
+        '@babel/plugin-transform-async-to-generator',
       ],
     }]
   )
