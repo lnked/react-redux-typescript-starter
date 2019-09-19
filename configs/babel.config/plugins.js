@@ -37,12 +37,12 @@ module.exports = function({ development, production, test, loose, legacy }) {
       removeImport: true,
       ignoreFilenames: ['node_modules'],
     }],
-    ['@babel/plugin-transform-runtime', {
-      corejs: 3,
-      helpers: false,
-      proposals: true,
-      regenerator: true,
-    }],
+    // ['@babel/plugin-transform-runtime', {
+    //   corejs: 3,
+    //   helpers: false,
+    //   proposals: true,
+    //   regenerator: true,
+    // }],
     ['transform-imports', transforms],
     ['@babel/plugin-proposal-decorators', { legacy }],
     ['@babel/plugin-transform-spread', { loose }],
