@@ -105,7 +105,7 @@
     "@types/react-dom": "16.9.1",
     "@types/react-hot-loader": "4.1.0",
     "@types/react-maskedinput": "4.0.4",
-    "@types/react-router-dom": "4.3.5",
+    "@types/react-router-dom": "5.1.0",
     "@types/react-test-renderer": "16.9.0",
     "@types/styled-components": "4.1.19",
     "@types/webpack": "4.39.1",
