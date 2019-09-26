@@ -1545,10 +1545,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.2.tgz#c4e63af5e8823ce9cc3f0b34f7b998c2171f0c44"
   integrity sha512-dyYO+f6ihZEtNPDcWNR1fkoTDf3zAK3lAABDze3mz6POyIercH0lEUawUFXlG8xaQZmm1yEBON/4TsYv/laDYg==
 
-"@types/node@12.7.7":
-  version "12.7.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.7.tgz#f9bd8c00fa9e1a8129af910fc829f6139c397d6c"
-  integrity sha512-4jUncNe2tj1nmrO/34PsRpZqYVnRV1svbU78cKhuQKkMntKB/AmdLyGgswcZKjFHEHGpiY8pVD8CuVI55nP54w==
+"@types/node@12.7.8":
+  version "12.7.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.8.tgz#cb1bf6800238898bc2ff6ffa5702c3cadd350708"
+  integrity sha512-FMdVn84tJJdV+xe+53sYiZS4R5yn1mAIxfj+DVoNiQjTYz1+OYmjwEZr1ev9nU0axXwda0QDbYl06QHanRVH3A==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -12457,10 +12457,10 @@ webpack-log@^2.0.0:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
 
-webpack-manifest-plugin@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/webpack-manifest-plugin/-/webpack-manifest-plugin-2.1.1.tgz#6b3e280327815b83152c79f42d0ca13b665773c4"
-  integrity sha512-2zqJ6mvc3yoiqfDjghAIpljhLSDh/G7vqGrzYcYqqRCd/ZZZCAuc/YPE5xG0LGpLgDJRhUNV1H+znyyhIxahzA==
+webpack-manifest-plugin@2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/webpack-manifest-plugin/-/webpack-manifest-plugin-2.1.2.tgz#990c448b4cfe1cf0b2dfad4a422264aabc4c98eb"
+  integrity sha512-XWjPY0NXXJ1tGQZgtOMZtEsm8mST23nvO7q5e5H26NH4pv7wfYbHaX9Uwogve+IF6Ilv4j1e3hPr9N3JGZdilA==
   dependencies:
     fs-extra "^7.0.0"
     lodash ">=3.5 <5"
