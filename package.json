@@ -203,7 +203,7 @@
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-fast-compare": "2.0.4",
-    "react-i18next": "10.13.0",
+    "react-i18next": "10.13.1",
     "react-maskedinput": "4.0.1",
     "react-progressive-image": "0.6.0",
     "react-router-dom": "5.1.0",
