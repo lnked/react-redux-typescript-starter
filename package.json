@@ -199,7 +199,7 @@
     "mobx-react-router": "4.0.7",
     "nanoid": "2.1.1",
     "path-to-regexp": "3.1.0",
-    "rambda": "3.1.0",
+    "rambda": "3.2.0",
     "react": "16.10.1",
     "react-dom": "16.10.1",
     "react-fast-compare": "2.0.4",
