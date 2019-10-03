@@ -131,7 +131,7 @@
     "duplicate-package-checker-webpack-plugin": "3.0.0",
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.14.0",
-    "enzyme-to-json": "3.4.1",
+    "enzyme-to-json": "3.4.2",
     "fast-async": "6.3.8",
     "file-loader": "4.2.0",
     "fs": "0.0.1-security",
