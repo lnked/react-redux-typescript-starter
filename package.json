@@ -165,7 +165,7 @@
     "history": "4.10.1",
     "i18next": "17.2.0",
     "localize-react": "1.2.1",
-    "mobx": "5.14.0",
+    "mobx": "5.14.2",
     "mobx-logger": "0.7.1",
     "mobx-react": "6.1.4",
     "mobx-react-devtools": "6.1.1",
