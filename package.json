@@ -163,7 +163,7 @@
     "axios": "0.19.0",
     "date-fns": "2.5.1",
     "history": "4.10.1",
-    "i18next": "17.2.0",
+    "i18next": "17.3.0",
     "localize-react": "1.2.1",
     "mobx": "5.14.2",
     "mobx-logger": "0.7.1",
