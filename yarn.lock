@@ -6054,10 +6054,10 @@ i18next@*:
   dependencies:
     "@babel/runtime" "^7.3.1"
 
-i18next@18.0.0:
-  version "18.0.0"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-18.0.0.tgz#253927ec5d7643e926b9148719febe990110420f"
-  integrity sha512-K+pjlA2D3Xs7Adcy4Ggwcp8tFl6lAo8pUn21k2PEuW+YPEIDk2IiWQ5L8hLfDU7bs0CqG8QydiIcmsSiOC/x6Q==
+i18next@18.0.1:
+  version "18.0.1"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-18.0.1.tgz#10841209f6983df4d8e367204da403d8cbc609cf"
+  integrity sha512-KWd9qMFXw0qjxF7cTAqQselPCYoHfaLvBs8c6JcNzaQKVxbAlE/wv9EZXPy+JlKUcXCT0qgjcmxrJjmbnEp60A==
   dependencies:
     "@babel/runtime" "^7.3.1"
 
@@ -10177,10 +10177,10 @@ react-testing-library@8.0.1:
   resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-8.0.1.tgz#b3dd43bce3fa88423cf0a23292fb819023c227cc"
   integrity sha512-Gq4JC9r3prA4hYwo7afcbHHMFckO29+5Nrh2KblAEPuK/DWaU0bJE1vtpAgLhzhY9bBirmcgjjIHljHEwGAXKw==
 
-react-use-localstorage@3.2.2:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/react-use-localstorage/-/react-use-localstorage-3.2.2.tgz#ebb74b09accc0c03397e385b49978acc2a27f631"
-  integrity sha512-7xBjtBK9gy127Yob5BaGf045VSiW3CTt/ewNnawHMxjLH+jLhAqN9LAGVO8jaMIxl0V0bLZ4WW6Zs6VtB78UcA==
+react-use-localstorage@3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/react-use-localstorage/-/react-use-localstorage-3.3.1.tgz#ebc7b2891aa051c0346644288e470d3ff4931040"
+  integrity sha512-EKL6w2Vz8YkkIsPcEe7HGEKyOQHXlYB8JqphpoSuCeoZPFp3RVHue4QSWflfvHDpxbt/hgSYeX+EGnC9D56CTQ==
 
 react@16.11.0:
   version "16.11.0"
