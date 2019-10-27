@@ -9976,10 +9976,10 @@ railroad-diagrams@^1.0.0:
   resolved "https://registry.yarnpkg.com/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz#eb7e6267548ddedfb899c1b90e57374559cddb7e"
   integrity sha1-635iZ1SN3t+4mcG5Dlc3RVnN234=
 
-rambda@3.2.5:
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-3.2.5.tgz#903996112bf2d279a5ca7f4b7092c0f76719a58d"
-  integrity sha512-b1b6+9DqfxR5918q+ezmB6fF1KVr1nAqtR5vTxr5dA2wV44RSneX0tg1IRa85O3SjPR4COYrknXBp+B5tfiS+w==
+rambda@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-3.3.0.tgz#ac8cc5f979b7bc3c91e6a52895214b6f6aa2381d"
+  integrity sha512-Tlf+GAG/LIG/c9ksHyo+89K7/m5/FT9LOXYNcwiL5GNM2MM/wrwljEN9an6eaBavQwJoLJiBy8iuFKo4p848yg==
 
 randexp@0.4.6:
   version "0.4.6"
