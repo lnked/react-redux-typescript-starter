@@ -1537,10 +1537,10 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
 
-"@types/styled-components@4.1.19":
-  version "4.1.19"
-  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.19.tgz#535b455d7744fda1608c605df82c0800eda61a09"
-  integrity sha512-nDkoTQ8ItcJiyEvTa24TwsIpIfNKCG+Lq0LvAwApOcjQ8OaeOOCg66YSPHBePHUh6RPt1LA8aEzRlgWhQPFqPg==
+"@types/styled-components@4.1.20":
+  version "4.1.20"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.20.tgz#8afd41039c0fd582152e57ff75c58a5353870de6"
+  integrity sha512-WztLENdKY+H9udccx5ZhAblgTp08NSfOFYdGaWM0MMm+1tEOioYVFwIIQ7Hx+9wWXiWKDXeoX6R3D/i1obnG3g==
   dependencies:
     "@types/react" "*"
     "@types/react-native" "*"
@@ -9976,10 +9976,10 @@ railroad-diagrams@^1.0.0:
   resolved "https://registry.yarnpkg.com/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz#eb7e6267548ddedfb899c1b90e57374559cddb7e"
   integrity sha1-635iZ1SN3t+4mcG5Dlc3RVnN234=
 
-rambda@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-3.3.0.tgz#ac8cc5f979b7bc3c91e6a52895214b6f6aa2381d"
-  integrity sha512-Tlf+GAG/LIG/c9ksHyo+89K7/m5/FT9LOXYNcwiL5GNM2MM/wrwljEN9an6eaBavQwJoLJiBy8iuFKo4p848yg==
+rambda@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-4.0.0.tgz#cbec55869e083a611bc0e7243ce307a5381a3002"
+  integrity sha512-tI+7EjvvPjloQAIl2/UuNHKOxCj1lv4zBtBeDrLKr2f50qlocZGiX0tWOcj/Y+PF+2OxpI3X3HnTwHreGtkC4A==
 
 randexp@0.4.6:
   version "0.4.6"
