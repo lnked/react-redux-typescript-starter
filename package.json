@@ -72,7 +72,7 @@
     "@types/i18next": "13.0.0",
     "@types/jest": "24.0.21",
     "@types/nanoid": "2.1.0",
-    "@types/node": "12.12.0",
+    "@types/node": "12.12.3",
     "@types/react": "16.9.11",
     "@types/react-dom": "16.9.3",
     "@types/react-hot-loader": "4.1.0",
@@ -80,7 +80,7 @@
     "@types/react-router-dom": "5.1.1",
     "@types/react-test-renderer": "16.9.1",
     "@types/styled-components": "4.1.20",
-    "@types/webpack": "4.39.5",
+    "@types/webpack": "4.39.7",
     "@types/webpack-env": "1.14.1",
     "@typescript-eslint/eslint-plugin-tslint": "2.6.0",
     "@typescript-eslint/parser": "2.6.0",
@@ -181,7 +181,7 @@
     "react-router-dom": "5.1.2",
     "react-use-localstorage": "3.3.2",
     "storage.io": "1.2.0",
-    "styled-components": "4.4.0",
+    "styled-components": "4.4.1",
     "use-react-router": "1.0.7"
   }
 }
