@@ -1,0 +1,7 @@
+node_modules
+dist
+jest.config.js
+fixtures
+coverage
+**/__tests__/**
+**/*.test.tsx
