@@ -5930,7 +5930,7 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@3.3.0, hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0:
+hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
   integrity sha512-0XsbTXxgiaCDYDIWFcwkmerZPSwywfUqYmwT4jzewKTQSWoE6FCMoUVOeBJWK3E/CrWbxRG3m5GzY4lnIwGRBA==
@@ -10245,13 +10245,12 @@ react-hot-loader@4.12.15:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
-react-i18next@10.0.0-alpha.3:
-  version "10.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-10.0.0-alpha.3.tgz#abccc4dd86ff89c4fc2693f38876423058800a56"
-  integrity sha512-Vi27zMi0tNZT2eT5B6WtngnYZnToTnMgdW6WWxUEWyfH4mS4CDT7XHnYyNQBxKvhUi1L+NZeFUeMsoczUEzrwQ==
+react-i18next@11.0.1:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-11.0.1.tgz#179b10cf0026677739fa96df0a7b5494df435bd1"
+  integrity sha512-TazSMob+cEztaaMcX3IQQLltzv4+b3cl6dfs9tUMVj2fD0TRDbTsQ75AaLncw6jqZf08I0yAGHeJnqbBE0eZDw==
   dependencies:
     "@babel/runtime" "^7.3.1"
-    hoist-non-react-statics "3.3.0"
     html-parse-stringify2 "2.0.1"
 
 react-is@^16.10.2, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6, react-is@^16.9.0:
