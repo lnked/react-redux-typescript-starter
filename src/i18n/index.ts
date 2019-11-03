@@ -1,10 +1,13 @@
-import * as i18n from 'i18next';
+import i18n from 'i18next';
 import { local } from 'storage.io';
 import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 import { options } from './options';
 
-i18n.use(initReactI18next);
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next);
 
 if (!i18n.isInitialized) {
   i18n.init(options);

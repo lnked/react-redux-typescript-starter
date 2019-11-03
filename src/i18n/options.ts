@@ -5,27 +5,6 @@ import en from './locales/en.json';
 import ru from './locales/ru.json';
 
 export const options: i18n.InitOptions = {
-  // debug: true,
-  // defaultNS: 'translations',
-  // fallbackLng: 'en',
-  // interpolation: {
-  //   escapeValue: false,
-  //   format: (value, format, _) => {
-  //     if (format === 'uppercase') {
-  //       return value.toUpperCase();
-  //     }
-  //     return value;
-  //   },
-  //   formatSeparator: ',',
-  // },
-  // keySeparator: '.',
-  // load: 'languageOnly',
-  // ns: ['translations'],
-  // react: {
-  //   wait: process && !process.release,
-  // },
-  // saveMissing: true,
-
   lng: SITE_LANGUAGE,
   react: {
     wait: true,
@@ -37,15 +16,16 @@ export const options: i18n.InitOptions = {
     escapeValue: false,
   },
   resources: {
-    en: {
+    'en-US': {
       translations: {
         ...en,
       },
     },
-    ru: {
+    'ru-RU': {
       translations: {
         ...ru,
       },
     },
   },
+  saveMissing: true,
 };
