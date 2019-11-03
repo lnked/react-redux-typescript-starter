@@ -50,7 +50,7 @@ function Forms({ ui, app }: any) {
 
             <Input name="value" value={values.value} placeholder="Value" onChange={handleChange} />
 
-            <Input name="number" type="number" value={values.number} type="number" onChange={handleChange} />
+            <Input name="number" type="number" value={values.number} onChange={handleChange} />
 
             <Input name="checkbox" type="checkbox" onChange={handleChange} />
 

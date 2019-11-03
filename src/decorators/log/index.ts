@@ -3,10 +3,9 @@ const log = (target: any, name: any, descriptor: any) => {
 
   const value = descriptor.value;
 
-  descriptor.value = () => {
-    // console.log(`Calling "${name}" with`, arguments);
-    return value.apply(null, arguments);
-  };
+  descriptor.value = (...args: any[]) => {
+    return value.apply(null, [...args]);
+  }
 
   return descriptor;
 };

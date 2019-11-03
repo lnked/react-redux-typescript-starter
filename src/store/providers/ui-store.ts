@@ -7,7 +7,7 @@ class UiStore {
     console.log({ initialState });
   }
 
-  @computed get view_type () {
+  @computed get viewType () {
     return this.type;
   }
 
