@@ -885,10 +885,10 @@
     "@babel/helper-create-regexp-features-plugin" "^7.7.0"
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/preset-env@7.7.0":
-  version "7.7.0"
-  resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.7.0.tgz#46dccc1df6b6a195044421b3f61a029866d92eef"
-  integrity sha512-AgvG8VJDehjK0Ky86xvaqKpx0ASKQk63dfghqqFt6yf9gqmcvc5TodM0ZT0XZvw9fxfrG1PqJ1Xt+8bDnHv9xw==
+"@babel/preset-env@7.7.1":
+  version "7.7.1"
+  resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.7.1.tgz#04a2ff53552c5885cf1083e291c8dd5490f744bb"
+  integrity sha512-/93SWhi3PxcVTDpSqC+Dp4YxUu3qZ4m7I76k0w73wYfn7bGVuRIO4QUz95aJksbS+AD1/mT1Ie7rbkT0wSplaA==
   dependencies:
     "@babel/helper-module-imports" "^7.7.0"
     "@babel/helper-plugin-utils" "^7.0.0"
@@ -935,7 +935,7 @@
     "@babel/plugin-transform-template-literals" "^7.4.4"
     "@babel/plugin-transform-typeof-symbol" "^7.2.0"
     "@babel/plugin-transform-unicode-regex" "^7.7.0"
-    "@babel/types" "^7.7.0"
+    "@babel/types" "^7.7.1"
     browserslist "^4.6.0"
     core-js-compat "^3.1.1"
     invariant "^2.2.2"
@@ -961,10 +961,10 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-transform-typescript" "^7.7.0"
 
-"@babel/runtime-corejs3@7.7.0":
-  version "7.7.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime-corejs3/-/runtime-corejs3-7.7.0.tgz#fe7e822c7d582d5119bddee430115df3bc7efa6f"
-  integrity sha512-fdNLfplVJktJoinhrhEN84fWHViZZ0WIENUf3oKPBcBP5+kZIm8uMGehUbv7Rg4qYTIVGIy9DuVxItwowxqZDg==
+"@babel/runtime-corejs3@7.7.1":
+  version "7.7.1"
+  resolved "https://registry.yarnpkg.com/@babel/runtime-corejs3/-/runtime-corejs3-7.7.1.tgz#6f8068ece5a2a2b0a9d7010264743ceb5c90a7fa"
+  integrity sha512-AryML1eITnHKOTUNMR0xG53kQl7Jc+KwySDTcKeGu/7M2G/9fBvoVXGgZGwGRN+9C5UNNyoH+9XRkOMXt+nHVw==
   dependencies:
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.2"
@@ -1037,6 +1037,15 @@
   version "7.7.0"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.7.0.tgz#bdf5967277ced7590da452c31d60853d0beb5d4f"
   integrity sha512-ptM1jeXPYi3BfRBelzbTgL/7aP99oYJCbLtGha8phqRY3EeXch+i6LuxRcNQAIgL++yyNPR/rO6cGLDc0cvUMQ==
+  dependencies:
+    esutils "^2.0.2"
+    lodash "^4.17.13"
+    to-fast-properties "^2.0.0"
+
+"@babel/types@^7.7.1":
+  version "7.7.1"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.7.1.tgz#8b08ea368f2baff236613512cf67109e76285827"
+  integrity sha512-kN/XdANDab9x1z5gcjDc9ePpxexkt+1EQ2MQUiM4XnMvQfvp87/+6kY4Ko2maLXH+tei/DgJ/ybFITeqqRwDiA==
   dependencies:
     esutils "^2.0.2"
     lodash "^4.17.13"
@@ -12322,10 +12331,10 @@ typescript-plugin-styled-components@1.4.3:
   resolved "https://registry.yarnpkg.com/typescript-plugin-styled-components/-/typescript-plugin-styled-components-1.4.3.tgz#7f87ce0194e7841aa121174089dddff9f40bb0fb"
   integrity sha512-/n6+nwtYRJwj/uJdiMNrjsfy2V34uGDeBuY3WaL3a1lc+aaYyfxHLvRdV3W44O+ewijJrFcEHKYAJdYq4wxXlQ==
 
-typescript@3.6.4:
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.4.tgz#b18752bb3792bc1a0281335f7f6ebf1bbfc5b91d"
-  integrity sha512-unoCll1+l+YK4i4F8f22TaNVPRHcD9PA3yCuZ8g5e0qGqlVlJ/8FSateOLLSagn+Yg5+ZwuPkL8LFUc0Jcvksg==
+typescript@3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.2.tgz#27e489b95fa5909445e9fef5ee48d81697ad18fb"
+  integrity sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ==
 
 uglify-js@3.4.x:
   version "3.4.10"
