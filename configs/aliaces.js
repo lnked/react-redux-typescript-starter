@@ -32,7 +32,7 @@ module.exports = {
   hooks: resolve(sourcePath, 'hooks'),
   store: resolve(sourcePath, 'store'),
   pages: resolve(sourcePath, 'pages'),
-  theme: resolve(sourcePath, 'theme'),
+  themes: resolve(sourcePath, 'themes'),
   assets: resolve(sourcePath, 'assets'),
   layouts: resolve(sourcePath, 'layouts'),
   services: resolve(sourcePath, 'services'),

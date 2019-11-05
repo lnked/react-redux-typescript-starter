@@ -140,7 +140,7 @@ module.exports.getTemplate = (type = 'class', name) => {
   if (type === 'styled') {
     template.push(
       `import styled from 'styled-components';\n`,
-      `import { CommonStyles } from 'theme';\n`,
+      `import { CommonStyles } from 'themes';\n`,
       `export const StyledDiv = styled.div\``,
       `\tcolor: \${CommonStyles.themeColor};`,
       `\`;\n`,

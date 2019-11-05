@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { colors } from 'theme';
+import { Colors } from 'themes';
 
 export interface OuterProps {
   step?: number;
@@ -25,7 +25,7 @@ const StylesInput = styled.input`
   outline: none;
   text-align: center;
   appearance: none;
-  border: 1px solid ${colors.border};
+  border: 1px solid ${Colors.border};
 `;
 
 const Button = styled.button`

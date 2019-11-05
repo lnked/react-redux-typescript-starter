@@ -1,4 +1,4 @@
-export const colors = {
+export const Colors = {
   black: '#000',
   border: '#ddd',
   green: '#00aa55',
@@ -23,4 +23,4 @@ export const colors = {
   },
 };
 
-export default colors;
+export default Colors;

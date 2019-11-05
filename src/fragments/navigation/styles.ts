@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { PreloadLink } from 'components';
 
-import { colors } from 'theme';
+import { Colors } from 'themes';
 
 export const Nav: any = styled.nav`
   position: sticky;
@@ -36,7 +36,7 @@ export const NavigationItem: any = styled.li`
 `;
 
 export const NavigationLink: any = styled(PreloadLink)`
-  color: ${colors.white};
+  color: ${Colors.white};
   padding: 0;
   font-size: 1.6rem;
   font-weight: 300;
