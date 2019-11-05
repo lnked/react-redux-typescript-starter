@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Router } from 'react-router-dom';
-// import { I18nextProvider } from 'react-i18next';
+import { I18nextProvider } from 'react-i18next';
 import { hot } from 'react-hot-loader/root';
 
-// import i18n, { i18nInit, i18nUnload } from 'i18n';
+import i18n, { i18nInit, i18nUnload } from 'i18n';
 
 import { CoreLayout } from 'layouts';
 import { browserHistory } from 'utils';
@@ -22,18 +22,18 @@ class App extends React.Component<OuterProps, {}> {
 
   timeout: any = null;
 
-  // componentDidMount () {
-  //   i18nInit();
-  // }
+  componentDidMount () {
+    i18nInit();
+  }
 
-  // componentWillUnmount () {
-  //   i18nUnload();
-  // }
+  componentWillUnmount () {
+    i18nUnload();
+  }
 
   render () {
     return (
       <ErrorBoundary>
-        {/* <I18nextProvider i18n={i18n}> */}
+        <I18nextProvider i18n={i18n}>
           <Router history={browserHistory}>
             <CoreLayout>
               <React.Suspense fallback={<div>Loading...</div>}>
@@ -43,7 +43,7 @@ class App extends React.Component<OuterProps, {}> {
 
             <GlobalStyle />
           </Router>
-        {/* </I18nextProvider> */}
+        </I18nextProvider>
       </ErrorBoundary>
     );
   }
