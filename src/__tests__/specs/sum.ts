@@ -1,4 +1,4 @@
-import { sum } from 'utils/sum';
+import { sum } from 'utils';
 
 test('summ without props', () => {
   expect(sum()).toEqual(0);

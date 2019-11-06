@@ -68,7 +68,7 @@ export interface OuterProps {
 }
 
 export const removeNonHTMLProps = (props: OuterProps) => {
-  const entries = {};
+  const entries: any = {};
 
   for (const name in props) {
     if (supportedProps.includes(name)) {

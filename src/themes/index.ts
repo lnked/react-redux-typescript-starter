@@ -1,8 +1,8 @@
-import { Theme } from './theme';
+import { Theme } from './Theme';
 
-export { box } from './box';
-export { Theme } from './theme';
-export { Colors } from './colors';
+export { Box } from './Box';
+export { Theme } from './Theme';
+export { Colors } from './Colors';
 export { CommonStyles } from './CommonStyles';
 
 export default Theme;
