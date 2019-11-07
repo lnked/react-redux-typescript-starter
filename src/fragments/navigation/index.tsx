@@ -5,6 +5,7 @@ import { setLanguage } from 'i18n';
 import { Button } from 'components';
 
 import { routes } from 'app/routes';
+
 import {
   Nav,
   NavigationList,
@@ -13,11 +14,13 @@ import {
   Language,
 } from './styles';
 
-function Navigation() {
+export interface OuterProps {}
+
+const Navigation: React.FC<OuterProps> = ({ ...props }) => {
   const { t, i18n } = useTranslation();
 
   return (
-    <Nav>
+    <Nav {...props}>
       <NavigationList>
         {routes && routes.map(({ keyName, component, ...link }: any) => (
           <NavigationItem key={link.to}>
@@ -39,6 +42,6 @@ function Navigation() {
       </Language>
     </Nav>
   );
-}
+};
 
 export default Navigation;

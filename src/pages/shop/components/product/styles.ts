@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 import { Image as ImageSource } from 'components';
-import { colors } from 'theme';
+import { Colors } from 'themes';
 
 export const Card = styled.article`
   padding: 0;
@@ -11,7 +11,7 @@ export const Card = styled.article`
   display: flex;
   align-items: stretch;
   flex-direction: column;
-  background-color: ${colors.lightGray};
+  background-color: ${Colors.lightGray};
 `;
 
 export const Link = styled(NavLink)`

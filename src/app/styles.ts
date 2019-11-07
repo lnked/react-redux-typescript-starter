@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { colors } from 'theme';
+import { Colors } from 'themes';
 
 /* tslint:disable: max-line-length */
 const GlobalStyle: any = createGlobalStyle`
@@ -50,7 +50,7 @@ const GlobalStyle: any = createGlobalStyle`
   }
 
   h3 {
-    color: ${colors.primary};
+    color: ${Colors.primary};
     font-size: 1.6rem;
   }
 `;

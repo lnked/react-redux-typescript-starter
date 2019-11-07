@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { CommonStyles } from 'theme';
+import { CommonStyles } from 'themes';
 
 export const Group = styled.div`
   color: ${CommonStyles.themeColor};

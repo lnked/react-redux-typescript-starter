@@ -1,8 +1,18 @@
 // https://jestjs.io/docs/en/configuration#setupfiles-array
+const { defaults: tsjPreset } = require('ts-jest/presets');
+const { pathsToModuleNameMapper } = require('ts-jest/utils');
+
+// In the following statement, replace `./tsconfig` with the path to your `tsconfig` file
+// which contains the path mapping (ie the `compilerOptions.paths` option):
+const { compilerOptions } = require('./tsconfig');
 
 module.exports = {
+  roots: ['<rootDir>/src'],
+
   cache: true,
+
   verbose: false,
+
   // Modules can be explicitly auto-mocked using jest.mock(moduleName).
   // https://facebook.github.io/jest/docs/en/configuration.html#automock-boolean
   automock: false, // [boolean]
@@ -19,11 +29,6 @@ module.exports = {
 
   updateSnapshot: true,
 
-  moduleDirectories: ['node_modules', 'src'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
-  transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-  },
   globals: {
     __DEV__: false,
     NODE_ENV: 'test',
@@ -38,23 +43,22 @@ module.exports = {
       useExperimentalLanguageServer: false,
     },
   },
-  testMatch: ['<rootDir>/src/**/__tests__/**/*.(ts|tsx|js)', '<rootDir>/src/**/?(*.)(spec|test).(ts|tsx|js)'],
-  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
 
-  moduleNameMapper: {
-    '^app/(.*)': '<rootDir>/src/app/$1',
-    '^utils/(.*)': '<rootDir>/src/utils/$1',
-    '^pages/(.*)': '<rootDir>/src/pages/$1',
-    '^assets/(.*)': '<rootDir>/src/assets/$1',
-    '^layouts/(.*)': '<rootDir>/src/layouts/$1',
-    '^settings/(.*)': '<rootDir>/src/settings/$1',
-    '^services/(.*)': '<rootDir>/src/services/$1',
-    '^fragments/(.*)': '<rootDir>/src/fragments/$1',
-    '^components/(.*)': '<rootDir>/src/components/$1',
+  transform: {
+    ...tsjPreset.transform,
   },
+
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
+
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths /*, { prefix: '<rootDir>/' } */),
+
+  moduleDirectories: ['node_modules', 'src'],
+
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
 
   // Setup Enzyme
   snapshotSerializers: ['enzyme-to-json/serializer', 'jest-styled-components'],
+
   setupFilesAfterEnv: ['<rootDir>/configs/jest/enzyme.setup.ts'],
 
   // Setup Coverage

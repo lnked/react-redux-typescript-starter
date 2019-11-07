@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-import { colors } from 'theme';
+import { Colors } from 'themes';
 
 export const Layout = styled.div`
   padding: 0;
   min-height: 100vh;
-  color: ${(p: any) => (p.theme.whiteColor ? colors.gray : colors.black)};
+  color: ${(p: any) => (p.theme.whiteColor ? Colors.gray : Colors.black)};
   font-family: ${(p: any) => p.theme.fontFamily};
-  background-color: ${(p: any) => (p.theme.whiteColor ? colors.white : colors.white)};
+  background-color: ${(p: any) => (p.theme.whiteColor ? Colors.white : Colors.white)};
 `;
 
 export const Section = styled.div`

@@ -19,8 +19,13 @@ const routingStore = new RouterStore();
 
 const history = syncHistoryWithStore(browserHistory, routingStore);
 
+const stores = configureStore(routingStore);
+
+// For easier debugging
+window.__APP_STATE__ = stores;
+
 ReactDOM.render(
-  <Provider {...configureStore(routingStore)}>
+  <Provider {...stores}>
     <App history={history} />
   </Provider>,
   document.getElementById('app-root')

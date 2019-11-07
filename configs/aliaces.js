@@ -5,6 +5,9 @@ const { root, sourcePath } = require('./options');
 const duplicates = {
   lodash: resolve(root, 'node_modules/lodash'),
   warning: resolve(root, 'node_modules/warning'),
+  'history': resolve(root, 'node_modules/history'),
+  'value-equal': resolve(root, 'node_modules/value-equal'),
+  'resolve-pathname': resolve(root, 'node_modules/resolve-pathname'),
   'react-is': resolve(root, 'node_modules/react-is'),
   'immutable': resolve(root, 'node_modules/immutable'),
   'rc-trigger': resolve(root, 'node_modules/rc-trigger'),
@@ -12,7 +15,7 @@ const duplicates = {
   'create-react-context': resolve(root, 'node_modules/create-react-context'),
   'hoist-non-react-statics': resolve(root, 'node_modules/hoist-non-react-statics'),
   '@babel/runtime': resolve(root, 'node_modules/@babel/runtime'),
-  // 'react-dom': '@hot-loader/react-dom',
+  'react-dom': '@hot-loader/react-dom',
 };
 
 const noParse = {
@@ -29,7 +32,7 @@ module.exports = {
   hooks: resolve(sourcePath, 'hooks'),
   store: resolve(sourcePath, 'store'),
   pages: resolve(sourcePath, 'pages'),
-  theme: resolve(sourcePath, 'theme'),
+  themes: resolve(sourcePath, 'themes'),
   assets: resolve(sourcePath, 'assets'),
   layouts: resolve(sourcePath, 'layouts'),
   services: resolve(sourcePath, 'services'),

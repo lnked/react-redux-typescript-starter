@@ -21,8 +21,9 @@ const transform = (prefix, preventFullImport = false, skipDefaultConversion = fa
 
 module.exports = {
   './components': transform('./components', true),
+  '\.\.\/i18n\/?(((\\w*)?\/?)*)': transform('i18n', false, true),
   '\.\.\/utils\/?(((\\w*)?\/?)*)': transform('utils', false, true),
-  '\.\.\/theme\/?(((\\w*)?\/?)*)': transform('theme', false, true),
+  '\.\.\/themes\/?(((\\w*)?\/?)*)': transform('themes', false, true),
   '\.\.\/pages\/?(((\\w*)?\/?)*)': transform('pages'),
   '\.\.\/layouts\/?(((\\w*)?\/?)*)': transform('layouts'),
   '\.\.\/services\/?(((\\w*)?\/?)*)': transform('services'),
