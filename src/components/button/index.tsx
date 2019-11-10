@@ -41,4 +41,16 @@ Button.defaultProps = {
   children: '',
 };
 
-export default Button;
+// function areEqual(prevProps, nextProps) {
+//   /*
+//   возвращает true, если nextProps рендерит
+//   тот же результат что и prevProps,
+//   иначе возвращает false
+//   */
+// }
+
+// export default React.memo(Button, areEqual);
+
+export default React.memo(Button);
+
+// export default Button;
