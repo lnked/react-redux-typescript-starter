@@ -1,7 +1,7 @@
 import * as React from 'react';
 // import Raven from 'raven-js'
 
-import { StyledError, StyledDetails } from './styles';
+import { StyledError, StyledDetails } from './styled';
 
 export interface OuterProps {
   children: JSX.Element | JSX.Element[] | string;
@@ -46,3 +46,26 @@ export default class ErrorBoundary extends React.PureComponent<OuterProps, Inner
     return this.props.children;
   }
 }
+
+// class ErrorBoundary extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = { hasError: false };
+//   }
+//   static getDerivedStateFromError(error) {
+//     // Обновляем состояние, чтобы следующее отображение
+//     // показало интерфейс на случай ошибок
+//     return { hasError: true };
+//   }
+//   componentDidCatch(error, info) {
+//     // Также можно залогировать ошибку
+//     logErrorToMyService(error, info);
+//   }
+//   render() {
+//     if (this.state.hasError) {
+//       // Можно отобразить любой интерфейс на случай ошибок
+//       return <h1>Something went wrong.</h1>;
+//     }
+//     return this.props.children;
+//   }
+// }
