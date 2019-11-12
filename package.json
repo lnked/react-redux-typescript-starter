@@ -71,7 +71,7 @@
     "@types/enzyme": "3.10.3",
     "@types/enzyme-adapter-react-16": "1.0.5",
     "@types/i18next": "13.0.0",
-    "@types/jest": "24.0.22",
+    "@types/jest": "24.0.23",
     "@types/nanoid": "2.1.0",
     "@types/node": "12.12.7",
     "@types/react": "16.9.11",
