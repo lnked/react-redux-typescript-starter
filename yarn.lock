@@ -1432,34 +1432,34 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
   integrity sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==
 
-"@size-limit/file@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-2.2.0.tgz#8595668bada5bf792d319acc8bcd84564ff498f7"
-  integrity sha512-FCrrpOh9YF1UHYilspC0R1+Di/yso0Tcam7m6GXTqgY+Uvv7HJ3LPG4TXvLbUSbgzLKRDVdf3JX7GRMH5+yfKA==
+"@size-limit/file@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-2.2.1.tgz#112a13652a87070974b31d5fae191c4392931d08"
+  integrity sha512-ZmIgXZLO4jxPhlHVe679Q2LZOPz7KJ7OsAwlu/RD7YW3H4kwO8T8VYM7Y0eDv7atxHeP7rwLQyFEUpkkPUOOCQ==
   dependencies:
-    size-limit "2.2.0"
+    size-limit "2.2.1"
 
-"@size-limit/preset-app@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@size-limit/preset-app/-/preset-app-2.2.0.tgz#43fbbe9d8464fc63d0e8be39096ff0d37abd4231"
-  integrity sha512-Gdisc09JIdicTR7IbslnagoSXJtPL3V1zUP5+zTh/b8eEylzhfJp749W3qBtBj4eI/FmopcKC0o2ViXYowtsJg==
+"@size-limit/preset-app@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@size-limit/preset-app/-/preset-app-2.2.1.tgz#5f005aa79ad28d384bc557f849d017d110477b52"
+  integrity sha512-777iTByV976fBlvylkucES9qf4S2DbGyUX926HsBPKMIUFVFpHAgnO6pqUN+MdjiZwU0fXQM+XgmwW0D9HSecQ==
   dependencies:
-    "@size-limit/file" "2.2.0"
-    "@size-limit/time" "2.2.0"
+    "@size-limit/file" "2.2.1"
+    "@size-limit/time" "2.2.1"
 
-"@size-limit/time@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@size-limit/time/-/time-2.2.0.tgz#8879e888dd6c404aa2f1c8461980aae239b57a09"
-  integrity sha512-7J/ocn2IWPSYH1iEkZbn16eGU3qzZDVILiI/MGIUSsGd+lPkgLJ6vi9OwBsExGId7Y1YTr77Il+NvKXpIJFcWA==
+"@size-limit/time@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@size-limit/time/-/time-2.2.1.tgz#a1f236297a47386052b6c4039386993a7c090e44"
+  integrity sha512-4C1xYMMY5cnFIzjTv3hK7sJx3dhK8JAlGsfGUyErsaCbzdFW3sIZ+LRI1yvYOSOHcMQ+EMGsXK3XKfKZm8Atdg==
   dependencies:
     estimo "^2.0.1"
-    react "^16.11.0"
-    size-limit "2.2.0"
+    react "^16.12.0"
+    size-limit "2.2.1"
 
-"@size-limit/webpack@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@size-limit/webpack/-/webpack-2.2.0.tgz#620bb49a9290eb93247c10fa6a0baa2f8fe62e10"
-  integrity sha512-FeisYCZmcTsPmCtbi1+M4lo7EgeI2Wf/ePpc4iEfk+Z6IxVbjCSs5kgEPVncy9053y6TWrltAKWkMqU5l6jjUQ==
+"@size-limit/webpack@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@size-limit/webpack/-/webpack-2.2.1.tgz#afb258c5d36c35449b9f8322d6d52a37d3cfc8aa"
+  integrity sha512-VHiKIx+f8xG0G/msgLnUlMLuWjsdrFwxbKTJlAItmkz7mJJhLt+K2bRi5RFn+wxEwrcpgg8lfDXqoCv3mZjFJg==
   dependencies:
     css-loader "^3.2.0"
     escape-string-regexp "^2.0.0"
@@ -1467,7 +1467,7 @@
     nanoid "^2.1.6"
     optimize-css-assets-webpack-plugin "^5.0.3"
     rimraf "^3.0.0"
-    size-limit "2.2.0"
+    size-limit "2.2.1"
     style-loader "^1.0.0"
     webpack "^4.41.2"
     webpack-bundle-analyzer "^3.6.0"
@@ -8828,7 +8828,12 @@ nan@^2.12.1:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
 
-nanoid@2.1.6, nanoid@^2.0.4, nanoid@^2.1.6:
+nanoid@2.1.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.1.7.tgz#d775e3e7c6470bbaaae3da9a647a80e228e0abf7"
+  integrity sha512-fmS3qwDldm4bE01HCIRqNk+f255CNjnAoeV3Zzzv0KemObHKqYgirVaZA9DtKcjogicWjYcHkJs4D5A8CjnuVQ==
+
+nanoid@^2.0.4, nanoid@^2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.1.6.tgz#0665418f692e54cf44f34d4010761f3240a03314"
   integrity sha512-2NDzpiuEy3+H0AVtdt8LoFi7PnqkOnIzYmJQp7xsEU6VexLluHQwKREuiz57XaQC5006seIadPrIZJhyS2n7aw==
@@ -10550,10 +10555,10 @@ react-hot-loader@*:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
-react-hot-loader@4.12.17:
-  version "4.12.17"
-  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.12.17.tgz#e48815848865342edd829861634637b8c0d22bed"
-  integrity sha512-nee5q4Xip6+wD8DrCWxVUH0zT488K1zRG1KezJTb8oEbRO1JZvnEizbOG7BwnRfxxjk5QSyx6fPXeBf2fToBhw==
+react-hot-loader@4.12.18:
+  version "4.12.18"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.12.18.tgz#a9029e34af2690d76208f9a35189d73c2dfea6a7"
+  integrity sha512-qYD0Qi9lIbg9jLyfmodfqvAQqCBsoPKxAhca8Nxvy2/2pO5Q9r2kM28jN0bbbSnhwK8dJ7FjsfVtXKOxMW+bqw==
   dependencies:
     fast-levenshtein "^2.0.6"
     global "^4.3.0"
@@ -10670,19 +10675,10 @@ react-use-localstorage@3.3.2:
   resolved "https://registry.yarnpkg.com/react-use-localstorage/-/react-use-localstorage-3.3.2.tgz#184ab0a442772e1ed8cc82de291845bab00fb98f"
   integrity sha512-5pVtbOYBjZm4rIKaPYyBl9w8fe8ZbspschHv61UCLftYhhwKVF01XeEvBQuaXzBXFhiCzS7/qV56oJvfuPF3Pw==
 
-react@16.12.0:
+react@16.12.0, react@^16.12.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
   integrity sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-
-react@^16.11.0:
-  version "16.11.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.11.0.tgz#d294545fe62299ccee83363599bf904e4a07fdbb"
-  integrity sha512-M5Y8yITaLmU0ynd0r1Yvfq98Rmll6q8AxaEe88c8e7LxO8fZ2cNgmFt0aGAS9wzf1Ao32NKXtCl+/tVVtkxq6g==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -11463,10 +11459,10 @@ sisteransi@^1.0.3:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.3.tgz#98168d62b79e3a5e758e27ae63c4a053d748f4eb"
   integrity sha512-SbEG75TzH8G7eVXFSN5f9EExILKfly7SUvVY5DhhYLvfhKqhDFY0OzevWa/zwak0RLRfWS5AvfMWpd9gJvr5Yg==
 
-size-limit@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-2.2.0.tgz#12beb2d13c39dfa8b59e8948a55032f7fcdb7b0f"
-  integrity sha512-abAzntQYKcpOBL0PB1TqBt/p7bTEYi//rCSYQrtRzOVfcXhbHz8FZ18lYjtnzzGR0ZpHt9Z0EWNVBWmYmXpBCg==
+size-limit@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-2.2.1.tgz#6511471ba0296c9954df919005802d02af818d6d"
+  integrity sha512-V6SraFSyRs+JKSTJaZy5etA4ltx/LKE2pTfbMv2ojmgJLA6QwfRGZdYnED5GBzjJs3aIjrqDkmpc0QjIYkNiYg==
   dependencies:
     bytes "^3.1.0"
     chalk "^3.0.0"
