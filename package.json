@@ -81,7 +81,7 @@
     "@types/react-router-dom": "5.1.2",
     "@types/react-test-renderer": "16.9.1",
     "@types/styled-components": "4.4.0",
-    "@types/webpack": "4.39.9",
+    "@types/webpack": "4.41.0",
     "@types/webpack-env": "1.14.1",
     "@typescript-eslint/eslint-plugin": "2.7.0",
     "@typescript-eslint/parser": "2.7.0",
