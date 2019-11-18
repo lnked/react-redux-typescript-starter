@@ -114,7 +114,7 @@
     "html-loader": "0.5.5",
     "html-webpack-exclude-assets-plugin": "0.0.7",
     "html-webpack-plugin": "3.2.0",
-    "husky": "3.0.9",
+    "husky": "3.1.0",
     "image-webpack-loader": "6.0.0",
     "imagemin-mozjpeg": "8.0.0",
     "imagemin-webpack-plugin": "2.4.2",
