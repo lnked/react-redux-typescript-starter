@@ -9,6 +9,8 @@ import {
   REACT_APP_SECRET,
 } from 'settings';
 
+import styles from './styles.module.scss';
+
 const Home = () => {
   const { t } = useTranslation();
   const { history, location, match } = useReactRouter();
@@ -21,7 +23,7 @@ const Home = () => {
     });
 
   return (
-    <div>
+    <div className={styles.container}>
       <div>My location is {location.pathname}!</div>
       <div>location: {JSON.stringify(location)}!</div>
       <div>history: {JSON.stringify(history)}!</div>

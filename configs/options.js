@@ -32,6 +32,7 @@ module.exports = {
   analyze: options.analyze || false,
   compression: options.release || false,
   dist: resolve(root, 'dist'),
+  stylesPath: resolve(root, 'dist/css'),
   staticPath: 'static',
   sourcePath: resolve(root, 'src'),
   serverPath: resolve(root, 'src/server'),

@@ -7,3 +7,4 @@ jest.config.js
 babel.config.js
 metro.config.js
 lint-staged.config.js
+configs/*
