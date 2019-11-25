@@ -106,7 +106,7 @@
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.15.1",
     "enzyme-to-json": "3.4.3",
-    "eslint": "6.7.0",
+    "eslint": "6.7.1",
     "eslint-plugin-react": "7.16.0",
     "eslint-plugin-react-hooks": "2.3.0",
     "fast-async": "6.3.8",
@@ -200,7 +200,7 @@
     "react-maskedinput": "4.0.1",
     "react-progressive-image": "0.6.0",
     "react-router-dom": "5.1.2",
-    "react-use-localstorage": "3.3.2",
+    "react-use-localstorage": "3.4.1",
     "storage.io": "1.2.0",
     "styled-components": "4.4.1",
     "use-react-router": "1.0.7"
