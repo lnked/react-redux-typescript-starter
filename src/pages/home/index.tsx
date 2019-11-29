@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import useReactRouter from 'use-react-router';
 
-import { Input, Button } from 'components';
+import { Image, Input, Button } from 'components';
 
 import {
   API_URL,
@@ -10,6 +10,10 @@ import {
 } from 'settings';
 
 import styles from './styles.module.scss';
+
+import code from 'assets/images/code.png';
+import globe from 'assets/images/globe.jpg';
+import formats from 'assets/images/gif-png-jpg.gif';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -24,6 +28,16 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
+
+      <Image width={100} height={100} src={globe} alt="Globe" />
+
+      <span style={{ backgroundColor: '#000', display: 'inline-block' }}>
+        <img width={100} height={100} src={code} alt="" />
+      </span>
+
+      <img height={100} src={globe} alt="" />
+      <img height={100} src={formats} alt="" />
+
       <div>My location is {location.pathname}!</div>
       <div>location: {JSON.stringify(location)}!</div>
       <div>history: {JSON.stringify(history)}!</div>

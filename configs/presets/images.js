@@ -1,17 +1,26 @@
 const svg = require('../loaders/svg-url-loader');
-const url = require('../loaders/url-loader');
 const file = require('../loaders/file-loader');
 const cache = require('../loaders/cache-loader');
 const imageWebpack = require('../loaders/image-webpack-loader');
+
+const { development, staticPath } = require('../options');
 
 module.exports = () => {
   return [
     {
       test: /\.(jpe?g|png|gif|svg|ico)(\?\S*)?$/i,
       use: [
-        cache(),
         file({
-          outputPath: 'assets/',
+          name: () => {
+            if (development) {
+              return '[path][name].[ext]';
+            }
+
+            return '[name].[contenthash].[ext]';
+          },
+          useRelativePath: true,
+          outputPath: `${staticPath}/images`,
+          publicPath: `${staticPath}/images`,
         }),
         imageWebpack(),
       ],
