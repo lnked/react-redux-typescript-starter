@@ -67,6 +67,7 @@
     "@gfx/zopfli": "1.0.14",
     "@size-limit/preset-app": "2.2.1",
     "@size-limit/webpack": "2.2.1",
+    "@teamsupercell/typings-for-css-modules-loader": "2.1.0",
     "@types/date-fns": "2.6.0",
     "@types/enzyme": "3.10.3",
     "@types/enzyme-adapter-react-16": "1.0.5",

@@ -7,6 +7,10 @@ const formatter = require('../../tools/formatter').formatter
 
 module.exports = () => {
   return [
+    new webpack.WatchIgnorePlugin([
+      /scss\.d\.ts$/
+    ]),
+
     new webpack.NoEmitOnErrorsPlugin(),
 
     new webpack.DefinePlugin({

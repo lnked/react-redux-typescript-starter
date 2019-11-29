@@ -4,15 +4,5 @@ declare module '*.json' {
   export default value;
 }
 
-declare module '*.css' {
-  const content: any;
-  export default content;
-}
-
-declare module '*.scss' {
-  const _: string;
-  export default _;
-}
-
 declare module '*.woff';
 declare module '*.woff2';

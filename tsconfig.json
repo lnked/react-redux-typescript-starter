@@ -46,5 +46,12 @@
     "src/**/*.tsx",
     "typings/**/*.d.ts"
   ],
-  "exclude": ["./node_modules", "./configs", "./dist", "**/node_modules/*", "./src/**/*.test.tsx", "./src/**/*.spec.tsx"]
+  "exclude": [
+    "./dist",
+    "./configs",
+    "./node_modules",
+    "**/node_modules/*",
+    "./src/**/*.test.tsx",
+    "./src/**/*.spec.tsx"
+  ]
 }

@@ -9,11 +9,11 @@ import {
   REACT_APP_SECRET,
 } from 'settings';
 
-import styles from './styles.module.scss';
-
 import code from 'assets/images/code.png';
 import globe from 'assets/images/globe.jpg';
 import formats from 'assets/images/gif-png-jpg.gif';
+
+import * as styles from './styles.module.scss';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -28,7 +28,6 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-
       <Image width={100} height={100} src={globe} alt="Globe" />
 
       <span style={{ backgroundColor: '#000', display: 'inline-block' }}>

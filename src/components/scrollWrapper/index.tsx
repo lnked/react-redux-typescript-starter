@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import styles from './styles.module.scss';
+import * as styles from './styles.module.scss';
 
 export interface OuterTypes {
   children: React.ReactChildren;

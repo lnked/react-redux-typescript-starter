@@ -7,8 +7,8 @@ module.exports = ({ importLoaders = 1, ...props }) => {
       ...props,
       modules: {
         mode: 'local',
-        localIdentName: development ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:5]',
         context: sourcePath,
+        localIdentName: development ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:5]',
       },
       importLoaders,
     }

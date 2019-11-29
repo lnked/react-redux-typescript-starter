@@ -2,6 +2,7 @@ node_modules
 dist
 **/__tests__/**
 **/*.test.tsx
+**/*.scss.d.ts
 jest.setup.js
 jest.config.js
 babel.config.js
