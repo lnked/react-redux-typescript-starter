@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 
 export const Picture = styled.picture`
+  font-size: 0;
   position: relative;
   display: inline-block;
   border-radius: ${(p: any) => (p.circle ? '50%' : 0)};

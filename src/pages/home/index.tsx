@@ -30,8 +30,8 @@ const Home = () => {
     <div className={styles.container}>
       <Image width={100} height={100} src={globe} alt="Globe" />
 
-      <span style={{ backgroundColor: '#000', display: 'inline-block' }}>
-        <img width={100} height={100} src={code} alt="" />
+      <span className={styles.image}>
+        <Image width={100} height={100} src={code} alt="" />
       </span>
 
       <img height={100} src={globe} alt="" />
