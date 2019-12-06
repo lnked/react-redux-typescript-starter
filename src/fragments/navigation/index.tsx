@@ -12,7 +12,7 @@ import {
   NavigationItem,
   NavigationLink,
   Language,
-} from './styles';
+} from './styled';
 
 export interface OuterProps {}
 

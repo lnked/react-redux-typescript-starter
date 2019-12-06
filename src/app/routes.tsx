@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
-import { lazyWithPreload } from 'utils';
+import { preloadComponent } from 'utils';
 import { setHistory } from 'utils/redirect';
 
 import PrivateRoute from './private-route';
@@ -9,52 +9,52 @@ import PrivateRoute from './private-route';
 import Home from 'pages/home';
 
 // /* webpackChunkName: "cart", webpackPrefetch: true */
-export const Cart = lazyWithPreload(() => import(
+export const Cart = preloadComponent(() => import(
   /* webpackChunkName: "cart" */
   'pages/cart'
 ));
 
-export const Shop = lazyWithPreload(() => import(
+export const Shop = preloadComponent(() => import(
   /* webpackChunkName: "shop" */
   'pages/shop'
 ));
 
-export const About = lazyWithPreload(() => import(
+export const About = preloadComponent(() => import(
   /* webpackChunkName: "about" */
   'pages/about'
 ));
 
-export const Forms = lazyWithPreload(() => import(
+export const Forms = preloadComponent(() => import(
   /* webpackChunkName: "forms" */
   'pages/forms'
 ));
 
-export const Login = lazyWithPreload(() => import(
+export const Login = preloadComponent(() => import(
   /* webpackChunkName: "login" */
   'pages/login'
 ));
 
-export const Topics = lazyWithPreload(() => import(
+export const Topics = preloadComponent(() => import(
   /* webpackChunkName: "topics" */
   'pages/topics'
 ));
 
-export const Profile = lazyWithPreload(() => import(
+export const Profile = preloadComponent(() => import(
   /* webpackChunkName: "profile" */
   'pages/profile'
 ));
 
-export const Context = lazyWithPreload(() => import(
+export const Context = preloadComponent(() => import(
   /* webpackChunkName: "context" */
   'pages/context'
 ));
 
-export const Counter = lazyWithPreload(() => import(
+export const Counter = preloadComponent(() => import(
   /* webpackChunkName: "counter" */
   'pages/counter'
 ));
 
-export const NoMatch = lazyWithPreload(() => import(
+export const NoMatch = preloadComponent(() => import(
   /* webpackChunkName: "nomatch" */
   'pages/nomatch'
 ));
