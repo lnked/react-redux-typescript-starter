@@ -1,16 +1,18 @@
 const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 
 const { configs } = require('../../html-minify');
-const { root, production } = require('../../options');
+const { environment } = require('../../tools/env')
+const { root, production, preload, prefetch } = require('../../options');
 
 const options = production ? {
   hash: false,
   cache: true,
   inject: true,
   compile: false,
-  preload: ['**/*.js'],
-  prefetch: ['**/*.js'],
+  preload,
+  prefetch,
   chunksSortMode: 'dependency',
   production: production,
   minify: {
@@ -23,13 +25,14 @@ const options = production ? {
 module.exports = () => {
   return [
     new HtmlWebpackPlugin({
-      title: 'React app',
+      PUBLIC_URL: '/',
       inject: true,
       filename: 'index.html',
       template: resolve(root, 'public/index.html'),
-      description: 'React starter',
-      PUBLIC_URL: '/',
+      title: JSON.parse(environment.REACT_APP_NAME),
+      description: JSON.parse(environment.REACT_APP_DESCRIPTION),
       ...options
     }),
+    new ResourceHintWebpackPlugin(),
   ]
 }

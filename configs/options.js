@@ -28,6 +28,7 @@ module.exports = {
   development,
   environment,
   preload: false,
+  prefetch: ['**/*.js'],
   sourceMap: false,
   release: options.release || options.analyze || false,
   analyze: options.analyze || false,

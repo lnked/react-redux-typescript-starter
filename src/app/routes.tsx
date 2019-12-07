@@ -8,54 +8,54 @@ import PrivateRoute from './private-route';
 
 import Home from 'pages/home';
 
-// /* webpackChunkName: "cart", webpackPrefetch: true */
+/* webpackChunkName: "cart", webpackPrefetch: true */
 export const Cart = preloadComponent(() => import(
-  /* webpackChunkName: "cart" */
+  /* webpackChunkName: "cart", webpackPrefetch: true */
   'pages/cart'
 ));
 
 export const Shop = preloadComponent(() => import(
-  /* webpackChunkName: "shop" */
+  /* webpackChunkName: "shop", webpackPrefetch: true */
   'pages/shop'
 ));
 
 export const About = preloadComponent(() => import(
-  /* webpackChunkName: "about" */
+  /* webpackChunkName: "about", webpackPrefetch: true */
   'pages/about'
 ));
 
 export const Forms = preloadComponent(() => import(
-  /* webpackChunkName: "forms" */
+  /* webpackChunkName: "forms", webpackPrefetch: true */
   'pages/forms'
 ));
 
 export const Login = preloadComponent(() => import(
-  /* webpackChunkName: "login" */
+  /* webpackChunkName: "login", webpackPrefetch: true */
   'pages/login'
 ));
 
 export const Topics = preloadComponent(() => import(
-  /* webpackChunkName: "topics" */
+  /* webpackChunkName: "topics", webpackPrefetch: true */
   'pages/topics'
 ));
 
 export const Profile = preloadComponent(() => import(
-  /* webpackChunkName: "profile" */
+  /* webpackChunkName: "profile", webpackPrefetch: true */
   'pages/profile'
 ));
 
 export const Context = preloadComponent(() => import(
-  /* webpackChunkName: "context" */
+  /* webpackChunkName: "context", webpackPrefetch: true */
   'pages/context'
 ));
 
 export const Counter = preloadComponent(() => import(
-  /* webpackChunkName: "counter" */
+  /* webpackChunkName: "counter", webpackPrefetch: true */
   'pages/counter'
 ));
 
 export const NoMatch = preloadComponent(() => import(
-  /* webpackChunkName: "nomatch" */
+  /* webpackChunkName: "nomatch", webpackPrefetch: true */
   'pages/nomatch'
 ));
 

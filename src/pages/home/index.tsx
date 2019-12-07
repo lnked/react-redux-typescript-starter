@@ -11,7 +11,6 @@ import {
 
 import code from 'assets/images/code.png';
 import globe from 'assets/images/globe.jpg';
-import formats from 'assets/images/gif-png-jpg.gif';
 
 import * as styles from './styles.module.scss';
 
@@ -35,7 +34,6 @@ const Home = () => {
       </span>
 
       <img height={100} src={globe} alt="" />
-      <img height={100} src={formats} alt="" />
 
       <div>My location is {location.pathname}!</div>
       <div>location: {JSON.stringify(location)}!</div>
