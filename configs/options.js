@@ -27,6 +27,7 @@ module.exports = {
   production,
   development,
   environment,
+  preload: false,
   sourceMap: false,
   release: options.release || options.analyze || false,
   analyze: options.analyze || false,
