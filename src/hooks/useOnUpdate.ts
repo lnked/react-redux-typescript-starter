@@ -17,5 +17,5 @@ export function useOnUpdate<T>(onUpdate: (prevValue: T) => void, value: T) {
     }
     // Update the ref object each time the value is updated
     valueRef.current = value;
-  },        [value]); // Run only when the value updates
+  }, [value, onUpdate]); // Run only when the value updates
 }

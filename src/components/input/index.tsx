@@ -36,7 +36,7 @@ const Input: React.FC<OuterProps & React.HTMLProps<HTMLInputElement>> = ({
 
   React.useEffect(() => {
     focus && textInput.current!.focus();
-  }, [value]);
+  }, [textInput, value, focus]);
 
   return (
     <Wrapper className={className}>
@@ -54,8 +54,8 @@ const Input: React.FC<OuterProps & React.HTMLProps<HTMLInputElement>> = ({
 
       <InputWrapper>
         <BaseInput
-          id={pair}
           ref={textInput}
+          id={pair}
           {...attrs}
           {...stateProps}
           className={inputClassName}
