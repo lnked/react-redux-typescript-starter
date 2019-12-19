@@ -1,11 +1,11 @@
 const findPath = require('./find-path');
-const changeCase = require('change-case');
+const kebabCase = require('kebab-case');
 const { sourcePath } = require('../options');
 
 const transform = (prefix, preventFullImport = false, skipDefaultConversion = false) => {
   return {
     transform: (importName, matches) => {
-      const name = changeCase.kebabCase(importName)
+      const name = kebabCase.reverse(importName);
 
       if (!preventFullImport) {
         const source = findPath(prefix, importName, (matches[1] || false)).replace(`${sourcePath}/`, '')

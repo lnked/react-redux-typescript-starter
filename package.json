@@ -124,6 +124,7 @@
     "inspectpack": "4.2.2",
     "jest": "24.9.0",
     "jest-styled-components": "6.3.4",
+    "kebab-case": "1.0.0",
     "lint-staged": "9.5.0",
     "markdown-loader": "5.1.0",
     "marked": "0.8.0",
@@ -172,7 +173,7 @@
     "webpack-bundle-analyzer": "3.6.0",
     "webpack-chunk-hash": "0.6.0",
     "webpack-cli": "3.3.10",
-    "webpack-dev-server": "3.10.0",
+    "webpack-dev-server": "3.10.1",
     "webpack-manifest-plugin": "2.2.0",
     "webpack-merge": "4.2.2",
     "workbox-webpack-plugin": "4.3.1"
