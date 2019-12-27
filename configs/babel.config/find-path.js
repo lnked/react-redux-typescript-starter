@@ -4,11 +4,11 @@ const findRealExtention = require('./find-real-extention');
 const fsExistsSyncWithCase = require('./fs-exists-sync-with-case');
 
 module.exports = function findPath(prefix, name, realName) {
+  let dirname = '';
+
   const { alias } = config.resolve;
 
   const paths = getPaths(alias[prefix], (realName || name));
-
-  let dirname = '';
 
   dirname = paths.find(f => fsExistsSyncWithCase(f));
 
@@ -21,4 +21,4 @@ module.exports = function findPath(prefix, name, realName) {
   }
 
   return `${prefix}/${(realName || name)}`;
-}
+};

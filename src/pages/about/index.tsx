@@ -6,6 +6,7 @@ import { Image, JsonPretty } from 'components';
 const About = ({ ui, app }: any) => (
   <div>
     <h2>About</h2>
+
     <E />
     <JsonPretty json={ui} />
     <JsonPretty json={app} />

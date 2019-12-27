@@ -124,6 +124,7 @@
     "inspectpack": "4.2.2",
     "jest": "24.9.0",
     "jest-styled-components": "6.3.4",
+    "kebab-case": "1.0.0",
     "lint-staged": "9.5.0",
     "markdown-loader": "5.1.0",
     "marked": "0.8.0",
