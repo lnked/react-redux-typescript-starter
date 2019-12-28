@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-export default function E() {
+export default function B() {
   return (
-    <div>IS E</div>
+    <div>IS B</div>
   );
 }
