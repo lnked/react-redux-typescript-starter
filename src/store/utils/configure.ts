@@ -2,14 +2,15 @@ import { configure } from 'mobx';
 
 import { enableLogging } from 'mobx-logger';
 
+import { environment } from 'settings';
+
 import {
   STORE_UI,
   STORE_APP,
   STORE_DATA,
   STORE_ROUTER,
   STORE_SESSION,
-  environment,
-} from 'settings';
+} from 'store/settings';
 
 import {
   UiStore,
@@ -18,7 +19,7 @@ import {
   // ArrayStore,
   // ObjectStore,
   SessionStore,
-} from './providers';
+} from 'store/providers';
 
 configure({
   enforceActions: 'observed', // 'never' | 'always' | 'observed'
