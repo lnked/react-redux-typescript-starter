@@ -36,13 +36,15 @@ const exportName = componentName(name)
 if (!fs.existsSync(componentPath)) {
   const componentIndex = `${componentPath}/index.tsx`
   const componentTypes = `${componentPath}/types.ts`
-  const componentStyled = `${componentPath}/styled.ts`
+  const componentStyles = `${componentPath}/styles/index.ts`
   const componentRoute = `${componentPath}/route.ts`
 
   fs.mkdirSync(componentPath);
+  fs.mkdirSync(`${componentPath}/styles`);
+
   fs.writeFileSync(componentIndex, getTemplate(type, exportName));
   fs.writeFileSync(componentTypes, getTemplate(`types.${type}`));
-  fs.writeFileSync(componentStyled, getTemplate('styled'));
+  fs.writeFileSync(componentStyles, getTemplate('styles'));
 
   if (essence === 'page') {
     const indexContents = fs.readFileSync(pathIndex, 'utf8')

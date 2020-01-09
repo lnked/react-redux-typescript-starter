@@ -38,7 +38,7 @@ module.exports.getTemplate = (type = 'class', name) => {
       `import * as React from 'react';\n`,
 
       `import { OuterProps } from './types';`,
-      `import { StyledDiv } from './styled';\n`,
+      `import { StyledDiv } from './styles';\n`,
 
       `const ${name}: React.FC<OuterProps> = (props: OuterProps) => {`,
       `\t// const itemReferer = React.createRef<HTMLInputElement>();`,
@@ -55,7 +55,7 @@ module.exports.getTemplate = (type = 'class', name) => {
     template.push(
       `import * as React from 'react';\n`,
       `import { OuterProps, InnerState } from './types';`,
-      `import { StyledDiv, StyledButton } from './styled';\n`,
+      `import { StyledDiv, StyledButton } from './styles';\n`,
       `class ${name} extends React.Component<OuterProps, InnerState> {\n`,
 
       `\tstatic defaultProps = {`,
@@ -137,10 +137,10 @@ module.exports.getTemplate = (type = 'class', name) => {
     )
   }
 
-  if (type === 'styled') {
+  if (type === 'styles') {
     template.push(
       `import styled from 'styled-components';\n`,
-      `import { CommonStyles } from 'themes';\n`,
+      `import { CommonStyles } from 'themes';\n\n`,
       `export const StyledDiv = styled.div\``,
       `\tcolor: \${CommonStyles.themeColor};`,
       `\`;\n`,
