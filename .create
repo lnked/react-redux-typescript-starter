@@ -76,6 +76,7 @@ cp -r ${SOURCE}/.browserslistrc ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.editorconfig ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.env ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.eslintrc.js ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.eslintignore ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.gitignore ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.size-limit.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/babel.config.js ${PATH_ROOT}/$FOLDER_NAME
