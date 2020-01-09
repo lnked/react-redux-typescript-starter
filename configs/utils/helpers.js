@@ -1,4 +1,4 @@
-module.exports.getTemplate = (type = 'class', name) => {
+module.exports.getTemplate = (type = 'function', name) => {
   const template = []
 
   if (type === 'route') {

@@ -17,7 +17,7 @@ const argv = parseArguments(process.argv)
 
 const essence = argv.essence || 'component'
 const name = argv.name || ''
-const type = argv.type || 'class'
+const type = argv.type || 'function'
 
 const folder = folderName(name)
 
