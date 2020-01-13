@@ -84,8 +84,8 @@
     "@types/styled-components": "4.4.2",
     "@types/webpack": "4.41.2",
     "@types/webpack-env": "1.15.0",
-    "@typescript-eslint/eslint-plugin": "2.15.0",
-    "@typescript-eslint/parser": "2.15.0",
+    "@typescript-eslint/eslint-plugin": "2.16.0",
+    "@typescript-eslint/parser": "2.16.0",
     "autoprefixer": "9.7.3",
     "babel-jest": "24.9.0",
     "babel-loader": "8.0.6",
@@ -123,7 +123,7 @@
     "imagemin-webpack-plugin": "2.4.2",
     "inspectpack": "4.3.0",
     "jest": "24.9.0",
-    "jest-styled-components": "6.3.4",
+    "jest-styled-components": "7.0.0",
     "kebab-case": "1.0.0",
     "lint-staged": "9.5.0",
     "markdown-loader": "5.1.0",
@@ -205,7 +205,7 @@
     "react-router-dom": "5.1.2",
     "react-use-localstorage": "3.4.1",
     "storage.io": "1.2.0",
-    "styled-components": "4.4.1",
+    "styled-components": "5.0.0",
     "use-react-router": "1.0.7"
   }
 }
