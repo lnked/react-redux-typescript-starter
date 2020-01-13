@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { production, stylesPath } = require('../options');
 
 const css = require('../loaders/css-loader');
+const cache = require('../loaders/cache-loader');
 const cssModules = require('../loaders/css-modules');
 const style = require('../loaders/style-loader');
 const postcss = require('../loaders/postcss-loader');
@@ -28,6 +29,7 @@ module.exports = () => {
       test: /\.s?(a|c)?ss$/,
       use: [
         baseLoader(),
+        cache(),
         cssModules(),
         css({
           sourceMap: true,
