@@ -6,57 +6,57 @@ import { setHistory } from 'utils/redirect';
 
 import PrivateRoute from './private-route';
 
-import Home from 'pages/home';
+import Home from 'pages/Home';
 
 /* webpackChunkName: "cart", webpackPrefetch: true */
 export const Cart = preloadComponent(() => import(
   /* webpackChunkName: "cart", webpackPrefetch: true */
-  'pages/cart'
+  'pages/Cart'
 ));
 
 export const Shop = preloadComponent(() => import(
   /* webpackChunkName: "shop", webpackPrefetch: true */
-  'pages/shop'
+  'pages/Shop'
 ));
 
 export const About = preloadComponent(() => import(
   /* webpackChunkName: "about", webpackPrefetch: true */
-  'pages/about'
+  'pages/About'
 ));
 
 export const Forms = preloadComponent(() => import(
   /* webpackChunkName: "forms", webpackPrefetch: true */
-  'pages/forms'
+  'pages/Forms'
 ));
 
 export const Login = preloadComponent(() => import(
   /* webpackChunkName: "login", webpackPrefetch: true */
-  'pages/login'
+  'pages/Login'
 ));
 
 export const Topics = preloadComponent(() => import(
   /* webpackChunkName: "topics", webpackPrefetch: true */
-  'pages/topics'
+  'pages/Topics'
 ));
 
 export const Profile = preloadComponent(() => import(
   /* webpackChunkName: "profile", webpackPrefetch: true */
-  'pages/profile'
+  'pages/Profile'
 ));
 
 export const Context = preloadComponent(() => import(
   /* webpackChunkName: "context", webpackPrefetch: true */
-  'pages/context'
+  'pages/Context'
 ));
 
 export const Counter = preloadComponent(() => import(
   /* webpackChunkName: "counter", webpackPrefetch: true */
-  'pages/counter'
+  'pages/Counter'
 ));
 
 export const NoMatch = preloadComponent(() => import(
   /* webpackChunkName: "nomatch", webpackPrefetch: true */
-  'pages/nomatch'
+  'pages/NoMatch'
 ));
 
 export const routes = [

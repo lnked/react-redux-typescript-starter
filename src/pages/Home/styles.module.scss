@@ -1,0 +1,23 @@
+@import 'variables.scss';
+
+// Container styles
+.container {
+  border: 2px solid $red-base;
+  background-color: $base-color;
+
+  /* example */
+  &__name {
+    border: 2px solid blue;
+
+    &:before {
+      content: '';
+      position: absolute 0;
+    }
+  }
+}
+
+.image {
+  font-size: 0;
+  display: inline-block;
+  background-color: #000;
+}
