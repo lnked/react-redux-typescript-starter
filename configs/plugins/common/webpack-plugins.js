@@ -12,11 +12,13 @@ module.exports = () => {
     new webpack.NoEmitOnErrorsPlugin(),
 
     new webpack.DefinePlugin({
-      'process.env': {
-        ...environment,
-        BROWSER: true,
-        NODE_ENV: JSON.stringify(options.environment),
-        BABEL_ENV: JSON.stringify(options.environment),
+      process: {
+        env: {
+          ...environment,
+          BROWSER: true,
+          NODE_ENV: JSON.stringify(options.environment),
+          BABEL_ENV: JSON.stringify(options.environment),
+        },
       },
       __DEV__: options.development,
       __PROD__: options.production,
