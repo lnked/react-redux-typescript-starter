@@ -1,0 +1,32 @@
+import * as React from 'react';
+
+import { Link } from './styled';
+
+export interface OuterProps {
+  to: string;
+  label?: string;
+  children?: React.ReactChild[] | string;
+  component?: any;
+}
+
+let timeout: any = null;
+
+const PreloadLink: React.FC<OuterProps> = (props: OuterProps) => {
+  const { label, children, component, ...restProps } = props;
+
+  const handleMouseEnter = () => {
+    clearTimeout(timeout);
+
+    timeout = setTimeout(() =>
+      component && component.preload && component.preload()
+    , 250);
+  }
+
+  return (
+    <Link onMouseEnter={handleMouseEnter} {...restProps}>
+      {children || label}
+    </Link>
+  );
+}
+
+export default PreloadLink;
