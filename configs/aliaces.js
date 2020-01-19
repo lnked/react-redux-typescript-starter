@@ -41,4 +41,6 @@ module.exports = {
   components: resolve(sourcePath, 'components'),
   decorators: resolve(sourcePath, 'decorators'),
   svgstore: resolve(sourcePath, 'assets/svgstore'),
+  images: resolve(sourcePath, 'assets/images'),
+  stylesheets: resolve(sourcePath, 'assets/stylesheets'),
 };
