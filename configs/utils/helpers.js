@@ -37,12 +37,15 @@ module.exports.getTemplate = (type = 'function', name) => {
     template.push(
       `import * as React from 'react';\n`,
 
-      `import { OuterProps } from './types';`,
+      `import { InnerState, OuterProps } from './types';`,
       `import { StyledDiv } from './styles';\n`,
 
-      `const ${name}: React.FC<OuterProps> = (props: OuterProps) => {`,
+      `const ${name}: React.FC<OuterProps> = (props: OuterProps): React.ReactNode => {`,
       `\t// const itemReferer = React.createRef<HTMLInputElement>();`,
-      `\t// const [count, setCount] = useState(value);\n`,
+      `\t// const [count, setCount] = useState<InnerState | null>(value);\n`,
+      `\t// const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {`,
+      `\t// \tsetValue(event.target.value);`,
+      `\t// };\n`,
       `\treturn (`,
       `\t\t<StyledDiv {...props} />`,
       `\t);`,
@@ -124,7 +127,7 @@ module.exports.getTemplate = (type = 'function', name) => {
       `\twidth?: number;`,
       `\tsimple?: boolean;`,
       `\thandleChange?: (e: Event) => void | boolean;`,
-      `\tchildren?: JSX.Element[] | JSX.Element | any;`,
+      `\tchildren?: React.ReactNode[] | JSX.Element[] | JSX.Element | any;`,
       `}\n`,
     )
   }
