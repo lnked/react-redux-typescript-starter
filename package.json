@@ -188,7 +188,7 @@
     "i18next": "19.0.3",
     "i18next-browser-languagedetector": "4.0.1",
     "localize-react": "1.2.1",
-    "mobx": "5.15.2",
+    "mobx": "5.15.3",
     "mobx-logger": "0.7.1",
     "mobx-react": "6.1.5",
     "mobx-react-devtools": "6.1.1",
