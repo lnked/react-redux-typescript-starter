@@ -65,4 +65,6 @@ module.exports = {
   coverageDirectory: '<rootDir>/coverage',
   coveragePathIgnorePatterns: ['/node_modules/', '/configs/', '/typings/', '/public/', '/dist/'],
   collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx}', '!**/node_modules/**'],
+
+  testPathIgnorePatterns: ['/node_modules/', '/configs/', '/typings/', '/public/', '/dist/'],
 };
