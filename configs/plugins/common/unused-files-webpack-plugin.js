@@ -9,7 +9,19 @@ module.exports = () => {
 
   return [
     new UnusedFilesWebpackPlugin({
-      patterns: ['src/**/*.*']
+      patterns: [
+        'src/**/*.*',
+      ],
+      globOptions: {
+        ignore: [
+          '**/*.test.*',
+          '**/*.spec.*',
+          '**/*.config.*',
+          '**/__mocks/**/*',
+          '**/__tests__/**/*',
+          'node_modules/**/*',
+        ],
+      },
     }),
   ]
 }
