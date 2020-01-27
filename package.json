@@ -194,7 +194,7 @@
     "mobx-react": "6.1.5",
     "mobx-react-devtools": "6.1.1",
     "mobx-react-router": "4.1.0",
-    "nanoid": "2.1.10",
+    "nanoid": "^2.1.10",
     "path-to-regexp": "6.1.0",
     "rambda": "4.4.0",
     "react": "16.12.0",
