@@ -45,6 +45,7 @@ module.exports = function({ development, production, test, loose, legacy }) {
     ['transform-imports', transformImports],
     ['@babel/plugin-proposal-decorators', { legacy }],
     ['@babel/plugin-transform-spread', { loose }],
+    ['@babel/plugin-proposal-optional-chaining', { loose }],
     ['@babel/plugin-proposal-class-properties', { loose }],
     ['@babel/plugin-transform-template-literals', { loose }],
     '@babel/plugin-transform-react-jsx',
