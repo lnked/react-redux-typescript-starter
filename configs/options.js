@@ -12,7 +12,7 @@ process.env.NODE_ENV = process.env.BABEL_ENV = environment;
 const production = environment === 'production';
 const development = environment === 'development';
 
-const publicPath = development ? '/' : '';
+const publicPath = development ? '' : '';
 
 const hashName = development
   ? '[name]'

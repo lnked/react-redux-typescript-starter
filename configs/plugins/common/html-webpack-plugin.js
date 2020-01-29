@@ -31,6 +31,7 @@ module.exports = () => {
       template: resolve(root, 'public/index.html'),
       title: JSON.parse(environment.REACT_APP_NAME),
       description: JSON.parse(environment.REACT_APP_DESCRIPTION),
+      excludeAssets: [/runtime.*.js/],
       ...options
     }),
     new ResourceHintWebpackPlugin(),
