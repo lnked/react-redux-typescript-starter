@@ -7,8 +7,10 @@ run({
   saveAs: 'html',
   destination: 'dist',
   inlineCss: true,
+  externalServer: false,
   cacheAjaxRequests: false,
   skipThirdPartyRequests: true,
+  skipThirdPartyRequestsExcept: true,
   minifyHtml: {
     ...configs,
   },
