@@ -1,7 +1,7 @@
 import * as React from 'react';
 // import Raven from 'raven-js'
 
-import { StyledError, StyledDetails } from './styled';
+import { StyledError, StyledDetails } from './styles';
 
 export interface OuterProps {
   children: JSX.Element | JSX.Element[] | string;

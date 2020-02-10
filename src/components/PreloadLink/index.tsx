@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Link } from './styled';
+import { Link } from './styles';
 
 export interface OuterProps {
   to: string;

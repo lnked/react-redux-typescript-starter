@@ -1,7 +1,7 @@
 import React from 'react';
 import ProgressiveImage from 'react-progressive-image';
 
-import { Picture, Source, Loading } from './styled';
+import { Picture, Source, Loading } from './styles';
 
 export interface OuterProps {
   src: string;

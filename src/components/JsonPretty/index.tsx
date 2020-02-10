@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Code, Wrapper } from './styled';
+import { Code, Wrapper } from './styles';
 
 export interface OuterProps {
   json: any;

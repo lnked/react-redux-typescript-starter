@@ -9,7 +9,7 @@ import {
   BaseInput,
   ResetButton,
   InputWrapper,
-} from './styled';
+} from './styles';
 
 import { OuterProps } from './types';
 
