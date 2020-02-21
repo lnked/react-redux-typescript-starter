@@ -5,14 +5,15 @@ export const Container = styled.div`
 `;
 
 export const Part = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  padding: 15px;
+  width: 110px;
+  height: 110px;
+  margin: 15px;
+  padding: 25px;
   border: 2px solid #ddd;
 `;
 
@@ -24,11 +25,26 @@ export const PartTitle = styled.div`
   margin-bottom: 10px;
 `;
 
+export const PartCheckbox = styled.div`
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 0;
+  line-height: 0;
+`;
+
+export const Checkbox = styled.input`
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+`;
+
 export const SummaryGroup = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  border: 1px solid lime;
 `;
 
 export const SummaryItem = styled.div`
