@@ -18,7 +18,7 @@ export interface InnerState {
   helmet: string | number;
   shield: string | number;
   gauntlets: string | number;
-  armour: string | number;
+  chest: string | number;
   boots: string | number;
 }
 
@@ -27,12 +27,17 @@ export interface CheckedState {
   helmet: boolean;
   shield: boolean;
   gauntlets: boolean;
-  armour: boolean;
+  chest: boolean;
   boots: boolean;
 }
 
+import imageBoots from './assets/items/boots.jpg';
+// import imageWeapon from './assets/items/weapon.jpg';
+
 const Item = ({ name, value, checked, handleChange, handleCheck }: any) => (
   <Part>
+    <img src={imageBoots} width="100%" />
+
     <PartCheckbox>
       <Checkbox type="checkbox" checked={checked} onChange={handleCheck} />
     </PartCheckbox>
@@ -66,7 +71,7 @@ const Raid = () => {
     helmet: 0,
     shield: 0,
     gauntlets: 0,
-    armour: 0,
+    chest: 0,
     boots: 0,
   });
 
@@ -75,7 +80,7 @@ const Raid = () => {
     helmet: false,
     shield: false,
     gauntlets: false,
-    armour: false,
+    chest: false,
     boots: false,
   });
 
@@ -96,7 +101,7 @@ const Raid = () => {
     helmet,
     shield,
     gauntlets,
-    armour,
+    chest,
     boots,
   } = values;
 
@@ -140,11 +145,11 @@ const Raid = () => {
         />
 
         <Item
-          name="armour"
-          value={armour}
-          checked={checked.armour}
-          handleCheck={handleCheck('armour')}
-          handleChange={handleChange('armour')}
+          name="chest"
+          value={chest}
+          checked={checked.chest}
+          handleCheck={handleCheck('chest')}
+          handleChange={handleChange('chest')}
         />
 
         <Item
