@@ -25,6 +25,15 @@ export const PartTitle = styled.div`
   margin-bottom: 10px;
 `;
 
+export const Background = styled.img`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 0;
+`;
+
 export const PartCheckbox = styled.div`
   position: absolute;
   right: 5px;
@@ -70,8 +79,15 @@ export const Upper = styled.div`
 `;
 
 export const Bottom = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid lime;
+`;
+
+export const Attributes = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid blue;
 `;

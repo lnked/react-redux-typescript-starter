@@ -8,9 +8,11 @@ import {
   Input,
   Upper,
   Bottom,
+  Attributes,
   Checkbox,
   SummaryGroup,
   SummaryItem,
+  Background,
 } from './styles';
 
 export interface InnerState {
@@ -36,7 +38,7 @@ import imageBoots from './assets/items/boots.jpg';
 
 const Item = ({ name, value, checked, handleChange, handleCheck }: any) => (
   <Part>
-    <img src={imageBoots} width="100%" />
+    <Background src={imageBoots} width="100%" />
 
     <PartCheckbox>
       <Checkbox type="checkbox" checked={checked} onChange={handleCheck} />
@@ -160,6 +162,32 @@ const Raid = () => {
           handleChange={handleChange('boots')}
         />
       </Bottom>
+
+      <Attributes>
+        <Item
+          name="gauntlets"
+          value={gauntlets}
+          checked={checked.gauntlets}
+          handleCheck={handleCheck('gauntlets')}
+          handleChange={handleChange('gauntlets')}
+        />
+
+        <Item
+          name="chest"
+          value={chest}
+          checked={checked.chest}
+          handleCheck={handleCheck('chest')}
+          handleChange={handleChange('chest')}
+        />
+
+        <Item
+          name="boots"
+          value={boots}
+          checked={checked.boots}
+          handleCheck={handleCheck('boots')}
+          handleChange={handleChange('boots')}
+        />
+      </Attributes>
     </Container>
   );
 };
