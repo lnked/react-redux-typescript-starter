@@ -6,6 +6,7 @@
   "name": { "label": "Name" },
   "navigation": {
     "shop": "Shop",
+    "raid": "Raid",
     "cart": "Cart",
     "home": "Home",
     "about": "About",

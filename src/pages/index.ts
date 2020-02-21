@@ -1,3 +1,4 @@
+export { default as Raid } from './Raid';
 export { default as Cart } from './Cart';
 export { default as Home } from './Home';
 export { default as Shop } from './Shop';
