@@ -26,6 +26,7 @@ export const PartTitle = styled.div`
 `;
 
 export const Background = styled.img`
+  display: none;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -64,11 +65,20 @@ export const SummaryItem = styled.div`
 
 export const Input = styled.input`
   width: 100%;
+  max-width: 100px;
   outline: 0;
   height: 28px;
   padding: 0 5px;
   text-align: center;
   border: 1px solid #ddd;
+`;
+
+export const Parameters = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid lime;
+  padding: 10px;
 `;
 
 export const Upper = styled.div`
