@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  border: 1px solid red;
+  display: block;
 `;
 
 export const Part = styled.div`
@@ -77,7 +77,6 @@ export const Parameters = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid lime;
   padding: 10px;
 `;
 
@@ -85,19 +84,16 @@ export const Upper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid lime;
 `;
 
 export const Bottom = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid lime;
 `;
 
 export const Attributes = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid blue;
 `;
