@@ -14,12 +14,6 @@ export const Cart = preloadComponent(() => import(
   'pages/Cart'
 ));
 
-/* webpackChunkName: "raid", webpackPrefetch: true */
-export const Raid = preloadComponent(() => import(
-  /* webpackChunkName: "raid", webpackPrefetch: true */
-  'pages/Raid'
-));
-
 export const Shop = preloadComponent(() => import(
   /* webpackChunkName: "shop", webpackPrefetch: true */
   'pages/Shop'
@@ -69,7 +63,6 @@ export const routes = [
   { keyName: 'navigation.home', to: '/', component: Home, exact: true },
   { keyName: 'navigation.about', to: '/about', component: About },
   { keyName: 'navigation.shop', to: '/shop', component: Shop },
-  { keyName: 'navigation.raid', to: '/raid', component: Raid },
   { keyName: 'navigation.cart', to: '/cart', component: Cart },
   { keyName: 'navigation.forms', to: '/forms', component: Forms },
   { keyName: 'navigation.login', to: '/login', component: Login },
@@ -106,7 +99,6 @@ function Switcher(store: any) {
           render={(props: any) => <Shop {...store} {...props} />}
         />
         <Route path="/cart" render={(props: any) => <Cart {...store} {...props} />} />
-        <Route path="/raid" render={(props: any) => <Raid {...store} {...props} />} />
         <Route path="/forms" render={(props: any) => <Forms {...store} {...props} />} />
         <Route path="/about" render={(props: any) => <About {...store} {...props} />} />
         <Route path="/context" render={(props: any) => <Context {...store} {...props} />} />

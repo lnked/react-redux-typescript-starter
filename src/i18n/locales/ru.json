@@ -6,7 +6,6 @@
   "name": { "label": "Имя" },
   "navigation": {
     "shop": "Магазин",
-    "raid": "Raid",
     "cart": "Корзина",
     "home": "Главная",
     "about": "О Нас",
