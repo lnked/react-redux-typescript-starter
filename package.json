@@ -110,7 +110,7 @@
     "enzyme-to-json": "3.4.4",
     "eslint": "6.8.0",
     "eslint-plugin-react": "7.19.0",
-    "eslint-plugin-react-hooks": "2.5.0",
+    "eslint-plugin-react-hooks": "2.5.1",
     "fast-async": "6.3.8",
     "file-loader": "6.0.0",
     "fs": "0.0.1-security",
@@ -154,7 +154,7 @@
     "raw-loader": "4.0.0",
     "react-hot-loader": "4.12.20",
     "react-snap": "1.23.0",
-    "react-test-renderer": "16.13.0",
+    "react-test-renderer": "16.13.1",
     "react-testing-library": "8.0.1",
     "resource-hints-webpack-plugin": "0.0.2",
     "rimraf": "3.0.2",
@@ -178,7 +178,7 @@
     "webpack-dev-server": "3.10.3",
     "webpack-manifest-plugin": "2.2.0",
     "webpack-merge": "4.2.2",
-    "workbox-webpack-plugin": "5.0.0"
+    "workbox-webpack-plugin": "5.1.1"
   },
   "dependencies": {
     "@babel/runtime-corejs3": "7.8.7",
@@ -198,8 +198,8 @@
     "nanoid": "^2.1.11",
     "path-to-regexp": "6.1.0",
     "rambda": "5.0.0",
-    "react": "16.13.0",
-    "react-dom": "16.13.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "react-fast-compare": "3.0.1",
     "react-i18next": "11.3.3",
     "react-maskedinput": "4.0.1",
