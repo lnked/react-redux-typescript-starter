@@ -32,7 +32,7 @@ module.exports = () => {
       title: JSON.parse(environment.REACT_APP_NAME),
       description: JSON.parse(environment.REACT_APP_DESCRIPTION),
       excludeAssets: [/runtime.*.js/],
-      ...options
+      ...options,
     }),
     new ResourceHintWebpackPlugin(),
   ]
