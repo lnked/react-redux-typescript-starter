@@ -1,4 +1,5 @@
 const HTMLInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin").default;
+const htmlWebpackInlineSourcePlugin = require("html-webpack-inline-source-plugin").default;
 
 module.exports = () => {
   return [

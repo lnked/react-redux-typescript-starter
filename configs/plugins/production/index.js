@@ -14,7 +14,7 @@ module.exports = {
     ...WebpackPlugins(),
     ...WebpackCleanupPlugin(),
     ...WebpackChunkHash(),
-    ...HTMLInlineCSSWebpackPlugin(),
+    // ...HTMLInlineCSSWebpackPlugin(),
     ...ScriptExtHtmlWebpackPlugin(),
     ...WorkboxWebpackPlugin(),
     ...ImageminWebpackPlugin(),
