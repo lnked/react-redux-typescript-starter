@@ -13,7 +13,7 @@ const options = production ? {
   compile: false,
   preload,
   prefetch,
-  // chunksSortMode: 'dependency',
+  chunksSortMode: 'dependency',
   production: production,
   minify: {
     ...configs,

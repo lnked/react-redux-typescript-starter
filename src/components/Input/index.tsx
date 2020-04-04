@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as nanoid from 'nanoid';
 
 import useInputState from './useInputState';
 
@@ -26,7 +25,7 @@ const Input: React.FC<OuterProps & React.HTMLProps<HTMLInputElement>> = ({
 } = {}) => {
   const textInput = React.createRef<HTMLInputElement>();
 
-  const pair = nanoid();
+  const pair = Math.random();
 
   const { touched, reset, ...stateProps } = useInputState({
     defaultValue,
