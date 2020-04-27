@@ -80,7 +80,7 @@
     "@types/react-dom": "16.9.6",
     "@types/react-hot-loader": "4.1.1",
     "@types/react-maskedinput": "4.0.4",
-    "@types/react-router-dom": "5.1.4",
+    "@types/react-router-dom": "5.1.5",
     "@types/react-test-renderer": "16.9.2",
     "@types/styled-components": "5.1.0",
     "@types/webpack": "4.41.12",
