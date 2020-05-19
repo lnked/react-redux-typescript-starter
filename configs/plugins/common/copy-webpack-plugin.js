@@ -11,6 +11,7 @@ module.exports = () => {
           to: options.dist,
           force: true,
           globOptions: {
+            dot: true,
             ignore: ['.gitkeep', '.DS_Store', 'index.html'],
           },
         },
