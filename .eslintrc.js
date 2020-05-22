@@ -17,6 +17,7 @@ module.exports = {
     'react-hooks'
   ],
   parserOptions: {
+    warnOnUnsupportedTypeScriptVersion: false,
     ecmaVersion: 2018,  // Allows for the parsing of modern ECMAScript features
     sourceType: 'module',  // Allows for the use of imports
     tsconfigRootDir: '.',
@@ -28,6 +29,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
@@ -36,6 +38,7 @@ module.exports = {
     '@typescript-eslint/member-delimiter-style': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/interface-name-prefix': 'off',
+    "@typescript-eslint/explicit-module-boundary-types": "off"
   },
   settings: {
     react: {
