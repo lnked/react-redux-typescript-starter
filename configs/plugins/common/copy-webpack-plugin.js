@@ -7,9 +7,9 @@ module.exports = () => {
     new CopyPlugin({
       patterns: [
         {
-          from: 'public/**',
-          to: options.dist,
           force: true,
+          from: options.public,
+          to: options.dist,
           globOptions: {
             dot: true,
             ignore: ['.gitkeep', '.DS_Store', 'index.html'],
