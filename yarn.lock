@@ -11813,10 +11813,10 @@ railroad-diagrams@^1.0.0:
   resolved "https://registry.yarnpkg.com/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz#eb7e6267548ddedfb899c1b90e57374559cddb7e"
   integrity sha1-635iZ1SN3t+4mcG5Dlc3RVnN234=
 
-rambda@5.4.1:
-  version "5.4.1"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-5.4.1.tgz#d657b3fdd971ed6263a7cff12212bbf9abbfe8f4"
-  integrity sha512-1kk39sO41O2BtdXm4aLrHlsuOwK0Oz/RhksjvgzPvkf5kAsG2sIen3hvmwAxAgIz9imJyoG7wCAGMemnZcl9qA==
+rambda@5.4.3:
+  version "5.4.3"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-5.4.3.tgz#604ff9e2c61926d0c11014e702d43c961400ae9f"
+  integrity sha512-ZKq326NcK2ffaYQ1TnHz3vMVbaT0se4MJ7KkHQ/4UnQPfXXMCE/YL/PVOHeOg3/BnTOMx+fTtJ6FwplWh+epaQ==
   dependencies:
     fs-extra "^9.0.0"
 
@@ -11886,10 +11886,10 @@ react-dom@16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
-react-fast-compare@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.1.1.tgz#0becf31e3812fa70dc231e259f40d892d4767900"
-  integrity sha512-SCsAORWK59BvauR2L1BTdjQbJcSGJJz03U0awektk2hshLKrITDDFTlgGCqIZpTDlPC/NFlZee6xTMzXPVLiHw==
+react-fast-compare@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
+  integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
 
 react-hot-loader@*, react-hot-loader@4.12.21:
   version "4.12.21"
