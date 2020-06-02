@@ -20,7 +20,11 @@
     "rootDir": "./",
     "baseUrl": "src",
     "outDir": "dist",
-    "lib": ["es6", "es7", "es2016", "dom"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "paths": {
       "app/*": ["app/*"],
       "i18n/*": ["i18n/*"],
