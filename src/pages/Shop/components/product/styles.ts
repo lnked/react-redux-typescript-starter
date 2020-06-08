@@ -104,9 +104,9 @@ export const Like = styled.button`
 `;
 
 export const Price = styled.div`
-  color: ${(p: any) => p.discount ? '#707070' : '#ae4343'};
+  color: ${(p: { discount: boolean }) => p.discount ? '#707070' : '#ae4343'};
   font-weight: 400;
-  font-size: ${(p: any) => p.discount ? '13px' : '16px'};
+  font-size: ${(p: { discount: boolean }) => p.discount ? '13px' : '16px'};
 
   &:not(:last-child) {
     margin-right: 10px;

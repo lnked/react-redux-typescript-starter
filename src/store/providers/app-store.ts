@@ -18,9 +18,9 @@ class AppStore {
     results: [],
   };
 
-  @observable query: string = '';
+  @observable query = '';
 
-  @observable isLoading: boolean = false;
+  @observable isLoading = false;
 
   constructor (initialState?: any) {
     if (initialState && Object.keys(initialState).length) {

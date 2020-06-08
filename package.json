@@ -113,6 +113,7 @@
     "eslint-plugin-react-hooks": "4.0.4",
     "fast-async": "6.3.8",
     "file-loader": "6.0.0",
+    "fork-ts-checker-webpack-plugin": "^4.1.6",
     "fs": "0.0.1-security",
     "html-loader": "1.1.0",
     "html-webpack-plugin": "4.3.0",

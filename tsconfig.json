@@ -41,6 +41,24 @@
       "components/*": ["components/*"],
       "decorators/*": ["decorators/*"]
     },
+    "types": [
+      "date-fns",
+      "enzyme",
+      "enzyme-adapter-react-16",
+      "i18next",
+      "jest",
+      "nanoid",
+      "node",
+      "react",
+      "react-dom",
+      "react-hot-loader",
+      "react-maskedinput",
+      "react-router-dom",
+      "react-test-renderer",
+      "styled-components",
+      "webpack",
+      "webpack-env"
+    ],
     "typeRoots": [
       "./typings",
       "./node_modules/@types"

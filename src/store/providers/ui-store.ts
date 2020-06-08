@@ -1,7 +1,7 @@
 import { observable, action, computed } from 'mobx';
 
 class UiStore {
-  @observable type: string = 'grid';
+  @observable type = 'grid';
 
   constructor (initialState?: any) {
     console.log({ initialState });

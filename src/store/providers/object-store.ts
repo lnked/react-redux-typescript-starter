@@ -9,9 +9,13 @@ const ObjectStore = observable({
     return `${this.firstName}${this.age}`;
   },
 
-  increment() { this.age += 1; },
+  increment() {
+ this.age += 1; 
+},
 
-  decrement() { this.age -= 1; },
+  decrement() {
+ this.age -= 1; 
+},
 },                                    {
   increment: action('Plus one'),
   decrement: action('Minus one'),

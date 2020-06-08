@@ -7,6 +7,7 @@ const WebpackManifestPlugin = require('./webpack-manifest-plugin');
 const CircularDependencyPlugin = require('./circular-dependency-plugin');
 const UnusedFilesWebpackPlugin = require('./unused-files-webpack-plugin');
 const CaseSensitivePathsPlugin = require('./case-sensitive-paths-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('./ts-checker-webpack');
 
 module.exports = {
   plugins: [
@@ -19,5 +20,6 @@ module.exports = {
     ...UnusedFilesWebpackPlugin(),
     ...CaseSensitivePathsPlugin(),
     ...CircularDependencyPlugin(),
+    ...ForkTsCheckerWebpackPlugin(),
   ].filter(Boolean),
 };

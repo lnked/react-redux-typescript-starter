@@ -2,47 +2,34 @@ module.exports = {
   parser: '@typescript-eslint/parser',  // Specifies the ESLint parser
   extends: [
     'eslint:recommended',
-    'plugin:react/recommended',  // Uses the recommended rules from @eslint-plugin-react
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',  // Uses the recommended rules from @typescript-eslint/eslint-plugin
+    'plugin:react/recommended',
+		'./.eslint.typescript.js',
   ],
   env: {
-    browser: true,
-    node: true,
     es6: true,
+    node: true,
+    browser: true,
   },
   plugins: [
     'react',
-    '@typescript-eslint',
-    'react-hooks'
+    'react-hooks',
   ],
   parserOptions: {
     warnOnUnsupportedTypeScriptVersion: false,
-    ecmaVersion: 2018,  // Allows for the parsing of modern ECMAScript features
-    sourceType: 'module',  // Allows for the use of imports
-    tsconfigRootDir: '.',
+    ecmaVersion: 2018,
+    sourceType: 'module',
     ecmaFeatures: {
-      jsx: true,  // Allows for the parsing of JSX
+      jsx: true,
     },
   },
   rules: {
     'react/prop-types': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    '@typescript-eslint/ban-types': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-empty-interface': 'off',
-    '@typescript-eslint/no-inferrable-types': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off',
-    '@typescript-eslint/member-delimiter-style': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/interface-name-prefix': 'off',
-    "@typescript-eslint/explicit-module-boundary-types": "off"
   },
   settings: {
     react: {
-      version: 'detect',  // Tells eslint-plugin-react to automatically detect the version of React to use
+      version: 'detect',
     },
   },
 };
