@@ -11,6 +11,7 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "declaration": false,
+    "importHelpers": true,
     "removeComments": true,
     "noUnusedLocals": true,
     "noImplicitReturns": true,
