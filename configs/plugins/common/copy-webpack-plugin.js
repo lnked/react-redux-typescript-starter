@@ -12,7 +12,7 @@ module.exports = () => {
           to: options.dist,
           globOptions: {
             dot: true,
-            ignore: ['.gitkeep', '.DS_Store', 'index.html'],
+            ignore: ['template.html', '.gitkeep', '.DS_Store'],
           },
         },
       ],
