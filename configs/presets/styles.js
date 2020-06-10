@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { development, production, stylesPath } = require('../options');
 
 const css = require('../loaders/css-loader');
+const sass = require('../loaders/sass-loader');
 const cache = require('../loaders/cache-loader');
 const cssModules = require('../loaders/css-modules');
 const style = require('../loaders/style-loader');
@@ -13,6 +14,7 @@ const miniCssExtract = () => ({
   options: {
     publicPath: stylesPath,
     hmr: development,
+    reloadAll: true,
   }
 });
 
@@ -30,14 +32,21 @@ module.exports = () => {
       test: /\.s?(a|c)?ss$/,
       use: [
         baseLoader(),
-        cache(),
-        cssModules(),
         css({
           sourceMap: true,
-          importLoaders: 2,
+          importLoaders: 1,
         }),
         postcss({
           sourceMap: true,
+        }),
+        sass({
+          sourceMap: true,
+          implementation: require('dart-sass'),
+          sassOptions: {
+            fiber: false,
+            outputStyle: 'compressed',
+            webpackImporter: true,
+          },
         }),
       ],
     },

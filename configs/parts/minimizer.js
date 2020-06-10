@@ -1,4 +1,5 @@
 const TerserPlugin = require('terser-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const options = require('../options');
 const terserOptions = require('../terser-options');
@@ -13,5 +14,6 @@ module.exports = () => {
       extractComments: false,
       terserOptions,
     }),
+    new OptimizeCSSAssetsPlugin({}),
   ]
 }

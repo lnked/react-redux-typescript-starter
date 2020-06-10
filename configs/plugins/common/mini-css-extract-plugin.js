@@ -5,7 +5,7 @@ const { development } = require('../../options');
 module.exports = () => {
   return [
     new MiniCssExtractPlugin({
-      filename: development ? '[name].css' : '[name].[hash].css',
+      filename: development ? '[name].css' : '[name].[contenthash].css',
       chunkFilename: '[id].css',
       ignoreOrder: false,
     }),
