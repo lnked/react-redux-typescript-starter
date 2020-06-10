@@ -1,6 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const { production, stylesPath } = require('../options');
+const { development, production, stylesPath } = require('../options');
 
 const css = require('../loaders/css-loader');
 const cache = require('../loaders/cache-loader');
@@ -12,6 +12,7 @@ const miniCssExtract = () => ({
   loader: MiniCssExtractPlugin.loader,
   options: {
     publicPath: stylesPath,
+    hmr: development,
   }
 });
 
