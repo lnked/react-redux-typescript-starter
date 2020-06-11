@@ -1,3 +1,4 @@
+const { resolve } = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 
 const options = require('../../options');
@@ -12,7 +13,11 @@ module.exports = () => {
           to: options.dist,
           globOptions: {
             dot: true,
-            ignore: ['template.html', '.gitkeep', '.DS_Store'],
+            ignore: [
+              resolve(options.public, 'index.html'),
+              '**/.gitkeep',
+              '**/.DS_Store',
+            ],
           },
         },
       ],

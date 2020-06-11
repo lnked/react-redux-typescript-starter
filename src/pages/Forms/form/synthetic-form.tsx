@@ -3,7 +3,7 @@ import isEqual from 'react-fast-compare';
 
 import { isObject, isEmptyChildren } from 'utils/assertions';
 
-export interface OuterPropsassedMethods {
+export interface PassedMethods {
   handleBlur?: (e?: React.FormEvent<HTMLInputElement>) => void;
   handleFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
   handleInput?: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -13,7 +13,7 @@ export interface OuterPropsassedMethods {
   setSubmitting?: (isSubmitting: boolean) => void;
 }
 
-export interface OuterPropsassedState {
+export interface PassedState {
   errors: any;
   values: any;
   touched: any;
@@ -89,12 +89,11 @@ export class SyntheticForm extends React.Component<OuterProps, OuterState> {
   }
 
   handleBlur = (e?: React.FormEvent<HTMLInputElement>) => {
-    // console.log(e, 'handleBlur 1');
+    console.log('handleBlur 1', e);
   }
 
   handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
-    // console.log(e);
-    // console.log('handleFocus 1');
+    console.log('handleFocus 1', e);
   }
 
   setSubmitting = (isSubmitting: boolean) => {

@@ -47,9 +47,7 @@ const Input: React.FC<OuterProps & React.HTMLProps<HTMLInputElement>> = ({
         && <span>Required</span>
       }
 
-      {/*
       <span>touched: {JSON.stringify(touched)}</span>
-      */}
 
       <InputWrapper>
         <BaseInput
