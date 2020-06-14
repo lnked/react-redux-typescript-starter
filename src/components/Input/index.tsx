@@ -8,11 +8,11 @@ import {
   BaseInput,
   ResetButton,
   InputWrapper,
-} from './styles';
+} from './style';
 
 import { OuterProps } from './types';
 
-const Input: React.FC<OuterProps & React.HTMLProps<HTMLInputElement>> = ({
+const Input: React.FC<OuterProps> = ({
   label,
   error,
   focus,
@@ -25,7 +25,7 @@ const Input: React.FC<OuterProps & React.HTMLProps<HTMLInputElement>> = ({
 } = {}) => {
   const textInput = React.createRef<HTMLInputElement>();
 
-  const pair = Math.random();
+  const pair = `field-${Math.random()}`;
 
   const { touched, reset, ...stateProps } = useInputState({
     defaultValue,
@@ -51,10 +51,10 @@ const Input: React.FC<OuterProps & React.HTMLProps<HTMLInputElement>> = ({
 
       <InputWrapper>
         <BaseInput
-          ref={textInput}
-          id={pair}
-          {...attrs}
+          // {...attrs}
           {...stateProps}
+          id={pair}
+          ref={textInput}
           className={inputClassName}
         />
 

@@ -4,10 +4,10 @@ import isEqual from 'react-fast-compare';
 import { isObject, isEmptyChildren } from 'utils/assertions';
 
 export interface PassedMethods {
-  handleBlur?: (e?: React.FormEvent<HTMLInputElement>) => void;
-  handleFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
-  handleInput?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleBlur?: (e?: React.FormEvent<HTMLInputElement> | React.FormEvent<HTMLTextAreaElement> | React.FormEvent<HTMLSelectElement>) => void;
+  handleFocus?: (e: React.FocusEvent<HTMLInputElement> | React.FocusEvent<HTMLTextAreaElement> | React.FocusEvent<HTMLSelectElement>) => void;
+  handleInput?: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement> | React.ChangeEvent<HTMLSelectElement>) => void;
+  handleChange?: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement> | React.ChangeEvent<HTMLSelectElement>) => void;
   handleReset?: (e: React.FormEvent<HTMLFormElement>) => void;
   handleSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
   setSubmitting?: (isSubmitting: boolean) => void;
@@ -83,16 +83,16 @@ export class SyntheticForm extends React.Component<OuterProps, OuterState> {
     isValidated: false,
   };
 
-  handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement> | React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
     this.setState(state => ({ values: { ...state.values, [name]: value } }));
   }
 
-  handleBlur = (e?: React.FormEvent<HTMLInputElement>) => {
+  handleBlur = (e?: React.FormEvent<HTMLInputElement> | React.FormEvent<HTMLTextAreaElement> | React.FormEvent<HTMLSelectElement>) => {
     console.log('handleBlur 1', e);
   }
 
-  handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+  handleFocus = (e: React.FocusEvent<HTMLInputElement> | React.FocusEvent<HTMLTextAreaElement> | React.FocusEvent<HTMLSelectElement>) => {
     console.log('handleFocus 1', e);
   }
 

@@ -7,7 +7,9 @@ module.exports = () => {
   return [
     new ForkTsCheckerWebpackPlugin({
       async: development,
-      tsconfig: resolve(root, './tsconfig.json'),
+      typescript: {
+        configFile: resolve(root, './tsconfig.json'),
+      },
     }),
   ]
 }

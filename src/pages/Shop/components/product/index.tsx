@@ -11,7 +11,7 @@ import {
   Footer,
   Price,
   Like,
-} from './styles';
+} from './style';
 
 export interface OuterProps {
   name: string;

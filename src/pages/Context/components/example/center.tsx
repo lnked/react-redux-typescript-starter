@@ -6,10 +6,10 @@ import { Input } from 'components';
 import withContext from './store/hoc';
 
 export interface OuterProps {
-  left: any;
-  right: any;
-  center: any;
-  dispatch: any;
+  left?: any;
+  right?: any;
+  center?: any;
+  dispatch?: any;
   children?: React.ReactChild[] | React.ReactChild;
 }
 

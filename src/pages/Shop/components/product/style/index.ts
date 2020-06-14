@@ -1,10 +1,20 @@
+// import * as React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 import { Image as ImageSource } from 'components';
 import { Colors } from 'themes';
 
-export const Card = styled.article`
+export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  itemtype?: string;
+  itemscope?: boolean;
+}
+
+export interface PriceProps extends React.HTMLAttributes<HTMLDivElement> {
+  discount?: boolean;
+}
+
+export const Card = styled.article<CardProps>`
   padding: 0;
   font-size: 1.6rem;
   border: none;
@@ -103,10 +113,10 @@ export const Like = styled.button`
   outline: 0;
 `;
 
-export const Price = styled.div`
-  color: ${(p: { discount: boolean }) => p.discount ? '#707070' : '#ae4343'};
+export const Price = styled.div<PriceProps>`
+  color: ${(p: PriceProps) => p.discount ? '#707070' : '#ae4343'};
+  font-size: ${(p: PriceProps) => p.discount ? '13px' : '16px'};
   font-weight: 400;
-  font-size: ${(p: { discount: boolean }) => p.discount ? '13px' : '16px'};
 
   &:not(:last-child) {
     margin-right: 10px;

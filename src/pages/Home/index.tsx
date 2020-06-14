@@ -18,7 +18,7 @@ const Home = () => {
   const { t } = useTranslation();
   const { history, location, match } = useReactRouter();
 
-  const handleChange = (name: string) => (e: any, value: any) =>
+  const handleChange = (name: string) => (e: React.ChangeEvent<HTMLInputElement>, value: any) =>
     console.info('change: ', {
       e,
       name,

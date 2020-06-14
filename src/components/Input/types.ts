@@ -8,7 +8,7 @@ export interface InnerState {
   handleChange?: (e: eventType, value: valueType) => void;
 }
 
-export interface OuterProps {
+export interface OuterProps extends React.HTMLProps<HTMLInputElement> {
   name?: string;
   type?: string;
   label?: string;
