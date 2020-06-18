@@ -1816,10 +1816,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/react@^16.9.37":
-  version "16.9.37"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.37.tgz#8fb93e7dbd5b1d3796f69aa979a7fe0439bc7bea"
-  integrity sha512-ZqnAXallQiZ08LTSqMfWMNvAfJEzRLOxdlbbbCIJlYGjU98BEU6bE2uBpKPGeWn+v3hIgCraHKtqUcKZBzMP/Q==
+"@types/react@^16.9.38":
+  version "16.9.38"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.38.tgz#868405dace93a4095d3e054f4c4a1de7a1ac0680"
+  integrity sha512-pHAeZbjjNRa/hxyNuLrvbxhhnKyKNiLC6I5fRF2Zr/t/S6zS41MiyzH4+c+1I9vVfvuRt1VS2Lodjr4ZWnxrdA==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -6735,10 +6735,10 @@ husky@4.2.5:
     slash "^3.0.0"
     which-pm-runs "^1.0.0"
 
-i18next-browser-languagedetector@4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/i18next-browser-languagedetector/-/i18next-browser-languagedetector-4.3.0.tgz#a6dccbd72e78550a939253712caf436b4cb8326f"
-  integrity sha512-Wy20wmD1aHdiITaXQEPkiS12bO6H4izQYJ9awHJeprp/LnqLCSpnnAS3DB+GdkV/1g/efzogeVljKqymMBx6YA==
+i18next-browser-languagedetector@4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/i18next-browser-languagedetector/-/i18next-browser-languagedetector-4.3.1.tgz#005d2db6204b0a4af5f01c7987f5ccaf4ef97da5"
+  integrity sha512-KIToAzf8zwWvacgnRwJp63ase26o24AuNUlfNVJ5YZAFmdGhsJpmFClxXPuk9rv1FMI4lnc8zLSqgZPEZMrW4g==
   dependencies:
     "@babel/runtime" "^7.5.5"
 
@@ -8346,10 +8346,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@10.2.10:
-  version "10.2.10"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-10.2.10.tgz#f0f78bf8786bbe90e1775a0dc540f7f12b6a79b2"
-  integrity sha512-dgelFaNH6puUGAcU+OVMgbfpKSerNYsPSn6+nlbRDjovL0KigpsVpCu0PFZG6BJxX8gnHJqaZlR9krZamQsb0w==
+lint-staged@10.2.11:
+  version "10.2.11"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-10.2.11.tgz#713c80877f2dc8b609b05bc59020234e766c9720"
+  integrity sha512-LRRrSogzbixYaZItE2APaS4l2eJMjjf5MbclRZpLJtcQJShcvUzKXsNeZgsLIZ0H0+fg2tL4B59fU9wHIHtFIA==
   dependencies:
     chalk "^4.0.0"
     cli-truncate "2.1.0"
