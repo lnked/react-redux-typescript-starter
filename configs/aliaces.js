@@ -5,7 +5,6 @@ const { root, sourcePath } = require('./options');
 const duplicates = {
   lodash: resolve(root, 'node_modules/lodash'),
   warning: resolve(root, 'node_modules/warning'),
-  'history': resolve(root, 'node_modules/history'),
   'value-equal': resolve(root, 'node_modules/value-equal'),
   'resolve-pathname': resolve(root, 'node_modules/resolve-pathname'),
   'react-is': resolve(root, 'node_modules/react-is'),
