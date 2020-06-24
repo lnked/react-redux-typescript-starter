@@ -191,6 +191,7 @@
     "axios": "0.19.2",
     "core-js": "2",
     "date-fns": "2.14.0",
+    "dayjs": "^1.8.28",
     "history": "4.10.1",
     "i18next": "19.5.1",
     "i18next-browser-languagedetector": "5.0.0",
