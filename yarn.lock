@@ -2181,33 +2181,33 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@size-limit/file@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-4.5.2.tgz#c904c08bed011c297f62637c1c86c6c2c5375185"
-  integrity sha512-t8IS2TOs2mm35HHIvH8rG596XZy77121LuIDbRpYbokVygN4EUMmxaV9iteQgpTuhRN4CUbJZJvAi55RMv3K7w==
+"@size-limit/file@4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-4.5.3.tgz#f73afcdca4186255bb512630286de77589b7c756"
+  integrity sha512-QOvyhO4MyzYRjZLu0XYXdnun8aMOfea8uC6u46FsvvnWEnSL1LebeB1UKtk2zWGC9MYrv6c9IZvV11tbopeSjQ==
   dependencies:
     semver "7.3.2"
 
-"@size-limit/preset-app@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@size-limit/preset-app/-/preset-app-4.5.2.tgz#2f7ab5d19acb35a0f78bab9d5d198bafa76781dc"
-  integrity sha512-S7+qpUdaqLG0ZgixL8DCszcwTtAlFw1f41Uw60ZvXiuLWbddwn66lOBL43OjA95CUpXr5iJtrtsZ61PHKoWQ0w==
+"@size-limit/preset-app@4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@size-limit/preset-app/-/preset-app-4.5.3.tgz#78509a0d60c4dbd456df671ebee7ffc199012ee4"
+  integrity sha512-O3ILVTI2ir1DDtUQNLOGQHbtYc9gsuMAORlxswT4u+y+hBzIPXnczcq+kHhEK5bWTfLJMNv7RTju2TaUpIOpTg==
   dependencies:
-    "@size-limit/file" "4.5.2"
-    "@size-limit/time" "4.5.2"
+    "@size-limit/file" "4.5.3"
+    "@size-limit/time" "4.5.3"
 
-"@size-limit/time@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@size-limit/time/-/time-4.5.2.tgz#ff52deb1853e17a6f030a0f4d38a1aa59a14e2e6"
-  integrity sha512-IrGATfUmq7+BmBJSHoJGu/lhJHY462m3lUed9JvfFQ5kC9PCmBcyeWA0s26CLb2Ik9m9JdVQyvatlZ4QPNkxzA==
+"@size-limit/time@4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@size-limit/time/-/time-4.5.3.tgz#f3b79b5fc0afad7188cb3d022812a3cb56746a91"
+  integrity sha512-7+I7VPK8Kp1719FuthjpAeYkF0JsqWATmrpbazc30vs9ojRnusxRJmWL2AbBPdVmI6pGJMsbWebLdjvGQCUscQ==
   dependencies:
     estimo "^2.0.4"
     react "^16.13.1"
 
-"@size-limit/webpack@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@size-limit/webpack/-/webpack-4.5.2.tgz#68fd089834175874972a04e6240912c2e462efed"
-  integrity sha512-liqD+N3EQXjMyoZ0UmlTdwo8pBj5ORHkebTmCAYPAfS/P46JEVDUi47Q6s+dzOVY9O/JgSGUyf3VrP/Er7gJ0g==
+"@size-limit/webpack@4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@size-limit/webpack/-/webpack-4.5.3.tgz#ff0a9efd7799dc4ecbb3df525c824e82895258dd"
+  integrity sha512-Uw2ZgEM81RaHE9UjDGrjHyLLA1ngpWTNWU1wJmXpGHXq4F8I1wV5rLdAzWZO8F137LhK66hpYoaAk0y2w/wy2w==
   dependencies:
     css-loader "^3.6.0"
     escape-string-regexp "^4.0.0"
@@ -5079,10 +5079,10 @@ date-fns@*, date-fns@2.14.0:
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.14.0.tgz#359a87a265bb34ef2e38f93ecf63ac453f9bc7ba"
   integrity sha512-1zD+68jhFgDIM0rF05rcwYO8cExdNqxjq4xP1QKM60Q45mnO6zaMWB4tOzrIr4M4GSLntsKeE4c9Bdl2jhL/yw==
 
-dayjs@^1.8.28:
-  version "1.8.28"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.28.tgz#37aa6201df483d089645cb6c8f6cef6f0c4dbc07"
-  integrity sha512-ccnYgKC0/hPSGXxj7Ju6AV/BP4HUkXC2u15mikXT5mX9YorEaoi1bEKOmAqdkJHN4EEkmAf97SpH66Try5Mbeg==
+dayjs@^1.8.29:
+  version "1.8.29"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.29.tgz#5d23e341de6bfbd206c01136d2fb0f01877820f5"
+  integrity sha512-Vm6teig8ZWK7rH/lxzVGxZJCljPdmUr6q/3f4fr5F0VWNGVkZEjZOQJsAN8hUHUqn+NK4XHNEpJZS1MwLyDcLw==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.9:
   version "2.6.9"
@@ -12603,16 +12603,16 @@ sane@^4.0.3:
     minimist "^1.1.1"
     walker "~1.0.5"
 
-sass-loader@^8.0.2:
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-8.0.2.tgz#debecd8c3ce243c76454f2e8290482150380090d"
-  integrity sha512-7o4dbSK8/Ol2KflEmSco4jTjQoV988bM82P9CZdmo9hR3RLnvNc0ufMNdMrB0caq38JQ/FgF4/7RcbcfKzxoFQ==
+sass-loader@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-9.0.0.tgz#06f2624c8d9efc2d989997d351aaad2d46ee1b44"
+  integrity sha512-GRHB5AT35QXVKbdqKMSU29x0tVDIFSUZeTzK7SGlHu4sm2dhRqGfMx5HnIdiMyRvLJJHaWmmabR1h0gNSHipPw==
   dependencies:
     clone-deep "^4.0.1"
-    loader-utils "^1.2.3"
+    loader-utils "^2.0.0"
     neo-async "^2.6.1"
-    schema-utils "^2.6.1"
-    semver "^6.3.0"
+    schema-utils "^2.7.0"
+    semver "^7.3.2"
 
 sax@~1.2.4:
   version "1.2.4"
@@ -12643,7 +12643,7 @@ schema-utils@1.0.0, schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-schema-utils@^2.0.0, schema-utils@^2.0.1, schema-utils@^2.6.1, schema-utils@^2.6.5, schema-utils@^2.6.6, schema-utils@^2.7.0:
+schema-utils@^2.0.0, schema-utils@^2.0.1, schema-utils@^2.6.5, schema-utils@^2.6.6, schema-utils@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.7.0.tgz#17151f76d8eae67fbbf77960c33c676ad9f4efc7"
   integrity sha512-0ilKFI6QQF5nxDZLFn2dMjvc4hjg/Wkg7rHd3jK6/A4a1Hl9VFdQWvgB1UMGoU94pad1P/8N7fMcEnLnSiju8A==
@@ -12920,10 +12920,10 @@ sisteransi@^1.0.4:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
 
-size-limit@4.5.2:
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-4.5.2.tgz#7448e2a41ad1d335143010409446684819cbcc8a"
-  integrity sha512-5UFx+Y7Yo6PkUxwQCigcT/1TrbPqThdD5uoAy1p2Q3ajBRzWdKb+pK2k+/p8D8pEbFIh4JFN+m5fwdPpgAJ1yQ==
+size-limit@4.5.3:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-4.5.3.tgz#7534fc36695e0b526206c706a8a8353ba4f4d58d"
+  integrity sha512-i5zOu9qN+X+eKeBSkVZCFqXtwd4CjgMrRWimB3uA5FW2JM4oCa0qv+CBIb/oNfdMsghrrD3HjSb8pn15XlOu3A==
   dependencies:
     bytes "^3.1.0"
     chokidar "^3.4.0"
