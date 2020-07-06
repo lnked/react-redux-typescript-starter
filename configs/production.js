@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 
 process.env.NODE_ENV = process.env.BABEL_ENV = 'production';
 

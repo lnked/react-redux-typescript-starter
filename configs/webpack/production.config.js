@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 
 const bail = require('../parts/bail');
