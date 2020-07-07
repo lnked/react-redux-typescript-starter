@@ -62,4 +62,6 @@ function Stepper({ value = 0, step = 1 }: OuterProps) {
 
 }
 
+Stepper.displayName = 'Stepper';
+
 export default Stepper;

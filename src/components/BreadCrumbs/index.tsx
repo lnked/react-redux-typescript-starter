@@ -25,6 +25,8 @@ const Breadcrumbs: React.FC<OuterProps> = (props: OuterProps) => {
   );
 };
 
+Breadcrumbs.displayName = 'Breadcrumbs';
+
 Breadcrumbs.defaultProps = {
   items: [],
 };

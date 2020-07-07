@@ -68,6 +68,8 @@ const Input: React.FC<OuterProps> = ({
   );
 };
 
+Input.displayName = 'Input';
+
 Input.defaultProps = {
   type: 'text',
   label: '',

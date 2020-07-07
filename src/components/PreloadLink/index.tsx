@@ -29,4 +29,6 @@ const PreloadLink: React.FC<OuterProps> = (props: OuterProps) => {
   );
 }
 
+PreloadLink.displayName = 'PreloadLink';
+
 export default PreloadLink;

@@ -12,4 +12,6 @@ const Callout: React.FC<OuterProps> = (props: OuterProps) => {
   );
 };
 
+Callout.displayName = 'Callout';
+
 export default Callout;

@@ -33,4 +33,6 @@ function ClickOutside({ onClick, children }: OuterProps) {
   );
 }
 
+ClickOutside.displayName = 'ClickOutside';
+
 export default ClickOutside;

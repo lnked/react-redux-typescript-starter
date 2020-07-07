@@ -12,4 +12,6 @@ const Card: React.FC<OuterProps> = (props: OuterProps) => {
   );
 };
 
+Card.displayName = 'Card';
+
 export default Card;

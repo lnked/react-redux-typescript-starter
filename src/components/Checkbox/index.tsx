@@ -12,6 +12,8 @@ export interface InnerState {
 
 export default class Checkbox extends React.Component<OuterProps, InnerState> {
 
+  static displayName = 'Checkbox';
+
   static defaultProps = {
     checked: false,
   };

@@ -12,4 +12,6 @@ const Spinner: React.FC<OuterProps> = (props: OuterProps) => {
   );
 };
 
+Spinner.displayName = 'Spinner';
+
 export default Spinner;

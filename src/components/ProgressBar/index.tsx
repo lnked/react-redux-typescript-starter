@@ -12,4 +12,6 @@ const ProgressBar: React.FC<OuterProps> = (props: OuterProps) => {
   );
 };
 
+ProgressBar.displayName = 'ProgressBar';
+
 export default ProgressBar;

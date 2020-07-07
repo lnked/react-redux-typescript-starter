@@ -8,4 +8,6 @@ function Chip() {
   );
 }
 
+Chip.displayName = 'Chip';
+
 export default Chip;

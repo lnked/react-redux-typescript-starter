@@ -12,4 +12,6 @@ const Icon: React.FC<OuterProps> = (props: OuterProps) => {
   );
 };
 
+Icon.displayName = 'Icon';
+
 export default Icon;

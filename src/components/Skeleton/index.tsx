@@ -12,4 +12,6 @@ const Skeleton: React.FC<OuterProps> = (props: OuterProps) => {
   );
 };
 
+Skeleton.displayName = 'Skeleton';
+
 export default Skeleton;

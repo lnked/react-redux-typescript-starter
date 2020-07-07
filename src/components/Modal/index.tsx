@@ -7,6 +7,8 @@ export interface OuterProps {
 
 class Modal extends React.Component<OuterProps, {}> {
 
+  static displayName = 'Modal';
+
   element: HTMLElement | null = null;
 
   componentDidMount () {

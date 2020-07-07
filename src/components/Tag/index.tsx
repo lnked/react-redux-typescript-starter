@@ -12,4 +12,6 @@ const Tag: React.FC<OuterProps> = (props: OuterProps) => {
   );
 };
 
+Tag.displayName = 'Tag';
+
 export default Tag;
