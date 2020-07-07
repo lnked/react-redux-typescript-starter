@@ -2573,10 +2573,10 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
 
-"@types/styled-components@5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.0.tgz#24d3412ba5395aa06e14fbc93c52f9454cebd0d6"
-  integrity sha512-ZFlLCuwF5r+4Vb7JUmd+Yr2S0UBdBGmI7ctFTgJMypIp3xOHI4LCFVn2dKMvpk6xDB2hLRykrEWMBwJEpUAUIQ==
+"@types/styled-components@5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.1.tgz#17c3b3a299aa38254189e04a72a8ee009a22e42d"
+  integrity sha512-fIjKvDU1LJExBZWEQilHqzfpOK4KUwBsj5zC79lxa94ekz8oDQSBNcayMACBImxIuevF+NbBGL9O/2CQ67Zhig==
   dependencies:
     "@types/hoist-non-react-statics" "*"
     "@types/react" "*"
@@ -14536,10 +14536,10 @@ webpack-manifest-plugin@2.2.0:
     object.entries "^1.1.0"
     tapable "^1.0.0"
 
-webpack-merge@5.0.7:
-  version "5.0.7"
-  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-5.0.7.tgz#78be2f360ac1897f41a4b3288e1d83319e4f770e"
-  integrity sha512-IxTERB8mNelEUN7YLSBhKMA0t/AySs0GGcUczNWWZTsNMKEFst4MM1t4aHX4ANAqVHO02A2zPPVXcdfv5Qpslw==
+webpack-merge@5.0.8:
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-5.0.8.tgz#fe8590c58582e884bde52f87a1f5586a5bc65930"
+  integrity sha512-jyPPojSgC42YnepNlK7oxpVfvfyW+xZQ3O6+K9BZDC67+9eDEAtQSv+bFAQn2Q49QSrfe42MdFs2ABGXJG6tTA==
   dependencies:
     clone-deep "^4.0.1"
     wildcard "^2.0.0"
