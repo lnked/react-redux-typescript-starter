@@ -12,7 +12,7 @@ module.exports = () => {
   return [
     {
       enforce: 'pre',
-      test: /\.js$/,
+      test: /\.(ts|js)x?$/,
       exclude: /(node_modules)/,
       use: [
         cache(),
