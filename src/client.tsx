@@ -2,10 +2,9 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'mobx-react';
 import { setConfig } from 'react-hot-loader';
-import { RouterStore, syncHistoryWithStore } from 'mobx-react-router';
+import { RouterStore } from 'mobx-react-router';
 
 import { environment } from 'settings';
-import { browserHistory } from 'utils';
 import { configureStore } from 'store';
 
 import App from 'app';
@@ -17,7 +16,6 @@ setConfig({
 
 const routingStore = new RouterStore();
 
-const history = syncHistoryWithStore(browserHistory, routingStore);
 
 const stores = configureStore(routingStore);
 
@@ -26,7 +24,7 @@ window.__APP_STATE__ = stores;
 
 ReactDOM.render(
   <Provider {...stores}>
-    <App history={history} />
+    <App />
   </Provider>,
   document.getElementById('app-root')
 );
@@ -42,3 +40,5 @@ if (environment.production) {
 if (environment.development && module.hot) {
   module.hot.accept();
 }
+
+ReactDOM.render(<App />, document.getElementById("app-root"));

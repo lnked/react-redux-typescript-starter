@@ -29,21 +29,21 @@ const polyfills = []
 // import Promise from 'core-js-pure/features/promise';
 
 /** IE9, IE10 and IE11 requires all of the following polyfills. **/
-polyfills.push('core-js/es6/symbol'); // 'es6-symbol/implement'
-polyfills.push('core-js/es6/object');
-// polyfills.push('core-js/es6/function');
-// polyfills.push('core-js/es6/parse-int');
-// polyfills.push('core-js/es6/parse-float');
-// polyfills.push('core-js/es6/number');
-// polyfills.push('core-js/es6/math');
-// polyfills.push('core-js/es6/string');
-// polyfills.push('core-js/es6/date');
-// polyfills.push('core-js/es6/array');
-// polyfills.push('core-js/es6/regexp');
-polyfills.push('core-js/es6/map');
-// polyfills.push('core-js/es6/weak-map');
-// polyfills.push('core-js/es6/set');
-polyfills.push('core-js/es6/promise');
+polyfills.push('core-js/es/symbol'); // 'es6-symbol/implement'
+polyfills.push('core-js/es/object');
+// polyfills.push('core-js/es/function');
+// polyfills.push('core-js/es/parse-int');
+// polyfills.push('core-js/es/parse-float');
+// polyfills.push('core-js/es/number');
+// polyfills.push('core-js/es/math');
+// polyfills.push('core-js/es/string');
+// polyfills.push('core-js/es/date');
+// polyfills.push('core-js/es/array');
+// polyfills.push('core-js/es/regexp');
+polyfills.push('core-js/es/map');
+// polyfills.push('core-js/es/weak-map');
+// polyfills.push('core-js/es/set');
+polyfills.push('core-js/es/promise');
 
 polyfills.push('core-js/fn/array/includes');
 
@@ -51,7 +51,7 @@ polyfills.push('core-js/fn/array/includes');
 // import 'classlist.js');  // Run `npm install --save classlist.js`.
 
 /** IE10 and IE11 requires the following for the Reflect API. */
-polyfills.push('core-js/es6/reflect');
+polyfills.push('core-js/es/reflect');
 
 // if (typeof Promise === 'undefined') {
 //     // Rejection tracking prevents a common issue where React gets into an
