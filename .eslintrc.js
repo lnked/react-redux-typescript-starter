@@ -25,6 +25,7 @@ module.exports = {
   rules: {
     'prefer-spread': 'off',
     'react/prop-types': 'off',
+    'react/jsx-fragments': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
   },
