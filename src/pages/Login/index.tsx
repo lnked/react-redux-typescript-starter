@@ -15,7 +15,7 @@ export interface OuterProps {
 }
 
 class Login extends React.Component<OuterProps, {}> {
-  render () {
+  render() {
     return (
       <Container>
         <Box>

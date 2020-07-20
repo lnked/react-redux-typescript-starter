@@ -18,17 +18,17 @@ export default class ErrorBoundary extends React.PureComponent<OuterProps, Inner
     error: false,
   };
 
-  static getDerivedStateFromError (error: Error | boolean) {
+  static getDerivedStateFromError(error: Error | boolean) {
     return { hasError: true, info: error };
   }
 
-  componentDidCatch (error: Error | boolean, info: any) {
+  componentDidCatch(error: Error | boolean, info: any) {
     this.setState({ error, info }, () => {
       // Raven.captureException(error, { extra: info })
     });
   }
 
-  render () {
+  render() {
     const { error, info } = this.state;
 
     if (error) {

@@ -3,15 +3,15 @@
 import { session } from 'storage.io';
 
 const Token = {
-  get (name: string = 'token') {
+  get(name: string = 'token') {
     return session.get(name);
   },
 
-  set (name: string = 'token', value: string) {
+  set(name: string = 'token', value: string) {
     session.set(name, value);
   },
 
-  clear (name: string = 'token') {
+  clear(name: string = 'token') {
     session.remove(name);
   },
 };

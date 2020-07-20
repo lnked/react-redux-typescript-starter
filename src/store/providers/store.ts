@@ -5,7 +5,7 @@ export const appState = observable({
 
   timer: 0,
 
-  get completedCount () {
+  get completedCount() {
     return this.todos.filter((todo: any) => todo.completed).length;
   },
 });
@@ -21,7 +21,7 @@ export default class CounterStore {
     this.count -= 1;
   }
 
-  @computed get fullName () {
+  @computed get fullName() {
     return this.count;
   }
 }

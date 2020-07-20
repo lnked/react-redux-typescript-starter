@@ -22,13 +22,13 @@ class AppStore {
 
   @observable isLoading = false;
 
-  constructor (initialState?: any) {
+  constructor(initialState?: any) {
     if (initialState && Object.keys(initialState).length) {
       extendObservable(this, initialState);
     }
   }
 
-  @computed get getState () {
+  @computed get getState() {
     return this.query;
   }
 

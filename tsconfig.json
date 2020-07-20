@@ -12,7 +12,7 @@
     "allowSyntheticDefaultImports": true,
     "declaration": false,
     "importHelpers": true,
-    "removeComments": true,
+    "removeComments": false,
     "noUnusedLocals": true,
     "noImplicitReturns": true,
     "noUnusedParameters": true,
@@ -23,9 +23,19 @@
     "noEmit": true,
     "strict": true,
     "allowJs": true,
-    "rootDir": "./",
+    "rootDir": ".",
     "baseUrl": "src",
     "outDir": "dist",
+    "alwaysStrict": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noFallthroughCasesInSwitch": true,
+    "downlevelIteration": true,
+    "pretty": true,
+    "preserveConstEnums": true,
     "lib": [
       "dom",
       "dom.iterable",
@@ -71,15 +81,16 @@
     ]
   },
   "include": [
+    "src/**/*.ts",
     "src/**/*.tsx",
     "typings/**/*.d.ts"
   ],
   "exclude": [
-    "./dist",
-    "./configs",
-    "./node_modules",
+    "dist",
+    "configs",
+    "node_modules",
     "**/node_modules/*",
-    "./src/**/*.test.tsx",
-    "./src/**/*.spec.tsx"
+    "src/**/*.test.tsx",
+    "src/**/*.spec.tsx"
   ]
 }

@@ -11,15 +11,15 @@ class DataStore {
     name: 'grid',
   };
 
-  constructor (initialState?: any) {
+  constructor(initialState?: any) {
     console.log({ initialState });
   }
 
-  @computed get getUser () {
+  @computed get getUser() {
     return this.user;
   }
 
-  @action set (user: DataProps) {
+  @action set(user: DataProps) {
     this.user = user;
   }
 }

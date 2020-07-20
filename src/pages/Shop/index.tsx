@@ -19,7 +19,7 @@ import { categoriesList } from './categories';
 
 // @observer
 class Shop extends React.Component<OuterProps, {}> {
-  render () {
+  render() {
     const { match: { params } } = this.props;
 
     return (
@@ -37,7 +37,7 @@ class Shop extends React.Component<OuterProps, {}> {
         </Sidebar>
 
         <Products>
-          {productsList.map(product => (
+          {productsList.map((product) => (
             <Product
               {...product}
               key={product.id}

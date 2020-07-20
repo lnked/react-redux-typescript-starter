@@ -3,19 +3,19 @@ import { observable, action, computed } from 'mobx';
 class UiStore {
   @observable type = 'grid';
 
-  constructor (initialState?: any) {
+  constructor(initialState?: any) {
     console.log({ initialState });
   }
 
-  @computed get viewType () {
+  @computed get viewType() {
     return this.type;
   }
 
-  @computed get getState () {
+  @computed get getState() {
     return this.type;
   }
 
-  @action set (type: string) {
+  @action set(type: string) {
     this.type = type;
   }
 }

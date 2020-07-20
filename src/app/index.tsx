@@ -17,15 +17,15 @@ class App extends React.Component<OuterProps, {}> {
 
   timeout: any = null;
 
-  componentDidMount () {
+  componentDidMount() {
     i18nInit();
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     i18nUnload();
   }
 
-  render () {
+  render() {
     return (
       <ErrorBoundary>
         <I18nextProvider i18n={i18n}>

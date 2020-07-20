@@ -16,7 +16,7 @@ class CoreLayout extends React.Component<OuterProps, {}> {
     children: '',
   };
 
-  componentDidUpdate (prevProps: OuterProps) {
+  componentDidUpdate(prevProps: OuterProps) {
     const { location } = prevProps;
     const { pathname, hash } = this.props.location;
 
@@ -28,7 +28,7 @@ class CoreLayout extends React.Component<OuterProps, {}> {
     }
   }
 
-  render () {
+  render() {
     const { children } = this.props;
 
     return (

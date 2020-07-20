@@ -11,15 +11,15 @@ class SessionStore {
     name: 'grid',
   };
 
-  constructor (initialState?: any) {
+  constructor(initialState?: any) {
     console.log({ initialState });
   }
 
-  @computed get getUser () {
+  @computed get getUser() {
     return this.user;
   }
 
-  @action set (user: UserProps) {
+  @action set(user: UserProps) {
     this.user = user;
   }
 }

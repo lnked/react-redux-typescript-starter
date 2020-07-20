@@ -25,9 +25,26 @@ module.exports = {
   rules: {
     'prefer-spread': 'off',
     'react/prop-types': 'off',
+    'react/jsx-no-bind': ['warn', {
+      ignoreRefs: true,
+      allowArrowFunctions: true,
+      ignoreDOMComponents: true,
+    }],
     'react/jsx-fragments': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'operator-linebreak': [2, 'after', {
+      'overrides': {
+        '?': 'before',
+        ':': 'before'
+      }
+    }],
+    'arrow-parens': [2, 'always'],
+    'space-before-function-paren': [2, {
+      'asyncArrow': 'always',
+      'anonymous': 'never',
+      'named': 'never'
+    }],
   },
   settings: {
     react: {

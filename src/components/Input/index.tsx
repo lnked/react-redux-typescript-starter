@@ -39,13 +39,13 @@ const Input: React.FC<OuterProps> = ({
 
   return (
     <Wrapper className={className}>
-      {label
-        && <Label htmlFor={pair}>{label}</Label>
-      }
+      {label && (
+        <Label htmlFor={pair}>{label}</Label>
+      )}
 
-      {attrs.required
-        && <span>Required</span>
-      }
+      {attrs.required && (
+        <span>Required</span>
+      )}
 
       <span>touched: {JSON.stringify(touched)}</span>
 

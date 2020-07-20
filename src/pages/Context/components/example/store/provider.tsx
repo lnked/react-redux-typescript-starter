@@ -17,10 +17,10 @@ export default class StateProvider extends React.Component<OuterProps, InnerStat
   state = initialState;
 
   dispatch = (action: any) => {
-    this.setState(state => getState(state, action));
+    this.setState((state) => getState(state, action));
   }
 
-  render () {
+  render() {
     const { children } = this.props;
 
     const props = {

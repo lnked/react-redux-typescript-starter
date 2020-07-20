@@ -11,16 +11,16 @@ class Modal extends React.Component<OuterProps, {}> {
 
   element: HTMLElement | null = null;
 
-  componentDidMount () {
+  componentDidMount() {
     this.element = document.createElement('div');
     this.element && document.body.appendChild(this.element);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.element && document.body.removeChild(this.element);
   }
 
-  render () {
+  render() {
     const { children } = this.props;
 
     if (!this.element) {

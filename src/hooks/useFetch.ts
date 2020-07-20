@@ -13,12 +13,12 @@ export default function useFetch(url, init) {
     prevUrl.current = url;
     prevInit.current = init;
     fetch(process.env.REACT_APP_API_BASE_URL + url, init)
-      .then(response => {
+      .then((response) => {
         if (response.ok) return response.json();
         setError(response);
       })
-      .then(data => setData(data))
-      .catch(err => {
+      .then((data) => setData(data))
+      .catch((err) => {
         console.error(err);
         setError(err);
       })

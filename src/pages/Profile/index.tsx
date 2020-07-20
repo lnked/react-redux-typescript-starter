@@ -19,7 +19,7 @@ class Profile extends React.Component<OuterProps, {}> {
     helperRedirect('/login');
   }
 
-  render () {
+  render() {
     return (
       <Wrapper>
         <Sidebar>
