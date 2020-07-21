@@ -5,7 +5,7 @@ const Log = (target: any, name: any, descriptor: any) => {
 
   descriptor.value = (...args: any[]) => {
     return value.apply(null, [...args]);
-  }
+  };
 
   return descriptor;
 };

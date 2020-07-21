@@ -23,6 +23,7 @@ module.exports = {
     },
   },
   rules: {
+    'arrow-parens': [2, 'always'],
     'prefer-spread': 'off',
     'react/prop-types': 'off',
     'react/jsx-no-bind': ['warn', {
@@ -42,7 +43,7 @@ module.exports = {
     'no-extra-semi': 1,
     'semi': ['error', 'always'],
     'semi-spacing': [1, {'before': false, 'after': true}],
-    'arrow-parens': [2, 'always'],
+    'comma-spacing': ['error', { 'before': false, 'after': true }],
     'space-before-function-paren': [2, {
       'asyncArrow': 'always',
       'anonymous': 'never',

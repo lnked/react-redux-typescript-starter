@@ -20,14 +20,14 @@ const PreloadLink: React.FC<OuterProps> = (props: OuterProps) => {
     timeout = setTimeout(() =>
       component && component.preload && component.preload()
     , 250);
-  }
+  };
 
   return (
     <Link onMouseEnter={handleMouseEnter} {...restProps}>
       {children || label}
     </Link>
   );
-}
+};
 
 PreloadLink.displayName = 'PreloadLink';
 
