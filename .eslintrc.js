@@ -39,6 +39,9 @@ module.exports = {
         ':': 'before'
       }
     }],
+    'no-extra-semi': 1,
+    'semi': ['error', 'always'],
+    'semi-spacing': [1, {'before': false, 'after': true}],
     'arrow-parens': [2, 'always'],
     'space-before-function-paren': [2, {
       'asyncArrow': 'always',

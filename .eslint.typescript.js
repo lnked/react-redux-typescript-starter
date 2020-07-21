@@ -16,6 +16,8 @@ module.exports = {
     '@typescript-eslint',
   ],
 	rules: {
+    'semi': 'off',
+    '@typescript-eslint/semi': ['error'],
     '@typescript-eslint/ban-types': 'off',
     // '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
@@ -24,32 +26,32 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     // '@typescript-eslint/member-delimiter-style': 'off',
     // '@typescript-eslint/explicit-function-return-type': 'off',
-    "@typescript-eslint/explicit-module-boundary-types": "off",
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
 
-    // "@typescript-eslint/naming-convention": [
-    //   "error",
+    // '@typescript-eslint/naming-convention': [
+    //   'error',
     //   {
-    //     "selector": "default",
-    //     "format": ["camelCase"]
+    //     'selector': 'default',
+    //     'format': ['camelCase']
     //   },
     //   {
-    //     "selector": "variable",
-    //     "format": ["camelCase", "UPPER_CASE", "PascalCase", "StrictPascalCase"]
+    //     'selector': 'variable',
+    //     'format': ['camelCase', 'UPPER_CASE', 'PascalCase', 'StrictPascalCase']
     //   },
     //   {
-    //     "selector": "parameter",
-    //     "format": ["camelCase"],
-    //     "leadingUnderscore": "allow"
+    //     'selector': 'parameter',
+    //     'format': ['camelCase'],
+    //     'leadingUnderscore': 'allow'
     //   },
     //   {
-    //     "selector": "memberLike",
-    //     "modifiers": ["private"],
-    //     "format": ["camelCase"],
-    //     "leadingUnderscore": "require"
+    //     'selector': 'memberLike',
+    //     'modifiers': ['private'],
+    //     'format': ['camelCase'],
+    //     'leadingUnderscore': 'require'
     //   },
     //   {
-    //     "selector": "typeLike",
-    //     "format": ["PascalCase"]
+    //     'selector': 'typeLike',
+    //     'format': ['PascalCase']
     //   }
     // ],
 
