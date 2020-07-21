@@ -16,7 +16,6 @@ setConfig({
 
 const routingStore = new RouterStore();
 
-
 const stores = configureStore(routingStore);
 
 // For easier debugging
