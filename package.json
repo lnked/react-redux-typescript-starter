@@ -70,7 +70,7 @@
     "@teamsupercell/typings-for-css-modules-loader": "2.2.0",
     "@testing-library/jest-dom": "^5.11.1",
     "@testing-library/react": "^10.4.7",
-    "@testing-library/user-event": "^12.0.11",
+    "@testing-library/user-event": "^12.0.12",
     "@types/date-fns": "2.6.0",
     "@types/enzyme": "3.10.5",
     "@types/enzyme-adapter-react-16": "1.0.6",
