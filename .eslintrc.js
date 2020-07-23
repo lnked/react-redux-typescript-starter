@@ -23,7 +23,7 @@ module.exports = {
     },
   },
   rules: {
-    'arrow-parens': [2, 'always'],
+    'arrow-parens': [1, 'as-needed'],
     'prefer-spread': 'off',
     'react/prop-types': 'off',
     'react/jsx-no-bind': ['warn', {
