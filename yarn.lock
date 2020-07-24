@@ -1553,10 +1553,10 @@
     "@babel/runtime" "^7.10.3"
     "@testing-library/dom" "^7.17.1"
 
-"@testing-library/user-event@^12.0.12":
-  version "12.0.12"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-12.0.12.tgz#b2ee1af9e9b8b28b1aae6d2026f611d7a75794e3"
-  integrity sha512-sftHNrd7JGFVL9yjmg64crjilxf1J6R65qgwfmUtu0M+biu/chnQr+KD+JlNHQevZtkkxQ9C8ELzHyXJpD9QZQ==
+"@testing-library/user-event@^12.0.13":
+  version "12.0.13"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-12.0.13.tgz#585fbb1188df005d16eabd376c3f8e8eb2f2d35c"
+  integrity sha512-JvodPV7CGl2Izf/qWS+vAVKBB1ZNAPGEacabfEeLGfafLmiqXoGJCxNZC1ml3mNTj9tTsIjouHGc42gvlyRTtQ==
   dependencies:
     "@babel/runtime" "^7.10.2"
 
@@ -1756,10 +1756,10 @@
     jest-diff "^25.2.1"
     pretty-format "^25.2.1"
 
-"@types/jest@26.0.6":
-  version "26.0.6"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.6.tgz#b9f5ef7ba7e0e45a0c482667a0cf314f0a6ed6b3"
-  integrity sha512-XhJCNf+oPyA90jyPhOT3yZo6xR8R7auyUAibzRewPwbOb649AOPXX/JSjbafcbxJrxs/+BymBmHSETM8VpGMOw==
+"@types/jest@26.0.7":
+  version "26.0.7"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.7.tgz#495cb1d1818c1699dbc3b8b046baf1c86ef5e324"
+  integrity sha512-+x0077/LoN6MjqBcVOe1y9dpryWnfDZ+Xfo3EqGeBcfPRJlQp3Lw62RvNlWxuGv7kOEwlHriAa54updi3Jvvwg==
   dependencies:
     jest-diff "^25.2.1"
     pretty-format "^25.2.1"
@@ -1786,10 +1786,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.23.tgz#676fa0883450ed9da0bb24156213636290892806"
   integrity sha512-Z4U8yDAl5TFkmYsZdFPdjeMa57NOvnaf1tljHzhouaPEp7LCj2JKkejpI1ODviIAQuW4CcQmxkQ77rnLsOOoKw==
 
-"@types/node@14.0.24":
-  version "14.0.24"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.24.tgz#b0f86f58564fa02a28b68f8b55d4cdec42e3b9d6"
-  integrity sha512-btt/oNOiDWcSuI721MdL8VQGnjsKjlTMdrKyTcLCKeQp/n4AAMFJ961wMbp+09y8WuGPClDEv07RIItdXKIXAA==
+"@types/node@14.0.25":
+  version "14.0.25"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.25.tgz#7ad8b00a1206d6c9e94810e49f3115f0bcc30456"
+  integrity sha512-okMqUHqrMlGOxfDZliX1yFX5MV6qcd5PpRz96XYtjkM0Ws/hwg23FMUqt6pETrVRZS+EKUB5HY19mmo54EuQbA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
