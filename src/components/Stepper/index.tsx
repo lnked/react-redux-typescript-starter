@@ -48,7 +48,7 @@ function Stepper({ value = 0, step = 1 }: OuterProps) {
   return (
     <StyledStepper>
       <Paragraph>{count}</Paragraph>
-      <Button onClick={() => setCount((prevCount) => prevCount - step)}>-</Button>
+      <Button onClick={() => setCount(prevCount => prevCount - step)}>-</Button>
       <StylesInput
         ref={textInput}
         type="text"
@@ -56,7 +56,7 @@ function Stepper({ value = 0, step = 1 }: OuterProps) {
         onChange={(e: any) => setCount(e.targer.value)}
       />
       <Button onClick={() => setCount(0)}>x</Button>
-      <Button onClick={() => setCount((prevCount) => prevCount + step)}>+</Button>
+      <Button onClick={() => setCount(prevCount => prevCount + step)}>+</Button>
     </StyledStepper>
   );
 

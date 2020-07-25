@@ -33,7 +33,6 @@ module.exports = () => {
       use: [
         baseLoader(),
         css({
-          sourceMap: true,
           importLoaders: 1,
         }),
         postcss({

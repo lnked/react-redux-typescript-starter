@@ -27,7 +27,7 @@ export default class Provider extends React.Component<OuterProps, InnerState> {
   state = initialState;
 
   dispatch = (action: any) => {
-    this.setState((state) => getState(state, action));
+    this.setState(state => getState(state, action));
   }
 
   render() {

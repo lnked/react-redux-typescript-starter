@@ -85,7 +85,7 @@ export class SyntheticForm extends React.Component<OuterProps, OuterState> {
 
   handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement> | React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
-    this.setState((state) => ({ values: { ...state.values, [name]: value } }));
+    this.setState(state => ({ values: { ...state.values, [name]: value } }));
   }
 
   handleBlur = (e?: React.FormEvent<HTMLInputElement> | React.FormEvent<HTMLTextAreaElement> | React.FormEvent<HTMLSelectElement>) => {

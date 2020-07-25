@@ -34,9 +34,9 @@ function Counter({ initialCount = 0 }: OuterProps) {
   return (
     <StyledCounter>
       <Paragraph>{count}</Paragraph>
-      <Button onClick={() => setCount((prevCount) => prevCount - 1)}>-</Button>
+      <Button onClick={() => setCount(prevCount => prevCount - 1)}>-</Button>
       <Button onClick={() => setCount(0)}>Reset</Button>
-      <Button onClick={() => setCount((prevCount) => prevCount + 1)}>+</Button>
+      <Button onClick={() => setCount(prevCount => prevCount + 1)}>+</Button>
     </StyledCounter>
   );
 

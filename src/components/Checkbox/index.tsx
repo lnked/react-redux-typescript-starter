@@ -23,7 +23,7 @@ export default class Checkbox extends React.Component<OuterProps, InnerState> {
   };
 
   onChange = () => {
-    this.setState((state) => ({ isChecked: !state.isChecked }));
+    this.setState(state => ({ isChecked: !state.isChecked }));
   }
 
   render() {

@@ -7,7 +7,7 @@ const withContext = <P extends object>(Component: React.ComponentType<P>) => {
   return function ContextComponent(props: P) {
     return (
       <Consumer>
-        {(context) => <Component {...props} {...context} />}
+        {context => <Component {...props} {...context} />}
       </Consumer>
     );
   };

@@ -17,7 +17,7 @@ function Todos({
   );
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     withMilk: todosWithMilk(state),
     withMilkAndBread: todosWithMilkAndBread(state),
@@ -26,9 +26,9 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    onDelete: (id) => dispatch(deleteTodo(id)),
+    onDelete: id => dispatch(deleteTodo(id)),
   };
 };
 
