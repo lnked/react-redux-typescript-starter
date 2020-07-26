@@ -1,5 +1,7 @@
 const { resolve } = require('path');
 
+const { development } = require('../options');
+
 const cache = require('../loaders/cache-loader');
 const babel = require('../loaders/babel-loader');
 const thread = require('../loaders/thread-loader');
@@ -15,7 +17,7 @@ module.exports = () => {
       test: /\.(ts|js)x?$/,
       exclude: /(node_modules)/,
       use: [
-        cache(),
+        ...(development ? [cache()] : []),
         sourceMap(),
       ],
     },
@@ -23,8 +25,8 @@ module.exports = () => {
       test: /\.(ts|js)x?$/,
       exclude: /(node_modules)/,
       use: [
-        cache(),
-        thread(),
+        ...(development ? [cache()] : []),
+        thread('js'),
         babel(),
       ],
     },

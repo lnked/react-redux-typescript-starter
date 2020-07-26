@@ -10,6 +10,13 @@ function Todos({
   error,
   loading,
 }) {
+  console.log({
+    withMilk,
+    withMilkAndBread,
+    error,
+    loading,
+  });
+
   return (
     <div>
       {/* ... */}

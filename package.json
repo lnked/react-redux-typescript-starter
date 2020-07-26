@@ -10,7 +10,7 @@
     "postrelease": "yarn snapshots && yarn size",
     "snapshots": "node configs/snapshots",
     "start": "webpack-dev-server --config configs/scripts",
-    "build": "env NODE_ENV=production webpack --config configs/scripts --display-optimization-bailout",
+    "build": "env NODE_ENV=production webpack --config configs/scripts",
     "build:display": "env NODE_ENV=production webpack --display-modules --config configs/scripts",
     "preanalyze": "yarn clear:cache",
     "analyze": "yarn build --analyze",

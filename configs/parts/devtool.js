@@ -1,6 +1,6 @@
-const options = require('../options');
+const { production } = require('../options');
 
-const devtool = options.production ? 'source-map' : 'eval-source-map';
+const devtool = production ? false : 'inline-eval';
 
 module.exports = {
   devtool,
