@@ -3,7 +3,7 @@ const file = require('../loaders/file-loader');
 const cache = require('../loaders/cache-loader');
 const imageWebpack = require('../loaders/image-webpack-loader');
 
-const { development, staticPath } = require('../options');
+const { development, production, staticPath } = require('../options');
 
 module.exports = () => {
   return [
@@ -31,7 +31,7 @@ module.exports = () => {
         cache(),
         svg({
           limit: 10 * 1024,
-          noquotes: true,
+          noquotes: production,
         }),
       ],
     },

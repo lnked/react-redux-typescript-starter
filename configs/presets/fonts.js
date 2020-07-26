@@ -2,6 +2,8 @@ const url = require('../loaders/url-loader');
 const file = require('../loaders/file-loader');
 const cache = require('../loaders/cache-loader');
 
+const { staticPath } = require('../options');
+
 module.exports = () => {
   return [
     {
@@ -20,8 +22,8 @@ module.exports = () => {
       use: [
         cache(),
         url({
-          prefix: 'static/images',
           limit: 50000,
+          prefix: `${staticPath}/images`,
           mimetype: 'image/svg+xml',
         }),
       ],

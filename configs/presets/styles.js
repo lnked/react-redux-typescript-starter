@@ -26,10 +26,10 @@ module.exports = () => {
     }
 
     return [
-      ...(development ? [cache()] : []),
+      ...(development && [cache()]),
       thread('css'),
       style(),
-    ];
+    ].filter(Boolean);
   }
 
   return [
@@ -41,10 +41,10 @@ module.exports = () => {
           importLoaders: 1,
         }),
         postcss({
-          sourceMap: true,
+          sourceMap: development,
         }),
         sass({
-          sourceMap: true,
+          sourceMap: development,
           implementation: require('dart-sass'),
           sassOptions: {
             fiber: false,
