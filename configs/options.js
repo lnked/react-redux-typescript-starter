@@ -16,7 +16,7 @@ const publicPath = development ? '' : '';
 
 const hashName = development
   ? '[name]'
-  : '[name].[contenthash:4]';
+  : '[name].[contenthash:6]';
 
 module.exports = {
   root,
