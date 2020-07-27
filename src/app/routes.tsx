@@ -62,7 +62,7 @@ export const NoMatch = preloadComponent(() => import(
 export const routes = [
   { keyName: 'navigation.home', to: '/', component: Home, exact: true },
   { keyName: 'navigation.about', to: '/about', component: About },
-  { keyName: 'navigation.shop', to: '/shop', component: Shop },
+  { keyName: 'navigation.shop', to: '/shop', component: Shop, path: ['/shop', '/shop/:product'], exact: true },
   { keyName: 'navigation.cart', to: '/cart', component: Cart },
   { keyName: 'navigation.forms', to: '/forms', component: Forms },
   { keyName: 'navigation.login', to: '/login', component: Login },
@@ -70,14 +70,14 @@ export const routes = [
   { keyName: 'navigation.profile', to: '/profile', component: Profile },
   { keyName: 'navigation.context', to: '/context', component: Context },
   { keyName: 'navigation.counter', to: '/counter', component: Counter },
-  { keyName: 'navigation.protected', to: '/protected', component: Counter },
-  { keyName: 'navigation.page_not_found', to: '/error-page' },
 ];
 
 function HistorySetter({ history }: any) {
   setHistory(history);
   return null;
 }
+
+export interface RouteProps {}
 
 function Switcher(store: any) {
   return (
@@ -86,28 +86,26 @@ function Switcher(store: any) {
 
       <Switch>
         {/*
-        {routes.map((to, exact, component) => {
-          <Route path={to} component={component} exact={exact} />
-        })}
         <Route path='/' component={Home} exact />
         */}
 
-        <Route exact path="/" render={(props: any) => <Home {...store} {...props} />} />
-        <Route
-          exact
-          path={['/shop', '/shop/:product']}
-          render={(props: any) => <Shop {...store} {...props} />}
+        {routes.map(({ keyName, path, to, component: Component, exact = false, ...restProps }) => (
+          <Route
+            {...restProps}
+            key={keyName}
+            path={path || to}
+            exact={exact}
+            render={(props: RouteProps) => <Component {...store} {...props} />}
+          />
+        ))}
+
+        <PrivateRoute
+          path="/protected"
+          alternative="/login"
+          render={(props: RouteProps) => <Home {...store} {...props} />}
         />
-        <Route path="/cart" render={(props: any) => <Cart {...store} {...props} />} />
-        <Route path="/forms" render={(props: any) => <Forms {...store} {...props} />} />
-        <Route path="/about" render={(props: any) => <About {...store} {...props} />} />
-        <Route path="/context" render={(props: any) => <Context {...store} {...props} />} />
-        <Route path="/login" render={(props: any) => <Login {...store} {...props} />} />
-        <Route path="/topics" render={(props: any) => <Topics {...store} {...props} />} />
-        <Route path="/profile" render={(props: any) => <Profile {...store} {...props} />} />
-        <Route path="/counter" render={(props: any) => <Counter {...store} {...props} />} />
-        <PrivateRoute path="/protected" alternative="/login" component={Home} />
-        <Route path="*" render={(props: any) => <NoMatch {...store} {...props} />} exact />
+
+        <Route path="*" render={(props: RouteProps) => <NoMatch {...store} {...props} />} exact />
       </Switch>
     </React.Fragment>
   );
