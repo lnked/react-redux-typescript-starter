@@ -26,7 +26,7 @@ module.exports = function({ development, production, test, loose, legacy }) {
       pure: true,
       fileName: false,
       sourceMap: true,
-      displayName: false,
+      displayName: development,
       extractStatic: false,
       transpileTemplateLiterals: false,
     }],

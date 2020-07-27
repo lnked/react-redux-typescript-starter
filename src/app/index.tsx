@@ -29,14 +29,14 @@ class App extends React.Component<OuterProps, {}> {
     return (
       <ErrorBoundary>
         <I18nextProvider i18n={i18n}>
+          <GlobalStyle />
+
           <Router>
             <CoreLayout>
               <React.Suspense fallback={<div>Loading...</div>}>
                 <Switcher />
               </React.Suspense>
             </CoreLayout>
-
-            <GlobalStyle />
           </Router>
         </I18nextProvider>
       </ErrorBoundary>
