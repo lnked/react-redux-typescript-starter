@@ -114,7 +114,7 @@
     "enzyme-adapter-react-16": "1.15.2",
     "enzyme-to-json": "3.5.0",
     "eslint": "7.5.0",
-    "eslint-plugin-react": "7.20.3",
+    "eslint-plugin-react": "7.20.4",
     "eslint-plugin-react-hooks": "4.0.8",
     "fast-async": "6.3.8",
     "file-loader": "6.0.0",
