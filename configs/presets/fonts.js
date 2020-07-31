@@ -7,6 +7,7 @@ const { staticPath } = require('../options');
 module.exports = () => {
   return [
     {
+      include: /assets\/fonts/,
       test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       use: [
         cache(),
@@ -18,6 +19,7 @@ module.exports = () => {
       ],
     },
     {
+      include: /assets\/fonts/,
       test: /\.svg$/,
       use: [
         cache(),
@@ -29,6 +31,7 @@ module.exports = () => {
       ],
     },
     {
+      include: /assets\/fonts/,
       test: /\.(ttf|eot|woff|woff2)(\?\S*)?$/,
       use: [
         cache(),
