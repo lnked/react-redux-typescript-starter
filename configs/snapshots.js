@@ -6,11 +6,17 @@ run({
   source: 'dist',
   saveAs: 'html',
   destination: 'dist',
-  inlineCss: true,
+  inlineCss: false,
+  puppeteerArgs: [
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--unhandled-rejections=strict',
+  ],
   externalServer: false,
   cacheAjaxRequests: false,
   skipThirdPartyRequests: true,
   skipThirdPartyRequestsExcept: true,
+  puppeteerIgnoreHTTPSErrors: true,
   minifyHtml: {
     ...configs,
   },
