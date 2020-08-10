@@ -1,5 +1,5 @@
 // import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { NavLink } from 'react-router-dom';
 
 import { Image as ImageSource } from 'components';

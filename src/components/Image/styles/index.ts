@@ -1,5 +1,5 @@
 // import styled from 'styled-components'
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const Picture = styled.picture`
   font-size: 0;

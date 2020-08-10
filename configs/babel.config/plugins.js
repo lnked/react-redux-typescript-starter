@@ -19,6 +19,7 @@ module.exports = function({ development, production, test, loose, legacy }) {
 
   return [
     ...plugins,
+    ['macros'],
     ['module:fast-async', { spec: true }],
     ['babel-plugin-styled-components', {
       ssr: production,

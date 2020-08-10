@@ -1,5 +1,5 @@
 /* tslint:disable: max-line-length */
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const BaseInput = styled.input`
   width: 100%;

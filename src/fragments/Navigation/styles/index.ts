@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { PreloadLink } from 'components';
 
 import { Colors } from 'themes';

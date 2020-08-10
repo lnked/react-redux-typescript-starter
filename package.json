@@ -95,6 +95,7 @@
     "babel-jest": "26.3.0",
     "babel-loader": "8.1.0",
     "babel-plugin-console": "^0.2.1",
+    "babel-plugin-macros": "^2.8.0",
     "babel-plugin-styled-components": "1.11.1",
     "babel-plugin-transform-imports": "2.0.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",

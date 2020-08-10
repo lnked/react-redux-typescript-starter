@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { Input as InputComponent } from 'components';
 
 export const Input = styled(InputComponent)`

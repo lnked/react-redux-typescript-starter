@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import MaskedInput from 'react-maskedinput';
 
 import { Stepper, Button } from 'components';
