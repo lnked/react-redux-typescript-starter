@@ -24,12 +24,9 @@ module.exports = function({ development, production, test, loose, legacy }) {
     ['babel-plugin-styled-components', {
       ssr: production,
       minify: production,
-      pure: true,
-      fileName: false,
-      sourceMap: true,
-      displayName: development,
-      extractStatic: false,
-      transpileTemplateLiterals: false,
+      sourceMap: development,
+      extractStatic: development,
+      transpileTemplateLiterals: development,
     }],
     ['transform-react-remove-prop-types', {
       mode: 'remove',

@@ -10,4 +10,5 @@ metro.config.js
 postcss.config.js
 .eslint.typescript.js
 lint-staged.config.js
+babel-plugin-macros.config.js
 configs/*
