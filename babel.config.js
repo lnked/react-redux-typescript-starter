@@ -16,7 +16,7 @@ module.exports = function (api) {
     ? { node: 'current' }
     : { esmodules: !legacy, browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 10', 'iOS >= 8', 'Android >= 4'] }
   const modules = babel ? false : 'commonjs'
-  const useBuiltIns = web ? 'usage' : undefined
+  const useBuiltIns = 'entry';
 
   // webpackChunkName doesn't work if the value is false
   const comments = true

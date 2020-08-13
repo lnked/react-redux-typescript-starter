@@ -197,7 +197,7 @@
     "@hot-loader/react-dom": "16.13.0",
     "@types/history": "^4.7.7",
     "axios": "0.19.2",
-    "core-js": "2",
+    "core-js": "3",
     "date-fns": "2.15.0",
     "dayjs": "^1.8.33",
     "history": "4.10.1",

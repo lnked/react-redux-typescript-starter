@@ -15,22 +15,66 @@
 
 const polyfills = []
 
+// polyfill all `core-js` features:
+// polyfills.push("core-js");
+// polyfill only stable `core-js` features - ES and web standards:
+// polyfills.push("core-js/stable");
+// polyfill only stable ES features:
+// polyfills.push("core-js/es");
+
+// if you want to polyfill `Set`:
+// all `Set`-related features, with ES proposals:
+// polyfills.push("core-js/features/set");
+// // stable required for `Set` ES features and features from web standards
+// // (DOM collections iterator in this case):
+// polyfills.push("core-js/stable/set");
+// // only stable ES features required for `Set`:
+// polyfills.push("core-js/es/set");
+// // the same without global namespace pollution:
+// polyfills.push(Set from "core-js-pure/features/set");
+// polyfills.push(Set from "core-js-pure/stable/set");
+// polyfills.push(Set from "core-js-pure/es/set");
+
+// // if you want to polyfill just required methods:
+// polyfills.push("core-js/features/set/intersection");
+// polyfills.push("core-js/stable/queue-microtask");
+// polyfills.push("core-js/es/array/from");
+
+// // polyfill reflect metadata proposal:
+// polyfills.push("core-js/proposals/reflect-metadata");
+// // polyfill all stage 2+ proposals:
+// polyfills.push("core-js/stage/2");
+
 /** *************************************************************************************************
  * BROWSER POLYFILLS
  */
 
-// import 'core-js/features/array/from'; // <- at the top of your entry point
-// import 'core-js/features/array/flat'; // <- at the top of your entry point
-// import 'core-js/features/set';        // <- at the top of your entry point
-// import 'core-js/features/promise';    // <- at the top of your entry point
+// polyfills.push('core-js/features/array/from'; // <- at the top of your entry poin)t
+// polyfills.push('core-js/features/array/flat'; // <- at the top of your entry poin)t
+// polyfills.push('core-js/features/set';        // <- at the top of your entry poin)t
+// polyfills.push('core-js/features/promise';    // <- at the top of your entry poin)t
 
-// import from from 'core-js-pure/features/array/from';
-// import Set from 'core-js-pure/features/set';
-// import Promise from 'core-js-pure/features/promise';
+// polyfills.push(from from 'core-js-pure/features/array/from');
+// polyfills.push(Set from 'core-js-pure/features/set');
+// polyfills.push(Promise from 'core-js-pure/features/promise');
+
+// polyfills.push('core-js/stable');
+// polyfills.push('regenerator-runtime/runtime');
+
+// polyfills.push('core-js/es6/array');
+// polyfills.push('core-js/es6/function');
+// polyfills.push('core-js/es6/map');
+// polyfills.push('core-js/es6/math');
+// polyfills.push('core-js/es6/number');
+// polyfills.push('core-js/es6/object');
+// polyfills.push('core-js/es6/promise');
+// polyfills.push('core-js/es6/regexp');
+// polyfills.push('core-js/es6/string');
+// polyfills.push('core-js/fn/array/includes');
 
 /** IE9, IE10 and IE11 requires all of the following polyfills. **/
-polyfills.push('core-js/es/symbol'); // 'es6-symbol/implement'
-polyfills.push('core-js/es/object');
+// polyfills.push('core-js/es/symbol'); // 'es6-symbol/implement'
+// polyfills.push('core-js/es/object');
 // polyfills.push('core-js/es/function');
 // polyfills.push('core-js/es/parse-int');
 // polyfills.push('core-js/es/parse-float');
@@ -40,18 +84,18 @@ polyfills.push('core-js/es/object');
 // polyfills.push('core-js/es/date');
 // polyfills.push('core-js/es/array');
 // polyfills.push('core-js/es/regexp');
-polyfills.push('core-js/es/map');
+// polyfills.push('core-js/es/map');
 // polyfills.push('core-js/es/weak-map');
 // polyfills.push('core-js/es/set');
-polyfills.push('core-js/es/promise');
+// polyfills.push('core-js/es/promise');
 
-polyfills.push('core-js/fn/array/includes');
+// polyfills.push('core-js/fn/array/includes');
 
 /** IE10 and IE11 requires the following for NgClass support on SVG elements */
-// import 'classlist.js');  // Run `npm install --save classlist.js`.
+// polyfills.push('classlist.js');  // Run `npm install --save classlist.js`).
 
 /** IE10 and IE11 requires the following for the Reflect API. */
-polyfills.push('core-js/es/reflect');
+// polyfills.push('core-js/es/reflect');
 
 // if (typeof Promise === 'undefined') {
 //     // Rejection tracking prevents a common issue where React gets into an
@@ -81,4 +125,4 @@ polyfills.push('core-js/es/reflect');
  **/
 // polyfills.push('web-animations-js');  // Run `npm install --save web-animations-js`.
 
-module.exports.polyfills = polyfills
+module.exports.polyfills = polyfills;
