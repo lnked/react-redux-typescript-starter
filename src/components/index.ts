@@ -11,3 +11,4 @@ export { default as Breadcrumbs } from './BreadCrumbs';
 export { default as PreloadLink } from './PreloadLink';
 export { default as ButtonGroup } from './ButtonGroup';
 export { default as ErrorBoundary } from './ErrorBoundary';
+export { default as ErrorFallback } from './ErrorFallback';

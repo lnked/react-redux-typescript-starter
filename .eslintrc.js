@@ -41,13 +41,13 @@ module.exports = {
       }
     }],
     'no-extra-semi': 1,
-    'semi': ['error', 'always'],
-    'semi-spacing': [1, {'before': false, 'after': true}],
-    'comma-spacing': ['error', { 'before': false, 'after': true }],
+    'semi': ['warn', 'always'],
+    'semi-spacing': [1, { before: false, 'after': true }],
+    'comma-spacing': ['warn', { before: false, 'after': true }],
     'space-before-function-paren': [2, {
-      'asyncArrow': 'always',
-      'anonymous': 'never',
-      'named': 'never'
+      asyncArrow: 'always',
+      anonymous: 'never',
+      named: 'never',
     }],
   },
   settings: {
