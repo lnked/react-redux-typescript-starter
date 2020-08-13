@@ -202,7 +202,7 @@
     "dayjs": "^1.8.33",
     "history": "4.10.1",
     "i18next": "19.6.3",
-    "i18next-browser-languagedetector": "5.0.1",
+    "i18next-browser-languagedetector": "6.0.0",
     "localize-react": "1.6.0",
     "mobx": "5.15.5",
     "mobx-logger": "0.7.1",
