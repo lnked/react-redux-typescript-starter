@@ -2,6 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "baseUrl": "src",
+    "outDir": "dist",
     "paths": {
       "app/*": ["app/*"],
       "i18n/*": ["i18n/*"],
@@ -19,5 +20,18 @@
       "decorators/*": ["decorators/*"],
       "tslib" : ["node_modules/tslib/tslib.d.ts"]
     },
-  }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "typings/**/*.d.ts"
+  ],
+  "exclude": [
+    "dist",
+    "configs",
+    "node_modules",
+    "**/node_modules/*",
+    "src/**/*.test.tsx",
+    "src/**/*.spec.tsx"
+  ],
 }
