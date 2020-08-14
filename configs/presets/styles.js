@@ -37,8 +37,9 @@ module.exports = () => {
       test: /\.s?(a|c)?ss$/,
       use: [
         ...baseLoader(),
+        cssModules(),
         css({
-          importLoaders: 1,
+          importLoaders: 2,
         }),
         postcss({
           sourceMap: development,

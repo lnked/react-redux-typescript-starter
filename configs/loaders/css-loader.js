@@ -6,9 +6,9 @@ module.exports = ({ importLoaders = 1, ...props }) => {
     options: {
       ...props,
       modules: {
-        mode: 'local',
         localIdentContext: sourcePath,
         localIdentName: development ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:5]',
+        mode: 'local',
       },
       importLoaders,
     }

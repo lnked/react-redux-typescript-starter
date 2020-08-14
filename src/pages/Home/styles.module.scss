@@ -1,11 +1,9 @@
 @import 'stylesheets/variables.scss';
 
-// Container styles
 .container {
   border: 2px solid $red-base;
   background-color: $base-color;
 
-  /* example */
   &__name {
     border: 2px solid blue;
 

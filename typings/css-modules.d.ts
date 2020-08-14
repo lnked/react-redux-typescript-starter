@@ -1,9 +1,14 @@
 declare module '*.css' {
-  const content: any;
-  export default content;
+  const classes: { [key: string]: string };
+  export default classes;
 }
 
-declare module "*.scss" {
-  const styles: { [className: string]: string };
-  export default styles;
+declare module '*.scss' {
+  const classes: { [key: string]: string };
+  export default classes;
+}
+
+declare module '*.sass' {
+  const classes: { [key: string]: string };
+  export default classes;
 }

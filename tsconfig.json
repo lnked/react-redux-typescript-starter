@@ -4,6 +4,7 @@
     "jsx": "react",
     "module": "esnext",
     "target": "es5",
+    "pretty": true,
     "sourceMap": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
@@ -28,7 +29,6 @@
     "noImplicitThis": true,
     "noFallthroughCasesInSwitch": true,
     "downlevelIteration": true,
-    "pretty": true,
     "preserveConstEnums": true,
     "lib": [
       "dom",
@@ -36,7 +36,6 @@
       "esnext"
     ],
     "types": [
-      "date-fns",
       "enzyme",
       "enzyme-adapter-react-16",
       "i18next",

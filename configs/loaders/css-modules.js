@@ -1,10 +1,11 @@
 const { development, sourcePath } = require('../options');
 
-module.exports = ({ ...props } = {}) => {
+module.exports = ({ ...options } = {}) => {
   return {
     loader: '@teamsupercell/typings-for-css-modules-loader',
     options: {
-      ...props,
+      ...options,
     }
   };
 }
+
