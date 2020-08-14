@@ -1,4 +1,4 @@
-export { default as Chip } from './Chip';
+export * from './Chip';
 export { default as Card } from './Card';
 export { default as Input } from './Input';
 export { default as Image } from './Image';

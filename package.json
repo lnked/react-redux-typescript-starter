@@ -88,9 +88,7 @@
     "@types/styled-components": "5.1.2",
     "@types/webpack": "4.41.21",
     "@types/webpack-env": "1.15.2",
-    "@types/yup": "^0.29.4",
-    "@typescript-eslint/eslint-plugin": "3.9.0",
-    "@typescript-eslint/parser": "3.9.0",
+    "@types/yup": "^0.29.5",
     "autoprefixer": "9.8.6",
     "babel-jest": "26.3.0",
     "babel-loader": "8.1.0",
@@ -116,9 +114,6 @@
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.3",
     "enzyme-to-json": "3.5.0",
-    "eslint": "7.6.0",
-    "eslint-plugin-react": "7.20.6",
-    "eslint-plugin-react-hooks": "4.0.8",
     "fast-async": "6.3.8",
     "file-loader": "6.0.0",
     "fork-ts-checker-webpack-plugin": "^5.0.14",
@@ -200,7 +195,6 @@
     "core-js": "3",
     "date-fns": "2.15.0",
     "dayjs": "^1.8.33",
-    "history": "4.10.1",
     "i18next": "19.6.3",
     "i18next-browser-languagedetector": "6.0.0",
     "localize-react": "1.6.0",
@@ -210,7 +204,7 @@
     "mobx-react-devtools": "6.1.1",
     "mobx-react-router": "4.1.0",
     "path-to-regexp": "6.1.0",
-    "rambda": "5.12.0",
+    "rambda": "5.12.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-error-boundary": "^2.3.1",
@@ -230,5 +224,12 @@
   },
   "scarfSettings": {
     "enabled": false
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
+    "eslint": "^7.6.0",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.0.8"
   }
 }

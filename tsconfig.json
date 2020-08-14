@@ -10,7 +10,7 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
-    "declaration": false,
+    "declaration": true,
     "importHelpers": true,
     "removeComments": false,
     "noUnusedLocals": true,
