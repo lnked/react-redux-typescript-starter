@@ -7,6 +7,8 @@ logs
 yarn-*
 fabfile.py
 fabfile.pyc
+deploy.py
+deploy.sh
 coverage
 .coverage
 .deepcheck
