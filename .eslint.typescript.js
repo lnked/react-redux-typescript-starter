@@ -17,7 +17,7 @@ module.exports = {
   ],
 	rules: {
     'no-extra-semi': 'off',
-    '@typescript-eslint/no-extra-semi': ['error'],
+    '@typescript-eslint/no-extra-semi': ['warn'],
     '@typescript-eslint/ban-types': 'off',
     // '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-explicit-any': 'off',

@@ -4,7 +4,7 @@ module.exports = options.development && {
   devServer: {
     hot: true,
     open: true,
-    overlay: true,
+    overlay: { errors: true, warnings: false },
     compress: true,
     publicPath: '/',
     historyApiFallback: true,

@@ -32,9 +32,10 @@ module.exports = {
       ignoreDOMComponents: true,
     }],
     'react/jsx-fragments': 'off',
+    'import/prefer-default-export': 'off',
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    'operator-linebreak': [2, 'after', {
+    'react-hooks/exhaustive-deps': 'error',
+    'operator-linebreak': [1, 'after', {
       'overrides': {
         '?': 'before',
         ':': 'before'
@@ -44,7 +45,7 @@ module.exports = {
     'semi': ['warn', 'always'],
     'semi-spacing': [1, { before: false, 'after': true }],
     'comma-spacing': ['warn', { before: false, 'after': true }],
-    'space-before-function-paren': [2, {
+    'space-before-function-paren': [1, {
       asyncArrow: 'always',
       anonymous: 'never',
       named: 'never',
