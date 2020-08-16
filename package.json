@@ -164,6 +164,7 @@
     "react-testing-library": "8.0.1",
     "resource-hints-webpack-plugin": "0.0.2",
     "rimraf": "3.0.2",
+    "rsync": "^0.6.1",
     "sass-loader": "^9.0.3",
     "signale": "1.4.0",
     "size-limit": "4.5.6",
