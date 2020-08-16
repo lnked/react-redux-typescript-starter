@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 
 const { configs } = require('../../html-minify');
-const { environment } = require('../../tools/env')
+const { environment } = require('../../tools/env');
 const { root, production, preload, prefetch } = require('../../options');
 
 const options = production ? {

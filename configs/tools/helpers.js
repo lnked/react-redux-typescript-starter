@@ -12,3 +12,18 @@ module.exports.parseArguments = argv => {
 
   return data
 }
+
+module.exports.filterEnvironment = env => {
+  const keys = Object.keys(env);
+  const result = {};
+
+  if (keys.length) {
+    for (const key in env) {
+      if (!key.startsWith('SECRET')) {
+        result[key] = env[key];
+      }
+    }
+  }
+
+  return result;
+};

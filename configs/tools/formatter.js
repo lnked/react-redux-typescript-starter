@@ -1,11 +1,13 @@
 module.exports.formatter = (params, stringify = false) => {
-  const length = Object.keys(params).length
+  const keys = Object.keys(params);
 
-  if (length && stringify) {
+  if (keys.length && stringify) {
     for (const x in params) {
-      params[x] = JSON.stringify(params[x])
+      if (!x.startsWith('SECRET')) {
+        params[x] = JSON.stringify(params[x]);
+      }
     }
   }
 
-  return params
+  return params;
 }

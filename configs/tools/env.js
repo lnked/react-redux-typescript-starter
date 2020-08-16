@@ -2,7 +2,8 @@ const fs = require('fs');
 const dotenv = require('dotenv');
 const { resolve } = require('path');
 
-const { formatter } = require('./formatter')
+const { formatter } = require('./formatter');
+const { filterEnvironment } = require('./helpers');
 const { environment, root } = require('../options');
 
 const defaultFile = resolve(root, '.env');
@@ -17,4 +18,7 @@ const { parsed } = dotenv.config({
   path: envFile,
 });
 
-module.exports.environment = formatter(parsed, true)
+const env = formatter(parsed, true);
+
+module.exports.environment = env;
+module.exports.environmentFiltered = filterEnvironment(env);

@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 
 const options = require('../../options');
-const { environment } = require('../../tools/env')
+const { environment, environmentFiltered } = require('../../tools/env')
 
 module.exports = () => {
   return [
@@ -12,16 +12,16 @@ module.exports = () => {
     new webpack.NoEmitOnErrorsPlugin(),
 
     new webpack.DefinePlugin({
+      __DEV__: options.development,
+      __PROD__: options.production,
       process: {
         env: {
-          ...environment,
+          ...environmentFiltered,
           BROWSER: true,
           NODE_ENV: JSON.stringify(options.environment),
           BABEL_ENV: JSON.stringify(options.environment),
         },
       },
-      __DEV__: options.development,
-      __PROD__: options.production,
     }),
   ]
 }
