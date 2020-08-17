@@ -18,11 +18,16 @@ const hashName = development
   ? '[name]'
   : '[name].[contenthash:6]';
 
+const fileName = development
+  ? '[path][name].[ext]'
+  : '[name].[contenthash].[ext]';
+
 module.exports = {
   root,
   prefix,
   isModern,
   hashName,
+  fileName,
   publicPath,
   production,
   development,
