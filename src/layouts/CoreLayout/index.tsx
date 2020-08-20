@@ -5,40 +5,41 @@ import { Navigation } from 'fragments';
 
 import { Layout, Section } from './styles';
 
-export interface OuterProps extends RouteComponentProps {
-  location: any;
+
+type OuterProps = {
   children?: React.ReactChild[] | React.ReactChild;
+  location: {
+    hash: string;
+    pathname: string;
+  };
 }
 
-class CoreLayout extends React.Component<OuterProps, {}> {
+export const CoreLayout: React.FC<OuterProps & RouteComponentProps> = ({
+  children = '',
+  location: {
+    hash,
+    pathname,
+  },
+}) => {
+  React.useEffect(() => {
+    const hasPathChanged = pathname !== location.pathname;
+    const hasHashChanged = hash !== location.hash;
 
-  static defaultProps = {
-    children: '',
-  };
+    console.log('location: ', { pathname, hash, hasPathChanged, hasHashChanged });
 
-  componentDidUpdate(prevProps: OuterProps) {
-    const { location } = prevProps;
-    const { pathname, hash } = this.props.location;
-
-    const pathChanged = pathname !== location.pathname;
-    const hashChanged = hash !== location.hash;
-
-    if (pathChanged || hashChanged) {
+    if (hasPathChanged || hasHashChanged) {
       window.scrollTo(0, 0);
     }
-  }
+  }, [pathname, hash]);
 
-  render() {
-    const { children } = this.props;
+  return (
+    <Layout>
+      <Navigation />
+      <Section>{children}</Section>
+    </Layout>
+  );
+};
 
-    return (
-      <Layout>
-        <Navigation />
-        <Section>{children}</Section>
-      </Layout>
-    );
-  }
-
-}
+CoreLayout.displayName = 'CoreLayout';
 
 export default withRouter(CoreLayout);
