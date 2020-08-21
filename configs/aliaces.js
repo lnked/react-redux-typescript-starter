@@ -33,6 +33,7 @@ module.exports = {
   pages: resolve(sourcePath, 'pages'),
   themes: resolve(sourcePath, 'themes'),
   assets: resolve(sourcePath, 'assets'),
+  typings: resolve(sourcePath, 'typings'),
   layouts: resolve(sourcePath, 'layouts'),
   services: resolve(sourcePath, 'services'),
   settings: resolve(sourcePath, 'settings'),
