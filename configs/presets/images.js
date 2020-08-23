@@ -10,9 +10,9 @@ module.exports = () => {
       use: [
         file({
           name: () => fileName,
-          useRelativePath: true,
           outputPath: `${staticPath}/images`,
           publicPath: `${staticPath}/images`,
+          useRelativePath: true,
         }),
         imageWebpack(),
       ],
