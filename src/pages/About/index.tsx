@@ -6,6 +6,10 @@ import { SnakeCase, AnotherBuild } from './components';
 
 import { Layout } from './styles';
 
+const x: { s?: string } = {};
+export const a = x?.s;
+export const b = x ?? 'xx';
+
 const About = ({ ui, app }: any) => (
   <Layout>
     <JsonPretty json={ui} />

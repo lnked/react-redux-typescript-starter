@@ -42,6 +42,7 @@ module.exports = function({ development, production, test, loose, legacy }) {
     ['@babel/plugin-proposal-decorators', { legacy }],
     ['@babel/plugin-transform-spread', { loose }],
     ['@babel/plugin-proposal-optional-chaining', { loose }],
+    ['@babel/plugin-proposal-nullish-coalescing-operator', { loose }],
     ['@babel/plugin-proposal-class-properties', { loose }],
     ['@babel/plugin-transform-template-literals', { loose }],
     '@babel/plugin-transform-react-jsx',

@@ -1,9 +1,11 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',  // Specifies the ESLint parser
+  // parser: '@typescript-eslint/parser',  // Specifies the ESLint parser
+  parser: '@babel/eslint-parser',  // Specifies the ESLint parser
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-		'./.eslint.typescript.js',
+    'plugin:boundaries/recommended',
+    './.eslint.typescript.js',
   ],
   env: {
     es6: true,
@@ -11,8 +13,10 @@ module.exports = {
     browser: true,
   },
   plugins: [
+    '@babel',
     'react',
     'react-hooks',
+    'boundaries',
   ],
   parserOptions: {
     warnOnUnsupportedTypeScriptVersion: false,
@@ -55,5 +59,11 @@ module.exports = {
     react: {
       version: 'detect',
     },
+    'boundaries/types': ['helpers', 'models', 'views', 'controllers'],
+    'boundaries/ignore': ['src/**/*.spec.(j|t)sx?', 'src/**/*.test.(j|t)sx?'],
+    'boundaries/alias': {
+      components: 'src/components',
+      helpers: 'src/helpers',
+    }
   },
 };
