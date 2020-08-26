@@ -3,8 +3,7 @@ import * as React from 'react';
 import { Consumer } from './context';
 
 const withContext = <P extends object>(Component: React.ComponentType<P>) => {
-
-  return function ContextComponent(props: OuterProps) {
+  return function ContextComponent(props) {
     return (
       <Consumer>
         {context => <Component {...props} {...context} />}

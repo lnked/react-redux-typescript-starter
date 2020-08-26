@@ -1,5 +1,5 @@
 const Log = (target: any, name: any, descriptor: any) => {
-  // console.log({ target });
+  console.log({ target, name });
 
   const value = descriptor.value;
 

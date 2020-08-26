@@ -7,10 +7,6 @@ import { Layout, Section } from './styles';
 
 type OuterProps = {
   children?: React.ReactChild[] | React.ReactChild;
-  location: {
-    hash: string;
-    pathname: string;
-  };
 };
 
 export const CoreLayout: React.FC<OuterProps & RouteComponentProps> = ({

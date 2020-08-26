@@ -2,18 +2,24 @@ import styled, { css } from 'styled-components/macro';
 
 import { CommonStyles } from 'themes';
 
-export const StyledDiv = styled.div`
+type Props = {
+  empty?: boolean;
+  active?: boolean;
+  filled?: boolean;
+};
+
+export const StyledDiv = styled.div<Props>`
   color: ${CommonStyles.themeColor};
 
-  ${props => props.empty && css`
+  ${({ empty }) => empty && css`
     color: blue;
   `}
 
-  ${props => props.active && css`
+  ${({ active }) => active && css`
     color: black;
   `}
 
-  ${props => props.filled && css`
+  ${({ filled }) => filled && css`
     color: red;
   `}
 `;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Form from './';
+import { SyntheticForm } from './synthetic-form';
 
 export interface FormProps {
   children: (props: { values: any }) => any;
@@ -13,6 +13,6 @@ export interface FormProps {
 
 export const NaturalForm: React.FC<FormProps> = ({ className, ...props }) => (
   <form className={className}>
-    <Form {...props} />
+    <SyntheticForm {...props} />
   </form>
 );

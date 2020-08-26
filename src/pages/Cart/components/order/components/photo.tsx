@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export interface OuterPropshotoProps {
+export type OuterProps = {
   src: string;
   id?: number;
   link?: string;
@@ -9,7 +9,7 @@ export interface OuterPropshotoProps {
   title?: string;
 }
 
-export function Photo({ id, src, link, width = 100, height = 100, title = '' }: PhotoProps) {
+export function Photo({ id, src, link, width = 100, height = 100, title = '' }: OuterProps) {
   return (
     <div>
       <div>

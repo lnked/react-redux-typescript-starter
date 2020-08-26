@@ -18,8 +18,11 @@ export default function useFetch(url, init) {
 
     fetch(`${API_URL}/${url}`, init)
       .then(response => {
-        if (response.ok) return response.json();
-        setError(response);
+        if (response.ok) {
+          return response.json();
+        }
+
+        return setError(response);
       })
       .then(data => setData(data))
       .catch(err => {
