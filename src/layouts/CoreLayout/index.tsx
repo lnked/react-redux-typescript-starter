@@ -11,7 +11,7 @@ type OuterProps = {
     hash: string;
     pathname: string;
   };
-}
+};
 
 export const CoreLayout: React.FC<OuterProps & RouteComponentProps> = ({
   children = '',

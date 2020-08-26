@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
+    "rootDir": "./",
     "baseUrl": "src",
     "outDir": "dist",
     "paths": {
@@ -20,6 +20,10 @@
       "decorators/*": ["decorators/*"],
       "tslib" : ["node_modules/tslib/tslib.d.ts"]
     },
+    "typeRoots": [
+      "node_modules/@types",
+      "typings"
+    ]
   },
   "include": [
     "src/**/*.ts",
