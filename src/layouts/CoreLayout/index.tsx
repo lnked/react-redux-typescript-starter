@@ -1,10 +1,9 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 
 import { Navigation } from 'fragments';
 
 import { Layout, Section } from './styles';
-
 
 type OuterProps = {
   children?: React.ReactChild[] | React.ReactChild;
@@ -21,15 +20,8 @@ export const CoreLayout: React.FC<OuterProps & RouteComponentProps> = ({
     pathname,
   },
 }) => {
-  React.useEffect(() => {
-    const hasPathChanged = pathname !== location.pathname;
-    const hasHashChanged = hash !== location.hash;
-
-    console.log('location: ', { pathname, hash, hasPathChanged, hasHashChanged });
-
-    if (hasPathChanged || hasHashChanged) {
-      window.scrollTo(0, 0);
-    }
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, [pathname, hash]);
 
   return (
