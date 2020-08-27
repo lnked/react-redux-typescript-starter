@@ -14,6 +14,7 @@ module.exports = {
   ],
   rules: {
     'strict': 0,
+    'camelcase': 'warn',
     'brace-style': 'off',
     'no-extra-semi': 'off',
     'no-unused-vars': 'off',
