@@ -8,6 +8,7 @@
       "i18n/*": ["i18n/*"],
       "store/*": ["store/*"],
       "utils/*": ["utils/*"],
+      "redux/*": ["redux/*"],
       "hooks/*": ["hooks/*"],
       "pages/*": ["pages/*"],
       "assets/*": ["assets/*"],
