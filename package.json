@@ -17,7 +17,7 @@
     "analyze": "yarn build --analyze",
     "release": "yarn build --release",
     "profile": "webpack --config configs/scripts --profile --json > stats.json",
-    "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx --quiet",
     "lint:fix": "yarn lint --fix",
     "typecheck": "tsc",
     "size": "size-limit",

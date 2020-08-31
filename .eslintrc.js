@@ -64,6 +64,11 @@ module.exports = {
     'boundaries/alias': {
       components: 'src/components',
       helpers: 'src/helpers',
-    }
+    },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
 };
