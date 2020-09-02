@@ -20,3 +20,5 @@ export const About = ({ ui, app }: any) => (
     <Image src="https://via.placeholder.com/300/09f/fff.png" alt="xxx" circle />
   </Layout>
 );
+
+export default About;

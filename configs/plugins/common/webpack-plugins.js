@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const LoadablePlugin = require('@loadable/webpack-plugin');
 
 const options = require('../../options');
 const { environment, environmentFiltered } = require('../../tools/env')
@@ -23,5 +24,7 @@ module.exports = () => {
         },
       },
     }),
+
+    new LoadablePlugin(),
   ]
 }

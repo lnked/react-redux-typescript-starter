@@ -62,3 +62,5 @@ export class Profile extends React.Component<OuterProps, {}> {
     );
   }
 }
+
+export default Profile;

@@ -50,3 +50,5 @@ export class Shop extends React.Component<OuterProps, {}> {
     );
   }
 }
+
+export default Shop;

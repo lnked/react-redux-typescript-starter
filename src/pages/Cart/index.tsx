@@ -12,3 +12,5 @@ export const Cart: React.FC<OuterProps> = (props: OuterProps) => {
     </div>
   );
 };
+
+export default Cart;

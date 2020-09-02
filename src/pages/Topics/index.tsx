@@ -30,3 +30,5 @@ export const Topics = ({ match }: any) => (
     />
   </div>
 );
+
+export default Topics;

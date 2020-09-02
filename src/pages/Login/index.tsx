@@ -35,3 +35,5 @@ export class Login extends React.Component<OuterProps, {}> {
     );
   }
 }
+
+export default Login;

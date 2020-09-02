@@ -40,3 +40,5 @@ export function Counter({ initialCount = 0 }: OuterProps) {
     </StyledCounter>
   );
 }
+
+export default Counter;

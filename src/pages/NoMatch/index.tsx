@@ -5,3 +5,5 @@ export const NoMatch = ({ match }: any) => (
       Error Page {JSON.stringify(match)}
   </div>
 );
+
+export default NoMatch;

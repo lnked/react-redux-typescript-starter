@@ -17,9 +17,7 @@ export const PreloadLink: React.FC<OuterProps> = (props: OuterProps) => {
   const handleMouseEnter = () => {
     clearTimeout(timeout);
 
-    timeout = setTimeout(() =>
-      component && component.preload && component.preload()
-    , 250);
+    timeout = setTimeout(() => component?.preload(), 250);
   };
 
   return (

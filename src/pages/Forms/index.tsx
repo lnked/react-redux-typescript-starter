@@ -90,3 +90,5 @@ export function Forms({ ui, app }: any) {
     </React.Fragment>
   );
 }
+
+export default Forms;

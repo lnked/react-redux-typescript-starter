@@ -1,60 +1,70 @@
 import * as React from 'react';
+import loadable from '@loadable/component';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
-import { preloadComponent } from 'utils';
+// import { preloadComponent } from 'utils';
 import { setHistory } from 'utils/redirect';
 
 import { PrivateRoute } from './private-route';
 
 import { Home } from 'pages/Home';
 
-/* webpackChunkName: "cart", webpackPrefetch: true */
-export const Cart = preloadComponent(() => import(
+// export const Cart = preloadComponent(() => import(
+//   /* webpackChunkName: "cart", webpackPrefetch: true */
+//   'pages/Cart'
+// ));
+
+// export const About = preloadComponent(() => import(
+//   /* webpackChunkName: "about", webpackPrefetch: true */
+//   'pages/About'
+// ));
+
+export const Cart = loadable(() => import(
   /* webpackChunkName: "cart", webpackPrefetch: true */
   'pages/Cart'
 ));
 
-export const Shop = preloadComponent(() => import(
-  /* webpackChunkName: "shop", webpackPrefetch: true */
-  'pages/Shop'
-));
-
-export const About = preloadComponent(() => import(
+export const About = loadable(() => import(
   /* webpackChunkName: "about", webpackPrefetch: true */
   'pages/About'
 ));
 
-export const Forms = preloadComponent(() => import(
+export const Shop = loadable(() => import(
+  /* webpackChunkName: "shop", webpackPrefetch: true */
+  'pages/Shop'
+));
+
+export const Forms = loadable(() => import(
   /* webpackChunkName: "forms", webpackPrefetch: true */
   'pages/Forms'
 ));
 
-export const Login = preloadComponent(() => import(
+export const Login = loadable(() => import(
   /* webpackChunkName: "login", webpackPrefetch: true */
   'pages/Login'
 ));
 
-export const Topics = preloadComponent(() => import(
+export const Topics = loadable(() => import(
   /* webpackChunkName: "topics", webpackPrefetch: true */
   'pages/Topics'
 ));
 
-export const Profile = preloadComponent(() => import(
+export const Profile = loadable(() => import(
   /* webpackChunkName: "profile", webpackPrefetch: true */
   'pages/Profile'
 ));
 
-export const Context = preloadComponent(() => import(
+export const Context = loadable(() => import(
   /* webpackChunkName: "context", webpackPrefetch: true */
   'pages/Context'
 ));
 
-export const Counter = preloadComponent(() => import(
+export const Counter = loadable(() => import(
   /* webpackChunkName: "counter", webpackPrefetch: true */
   'pages/Counter'
 ));
 
-export const NoMatch = preloadComponent(() => import(
+export const NoMatch = loadable(() => import(
   /* webpackChunkName: "nomatch", webpackPrefetch: true */
   'pages/NoMatch'
 ));

@@ -9,3 +9,5 @@ export interface OuterProps {
 export function Context() {
   return (<Example />);
 }
+
+export default Context;
