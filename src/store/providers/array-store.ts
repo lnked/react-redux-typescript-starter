@@ -1,6 +1,6 @@
 import { observable } from 'mobx';
 
-const ArrayStore = observable([
+export const ArrayStore = observable([
   { text: 'Test 1' },
   { text: 'Test 2' },
   { text: 'Test 3' },
@@ -8,4 +8,3 @@ const ArrayStore = observable([
 
 // Example
 // ArrayStore.push({ text: 'Test 4' })
-export default ArrayStore;

@@ -7,7 +7,7 @@ const Topic = ({ match }: any) => (
   </div>
 );
 
-const Topics = ({ match }: any) => (
+export const Topics = ({ match }: any) => (
   <div>
     <h2>Topics</h2>
     <ul>
@@ -30,5 +30,3 @@ const Topics = ({ match }: any) => (
     />
   </div>
 );
-
-export default Topics;

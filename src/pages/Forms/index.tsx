@@ -14,7 +14,7 @@ export interface OuterProps {
   initialCount?: number;
 }
 
-function Forms({ ui, app }: any) {
+export function Forms({ ui, app }: any) {
   return (
     <React.Fragment>
       <JsonPretty json={ui} />
@@ -90,5 +90,3 @@ function Forms({ ui, app }: any) {
     </React.Fragment>
   );
 }
-
-export default Forms;

@@ -6,7 +6,7 @@ import districts from 'store/data/districts.json';
 import loggerMiddleware from './middleware/logger';
 import reducers from './reducers';
 
-export default function configureStore(preloadedState = {}) {
+export function configureStore(preloadedState = {}) {
   const middlewares = [loggerMiddleware];
   const middlewareEnhancer = applyMiddleware(...middlewares, thunk);
 

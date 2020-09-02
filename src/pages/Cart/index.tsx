@@ -5,12 +5,10 @@ export interface OuterProps {
   initialCount: number;
 }
 
-const Cart: React.FC<OuterProps> = (props: OuterProps) => {
+export const Cart: React.FC<OuterProps> = (props: OuterProps) => {
   return (
     <div>
       {JSON.stringify(props)}
     </div>
   );
 };
-
-export default Cart;

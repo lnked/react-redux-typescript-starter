@@ -1,6 +1,6 @@
 import { observable, action, computed } from 'mobx';
 
-class UiStore {
+export class UiStore {
   @observable type = 'grid';
 
   constructor(initialState?: any) {
@@ -19,5 +19,3 @@ class UiStore {
     this.type = type;
   }
 }
-
-export default UiStore;

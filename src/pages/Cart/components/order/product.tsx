@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import Photo from './components/photo';
-import Counter from './components/counter';
+import { Photo } from './components/Photo';
+import { Counter } from './components/Counter';
 
 export interface OuterProps {
   id: number;
@@ -67,5 +67,3 @@ export function Product({ id, link }: OuterProps) {
     </div>
   );
 }
-
-export default Product;

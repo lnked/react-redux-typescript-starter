@@ -5,7 +5,7 @@ export interface OuterProps {
   children: React.ReactChild[];
 }
 
-class Modal extends React.Component<OuterProps, {}> {
+export class Modal extends React.Component<OuterProps, {}> {
 
   static displayName = 'Modal';
 
@@ -31,5 +31,3 @@ class Modal extends React.Component<OuterProps, {}> {
   }
 
 }
-
-export default Modal;

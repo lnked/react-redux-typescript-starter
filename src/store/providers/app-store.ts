@@ -5,7 +5,7 @@ import {
   extendObservable,
 } from 'mobx';
 
-class AppStore {
+export class AppStore {
   static mobxLoggerConfig: {
     enabled: false,
     methods: {
@@ -37,5 +37,3 @@ class AppStore {
     this.query = query;
   }
 }
-
-export default AppStore;

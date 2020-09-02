@@ -1,15 +1,11 @@
 import * as React from 'react';
 
-import Example from './components/example';
+import { Example } from './components/Example';
 
 export interface OuterProps {
   initialCount?: number;
 }
 
-function Context() {
-
+export function Context() {
   return (<Example />);
-
 }
-
-export default Context;

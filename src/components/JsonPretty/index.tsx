@@ -7,12 +7,10 @@ export interface OuterProps {
   theme?: string;
 }
 
-const JsonPretty: React.FC<OuterProps> = ({ json }: OuterProps) => (
+export const JsonPretty: React.FC<OuterProps> = ({ json }: OuterProps) => (
   <Wrapper>
     <Code>
       {JSON.stringify(json, null, '  ')}
     </Code>
   </Wrapper>
 );
-
-export default JsonPretty;

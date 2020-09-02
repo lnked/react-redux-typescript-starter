@@ -28,8 +28,7 @@ const Button = styled.button`
   text-shadow: 0 1px 0 rgba(#000, .3), 0 1px 1px rgba(#000, .2);
 `;
 
-function Counter({ initialCount = 0 }: OuterProps) {
-
+export function Counter({ initialCount = 0 }: OuterProps) {
   const [count, setCount] = useState(initialCount);
 
   return (
@@ -40,7 +39,4 @@ function Counter({ initialCount = 0 }: OuterProps) {
       <Button onClick={() => setCount(prevCount => prevCount + 1)}>+</Button>
     </StyledCounter>
   );
-
 }
-
-export default Counter;

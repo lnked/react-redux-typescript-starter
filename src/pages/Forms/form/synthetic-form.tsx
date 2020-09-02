@@ -161,5 +161,3 @@ export class SyntheticForm extends React.Component<OuterProps, OuterState> {
     });
   }
 }
-
-export default SyntheticForm;

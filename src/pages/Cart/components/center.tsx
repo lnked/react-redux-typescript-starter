@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components/macro';
 
-import withContext from './store/hoc';
+import { withContext } from './store/withContext';
 
 export interface OuterProps {
   children?: React.ReactChild[] | React.ReactChild;

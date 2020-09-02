@@ -10,8 +10,7 @@ export interface InnerState {
   isChecked: boolean;
 }
 
-export default class Checkbox extends React.Component<OuterProps, InnerState> {
-
+export class Checkbox extends React.Component<OuterProps, InnerState> {
   static displayName = 'Checkbox';
 
   static defaultProps = {
@@ -46,5 +45,4 @@ export default class Checkbox extends React.Component<OuterProps, InnerState> {
       </StyledLabel>
     );
   }
-
 }

@@ -3,7 +3,7 @@ import * as React from 'react';
 import { OuterProps } from './types';
 import { StyledDiv } from './styles';
 
-const Skeleton: React.FC<OuterProps> = (props: OuterProps) => {
+export const Skeleton: React.FC<OuterProps> = (props: OuterProps) => {
   // const itemReferer = React.createRef<HTMLInputElement>();
   // const [count, setCount] = useState(value);
 
@@ -13,5 +13,3 @@ const Skeleton: React.FC<OuterProps> = (props: OuterProps) => {
 };
 
 Skeleton.displayName = 'Skeleton';
-
-export default Skeleton;

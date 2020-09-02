@@ -4,7 +4,7 @@ export interface OuterProps {
   children?: React.ReactChild[] | React.ReactChild;
 }
 
-function Steps({ children }: OuterProps) {
+export function Steps({ children }: OuterProps) {
   return (
     <nav>
       <ol>
@@ -18,5 +18,3 @@ function Steps({ children }: OuterProps) {
     </nav>
   );
 }
-
-export default Steps;

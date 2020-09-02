@@ -8,7 +8,7 @@ export interface OuterProps extends React.ButtonHTMLAttributes<HTMLButtonElement
   disabled?: boolean;
 }
 
-const Button: React.FC<OuterProps> = ({ children, label, disabled, ...props } = {}) => (
+export const Button: React.FC<OuterProps> = ({ children, label, disabled, ...props } = {}) => (
   <StyledButton type="button" aria-disabled={disabled} disabled={disabled} {...props}>
     {children || label}
   </StyledButton>
@@ -41,16 +41,3 @@ Button.defaultProps = {
   children: '',
 };
 
-// function areEqual(prevProps, nextProps) {
-//   /*
-//   возвращает true, если nextProps рендерит
-//   тот же результат что и prevProps,
-//   иначе возвращает false
-//   */
-// }
-
-// export default React.memo(Button, areEqual);
-
-export default React.memo(Button);
-
-// export default Button;

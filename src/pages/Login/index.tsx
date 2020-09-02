@@ -14,7 +14,7 @@ export interface OuterProps {
   name?: any;
 }
 
-class Login extends React.Component<OuterProps, {}> {
+export class Login extends React.Component<OuterProps, {}> {
   render() {
     return (
       <Container>
@@ -35,5 +35,3 @@ class Login extends React.Component<OuterProps, {}> {
     );
   }
 }
-
-export default Login;

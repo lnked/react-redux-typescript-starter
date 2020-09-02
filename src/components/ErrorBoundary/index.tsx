@@ -13,7 +13,7 @@ export interface InnerState {
 }
 
 // https://www.digitalocean.com/community/tutorials/react-error-boundaries
-export default class ErrorBoundary extends React.PureComponent<OuterProps, InnerState> {
+export class ErrorBoundary extends React.PureComponent<OuterProps, InnerState> {
   state = {
     info: null,
     error: false,

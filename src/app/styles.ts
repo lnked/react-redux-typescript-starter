@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components/macro';
 import { Colors } from 'themes';
 
 /* tslint:disable: max-line-length */
-const GlobalStyle: any = createGlobalStyle`
+export const GlobalStyle: any = createGlobalStyle`
   *,
   &:after,
   &:before {
@@ -54,5 +54,3 @@ const GlobalStyle: any = createGlobalStyle`
     font-size: 1.6rem;
   }
 `;
-
-export default GlobalStyle;

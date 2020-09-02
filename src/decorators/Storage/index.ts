@@ -1,4 +1,4 @@
-const Storage = ({ ...props }) => {
+export const Storage = ({ ...props }) => {
   console.log(props);
 
   // descriptor.value = () => {
@@ -9,5 +9,3 @@ const Storage = ({ ...props }) => {
   // return descriptor;
   return null;
 };
-
-export default Storage;

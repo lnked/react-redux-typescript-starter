@@ -50,7 +50,7 @@ const currentReducer = payload => {
   };
 };
 
-export default function districts(state = initialState, action) {
+export function districts(state = initialState, action) {
   switch (action.type) {
     case 'FETCH_DISTRICTS':
       return {

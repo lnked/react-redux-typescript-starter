@@ -9,7 +9,7 @@ export interface RefObject<T> {
   readonly current: T | null;
 }
 
-function ClickOutside({ onClick, children }: OuterProps) {
+export function ClickOutside({ onClick, children }: OuterProps) {
   const refs = React.Children.map(children, React.createRef);
 
   const handleClick = (e: any) => {
@@ -34,5 +34,3 @@ function ClickOutside({ onClick, children }: OuterProps) {
 }
 
 ClickOutside.displayName = 'ClickOutside';
-
-export default ClickOutside;

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 
 import { API_URL } from 'settings';
 
-export default function useFetch(url, init) {
+export function useFetch(url, init) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);

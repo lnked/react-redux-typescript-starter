@@ -4,7 +4,7 @@ import MaskedInput from 'react-maskedinput';
 
 import { Stepper, Button } from 'components';
 
-import withContext from '../store/hoc';
+import { withContext } from '../store/withContext';
 
 export interface OuterProps {
   children?: React.ReactChild[] | React.ReactChild;

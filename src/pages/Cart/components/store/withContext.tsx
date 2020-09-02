@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Consumer } from './context';
 
-const withContext = <P extends object>(Component: React.ComponentType<P>) => {
+export const withContext = <P extends object>(Component: React.ComponentType<P>) => {
   return function ContextComponent(props) {
     return (
       <Consumer>
@@ -12,5 +12,3 @@ const withContext = <P extends object>(Component: React.ComponentType<P>) => {
   };
 
 };
-
-export default withContext;

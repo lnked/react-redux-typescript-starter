@@ -3,7 +3,7 @@ import * as React from 'react';
 import { OuterProps } from './types';
 import { StyledDiv } from './styles';
 
-const Collapse: React.FC<OuterProps> = (props: OuterProps) => {
+export const Collapse: React.FC<OuterProps> = (props: OuterProps) => {
   // const itemReferer = React.createRef<HTMLInputElement>();
   // const [count, setCount] = useState(value);
 
@@ -11,5 +11,3 @@ const Collapse: React.FC<OuterProps> = (props: OuterProps) => {
     <StyledDiv {...props} />
   );
 };
-
-export default Collapse;

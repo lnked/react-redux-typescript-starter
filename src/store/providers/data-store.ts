@@ -5,7 +5,7 @@ export interface DataProps {
   name: string;
 }
 
-class DataStore {
+export class DataStore {
   @observable user: DataProps = {
     id: 0,
     name: 'grid',
@@ -24,4 +24,3 @@ class DataStore {
   }
 }
 
-export default DataStore;

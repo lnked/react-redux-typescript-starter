@@ -3,7 +3,7 @@ import * as React from 'react';
 import { OuterProps } from './types';
 import { StyledDiv } from './styles';
 
-const Icon: React.FC<OuterProps> = (props: OuterProps) => {
+export const Icon: React.FC<OuterProps> = (props: OuterProps) => {
   // const itemReferer = React.createRef<HTMLInputElement>();
   // const [count, setCount] = useState(value);
 
@@ -13,5 +13,3 @@ const Icon: React.FC<OuterProps> = (props: OuterProps) => {
 };
 
 Icon.displayName = 'Icon';
-
-export default Icon;

@@ -10,7 +10,7 @@ export const appState = observable({
   },
 });
 
-export default class CounterStore {
+export class CounterStore {
   @observable count = 0;
 
   @action increment = () => {

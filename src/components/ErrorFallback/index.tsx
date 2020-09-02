@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Container } from './styles';
 
-function ErrorFallback({ error, componentStack, resetErrorBoundary }: any) {
+export function ErrorFallback({ error, componentStack, resetErrorBoundary }: any) {
   return (
     <Container role="alert">
       <p>Something went wrong:</p>
@@ -14,5 +14,3 @@ function ErrorFallback({ error, componentStack, resetErrorBoundary }: any) {
     </Container>
   );
 }
-
-export default ErrorFallback;

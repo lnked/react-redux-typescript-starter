@@ -22,7 +22,7 @@ export const Context = React.createContext(initialState as InnerState);
 
 export const Consumer = Context.Consumer;
 
-export default class Provider extends React.Component<OuterProps, InnerState> {
+export class Provider extends React.Component<OuterProps, InnerState> {
 
   state = initialState;
 

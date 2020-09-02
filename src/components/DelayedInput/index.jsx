@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import debounce from 'lodash/debounce';
 
-class DelayedInput extends Component {
+export class DelayedInput extends Component {
   static propTypes = {
     type: PropTypes.string,
     name: PropTypes.string,
@@ -54,5 +54,3 @@ class DelayedInput extends Component {
     );
   }
 }
-
-export default DelayedInput;

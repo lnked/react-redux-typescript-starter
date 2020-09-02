@@ -30,7 +30,7 @@ module.exports = {
   utils: resolve(sourcePath, 'utils'),
   hooks: resolve(sourcePath, 'hooks'),
   store: resolve(sourcePath, 'store'),
-  redux: resolve(sourcePath, 'redux'),
+  stores: resolve(sourcePath, 'stores'),
   pages: resolve(sourcePath, 'pages'),
   themes: resolve(sourcePath, 'themes'),
   assets: resolve(sourcePath, 'assets'),

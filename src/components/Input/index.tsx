@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import useInputState from './useInputState';
+import { useInputState } from './useInputState';
 
 import {
   Wrapper,
@@ -12,7 +12,7 @@ import {
 
 import { OuterProps } from './types';
 
-const Input: React.FC<OuterProps> = ({
+export const Input: React.FC<OuterProps> = ({
   label,
   error,
   focus,
@@ -77,5 +77,3 @@ Input.defaultProps = {
   value: '',
   focus: false,
 };
-
-export default Input;

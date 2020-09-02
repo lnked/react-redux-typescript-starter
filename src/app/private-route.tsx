@@ -13,7 +13,7 @@ const fakeAuth = {
   },
 };
 
-const PrivateRoute = ({ component: Component, alternative = '/', ...rest }: any) => (
+export const PrivateRoute = ({ component: Component, alternative = '/', ...rest }: any) => (
   <Route
     {...rest}
     render={(props: any) => (
@@ -23,5 +23,3 @@ const PrivateRoute = ({ component: Component, alternative = '/', ...rest }: any)
     )}
   />
 );
-
-export default PrivateRoute;

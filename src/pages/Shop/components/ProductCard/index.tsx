@@ -21,7 +21,7 @@ export interface OuterProps {
   badge?: string;
 }
 
-const Product: React.FC<OuterProps> = (props: OuterProps) => {
+export const ProductCard: React.FC<OuterProps> = (props: OuterProps) => {
   const root = '/shop';
   const { slug, name, badge, brand, image } = props;
 
@@ -49,10 +49,10 @@ const Product: React.FC<OuterProps> = (props: OuterProps) => {
   );
 };
 
-Product.displayName = 'Product';
+ProductCard.displayName = 'ProductCard';
 
-Product.defaultProps = {
+ProductCard.defaultProps = {
   slug: '',
 };
 
-export default Product;
+export default ProductCard;

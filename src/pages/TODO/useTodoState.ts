@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const useTodoState = (initialValue: any[] = []) => {
+export const useTodoState = (initialValue: any[] = []) => {
   const [todos, setTodos] = useState(initialValue);
 
   return {
@@ -19,4 +19,3 @@ const useTodoState = (initialValue: any[] = []) => {
   };
 };
 
-export default useTodoState;

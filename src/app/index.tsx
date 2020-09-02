@@ -10,12 +10,11 @@ import { ErrorFallback } from 'components';
 import { CoreLayout } from 'layouts';
 
 import Switcher from './routes';
-import GlobalStyle from './styles';
+import { GlobalStyle } from './styles';
 
 export interface OuterProps {}
 
 class App extends React.Component<OuterProps, {}> {
-
   timeout: any = null;
 
   componentDidMount() {
@@ -50,7 +49,6 @@ class App extends React.Component<OuterProps, {}> {
       </ErrorBoundary>
     );
   }
-
 }
 
 export default hot(App);

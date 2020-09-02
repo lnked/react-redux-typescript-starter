@@ -16,7 +16,7 @@ const list: BreadcrumbProps[] = [
   { icon: 'document', text: 'image.jpg' },
 ];
 
-const Breadcrumbs: React.FC<OuterProps> = (props: OuterProps) => {
+export const Breadcrumbs: React.FC<OuterProps> = (props: OuterProps) => {
   return (
     <div>
       {JSON.stringify(props)}
@@ -30,5 +30,3 @@ Breadcrumbs.displayName = 'Breadcrumbs';
 Breadcrumbs.defaultProps = {
   items: [],
 };
-
-export default Breadcrumbs;

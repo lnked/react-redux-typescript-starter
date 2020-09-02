@@ -1,8 +1,8 @@
 import * as React from 'react';
-import useTodoState from './useTodoState';
-import useInputState from './useInputState';
+import { useTodoState } from './useTodoState';
+import { useInputState } from './useInputState';
 
-const Todo = () => {
+export const Todo = () => {
   const { todos, addTodo, deleteTodo } = useTodoState([]);
   const { value, reset, onChange } = useInputState('');
 
@@ -26,5 +26,3 @@ const Todo = () => {
     </div>
   );
 };
-
-export default Todo;

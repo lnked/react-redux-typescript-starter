@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default function AnotherBuild() {
+export function AnotherBuild() {
   return (
     <div>IS AnotherBuild</div>
   );

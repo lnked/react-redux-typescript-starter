@@ -18,7 +18,7 @@ import { productsList } from './products';
 import { categoriesList } from './categories';
 
 // @observer
-class Shop extends React.Component<OuterProps, {}> {
+export class Shop extends React.Component<OuterProps, {}> {
   render() {
     const { match: { params } } = this.props;
 
@@ -50,5 +50,3 @@ class Shop extends React.Component<OuterProps, {}> {
     );
   }
 }
-
-export default Shop;

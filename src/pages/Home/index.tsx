@@ -14,7 +14,7 @@ import globe from 'assets/images/globe.jpg';
 
 import * as styles from './styles.module.scss';
 
-const Home = () => {
+export const Home = () => {
   const { t } = useTranslation();
   const { history, location, match } = useReactRouter();
 
@@ -74,5 +74,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default function SnakeCase() {
+export function SnakeCase() {
   return (
     <div>IS SnakeCase</div>
   );

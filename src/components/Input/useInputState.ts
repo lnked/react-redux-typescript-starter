@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { eventType, InnerState } from './types';
 
-const useInputState = ({ propsValue, defaultValue, handleChange }: InnerState) => {
+export const useInputState = ({ propsValue, defaultValue, handleChange }: InnerState) => {
   const [value, setValue] = useState(defaultValue);
   const [touched, setTouch] = useState(false);
 
@@ -38,5 +38,3 @@ const useInputState = ({ propsValue, defaultValue, handleChange }: InnerState) =
     reset: () => setValue(''),
   };
 };
-
-export default useInputState;

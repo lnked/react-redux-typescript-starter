@@ -40,7 +40,7 @@ const Button = styled.button`
   text-shadow: 0 1px 0 rgba(#000, .3), 0 1px 1px rgba(#000, .2);
 `;
 
-function Stepper({ value = 0, step = 1 }: OuterProps) {
+export function Stepper({ value = 0, step = 1 }: OuterProps) {
   const [count, setCount] = useState(value);
 
   const textInput = React.createRef<HTMLInputElement>();
@@ -63,5 +63,3 @@ function Stepper({ value = 0, step = 1 }: OuterProps) {
 }
 
 Stepper.displayName = 'Stepper';
-
-export default Stepper;

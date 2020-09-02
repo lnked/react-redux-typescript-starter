@@ -14,7 +14,7 @@ export interface OuterProps {
   name?: any;
 }
 
-class Profile extends React.Component<OuterProps, {}> {
+export class Profile extends React.Component<OuterProps, {}> {
   componentDidMount() {
     helperRedirect('/login');
   }
@@ -62,5 +62,3 @@ class Profile extends React.Component<OuterProps, {}> {
     );
   }
 }
-
-export default Profile;

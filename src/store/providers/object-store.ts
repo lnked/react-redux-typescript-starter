@@ -1,6 +1,6 @@
 import { observable, action } from 'mobx';
 
-const ObjectStore = observable({
+export const ObjectStore = observable({
   firstName: 'Yauhen',
   age: 30,
 
@@ -10,11 +10,11 @@ const ObjectStore = observable({
   },
 
   increment() {
- this.age += 1; 
+ this.age += 1;
 },
 
   decrement() {
- this.age -= 1; 
+ this.age -= 1;
 },
 },                                    {
   increment: action('Plus one'),
@@ -22,5 +22,3 @@ const ObjectStore = observable({
 },                                    {
   name: 'nickNameObservableObject',
 });
-
-export default ObjectStore;

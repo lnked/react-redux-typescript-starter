@@ -4,9 +4,9 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import { preloadComponent } from 'utils';
 import { setHistory } from 'utils/redirect';
 
-import PrivateRoute from './private-route';
+import { PrivateRoute } from './private-route';
 
-import Home from 'pages/Home';
+import { Home } from 'pages/Home';
 
 /* webpackChunkName: "cart", webpackPrefetch: true */
 export const Cart = preloadComponent(() => import(

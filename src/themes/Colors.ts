@@ -22,5 +22,3 @@ export const Colors = {
     background: '#fff5de',
   },
 };
-
-export default Colors;

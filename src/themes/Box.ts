@@ -6,5 +6,3 @@ export const Box = {
   padding: '15px 20px',
   borderRadius: '4px',
 };
-
-export default Box;

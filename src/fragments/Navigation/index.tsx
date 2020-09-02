@@ -16,7 +16,7 @@ import {
 
 export interface OuterProps {}
 
-const Navigation: React.FC<OuterProps> = ({ ...props }) => {
+export const Navigation: React.FC<OuterProps> = ({ ...props }) => {
   const { t, i18n } = useTranslation();
 
   return (
@@ -43,5 +43,3 @@ const Navigation: React.FC<OuterProps> = ({ ...props }) => {
     </Nav>
   );
 };
-
-export default Navigation;

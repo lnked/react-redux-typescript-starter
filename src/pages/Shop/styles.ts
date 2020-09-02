@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-import { default as ProductCard } from './components/product';
+import { ProductCard } from './components/ProductCard';
 
 const margin = 5;
 

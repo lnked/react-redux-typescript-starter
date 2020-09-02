@@ -1,4 +1,4 @@
-const Log = (target: any, name: any, descriptor: any) => {
+export const Log = (target: any, name: any, descriptor: any) => {
   console.log({ target, name });
 
   const value = descriptor.value;
@@ -9,5 +9,3 @@ const Log = (target: any, name: any, descriptor: any) => {
 
   return descriptor;
 };
-
-export default Log;
