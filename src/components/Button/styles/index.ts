@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const StyledButton = styled.button`
+export const Control = styled.button`
   display: inline-block;
   vertical-align: middle;
   border: 0;

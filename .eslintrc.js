@@ -54,6 +54,19 @@ module.exports = {
       anonymous: 'never',
       named: 'never',
     }],
+    'no-restricted-imports': ['error', {
+      paths: [
+        {
+          name: 'styled-components',
+          message: 'Please import from styled-components/macro.',
+        },
+        {
+          name: 'reflexbox',
+          message: 'Please import from reflexbox/styled-components.',
+        },
+      ],
+      patterns: ['!styled-components/macro', '!reflexbox/styled-components'],
+    }],
   },
   settings: {
     react: {
