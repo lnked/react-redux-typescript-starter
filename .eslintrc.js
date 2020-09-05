@@ -1,6 +1,6 @@
 module.exports = {
-  // parser: '@typescript-eslint/parser',  // Specifies the ESLint parser
-  parser: '@babel/eslint-parser',  // Specifies the ESLint parser
+  parser: '@typescript-eslint/parser',  // Specifies the ESLint parser
+  // parser: '@babel/eslint-parser', // Specifies the ESLint parser
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
