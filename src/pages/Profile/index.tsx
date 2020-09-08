@@ -24,17 +24,17 @@ export class Profile extends React.Component<OuterProps, {}> {
       <Wrapper>
         <Sidebar>
           <div>
-            Иванов Сергей
+              Иванов Сергей
           </div>
 
           <div>
-            Экзамены
+              Экзамены
           </div>
           <div>
-            Расписание экзаменов
+              Расписание экзаменов
           </div>
           <div>
-            Заявки в рассмотрении
+              Заявки в рассмотрении
           </div>
         </Sidebar>
         <Container>
@@ -48,11 +48,21 @@ export class Profile extends React.Component<OuterProps, {}> {
             <table>
               <thead>
                 <tr>
-                  <th>Дата и время</th>
-                  <th>Квалификация</th>
-                  <th>Уровень</th>
-                  <th>Город</th>
-                  <th>Статус</th>
+                  <th>
+                    Дата и время
+                  </th>
+                  <th>
+                    Квалификация
+                  </th>
+                  <th>
+                    Уровень
+                  </th>
+                  <th>
+                    Город
+                  </th>
+                  <th>
+                    Статус
+                  </th>
                 </tr>
               </thead>
             </table>

@@ -1,6 +1,5 @@
 module.exports = {
   parser: '@typescript-eslint/parser',  // Specifies the ESLint parser
-  // parser: '@babel/eslint-parser', // Specifies the ESLint parser
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -27,6 +26,8 @@ module.exports = {
     },
   },
   rules: {
+    'complexity': ['warn', { max: 5 }],
+    'max-params': ['warn', 4],
     'arrow-parens': [1, 'as-needed'],
     'prefer-spread': 'off',
     'react/prop-types': 'off',
@@ -72,6 +73,10 @@ module.exports = {
     react: {
       version: 'detect',
     },
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
     'boundaries/types': ['helpers', 'models', 'views', 'controllers'],
     'boundaries/ignore': ['src/**/*.spec.(j|t)sx?', 'src/**/*.test.(j|t)sx?'],
     'boundaries/alias': {
@@ -81,6 +86,9 @@ module.exports = {
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+      typescript: {
+        alwaysTryTypes: true,
       },
     },
   },
