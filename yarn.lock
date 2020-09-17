@@ -1865,10 +1865,15 @@
   dependencies:
     "@types/node" "*"
 
-"@types/history@*", "@types/history@^4.7.7":
+"@types/history@*":
   version "4.7.7"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.7.tgz#613957d900fab9ff84c8dfb24fa3eef0c2a40896"
   integrity sha512-2xtoL22/3Mv6a70i4+4RB7VgbDDORoWwjcqeNysojZA0R7NK17RbY5Gof/2QiFfJgX+KkWghbwJ+d/2SB8Ndzg==
+
+"@types/history@^4.7.8":
+  version "4.7.8"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.8.tgz#49348387983075705fe8f4e02fb67f7daaec4934"
+  integrity sha512-S78QIYirQcUoo6UJZx9CSP0O2ix9IaeAXwQi26Rhr/+mg7qqPy8TzaxHSUut7eGjL8WmLccT7/MXf304WjqHcA==
 
 "@types/hoist-non-react-statics@*":
   version "3.3.1"
@@ -1991,10 +1996,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.10.1.tgz#cc323bad8e8a533d4822f45ce4e5326f36e42177"
   integrity sha512-aYNbO+FZ/3KGeQCEkNhHFRIzBOUgc7QvcVNKXbfnhDkSfwUv91JsQQa10rDgKSTSLkXZ1UIyPe4FJJNVgw1xWQ==
 
-"@types/node@14.10.2":
-  version "14.10.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.10.2.tgz#9b47a2c8e4dabd4db73b57e750b24af689600514"
-  integrity sha512-IzMhbDYCpv26pC2wboJ4MMOa9GKtjplXfcAqrMeNJpUUwpM/2ATt2w1JPUXwS6spu856TvKZL2AOmeU2rAxskw==
+"@types/node@14.10.3":
+  version "14.10.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.10.3.tgz#5ae1f119c96643fc9b19b2d1a83bfa2ec3dbb7ea"
+  integrity sha512-zdN0hor7TLkjAdKTnYW+Y22oIhUUpil5ZD1V1OFq0CR0CLKw+NdR6dkziTfkWRLo6sKzisayoj/GNpNbe4LY9Q==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -11341,10 +11346,10 @@ postcss-will-change@4.0.0:
   resolved "https://registry.yarnpkg.com/postcss-will-change/-/postcss-will-change-4.0.0.tgz#7be6e2aaba454327fb8c78ca16968f544e431647"
   integrity sha512-/W9xDWhdKV57uexNydBTKLqWTzm0Wmb5ia8okCuZhB8QrN5+Ulg0+Mom/JgvIQ4bAqrPaUj/r9H0Di3F7MSjNw==
 
-postcss@8.0.3, postcss@^8.0.2:
-  version "8.0.3"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.0.3.tgz#f1d4658528b778e1c5c67a31a3912faed1600a66"
-  integrity sha512-nJR5mHJuiizWhF1DqVDy6RdeFbyA1Pakcl4wp4VwppKoAZLafPhS7X/rjeUgk3LdQWYQNxyixzbCbcIAbhsCTA==
+postcss@8.0.4:
+  version "8.0.4"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.0.4.tgz#c2ce10272c83cb86083c59725ba673e445f6bc88"
+  integrity sha512-1XnscHU1hafSVykema78TOeBf1my7WThfK2jaSDtOQW90CAny63oEsWVC+EN/WSMSBpghq5PxUdPgozK693tJw==
   dependencies:
     colorette "^1.2.1"
     line-column "^1.0.2"
@@ -11368,6 +11373,16 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2
     chalk "^2.4.2"
     source-map "^0.6.1"
     supports-color "^6.1.0"
+
+postcss@^8.0.2:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.0.3.tgz#f1d4658528b778e1c5c67a31a3912faed1600a66"
+  integrity sha512-nJR5mHJuiizWhF1DqVDy6RdeFbyA1Pakcl4wp4VwppKoAZLafPhS7X/rjeUgk3LdQWYQNxyixzbCbcIAbhsCTA==
+  dependencies:
+    colorette "^1.2.1"
+    line-column "^1.0.2"
+    nanoid "^3.1.12"
+    source-map "^0.6.1"
 
 preload-webpack-plugin@2.3.0:
   version "2.3.0"
