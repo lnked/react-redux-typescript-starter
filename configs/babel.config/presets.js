@@ -24,7 +24,7 @@ module.exports = function ({ development, production, test, loose, useBuiltIns, 
 
   return [
     ...configs,
-    ['@babel/preset-react', { development }],
     ['@babel/preset-typescript'],
+    ['@babel/preset-react', { development }],
   ]
 }

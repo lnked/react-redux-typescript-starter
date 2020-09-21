@@ -1,7 +1,7 @@
 export { Cart } from './Cart';
 export { Home } from './Home';
 export { Shop } from './Shop';
-export { Todo } from './TODO';
+export { TODO } from './TODO';
 export { About } from './About';
 export { Forms } from './Forms';
 export { Login } from './Login';

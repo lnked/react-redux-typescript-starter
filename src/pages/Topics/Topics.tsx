@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 
 const Topic = ({ match }: any) => (
   <div>
@@ -22,12 +22,14 @@ export const Topics = ({ match }: any) => (
       </li>
     </ul>
 
-    <Route path={`${match.url}/:topicId`} component={Topic} />
-    <Route
-      exact
-      path={match.url}
-      render={() => <h3>Please select a topic.</h3>}
-    />
+    <Switch>
+      <Route path={`${match.url}/:topicId`} component={Topic} />
+      <Route
+        exact
+        path={match.url}
+        render={() => <h3>Please select a topic.</h3>}
+      />
+    </Switch>
   </div>
 );
 

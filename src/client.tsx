@@ -36,7 +36,7 @@ if (environment.production) {
   }
 }
 
-if (environment.development && module.hot) {
+if (environment.development) {
   module.hot.accept();
 }
 

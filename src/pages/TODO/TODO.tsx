@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useTodoState } from './useTodoState';
 import { useInputState } from './useInputState';
 
-export const Todo = () => {
+export const TODO = () => {
   const { todos, addTodo, deleteTodo } = useTodoState([]);
   const { value, reset, onChange } = useInputState('');
 
@@ -27,4 +27,4 @@ export const Todo = () => {
   );
 };
 
-export default Todo;
+export default TODO;

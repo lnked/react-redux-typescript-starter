@@ -1,8 +1,9 @@
-const { resolve } = require('path');
+const { resolve, join } = require('path');
 
 const { root, sourcePath } = require('./options');
 
 const duplicates = {
+  'react-hot-loader': resolve(join(root, 'node_modules/react-hot-loader')),
   lodash: resolve(root, 'node_modules/lodash'),
   warning: resolve(root, 'node_modules/warning'),
   'value-equal': resolve(root, 'node_modules/value-equal'),
