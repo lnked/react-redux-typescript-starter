@@ -9,6 +9,7 @@ const prefix = isModern ? 'modern' : 'fallback';
 
 process.env.NODE_ENV = process.env.BABEL_ENV = environment;
 
+const distName = 'dist';
 const production = environment === 'production';
 const development = environment === 'development';
 
@@ -28,6 +29,7 @@ module.exports = {
   isModern,
   hashName,
   fileName,
+  distName,
   publicPath,
   production,
   development,
@@ -38,9 +40,9 @@ module.exports = {
   release: options.release || options.analyze || false,
   analyze: options.analyze || false,
   compression: options.release || false,
-  dist: resolve(root, 'dist'),
+  dist: resolve(root, distName),
   public: resolve(root, 'public'),
-  stylesPath: resolve(root, 'dist/css'),
+  stylesPath: resolve(root, distName, 'css'),
   staticPath: 'static',
   sourcePath: resolve(root, 'src'),
   serverPath: resolve(root, 'src/server'),

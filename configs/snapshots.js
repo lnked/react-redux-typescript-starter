@@ -1,11 +1,13 @@
 const { run } = require('react-snap');
 const { configs } = require('./html-minify');
 
+const { distName } = require('../options');
+
 run({
   crawl: true,
-  source: 'dist',
+  source: distName,
   saveAs: 'html',
-  destination: 'dist',
+  destination: distName,
   inlineCss: false,
   puppeteerArgs: [
     '--no-sandbox',
