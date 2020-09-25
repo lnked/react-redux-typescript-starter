@@ -213,7 +213,7 @@
     "date-fns": "2.16.1",
     "dayjs": "^1.8.36",
     "eslint": "^7.8.1",
-    "eslint-plugin-react": "^7.21.1",
+    "eslint-plugin-react": "^7.21.2",
     "eslint-plugin-react-hooks": "^4.1.0",
     "git": "^0.1.5",
     "i18next": "19.7.0",
