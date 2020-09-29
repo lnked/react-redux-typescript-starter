@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { setConfig } from 'react-hot-loader';
 
-import configureStore from 'redux';
+import { configureStore } from 'redux';
 import { environment } from 'settings';
 
 import App from 'app';

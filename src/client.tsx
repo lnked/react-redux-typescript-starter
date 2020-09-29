@@ -39,5 +39,3 @@ if (environment.production) {
 if (environment.development) {
   module.hot.accept();
 }
-
-ReactDOM.render(<App />, document.getElementById("app-root"));
