@@ -216,7 +216,7 @@
     "eslint-plugin-react": "^7.21.3",
     "eslint-plugin-react-hooks": "^4.1.0",
     "git": "^0.1.5",
-    "i18next": "19.8.0",
+    "i18next": "19.8.1",
     "i18next-browser-languagedetector": "6.0.1",
     "localize-react": "1.7.1",
     "mobx": "6.0.0",
