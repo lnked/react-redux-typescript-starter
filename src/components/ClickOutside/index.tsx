@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import { useEffect, createRef, Children, ReactChild, ReactElement, cloneElement } from 'react';
 
 export interface OuterProps {
   onClick: () => void;
-  children: React.ReactChild;
+  children: ReactChild;
 }
 
 export interface RefObject<T> {
@@ -10,7 +10,7 @@ export interface RefObject<T> {
 }
 
 export function ClickOutside({ onClick, children }: OuterProps) {
-  const refs = React.Children.map(children, React.createRef);
+  const refs = Children.map(children, createRef);
 
   const handleClick = (e: any) => {
     const isOutside = refs.every((ref: RefObject<any>) => !ref.current.contains(e.target));
@@ -26,8 +26,8 @@ export function ClickOutside({ onClick, children }: OuterProps) {
     };
   });
 
-  return React.Children.map(children as React.ReactElement, (element: JSX.Element, idx) =>
-    React.cloneElement(element, {
+  return Children.map(children as ReactElement, (element: JSX.Element, idx) =>
+    cloneElement(element, {
       ref: refs[idx],
     })
   );

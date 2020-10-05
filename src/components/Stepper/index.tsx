@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, createRef } from 'react';
 import styled from 'styled-components/macro';
 
 import { Colors } from 'themes';
@@ -43,7 +43,7 @@ const Button = styled.button`
 export function Stepper({ value = 0, step = 1 }: OuterProps) {
   const [count, setCount] = useState(value);
 
-  const textInput = React.createRef<HTMLInputElement>();
+  const textInput = createRef<HTMLInputElement>();
 
   return (
     <StyledStepper>
