@@ -46,7 +46,7 @@ module.exports = function({ development, production, test, loose, legacy }) {
     ['@babel/plugin-proposal-nullish-coalescing-operator', { loose }],
     ['@babel/plugin-proposal-class-properties', { loose }],
     ['@babel/plugin-transform-template-literals', { loose }],
-    '@babel/plugin-transform-react-jsx',
+    ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }],
 
     '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-transform-object-assign',
