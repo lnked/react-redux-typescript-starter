@@ -9,10 +9,7 @@ import {
   REACT_APP_SECRET,
 } from 'settings';
 
-import code from 'assets/images/code.png';
 import globe from 'assets/images/globe.jpg';
-
-import * as styles from './styles.module.scss';
 
 export const Home = () => {
   const { t } = useTranslation();
@@ -26,11 +23,11 @@ export const Home = () => {
     });
 
   return (
-    <div className={styles.container}>
+    <div>
       <Image width={100} height={100} src={globe} alt="Globe" />
 
-      <span className={styles.image}>
-        <Image width={100} height={100} src={code} alt="" />
+      <span>
+        <Image width={100} height={100} src={globe} alt="" />
       </span>
 
       <img height={100} src={globe} alt="" />

@@ -1,1 +1,0 @@
-export { SnakeCase } from './SnakeCase';
