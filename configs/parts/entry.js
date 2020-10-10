@@ -5,9 +5,10 @@ const { polyfills } = require('../polyfills');
 
 module.exports = {
   entry: {
-    app: [
-      ...polyfills,
-      resolve(options.sourcePath, 'client.tsx'),
-    ],
+    app: resolve(options.sourcePath, 'index.tsx'),
+    // app: [
+    //   ...polyfills,
+    //   resolve(options.sourcePath, 'index.tsx'),
+    // ],
   },
 }

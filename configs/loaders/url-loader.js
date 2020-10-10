@@ -6,7 +6,7 @@ module.exports = ({ prefix = '', limit, ...props }) => {
     options: {
       ...props,
       limit,
-      name: `${prefix}/[hash].[ext]`,
+      name: `${prefix}/[contenthash].[ext]`,
     }
   };
 }

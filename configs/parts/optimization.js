@@ -4,19 +4,8 @@ module.exports = {
   optimization: {
     nodeEnv: 'production',
 
-    chunkIds: 'named',
-    moduleIds: 'hashed',
-
     minimize: true,
     usedExports: true,
-
-    // sideEffects: true,
-    // namedChunks: false,
-    // namedModules: false,
-    // noEmitOnErrors: true,
-    // occurrenceOrder: false,
-
-    // providedExports: true,
 
     concatenateModules: true,
     mergeDuplicateChunks: true,
@@ -38,7 +27,7 @@ module.exports = {
           name: 'commons',
           enforce: true,
         },
-        vendors: {
+        defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
           priority: -10,
           chunks: 'all',

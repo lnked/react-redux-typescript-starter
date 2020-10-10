@@ -17,7 +17,7 @@ const publicPath = development ? '' : '';
 
 const hashName = development
   ? '[name]'
-  : '[name].[contenthash:6]';
+  : '[name].[contenthash]';
 
 const fileName = development
   ? '[path][name].[ext]'

@@ -6,11 +6,12 @@ const { environment, environmentFiltered } = require('../../tools/env')
 
 module.exports = () => {
   return [
-    new webpack.WatchIgnorePlugin([
-      /scss\.d\.ts$/
-    ]),
-
     new webpack.NoEmitOnErrorsPlugin(),
+
+    new webpack.ProvidePlugin({
+      process: 'process',
+      Buffer: ["buffer", "Buffer"],
+    }),
 
     new webpack.DefinePlugin({
       __DEV__: options.development,
