@@ -10,14 +10,6 @@ module.exports = {
     minimize: true,
     usedExports: true,
 
-    // sideEffects: true,
-    // namedChunks: false,
-    // namedModules: false,
-    // noEmitOnErrors: true,
-    // occurrenceOrder: false,
-
-    // providedExports: true,
-
     concatenateModules: true,
     mergeDuplicateChunks: true,
 

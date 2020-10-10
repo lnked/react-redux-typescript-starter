@@ -22,9 +22,5 @@ module.exports = () => {
     }),
 
     new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en|ru/),
-
-    // new webpack.IgnorePlugin({
-    //   resourceRegExp: /^(loose-envify)$/,
-    // }),
   ]
 }

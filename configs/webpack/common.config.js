@@ -11,6 +11,7 @@ const devtool = require('../parts/devtool');
 const resolve = require('../parts/resolve');
 const modules = require('../parts/module');
 const externals = require('../parts/externals');
+const experiments = require('../parts/experiments');
 
 const plugins = require('../plugins/common');
 
@@ -26,4 +27,5 @@ module.exports = merge(
   plugins,
   resolve,
   externals,
+  // experiments,
 );
