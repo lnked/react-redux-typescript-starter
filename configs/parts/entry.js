@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     app: [
       ...polyfills,
-      resolve(options.sourcePath, 'client.tsx'),
+      resolve(options.sourcePath, 'index'),
     ],
   },
 }
