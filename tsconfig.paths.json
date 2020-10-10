@@ -26,17 +26,17 @@
       "typings"
     ]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "typings/**/*.d.ts"
-  ],
   "exclude": [
     "dist",
-    "configs",
+    "configs/*",
     "node_modules",
     "**/node_modules/*",
     "src/**/*.test.tsx",
     "src/**/*.spec.tsx"
   ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "typings/**/*.d.ts"
+  ]
 }

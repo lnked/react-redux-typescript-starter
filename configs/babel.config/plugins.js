@@ -23,9 +23,10 @@ module.exports = function({ development, production, test, loose, legacy }) {
     ['module:fast-async', { spec: true }],
     ['@loadable/babel-plugin'],
     ['babel-plugin-styled-components', {
-      ssr: production,
+      ssr: production && !test,
       minify: production,
       sourceMap: development,
+      displayName: production && !test,
       extractStatic: development,
       transpileTemplateLiterals: development,
     }],

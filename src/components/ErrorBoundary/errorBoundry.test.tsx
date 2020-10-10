@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import { shallow, mount } from 'enzyme';
 
-import ErrorBoundary from './';
+import { ErrorBoundary } from './';
 
 function ProblemChild() {
   return (

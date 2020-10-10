@@ -8,7 +8,7 @@ type Props = {
   filled?: boolean;
 };
 
-export const StyledDiv = styled.div<Props>`
+export const Container = styled.div<Props>`
   color: ${CommonStyles.themeColor};
 
   ${({ empty }) => empty && css`

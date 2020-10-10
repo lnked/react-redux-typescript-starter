@@ -1,6 +1,7 @@
 [![license](https://img.shields.io/github/license/lnked/react-mobx-typescript-starter.svg)](https://github.com/lnked/react-mobx-typescript-starter/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/lnked/react-mobx-typescript-starter.svg?branch=master)](https://travis-ci.org/lnked/react-mobx-typescript-starter)
 [![Hits-of-Code](https://hitsofcode.com/github/lnked/react-mobx-typescript-starter)](https://hitsofcode.com/view/github/lnked/react-mobx-typescript-starter)
+[![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
 ---
 
