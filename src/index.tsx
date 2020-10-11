@@ -1,11 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Provider } from 'mobx-react';
+import { Provider } from 'react-redux';
 import { setConfig } from 'react-hot-loader';
-import { RouterStore } from 'mobx-react-router';
 
 import { environment } from 'settings';
-import { configureStore } from 'store';
+import { configureStore } from 'stores';
 
 import App from 'app';
 
@@ -14,15 +13,13 @@ setConfig({
   pureRender: true,
 });
 
-const routingStore = new RouterStore();
-
-const stores = configureStore(routingStore);
+const store = configureStore();
 
 // For easier debugging
-window.__APP_STATE__ = stores;
+window.__APP_STATE__ = store;
 
 ReactDOM.render(
-  <Provider {...stores}>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('app-root')
@@ -36,6 +33,6 @@ if (environment.production) {
   }
 }
 
-if (environment.development) {
+if (environment.development && module.hot) {
   module.hot.accept();
 }
