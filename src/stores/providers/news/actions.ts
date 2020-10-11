@@ -3,32 +3,28 @@ import * as API from 'services/API/providers/news';
 import {
   FETCH_ITEMS,
   RECEIVE_ITEMS_DONE,
-  FETCH_FILTERS,
-  RECEIVE_FILTERS_DONE,
+  RECEIVE_ITEMS_ERROR,
   FETCH_ITEM,
   RECEIVE_ITEM_DONE,
+  RECEIVE_ITEM_ERROR,
   FETCH_COUNT,
   RECEIVE_COUNT_DONE,
+  RECEIVE_COUNT_ERROR,
 } from './constants';
 
 export const fetchItems = () =>
   (dispatch: any) => {
     dispatch({ type: FETCH_ITEMS });
 
-    return API.items().then(response => dispatch({
-      type: RECEIVE_ITEMS_DONE,
-      payload: response.data,
-    }));
-  };
-
-export const fetchFilters = () =>
-  (dispatch: any) => {
-    dispatch({ type: FETCH_FILTERS });
-
-    return API.filters().then(response => dispatch({
-      type: RECEIVE_FILTERS_DONE,
-      payload: response.data,
-    }));
+    return API.items()
+      .then(response => dispatch({
+        type: RECEIVE_ITEMS_DONE,
+        payload: response.data,
+      }))
+      .catch(error => dispatch({
+        type: RECEIVE_ITEMS_ERROR,
+        payload: error,
+      }));
   };
 
 export const fetchCount = (payload: any = {}) =>

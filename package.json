@@ -94,6 +94,7 @@
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
     "@types/reflexbox": "^4.0.1",
+    "@types/reselect": "^2.2.0",
     "@types/styled-components": "5.1.4",
     "@types/webpack": "4.41.22",
     "@types/webpack-env": "1.15.3",

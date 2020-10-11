@@ -1,130 +1,55 @@
+import { errorState, loadingState, receiveState } from 'stores/utils';
+
 import {
   FETCH_ITEMS,
   RECEIVE_ITEMS_DONE,
-  FETCH_FILTERS,
-  RECEIVE_FILTERS_DONE,
+  RECEIVE_ITEMS_ERROR,
   FETCH_ITEM,
   RECEIVE_ITEM_DONE,
+  RECEIVE_ITEM_ERROR,
   FETCH_COUNT,
   RECEIVE_COUNT_DONE,
+  RECEIVE_COUNT_ERROR,
 } from './constants';
 
+const ui = {
+  isError: true,
+  isLoading: true,
+};
+
 export const DEFAULT_STATE: any = {
-  filters: {
-    data: [],
-    ui: {
-      isError: true,
-      isLoading: true,
-    },
-  },
   items: {
+    ui,
     data: [],
-    ui: {
-      isError: true,
-      isLoading: true,
-    },
   },
   count: {
+    ui,
     data: [],
-    ui: {
-      isError: true,
-      isLoading: true,
-    },
   },
   item: {
+    ui,
     data: {},
-    ui: {
-      isError: true,
-      isLoading: true,
-    },
   },
 };
 
 export default function(state = DEFAULT_STATE, action: any) {
-  const reducers: Record<string, any> = {
-    // Filters
-    [FETCH_FILTERS]: () => ({
-      ...state,
-      filters: {
-        ...state.item,
-        ui: {
-          ...state.item.ui, isLoading: true,
-        },
-      },
-    }),
-    [RECEIVE_FILTERS_DONE]: () => ({
-      ...state,
-      filters: {
-        ...state.item,
-        data: action.payload,
-        ui: {
-          ...state.item.ui, isLoading: false,
-        },
-      },
-    }),
+  console.log({ state, action });
 
+  const reducers: Record<string, any> = {
     // Items
-    [FETCH_ITEMS]: () => ({
-      ...state,
-      items: {
-        ...state.items,
-        ui: {
-          ...state.items.ui, isLoading: true,
-        },
-      },
-    }),
-    [RECEIVE_ITEMS_DONE]: () => ({
-      ...state,
-      items: {
-        ...state.items,
-        data: action.payload,
-        ui: {
-          ...state.items.ui, isLoading: false,
-        },
-      },
-    }),
+    [FETCH_ITEMS]: () => loadingState('items', { state }),
+    [RECEIVE_ITEMS_DONE]: () => receiveState('items', { state, action }),
+    [RECEIVE_ITEMS_ERROR]: () => errorState('items', { state, action }),
 
     // Item
-    [FETCH_ITEM]: () => ({
-      ...state,
-      item: {
-        ...state.item,
-        ui: {
-          ...state.item.ui, isLoading: true,
-        },
-      },
-    }),
-    [RECEIVE_ITEM_DONE]: () => ({
-      ...state,
-      item: {
-        ...state.item,
-        data: action.payload,
-        ui: {
-          ...state.item.ui, isLoading: false,
-        },
-      },
-    }),
+    [FETCH_ITEM]: () => loadingState('item', { state }),
+    [RECEIVE_ITEM_DONE]: () => receiveState('item', { state, action }),
+    [RECEIVE_ITEM_ERROR]: () => errorState('item', { state, action }),
 
     // Count
-    [FETCH_COUNT]: () => ({
-      ...state,
-      count: {
-        ...state.count,
-        ui: {
-          ...state.count.ui, isLoading: true,
-        },
-      },
-    }),
-    [RECEIVE_COUNT_DONE]: () => ({
-      ...state,
-      count: {
-        ...state.count,
-        data: action.payload,
-        ui: {
-          ...state.count.ui, isLoading: false,
-        },
-      },
-    }),
+    [FETCH_COUNT]: () => loadingState('count', { state }),
+    [RECEIVE_COUNT_DONE]: () => receiveState('count', { state, action }),
+    [RECEIVE_COUNT_ERROR]: () => errorState('count', { state, action }),
   };
 
   return (action?.type && reducers?.[action.type] && reducers?.[action.type]()) || state;
