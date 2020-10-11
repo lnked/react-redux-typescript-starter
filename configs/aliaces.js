@@ -18,12 +18,7 @@ const duplicates = {
   'react-dom': '@hot-loader/react-dom',
 };
 
-const noParse = {
-  axios: resolve(root, 'node_modules/dist/axios.min.js'),
-};
-
 module.exports = {
-  ...noParse,
   ...duplicates,
   src: sourcePath,
   app: resolve(sourcePath, 'app'),

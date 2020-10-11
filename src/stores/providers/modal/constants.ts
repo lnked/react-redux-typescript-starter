@@ -1,0 +1,2 @@
+export const TOGGLE_MODAL = 'MODAL#TOGGLE_MODAL';
+export const MODAL_STATUS = 'MODAL#MODAL_STATUS';

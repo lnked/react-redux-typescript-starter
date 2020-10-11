@@ -6,8 +6,8 @@ import { hot } from 'react-hot-loader/root';
 
 import i18n, { i18nInit, i18nUnload } from 'i18n';
 
-import { ErrorFallback } from 'components';
 import { CoreLayout } from 'layouts';
+import { ErrorFallback } from 'components';
 
 import Switcher from './routes';
 import { GlobalStyle } from './styles';

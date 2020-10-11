@@ -1,6 +1,10 @@
-import * as React from 'react';
+import React, { useCallback, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import useReactRouter from 'use-react-router';
+
+import * as selectors from 'stores/selectors';
+import * as actionsNews from 'stores/providers/news/actions';
 
 import { Image, Input, Button } from 'components';
 
@@ -12,8 +16,20 @@ import {
 import globe from 'assets/images/globe.jpg';
 
 export const Home = () => {
+  const dispatch = useDispatch();
   const { t } = useTranslation();
   const { history, location, match } = useReactRouter();
+
+  const fetchNews = useCallback(
+    () => dispatch(actionsNews.fetchItems()),
+    [dispatch]
+  );
+
+  useEffect(() => {
+    fetchNews();
+  }, [fetchNews]);
+
+  const { ui, data } = useSelector(selectors.newsItems);
 
   const handleChange = (name: string) => (e: React.ChangeEvent<HTMLInputElement>, value: any) =>
     console.info('change: ', {
@@ -24,6 +40,11 @@ export const Home = () => {
 
   return (
     <div>
+      <div
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({ ui, data }) }}
+        style={{ padding: '15px', border: '1px solid violet', marginBottom: '20px' }}
+      />
+
       <Image width={100} height={100} src={globe} alt="Globe" />
 
       <span>

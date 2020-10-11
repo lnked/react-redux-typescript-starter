@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import districts from './districts';
+import reducers from './reducers';
 
 export default combineReducers({
-  districts,
+  reducers,
 });
