@@ -1,4 +1,3 @@
-export { sum } from './sum';
 export { preloadComponent } from './preloadComponent';
 export { removeNonHTMLProps } from './removeNonHTMLProps';
 export { removeTrailingSlash } from './removeTrailingSlash';

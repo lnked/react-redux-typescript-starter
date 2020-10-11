@@ -6,7 +6,7 @@ export type RequireOnlyOne<T, Keys extends keyof T = keyof T> =
       & Partial<Record<Exclude<Keys, K>, undefined>>
   }[Keys]
 
-// // Like this?
+// Like this?
 // interface Qualified {
 //   pageType: PageType;
 //   pageId?: string;
