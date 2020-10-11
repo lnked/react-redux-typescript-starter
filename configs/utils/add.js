@@ -7,10 +7,10 @@ const { folderName, componentName, getTemplate } = require('./helpers')
 const { parseArguments } = require('../functions')
 
 const paths = {
-  page: resolve(sourcePath, 'pages'),
-  layout: resolve(sourcePath, 'layouts'),
-  fragment: resolve(sourcePath, 'fragments'),
-  component: resolve(sourcePath, 'components'),
+  page: resolve(sourcePath, 'shared/pages'),
+  layout: resolve(sourcePath, 'shared/layouts'),
+  fragment: resolve(sourcePath, 'shared/fragments'),
+  component: resolve(sourcePath, 'shared/components'),
 }
 
 const argv = parseArguments(process.argv)

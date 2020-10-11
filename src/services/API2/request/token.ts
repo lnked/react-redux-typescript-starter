@@ -2,7 +2,7 @@
 // import { session, local } from 'storage.io'
 import { session } from 'storage.io';
 
-const Token = {
+export const Token = {
   get(name: string = 'token') {
     return session.get(name);
   },
@@ -16,4 +16,3 @@ const Token = {
   },
 };
 
-export default Token;
