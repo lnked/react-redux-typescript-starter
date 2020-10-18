@@ -6167,10 +6167,10 @@ escodegen@^1.14.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-plugin-boundaries@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-boundaries/-/eslint-plugin-boundaries-1.0.1.tgz#a0c9be427610631a5e1db154290a742e12e98107"
-  integrity sha512-6PVDZaUpS4XZcsC1RR+dgiseIOowAX5p+ZrKuJa1yxlA9p8Vwxu8C6zcN3Fd93ZxhZvQvm4VBqf4J+RVwo+Qxw==
+eslint-plugin-boundaries@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-boundaries/-/eslint-plugin-boundaries-1.0.2.tgz#210688f96aea61a20a07368020fb2d1933c873f8"
+  integrity sha512-phFGQ/A0I3b1MTaLwDW82Np2sSLBc/geUqnMxpmwDuQ+OCNpvoavMdA5P+CQzU1fkeXitnn11kcgoKkwZokraw==
   dependencies:
     chalk "4.1.0"
     globule "1.3.2"
