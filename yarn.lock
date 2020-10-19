@@ -12098,6 +12098,16 @@ postcss@^8.1.0, postcss@^8.1.1:
     nanoid "^3.1.12"
     source-map "^0.6.1"
 
+postcss@^8.1.2:
+  version "8.1.2"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.1.2.tgz#9731fcaa4f7b0bef47121821bdae9eeb609a324c"
+  integrity sha512-mToqEVFq8jF9TFhlIK4HhE34zknFJuNTgqtsr60vUvrWn+9TIYugCwiV1JZRxCuOrej2jjstun1bn4Bc7/1HkA==
+  dependencies:
+    colorette "^1.2.1"
+    line-column "^1.0.2"
+    nanoid "^3.1.12"
+    source-map "^0.6.1"
+
 preload-webpack-plugin@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/preload-webpack-plugin/-/preload-webpack-plugin-2.3.0.tgz#2923d8caff44dead93d1fe5eaab31f3b18ca0de9"
@@ -12392,10 +12402,10 @@ railroad-diagrams@^1.0.0:
   resolved "https://registry.yarnpkg.com/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz#eb7e6267548ddedfb899c1b90e57374559cddb7e"
   integrity sha1-635iZ1SN3t+4mcG5Dlc3RVnN234=
 
-rambda@6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-6.2.0.tgz#4afb776b198b054341bdf53f40edc300bea9a969"
-  integrity sha512-2fIT02e45V2orajVC/TlmNtSyqbaWi/0hB6hfzNigV7qfrllS+mQeST1OQaveKWeVCNVKlXus0F2CAO8lDQNvw==
+rambda@6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-6.3.0.tgz#ee3ea07c772ca9a1b4b683d2f03ecbdd979f8a53"
+  integrity sha512-CEQu2sIckQfMw5mqGilZi+p7/g4bAiC80qTiKjGfFuAlJbIRNSEALaqGw8xwLtgX0qRrt9N8NkEC9P9w3d+sVg==
 
 randexp@0.4.6:
   version "0.4.6"
