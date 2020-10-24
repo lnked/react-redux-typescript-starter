@@ -19,4 +19,3 @@ export const configureStore = (initialState: State = {}) =>
     composeWithDevTools({ name: APP_NAME })(
       applyMiddleware(...middleware),
     ));
-
