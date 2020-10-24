@@ -1,25 +1,22 @@
-import { combineReducers, createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
-import invariant from 'redux-immutable-state-invariant';
 
-import news from './providers/news/reducers';
-import modal from './providers/modal/reducers';
+import { environment, APP_NAME } from 'settings';
 
-const reducers = combineReducers({
-  news,
-  modal,
-});
+import { rootReducer } from './reducers';
+import { State } from './types';
 
-export const configureStore = (preloadedState: any = {}) => {
-  const composeEnhancers = composeWithDevTools({
-    trace: true,
-    traceLimit: 25,
-  });
+const middleware = [
+  environment.development && require('redux-immutable-state-invariant').default(), // eslint-disable-line
+  thunk,
+].filter(Boolean);
 
-  const store = createStore(reducers, preloadedState, composeEnhancers(
-    applyMiddleware(invariant(), thunk),
-  ));
+export const configureStore = (initialState: State = {}) =>
+  createStore(
+    rootReducer,
+    initialState,
+    composeWithDevTools({ name: APP_NAME })(
+      applyMiddleware(...middleware),
+    ));
 
-  return store;
-};

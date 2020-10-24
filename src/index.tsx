@@ -13,7 +13,7 @@ setConfig({
   pureRender: true,
 });
 
-const store = configureStore();
+const store = configureStore(window.__APP_STATE__ || {});
 
 // For easier debugging
 window.__APP_STATE__ = store;
