@@ -14,7 +14,6 @@ const duplicates = {
   'create-react-context': resolve(root, 'node_modules/create-react-context'),
   'hoist-non-react-statics': resolve(root, 'node_modules/hoist-non-react-statics'),
   '@babel/runtime': resolve(root, 'node_modules/@babel/runtime'),
-  'react-dom': '@hot-loader/react-dom',
 };
 
 module.exports = {
