@@ -5,7 +5,7 @@ version: 2
 cli:
   server: https://app.fossa.io
   fetcher: custom
-  project: git@github.com:lnked/react-mobx-typescript-starter.git
+  project: git@github.com:lnked/react-redux-typescript-starter.git
 analyze:
   modules:
   - name: .
