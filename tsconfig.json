@@ -38,7 +38,6 @@
       "node",
       "react",
       "react-dom",
-      "react-hot-loader",
       "react-maskedinput",
       "react-router-dom",
       "react-test-renderer",

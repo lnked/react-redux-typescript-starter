@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
-import { hot } from 'react-hot-loader/root';
 
 import i18n, { i18nInit, i18nUnload } from 'i18n';
 
@@ -42,4 +41,4 @@ function App() {
   );
 }
 
-export default hot(App);
+export default App;

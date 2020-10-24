@@ -24,7 +24,6 @@ module.exports = () => {
       exclude: /(node_modules)/,
       use: [
         thread('js'),
-        'react-hot-loader/webpack',
         babel(),
       ],
     }, development),

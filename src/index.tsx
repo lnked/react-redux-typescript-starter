@@ -1,17 +1,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { setConfig } from 'react-hot-loader';
 
 import { environment } from 'settings';
 import { configureStore } from 'stores';
 
 import App from 'app';
-
-setConfig({
-  ignoreSFC: true,
-  pureRender: true,
-});
 
 const store = configureStore(window.__APP_STATE__ || {});
 

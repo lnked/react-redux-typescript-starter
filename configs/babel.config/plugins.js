@@ -1,6 +1,6 @@
 const transformImports = require('./transformImports');
 
-module.exports = function({ development, production, test, loose, legacy }) {
+module.exports = function ({ development, production, test, loose, legacy }) {
   const plugins = [];
 
   if (test) {
@@ -13,7 +13,7 @@ module.exports = function({ development, production, test, loose, legacy }) {
 
   if (development) {
     plugins.push(
-      'react-hot-loader/babel'
+      'react-refresh/babel',
     );
   }
 
