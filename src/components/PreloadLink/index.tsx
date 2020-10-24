@@ -9,21 +9,14 @@ export interface OuterProps {
   component?: any;
 }
 
-let timeout: any = null;
-
-export const PreloadLink: React.FC<OuterProps> = (props: OuterProps) => {
-  const { label, children, component, ...restProps } = props;
-
-  const handleMouseEnter = () => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => component?.preload(), 250);
-  };
+export const PreloadLink: React.FC<OuterProps> = React.memo((props: OuterProps) => {
+  const { label, children, ...restProps } = props;
 
   return (
-    <Link onMouseEnter={handleMouseEnter} {...restProps}>
+    <Link {...restProps}>
       {children || label}
     </Link>
   );
-};
+});
 
 PreloadLink.displayName = 'PreloadLink';

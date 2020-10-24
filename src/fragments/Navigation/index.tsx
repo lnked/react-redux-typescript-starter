@@ -14,7 +14,9 @@ import {
   Language,
 } from './styles';
 
-export interface OuterProps {}
+export type OuterProps = {}
+
+const handleSetLanguage = (lang: 'ru' | 'en') => () => setLanguage(lang);
 
 export const Navigation: React.FC<OuterProps> = ({ ...props }) => {
   const { t, i18n } = useTranslation();
@@ -22,9 +24,9 @@ export const Navigation: React.FC<OuterProps> = ({ ...props }) => {
   return (
     <Nav {...props}>
       <NavigationList>
-        {routes && routes.map(({ keyName, component, ...link }: any) => (
-          <NavigationItem key={link.to}>
-            <NavigationLink {...link} component={component}>
+        {routes && routes.map(({ keyName, to, exact }: any) => (
+          <NavigationItem key={to}>
+            <NavigationLink to={to} exact={exact}>
               {t(keyName)}
             </NavigationLink>
           </NavigationItem>
@@ -32,11 +34,11 @@ export const Navigation: React.FC<OuterProps> = ({ ...props }) => {
       </NavigationList>
 
       <Language>
-        <Button onClick={() => setLanguage('en')} disabled={i18n.language === 'en'}>
+        <Button onClick={handleSetLanguage('en')} disabled={i18n.language === 'en'}>
           EN
         </Button>
 
-        <Button onClick={() => setLanguage('ru')} disabled={i18n.language === 'ru'}>
+        <Button onClick={handleSetLanguage('ru')} disabled={i18n.language === 'ru'}>
           RU
         </Button>
       </Language>
