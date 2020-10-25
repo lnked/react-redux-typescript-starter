@@ -88,6 +88,7 @@ cp -r ${SOURCE}/lint-staged.config.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/package.json ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/tsconfig.build.json ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/tsconfig.jest.json ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/tsconfig.paths.json ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/tsconfig.json ${PATH_ROOT}/$FOLDER_NAME
 
 echo -e "Project ${GREEN}$FOLDER_NAME${NC} successfully created"
