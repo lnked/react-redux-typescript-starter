@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-import { API_URL } from 'settings';
+import { APP_API_URL } from 'settings';
 
 export function useFetch(url, init) {
   const [data, setData] = useState(null);
@@ -16,7 +16,7 @@ export function useFetch(url, init) {
     prevUrl.current = url;
     prevInit.current = init;
 
-    fetch(`${API_URL}/${url}`, init)
+    fetch(`${APP_API_URL}/${url}`, init)
       .then(response => {
         if (response.ok) {
           return response.json();

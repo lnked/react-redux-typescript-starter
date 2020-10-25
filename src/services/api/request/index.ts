@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { API_URL } from 'settings';
+import { APP_API_URL } from 'settings';
 
 import Token from './token';
 
@@ -20,6 +20,6 @@ export const request = (withToken: boolean = true) => {
 
   return axios.create({
     headers,
-    baseURL: API_URL,
+    baseURL: APP_API_URL,
   });
 };

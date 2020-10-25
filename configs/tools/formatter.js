@@ -1,13 +1,15 @@
 module.exports.formatter = (params, stringify = false) => {
   const keys = Object.keys(params);
+  const environments = {};
 
   if (keys.length && stringify) {
-    for (const x in params) {
-      if (!x.startsWith('SECRET')) {
-        params[x] = JSON.stringify(params[x]);
+    for (const key in params) {
+      if (!key.startsWith('SECRET')) {
+        const name = key.replace('REACT_APP_', '');
+        environments[name] = JSON.stringify(params[key]);
       }
     }
   }
 
-  return params;
+  return environments;
 }

@@ -9,8 +9,8 @@ import * as actionsNews from 'stores/providers/news/actions';
 import { Image, Input, Button } from 'components';
 
 import {
-  API_URL,
-  REACT_APP_SECRET,
+  APP_API_URL,
+  APP_SECRET,
 } from 'settings';
 
 import globe from 'assets/images/globe.jpg';
@@ -76,8 +76,8 @@ export const Home = () => {
         <Input value="xxxx" />
       </div>
 
-      <div>API_URL: {API_URL}</div>
-      <div>REACT_APP_SECRET: {REACT_APP_SECRET}</div>
+      <div>API_URL: {APP_API_URL}</div>
+      <div>REACT_APP_SECRET: {APP_SECRET}</div>
 
       <h2>{t('title', { count: 10 })}</h2>
       <h2>{t('example')}</h2>
