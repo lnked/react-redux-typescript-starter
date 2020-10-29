@@ -75,7 +75,7 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.2",
     "@size-limit/preset-app": "4.7.0",
     "@size-limit/webpack": "4.7.0",
-    "@teamsupercell/typings-for-css-modules-loader": "^2.3.0",
+    "@teamsupercell/typings-for-css-modules-loader": "^2.4.0",
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
