@@ -12,9 +12,7 @@ module.exports = function ({ development, production, test, loose, legacy }) {
   }
 
   if (development) {
-    plugins.push(
-      'react-refresh/babel',
-    );
+    plugins.push('react-refresh/babel');
   }
 
   return [
@@ -22,24 +20,34 @@ module.exports = function ({ development, production, test, loose, legacy }) {
     ['macros'],
     ['module:fast-async', { spec: true }],
     ['@loadable/babel-plugin'],
-    ['babel-plugin-styled-components', {
-      ssr: production && !test,
-      minify: production,
-      sourceMap: development,
-      displayName: production && !test,
-      extractStatic: development,
-      transpileTemplateLiterals: development,
-    }],
-    ['transform-react-remove-prop-types', {
-      mode: 'remove',
-      removeImport: true,
-      ignoreFilenames: ['node_modules'],
-    }],
-    ['@babel/plugin-transform-runtime', {
-      corejs: 3,
-      helpers: false,
-      proposals: true,
-    }],
+    [
+      'babel-plugin-styled-components',
+      {
+        ssr: production && !test,
+        minify: production,
+        sourceMap: development,
+        displayName: production && !test,
+        extractStatic: development,
+        transpileTemplateLiterals: development,
+      },
+    ],
+    [
+      'transform-react-remove-prop-types',
+      {
+        mode: 'remove',
+        removeImport: true,
+      },
+    ],
+    [
+      '@babel/plugin-transform-runtime',
+      {
+        absoluteRuntime: false,
+        corejs: false,
+        helpers: true,
+        regenerator: true,
+        useESModules: false,
+      },
+    ],
     ['transform-imports', transformImports],
     ['@babel/plugin-proposal-decorators', { legacy }],
     ['@babel/plugin-transform-spread', { loose }],

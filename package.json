@@ -12,10 +12,10 @@
     "start:lint": "cross-env NODE_ENV=lint webpack-dev-server --config configs/scripts",
     "dev": "run-p start start:lint",
     "build": "env NODE_ENV=production webpack --config configs/scripts",
-    "build:display": "env NODE_ENV=production webpack --display-modules --config configs/scripts",
+    "build:display": "yarn build --display-modules --display-reasons",
     "preanalyze": "yarn clear:cache",
-    "analyze": "yarn build --analyze",
-    "release": "yarn build --release",
+    "analyze": "yarn build:display --analyze",
+    "release": "yarn build:display --release",
     "profile": "webpack --config configs/scripts --profile --json > stats.json",
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx --quiet",
     "lint:fix": "yarn lint --fix",
@@ -205,6 +205,7 @@
     "workbox-webpack-plugin": "5.1.4"
   },
   "dependencies": {
+    "@babel/runtime": "^7.12.5",
     "@babel/runtime-corejs3": "7.12.1",
     "@emotion/core": "10.1.1",
     "@loadable/component": "^5.14.1",
