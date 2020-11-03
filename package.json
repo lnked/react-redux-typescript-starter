@@ -206,7 +206,6 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
-    "@babel/runtime-corejs3": "7.12.1",
     "@emotion/core": "10.1.1",
     "@loadable/component": "^5.14.1",
     "@loadable/server": "^5.14.0",
