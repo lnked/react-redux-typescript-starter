@@ -16,9 +16,7 @@ export const configureStore = (initialState: State = {}) => {
   const store = createStore(
     createReducer(),
     initialState,
-    composeWithDevTools({ name: APP_NAME })(
-      applyMiddleware(...middleware),
-    )
+    composeWithDevTools({ name: APP_NAME })(applyMiddleware(...middleware)),
   );
 
   if (module.hot) {

@@ -2,13 +2,7 @@ import * as React from 'react';
 
 import { useInputState } from './useInputState';
 
-import {
-  Wrapper,
-  Label,
-  BaseInput,
-  ResetButton,
-  InputWrapper,
-} from './style';
+import { Wrapper, Label, BaseInput, ResetButton, InputWrapper } from './style';
 
 import { OuterProps } from './types';
 
@@ -39,13 +33,9 @@ export const Input: React.FC<OuterProps> = ({
 
   return (
     <Wrapper className={className}>
-      {label && (
-        <Label htmlFor={pair}>{label}</Label>
-      )}
+      {label && <Label htmlFor={pair}>{label}</Label>}
 
-      {attrs.required && (
-        <span>Required</span>
-      )}
+      {attrs.required && <span>Required</span>}
 
       <span>touched: {JSON.stringify(touched)}</span>
 

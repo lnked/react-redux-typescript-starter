@@ -6,7 +6,6 @@ export interface OuterProps {
 }
 
 export class Modal extends React.Component<OuterProps, {}> {
-
   static displayName = 'Modal';
 
   element: HTMLElement | null = null;
@@ -29,5 +28,4 @@ export class Modal extends React.Component<OuterProps, {}> {
 
     return createPortal(children, this.element);
   }
-
 }

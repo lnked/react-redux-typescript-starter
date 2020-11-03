@@ -8,34 +8,35 @@ export const BaseInput = styled.input`
   font-size: 1.4rem;
   border-radius: 2px;
   background-color: #fff;
-  box-shadow: 0 0 0 0 rgba(19,124,189,0), inset 0 0 0 1px rgba(16,22,26,.15), inset 0 1px 1px rgba(16,22,26,.2);
+  box-shadow: 0 0 0 0 rgba(19, 124, 189, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.15),
+    inset 0 1px 1px rgba(16, 22, 26, 0.2);
   padding: 6px 10px;
   vertical-align: middle;
   color: #182026;
   font-weight: 400;
-  transition: box-shadow .1s cubic-bezier(.4,1,.75,.9);
+  transition: box-shadow 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
   appearance: none;
 
   &::placeholder {
     opacity: 1;
-    color: rgba(92,112,128,.5);
+    color: rgba(92, 112, 128, 0.5);
   }
 
   &:focus {
-    box-shadow: 0 0 0 1px #137cbd, 0 0 0 3px rgba(19,124,189,.3), inset 0 1px 1px rgba(16,22,26,.2);
+    box-shadow: 0 0 0 1px #137cbd, 0 0 0 3px rgba(19, 124, 189, 0.3), inset 0 1px 1px rgba(16, 22, 26, 0.2);
     outline-offset: 2px;
   }
 
   &[readonly] {
-    box-shadow: inset 0 0 0 1px rgba(16,22,26,.15)
+    box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.15);
   }
 
   &:disabled {
     box-shadow: none;
-    background: rgba(206,217,224,.5);
+    background: rgba(206, 217, 224, 0.5);
     cursor: not-allowed;
-    color: rgba(92,112,128,.5);
-    resize: none
+    color: rgba(92, 112, 128, 0.5);
+    resize: none;
   }
 `;
 

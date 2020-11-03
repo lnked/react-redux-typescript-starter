@@ -6,15 +6,24 @@ import { setHistory } from 'utils/redirect';
 
 import { Home } from 'pages/Home';
 
-export const NoMatch = loadable(() => import(
-  /* webpackChunkName: "nomatch", webpackPrefetch: true */
-  'pages/NoMatch'
-));
+export const NoMatch = loadable(
+  () =>
+    import(
+      /* webpackChunkName: "nomatch", webpackPrefetch: true */
+      'pages/NoMatch'
+    ),
+);
 
 export const routes = [
-  { keyName: 'navigation.home',   to: '/',        component: Home, exact: true },
-  { keyName: 'navigation.about',  to: '/about',   component: Home },
-  { keyName: 'navigation.shop',   to: '/shop',    component: Home, path: ['/shop', '/shop/:product'], exact: true },
+  { keyName: 'navigation.home', to: '/', component: Home, exact: true },
+  { keyName: 'navigation.about', to: '/about', component: Home },
+  {
+    keyName: 'navigation.shop',
+    to: '/shop',
+    component: Home,
+    path: ['/shop', '/shop/:product'],
+    exact: true,
+  },
 ];
 
 function HistorySetter({ history }: any) {
@@ -30,7 +39,7 @@ function Switcher(store: any) {
       <Route component={HistorySetter} />
 
       <Switch>
-        <Route path='/' component={Home} exact />
+        <Route path="/" component={Home} exact />
 
         {routes.map(({ keyName, path, to, component: Component, exact = false, ...restProps }) => (
           <Route

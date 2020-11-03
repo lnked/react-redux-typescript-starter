@@ -9,8 +9,6 @@ export interface OuterProps {
 
 export const JsonPretty: React.FC<OuterProps> = ({ json }: OuterProps) => (
   <Wrapper>
-    <Code>
-      {JSON.stringify(json, null, '  ')}
-    </Code>
+    <Code>{JSON.stringify(json, null, '  ')}</Code>
   </Wrapper>
 );

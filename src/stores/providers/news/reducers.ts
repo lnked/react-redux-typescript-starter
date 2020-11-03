@@ -32,7 +32,7 @@ export const DEFAULT_STATE: any = {
   },
 };
 
-export default function(state = DEFAULT_STATE, action: any) {
+export default function (state = DEFAULT_STATE, action: any) {
   const reducers: Record<string, any> = {
     // Items
     [FETCH_ITEMS]: () => loadingState('items', { state }),

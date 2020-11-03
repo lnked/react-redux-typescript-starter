@@ -40,4 +40,3 @@ Button.defaultProps = {
   disabled: false,
   children: '',
 };
-

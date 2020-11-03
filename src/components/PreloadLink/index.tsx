@@ -12,11 +12,7 @@ export interface OuterProps {
 export const PreloadLink: React.FC<OuterProps> = React.memo((props: OuterProps) => {
   const { label, children, ...restProps } = props;
 
-  return (
-    <Link {...restProps}>
-      {children || label}
-    </Link>
-  );
+  return <Link {...restProps}>{children || label}</Link>;
 });
 
 PreloadLink.displayName = 'PreloadLink';

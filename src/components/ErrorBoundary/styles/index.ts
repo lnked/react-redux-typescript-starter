@@ -12,5 +12,5 @@ export const StyledError = styled.div`
 `;
 
 export const StyledDetails = styled.details`
-  whiteSpace: 'pre-wrap';
+  whitespace: 'pre-wrap';
 `;

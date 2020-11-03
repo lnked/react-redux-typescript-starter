@@ -9,7 +9,7 @@ export enum ChipSizeType {
 
 type Props = {
   size?: ChipSizeType;
-}
+};
 
 export const CHIP_SIZE = {
   s: 16,
@@ -19,11 +19,7 @@ export const CHIP_SIZE = {
 };
 
 export const Chip: React.FC<Props> = ({ size }) => {
-  return (
-    <div>
-      Chip {size}
-    </div>
-  );
+  return <div>Chip {size}</div>;
 };
 
 Chip.displayName = 'Chip';

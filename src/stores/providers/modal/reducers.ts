@@ -4,7 +4,7 @@ export const DEFAULT_STATE: any = {
   modalIsOpen: false,
 };
 
-export default function(state = DEFAULT_STATE, action: any) {
+export default function (state = DEFAULT_STATE, action: any) {
   const reducers: Record<string, any> = {
     [TOGGLE_MODAL]: () => ({
       modalIsOpen: !state.modalIsOpen,

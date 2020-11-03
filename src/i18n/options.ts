@@ -16,12 +16,12 @@ export const options: i18n.InitOptions = {
     escapeValue: false,
   },
   resources: {
-    'en': {
+    en: {
       translations: {
         ...en,
       },
     },
-    'ru': {
+    ru: {
       translations: {
         ...ru,
       },

@@ -7,9 +7,5 @@ export interface OuterProps {
 }
 
 export const Layout: React.FC<OuterProps> = ({ children, ...props }) => {
-  return (
-    <Container {...props}>
-      {children}
-    </Container>
-  );
+  return <Container {...props}>{children}</Container>;
 };

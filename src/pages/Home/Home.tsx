@@ -8,10 +8,7 @@ import * as actionsNews from 'stores/providers/news/actions';
 
 import { Image, Input, Button } from 'components';
 
-import {
-  APP_API_URL,
-  APP_SECRET,
-} from 'settings';
+import { APP_API_URL, APP_SECRET } from 'settings';
 
 import globe from 'assets/images/globe.jpg';
 
@@ -20,10 +17,7 @@ export const Home = () => {
   const { t } = useTranslation();
   const { history, location, match } = useReactRouter();
 
-  const fetchNews = useCallback(
-    () => dispatch(actionsNews.fetchItems()),
-    [dispatch]
-  );
+  const fetchNews = useCallback(() => dispatch(actionsNews.fetchItems()), [dispatch]);
 
   useEffect(() => {
     fetchNews();
@@ -60,7 +54,7 @@ export const Home = () => {
 
       <h2>Home</h2>
       <Button>This is a hotpink button.</Button>
-      <br/>
+      <br />
 
       <div>1&nbsp;&nbsp;&nbsp;2</div>
 
@@ -83,9 +77,9 @@ export const Home = () => {
       <h2>{t('example')}</h2>
       <h2>age.label: {t('age.label')}</h2>
 
-      <br/>
+      <br />
 
-      <br/>
+      <br />
 
       <div>{t('name.label')}</div>
       <div>{t('home.label')}</div>

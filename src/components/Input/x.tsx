@@ -7,10 +7,5 @@ export const Example = () => {
     setValue(e.target.value);
   }, []);
 
-  return (
-    <input
-      value={value}
-      onChange={handleChange}
-    />
-  );
+  return <input value={value} onChange={handleChange} />;
 };

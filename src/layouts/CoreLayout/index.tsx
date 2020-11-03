@@ -11,10 +11,7 @@ type OuterProps = {
 
 export const CoreLayout: React.FC<OuterProps & RouteComponentProps> = ({
   children = '',
-  location: {
-    hash,
-    pathname,
-  },
+  location: { hash, pathname },
 }) => {
   useEffect(() => {
     window.scrollTo(0, 0);

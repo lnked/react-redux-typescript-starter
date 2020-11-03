@@ -3,7 +3,8 @@ export const loadingState = (name, { state }) => ({
   [name]: {
     ...state[name],
     ui: {
-      ...state[name].ui, isLoading: true,
+      ...state[name].ui,
+      isLoading: true,
     },
   },
 });

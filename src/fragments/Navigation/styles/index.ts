@@ -40,10 +40,10 @@ export const NavigationLink: any = styled(PreloadLink)`
   padding: 0;
   font-size: 1.6rem;
   font-weight: 300;
-  letter-spacing: .066ex;
+  letter-spacing: 0.066ex;
   display: inline-block;
   text-decoration: none;
-  transition: color .25s ease-in-out;
+  transition: color 0.25s ease-in-out;
 
   &:hover {
     color: #61dafb;

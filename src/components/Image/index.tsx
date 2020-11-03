@@ -18,17 +18,10 @@ export const Image: React.FC<OuterProps> = ({ src, className, ...props }: OuterP
       <ProgressiveImage src={src} placeholder={src}>
         {(resource = '', loading = true) => {
           if (loading) {
-            return (
-              <Loading>Loading...</Loading>
-            );
+            return <Loading>Loading...</Loading>;
           }
 
-          return (
-            <Source
-              {...props}
-              src={resource}
-            />
-          );
+          return <Source {...props} src={resource} />;
         }}
       </ProgressiveImage>
     </Picture>

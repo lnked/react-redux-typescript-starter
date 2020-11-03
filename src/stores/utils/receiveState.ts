@@ -4,7 +4,8 @@ export const receiveState = (name, { state, action }) => ({
     ...state[name],
     data: action.payload,
     ui: {
-      ...state[name].ui, isLoading: false,
+      ...state[name].ui,
+      isLoading: false,
     },
   },
 });

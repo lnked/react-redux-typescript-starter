@@ -37,9 +37,7 @@ export class ErrorBoundary extends React.PureComponent<OuterProps, InnerState> {
         <StyledError>
           <h1>Something went wrong.</h1>
 
-          <StyledDetails>
-            {JSON.stringify(info)}
-          </StyledDetails>
+          <StyledDetails>{JSON.stringify(info)}</StyledDetails>
         </StyledError>
       );
     }

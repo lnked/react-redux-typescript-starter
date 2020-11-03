@@ -9,7 +9,8 @@ export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  ${environment.development && css`
+  ${environment.development &&
+  css`
     outline: 1px solid cyan;
   `}
 `;
