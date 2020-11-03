@@ -5,7 +5,12 @@
   "tabWidth": 2,
   "useTabs": false,
   "singleQuote": true,
+  "jsxSingleQuote": false,
+  "eslintIntegration": true,
   "jsxBracketSameLine": false,
+  "stylelintIntegration": true,
   "arrowParens": "avoid",
-  "parser": "typescript"
+  "bracketSpacing": true,
+  "parser": "typescript",
+  "endOfLine": "auto"
 }

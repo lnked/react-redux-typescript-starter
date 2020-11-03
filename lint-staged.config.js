@@ -1,5 +1,5 @@
 module.exports = {
-  'src/**/*.{js?(x),ts?(x),json}': [
+  'src/**/*.{ts,tsx,js,jsx,json}': [
     'yarn lint',
     'prettier --write',
   ],

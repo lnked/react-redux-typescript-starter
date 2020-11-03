@@ -25,6 +25,7 @@ module.exports = {
     },
   },
   rules: {
+    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     complexity: ['warn', { max: 5 }],
     'max-params': ['warn', 4],
     'arrow-parens': [1, 'as-needed'],

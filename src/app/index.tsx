@@ -14,6 +14,7 @@ import { GlobalStyle } from './styles';
 function App() {
   useEffect(() => {
     i18nInit();
+
     return i18nUnload;
   });
 
