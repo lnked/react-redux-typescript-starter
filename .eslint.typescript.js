@@ -5,20 +5,17 @@ module.exports = {
     tsconfigRootDir: __dirname,
     createDefaultProgram: true,
   },
-  extends: [
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-  ],
-  plugins: [
-    '@typescript-eslint',
-  ],
+  extends: ['plugin:@typescript-eslint/eslint-recommended', 'plugin:@typescript-eslint/recommended'],
+  plugins: ['@typescript-eslint'],
   rules: {
-    'strict': 0,
-    'camelcase': 'warn',
+    strict: 0,
+    camelcase: 'warn',
     'brace-style': 'off',
+    'no-shadow': 'off',
     'no-extra-semi': 'off',
     'no-unused-vars': 'off',
     'no-extra-parens': 'off',
+    '@typescript-eslint/no-shadow': ['warn'],
     '@typescript-eslint/no-var-requires': 'warn',
     '@typescript-eslint/brace-style': ['warn', '1tbs'],
     '@typescript-eslint/no-extra-semi': ['warn'],
@@ -43,18 +40,27 @@ module.exports = {
     '@typescript-eslint/promise-function-async': 'off',
     '@typescript-eslint/restrict-plus-operands': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
-    '@typescript-eslint/explicit-function-return-type': ['off', {
-      allowExpressions: false,
-      allowHigherOrderFunctions: true,
-      allowTypedFunctionExpressions: true,
-      allowConciseArrowFunctionExpressionsStartingWithVoid: true,
-    }],
-    '@typescript-eslint/no-inferrable-types': ['warn', {
-      ignoreParameters: true,
-    }],
-    '@typescript-eslint/no-this-alias': ['warn', {
-      allowDestructuring: true,
-      allowedNames: ['that'],
-    }],
-  }
+    '@typescript-eslint/explicit-function-return-type': [
+      'off',
+      {
+        allowExpressions: false,
+        allowHigherOrderFunctions: true,
+        allowTypedFunctionExpressions: true,
+        allowConciseArrowFunctionExpressionsStartingWithVoid: true,
+      },
+    ],
+    '@typescript-eslint/no-inferrable-types': [
+      'warn',
+      {
+        ignoreParameters: true,
+      },
+    ],
+    '@typescript-eslint/no-this-alias': [
+      'warn',
+      {
+        allowDestructuring: true,
+        allowedNames: ['that'],
+      },
+    ],
+  },
 };
