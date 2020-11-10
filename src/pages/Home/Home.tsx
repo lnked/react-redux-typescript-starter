@@ -6,7 +6,7 @@ import useReactRouter from 'use-react-router';
 import * as selectors from 'stores/selectors';
 import * as actionsNews from 'stores/providers/news/actions';
 
-import { Image, Input, Button } from 'components';
+import { Image, Input, Button, Chip, CHIP_SIZE } from 'components';
 
 import { APP_API_URL, APP_SECRET } from 'settings';
 
@@ -38,6 +38,11 @@ export const Home = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify({ ui, data }) }}
         style={{ padding: '15px', border: '1px solid violet', marginBottom: '20px' }}
       />
+
+      <Chip label="Chip size s" size={CHIP_SIZE.s} />
+      <Chip label="Chip size m" size={CHIP_SIZE.m} />
+      <Chip label="Chip size l" size={CHIP_SIZE.l} />
+      <Chip label="Chip size x" size={CHIP_SIZE.x} />
 
       <Image width={100} height={100} src={globe} alt="Globe" />
 

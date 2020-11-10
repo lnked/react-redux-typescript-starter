@@ -1,8 +1,8 @@
-module.exports = (props) => {
+module.exports = props => {
   return {
     loader: 'postcss-loader',
     options: {
       ...props,
-    }
+    },
   };
-}
+};

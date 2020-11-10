@@ -1,0 +1,33 @@
+@import 'variables.scss';
+
+.chip {
+  display: inline-block;
+  padding: .3em 1em;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: $base-color;
+
+  &.s {
+    font-size: 1.2rem;
+  }
+
+  &.m {
+    font-size: 1.4rem;
+  }
+
+  &.l {
+    font-size: 1.6rem;
+  }
+
+  &.x {
+    font-size: 1.8rem;
+  }
+
+  &__name {
+    &:before {
+      content: '';
+      position: absolute 0;
+    }
+  }
+}

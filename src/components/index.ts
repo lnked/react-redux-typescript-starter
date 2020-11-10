@@ -1,4 +1,4 @@
-export * from './Chip';
+export { Chip, CHIP_SIZE } from './Chip';
 export { Input } from './Input';
 export { Image } from './Image';
 export { Modal } from './Modal';
