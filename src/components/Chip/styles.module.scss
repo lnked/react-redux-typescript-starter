@@ -1,6 +1,7 @@
 @import 'variables.scss';
 
 .chip {
+  position: relative;
   display: inline-block;
   padding: .3em 1em;
   margin-right: 10px;
