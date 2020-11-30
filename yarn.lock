@@ -1147,7 +1147,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.7", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.7", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
   integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
@@ -3041,11 +3041,6 @@ async-throttle@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/async-throttle/-/async-throttle-1.1.0.tgz#229e7f3fa7a2a797e86f360e6309a08224d4fa7a"
   integrity sha1-Ip5/P6eip5fobzYOYwmggiTU+no=
-
-async@0.9.x:
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/async/-/async-0.9.2.tgz#aea74d5e61c1f899613bf64bda66d4c78f2fd17d"
-  integrity sha1-rqdNXmHB+JlhO/ZL2mbUx48v0X0=
 
 async@^2.6.2:
   version "2.6.3"
@@ -5471,7 +5466,7 @@ duplexer3@^0.1.4:
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
-duplexer@^0.1.1:
+duplexer@^0.1.1, duplexer@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.2.tgz#3abe43aef3835f8ae077d136ddce0f276b0400e6"
   integrity sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==
@@ -5513,13 +5508,6 @@ ejs@^2.6.1:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.7.4.tgz#48661287573dcc53e366c7a1ae52c3a120eec9ba"
   integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
-
-ejs@^3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/ejs/-/ejs-3.1.5.tgz#aed723844dc20acb4b170cd9ab1017e476a0d93b"
-  integrity sha512-dldq3ZfFtgVTJMLjOe+/3sROTzALlL9E34V4/sDtUd/KlBSS0s6U1/+WPE1B4sj9CXHJpL1M6rhNJnc9Wbal9w==
-  dependencies:
-    jake "^10.6.1"
 
 electron-to-chromium@^1.3.585:
   version "1.3.586"
@@ -6471,13 +6459,6 @@ file-uri-to-path@1.0.0:
   resolved "https://registry.yarnpkg.com/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz#553a7b8446ff6f684359c445f1e37a05dacc33dd"
   integrity sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
 
-filelist@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/filelist/-/filelist-1.0.1.tgz#f10d1a3ae86c1694808e8f20906f43d4c9132dbb"
-  integrity sha512-8zSK6Nu0DQIC08mUC46sWGXi+q3GGpKydAG36k+JDba6VRpkevvOWUW5a/PhShij4+vHT9M+ghgG7eM+a9JDUQ==
-  dependencies:
-    minimatch "^3.0.4"
-
 filename-reserved-regex@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/filename-reserved-regex/-/filename-reserved-regex-2.0.0.tgz#abf73dfab735d045440abfea2d91f389ebbfa229"
@@ -7147,13 +7128,20 @@ growly@^1.3.0:
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
   integrity sha1-8QdIy+dq+WS3yWyTxrzCivEgwIE=
 
-gzip-size@^5.0.0, gzip-size@^5.1.1:
+gzip-size@^5.0.0:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/gzip-size/-/gzip-size-5.1.1.tgz#cb9bee692f87c0612b232840a873904e4c135274"
   integrity sha512-FNHi6mmoHvs1mxZAds4PpdCS6QG8B4C1krxJsMutgxl5t3+GlRTzzI3NEkifXx2pVsOvJdOGSmIgDhQ55FwdPA==
   dependencies:
     duplexer "^0.1.1"
     pify "^4.0.1"
+
+gzip-size@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/gzip-size/-/gzip-size-6.0.0.tgz#065367fd50c239c0671cbcbad5be3e2eeb10e462"
+  integrity sha512-ax7ZYomf6jqPTQ4+XCpUGyXKHk5WweS+e05MBO4/y3WJ5RkmPXNKvX+bx1behVILVwr6JSQvZAku021CHPXG3Q==
+  dependencies:
+    duplexer "^0.1.2"
 
 handle-thing@^2.0.0:
   version "2.0.1"
@@ -8532,16 +8520,6 @@ isurl@^1.0.0-alpha5:
   dependencies:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
-
-jake@^10.6.1:
-  version "10.8.2"
-  resolved "https://registry.yarnpkg.com/jake/-/jake-10.8.2.tgz#ebc9de8558160a66d82d0eadc6a2e58fbc500a7b"
-  integrity sha512-eLpKyrfG3mzvGE2Du8VoPbeSkRry093+tyNjdYaBbJS9v17knImYGNXQCUV0gLxQtF82m3E8iRb/wdSQZLoq7A==
-  dependencies:
-    async "0.9.x"
-    chalk "^2.4.2"
-    filelist "^1.0.1"
-    minimatch "^3.0.4"
 
 jest-changed-files@^26.6.2:
   version "26.6.2"
@@ -11745,10 +11723,10 @@ prettier@*:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
   integrity sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
 
-prettier@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.0.tgz#8a03c7777883b29b37fb2c4348c66a78e980418b"
-  integrity sha512-yYerpkvseM4iKD/BXLYUkQV5aKt4tQPqaGW6EsZjzyu0r7sVZZNPJW4Y8MyKmicp6t42XUPcBVA+H6sB3gqndw==
+prettier@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
+  integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
 
 pretty-bytes@^5.3.0:
   version "5.4.1"
@@ -12062,12 +12040,12 @@ react-dom@^17.0.1:
     object-assign "^4.1.1"
     scheduler "^0.20.1"
 
-react-error-boundary@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/react-error-boundary/-/react-error-boundary-3.0.2.tgz#74399a4d9a68bfede1f3f4261ea0aabfc65d9868"
-  integrity sha512-KVzCusRTFpUYG0OFJbzbdRuxNQOBiGXVCqyNpBXM9z5NFsFLzMjUXMjx8gTja6M6WH+D2PvP3yKz4d8gD1PRaA==
+react-error-boundary@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-error-boundary/-/react-error-boundary-3.1.0.tgz#9487443df2f9ba1db90d8ab52351814907ea4af3"
+  integrity sha512-lmPrdi5SLRJR+AeJkqdkGlW/CRkAUvZnETahK58J4xb5wpbfDngasEGu+w0T1iXEhVrYBJZeW+c4V1hILCnMWQ==
   dependencies:
-    "@babel/runtime" "^7.11.2"
+    "@babel/runtime" "^7.12.5"
 
 react-fast-compare@3.2.0:
   version "3.2.0"
@@ -13839,10 +13817,10 @@ supports-hyperlinks@^2.0.0:
     has-flag "^4.0.0"
     supports-color "^7.0.0"
 
-svg-url-loader@7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/svg-url-loader/-/svg-url-loader-7.1.0.tgz#dca1113cc942984d5fcd6c429fa1709fe732a726"
-  integrity sha512-8dspAaRO4ObmMps+B8ATRg39EyTVhemA6gDWzUclQYDA+lDscNiPC4X+2cPeFU0o2/Ffkjk81JaE7l697uuXUg==
+svg-url-loader@7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/svg-url-loader/-/svg-url-loader-7.1.1.tgz#0cbdb30beb8679cb060c12eaf30085747fa7591f"
+  integrity sha512-NlsMCePODm7FQhU9aEZyGLPx5Xe1QRI1cSEUE6vTq5LJc9l9pStagvXoEIyZ9O3r00w6G3+Wbkimb+SC3DI/Aw==
   dependencies:
     file-loader "~6.2.0"
     loader-utils "~2.0.0"
@@ -14739,21 +14717,19 @@ webidl-conversions@^6.1.0:
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-6.1.0.tgz#9111b4d7ea80acd40f5270d666621afa78b69514"
   integrity sha512-qBIvFLGiBpLjfwmYAaHPXsn+ho5xZnGvyGvsarywGNc8VyQJUMHJ8OBKGGrPER0okBeMDaan4mNBlgBROxuI8w==
 
-webpack-bundle-analyzer@4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-4.1.0.tgz#31f9e5e187ee32fae2392b21806582cc6fe74cf9"
-  integrity sha512-R3oQaPn7KGJGqnOyuAbdNlH4Nm+w+gvoXQZWqYjgaMnR+vY4Ga8VD5ntfkKa00GarO7LQfOlePvtGvr254Z4Ag==
+webpack-bundle-analyzer@4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-4.2.0.tgz#f19ed40e1767ab35cad78c517529596e885bf64a"
+  integrity sha512-gmjpdL/AJeGAftSzA+bjIPiChUffjBelcH2+3woCUiRpQfuwrTJuWRyZuqegiwBAroMJp7gIwcJaGeol039zbQ==
   dependencies:
     acorn "^8.0.4"
     acorn-walk "^8.0.0"
     chalk "^4.1.0"
     commander "^6.2.0"
-    ejs "^3.1.5"
     express "^4.17.1"
     filesize "^6.1.0"
-    gzip-size "^5.1.1"
+    gzip-size "^6.0.0"
     lodash "^4.17.20"
-    mkdirp "^1.0.4"
     opener "^1.5.2"
     ws "^7.3.1"
 
