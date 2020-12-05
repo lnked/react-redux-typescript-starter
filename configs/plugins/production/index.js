@@ -1,5 +1,4 @@
 const WebpackPlugins = require('./webpack-plugins');
-const WebpackChunkHash = require('./webpack-chunk-hash');
 const CompressionPlugin = require('./compression-webpack-plugin');
 const WebpackCleanupPlugin = require('./webpack-cleanup-plugin');
 const WorkboxWebpackPlugin = require('./workbox-webpack-plugin');
@@ -11,7 +10,6 @@ module.exports = {
   plugins: [
     ...WebpackPlugins(),
     ...WebpackCleanupPlugin(),
-    ...WebpackChunkHash(),
     ...WorkboxWebpackPlugin(),
     ...ImageminWebpackPlugin(),
     ...CompressionPlugin(),

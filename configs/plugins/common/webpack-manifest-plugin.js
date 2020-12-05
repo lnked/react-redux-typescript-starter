@@ -7,5 +7,5 @@ module.exports = () => {
     new WebpackManifestPlugin({
       fileName: `${cacheDirectory}/${prefix}/manifest.json`,
     }),
-  ]
-}
+  ];
+};

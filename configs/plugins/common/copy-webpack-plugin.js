@@ -13,14 +13,10 @@ module.exports = () => {
           to: options.dist,
           globOptions: {
             dot: true,
-            ignore: [
-              resolve(options.public, 'index.html'),
-              '**/.gitkeep',
-              '**/.DS_Store',
-            ],
+            ignore: [resolve(options.public, 'index.html'), '**/.gitkeep', '**/.DS_Store'],
           },
         },
       ],
     }),
-  ]
-}
+  ];
+};

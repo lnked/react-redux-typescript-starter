@@ -11,5 +11,5 @@ module.exports = () => {
         configFile: resolve(root, './tsconfig.json'),
       },
     }),
-  ]
-}
+  ];
+};

@@ -1,3 +1,3 @@
-module.exports.trim = (str) => {
+module.exports.trim = str => {
   return str.substr(1);
-}
+};

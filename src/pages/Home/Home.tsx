@@ -36,7 +36,7 @@ export const Home = () => {
     <div>
       <div
         dangerouslySetInnerHTML={{ __html: JSON.stringify({ ui, data }) }}
-        style={{ padding: '15px', border: '1px solid violet', marginBottom: '20px' }}
+        style={{ padding: '15px', border: '1px solid red', marginBottom: '20px' }}
       />
 
       <Chip label="Chip size s" size={CHIP_SIZE.s} />

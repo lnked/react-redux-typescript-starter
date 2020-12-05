@@ -5,18 +5,22 @@ const { addRule } = require('../tools/rules');
 
 module.exports = () => {
   return [
-    addRule(/\.(jpe?g|png|gif|svg)$/, {
-      enforce: 'pre',
-      use: [
-        imageWebpack(),
-      ],
-    }, true),
+    addRule(
+      /\.(jpe?g|png|gif|svg)$/,
+      {
+        enforce: 'pre',
+        use: [imageWebpack()],
+      },
+      true,
+    ),
 
-    addRule(/\.js$/, {
-      enforce: 'pre',
-      use: [
-        source(),
-      ],
-    }, true),
+    addRule(
+      /\.js$/,
+      {
+        enforce: 'pre',
+        use: [source()],
+      },
+      true,
+    ),
   ];
 };

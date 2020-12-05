@@ -1,5 +1,5 @@
 const { merge } = require('webpack-merge');
-const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 
 const bail = require('../parts/bail');
 const plugins = require('../plugins/production');
@@ -10,13 +10,6 @@ const { analyze } = require('../options');
 
 const smp = new SpeedMeasurePlugin();
 
-const mergedConfig = merge(
-  bail,
-  plugins,
-  performance,
-  optimization,
-);
+const mergedConfig = merge(bail, plugins, performance, optimization);
 
-module.exports = analyze
-  ? smp.wrap(mergedConfig)
-  : mergedConfig;
+module.exports = analyze ? smp.wrap(mergedConfig) : mergedConfig;

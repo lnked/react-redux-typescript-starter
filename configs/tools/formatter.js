@@ -12,4 +12,4 @@ module.exports.formatter = (params, stringify = false) => {
   }
 
   return environments;
-}
+};

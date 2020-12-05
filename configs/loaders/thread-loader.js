@@ -8,6 +8,6 @@ module.exports = ({ name }) => {
       workers: 4,
       workerParallelJobs: 50,
       poolRespawn: production,
-    }
+    },
   };
-}
+};

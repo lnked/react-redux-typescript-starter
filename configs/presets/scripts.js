@@ -12,27 +12,32 @@ const ignoredGSAPFiles = ['BezierPlugin', 'DirectionalRotationPlugin', 'RoundPro
 
 module.exports = () => {
   return [
-    addRule(/\.(ts|js)x?$/, {
-      enforce: 'pre',
-      exclude: /(node_modules)/,
-      use: [
-        sourceMap(),
-      ],
-    }, false),
+    addRule(
+      /\.(ts|js)x?$/,
+      {
+        enforce: 'pre',
+        exclude: /(node_modules)/,
+        use: [sourceMap()],
+      },
+      false,
+    ),
 
-    addRule(/\.(ts|js)x?$/, {
-      exclude: /(node_modules)/,
-      use: [
-        thread('js'),
-        babel(),
-      ],
-    }, development),
+    addRule(
+      /\.(ts|js)x?$/,
+      {
+        exclude: /(node_modules)/,
+        use: [thread('js'), babel()],
+      },
+      development,
+    ),
 
-    addRule(/\.(ts|js)x?$/, {
-      include: ignoredGSAPFiles.map(fileName => resolve(`node_modules/gsap/${fileName}`)),
-      use: [
-        nullLoader(),
-      ],
-    }, false),
+    addRule(
+      /\.(ts|js)x?$/,
+      {
+        include: ignoredGSAPFiles.map(fileName => resolve(`node_modules/gsap/${fileName}`)),
+        use: [nullLoader()],
+      },
+      false,
+    ),
   ];
 };

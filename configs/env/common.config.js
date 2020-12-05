@@ -1,4 +1,3 @@
-const path = require('path');
 const { merge } = require('webpack-merge');
 
 const mode = require('../parts/mode');
@@ -27,5 +26,5 @@ module.exports = merge(
   plugins,
   resolve,
   externals,
-  // experiments,
+  experiments,
 );

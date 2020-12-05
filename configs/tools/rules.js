@@ -12,4 +12,4 @@ module.exports.addRule = (test, options, caching = true) => {
     use,
     ...restOptions,
   };
-}
+};

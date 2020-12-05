@@ -14,4 +14,4 @@ module.exports = () => {
       include: 'asyncChunks',
     }),
   ];
-}
+};

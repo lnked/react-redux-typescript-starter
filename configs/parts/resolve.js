@@ -6,4 +6,4 @@ module.exports = {
     mainFiles: ['index'],
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
   },
-}
+};

@@ -1,5 +1,3 @@
-const { cacheDirectory } = require('../options');
-
 module.exports = ({ prefix = '', limit, ...props }) => {
   return {
     loader: 'url-loader',
@@ -7,6 +5,6 @@ module.exports = ({ prefix = '', limit, ...props }) => {
       ...props,
       limit,
       name: `${prefix}/[hash].[ext]`,
-    }
+    },
   };
-}
+};

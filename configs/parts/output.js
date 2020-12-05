@@ -1,15 +1,13 @@
-const { resolve } = require('path');
-
-const { root, distName, hashName, staticPath, publicPath } = require('../options');
+const { dist, hashName, staticPath, publicPath } = require('../options');
 
 module.exports = {
   output: {
+    path: dist,
     pathinfo: false,
     publicPath: publicPath,
-    path: resolve(root, distName),
     filename: `${staticPath}/${hashName}.m.js`,
-    chunkFilename: `${staticPath}/${hashName}.c.js`,
-    sourceMapFilename: '[name].js.map',
+    chunkFilename: `${staticPath}/[id].[contenthash:5].c.js`,
+    sourceMapFilename: '[name].[contenthash:5].js.map',
     crossOriginLoading: 'anonymous',
   },
-}
+};

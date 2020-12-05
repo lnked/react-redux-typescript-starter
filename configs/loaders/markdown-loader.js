@@ -7,6 +7,6 @@ module.exports = () => {
     options: {
       pedantic: true,
       renderer,
-    }
-  }
-}
+    },
+  };
+};

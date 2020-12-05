@@ -10,11 +10,11 @@ const ipAddress = environment.SECRET_DEPLOY_SERVER_IP;
 const destination = environment.SECRET_DEPLOY_SERVER_DEST;
 
 const instance = Rsync.build({
-  flags:        ['a', 'v', 'z', 'progress'],
-  shell:        'ssh',
-  source:       join(dist, '*'),
-  destination:  `${user}@${ipAddress}:${destination}`,
-  exclude:      ['.git', '.DS_Store'],
+  flags: ['a', 'v', 'z', 'progress'],
+  shell: 'ssh',
+  source: join(dist, '*'),
+  destination: `${user}@${ipAddress}:${destination}`,
+  exclude: ['.git', '.DS_Store'],
 });
 
 const codes = {

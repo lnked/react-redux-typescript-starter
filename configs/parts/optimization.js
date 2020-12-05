@@ -1,18 +1,20 @@
 const Minimizer = require('../parts/minimizer');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+
+const options = require('../options');
 
 module.exports = {
   optimization: {
     nodeEnv: 'production',
-
-    chunkIds: 'named',
-    moduleIds: 'hashed',
-
-    minimize: true,
+    chunkIds: 'deterministic',
+    moduleIds: 'deterministic',
     usedExports: true,
-
+    emitOnErrors: true,
+    mangleWasmImports: true,
+    removeEmptyChunks: false,
     concatenateModules: true,
     mergeDuplicateChunks: true,
-
+    removeAvailableModules: true,
     runtimeChunk: {
       name: 'runtime',
     },
@@ -41,6 +43,7 @@ module.exports = {
         default: false,
       },
     },
-    minimizer: Minimizer(),
+    minimize: true,
+    minimizer: [...Minimizer(), new CssMinimizerPlugin({ cache: options.cacheDirectory })],
   },
-}
+};

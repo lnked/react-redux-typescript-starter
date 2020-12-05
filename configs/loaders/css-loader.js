@@ -11,6 +11,6 @@ module.exports = ({ importLoaders = 1, ...props }) => {
         mode: 'local',
       },
       importLoaders,
-    }
+    },
   };
-}
+};

@@ -8,7 +8,7 @@ module.exports = function findPath(prefix, name, realName) {
 
   const { alias } = config.resolve;
 
-  const paths = getPaths(alias[prefix], (realName || name));
+  const paths = getPaths(alias[prefix], realName || name);
 
   dirname = paths.find(f => fsExistsSyncWithCase(f));
 
@@ -20,5 +20,5 @@ module.exports = function findPath(prefix, name, realName) {
     return dirname;
   }
 
-  return `${prefix}/${(realName || name)}`;
+  return `${prefix}/${realName || name}`;
 };

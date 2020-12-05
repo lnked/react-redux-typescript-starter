@@ -8,7 +8,7 @@ const duplicates = {
   'value-equal': resolve(root, 'node_modules/value-equal'),
   'resolve-pathname': resolve(root, 'node_modules/resolve-pathname'),
   'react-is': resolve(root, 'node_modules/react-is'),
-  'immutable': resolve(root, 'node_modules/immutable'),
+  immutable: resolve(root, 'node_modules/immutable'),
   'rc-trigger': resolve(root, 'node_modules/rc-trigger'),
   'rc-animate': resolve(root, 'node_modules/rc-animate'),
   'create-react-context': resolve(root, 'node_modules/create-react-context'),

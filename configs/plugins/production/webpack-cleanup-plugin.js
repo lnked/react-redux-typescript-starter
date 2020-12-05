@@ -7,9 +7,7 @@ module.exports = () => {
     new WebpackCleanupPlugin({
       when: 'before',
       exclude: [],
-      include: [
-        `${options.dist}/*.*`,
-      ],
+      include: [`${options.dist}/*.*`],
     }),
-  ]
-}
+  ];
+};

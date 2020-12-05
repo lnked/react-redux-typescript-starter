@@ -3,6 +3,6 @@ module.exports = ({ ...props }) => {
     loader: 'sass-loader',
     options: {
       ...props,
-    }
+    },
   };
-}
+};

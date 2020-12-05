@@ -13,5 +13,5 @@ module.exports = () => {
       // Display full duplicates information? (Default: `false`)
       verbose: false,
     }),
-  ]
-}
+  ];
+};

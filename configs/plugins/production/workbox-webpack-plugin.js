@@ -1,7 +1,5 @@
 const { GenerateSW, InjectManifest } = require('workbox-webpack-plugin');
 
-const options = require('../../options');
-
 module.exports = () => {
   return [
     new GenerateSW({
@@ -9,6 +7,5 @@ module.exports = () => {
       include: [/\.html$/, /\.js$/, /\.json$/],
       exclude: [/\.jpg$/, /\.png$/, /\.map$/, /runtime.*\.js$/, /^manifest.*\.js(?:on)?$/],
     }),
-  ]
-}
-
+  ];
+};

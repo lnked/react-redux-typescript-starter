@@ -2,14 +2,10 @@ const webpack = require('webpack');
 const LoadablePlugin = require('@loadable/webpack-plugin');
 
 const options = require('../../options');
-const { environment, environmentFiltered } = require('../../tools/env')
+const { environmentFiltered } = require('../../tools/env');
 
 module.exports = () => {
   return [
-    new webpack.WatchIgnorePlugin([
-      /scss\.d\.ts$/
-    ]),
-
     new webpack.NoEmitOnErrorsPlugin(),
 
     new webpack.DefinePlugin({
@@ -26,5 +22,5 @@ module.exports = () => {
     }),
 
     new LoadablePlugin(),
-  ]
-}
+  ];
+};

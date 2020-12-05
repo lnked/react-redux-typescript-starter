@@ -5,15 +5,6 @@ module.exports = {
   warnings: false,
   mangle: true, // Note `mangle.properties` is `false` by default.
   module: false,
-  toplevel: false,
-  nameCache: null,
-  ie8: false,
-  keep_classnames: undefined,
-  safari10: true,
-  keep_fnames: !options.release,
-  compressor: {
-    warnings: false,
-  },
   parse: {
     html5_comments: false,
   },
@@ -52,18 +43,8 @@ module.exports = {
     toplevel: false,
     typeofs: false,
     unused: true,
-
-    // Switch off all types of compression except those needed to convince
-    // react-devtools that we're using a production build
     conditionals: true,
     dead_code: true,
     evaluate: true,
   },
-  output: {
-    ecma: 5,
-    ascii_only: true,
-    comments: false,
-    beautify: false,
-    indent_level: 0,
-  },
-}
+};

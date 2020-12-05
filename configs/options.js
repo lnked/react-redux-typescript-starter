@@ -15,13 +15,9 @@ const development = environment === 'development';
 
 const publicPath = development ? '' : '';
 
-const hashName = development
-  ? '[name]'
-  : '[name].[contenthash:6]';
+const hashName = development ? '[name]' : '[name].[contenthash:5]';
 
-const fileName = development
-  ? '[path][name].[ext]'
-  : '[name].[contenthash].[ext]';
+const fileName = development ? '[path][name].[ext]' : '[name].[contenthash:5].[ext]';
 
 module.exports = {
   root,
@@ -36,7 +32,7 @@ module.exports = {
   environment,
   preload: false,
   prefetch: ['**/*.js'],
-  sourceMap: false,
+  sourceMap: true,
   release: options.release || options.analyze || false,
   analyze: options.analyze || false,
   compression: options.release || false,
@@ -47,4 +43,4 @@ module.exports = {
   sourcePath: resolve(root, 'src'),
   serverPath: resolve(root, 'src/server'),
   cacheDirectory: resolve(root, '.cache'),
-}
+};

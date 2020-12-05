@@ -4,10 +4,14 @@ const options = require('../../options');
 
 module.exports = () => {
   return [
-    new webpack.HashedModuleIdsPlugin({
+    new webpack.ids.HashedModuleIdsPlugin({
       hashFunction: 'md4',
       hashDigest: 'base64',
       hashDigestLength: 5,
+    }),
+
+    new webpack.ids.DeterministicModuleIdsPlugin({
+      maxLength: 5,
     }),
 
     new webpack.LoaderOptionsPlugin({
@@ -26,5 +30,5 @@ module.exports = () => {
     new webpack.IgnorePlugin({
       resourceRegExp: /redux-immutable-state-invariant/,
     }),
-  ]
-}
+  ];
+};

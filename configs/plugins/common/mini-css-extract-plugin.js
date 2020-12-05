@@ -7,7 +7,7 @@ module.exports = () => {
     new MiniCssExtractPlugin({
       ignoreOrder: false,
       chunkFilename: '[id].css',
-      filename: development ? '[name].css' : '[name].[contenthash].css',
+      filename: development ? '[name].css' : '[name].[contenthash:5].css',
     }),
   ];
 };

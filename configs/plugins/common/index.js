@@ -3,9 +3,8 @@ const DuplicatesPlugin = require('./duplicates-plugin');
 const CopyWebpackPlugin = require('./copy-webpack-plugin');
 const HtmlWebpackPlugin = require('./html-webpack-plugin');
 const MiniCssExtractPlugin = require('./mini-css-extract-plugin');
-const WebpackManifestPlugin = require('./webpack-manifest-plugin');
+// const WebpackManifestPlugin = require('./webpack-manifest-plugin');
 const CircularDependencyPlugin = require('./circular-dependency-plugin');
-const UnusedFilesWebpackPlugin = require('./unused-files-webpack-plugin');
 const CaseSensitivePathsPlugin = require('./case-sensitive-paths-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('./ts-checker-webpack');
 
@@ -16,8 +15,7 @@ module.exports = {
     ...CopyWebpackPlugin(),
     ...HtmlWebpackPlugin(),
     ...MiniCssExtractPlugin(),
-    ...WebpackManifestPlugin(),
-    ...UnusedFilesWebpackPlugin(),
+    // ...WebpackManifestPlugin(),
     ...CaseSensitivePathsPlugin(),
     ...CircularDependencyPlugin(),
     ...ForkTsCheckerWebpackPlugin(),

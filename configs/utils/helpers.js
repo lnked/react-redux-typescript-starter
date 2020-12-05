@@ -1,5 +1,5 @@
 module.exports.getTemplate = (type = 'function', name) => {
-  const template = []
+  const template = [];
 
   if (type === 'route') {
     template.push(
@@ -16,8 +16,7 @@ module.exports.getTemplate = (type = 'function', name) => {
       `\t\tdescription: 'Page description',`,
       `\t}`,
       `]\n`,
-
-    )
+    );
   }
 
   if (type === 'test') {
@@ -30,7 +29,7 @@ module.exports.getTemplate = (type = 'function', name) => {
       `\tconst rendered: any = renderer.create(<${name} />).toJSON();`,
       `\texpect(rendered).toBeTruthy();`,
       `});\n`,
-    )
+    );
   }
 
   if (type === 'function') {
@@ -51,7 +50,7 @@ module.exports.getTemplate = (type = 'function', name) => {
       `\t);`,
       `};\n`,
       `export default ${name};\n`,
-    )
+    );
   }
 
   if (type === 'class') {
@@ -115,7 +114,7 @@ module.exports.getTemplate = (type = 'function', name) => {
       `\t}\n`,
       `}\n`,
       `export default ${name};\n`,
-    )
+    );
   }
 
   if (['types.class', 'types.function'].indexOf(type) >= 0) {
@@ -129,15 +128,11 @@ module.exports.getTemplate = (type = 'function', name) => {
       `\thandleChange?: (e: Event) => void | boolean;`,
       `\tchildren?: React.ReactNode[] | JSX.Element[] | JSX.Element | any;`,
       `}\n`,
-    )
+    );
   }
 
   if (type === 'types.class') {
-    template.push(
-      `export interface InnerState {`,
-      `\tvalue?: string | number;`,
-      `}\n`,
-    )
+    template.push(`export interface InnerState {`, `\tvalue?: string | number;`, `}\n`);
   }
 
   if (type === 'styles') {
@@ -148,16 +143,19 @@ module.exports.getTemplate = (type = 'function', name) => {
       `\tcolor: \${CommonStyles.themeColor};`,
       `\`;\n`,
       `export const StyledButton = styled.button\`\`;\n`,
-    )
+    );
   }
 
-  return template.join('\n').replace(/\t/g, '  ')
-}
+  return template.join('\n').replace(/\t/g, '  ');
+};
 
-module.exports.folderName = (str) => {
+module.exports.folderName = str => {
   return str.replace(/\s+/g, '-').toLowerCase();
-}
+};
 
-module.exports.componentName = (str) => {
-  return str.replace(/(\b\w)/gi, (m) => m.toUpperCase()).replace(/\s+/g, '').replace(/-/g, '');
-}
+module.exports.componentName = str => {
+  return str
+    .replace(/(\b\w)/gi, m => m.toUpperCase())
+    .replace(/\s+/g, '')
+    .replace(/-/g, '');
+};

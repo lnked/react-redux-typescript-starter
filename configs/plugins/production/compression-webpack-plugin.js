@@ -5,7 +5,7 @@ const options = require('../../options');
 
 module.exports = () => {
   if (!options.compression) {
-    return []
+    return [];
   }
 
   return [
@@ -23,5 +23,5 @@ module.exports = () => {
         return zopfli.gzip(input, compressionOptions, callback);
       },
     }),
-  ]
-}
+  ];
+};

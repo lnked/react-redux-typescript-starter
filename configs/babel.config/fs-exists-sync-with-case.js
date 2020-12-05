@@ -13,4 +13,4 @@ module.exports = function fileExistsWithCaseSync(filepath) {
   }
 
   return fileExistsWithCaseSync(dir);
-}
+};

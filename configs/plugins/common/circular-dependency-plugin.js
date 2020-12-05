@@ -5,5 +5,5 @@ module.exports = () => {
     new CircularDependencyPlugin({
       exclude: /node_modules/,
     }),
-  ]
-}
+  ];
+};

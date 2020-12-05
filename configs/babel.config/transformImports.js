@@ -48,4 +48,4 @@ module.exports = {
   // '\.\.\/services\/?(((\\w*)?\/?)*)': transformImports('services'),
   // '\.\.\/fragments\/?(((\\w*)?\/?)*)': transformImports('fragments'),
   // '\.\.\/components\/?(((\\w*)?\/?)*)': transformImports('components'),
-}
+};

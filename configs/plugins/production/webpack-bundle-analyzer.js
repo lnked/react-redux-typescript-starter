@@ -4,12 +4,12 @@ const options = require('../../options');
 
 module.exports = () => {
   if (!options.analyze) {
-    return []
+    return [];
   }
 
   return [
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
     }),
-  ]
-}
+  ];
+};

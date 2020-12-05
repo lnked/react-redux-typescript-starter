@@ -6,7 +6,7 @@ module.exports = function findRealExtention(paths) {
 
   let dirname = '';
 
-  paths.forEach((dir) => {
+  paths.forEach(dir => {
     const ext = extensions.find(e => fsExistsSyncWithCase(dir + e));
 
     if (ext) {

@@ -6,21 +6,23 @@ const { configs } = require('../../html-minify');
 const { environment } = require('../../tools/env');
 const { root, production, preload, prefetch } = require('../../options');
 
-const options = production ? {
-  hash: false,
-  cache: true,
-  inject: true,
-  compile: false,
-  preload,
-  prefetch,
-  // chunksSortMode: 'dependency',
-  production: production,
-  minify: {
-    ...configs,
-  },
-} : {
-    minify: false,
-  };
+const options = production
+  ? {
+      hash: false,
+      cache: true,
+      inject: true,
+      compile: false,
+      preload,
+      prefetch,
+      // chunksSortMode: 'dependency',
+      production: production,
+      minify: {
+        ...configs,
+      },
+    }
+  : {
+      minify: false,
+    };
 
 module.exports = () => {
   return [
@@ -35,5 +37,5 @@ module.exports = () => {
       ...options,
     }),
     new ResourceHintWebpackPlugin(),
-  ]
-}
+  ];
+};
