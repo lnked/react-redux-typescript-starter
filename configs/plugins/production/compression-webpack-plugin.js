@@ -10,9 +10,8 @@ module.exports = () => {
 
   return [
     new CompressionPlugin({
-      cache: options.cacheDirectory,
       test: /\.(js|css|html|svg)$/,
-      filename: '[path].gz[query]',
+      filename: '[path][base].gz',
       minRatio: 0.8,
       threshold: 8192,
       compressionOptions: {
@@ -22,6 +21,7 @@ module.exports = () => {
       algorithm(input, compressionOptions, callback) {
         return zopfli.gzip(input, compressionOptions, callback);
       },
+      deleteOriginalAssets: false,
     }),
   ];
 };

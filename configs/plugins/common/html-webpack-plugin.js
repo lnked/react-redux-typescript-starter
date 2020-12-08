@@ -14,7 +14,6 @@ const options = production
       compile: false,
       preload,
       prefetch,
-      // chunksSortMode: 'dependency',
       production: production,
       minify: {
         ...configs,
@@ -27,10 +26,10 @@ const options = production
 module.exports = () => {
   return [
     new HtmlWebpackPlugin({
-      PUBLIC_URL: '/',
-      inject: true,
-      filename: 'index.html',
+      alwaysWriteToDisk: true,
       template: resolve(root, 'public/index.html'),
+      filename: 'index.html',
+      PUBLIC_URL: '/',
       title: JSON.parse(environment.APP_NAME),
       description: JSON.parse(environment.APP_DESCRIPTION),
       excludeAssets: [/runtime.*.js/],

@@ -1,3 +1,3 @@
 module.exports = {
-  node: false, // remove Node polyfills
+  node: false,
 };

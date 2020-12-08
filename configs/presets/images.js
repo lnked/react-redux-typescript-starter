@@ -9,6 +9,7 @@ module.exports = () => {
     addRule(
       /\.(gif|png|jpe?g|svg)$/i,
       {
+        type: 'asset/resource',
         use: [
           file({
             name: () => fileName,
