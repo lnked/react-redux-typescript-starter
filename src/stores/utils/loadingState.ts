@@ -1,4 +1,6 @@
-export const loadingState = (name, { state }) => ({
+import { StateObject } from 'stores/types';
+
+export const loadingState = (name: string, { state }: StateObject) => ({
   ...state,
   [name]: {
     ...state[name],

@@ -3,8 +3,11 @@
 export const parseQueryString = (str: string) =>
   str.split('&').reduce((acc, el) => {
     const [key, value] = el.split('=');
-    acc[key] = value;
-    return acc;
+
+    return {
+      ...acc,
+      [key]: value,
+    };
   }, {});
 
 // const params = parseQueryString(x);

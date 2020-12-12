@@ -26,7 +26,7 @@ export const CHIP_SIZE: Record<ChipSizeType, ChipSizeType> = {
 
 export const Chip: React.FC<Props> = ({ size, label, children }) => {
   return (
-    <div className={classNames(styles.chip, styles[size])}>
+    <div className={classNames(styles.chip, size && styles[size])}>
       <div className={styles.chip__name}>{label || children}</div>
     </div>
   );

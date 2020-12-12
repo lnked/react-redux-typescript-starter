@@ -21,7 +21,7 @@ module.exports = {
     '@typescript-eslint/no-extra-semi': ['warn'],
     '@typescript-eslint/ban-types': 'warn',
     '@typescript-eslint/no-empty-interface': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-extraneous-class': 'warn',
     '@typescript-eslint/ban-ts-comment': 'warn',

@@ -1,8 +1,10 @@
-export const receiveState = (name, { state, action }) => ({
+import { StateObject } from 'stores/types';
+
+export const receiveState = (name: string, { state, action }: StateObject) => ({
   ...state,
   [name]: {
     ...state[name],
-    data: action.payload,
+    data: action?.payload,
     ui: {
       ...state[name].ui,
       isLoading: false,
