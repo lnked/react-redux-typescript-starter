@@ -8,6 +8,7 @@ module.exports = {
     nodeEnv: 'production',
     chunkIds: 'deterministic',
     moduleIds: 'deterministic',
+    mangleExports: 'deterministic',
     usedExports: true,
     emitOnErrors: true,
     mangleWasmImports: true,

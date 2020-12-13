@@ -5,7 +5,7 @@ const terserOptions = require('../terser-options');
 module.exports = () => {
   return [
     new TerserPlugin({
-      test: /\.js(\?.*)?$/i,
+      // test: /\.js(\?.*)?$/i,
       parallel: true,
       extractComments: true,
       terserOptions,
