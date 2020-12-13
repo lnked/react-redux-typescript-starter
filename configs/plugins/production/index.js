@@ -3,7 +3,6 @@ const CompressionPlugin = require('./compression-webpack-plugin');
 const WebpackCleanupPlugin = require('./webpack-cleanup-plugin');
 const WorkboxWebpackPlugin = require('./workbox-webpack-plugin');
 const BundleAnalyzerPlugin = require('./webpack-bundle-analyzer');
-const ImageminWebpackPlugin = require('./imagemin-webpack-plugin');
 const PreloadWebpackPlugin = require('./preload-webpack-plugin');
 
 module.exports = {
@@ -11,7 +10,6 @@ module.exports = {
     ...WebpackPlugins(),
     ...WebpackCleanupPlugin(),
     ...WorkboxWebpackPlugin(),
-    ...ImageminWebpackPlugin(),
     ...CompressionPlugin(),
     ...PreloadWebpackPlugin(),
     ...BundleAnalyzerPlugin(),

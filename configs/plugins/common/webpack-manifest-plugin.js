@@ -1,4 +1,4 @@
-const WebpackManifestPlugin = require('webpack-manifest-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 const { prefix, cacheDirectory } = require('../../options');
 
