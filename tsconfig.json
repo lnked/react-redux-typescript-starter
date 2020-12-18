@@ -22,6 +22,7 @@
     "downlevelIteration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
     "lib": [
       "dom",

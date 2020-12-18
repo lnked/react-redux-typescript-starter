@@ -2297,10 +2297,10 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.0.tgz#7036640b4e21cc2f259ae826ce843d277dad8cff"
   integrity sha512-RJJrrySY7A8havqpGObOB4W92QXKJo63/jFLLgpvOtsGUqbQZ9Sbgl35KMm1DjC6j7AvmmU2bIno+3IyEaemaw==
 
-"@types/styled-components@5.1.5":
-  version "5.1.5"
-  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.5.tgz#a98e2ead1a1c7660b966f3aade4df9c0ec8ed75a"
-  integrity sha512-VWwoKm39W783a75oILtdCjnNn+FSV8Yh3O9naIudtZCAkk+rRfwLWzuPjf5k/OilENgZqAkxJ9sukSOZTAD86g==
+"@types/styled-components@5.1.6":
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.6.tgz#b47460f1684072576999955b5b5153e6f238622c"
+  integrity sha512-YN1j99dOL92T+76qhQcrPUb2nKZLzawko9j3IIwTHdKloMx20WwcGkBwdpbi8SpAkTc362rgfIllqPdSUplmRw==
   dependencies:
     "@types/hoist-non-react-statics" "*"
     "@types/react" "*"
@@ -4399,10 +4399,10 @@ compressible@~2.0.16:
   dependencies:
     mime-db ">= 1.43.0 < 2"
 
-compression-webpack-plugin@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/compression-webpack-plugin/-/compression-webpack-plugin-7.0.0.tgz#a48401e62f8b89a21fcf96928991e05de5fbd6cf"
-  integrity sha512-IBB47JDleWQ+ZElXQIi+225qj5NOPem0/u8tQuXA/R2R0UpnPlqtD6JDXNbjq3xYhEi8z/Hw3SvORWaafrxe0w==
+compression-webpack-plugin@7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/compression-webpack-plugin/-/compression-webpack-plugin-7.1.0.tgz#83fd43f0a5edefc55e1aab0fa1d8bb820a9d66c2"
+  integrity sha512-6sMsCXuuyEcNACgKEm0bQzghcol6TNz/otAwuvys80PFf0C1ReV77OTVvtmjsPvfND9QtztMnSKz2V7UzePWYA==
   dependencies:
     schema-utils "^3.0.0"
     serialize-javascript "^5.0.1"
