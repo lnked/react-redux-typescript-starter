@@ -13,7 +13,7 @@ const ignoredGSAPFiles = ['BezierPlugin', 'DirectionalRotationPlugin', 'RoundPro
 module.exports = () => {
   return [
     addRule(
-      /\.(ts|js)x?$/,
+      /\.js$/,
       {
         enforce: 'pre',
         exclude: /(node_modules)/,

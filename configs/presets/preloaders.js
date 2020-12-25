@@ -1,4 +1,4 @@
-const source = require('../loaders/source-map-loader');
+const sourceMap = require('../loaders/source-map-loader');
 const imageWebpack = require('../loaders/image-webpack-loader');
 
 const { addRule } = require('../tools/rules');
@@ -18,7 +18,7 @@ module.exports = () => {
       /\.js$/,
       {
         enforce: 'pre',
-        use: [source()],
+        use: [sourceMap()],
       },
       true,
     ),
