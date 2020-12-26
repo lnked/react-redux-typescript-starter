@@ -17,7 +17,6 @@ module.exports = {
     unsafe: false,
     drop_console: true,
     drop_debugger: true,
-
     arrows: false,
     booleans: true,
     warnings: false,

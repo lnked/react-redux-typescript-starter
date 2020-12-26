@@ -16,32 +16,24 @@ module.exports = {
     concatenateModules: true,
     mergeDuplicateChunks: true,
     removeAvailableModules: true,
-    runtimeChunk: {
-      name: 'runtime',
-    },
+    runtimeChunk: 'single',
     splitChunks: {
       chunks: 'all',
+      minSize: 0,
       maxAsyncRequests: 20,
       enforceSizeThreshold: 50000,
       maxInitialRequests: Infinity,
-      minSize: 0,
       cacheGroups: {
-        commons: {
-          test: /\.(j|t)sx?$/,
-          chunks: 'all',
-          minChunks: 2,
-          name: 'commons',
-          enforce: true,
-        },
-        vendors: {
+        defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
-          priority: -10,
-          chunks: 'all',
           name: 'vendors',
-          enforce: true,
+          chunks: 'all',
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
           reuseExistingChunk: true,
         },
-        default: false,
       },
     },
     minimize: true,
