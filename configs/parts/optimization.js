@@ -16,18 +16,24 @@ module.exports = {
     concatenateModules: true,
     mergeDuplicateChunks: true,
     removeAvailableModules: true,
-    runtimeChunk: 'single',
+    // runtimeChunk: 'single',
+    runtimeChunk: {
+      name: 'runtime',
+    },
     splitChunks: {
-      chunks: 'all',
+      chunks: 'async',
       minSize: 0,
-      maxAsyncRequests: 20,
-      enforceSizeThreshold: 50000,
+      minChunks: 1,
+      maxAsyncRequests: 5,
       maxInitialRequests: Infinity,
+      automaticNameDelimiter: '~',
+      enforceSizeThreshold: 50000,
       cacheGroups: {
         defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
           chunks: 'all',
+          name: 'vendors',
+          priority: -10,
         },
         default: {
           minChunks: 2,
