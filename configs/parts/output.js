@@ -6,7 +6,7 @@ module.exports = {
     pathinfo: false,
     publicPath: publicPath,
     filename: `${staticPath}/${hashName}.js`,
-    chunkFilename: `${staticPath}/[id].[contenthash:5].js`,
+    chunkFilename: `${staticPath}/[name].[contenthash:5].js`,
     sourceMapFilename: '[name].[contenthash:5].js.map',
     crossOriginLoading: 'anonymous',
   },

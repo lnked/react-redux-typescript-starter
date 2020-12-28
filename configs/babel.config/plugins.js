@@ -19,7 +19,7 @@ module.exports = function ({ development, production, test, loose, legacy }) {
     ...plugins,
     ['macros'],
     ['module:fast-async', { spec: true }],
-    ['@loadable/babel-plugin'],
+    ['universal-import'],
     [
       'babel-plugin-styled-components',
       {

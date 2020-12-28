@@ -1,12 +1,12 @@
 import * as React from 'react';
-import loadable from '@loadable/component';
+import universal from 'react-universal-component';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
 import { setHistory } from 'utils/redirect';
 
 import { Home } from 'pages/Home';
 
-export const NoMatch = loadable(
+export const NoMatch = universal(
   () =>
     import(
       /* webpackChunkName: "nomatch", webpackPrefetch: true */

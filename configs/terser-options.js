@@ -1,10 +1,8 @@
-const options = require('./options');
-
 module.exports = {
   ecma: 5,
   warnings: false,
-  mangle: true, // Note `mangle.properties` is `false` by default.
   module: false,
+  mangle: true, // Note `mangle.properties` is `false` by default.
   parse: {
     html5_comments: false,
   },

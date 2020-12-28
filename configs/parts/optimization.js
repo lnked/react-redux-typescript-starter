@@ -16,7 +16,6 @@ module.exports = {
     concatenateModules: true,
     mergeDuplicateChunks: true,
     removeAvailableModules: true,
-    // runtimeChunk: 'single',
     runtimeChunk: {
       name: 'runtime',
     },

@@ -21,6 +21,7 @@ const fileName = development ? '[path][name].[ext]' : '[name].[contenthash:5].[e
 
 module.exports = {
   root,
+  rootPath: root,
   prefix,
   isModern,
   hashName,
