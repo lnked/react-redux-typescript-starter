@@ -4,11 +4,7 @@ module.exports = function ({ development, production, test, loose, legacy }) {
   const plugins = [];
 
   if (test) {
-    return [
-      '@babel/plugin-proposal-class-properties',
-      '@babel/plugin-proposal-export-default-from',
-      '@babel/plugin-proposal-export-namespace-from',
-    ];
+    return ['@babel/plugin-proposal-export-default-from', '@babel/plugin-proposal-export-namespace-from'];
   }
 
   if (development) {
@@ -19,7 +15,6 @@ module.exports = function ({ development, production, test, loose, legacy }) {
     ...plugins,
     ['macros'],
     ['module:fast-async', { spec: true }],
-    ['universal-import'],
     [
       'babel-plugin-styled-components',
       {
@@ -50,19 +45,10 @@ module.exports = function ({ development, production, test, loose, legacy }) {
     ],
     ['transform-imports', transformImports],
     ['@babel/plugin-proposal-decorators', { legacy }],
-    ['@babel/plugin-transform-spread', { loose }],
-    ['@babel/plugin-proposal-optional-chaining', { loose }],
-    ['@babel/plugin-proposal-nullish-coalescing-operator', { loose }],
-    ['@babel/plugin-proposal-class-properties', { loose }],
-    ['@babel/plugin-transform-template-literals', { loose }],
     ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }],
-
-    '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-transform-object-assign',
     '@babel/plugin-transform-object-set-prototype-of-to-assign',
-
     '@babel/plugin-proposal-export-default-from',
-    '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-transform-react-constant-elements',
     '@babel/plugin-transform-react-inline-elements',
   ];

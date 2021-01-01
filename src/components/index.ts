@@ -7,5 +7,4 @@ export { Checkbox } from './Checkbox';
 export { JsonPretty } from './JsonPretty';
 export { PreloadLink } from './PreloadLink';
 export { ButtonGroup } from './ButtonGroup';
-export { ErrorBoundary } from './ErrorBoundary';
 export { ErrorFallback } from './ErrorFallback';

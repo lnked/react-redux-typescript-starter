@@ -1,31 +1,20 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
 export interface OuterProps {
   children: React.ReactChild[];
 }
 
-export class Modal extends React.Component<OuterProps, {}> {
-  static displayName = 'Modal';
+const element = document.createElement('div');
 
-  element: HTMLElement | null = null;
+export const Modal: React.FC<any> = ({ children }) => {
+  useEffect(() => {
+    document.body.appendChild(element);
 
-  componentDidMount() {
-    this.element = document.createElement('div');
-    this.element && document.body.appendChild(this.element);
-  }
+    return () => {
+      element && document.body.removeChild(element);
+    };
+  }, []);
 
-  componentWillUnmount() {
-    this.element && document.body.removeChild(this.element);
-  }
-
-  render() {
-    const { children } = this.props;
-
-    if (!this.element) {
-      return null;
-    }
-
-    return createPortal(children, this.element);
-  }
-}
+  return createPortal(children, element);
+};

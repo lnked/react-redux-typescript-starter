@@ -1,41 +1,25 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 
 import { StyledLabel, StyledInput, StyledBox, StyledText } from './styles';
 
-export interface OuterProps {
+export interface Props {
   checked?: boolean;
 }
 
-export interface InnerState {
-  isChecked: boolean;
-}
+export const Checkbox: React.FC<Props> = ({ checked = false }) => {
+  const [isChecked, setChecked] = useState(checked);
 
-export class Checkbox extends React.Component<OuterProps, InnerState> {
-  static displayName = 'Checkbox';
-
-  static defaultProps = {
-    checked: false,
+  const handleChange = () => {
+    setChecked(checked => !checked);
   };
 
-  state = {
-    isChecked: this.props.checked || false,
-  };
+  return (
+    <StyledLabel>
+      <StyledInput type="checkbox" value={1} checked={isChecked} onChange={handleChange} />
 
-  onChange = () => {
-    this.setState(state => ({ isChecked: !state.isChecked }));
-  };
+      <StyledBox />
 
-  render() {
-    const { isChecked } = this.state;
-
-    return (
-      <StyledLabel>
-        <StyledInput type="checkbox" value={1} checked={isChecked} onChange={this.onChange} />
-
-        <StyledBox />
-
-        <StyledText>{isChecked ? 'checked' : 'UnChecked'}</StyledText>
-      </StyledLabel>
-    );
-  }
-}
+      <StyledText>{isChecked ? 'checked' : 'UnChecked'}</StyledText>
+    </StyledLabel>
+  );
+};

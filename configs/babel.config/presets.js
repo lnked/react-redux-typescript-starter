@@ -1,4 +1,4 @@
-module.exports = function ({ development, production, test, loose, useBuiltIns, modules, targets }) {
+module.exports = function ({ development, production, test, loose, useBuiltIns, targets }) {
   const configs = [];
 
   production &&
@@ -6,10 +6,10 @@ module.exports = function ({ development, production, test, loose, useBuiltIns, 
       '@babel/preset-env',
       {
         loose,
-        modules,
         targets,
         corejs: '3.0.0',
         useBuiltIns,
+        modules: false,
         shippedProposals: true,
         forceAllTransforms: production,
         exclude: [

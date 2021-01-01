@@ -1,12 +1,11 @@
-import * as React from 'react';
-import universal from 'react-universal-component';
+import React, { Fragment, lazy } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
 import { setHistory } from 'utils/redirect';
 
 import { Home } from 'pages/Home';
 
-export const NoMatch = universal(
+export const NoMatch = lazy(
   () =>
     import(
       /* webpackChunkName: "nomatch", webpackPrefetch: true */
@@ -35,7 +34,7 @@ export type RouteProps = {};
 
 function Switcher(store: any) {
   return (
-    <React.Fragment>
+    <Fragment>
       <Route component={HistorySetter} />
 
       <Switch>
@@ -53,7 +52,7 @@ function Switcher(store: any) {
 
         <Route path="*" render={props => <NoMatch {...store} {...props} />} exact />
       </Switch>
-    </React.Fragment>
+    </Fragment>
   );
 }
 

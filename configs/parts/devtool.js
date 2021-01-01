@@ -1,6 +1,6 @@
 const { production } = require('../options');
 
-const devtool = production ? 'inline-source-map' : 'eval-cheap-source-map';
+const devtool = production ? false : 'eval-cheap-module-source-map';
 
 module.exports = {
   devtool,

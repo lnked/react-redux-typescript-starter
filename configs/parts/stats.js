@@ -1,3 +1,5 @@
+const { release } = require('../options');
+
 module.exports = {
-  stats: {},
+  stats: release ? 'verbose' : 'normal',
 };
