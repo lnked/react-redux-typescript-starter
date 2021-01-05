@@ -1,5 +1,32 @@
 const { release } = require('../options');
 
 module.exports = {
-  stats: release ? 'verbose' : 'normal',
+  stats: {
+    source: true,
+    assets: true,
+    errors: true,
+    errorDetails: true,
+    warnings: true,
+    all: false,
+    hash: false,
+    version: false,
+    timings: false,
+    entrypoints: false,
+    cached: false,
+    chunks: false,
+    chunkGroups: false,
+    chunkModules: false,
+    chunkOrigins: false,
+    moduleAssets: false,
+    cachedAssets: false,
+    children: false,
+    moduleTrace: false,
+    assets: true,
+    modules: true,
+    publicPath: false,
+    performance: true,
+    runtimeModules: false,
+    groupAssetsByPath: true,
+    groupAssetsByEmitStatus: false,
+  },
 };
