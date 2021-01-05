@@ -79,7 +79,7 @@
     "@types/i18next": "13.0.0",
     "@types/jest": "26.0.19",
     "@types/nanoid": "2.1.0",
-    "@types/node": "14.14.19",
+    "@types/node": "14.14.20",
     "@types/react": "^17.0.0",
     "@types/react-dom": "17.0.0",
     "@types/react-inlinesvg": "^1.0.0",
