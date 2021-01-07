@@ -2,6 +2,7 @@ const { release } = require('../options');
 
 module.exports = {
   stats: {
+    colors: true,
     source: true,
     assets: true,
     errors: true,
