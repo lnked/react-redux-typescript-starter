@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const SizePlugin = require('size-plugin');
 
 const options = require('../../options');
 
@@ -30,5 +31,7 @@ module.exports = () => {
     new webpack.IgnorePlugin({
       resourceRegExp: /redux-immutable-state-invariant/,
     }),
+
+    new SizePlugin(),
   ];
 };
