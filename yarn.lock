@@ -3010,10 +3010,10 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-autoprefixer@10.2.0:
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.2.0.tgz#73c148882ff771b48df9e76eaad88565516eda0c"
-  integrity sha512-5SdPoK2Q3rxVh4xC8GKdy772KbEESdl2SyJADCw5FMUrd5eNtpOTLo7oCFMEKvK86zQdvsIVTYk93E8dAfRy6g==
+autoprefixer@10.2.1:
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.2.1.tgz#ce96870df6ddd9ba4c9bbba56c54b9ef4b00a962"
+  integrity sha512-dwP0UjyYvROUvtU+boBx8ff5pPWami1NGTrJs9YUsS/oZVbRAcdNHOOuXSA1fc46tgKqe072cVaKD69rvCc3QQ==
   dependencies:
     browserslist "^4.16.1"
     caniuse-lite "^1.0.30001173"
@@ -11720,10 +11720,10 @@ railroad-diagrams@^1.0.0:
   resolved "https://registry.yarnpkg.com/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz#eb7e6267548ddedfb899c1b90e57374559cddb7e"
   integrity sha1-635iZ1SN3t+4mcG5Dlc3RVnN234=
 
-rambda@6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-6.4.0.tgz#bf080047b03d8d2c72e3ce5c17c603517a65749a"
-  integrity sha512-aBoE7YrGQP1xnxjyg5fhupfS+FTrDVjZMtwpezl15RKLNnKLOYDfjx/0xDE+8GyWbbZfODRkAOZmnpvxrAONbQ==
+rambda@6.5.1:
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-6.5.1.tgz#8ebef4eb2d447d1ac0266ce5950b5fc7095a7a8e"
+  integrity sha512-PZOPpVsocOMNs3bOz4ok3CEUFWbuGwZV2+lPZG5o0Q37QoqLI/GizJRdcv6ZDz2i9ZmgE5vOOVIBbTrV1y0sJQ==
 
 randexp@0.4.6:
   version "0.4.6"
