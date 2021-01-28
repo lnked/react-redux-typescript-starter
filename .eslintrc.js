@@ -11,6 +11,7 @@ module.exports = {
   env: {
     es6: true,
     node: true,
+    jest: true,
     browser: true,
   },
   plugins: ['@babel', 'react', 'react-hooks', 'boundaries', 'prettier'],
