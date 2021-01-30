@@ -67,8 +67,8 @@
     "@babel/preset-typescript": "7.12.7",
     "@gfx/zopfli": "1.0.15",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
-    "@size-limit/preset-app": "4.9.1",
-    "@size-limit/webpack": "4.9.1",
+    "@size-limit/preset-app": "4.9.2",
+    "@size-limit/webpack": "4.9.2",
     "@teamsupercell/typings-for-css-modules-loader": "^2.4.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
@@ -176,7 +176,7 @@
     "rsync": "^0.6.1",
     "sass-loader": "^10.1.1",
     "signale": "1.4.0",
-    "size-limit": "4.9.1",
+    "size-limit": "4.9.2",
     "size-plugin": "^3.0.0",
     "source-map-loader": "2.0.0",
     "style-loader": "^2.0.0",
@@ -200,7 +200,7 @@
     "webpack-manifest-plugin": "3.0.0",
     "webpack-merge": "5.7.3",
     "webpack-nano": "^1.1.1",
-    "workbox-webpack-plugin": "6.0.2",
+    "workbox-webpack-plugin": "6.1.0",
     "yamljs": "^0.3.0"
   },
   "dependencies": {
