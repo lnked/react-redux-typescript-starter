@@ -38,12 +38,6 @@
     "add-layout": "node configs/utils/add --essence layout",
     "add-fragment": "node configs/utils/add --essence fragment"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "post-commit": "git update-index --again"
-    }
-  },
   "keywords": [
     "react"
   ],
@@ -145,7 +139,7 @@
     "os": "^0.1.1",
     "path": "0.12.7",
     "pixrem": "5.0.0",
-    "postcss": "^8.2.4",
+    "postcss": "8.2.5",
     "postcss-calc": "8.0.0",
     "postcss-custom-media": "8.0.0",
     "postcss-custom-properties": "11.0.0",
@@ -177,7 +171,7 @@
     "sass-loader": "^11.0.0",
     "signale": "1.4.0",
     "size-limit": "4.9.2",
-    "size-plugin": "^3.0.0",
+    "size-plugin": "2.0.1",
     "source-map-loader": "2.0.0",
     "style-loader": "^2.0.0",
     "sugarss": "^3.0.3",
@@ -247,7 +241,7 @@
     "yup": "^0.32.8"
   },
   "peerDependencies": {
-    "postcss": "^8.2.1"
+    "postcss": "8.2.5"
   },
   "scarfSettings": {
     "enabled": false
