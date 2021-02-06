@@ -12,7 +12,7 @@ import { APP_API_URL, APP_SECRET } from 'settings';
 
 import globe from 'assets/images/globe.jpg';
 
-export const Home = () => {
+export const Home: React.FC = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const { history, location, match } = useReactRouter();

@@ -82,6 +82,7 @@ module.exports = {
         patterns: ['!styled-components/macro', '!reflexbox/styled-components'],
       },
     ],
+    'boundaries/no-private': [0, { allowUncles: false }],
   },
   settings: {
     react: {
@@ -91,12 +92,37 @@ module.exports = {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
-    'boundaries/types': ['helpers', 'models', 'views', 'controllers'],
+    'boundaries/elements': [
+      {
+        type: 'helpers',
+        pattern: 'helpers/*',
+      },
+      {
+        type: 'components',
+        pattern: 'components/*',
+      },
+      {
+        type: 'fragments',
+        pattern: 'fragments/*',
+      },
+      {
+        type: 'pages',
+        pattern: 'pages/*',
+      },
+      {
+        type: 'modules',
+        pattern: 'modules/*',
+      },
+      {
+        type: 'layouts',
+        pattern: 'layouts/*',
+      },
+      {
+        type: 'helpers',
+        pattern: 'helpers/*',
+      },
+    ],
     'boundaries/ignore': ['src/**/*.spec.(j|t)sx?', 'src/**/*.test.(j|t)sx?'],
-    'boundaries/alias': {
-      components: 'src/components',
-      helpers: 'src/helpers',
-    },
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
