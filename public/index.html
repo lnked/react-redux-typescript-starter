@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
-  <base href="<%= htmlWebpackPlugin.options.PUBLIC_URL %>" />
+    <base href="<%= htmlWebpackPlugin.options.PUBLIC_URL %>"/>
 
-  <meta name="theme-color" content="#3367D6" />
+    <meta name="theme-color" content="#3367D6"/>
 
-  <!-- inline_css_plugin -->
+    <!-- inline_css_plugin -->
 
-  <link rel="dns-prefetch" href="https://cdn.polyfill.io" crossorigin />
-  <link rel="preconnect" href="https://cdn.polyfill.io" crossorigin />
-  <link rel="preload" href="https://cdn.polyfill.io/v3/polyfill.min.js" as="script" />
+    <link rel="dns-prefetch" href="https://cdn.polyfill.io" crossorigin/>
+    <link rel="preconnect" href="https://cdn.polyfill.io" crossorigin/>
+    <link rel="preload" href="https://cdn.polyfill.io/v3/polyfill.min.js" as="script"/>
 
-  <meta name="google" content="notranslate" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="robots" content="index,follow" />
-  <meta name="author" content="Edik Bulikyan <ed.proff@gmail.com>" />
-  <meta name="description" content="<%= htmlWebpackPlugin.options.description %>" />
+    <meta name="google" content="notranslate"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="author" content="Edik Bulikyan <ed.proff@gmail.com>"/>
+    <meta name="description" content="<%= htmlWebpackPlugin.options.description %>"/>
 
-  <link rel="apple-touch-icon" href="./icons/ios/icon_192x192.png" />
-
-  <title><%= htmlWebpackPlugin.options.title %></title>
-<head>
-<body>
-  <noscript>
-    You need to enable JavaScript to run this app.
-  </noscript>
-
-  <main id="app-root" class="wrapper">App</main>
-
-  <script src="https://cdn.polyfill.io/v3/polyfill.min.js" async></script>
-</body>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <main id="root" class="wrapper">App</main>
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js" async></script>
+  </body>
 </html>

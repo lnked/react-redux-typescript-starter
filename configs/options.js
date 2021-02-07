@@ -13,7 +13,7 @@ const distName = 'dist';
 const production = environment === 'production';
 const development = environment === 'development';
 
-const publicPath = development ? '' : '';
+const publicPath = development ? '' : '/';
 
 const hashName = development ? '[name]' : '[name].[contenthash:5]';
 

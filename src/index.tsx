@@ -16,7 +16,7 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('app-root'),
+  document.getElementById('root'),
 );
 
 if (environment.production) {
