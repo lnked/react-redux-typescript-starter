@@ -20,7 +20,8 @@ module.exports = {
       name: 'runtime',
     },
     splitChunks: {
-      chunks: 'async',
+      // chunks: 'async',
+      chunks: 'all',
       minSize: 0,
       minChunks: 1,
       maxAsyncRequests: 5,

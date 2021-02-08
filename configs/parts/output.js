@@ -8,6 +8,7 @@ module.exports = {
     filename: `${staticPath}/${hashName}.js`,
     chunkFilename: `${staticPath}/[name].[contenthash:5].js`,
     sourceMapFilename: '[name].[contenthash:5].js.map',
+    assetModuleFilename: `${staticPath}/images/[hash][ext][query]`,
     crossOriginLoading: 'anonymous',
   },
 };

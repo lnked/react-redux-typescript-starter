@@ -5,8 +5,7 @@ const overrides = require('./configs/babel.config/overrides');
 const MIN_BABEL_VERSION = 7;
 
 module.exports = function (api) {
-  // api.assertVersion(MIN_BABEL_VERSION);
-  // api.cache(true);
+  api.assertVersion(MIN_BABEL_VERSION);
 
   const web = api.caller(caller => Boolean(caller && caller.target === 'web'));
 
