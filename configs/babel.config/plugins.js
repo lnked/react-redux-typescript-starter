@@ -1,6 +1,6 @@
 const transformImports = require('./transformImports');
 
-module.exports = function ({ development, production, test, loose, legacy }) {
+module.exports = function ({ development, production, test, legacy }) {
   const plugins = [];
 
   if (test) {
@@ -13,15 +13,25 @@ module.exports = function ({ development, production, test, loose, legacy }) {
 
   return [
     ...plugins,
-    ['macros'],
     ['module:fast-async', { spec: true }],
+    [
+      'babel-plugin-macros',
+      {
+        styledComponents: {
+          pure: !test,
+          fileName: development && !test,
+          displayName: development && !test,
+        },
+      },
+    ],
     [
       'babel-plugin-styled-components',
       {
         ssr: production && !test,
+        pure: !test,
         minify: production,
         sourceMap: development,
-        displayName: production && !test,
+        displayName: development && !test,
         extractStatic: development,
         transpileTemplateLiterals: development,
       },

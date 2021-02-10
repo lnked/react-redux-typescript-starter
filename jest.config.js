@@ -25,5 +25,5 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/configs/jest/enzyme.setup.ts'],
   snapshotSerializers: ['enzyme-to-json/serializer', 'jest-styled-components'],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths /*, { prefix: '<rootDir>/' } */),
-  moduleDirectories: [ '<rootDir>/src', 'node_modules'],
+  moduleDirectories: ['<rootDir>/src', 'node_modules'],
 };
