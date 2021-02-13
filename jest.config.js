@@ -1,4 +1,3 @@
-const { defaults } = require('jest-config');
 const { transform } = require('ts-jest/presets');
 const { pathsToModuleNameMapper } = require('ts-jest/utils');
 

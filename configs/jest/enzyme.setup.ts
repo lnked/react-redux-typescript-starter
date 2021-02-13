@@ -1,7 +1,11 @@
 import * as Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
+import { addSerializer } from 'jest-specific-snapshot';
+import { styleSheetSerializer } from 'jest-styled-components/serializer';
 import 'jest-styled-components';
+
+addSerializer(styleSheetSerializer);
 
 Enzyme.configure({
   adapter: new Adapter(),

@@ -4,7 +4,32 @@ module.exports = function ({ development, production, test, legacy }) {
   const plugins = [];
 
   if (test) {
-    return ['@babel/plugin-proposal-export-default-from', '@babel/plugin-proposal-export-namespace-from'];
+    return [
+      [
+        'macros',
+        {
+          styledComponents: {
+            pure: true,
+            ssr: !test,
+            displayName: !test,
+          },
+        },
+      ],
+      [
+        'styled-components',
+        {
+          ssr: production && !test,
+          pure: !test,
+          minify: production,
+          sourceMap: development,
+          displayName: development && !test,
+          extractStatic: development,
+          transpileTemplateLiterals: development,
+        },
+      ],
+      ['@babel/plugin-proposal-export-default-from'],
+      ['@babel/plugin-proposal-export-namespace-from'],
+    ];
   }
 
   if (development) {
@@ -14,28 +39,6 @@ module.exports = function ({ development, production, test, legacy }) {
   return [
     ...plugins,
     ['module:fast-async', { spec: true }],
-    [
-      'babel-plugin-macros',
-      {
-        styledComponents: {
-          pure: !test,
-          fileName: development && !test,
-          displayName: development && !test,
-        },
-      },
-    ],
-    [
-      'babel-plugin-styled-components',
-      {
-        ssr: production && !test,
-        pure: !test,
-        minify: production,
-        sourceMap: development,
-        displayName: development && !test,
-        extractStatic: development,
-        transpileTemplateLiterals: development,
-      },
-    ],
     [
       'transform-react-remove-prop-types',
       {
@@ -56,10 +59,10 @@ module.exports = function ({ development, production, test, legacy }) {
     ['transform-imports', transformImports],
     ['@babel/plugin-proposal-decorators', { legacy }],
     ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }],
-    '@babel/plugin-transform-object-assign',
-    '@babel/plugin-transform-object-set-prototype-of-to-assign',
-    '@babel/plugin-proposal-export-default-from',
-    '@babel/plugin-transform-react-constant-elements',
-    '@babel/plugin-transform-react-inline-elements',
+    ['@babel/plugin-transform-object-assign'],
+    ['@babel/plugin-transform-object-set-prototype-of-to-assign'],
+    ['@babel/plugin-proposal-export-default-from'],
+    ['@babel/plugin-transform-react-constant-elements'],
+    ['@babel/plugin-transform-react-inline-elements'],
   ];
 };
