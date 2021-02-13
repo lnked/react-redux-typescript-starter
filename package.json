@@ -215,7 +215,7 @@
     "core-js": "3.8.3",
     "date-fns": "2.17.0",
     "dayjs": "^1.10.4",
-    "eslint": "^7.19.0",
+    "eslint": "^7.20.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "git": "^0.1.5",
