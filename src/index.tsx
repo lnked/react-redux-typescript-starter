@@ -12,11 +12,13 @@ const store = configureStore(window.__APP_STATE__ || {});
 // For easier debugging
 window.__APP_STATE__ = store;
 
+const elementToMount = document.getElementById('root');
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root'),
+  elementToMount,
 );
 
 if (environment.production) {

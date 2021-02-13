@@ -1,4 +1,4 @@
-const { release, development } = require('../options');
+const { development } = require('../options');
 
 module.exports = development && {
   devServer: {

@@ -1,6 +1,6 @@
-const Minimizer = require('../parts/minimizer');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
+const Minimizer = require('../parts/minimizer');
 const options = require('../options');
 
 module.exports = {
@@ -20,7 +20,6 @@ module.exports = {
       name: 'runtime',
     },
     splitChunks: {
-      // chunks: 'async',
       chunks: 'all',
       minSize: 0,
       minChunks: 1,

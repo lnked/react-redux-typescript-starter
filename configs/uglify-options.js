@@ -1,26 +1,37 @@
 module.exports = {
+  ie8: false,
+  mangle: true,
+  warnings: false,
+  toplevel: false,
+  keep_fnames: false,
   parse: {
-    // parse options
+    html5_comments: false,
   },
   compress: {
-    // compress options
-  },
-  mangle: {
-    // mangle options
-
-    properties: {
-      // mangle property options
+    inline: false,
+    sequences: true,
+    comparisons: true,
+    conditionals: true,
+    evaluate: true,
+    booleans: true,
+    loops: true,
+    unused: true,
+    unsafe: false,
+    hoist_funs: true,
+    if_return: true,
+    join_vars: true,
+    negate_iife: true,
+    dead_code: true,
+    drop_console: true,
+    drop_debugger: true,
+    global_defs: {
+      DEBUG: false,
     },
   },
   output: {
+    ascii_only: true,
     comments: false,
     beautify: false,
+    indent_level: 0,
   },
-  sourceMap: {
-    // source map options
-  },
-  nameCache: null, // or specify a name cache object
-  toplevel: false,
-  ie8: false,
-  warnings: false,
 };

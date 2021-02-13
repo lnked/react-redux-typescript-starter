@@ -7,21 +7,19 @@ module.exports = () => [
     test: /\.js(\?.*)?$/i,
     parallel: true,
     extractComments: false,
-    terserOptions,
     minify: (file, sourceMap) => {
+      const extractedComments = [];
       const uglifyOptions = require(`${process.cwd()}/configs/uglify-options`);
 
-      const uglifyJsOptions = {
+      const { error, map, code, warnings } = require('uglify-js').minify(file, {
         ...uglifyOptions,
-      };
-
-      if (sourceMap) {
-        uglifyJsOptions.sourceMap = {
+        sourceMap: {
           content: sourceMap,
-        };
-      }
+        },
+      });
 
-      return require('uglify-js').minify(file, uglifyJsOptions);
+      return { error, map, code, warnings, extractedComments };
     },
+    terserOptions,
   }),
 ];

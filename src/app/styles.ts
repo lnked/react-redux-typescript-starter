@@ -10,7 +10,7 @@ export const GlobalStyle: any = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  #app-root {
+  #root {
     min-height: 100%;
   }
 
