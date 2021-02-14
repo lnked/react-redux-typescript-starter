@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 
 import { environment, APP_NAME } from 'settings';
 
+import defaultState from './initialState';
 import { createReducer } from './reducers';
 import { State } from './types';
 
@@ -12,7 +13,7 @@ const middleware = [
   thunk,
 ].filter(Boolean);
 
-export const configureStore = (initialState: State = {}) => {
+export const configureStore = (initialState: State = defaultState) => {
   const store = createStore(
     createReducer(),
     initialState,

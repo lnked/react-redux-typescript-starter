@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import useReactRouter from 'use-react-router';
+import { Box } from 'reflexbox/styled-components';
 
 import { Image, Input, Button, Chip, CHIP_SIZE } from 'components';
 
@@ -24,13 +25,9 @@ export const Home: React.FC = () => {
       <Chip label="Chip size l" size={CHIP_SIZE.l} />
       <Chip label="Chip size x" size={CHIP_SIZE.x} />
 
-      <Image width={100} height={100} src={globe} alt="Globe" />
-
-      <span>
-        <Image width={100} height={100} src={globe} alt="" />
-      </span>
-
-      <img height={100} src={globe} alt="" />
+      <Box py={20}>
+        <Image width={100} height={100} src={globe} alt="Globe" />
+      </Box>
 
       <div>My location is {location.pathname}!</div>
       <div>location: {JSON.stringify(location)}!</div>

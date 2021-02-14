@@ -1,6 +1,4 @@
-import { StateObject } from 'stores/types';
-
-export const receiveState = (name: string, { state, action }: StateObject) => ({
+export const receiveState = (name: any, { state, action }: any) => ({
   ...state,
   [name]: {
     ...state[name],

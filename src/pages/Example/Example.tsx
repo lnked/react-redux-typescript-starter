@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import useReactRouter from 'use-react-router';
 
-import * as selectors from 'stores/selectors';
-import * as actionsNews from 'stores/providers/news/actions';
+import * as actions from 'stores/providers/News/actions';
+import * as selectors from 'stores/providers/News/selectors';
 
 import { Image, Input, Button, Chip, CHIP_SIZE } from 'components';
 
@@ -17,7 +17,7 @@ export const Example: React.FC = () => {
   const { t } = useTranslation();
   const { history, location, match } = useReactRouter();
 
-  const fetchNews = useCallback(() => dispatch(actionsNews.fetchItems()), [dispatch]);
+  const fetchNews = useCallback(() => dispatch(actions.fetchItems()), [dispatch]);
 
   useEffect(() => {
     fetchNews();

@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import news from './providers/news/reducers';
-import modal from './providers/modal/reducers';
+import News from './providers/News/reducers';
+import Modal from './providers/Modal/reducers';
 
 export const createReducer = () =>
   combineReducers({
-    news,
-    modal,
+    News,
+    Modal,
   });

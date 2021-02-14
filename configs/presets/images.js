@@ -6,13 +6,9 @@ const { addRule } = require('../tools/rules');
 
 module.exports = () => {
   return [
-    // addRule(/\.svg/, {
-    //   type: 'asset/inline',
-    // }),
     addRule(
       /\.(gif|png|jpe?g|svg)$/i,
       {
-        type: 'asset/resource',
         use: [
           file({
             name: () => fileName,
