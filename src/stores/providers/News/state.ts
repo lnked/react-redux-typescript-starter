@@ -8,7 +8,7 @@ export type ItemProps = {
   data: unknown;
 };
 
-export type initialStateProps = {
+export type StateProps = {
   items: ItemProps;
   count: ItemProps;
   item: ItemProps;
@@ -19,7 +19,7 @@ const ui: UiProps = {
   isLoading: true,
 };
 
-export const initialState: initialStateProps = {
+export const initialState: StateProps = {
   items: {
     ui,
     data: [],

@@ -11,9 +11,9 @@ import {
   RECEIVE_COUNT_DONE,
   RECEIVE_COUNT_ERROR,
 } from './constants';
-import { initialState, initialStateProps } from './state';
+import { initialState, StateProps } from './state';
 
-export default function (state: initialStateProps = initialState, action: any) {
+export default function (state: StateProps = initialState, action: any) {
   const reducers: Record<string, any> = {
     // Items
     [FETCH_ITEMS]: () => loadingState('items', { state }),

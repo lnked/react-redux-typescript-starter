@@ -1,7 +1,7 @@
 import { TOGGLE_MODAL, MODAL_STATUS } from './constants';
-import { initialState, initialStateProps } from './state';
+import { initialState, StateProps } from './state';
 
-export default function (state: initialStateProps = initialState, action: any) {
+export default function (state: StateProps = initialState, action: any) {
   const reducers: Record<string, any> = {
     [TOGGLE_MODAL]: () => ({
       modalIsOpen: !state.modalIsOpen,

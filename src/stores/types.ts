@@ -1,5 +1,5 @@
-import { initialStateProps as NewsProps } from './providers/News/state';
-import { initialStateProps as ModalProps } from './providers/Modal/state';
+import { StateProps as NewsProps } from './providers/News/state';
+import { StateProps as ModalProps } from './providers/Modal/state';
 
 export type State = {
   News: NewsProps;

@@ -20,6 +20,7 @@ coverage
 features.md
 code-example
 release-builds
+size-plugin.json
 **/styles.scss.d.ts
 **/__snapshots__
 .env
