@@ -9,13 +9,11 @@ import { store, persistor } from 'stores';
 
 const render = () => {
   ReactDOM.render(
-    <React.Suspense fallback={null}>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <App />
-        </PersistGate>
-      </Provider>
-    </React.Suspense>,
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <App />
+      </PersistGate>
+    </Provider>,
     document.getElementById('root'),
   );
 };

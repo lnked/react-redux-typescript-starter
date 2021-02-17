@@ -31,7 +31,9 @@ function App() {
 
           <Router>
             <CoreLayout>
-              <Switcher />
+              <React.Suspense fallback={null}>
+                <Switcher />
+              </React.Suspense>
             </CoreLayout>
           </Router>
         </I18nextProvider>
