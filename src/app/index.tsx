@@ -20,7 +20,7 @@ function App() {
 
   return (
     <ErrorBoundary
-      FallbackComponent={ErrorFallback}
+      FallbackComponent={() => <ErrorFallback />}
       onReset={() => {
         // reset the state of your app so the error doesn't happen again
       }}
@@ -31,9 +31,7 @@ function App() {
 
           <Router>
             <CoreLayout>
-              <React.Suspense fallback={<div>Loading...</div>}>
-                <Switcher />
-              </React.Suspense>
+              <Switcher />
             </CoreLayout>
           </Router>
         </I18nextProvider>

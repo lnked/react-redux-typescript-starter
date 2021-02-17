@@ -1,7 +1,8 @@
-import { initialState as News } from './providers/News/state';
-import { initialState as Modal } from './providers/Modal/state';
+import { initialState as news } from './providers/news/state';
+import { initialState as modal } from './providers/modal/state';
+import { State } from './types';
 
-export default {
-  News,
-  Modal,
+export const initialState: State = {
+  news,
+  modal,
 };

@@ -1,18 +1,9 @@
-import { StateProps as NewsProps } from './providers/News/state';
-import { StateProps as ModalProps } from './providers/Modal/state';
+import { CombinedState } from 'redux';
 
-export type State = {
-  News: NewsProps;
-  Modal: ModalProps;
-};
+import { StateProps as NewsProps } from './providers/news/state';
+import { StateProps as ModalProps } from './providers/modal/state';
 
-export type ActionType = {
-  payload: {
-    message?: string;
-  };
-};
-
-export type StateObject = {
-  state: Partial<State>;
-  action?: ActionType;
-};
+export type State = CombinedState<{
+  news: NewsProps;
+  modal: ModalProps;
+}>;
