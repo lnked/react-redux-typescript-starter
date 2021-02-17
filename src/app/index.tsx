@@ -8,7 +8,7 @@ import i18n, { i18nInit, i18nUnload } from 'i18n';
 import { CoreLayout } from 'layouts';
 import { ErrorFallback } from 'components';
 
-import Switcher from './routes';
+import Switcher from './Switcher';
 import { GlobalStyle } from './styles';
 
 function App() {
