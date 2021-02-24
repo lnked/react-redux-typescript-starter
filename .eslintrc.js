@@ -6,7 +6,7 @@ module.exports = {
     'plugin:boundaries/recommended',
     'plugin:prettier/recommended',
     'plugin:sonarjs/recommended',
-    'prettier/@typescript-eslint',
+    'prettier',
     './.eslint.typescript.js',
   ],
   env: {
