@@ -1818,10 +1818,10 @@
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^7.28.1"
 
-"@testing-library/user-event@^13.0.4":
-  version "13.0.4"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-13.0.4.tgz#43f48f314cd9861f8ae47c1b812ef7595e564032"
-  integrity sha512-ssnzbOq4dYSgeo9OusGqCqlilWCrADAUQQFsuzYE3tpdyuKUpHHN6QTNFrsWo/NEG7x7GMl3mJ8UqcJWDAMknQ==
+"@testing-library/user-event@^13.0.6":
+  version "13.0.6"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-13.0.6.tgz#06ace823532775251b864212b6b1405c9c46c06d"
+  integrity sha512-61Rv1/9pr7rCilwnQ+uLdiaCBFSQp2GRmF2PHrX6gIy0mWqnR43p5pMJAdMA7PZ3JUN+8YyN5S2d1fq9DyYnYw==
   dependencies:
     "@babel/runtime" "^7.12.5"
 
@@ -14675,10 +14675,10 @@ webpack-sources@^2.1.1, webpack-sources@^2.2.0:
     source-list-map "^2.0.1"
     source-map "^0.6.1"
 
-webpack@5.27.0:
-  version "5.27.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.27.0.tgz#387458f83142253f2759e22415dc1359746e6940"
-  integrity sha512-So7grHu//UyJ+80VrNHjWwW6WSZkfWWD6a7NV/88r8G92PO6TYOGzbtTiZBwbPVkx6LVP8OYvHD+IxuJ2KBz4g==
+webpack@5.27.1:
+  version "5.27.1"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.27.1.tgz#6808fb6e45e35290cdb8ae43c7a10884839a3079"
+  integrity sha512-rxIDsPZ3Apl3JcqiemiLmWH+hAq04YeOXqvCxNZOnTp8ZgM9NEPtbu4CaMfMEf9KShnx/Ym8uLGmM6P4XnwCoA==
   dependencies:
     "@types/eslint-scope" "^3.7.0"
     "@types/estree" "^0.0.46"
