@@ -6025,6 +6025,14 @@ eslint-plugin-boundaries@^2.1.0:
     is-core-module "2.2.0"
     micromatch "4.0.2"
 
+eslint-plugin-clean-regex@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-clean-regex/-/eslint-plugin-clean-regex-0.5.1.tgz#1fc8d61a1df2702d8f267d58ac101f5243e7ef7c"
+  integrity sha512-ZuZxP2V2s2LI2OZPUF5eQQtgUQv1/Z7jDI2DG5GEHGM9D0T0LSbcg8ViuFolrOOmUP7dCz+JHN4gDQWyeDdvJg==
+  dependencies:
+    refa "^0.7.1"
+    regexpp "^3.1.0"
+
 eslint-plugin-prettier@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.3.1.tgz#7079cfa2497078905011e6f82e8dd8453d1371b7"
@@ -12404,6 +12412,13 @@ redux@*, redux@^4.0.0, redux@^4.0.5:
   dependencies:
     loose-envify "^1.4.0"
     symbol-observable "^1.2.0"
+
+refa@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/refa/-/refa-0.7.1.tgz#ebd1b36a0b6f83b2ec05df406bd8336d64de2e7f"
+  integrity sha512-rvs2Px1z/PS01L8wY06YZZYDg4KzWz2CZjjsUekhyF3gnvUhu9EMfdgKwGmSJYUQItpZEPJjv2uz4vUlOkUiZg==
+  dependencies:
+    regexpp "^3.1.0"
 
 reflect.ownkeys@^0.2.0:
   version "0.2.0"
