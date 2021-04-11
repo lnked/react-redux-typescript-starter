@@ -1,7 +1,6 @@
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const Minimizer = require('../parts/minimizer');
-const options = require('../options');
 
 module.exports = {
   optimization: {
@@ -42,6 +41,6 @@ module.exports = {
       },
     },
     minimize: true,
-    minimizer: [...Minimizer(), new CssMinimizerPlugin({ cache: options.cacheDirectory })],
+    minimizer: [...Minimizer(), new CssMinimizerPlugin()],
   },
 };
