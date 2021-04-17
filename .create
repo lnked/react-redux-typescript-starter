@@ -68,29 +68,35 @@ echo "Copying files...";
 
 # ln -s ${SOURCE}/node_modules ${PATH_ROOT}/$FOLDER_NAME
 
-cp -r ${SOURCE}/configs ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/public ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/src ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/public ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/configs ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/typings ${PATH_ROOT}/$FOLDER_NAME
+
+cp -r ${SOURCE}/.prettierignore ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/lint-staged.config.js ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/tsconfig.build.json ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.size-limit.js ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.eslintignore ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.browserslistrc ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.editorconfig ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/.env.example ${PATH_ROOT}/$FOLDER_NAME/.env
-cp -r ${SOURCE}/.eslintrc.js ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/.eslint.typescript.js ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/.eslintignore ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/.gitignore ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/.size-limit.js ${PATH_ROOT}/$FOLDER_NAME
-# cp -r ${SOURCE}/babel-plugin-macros.config.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/husky.config.js ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/babel.config.js ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/jest.config.js ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/postcss.config.js ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/lint-staged.config.js ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/package.json ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/tsconfig.build.json ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.prettierrc.json ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.env ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.env.example ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/tsconfig.jest.json ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/tsconfig.paths.json ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/jest.config.js ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/babel.config.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/tsconfig.json ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.gitignore ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/postcss.config.js ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.eslint.typescript.js ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.eslintrc.js ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.create ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/package.json ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/size-plugin.json ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/yarn.lock ${PATH_ROOT}/$FOLDER_NAME
 
 echo -e "Project ${GREEN}$FOLDER_NAME${NC} successfully created"
 
