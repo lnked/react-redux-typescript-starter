@@ -80,7 +80,8 @@ cp -r ${SOURCE}/.eslint.typescript.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.eslintignore ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.gitignore ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.size-limit.js ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/babel-plugin-macros.config.js ${PATH_ROOT}/$FOLDER_NAME
+# cp -r ${SOURCE}/babel-plugin-macros.config.js ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/husky.config.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/babel.config.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/jest.config.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/postcss.config.js ${PATH_ROOT}/$FOLDER_NAME
