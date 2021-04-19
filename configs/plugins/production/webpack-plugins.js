@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const SizePlugin = require('size-plugin');
+const Distsize = require('webpack-distsize');
 
 const options = require('../../options');
 
@@ -32,6 +32,16 @@ module.exports = () => {
       resourceRegExp: /redux-immutable-state-invariant/,
     }),
 
-    new SizePlugin(),
+    new Distsize({
+      filter: asset => !asset.startsWith('.') && !asset.endsWith('.map'),
+      thresholds: [
+        { threshold: 100000, color: 'orangered' },
+        { threshold: 50000, color: 'darkorange' },
+        { threshold: 10000, color: 'yellow' },
+        { threshold: 5000, color: 'cornflowerblue' },
+        { threshold: 3000, color: 'limegreen' },
+        { threshold: 0, color: 'lightgreen' },
+      ],
+    }),
   ];
 };

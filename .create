@@ -95,7 +95,6 @@ cp -r ${SOURCE}/.eslint.typescript.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.eslintrc.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.create ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/package.json ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/size-plugin.json ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/yarn.lock ${PATH_ROOT}/$FOLDER_NAME
 
 echo -e "Project ${GREEN}$FOLDER_NAME${NC} successfully created"
