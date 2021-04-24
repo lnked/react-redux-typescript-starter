@@ -5,7 +5,7 @@ export type UiProps = {
 
 export type ItemProps = {
   ui: UiProps;
-  data: unknown;
+  data: any;
 };
 
 export type StateProps = {
