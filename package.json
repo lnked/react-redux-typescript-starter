@@ -127,7 +127,7 @@
     "eslint-plugin-sonarjs": "^0.7.0",
     "fast-async": "6.3.8",
     "file-loader": "6.2.0",
-    "fork-ts-checker-webpack-plugin": "^6.2.4",
+    "fork-ts-checker-webpack-plugin": "^6.2.5",
     "fs": "^0.0.1-security",
     "html-loader": "2.1.2",
     "html-webpack-plugin": "^5.3.1",
