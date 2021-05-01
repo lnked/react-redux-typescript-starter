@@ -1,5 +1,3 @@
-const options = require('../options');
-
 module.exports = {
   performance: {
     hints: 'warning',
@@ -7,4 +5,4 @@ module.exports = {
     maxEntrypointSize: 500000,
     assetFilter: assetFilename => !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
   },
-}
+};

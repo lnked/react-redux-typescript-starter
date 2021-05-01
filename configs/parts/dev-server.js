@@ -1,4 +1,4 @@
-const { development } = require('../options');
+const { development, dist } = require('../options');
 
 module.exports = development && {
   devServer: {
@@ -10,6 +10,7 @@ module.exports = development && {
     publicPath: '/',
     historyApiFallback: true,
     clientLogLevel: 'error',
+    contentBase: dist,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },

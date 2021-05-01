@@ -7,7 +7,6 @@ module.exports = (ctx = {}) => ({
   plugins: [
     ['postcss-import', { path: [stylesheetsPath] }],
     ['postcss-nested', {}],
-    ['postcss-preset-env', {}],
     [
       'postcss-preset-env',
       {
@@ -22,7 +21,6 @@ module.exports = (ctx = {}) => ({
       },
     ],
     ['postcss-calc', {}],
-    ['postcss-nested', {}],
     ['postcss-custom-media', {}],
     ['postcss-custom-properties', {}],
     ['postcss-custom-selectors', {}],
