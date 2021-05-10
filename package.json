@@ -233,6 +233,7 @@
     "react-fast-compare": "3.2.0",
     "react-i18next": "11.8.15",
     "react-inlinesvg": "^2.3.0",
+    "react-loading-skeleton": "^2.2.0",
     "react-maskedinput": "4.0.1",
     "react-progressive-image": "0.6.0",
     "react-redux": "^7.2.4",

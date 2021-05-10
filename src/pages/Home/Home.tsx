@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import useReactRouter from 'use-react-router';
-import { Box } from 'reflexbox/styled-components';
+import { Box, Flex } from 'reflexbox/styled-components';
 
 import { Image, Input, Button, Chip, CHIP_SIZE } from 'components';
+import { SKELETON_THEME, Skeleton } from 'components/Skeleton';
 
 import globe from 'assets/images/globe.jpg';
 
@@ -24,6 +25,34 @@ export const Home: React.FC = () => {
       <Chip label="Chip size m" size={CHIP_SIZE.m} />
       <Chip label="Chip size l" size={CHIP_SIZE.l} />
       <Chip label="Chip size x" size={CHIP_SIZE.x} />
+
+      <Flex alignItems="center" justifyContent="space-between" mb={20} style={{ fontSize: 0 }}>
+        <Box width={50} height={50} mr={12}>
+          <Skeleton width={50} height={50} circle />
+        </Box>
+
+        <Box flex={1}>
+          <Box mb="4px">
+            <Skeleton height={16} isFluid />
+          </Box>
+
+          <Skeleton width="50%" height={16} />
+        </Box>
+      </Flex>
+
+      <Flex alignItems="center" justifyContent="space-between" mb={20} style={{ fontSize: 0 }}>
+        <Box width={50} height={50} mr={12}>
+          <Skeleton width={50} height={50} theme={SKELETON_THEME.dark} circle />
+        </Box>
+
+        <Box flex={1}>
+          <Box mb="4px">
+            <Skeleton height={16} theme={SKELETON_THEME.dark} isFluid />
+          </Box>
+
+          <Skeleton width="50%" height={16} theme={SKELETON_THEME.dark} />
+        </Box>
+      </Flex>
 
       <Box py={20}>
         <Image width={100} height={100} src={globe} alt="Globe" />
