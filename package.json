@@ -222,7 +222,7 @@
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "git": "^0.1.5",
-    "i18next": "20.2.2",
+    "i18next": "20.2.4",
     "i18next-browser-languagedetector": "6.1.1",
     "localize-react": "1.7.1",
     "path-to-regexp": "6.2.0",
