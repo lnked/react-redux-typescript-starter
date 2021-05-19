@@ -19,10 +19,10 @@ import { useEffect } from 'react';
 //   );
 // }
 
-export function useOnClickOutside(ref, handler) {
+export function useOnClickOutside(ref: any, handler: any) {
   useEffect(
     () => {
-      const listener = event => {
+      const listener = (event: any) => {
         if (!ref.current || ref.current.contains(event.target)) {
           return;
         }
