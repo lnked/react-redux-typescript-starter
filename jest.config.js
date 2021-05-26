@@ -1,11 +1,11 @@
-const { transform } = require('ts-jest/presets');
+// const { transform } = require('ts-jest/presets');
 const { pathsToModuleNameMapper } = require('ts-jest/utils');
 
 const { compilerOptions } = require('./tsconfig.paths');
 
 module.exports = {
   roots: ['<rootDir>/src'],
-  transform,
+  // transform,
   globals: {
     __DEV__: false,
     NODE_ENV: 'test',
