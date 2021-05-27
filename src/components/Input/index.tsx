@@ -1,9 +1,7 @@
 import * as React from 'react';
 
-import { useInputState } from './useInputState';
-
 import { Wrapper, Label, BaseInput, ResetButton, InputWrapper } from './style';
-
+import { useInputState } from './useInputState';
 import { OuterProps } from './types';
 
 export const Input: React.FC<OuterProps> = ({

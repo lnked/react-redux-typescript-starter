@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components/macro';
 
-import { Colors } from 'themes';
+import { Colors } from '@themes/Colors';
 
 /* tslint:disable: max-line-length */
 export const GlobalStyle: any = createGlobalStyle`

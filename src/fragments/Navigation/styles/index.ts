@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
-import { PreloadLink } from 'components';
 
-import { Colors } from 'themes';
+import { PreloadLink } from '@components/PreloadLink';
+import { Colors } from '@themes/Colors';
 
 export const Nav: any = styled.nav`
   position: sticky;

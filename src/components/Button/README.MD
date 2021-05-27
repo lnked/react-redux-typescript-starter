@@ -18,7 +18,7 @@ Or disable an editor by passing a `noeditor` modifier:
 
 ``jsx inside Markdown
 import React from 'react'
-import { Button } from 'components'
+import { Button } from '@components'
 ```
 
 To render an example as highlighted source code add a `static` modifier:

@@ -4,7 +4,8 @@ import thunk, { ThunkMiddleware } from 'redux-thunk';
 import { PersistConfig, persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import { environment, APP_NAME } from 'settings';
+import { APP_NAME } from '@settings/api';
+import { environment } from '@settings/environment';
 
 import { initialState } from './initialState';
 import { createReducer } from './reducers';

@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { setLanguage } from 'i18n';
-import { Button } from 'components';
-
-import { routes } from 'app/routes';
+import { routes } from '@app/routes';
+import { Button } from '@components/Button';
+import { setLanguage } from '@i18n/index';
 
 import { Nav, NavigationList, NavigationItem, NavigationLink, Language } from './styles';
 

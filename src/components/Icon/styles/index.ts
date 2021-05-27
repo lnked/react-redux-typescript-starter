@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/macro';
 
-import { CommonStyles } from 'themes';
+import { CommonStyles } from '@themes/CommonStyles';
 
 type Props = {
   empty?: boolean;

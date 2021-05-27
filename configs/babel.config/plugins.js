@@ -31,10 +31,6 @@ module.exports = function ({ development, production, test, legacy }) {
     return [...plugins, ['@babel/plugin-proposal-export-namespace-from']];
   }
 
-  if (development) {
-    plugins.push('react-refresh/babel');
-  }
-
   return [
     ...plugins,
     ['module:fast-async', { spec: true }],

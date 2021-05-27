@@ -1,5 +1,5 @@
-import { request } from 'services/API';
-import type { CountProps, ItemProps } from 'services/types';
+import { request } from '@services/API';
+import type { CountProps, ItemProps } from '@services/types';
 
 export const items = () => request().get('/news/items');
 

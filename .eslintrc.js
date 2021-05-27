@@ -17,8 +17,9 @@ module.exports = {
   },
   plugins: ['@babel', 'react', 'react-hooks', 'boundaries', 'prettier', 'sonarjs', 'smells', 'clean-regex'],
   parserOptions: {
-    warnOnUnsupportedTypeScriptVersion: false,
-    ecmaVersion: 2018,
+    project: './tsconfig.json',
+    // warnOnUnsupportedTypeScriptVersion: false,
+    // ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,

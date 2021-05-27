@@ -1,4 +1,4 @@
-import * as API from 'services/API/providers/news';
+import * as API from '@services/API/providers/news';
 
 import {
   FETCH_ITEMS,

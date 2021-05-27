@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { APP_API_URL } from 'settings';
+import { APP_API_URL } from '@settings/api';
 
 import Token from './token';
 

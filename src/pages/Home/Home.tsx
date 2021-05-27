@@ -2,11 +2,31 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import useReactRouter from 'use-react-router';
 import { Box, Flex } from 'reflexbox/styled-components';
+import { css } from 'styled-components/macro';
 
-import { Image, Input, Button, Chip, CHIP_SIZE } from 'components';
-import { SKELETON_THEME, Skeleton } from 'components/Skeleton';
+import { Image } from '@components/Image';
+import { Input } from '@components/Input';
+import { Button } from '@components/Button';
+import { Chip, CHIP_SIZE } from '@components/Chip';
+import { SKELETON_THEME, Skeleton } from '@components/Skeleton';
 
-import globe from 'assets/images/globe.jpg';
+import { filterProps } from '../../helpers/tokens';
+
+import globe from '@assets/images/globe.jpg';
+
+const SButton = filterProps('button', ['color'])<{ color: string }>`
+  cursor: pointer;
+
+  ${({ color }) =>
+    color &&
+    css`
+      color: ${color};
+    `}
+`;
+
+const SButton1 = filterProps(Button, ['color'])`
+  color: ${({ coldrex }) => `${coldrex}`}
+`;
 
 export const Home: React.FC = () => {
   const { t } = useTranslation();
@@ -21,6 +41,9 @@ export const Home: React.FC = () => {
 
   return (
     <div>
+      <SButton color="violet">Button</SButton>
+      <SButton1>Button</SButton1>
+
       <Chip label="Chip size s" size={CHIP_SIZE.s} />
       <Chip label="Chip size m" size={CHIP_SIZE.m} />
       <Chip label="Chip size l" size={CHIP_SIZE.l} />

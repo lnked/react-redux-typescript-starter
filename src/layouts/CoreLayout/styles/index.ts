@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-import { Colors } from 'themes';
+import { Colors } from '@themes/Colors';
 
 const themeColor = ({ theme }: any, theme1: string, theme2: string) => (theme.whiteColor ? theme1 : theme2);
 

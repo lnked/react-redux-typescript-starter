@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 
-import { State } from 'stores/types';
+import { State } from '@stores/types';
 
 export const newsItems = createSelector(
   (state: State) => state.news.items,

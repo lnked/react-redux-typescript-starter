@@ -1,4 +1,4 @@
-import { errorState, loadingState, receiveState } from 'stores/utils';
+import { errorState, loadingState, receiveState } from '@stores/utils';
 
 import {
   FETCH_ITEMS,

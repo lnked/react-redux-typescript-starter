@@ -1,12 +1,12 @@
 import { lazy } from 'react';
 
-import { Home } from 'pages/Home';
+import { Home } from '@pages/Home';
 
 export const Example = lazy(
   () =>
     import(
       /* webpackChunkName: "example", webpackPrefetch: true */
-      'pages/Example'
+      '@pages/Example'
     ),
 );
 
@@ -14,7 +14,7 @@ export const NoMatch = lazy(
   () =>
     import(
       /* webpackChunkName: "nomatch", webpackPrefetch: true */
-      'pages/NoMatch'
+      '@pages/NoMatch'
     ),
 );
 

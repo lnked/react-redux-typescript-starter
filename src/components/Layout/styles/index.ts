@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/macro';
 
-import { environment } from 'settings';
+import { environment } from '@settings/environment';
 
 export const Container = styled.div`
   width: 100%;

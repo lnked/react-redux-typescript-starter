@@ -1,33 +1,45 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
+import React, { useEffect } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { I18nextProvider } from 'react-i18next';
 
-import App from 'app';
-import { environment } from 'settings';
-import { store, persistor } from 'stores';
+import i18n, { i18nInit, i18nUnload } from '@i18n/index';
 
-const render = () => {
-  ReactDOM.render(
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <App />
-      </PersistGate>
-    </Provider>,
-    document.getElementById('root'),
+import { ErrorFallback } from '@components/ErrorFallback';
+import { CoreLayout } from '@layouts/CoreLayout';
+
+import Switcher from '@app/Switcher';
+import { GlobalStyle } from '@app/styles';
+
+function App() {
+  useEffect(() => {
+    i18nInit();
+
+    return i18nUnload;
+  });
+
+  return (
+    <ErrorBoundary
+      FallbackComponent={() => <ErrorFallback />}
+      onReset={() => {
+        // reset the state of your app so the error doesn't happen again
+      }}
+    >
+      <React.StrictMode>
+        <I18nextProvider i18n={i18n}>
+          <GlobalStyle />
+
+          <Router>
+            <CoreLayout>
+              <React.Suspense fallback={null}>
+                <Switcher />
+              </React.Suspense>
+            </CoreLayout>
+          </Router>
+        </I18nextProvider>
+      </React.StrictMode>
+    </ErrorBoundary>
   );
-};
-
-render();
-
-if (environment.production) {
-  const isHttps = location.protocol.includes('https');
-
-  if ('serviceWorker' in navigator && isHttps) {
-    navigator.serviceWorker.register('/sw.js');
-  }
 }
 
-if (environment.development && module.hot) {
-  module.hot.accept();
-}
+export default App;

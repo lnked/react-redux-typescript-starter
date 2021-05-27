@@ -1,30 +1,15 @@
-import React, { useEffect } from 'react';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
+import * as React from 'react';
+import { withRouter } from 'react-router-dom';
 
-import { Navigation } from 'fragments';
+import { Navigation } from '@fragments/Navigation';
 
 import { Layout, Section } from './styles';
 
-type OuterProps = {
-  children?: React.ReactChild[] | React.ReactChild;
-};
-
-export const CoreLayout: React.FC<OuterProps & RouteComponentProps> = ({
-  children = '',
-  location: { hash, pathname },
-}) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname, hash]);
-
-  return (
-    <Layout>
-      <Navigation />
-      <Section>{children}</Section>
-    </Layout>
-  );
-};
-
-CoreLayout.displayName = 'CoreLayout';
+export const CoreLayout: React.FC = ({ children }) => (
+  <Layout>
+    <Navigation />
+    <Section>{children}</Section>
+  </Layout>
+);
 
 export default withRouter(CoreLayout);

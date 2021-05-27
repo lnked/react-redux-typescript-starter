@@ -1,5 +1,7 @@
 import * as i18n from 'i18next';
-import { environment, SITE_LANGUAGE } from 'settings';
+
+import { SITE_LANGUAGE } from '@settings/constants';
+import { environment } from '@settings/environment';
 
 import en from './locales/en.json';
 import ru from './locales/ru.json';

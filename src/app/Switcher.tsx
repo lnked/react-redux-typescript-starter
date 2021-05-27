@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
-import { setHistory } from 'utils/redirect';
+import { setHistory } from '@utils/redirect';
 
 import { routes, Home, NoMatch } from './routes';
 
