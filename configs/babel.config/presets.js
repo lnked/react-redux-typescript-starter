@@ -24,5 +24,16 @@ module.exports = function ({ development, production, test, loose, useBuiltIns, 
 
   test && configs.push('@babel/preset-env');
 
-  return [...configs, ['@babel/preset-typescript'], ['@babel/preset-react', { development, runtime: 'automatic' }]];
+  return [
+    ...configs,
+    ['@babel/preset-typescript'],
+    [
+      '@babel/preset-react',
+      {
+        development,
+        runtime: 'automatic',
+        importSource: '@welldone-software/why-did-you-render',
+      },
+    ],
+  ];
 };
