@@ -7,19 +7,6 @@ import App from '@app/App';
 import { environment } from '@settings/environment';
 import { store, persistor } from '@stores/index';
 
-if (environment.development) {
-  const whyDidYouRender = require('@welldone-software/why-did-you-render'); // eslint-disable-line
-  const ReactRedux = require('react-redux'); // eslint-disable-line
-
-  whyDidYouRender(React, {
-    onlyLogs: true,
-    titleColor: 'green',
-    diffNameColor: 'darkturquoise',
-    trackAllPureComponents: true,
-    trackExtraHooks: [[ReactRedux, '[useSelector']],
-  });
-}
-
 const render = () => {
   ReactDOM.render(
     <Provider store={store}>
@@ -33,12 +20,27 @@ const render = () => {
 
 render();
 
+if (environment.development) {
+  // const whyDidYouRender = require('@welldone-software/why-did-you-render'); // eslint-disable-line
+  //
+  // whyDidYouRender(React, {
+  //   trackAllPureComponents: true,
+  //   trackHooks: true,
+  //   trackExtraHooks: [
+  //     // [require('react-redux/lib'), 'useSelector'], // eslint-disable-line
+  //     // [require('react-router-dom/main'), 'useLocation'], // eslint-disable-line
+  //     // [require('react-i18next/dist/commonjs/useTranslation'), 'useTranslation'], // eslint-disable-line
+  //   ],
+  // });
+}
+
 if (environment.production) {
   const isHttps = location.protocol.includes('https');
   if ('serviceWorker' in navigator && isHttps) {
     navigator.serviceWorker.register('/sw.js');
   }
 }
+
 if (environment.development && module.hot) {
   module.hot.accept();
 }
