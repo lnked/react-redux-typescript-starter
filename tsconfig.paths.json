@@ -13,6 +13,7 @@
       "@pages/*": ["pages/*"],
       "@assets/*": ["assets/*"],
       "@themes/*": ["themes/*"],
+      "@modules/*": ["modules/*"],
       "@layouts/*": ["layouts/*"],
       "@settings/*": ["settings/*"],
       "@services/*": ["services/*"],

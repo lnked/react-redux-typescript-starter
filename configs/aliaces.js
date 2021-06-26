@@ -29,6 +29,7 @@ module.exports = {
   '@themes': resolve(sourcePath, 'themes'),
   '@assets': resolve(sourcePath, 'assets'),
   '@typings': resolve(sourcePath, 'typings'),
+  '@modules': resolve(sourcePath, 'modules'),
   '@layouts': resolve(sourcePath, 'layouts'),
   '@services': resolve(sourcePath, 'services'),
   '@settings': resolve(sourcePath, 'settings'),

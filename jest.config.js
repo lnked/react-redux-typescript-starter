@@ -1,74 +1,44 @@
-const { pathsToModuleNameMapper } = require('ts-jest/utils');
-
-const { compilerOptions } = require('./tsconfig.paths');
-
 module.exports = {
   roots: ['<rootDir>/src'],
-  preset: 'ts-jest',
-  globals: {
-    __DEV__: false,
-    NODE_ENV: 'test',
-    'ts-jest': {
-      tsConfig: './tsconfig.jest.json',
-      babelConfig: true,
-      diagnostics: false,
-      enableInternalCache: true,
-      disableSourceMapSupport: false,
-      ignoreCoverageForDecorators: false,
-      ignoreCoverageForAllDecorators: true,
-      useExperimentalLanguageServer: false,
-    },
-  },
-  testMatch: ['**/__tests__/**/*.+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'],
+  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
+  setupFiles: ['react-app-polyfill/jsdom'],
+  setupFilesAfterEnv: ['<rootDir>/configs/jest/enzyme.setup.ts'],
+  testMatch: ['<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}', '<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}'],
+  testEnvironment: 'jsdom',
+  testRunner: '<rootDir>/node_modules/jest-circus/runner.js',
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
+    // '^.+\\.s?(a|c)ss$': '<rootDir>/jest/cssTransform.js',
+    // '^(?!.*\\.(js|ts|tsx|css|json)$)': '<rootDir>/jest/fileTransform.js',
   },
   snapshotSerializers: ['enzyme-to-json/serializer', 'jest-styled-components'],
-  setupFilesAfterEnv: ['<rootDir>/configs/jest/enzyme.setup.ts'],
-  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths /*, { prefix: '<rootDir>/' } */),
+  transformIgnorePatterns: ['node_modules/(?!(@vtb|@openvtb)/.*)'],
+  modulePaths: [],
+  moduleNameMapper: {
+    '^@app(.*)': '<rootDir>/src/app$1',
+    '^@i18n(.*)': '<rootDir>/src/i18n$1',
+    '^@utils(.*)': '<rootDir>/src/utils$1',
+    '^@hooks(.*)': '<rootDir>/src/hooks$1',
+    '^@store(.*)': '<rootDir>/src/store$1',
+    '^@stores(.*)': '<rootDir>/src/stores$1',
+    '^@pages(.*)': '<rootDir>/src/pages$1',
+    '^@themes(.*)': '<rootDir>/src/themes$1',
+    '^@assets(.*)': '<rootDir>/src/assets$1',
+    '^@typings(.*)': '<rootDir>/src/typings$1',
+    '^@modules(.*)': '<rootDir>/src/modules$1',
+    '^@layouts(.*)': '<rootDir>/src/layouts$1',
+    '^@services(.*)': '<rootDir>/src/services$1',
+    '^@settings(.*)': '<rootDir>/src/settings$1',
+    '^@fragments(.*)': '<rootDir>/src/fragments$1',
+    '^@components(.*)': '<rootDir>/src/components$1',
+    '^@decorators(.*)': '<rootDir>/src/decorators$1',
+    '^@svgstore(.*)': '<rootDir>/src/assets/svgstore$1',
+    '^@images(.*)': '<rootDir>/src/assets/images$1',
+    '^@stylesheets(.*)': '<rootDir>/src/assets/stylesheets$1',
+
+    '\\.(s?(a|c)ss)$': '<rootDir>/src/__mocks__/styleMock.js',
+  },
+  moduleFileExtensions: ['js', 'ts', 'tsx', 'json', 'node'],
+  watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
+  resetMocks: false,
 };
-
-// // const { transform } = require('ts-jest/presets');
-// const { pathsToModuleNameMapper } = require('ts-jest/utils');
-
-// const { compilerOptions } = require('./tsconfig.paths');
-
-// module.exports = {
-//   roots: ['<rootDir>/src'],
-//   preset: 'ts-jest',
-//   testEnvironment: 'node',
-//   coverageThreshold: {
-//     global: {
-//       statements: 50,
-//       branches: 90,
-//       functions: 0,
-//       lines: 0,
-//     },
-//   },
-//   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
-//   setupFilesAfterEnv: ['<rootDir>/configs/jest/enzyme.setup.ts'],
-//   snapshotSerializers: ['enzyme-to-json/serializer', 'jest-styled-components'],
-//   // moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths /*, { prefix: '<rootDir>/' } */),
-//   moduleDirectories: ['<rootDir>/src', 'node_modules'],
-
-//   // transform,
-//   // globals: {
-//   //   __DEV__: false,
-//   //   NODE_ENV: 'test',
-//   //   'ts-jest': {
-//   //     tsConfig: './tsconfig.jest.json',
-//   //     babelConfig: true,
-//   //     diagnostics: false,
-//   //     enableInternalCache: true,
-//   //     disableSourceMapSupport: false,
-//   //     ignoreCoverageForDecorators: false,
-//   //     ignoreCoverageForAllDecorators: true,
-//   //     useExperimentalLanguageServer: false,
-//   //   },
-//   // },
-//   // testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
-//   // setupFilesAfterEnv: ['<rootDir>/configs/jest/enzyme.setup.ts'],
-//   // snapshotSerializers: ['enzyme-to-json/serializer', 'jest-styled-components'],
-//   // moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths /*, { prefix: '<rootDir>/' } */),
-//   // moduleDirectories: ['<rootDir>/src', 'node_modules'],
-// };
