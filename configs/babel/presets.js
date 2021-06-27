@@ -1,4 +1,4 @@
-module.exports = function ({ development, production, test, loose, useBuiltIns, targets }) {
+module.exports = function ({ development, production, loose, targets }) {
   let options = {};
 
   if (production) {
@@ -6,7 +6,7 @@ module.exports = function ({ development, production, test, loose, useBuiltIns, 
       loose,
       targets,
       corejs: '3.0.0',
-      useBuiltIns,
+      useBuiltIns: 'entry',
       modules: false,
       shippedProposals: true,
       forceAllTransforms: production,
@@ -27,6 +27,7 @@ module.exports = function ({ development, production, test, loose, useBuiltIns, 
       '@babel/preset-react',
       {
         development,
+        useBuiltIns: true,
         runtime: 'automatic',
         importSource: '@welldone-software/why-did-you-render',
       },

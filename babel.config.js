@@ -20,15 +20,11 @@ module.exports = function (api) {
     : {
         esmodules: !legacy,
       };
-  const useBuiltIns = 'entry';
-
-  const comments = true; // webpackChunkName doesn't work if the value is false
 
   return {
-    comments,
-    presets: presets({ development, production, test, loose, useBuiltIns, targets }),
+    presets: presets({ development, production, loose, targets }),
     plugins: plugins({ development, production, test, loose, legacy }),
     overrides: overrides(),
-    ignore: [],
+    comments: true, // webpackChunkName doesn't work if the value is false,
   };
 };
