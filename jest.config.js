@@ -8,8 +8,8 @@ module.exports = {
   testRunner: '<rootDir>/node_modules/jest-circus/runner.js',
   transform: {
     '^.+\\.(js|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
-    // '^.+\\.s?(a|c)ss$': '<rootDir>/jest/cssTransform.js',
-    // '^(?!.*\\.(js|ts|tsx|css|json)$)': '<rootDir>/jest/fileTransform.js',
+    '^.+\\.s?(a|c)ss$': '<rootDir>/configs/jest/cssTransform.js',
+    '^(?!.*\\.(js|ts|tsx|css|json)$)': '<rootDir>/configs/jest/fileTransform.js',
   },
   snapshotSerializers: ['enzyme-to-json/serializer', 'jest-styled-components'],
   transformIgnorePatterns: ['node_modules/(?!(@vtb|@openvtb)/.*)'],
@@ -35,8 +35,7 @@ module.exports = {
     '^@svgstore(.*)': '<rootDir>/src/assets/svgstore$1',
     '^@images(.*)': '<rootDir>/src/assets/images$1',
     '^@stylesheets(.*)': '<rootDir>/src/assets/stylesheets$1',
-
-    '\\.(s?(a|c)ss)$': '<rootDir>/src/__mocks__/styleMock.js',
+    '\\.(s?(a|c)ss)$': 'identity-obj-proxy',
   },
   moduleFileExtensions: ['js', 'ts', 'tsx', 'json', 'node'],
   watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],

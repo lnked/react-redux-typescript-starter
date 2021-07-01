@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, createRef } from 'react';
 
 import { Wrapper, Label, BaseInput, ResetButton, InputWrapper } from './style';
 import { useInputState } from './useInputState';
@@ -15,7 +15,7 @@ export const Input: React.FC<OuterProps> = ({
   inputClassName,
   ...attrs
 } = {}) => {
-  const textInput = React.createRef<HTMLInputElement>();
+  const textInput = createRef<HTMLInputElement>();
 
   const pair = `field-${Math.random()}`;
 
@@ -25,8 +25,10 @@ export const Input: React.FC<OuterProps> = ({
     handleChange: onChange,
   });
 
-  React.useEffect(() => {
-    focus && textInput.current!.focus();
+  useEffect(() => {
+    if (focus) {
+      textInput.current?.focus();
+    }
   }, [textInput, value, focus]);
 
   return (
