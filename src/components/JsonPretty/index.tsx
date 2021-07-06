@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { FC } from 'react';
 
 import { Code, Wrapper } from './styles';
 
@@ -7,7 +7,7 @@ export interface OuterProps {
   theme?: string;
 }
 
-export const JsonPretty: React.FC<OuterProps> = ({ json }: OuterProps) => (
+export const JsonPretty: FC<OuterProps> = ({ json }: OuterProps) => (
   <Wrapper>
     <Code>{JSON.stringify(json, null, '  ')}</Code>
   </Wrapper>

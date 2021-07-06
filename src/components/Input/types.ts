@@ -1,6 +1,6 @@
-import * as React from 'react';
+import { HTMLProps, ChangeEvent } from 'react';
 export type valueType = string | number | undefined;
-export type eventType = React.ChangeEvent<HTMLInputElement>;
+export type eventType = ChangeEvent<HTMLInputElement>;
 
 export interface InnerState {
   propsValue?: valueType;
@@ -8,7 +8,7 @@ export interface InnerState {
   handleChange?: (e: eventType, value: valueType) => void;
 }
 
-export interface OuterProps extends React.HTMLProps<HTMLInputElement> {
+export interface OuterProps extends HTMLProps<HTMLInputElement> {
   name?: string;
   type?: string;
   label?: string;

@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import { Container } from './styles';
 
 export function ErrorFallback({ error, componentStack, resetErrorBoundary }: any) {

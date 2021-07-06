@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect, StrictMode, Suspense } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
@@ -20,19 +20,19 @@ function App() {
 
   return (
     <ErrorBoundary FallbackComponent={() => <ErrorFallback />}>
-      <React.StrictMode>
+      <StrictMode>
         <I18nextProvider i18n={i18n}>
           <GlobalStyle />
 
           <Router>
             <CoreLayout>
-              <React.Suspense fallback={null}>
+              <Suspense fallback={null}>
                 <Switcher />
-              </React.Suspense>
+              </Suspense>
             </CoreLayout>
           </Router>
         </I18nextProvider>
-      </React.StrictMode>
+      </StrictMode>
     </ErrorBoundary>
   );
 }

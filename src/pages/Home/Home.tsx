@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { ChangeEvent, FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import useReactRouter from 'use-react-router';
 import { Box, Flex } from 'reflexbox/styled-components';
@@ -14,25 +14,25 @@ import { filterProps } from '../../helpers/tokens';
 
 import globe from '@assets/images/globe.jpg';
 
+const setColor = (color: string) => css`
+  color: ${color};
+`;
+
 const SButton = filterProps('button', ['color'])<{ color: string }>`
   cursor: pointer;
 
-  ${({ color }) =>
-    color &&
-    css`
-      color: ${color};
-    `}
+  ${({ color }) => color && setColor(color)}
 `;
 
 const SButton1 = filterProps(Button, ['color'])`
-  color: ${({ coldrex }) => `${coldrex}`}
+  color: ${({ coldrex }) => coldrex}
 `;
 
-export const Home: React.FC = () => {
+export const Home: FC = () => {
   const { t } = useTranslation();
   const { history, location, match } = useReactRouter();
 
-  const handleChange = (name: string) => (e: React.ChangeEvent<HTMLInputElement>, value: any) =>
+  const handleChange = (name: string) => (e: ChangeEvent<HTMLInputElement>, value: any) =>
     console.info('change: ', {
       e,
       name,
@@ -41,8 +41,8 @@ export const Home: React.FC = () => {
 
   return (
     <div>
-      <SButton color="violet">Button</SButton>
-      <SButton1>Button</SButton1>
+      <SButton color="violet">Button violet</SButton>
+      <SButton1>Button default</SButton1>
 
       <Chip label="Chip size s" size={CHIP_SIZE.s} />
       <Chip label="Chip size m" size={CHIP_SIZE.m} />
