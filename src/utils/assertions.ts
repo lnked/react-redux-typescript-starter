@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Children } from 'react';
 
 export const isFunction = (obj: any) => typeof obj === 'function';
 
@@ -10,6 +10,6 @@ export const isString = (obj: any): obj is string => Object.prototype.toString.c
 
 export const isNaN = (obj: any): boolean => obj !== obj;
 
-export const isEmptyChildren = (children: any): boolean => React.Children.count(children) === 0;
+export const isEmptyChildren = (children: any): boolean => Children.count(children) === 0;
 
 export const isPromise = (value: any): value is PromiseLike<any> => isObject(value) && isFunction(value.then);

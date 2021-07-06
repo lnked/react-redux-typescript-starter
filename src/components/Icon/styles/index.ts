@@ -8,26 +8,23 @@ type Props = {
   filled?: boolean;
 };
 
+const blueColor = css`
+  color: blue;
+`;
+
+const blackColor = css`
+  color: black;
+`;
+
+const redColor = css`
+  color: red;
+`;
+
 export const Container = styled.div<Props>`
   color: ${CommonStyles.themeColor};
-
-  ${({ empty }) =>
-    empty &&
-    css`
-      color: blue;
-    `}
-
-  ${({ active }) =>
-    active &&
-    css`
-      color: black;
-    `}
-
-  ${({ filled }) =>
-    filled &&
-    css`
-      color: red;
-    `}
+  ${({ empty }) => empty && blueColor}
+  ${({ active }) => active && blackColor}
+  ${({ filled }) => filled && redColor}
 `;
 
 export const StyledButton = styled.button``;

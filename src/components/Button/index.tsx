@@ -1,20 +1,20 @@
-import * as React from 'react';
+import { ButtonHTMLAttributes, ReactChild, FC, AnchorHTMLAttributes } from 'react';
 
 import { Control } from './styles';
 
-export type OuterProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  label?: React.ReactChild[] | string;
-  children?: React.ReactChild[] | string;
+export type OuterProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  label?: ReactChild[] | string;
+  children?: ReactChild[] | string;
   disabled?: boolean;
 };
 
-export const Button: React.FC<OuterProps> = ({ children, label, disabled, ...props } = {}) => (
+export const Button: FC<OuterProps> = ({ children, label, disabled, ...props } = {}) => (
   <Control type="button" aria-disabled={disabled} disabled={disabled} {...props}>
     {children || label}
   </Control>
 );
 
-// export class AnchorButton extends AbstractButton<React.AnchorHTMLAttributes<HTMLAnchorElement>> {
+// export class AnchorButton extends AbstractButton<AnchorHTMLAttributes<HTMLAnchorElement>> {
 //   public static displayName = `AnchorButton`;
 
 //   public render() {

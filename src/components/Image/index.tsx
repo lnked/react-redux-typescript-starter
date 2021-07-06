@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import ProgressiveImage from 'react-progressive-image';
 
 import { Picture, Source, Loading } from './styles';
@@ -12,7 +12,7 @@ export interface OuterProps {
   className?: string;
 }
 
-export const Image: React.FC<OuterProps> = ({ src, className, ...props }: OuterProps) => {
+export const Image: FC<OuterProps> = ({ src, className, ...props }: OuterProps) => {
   return (
     <Picture className={className}>
       <ProgressiveImage src={src} placeholder={src}>

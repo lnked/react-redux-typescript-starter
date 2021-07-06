@@ -1,9 +1,9 @@
-import * as React from 'react';
+import { useState, useCallback, ChangeEvent } from 'react';
 
 export const Example = () => {
-  const [value, setValue] = React.useState('');
+  const [value, setValue] = useState('');
 
-  const handleChange = React.useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   }, []);
 

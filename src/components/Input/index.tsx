@@ -1,10 +1,10 @@
-import React, { useEffect, createRef } from 'react';
+import { useEffect, createRef, FC } from 'react';
 
 import { Wrapper, Label, BaseInput, ResetButton, InputWrapper } from './style';
 import { useInputState } from './useInputState';
 import { OuterProps } from './types';
 
-export const Input: React.FC<OuterProps> = ({
+export const Input: FC<OuterProps> = ({
   label,
   error,
   focus,

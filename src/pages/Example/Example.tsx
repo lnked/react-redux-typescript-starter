@@ -1,11 +1,11 @@
-import React, { useCallback, useEffect } from 'react';
+import { FC, useCallback, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 import * as actions from '@stores/providers/news/actions';
 import * as selectors from '@stores/providers/news/selectors';
 
-export const Example: React.FC = () => {
+export const Example: FC = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 

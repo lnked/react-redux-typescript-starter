@@ -1,15 +1,15 @@
-import * as React from 'react';
+import { FC, ReactChild, memo } from 'react';
 
 import { Link } from './styles';
 
 export interface OuterProps {
   to: string;
   label?: string;
-  children?: React.ReactChild[] | string;
+  children?: ReactChild[] | string;
   component?: any;
 }
 
-export const PreloadLink: React.FC<OuterProps> = React.memo((props: OuterProps) => {
+export const PreloadLink: FC<OuterProps> = memo((props: OuterProps) => {
   const { label, children, ...restProps } = props;
 
   return <Link {...restProps}>{children || label}</Link>;
