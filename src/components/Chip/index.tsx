@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import classNames from 'classnames';
 
-// import styles from './styles.module.scss';
+import styles from './styles.module.scss';
 
 export type ChipSizeType = 's' | 'm' | 'l' | 'x';
 
@@ -26,11 +26,8 @@ export const CHIP_SIZE: Record<ChipSizeType, ChipSizeType> = {
 
 export const Chip: FC<Props> = ({ size, label, children }) => {
   return (
-    // <div className={classNames(styles.chip, size && styles[size])}>
-    //   <div className={styles.chip__name}>{label || children}</div>
-    // </div>
-    <div>
-      <div>{label || children}</div>
+    <div className={classNames(styles.chip, size && styles[size])}>
+      <div className={styles.chip__name}>{label || children}</div>
     </div>
   );
 };
