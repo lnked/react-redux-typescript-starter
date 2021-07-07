@@ -13,7 +13,7 @@ const miniCssExtract = () => ({
   loader: MiniCssExtractPlugin.loader,
   options: {
     publicPath: stylesPath,
-    esModule: false,
+    esModule: true,
     modules: {
       namedExport: true,
     },
