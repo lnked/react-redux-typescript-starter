@@ -7,6 +7,7 @@ import { css } from 'styled-components/macro';
 import { Image } from '@components/Image';
 import { Input } from '@components/Input';
 import { Button } from '@components/Button';
+import { Countdown } from '@components/Countdown';
 import { Chip, CHIP_SIZE } from '@components/Chip';
 import { SKELETON_THEME, Skeleton } from '@components/Skeleton';
 
@@ -41,6 +42,10 @@ export const Home: FC = () => {
 
   return (
     <div>
+      <div style={{ padding: '10px' }}>
+        <Countdown ticks={20} onComplete={() => console.log('finish')} />
+      </div>
+
       <SButton color="violet">Button violet</SButton>
       <SButton1>Button default</SButton1>
 
