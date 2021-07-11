@@ -1,47 +1,36 @@
 const { resolve } = require('path');
-
 const stylesheetsPath = resolve(__dirname, 'src/assets/stylesheets');
 
-module.exports = (ctx = {}) => ({
-  parser: 'postcss-scss',
-  plugins: [
-    ['postcss-import', { path: [stylesheetsPath] }],
-    ['postcss-nested', {}],
-    [
-      'postcss-preset-env',
-      {
+module.exports = env => {
+  return {
+    parser: 'postcss-scss',
+    plugins: [
+      require('postcss-import')({
+        path: [stylesheetsPath],
+      }),
+      require('postcss-nested'),
+      require('postcss-preset-env')({
         stage: 1,
-        browsers: 'last 2 versions',
-      },
-    ],
-    [
-      'postcss-simple-vars',
-      {
+      }),
+      require('postcss-simple-vars')({
         silent: true,
-      },
-    ],
-    ['postcss-calc', {}],
-    ['postcss-custom-media', {}],
-    ['postcss-custom-properties', {}],
-    ['postcss-custom-selectors', {}],
-    ['postcss-emptymediaqueries', {}],
-    ['postcss-hexrgba', {}],
-    ['postcss-position', {}],
-    ['postcss-url', {}],
-    [
-      'pixrem',
-      {
+      }),
+      require('postcss-calc'),
+      require('postcss-custom-media'),
+      require('postcss-custom-properties'),
+      require('postcss-custom-selectors'),
+      require('postcss-hexrgba'),
+      require('postcss-position'),
+      require('postcss-url'),
+      require('pixrem')({
         rootValue: 10,
-      },
-    ],
-    ...(ctx.mode === 'production'
-      ? [
-          ['postcss-will-change', {}],
-          ['postcss-will-change-transition', {}],
-          ['postcss-discard-comments', {}],
-          [
-            'cssnano',
-            {
+      }),
+      ...(env.mode === 'production'
+        ? [
+            require('postcss-will-change'),
+            require('postcss-will-change-transition'),
+            require('postcss-discard-comments'),
+            require('cssnano')({
               safe: true,
               calc: false,
               zindex: false,
@@ -50,17 +39,12 @@ module.exports = (ctx = {}) => ({
               normalizeCharset: true,
               convertValues: { length: false },
               colormin: true,
-            },
-          ],
-          [
-            'autoprefixer',
-            {
-              flexbox: 'no-2009',
-            },
-          ],
-        ]
-      : []),
-  ].filter(Boolean),
-});
+            }),
+            require('autoprefixer')({ flexbox: 'no-2009' }),
+          ]
+        : []),
+    ].filter(Boolean),
+  };
+};
 
 module.exports.postcss = true;

@@ -11610,11 +11610,6 @@ postcss-double-position-gradients@^1.0.0:
     postcss "^7.0.5"
     postcss-values-parser "^2.0.0"
 
-postcss-emptymediaqueries@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/postcss-emptymediaqueries/-/postcss-emptymediaqueries-0.0.2.tgz#300e00eff2b508c2e5d9be9899e7320dbd811546"
-  integrity sha1-MA4A7/K1CMLl2b6YmecyDb2BFUY=
-
 postcss-env-function@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/postcss-env-function/-/postcss-env-function-2.0.2.tgz#0f3e3d3c57f094a92c2baf4b6241f0b0da5365d7"
