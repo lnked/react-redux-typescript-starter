@@ -43,7 +43,7 @@ export const Home: FC = () => {
   return (
     <div>
       <div style={{ padding: '10px' }}>
-        <Countdown ticks={20} onComplete={() => console.log('finish')} />
+        <Countdown ticks={10} onComplete={() => console.log('finish')} />
       </div>
 
       <SButton color="violet">Button violet</SButton>

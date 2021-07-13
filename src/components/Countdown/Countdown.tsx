@@ -6,36 +6,43 @@ type Props = {
   onComplete?: () => void;
 };
 
-const useAnimationFrame = (callback: (time: number) => void) => {
+const useAnimationFrame = (callback: (time: number) => void, initialValue = 0, interval = 1000) => {
   const requestRef = useRef(0);
-  const previousTimeRef = useRef(0);
+  const currentValueRef = useRef(initialValue);
+  const previousTimeRef = useRef(new Date().getTime());
 
-  const animate = useCallback(
-    (time: number) => {
-      if (previousTimeRef.current != undefined) {
-        const deltaTime = time - previousTimeRef.current;
-        callback(deltaTime);
-      }
+  const timer = useCallback(() => {
+    const currentTime = new Date().getTime();
 
-      previousTimeRef.current = time;
-      requestRef.current = requestAnimationFrame(animate);
-    },
-    [callback],
-  );
+    if (currentTime - previousTimeRef.current >= interval) {
+      currentValueRef.current -= 1;
+      previousTimeRef.current = currentTime;
+
+      callback(currentValueRef.current);
+    }
+
+    if (currentValueRef.current > 0) {
+      requestRef.current = requestAnimationFrame(timer);
+    }
+  }, [callback, interval]);
 
   useEffect(() => {
-    requestRef.current = requestAnimationFrame(animate);
+    requestRef.current = requestAnimationFrame(timer);
 
     return () => cancelAnimationFrame(requestRef.current);
-  }, [animate]); // Make sure the effect runs only once
+  }, [timer]);
 };
 
 export const Countdown: FC<Props> = ({ ticks, onComplete, interval = 1000 }) => {
   const [count, setCount] = useState(ticks);
 
-  useAnimationFrame(deltaTime => {
-    setCount(prevCount => (prevCount + deltaTime * 0.01) % 100);
-  });
+  useAnimationFrame(setCount, ticks, interval);
 
-  return <div>{Math.round(count)}</div>;
+  useEffect(() => {
+    if (count === 0 && onComplete) {
+      onComplete();
+    }
+  }, [count, onComplete]);
+
+  return <div>{count}</div>;
 };
