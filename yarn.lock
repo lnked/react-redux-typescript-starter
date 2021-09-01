@@ -2551,10 +2551,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-15.12.2.tgz#1f2b42c4be7156ff4a6f914b2fb03d05fa84e38d"
   integrity sha512-zjQ69G564OCIWIOHSXyQEEDpdpGl+G348RAKY0XXy9Z5kU9Vzv1GMNnkar/ZJ8dzXB3COzD9Mo9NtRZ4xfgUww==
 
-"@types/node@^16.7.9":
-  version "16.7.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.7.9.tgz#3bf27710839e62a470ddf6bd8dd321f1737ce5b4"
-  integrity sha512-KktxVzS4FPDFVHUUOWyZMvRo//8vqOLITtLMhFSW9IdLsYT/sPyXj3wXtaTcR7A7olCe7R2Xy7R+q5pg2bU46g==
+"@types/node@^16.7.10":
+  version "16.7.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.7.10.tgz#7aa732cc47341c12a16b7d562f519c2383b6d4fc"
+  integrity sha512-S63Dlv4zIPb8x6MMTgDq5WWRJQe56iBEY0O3SOFA9JrRienkOVDXSXBjjJw6HTNQYSE2JI6GMCR6LVbIMHJVvA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -5184,10 +5184,10 @@ core-js-pure@^3.14.0:
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.14.0.tgz#72bcfacba74a65ffce04bf94ae91d966e80ee553"
   integrity sha512-YVh+LN2FgNU0odThzm61BsdkwrbrchumFq3oztnE9vTKC4KS2fvnPmcx8t6jnqAyOTCTF4ZSiuK8Qhh7SNcL4g==
 
-core-js@3.16.4:
-  version "3.16.4"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.16.4.tgz#0fb1029a554fc2688c0963d7c900e188188a78e0"
-  integrity sha512-Tq4GVE6XCjE+hcyW6hPy0ofN3hwtLudz5ZRdrlCnsnD/xkm/PWQRudzYHiKgZKUcefV6Q57fhDHjZHJP5dpfSg==
+core-js@3.17.0:
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.17.0.tgz#01a60285b6247b4865e6a394d528070ee964f8c3"
+  integrity sha512-zXT4rclS9jM6tikbAUKAGLonuRKOJ2ZvBnZCEOJAbzuTLw4kKcuA5plNt8juzdU6O/py/EgAehzvLh0VXEdBbQ==
 
 core-js@^2.4.0:
   version "2.6.12"
@@ -8311,10 +8311,10 @@ i18next@*:
   dependencies:
     "@babel/runtime" "^7.12.0"
 
-i18next@20.5.0:
-  version "20.5.0"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-20.5.0.tgz#e3729b325d8ed62496a5e14bae9716d31a113eb5"
-  integrity sha512-Mdw2e60XndOKSG0Ceta5R+902/pgwHHkqOhQ7+X4223RmCl5ItatLyx06jqiknGZFe3lRU/x6TAdF9aLL6BQ/Q==
+i18next@20.6.0:
+  version "20.6.0"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-20.6.0.tgz#1021e267c8760b03b1b9fbcc5ef734b28d83ea3c"
+  integrity sha512-sgt7AkvxUQbW5dsA7p5AYq7tBOIdm9K7c4wAppsbt5l0Hynqs7FTsa0bA0Exy+PUR17+IOcg3KVCaILc1OAOxQ==
   dependencies:
     "@babel/runtime" "^7.12.0"
 
@@ -10660,10 +10660,10 @@ mini-create-react-context@^0.4.0:
     "@babel/runtime" "^7.12.1"
     tiny-warning "^1.0.3"
 
-mini-css-extract-plugin@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-2.2.1.tgz#a44bbfc8ede9211f31474b91c4e8863bf52dd294"
-  integrity sha512-A0GBXpz8WIPgh2HfASJ0EeY8grd2dGxmC4R8uTujFJXZY7zFy0nvYSYW6SKCLKlz7y45BdHONfaxZQMIZpeF/w==
+mini-css-extract-plugin@2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-2.2.2.tgz#df22f16bf43173050c6d652fa7d035318c310e04"
+  integrity sha512-eUjQ/q1rQIeHWgIx7ny/DNgXHcMXHdBwgrZQK7Ev8dbR+HxhroFM2Cb6kMiswOYaq05IRJhPuQqXWUABIjjA3g==
   dependencies:
     schema-utils "^3.1.0"
 
