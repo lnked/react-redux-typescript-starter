@@ -5184,10 +5184,10 @@ core-js-pure@^3.14.0:
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.14.0.tgz#72bcfacba74a65ffce04bf94ae91d966e80ee553"
   integrity sha512-YVh+LN2FgNU0odThzm61BsdkwrbrchumFq3oztnE9vTKC4KS2fvnPmcx8t6jnqAyOTCTF4ZSiuK8Qhh7SNcL4g==
 
-core-js@3.17.0:
-  version "3.17.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.17.0.tgz#01a60285b6247b4865e6a394d528070ee964f8c3"
-  integrity sha512-zXT4rclS9jM6tikbAUKAGLonuRKOJ2ZvBnZCEOJAbzuTLw4kKcuA5plNt8juzdU6O/py/EgAehzvLh0VXEdBbQ==
+core-js@3.17.2:
+  version "3.17.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.17.2.tgz#f960eae710dc62c29cca93d5332e3660e289db10"
+  integrity sha512-XkbXqhcXeMHPRk2ItS+zQYliAMilea2euoMsnpRRdDad6b2VY6CQQcwz1K8AnWesfw4p165RzY0bTnr3UrbYiA==
 
 core-js@^2.4.0:
   version "2.6.12"
@@ -14846,10 +14846,10 @@ terminal-link@^2.0.0:
     ansi-escapes "^4.2.1"
     supports-hyperlinks "^2.0.0"
 
-terser-webpack-plugin@5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-5.2.0.tgz#694c54fcdfa5f5cb2ceaf31929e7535b32a8a50c"
-  integrity sha512-FpR4Qe0Yt4knSQ5u2bA1wkM0R8VlVsvhyfSHvomXRivS4vPLk0dJV2IhRBIHRABh7AFutdMeElIA5y1dETwMBg==
+terser-webpack-plugin@5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-5.2.1.tgz#7baa96287ca8f29d22814d57c809cbae6be4de3c"
+  integrity sha512-mUAWsS2RDNL3rEr0ZTr7hm/R1DDxNwrED7Kf59F2rgFTfy+LrnciwA51MNWhGGQcqHnqvbPHgkW9LYr5HGBhfw==
   dependencies:
     jest-worker "^27.0.6"
     p-limit "^3.1.0"
@@ -15804,10 +15804,10 @@ webpack-sources@^3.2.0:
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.0.tgz#b16973bcf844ebcdb3afde32eda1c04d0b90f89d"
   integrity sha512-fahN08Et7P9trej8xz/Z7eRu8ltyiygEo/hnRi9KqBUs80KeDcnf96ZJo++ewWd84fEf3xSX9bp4ZS9hbw0OBw==
 
-webpack@5.51.1:
-  version "5.51.1"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.51.1.tgz#41bebf38dccab9a89487b16dbe95c22e147aac57"
-  integrity sha512-xsn3lwqEKoFvqn4JQggPSRxE4dhsRcysWTqYABAZlmavcoTmwlOb9b1N36Inbt/eIispSkuHa80/FJkDTPos1A==
+webpack@5.51.2:
+  version "5.51.2"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.51.2.tgz#f765d258b0bf6abda3c5f21bf855a25720e9796f"
+  integrity sha512-odydxP4WA3XYYzwSQUivPxywdzMlY42bbfxMwCaEtHb+i/N9uzKSHcLgWkXo/Gsa+4Zlzf3Jg0hEHn1FnZpk2Q==
   dependencies:
     "@types/eslint-scope" "^3.7.0"
     "@types/estree" "^0.0.50"
