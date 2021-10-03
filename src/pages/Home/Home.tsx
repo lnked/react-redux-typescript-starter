@@ -21,6 +21,8 @@ const setColor = (color: string) => css`
 
 const SButton = filterProps('button', ['color'])<{ color: string }>`
   cursor: pointer;
+  border: 0;
+  padding: 8px 12px;
 
   ${({ color }) => color && setColor(color)}
 `;
