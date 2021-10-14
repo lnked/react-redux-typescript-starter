@@ -40,6 +40,7 @@ module.exports = {
     '@typescript-eslint/promise-function-async': 'off',
     '@typescript-eslint/restrict-plus-operands': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
+    '@typescript-eslint/no-unnecessary-type-constraint': 'off',
     '@typescript-eslint/explicit-function-return-type': [
       'off',
       {

@@ -7,6 +7,7 @@ const WebpackManifestPlugin = require('./webpack-manifest-plugin');
 const CircularDependencyPlugin = require('./circular-dependency-plugin');
 const CaseSensitivePathsPlugin = require('./case-sensitive-paths-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('./ts-checker-webpack');
+const EslintWebpackPlugin = require('./eslint-webpack-plugin');
 
 module.exports = {
   plugins: [
@@ -15,7 +16,8 @@ module.exports = {
     ...CopyWebpackPlugin(),
     ...CssExtractPlugin(),
     ...HtmlWebpackPlugin(),
-    ...WebpackManifestPlugin(), //
+    ...EslintWebpackPlugin(),
+    ...WebpackManifestPlugin(),
     ...CaseSensitivePathsPlugin(),
     ...CircularDependencyPlugin(),
     ...ForkTsCheckerWebpackPlugin(),
