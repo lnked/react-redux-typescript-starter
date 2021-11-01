@@ -9,7 +9,6 @@ module.exports = () => {
       files: ['src/**/*.tsx?', 'src/**/*.jsx?'],
       exclude: ['/node_modules/'],
       extensions: ['js', 'jsx', 'ts', 'tsx'],
-      eslintPath: resolve(options.rootPath, '.eslintrc.js'),
     }),
   ];
 };
