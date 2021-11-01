@@ -9,16 +9,7 @@ module.exports = () => {
       files: ['src/**/*.tsx?', 'src/**/*.jsx?'],
       exclude: ['/node_modules/'],
       extensions: ['js', 'jsx', 'ts', 'tsx'],
+      eslintPath: resolve(options.rootPath, '.eslintrc.js'),
     }),
-    // new ESLintPlugin({
-    //   cache: true,
-    //   ignore: true,
-    //   emitWarning: true,
-    //   useEslintrc: true,
-    //   exclude: ['/node_modules/'],
-    //   extensions: ['js', 'jsx', 'ts', 'tsx'],
-    //   eslintPath: resolve(options.rootPath, '.eslintrc.js'),
-    //   resolvePluginsRelativeTo: __dirname,
-    // }),
   ];
 };
