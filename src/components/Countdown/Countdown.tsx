@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, useCallback, FC } from 'react';
+import { useRef, useEffect, useState, useCallback } from 'react';
 
 type Props = {
   ticks: number;
@@ -33,7 +33,7 @@ const useAnimationFrame = (callback: (time: number) => void, initialValue = 0, i
   }, [timer]);
 };
 
-export const Countdown: FC<Props> = ({ ticks, onComplete, interval = 1000 }) => {
+export const Countdown = ({ ticks, onComplete, interval = 1000 }: Props) => {
   const [count, setCount] = useState(ticks);
 
   useAnimationFrame(setCount, ticks, interval);

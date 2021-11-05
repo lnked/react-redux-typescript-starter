@@ -1,14 +1,15 @@
-import { ButtonHTMLAttributes, ReactChild, FC, AnchorHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, ReactChild, PropsWithChildren } from 'react';
 
 import { Control } from './styles';
 
 export type OuterProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   label?: ReactChild[] | string;
-  children?: ReactChild[] | string;
   disabled?: boolean;
 };
 
-export const Button: FC<OuterProps> = ({ children, label, disabled, ...props } = {}) => (
+const defaultButtonProps = {};
+
+export const Button = ({ children, label, disabled, ...props }: PropsWithChildren<OuterProps> = defaultButtonProps) => (
   <Control type="button" aria-disabled={disabled} disabled={disabled} {...props}>
     {children || label}
   </Control>

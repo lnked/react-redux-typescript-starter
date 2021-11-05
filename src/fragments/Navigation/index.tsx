@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { routes } from '@app/routes';
@@ -11,7 +10,7 @@ export type OuterProps = {};
 
 const handleSetLanguage = (lang: 'ru' | 'en') => () => setLanguage(lang);
 
-export const Navigation: FC<OuterProps> = ({ ...props }) => {
+export const Navigation = ({ ...props }: OuterProps) => {
   const { t, i18n } = useTranslation();
 
   return (

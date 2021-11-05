@@ -1,36 +1,27 @@
-import { Route, Switch, withRouter } from 'react-router-dom';
-
-import { setHistory } from '@utils/redirect';
+import { Route, Routes } from 'react-router-dom';
 
 import { routes, Home, NoMatch } from './routes';
-
-function HistorySetter({ history }: any) {
-  setHistory(history);
-  return null;
-}
 
 export type RouteProps = {};
 
 const Switcher = (store: any) => (
   <>
-    <Route component={HistorySetter} />
+    <Routes>
+      <Route path="/">
+        <Home />
+      </Route>
 
-    <Switch>
-      <Route path="/" component={Home} exact />
-
-      {routes.map(({ keyName, path, to, component: Component, exact = false, ...restProps }) => (
-        <Route
-          {...restProps}
-          key={keyName}
-          path={path || to}
-          exact={exact}
-          render={props => <Component {...store} {...props} />}
-        />
+      {routes.map(({ keyName, path, to, element: Component, ...restProps }) => (
+        <Route {...restProps} key={keyName} path={path || to} element={<Component {...store} />}>
+          <Component {...store} />
+        </Route>
       ))}
 
-      <Route path="*" render={props => <NoMatch {...store} {...props} />} exact />
-    </Switch>
+      <Route path="*">
+        <NoMatch {...store} />
+      </Route>
+    </Routes>
   </>
 );
 
-export default withRouter(Switcher);
+export default Switcher;

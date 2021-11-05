@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 import { SkeletonProps, SkeletonThemeType, SkeletonThemeProps } from './types';
@@ -23,7 +22,7 @@ export const SKELETON_THEME: Record<SkeletonThemeType, SkeletonThemeType> = {
   [LIGHT_THEME]: LIGHT_THEME,
 };
 
-export const SkeletonItem: FC<SkeletonProps> = ({ theme = LIGHT_THEME, isFluid = false, ...props }) => (
+export const SkeletonItem = ({ theme = LIGHT_THEME, isFluid = false, ...props }: SkeletonProps) => (
   <SkeletonTheme {...THEME_COLORS?.[theme]}>
     <Skeleton {...props} {...(isFluid ? { width: '100%' } : {})} />
   </SkeletonTheme>

@@ -1,9 +1,7 @@
-import { FC } from 'react';
-
 import { Container } from './styles';
 import { OuterProps } from './types';
 
-export const Icon: FC<OuterProps> = (props: OuterProps) => {
+export const Icon = (props: OuterProps) => {
   return <Container {...props} />;
 };
 
@@ -16,7 +14,7 @@ Icon.displayName = 'Icon';
 //   type: any;
 // }
 
-// export const Icon: FC<Props> = ({ type, ...props }) => <SVG src={type} {...props} />;
+// export const Icon = ({ type, ...props }: Props) => <SVG src={type} {...props} />;
 
 // Icon.displayName = 'Icon';
 
