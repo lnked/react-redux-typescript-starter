@@ -44,7 +44,7 @@ export const Home = () => {
     });
 
   return (
-    <div>
+    <>
       <div style={{ padding: '10px' }}>
         <Countdown ticks={10} onComplete={() => console.log('finish')} />
       </div>
@@ -121,6 +121,6 @@ export const Home = () => {
 
       <div>{t('name.label')}</div>
       <div>{t('home.label')}</div>
-    </div>
+    </>
   );
 };
