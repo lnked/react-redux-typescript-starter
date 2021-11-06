@@ -21,7 +21,7 @@ export const NoMatch = lazy(
 export type RouteProps = {
   keyName: string;
   to: string;
-  path?: string | string[];
+  path?: string;
   element: any;
 };
 
@@ -31,7 +31,13 @@ export const routes: RouteProps[] = [
   {
     keyName: 'navigation.shop',
     to: '/shop',
-    path: ['/shop', '/shop/:product'],
+    path: '/shop',
+    element: Home,
+  },
+  {
+    keyName: 'navigation.product',
+    to: '/shop/xxx',
+    path: '/shop/:product',
     element: Home,
   },
 ];
