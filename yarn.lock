@@ -4803,7 +4803,7 @@ deepmerge@^4.2.2:
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.2.2.tgz#44d2ea3679b8f4d4ffba33f03d865fc1e7bf4955"
   integrity sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==
 
-default-gateway@^6.0.0:
+default-gateway@^6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/default-gateway/-/default-gateway-6.0.3.tgz#819494c888053bdb743edbf343d6cdf7f2943a71"
   integrity sha512-fwSOJsbbNzZ/CUFpqFBqYfYNLj1NbMPm8MMCIzHjC83iSJRBEGmDUxU+WP661BaBQImeC2yHwXtz+P/O9o+XEg==
@@ -7199,16 +7199,6 @@ inspectpack@4.7.1:
     semver-compare "^1.0.0"
     yargs "^16.2.0"
 
-internal-ip@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/internal-ip/-/internal-ip-6.2.0.tgz#d5541e79716e406b74ac6b07b856ef18dc1621c1"
-  integrity sha512-D8WGsR6yDt8uq7vDMu7mjcR+yRMm3dW8yufyChmszWRjcSHuxLBkR3GdS2HZAjodsaGuCvXeEJpueisXJULghg==
-  dependencies:
-    default-gateway "^6.0.0"
-    ipaddr.js "^1.9.1"
-    is-ip "^3.1.0"
-    p-event "^4.2.0"
-
 internal-slot@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/internal-slot/-/internal-slot-1.0.3.tgz#7347e307deeea2faac2ac6205d4bc7d34967f59c"
@@ -7248,17 +7238,12 @@ io-ts@^2.2.13:
   resolved "https://registry.yarnpkg.com/io-ts/-/io-ts-2.2.16.tgz#597dffa03db1913fc318c9c6df6931cb4ed808b2"
   integrity sha512-y5TTSa6VP6le0hhmIyN0dqEXkrZeJLeC5KApJq6VLci3UEKF80lZ+KuoUs02RhBxNWlrqSNxzfI7otLX1Euv8Q==
 
-ip-regex@^4.0.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/ip-regex/-/ip-regex-4.3.0.tgz#687275ab0f57fa76978ff8f4dddc8a23d5990db5"
-  integrity sha512-B9ZWJxHHOHUhUjCPrMpLD4xEq35bUTClHM1S6CBU5ixQnkZmwipwgc96vAd7AAGM9TGHvJR+Uss+/Ak6UphK+Q==
-
 ip@^1.1.0:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/ip/-/ip-1.1.5.tgz#bdded70114290828c0a039e72ef25f5aaec4354a"
   integrity sha1-vd7XARQpCCjAoDnnLvJfWq7ENUo=
 
-ipaddr.js@1.9.1, ipaddr.js@^1.9.1:
+ipaddr.js@1.9.1:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.9.1.tgz#bff38543eeb8984825079ff3a2a8e6cbd46781b3"
   integrity sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==
@@ -7404,13 +7389,6 @@ is-invalid-path@^0.1.0:
   integrity sha1-MHqFWzzxqTi0TqcNLGEQYFNxTzQ=
   dependencies:
     is-glob "^2.0.0"
-
-is-ip@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/is-ip/-/is-ip-3.1.0.tgz#2ae5ddfafaf05cb8008a62093cf29734f657c5d8"
-  integrity sha512-35vd5necO7IitFPjd/YBeqwWnyDWbuLH9ZXQdMfDA8TEo7pv5X8yfrvVO3xbJbLUlERCMvf6X0hTUamQxCYJ9Q==
-  dependencies:
-    ip-regex "^4.0.0"
 
 is-jpg@^2.0.0:
   version "2.0.0"
@@ -8371,7 +8349,7 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-klona@^2.0.4:
+klona@^2.0.4, klona@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.5.tgz#d166574d90076395d9963aa7a928fabb8d76afbc"
   integrity sha512-pJiBpiXMbt7dkzXe8Ghj/u4FfXOOa98fPW+bihOJ4SjnoijweJrNThJfd3ifXpXhREjpoF2mZVH1GfS9LV3kHQ==
@@ -9403,13 +9381,6 @@ p-event@^2.1.0:
   dependencies:
     p-timeout "^2.0.1"
 
-p-event@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/p-event/-/p-event-4.2.0.tgz#af4b049c8acd91ae81083ebd1e6f5cae2044c1b5"
-  integrity sha512-KXatOjCRXXkSePPb1Nbi0p0m+gQAwdlbhi4wQKJPI1HsMQS9g+Sqp2o+QHziPr7eYJyOZet836KoHEVM1mwOrQ==
-  dependencies:
-    p-timeout "^3.1.0"
-
 p-finally@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
@@ -9510,13 +9481,6 @@ p-timeout@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/p-timeout/-/p-timeout-2.0.1.tgz#d8dd1979595d2dc0139e1fe46b8b646cb3cdf038"
   integrity sha512-88em58dDVB/KzPEx1X0N3LwFfYZPyDc4B6eF38M1rk9VTZMbxXXgjugz8mmwpS9Ox4BDZ+t6t3QP5+/gazweIA==
-  dependencies:
-    p-finally "^1.0.0"
-
-p-timeout@^3.1.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/p-timeout/-/p-timeout-3.2.0.tgz#c7e17abc971d2a7962ef83626b35d635acf23dfe"
-  integrity sha512-rhIwUycgwwKcP9yTOOFK/AKsAopjjCakVqLHePO3CC6Mir1Z99xT+R63jZxAT5lFZLa2inS5h+ZS2GvR99/FBg==
   dependencies:
     p-finally "^1.0.0"
 
@@ -10003,13 +9967,13 @@ postcss-lab-function@^4.0.1:
     "@csstools/convert-colors" "2.0.0"
     postcss-values-parser "6.0.1"
 
-postcss-loader@^6.1.1:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-6.2.0.tgz#714370a3f567141cf4cadcdf9575f5234d186bc5"
-  integrity sha512-H9hv447QjQJVDbHj3OUdciyAXY3v5+UDduzEytAlZCVHCpNAAg/mCSwhYYqZr9BiGYhmYspU8QXxZwiHTLn3yA==
+postcss-loader@^6.2.1:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-6.2.1.tgz#0895f7346b1702103d30fdc66e4d494a93c008ef"
+  integrity sha512-WbbYpmAaKcux/P66bZ40bpWsBucjx/TTgVVzRZ9yUO8yQfVBlameJ0ZGVaPfH64hNSBh63a+ICP5nqOpBA0w+Q==
   dependencies:
     cosmiconfig "^7.0.0"
-    klona "^2.0.4"
+    klona "^2.0.5"
     semver "^7.3.5"
 
 postcss-logical@^5.0.0:
@@ -13085,10 +13049,10 @@ webpack-dev-middleware@^5.2.1:
     range-parser "^1.2.1"
     schema-utils "^3.1.0"
 
-webpack-dev-server@4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-4.5.0.tgz#614b5112cfa4730a4801bb4ddebb3be5b0d70497"
-  integrity sha512-Ss4WptsUjYa+3hPI4iYZYEc8FrtnfkaPrm5WTjk9ux5kiCS718836srs0ppKMHRaCHP5mQ6g4JZGcfDdGbCjpQ==
+webpack-dev-server@4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-4.6.0.tgz#e8648601c440172d9b6f248d28db98bed335315a"
+  integrity sha512-oojcBIKvx3Ya7qs1/AVWHDgmP1Xml8rGsEBnSobxU/UJSX1xP1GPM3MwsAnDzvqcVmVki8tV7lbcsjEjk0PtYg==
   dependencies:
     ansi-html-community "^0.0.8"
     bonjour "^3.5.0"
@@ -13096,17 +13060,17 @@ webpack-dev-server@4.5.0:
     colorette "^2.0.10"
     compression "^1.7.4"
     connect-history-api-fallback "^1.6.0"
+    default-gateway "^6.0.3"
     del "^6.0.0"
     express "^4.17.1"
     graceful-fs "^4.2.6"
     html-entities "^2.3.2"
     http-proxy-middleware "^2.0.0"
-    internal-ip "^6.2.0"
     ipaddr.js "^2.0.1"
     open "^8.0.9"
     p-retry "^4.5.0"
     portfinder "^1.0.28"
-    schema-utils "^3.1.0"
+    schema-utils "^4.0.0"
     selfsigned "^1.10.11"
     serve-index "^1.9.1"
     sockjs "^0.3.21"
