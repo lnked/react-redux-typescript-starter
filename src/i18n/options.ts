@@ -8,9 +8,6 @@ import ru from './locales/ru.json';
 
 export const options: i18n.InitOptions = {
   lng: SITE_LANGUAGE,
-  react: {
-    wait: true,
-  },
   debug: environment.development,
   fallbackNS: `translations`,
   appendNamespaceToCIMode: true,
