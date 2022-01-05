@@ -137,7 +137,7 @@
     "identity-obj-proxy": "^3.0.0",
     "image-webpack-loader": "8.0.1",
     "inspectpack": "4.7.1",
-    "jest": "^27.4.6",
+    "jest": "^27.4.7",
     "jest-circus": "^27.4.6",
     "jest-specific-snapshot": "^5.0.0",
     "jest-styled-components": "^7.0.8",
