@@ -30,8 +30,6 @@
       "esnext"
     ],
     "types": [
-      "enzyme",
-      "enzyme-adapter-react-16",
       "i18next",
       "jest",
       "nanoid",

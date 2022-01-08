@@ -1,5 +1,7 @@
 import * as ReactDOM from 'react-dom';
-import { shallow } from 'enzyme';
+import { render, screen } from '@testing-library/react';
+
+import App from './App';
 
 jest.mock('react-redux', () => ({
   useDispatch: () => {},
@@ -8,7 +10,13 @@ jest.mock('react-redux', () => ({
   }),
 }));
 
-import App from './App';
+const useMock: any = [(k: any) => k, {}];
+useMock.t = (k: any) => k;
+useMock.i18n = {};
+
+jest.mock('react-i18next', () => ({
+  useTranslation: () => useMock,
+}));
 
 describe('renders without crashing', () => {
   it('renders without crashing', () => {
@@ -22,6 +30,15 @@ describe('renders without crashing', () => {
   });
 
   it('Should render and match the snapshot', () => {
-    const wrapper = shallow(<App />);
+    render(<App />);
+    expect(screen.getByRole('heading')).toHaveTextContent('Welcome, John Doe');
+  });
+
+  test('has correct input value', () => {
+    render(<App />);
+    expect(screen.getByRole('form')).toHaveFormValues({
+      firstName: 'John',
+      lastName: 'Doe',
+    });
   });
 });

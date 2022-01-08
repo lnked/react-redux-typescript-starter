@@ -1,17 +1,16 @@
 module.exports = {
   roots: ['<rootDir>/src'],
   collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
-  setupFiles: ['react-app-polyfill/jsdom'],
-  setupFilesAfterEnv: ['<rootDir>/configs/jest/enzyme.setup.ts'],
+  setupFiles: ['react-app-polyfill/jsdom', '@testing-library/react/dont-cleanup-after-each'],
   testMatch: ['<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}', '<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}'],
-  testEnvironment: 'jsdom',
+  testEnvironment: 'jest-environment-jsdom',
   testRunner: '<rootDir>/node_modules/jest-circus/runner.js',
   transform: {
     '^.+\\.(js|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
     '^.+\\.s?(a|c)ss$': '<rootDir>/configs/jest/cssTransform.js',
     '^(?!.*\\.(js|ts|tsx|css|json)$)': '<rootDir>/configs/jest/fileTransform.js',
   },
-  snapshotSerializers: ['enzyme-to-json/serializer', 'jest-styled-components'],
+  snapshotSerializers: ['jest-styled-components'],
   transformIgnorePatterns: ['node_modules/(?!(@vtb|@openvtb)/.*)'],
   modulePaths: [],
   moduleNameMapper: {
@@ -37,6 +36,7 @@ module.exports = {
     '^@stylesheets(.*)': '<rootDir>/src/assets/stylesheets$1',
     '\\.(s?(a|c)ss)$': 'identity-obj-proxy',
   },
+  moduleDirectories: ['node_modules', __dirname],
   moduleFileExtensions: ['js', 'ts', 'tsx', 'json', 'node'],
   watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
   resetMocks: false,

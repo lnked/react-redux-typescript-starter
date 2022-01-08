@@ -6,11 +6,9 @@ import { setLanguage } from '@i18n/index';
 
 import { Nav, NavigationList, NavigationItem, NavigationLink, Language } from './styles';
 
-export type OuterProps = {};
-
 const handleSetLanguage = (lang: 'ru' | 'en') => () => setLanguage(lang);
 
-export const Navigation = ({ ...props }: OuterProps) => {
+export const Navigation = ({ ...props }) => {
   const { t, i18n } = useTranslation();
 
   return (
