@@ -2398,7 +2398,7 @@
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.4.2.tgz#4c62fae93eb479660c3bd93f9d24d561597a8281"
   integrity sha512-ekoj4qOQYp7CvjX8ZDBgN86w3MqQhLE1hczEJbEIjgFEumDy+na/4AJAbLXfgEWFNB2pKadM5rPFtuSGMWK7xA==
 
-"@types/prop-types@*":
+"@types/prop-types@*", "@types/prop-types@^15.7.3":
   version "15.7.4"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
@@ -2493,6 +2493,13 @@
   integrity sha1-suCajBY7Kw9QcualrEFHQADfIRE=
   dependencies:
     redux-devtools-extension "*"
+
+"@types/redux-devtools@^3.7.0":
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/@types/redux-devtools/-/redux-devtools-3.7.0.tgz#d2bfc4e5a3b8ccc00b40644ea74ff46de355d4cc"
+  integrity sha512-LqGeLonnRkk90yqayE5ZGdGaiwHVFd5W241/fx2WYCagW7qWO2dfqVI0ta7lWLtMB+Idwvdr3B6MPFLd8UaC0g==
+  dependencies:
+    redux-devtools "*"
 
 "@types/reflexbox@^4.0.4":
   version "4.0.4"
@@ -8368,7 +8375,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4, lodash@^4.7.0:
+lodash@^4, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4, lodash@^4.7.0:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -10741,6 +10748,24 @@ redux-devtools-extension@*:
   resolved "https://registry.yarnpkg.com/redux-devtools-extension/-/redux-devtools-extension-2.13.9.tgz#6b764e8028b507adcb75a1cae790f71e6be08ae7"
   integrity sha512-cNJ8Q/EtjhQaZ71c8I9+BPySIBVEKssbPpskBfsXqb8HJ002A3KRVHfeRzwRo6mGPqsm7XuHTqNSNeS1Khig0A==
 
+redux-devtools-instrument@^1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/redux-devtools-instrument/-/redux-devtools-instrument-1.10.0.tgz#036caf79fa1e5f25ec4bae38a9af4f08c69e323a"
+  integrity sha512-X8JRBCzX2ADSMp+iiV7YQ8uoTNyEm0VPFPd4T854coz6lvRiBrFSqAr9YAS2n8Kzxx8CJQotR0QF9wsMM+3DvA==
+  dependencies:
+    lodash "^4.17.19"
+    symbol-observable "^1.2.0"
+
+redux-devtools@*:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/redux-devtools/-/redux-devtools-3.7.0.tgz#5bc2d50227d94ce95c79dbfdf2ffc7a23c553553"
+  integrity sha512-Lnx3UX7mnJij2Xs+RicPK1GyKkbuodrCKtfYmJsN603wC0mc99W//xCAskGVNmRhIXg4e57m2k1CyX0kVzCsBg==
+  dependencies:
+    "@types/prop-types" "^15.7.3"
+    lodash "^4.17.19"
+    prop-types "^15.7.2"
+    redux-devtools-instrument "^1.10.0"
+
 redux-immutable-state-invariant@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/redux-immutable-state-invariant/-/redux-immutable-state-invariant-2.1.0.tgz#308fd3cc7415a0e7f11f51ec997b6379c7055ce1"
@@ -11931,6 +11956,11 @@ svgo@^2.1.0, svgo@^2.7.0:
     csso "^4.2.0"
     picocolors "^1.0.0"
     stable "^0.1.8"
+
+symbol-observable@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
+  integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
 
 symbol-tree@^3.2.4:
   version "3.2.4"
