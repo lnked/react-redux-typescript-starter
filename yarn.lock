@@ -10602,10 +10602,10 @@ raf@^3.4.1:
   dependencies:
     performance-now "^2.1.0"
 
-rambda@7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-7.0.1.tgz#691fac4e0ca291af303e95e2b6d357293e01923a"
-  integrity sha512-u4isl3leprMj337gTNc7YOfxa9p0RKlK1RXgHQvCnxjlqy95tWKLCFh+7vZ3kE4bhSX7z2TxaorFDYo20FtHJw==
+rambda@7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-7.0.2.tgz#5a136cf41c869ab6bd5953cddfbd6dc27413a867"
+  integrity sha512-oM1In0rXyFIzhYDIwREhdOm+oTDwtGW5WIgo/m8TqzS5kSBvsu8UoqzQFrSA0SJCdWJQCqOsvK0pKEINTwcEIA==
 
 randombytes@^2.1.0:
   version "2.1.0"
