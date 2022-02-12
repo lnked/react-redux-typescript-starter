@@ -39,7 +39,7 @@ module.exports.getTemplate = (type = 'function', name) => {
       `import { InnerState, OuterProps } from './types';`,
       `import { StyledDiv } from './styles';\n`,
 
-      `const ${name}: React.FC<OuterProps> = (props: OuterProps): React.ReactNode => {`,
+      `const ${name} = (props: OuterProps): React.ReactNode => {`,
       `\t// const itemReferer = React.createRef<HTMLInputElement>();`,
       `\t// const [count, setCount] = useState<InnerState | null>(value);\n`,
       `\t// const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {`,
