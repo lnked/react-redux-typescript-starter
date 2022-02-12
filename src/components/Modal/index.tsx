@@ -1,13 +1,11 @@
-import { useEffect, ReactChild, FC } from 'react';
+import { useEffect, PropsWithChildren } from 'react';
 import { createPortal } from 'react-dom';
 
-export interface OuterProps {
-  children: ReactChild[];
-}
+export interface OuterProps {}
 
 const element = document.createElement('div');
 
-export const Modal: FC<any> = ({ children }) => {
+export const Modal = ({ children }: PropsWithChildren<{}>) => {
   useEffect(() => {
     document.body.appendChild(element);
 

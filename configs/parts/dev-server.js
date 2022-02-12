@@ -1,16 +1,19 @@
 const { development, dist } = require('../options');
 
 module.exports = development && {
+  stats: 'errors-only',
   devServer: {
     hot: true,
     open: true,
-    stats: 'errors-only',
-    overlay: { errors: true, warnings: false },
+    static: {
+      directory: dist,
+    },
+    client: {
+      overlay: { errors: true, warnings: false },
+    },
+    allowedHosts: 'all',
     compress: true,
-    publicPath: '/',
     historyApiFallback: true,
-    clientLogLevel: 'error',
-    contentBase: dist,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },

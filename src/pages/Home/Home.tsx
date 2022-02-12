@@ -1,6 +1,6 @@
-import { ChangeEvent, FC } from 'react';
+import { ChangeEvent } from 'react';
 import { useTranslation } from 'react-i18next';
-import useReactRouter from 'use-react-router';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Box, Flex } from 'reflexbox/styled-components';
 import { css } from 'styled-components/macro';
 
@@ -21,6 +21,8 @@ const setColor = (color: string) => css`
 
 const SButton = filterProps('button', ['color'])<{ color: string }>`
   cursor: pointer;
+  border: 0;
+  padding: 8px 12px;
 
   ${({ color }) => color && setColor(color)}
 `;
@@ -29,9 +31,10 @@ const SButton1 = filterProps(Button, ['color'])`
   color: ${({ coldrex }) => coldrex}
 `;
 
-export const Home: FC = () => {
+export const Home = () => {
   const { t } = useTranslation();
-  const { history, location, match } = useReactRouter();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleChange = (name: string) => (e: ChangeEvent<HTMLInputElement>, value: any) =>
     console.info('change: ', {
@@ -41,7 +44,7 @@ export const Home: FC = () => {
     });
 
   return (
-    <div>
+    <>
       <div style={{ padding: '10px' }}>
         <Countdown ticks={10} onComplete={() => console.log('finish')} />
       </div>
@@ -88,8 +91,7 @@ export const Home: FC = () => {
 
       <div>My location is {location.pathname}!</div>
       <div>location: {JSON.stringify(location)}!</div>
-      <div>history: {JSON.stringify(history)}!</div>
-      <div>match: {JSON.stringify(match)}!</div>
+      <div>navigate: {JSON.stringify(navigate)}!</div>
 
       <h2>Home</h2>
       <Button>This is a hotpink button.</Button>
@@ -119,8 +121,6 @@ export const Home: FC = () => {
 
       <div>{t('name.label')}</div>
       <div>{t('home.label')}</div>
-    </div>
+    </>
   );
 };
-
-export default Home;

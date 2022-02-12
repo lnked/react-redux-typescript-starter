@@ -8,7 +8,7 @@ import i18n, { i18nInit, i18nUnload } from '@i18n/index';
 import { ErrorFallback } from '@components/ErrorFallback';
 import { CoreLayout } from '@layouts/CoreLayout';
 
-import Switcher from '@app/Switcher';
+import { Switch } from '@app/Switch';
 import { GlobalStyle } from '@app/styles';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
           <Router>
             <CoreLayout>
               <Suspense fallback={null}>
-                <Switcher />
+                <Switch />
               </Suspense>
             </CoreLayout>
           </Router>

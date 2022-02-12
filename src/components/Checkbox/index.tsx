@@ -1,4 +1,4 @@
-import { useState, FC } from 'react';
+import { useState } from 'react';
 
 import { StyledLabel, StyledInput, StyledBox, StyledText } from './styles';
 
@@ -6,7 +6,7 @@ export interface Props {
   checked?: boolean;
 }
 
-export const Checkbox: FC<Props> = ({ checked = false }) => {
+export const Checkbox = ({ checked = false }: Props) => {
   const [isChecked, setChecked] = useState(checked);
 
   const handleChange = () => setChecked(prevState => !prevState);

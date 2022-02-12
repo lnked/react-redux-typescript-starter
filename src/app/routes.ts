@@ -18,16 +18,26 @@ export const NoMatch = lazy(
     ),
 );
 
-export const routes = [
-  { keyName: 'navigation.home', to: '/', component: Home, exact: true },
-  { keyName: 'navigation.about', to: '/about', component: Example },
+export type RouteProps = {
+  keyName: string;
+  to: string;
+  path?: string;
+  element: any;
+};
+
+export const routes: RouteProps[] = [
+  { keyName: 'navigation.home', to: '/', element: Home },
+  { keyName: 'navigation.about', to: '/about', element: Example },
   {
     keyName: 'navigation.shop',
     to: '/shop',
-    component: Home,
-    path: ['/shop', '/shop/:product'],
-    exact: true,
+    path: '/shop',
+    element: Home,
+  },
+  {
+    keyName: 'navigation.product',
+    to: '/shop/xxx',
+    path: '/shop/:product',
+    element: Home,
   },
 ];
-
-export { Home };

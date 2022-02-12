@@ -1,3 +1,3 @@
-export const NoMatch = ({ match }: any) => <div>Error Page {JSON.stringify(match)}</div>;
-
-export default NoMatch;
+export const NoMatch = () => {
+  return <div>Error Page</div>;
+};

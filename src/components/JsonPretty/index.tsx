@@ -1,5 +1,3 @@
-import { FC } from 'react';
-
 import { Code, Wrapper } from './styles';
 
 export interface OuterProps {
@@ -7,7 +5,7 @@ export interface OuterProps {
   theme?: string;
 }
 
-export const JsonPretty: FC<OuterProps> = ({ json }: OuterProps) => (
+export const JsonPretty = ({ json }: OuterProps) => (
   <Wrapper>
     <Code>{JSON.stringify(json, null, '  ')}</Code>
   </Wrapper>

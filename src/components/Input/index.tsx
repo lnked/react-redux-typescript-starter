@@ -1,10 +1,12 @@
-import { useEffect, createRef, FC } from 'react';
+import { useEffect, createRef } from 'react';
 
 import { Wrapper, Label, BaseInput, ResetButton, InputWrapper } from './style';
 import { useInputState } from './useInputState';
 import { OuterProps } from './types';
 
-export const Input: FC<OuterProps> = ({
+const defaultInputProps = {};
+
+export const Input = ({
   label,
   error,
   focus,
@@ -14,7 +16,7 @@ export const Input: FC<OuterProps> = ({
   defaultValue,
   inputClassName,
   ...attrs
-} = {}) => {
+}: OuterProps = defaultInputProps) => {
   const textInput = createRef<HTMLInputElement>();
 
   const pair = `field-${Math.random()}`;

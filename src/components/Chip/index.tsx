@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { PropsWithChildren } from 'react';
 import classNames from 'classnames';
 
 import styles from './styles.module.scss';
@@ -24,7 +24,7 @@ export const CHIP_SIZE: Record<ChipSizeType, ChipSizeType> = {
   x: 'x',
 };
 
-export const Chip: FC<Props> = ({ size, label, children }) => {
+export const Chip = ({ size, label, children }: PropsWithChildren<Props>) => {
   return (
     <div className={classNames(styles.chip, size && styles[size])}>
       <div className={styles.chip__name}>{label || children}</div>

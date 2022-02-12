@@ -1,5 +1,4 @@
 const { resolve } = require('path');
-const webpack = require('webpack');
 
 const options = require('../options');
 
@@ -12,5 +11,4 @@ module.exports = {
   output: {
     path: resolve(options.root, 'server'),
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
 };

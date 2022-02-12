@@ -1,4 +1,4 @@
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Navigate } from 'react-router-dom';
 
 const fakeAuth = {
   isAuthenticated: false,
@@ -15,6 +15,6 @@ const fakeAuth = {
 export const PrivateRoute = ({ component: Component, alternative = '/', ...rest }: any) => (
   <Route
     {...rest}
-    render={(props: any) => (fakeAuth.isAuthenticated ? <Component {...props} /> : <Redirect to={alternative} />)}
+    render={(props: any) => (fakeAuth.isAuthenticated ? <Component {...props} /> : <Navigate to={alternative} />)}
   />
 );
