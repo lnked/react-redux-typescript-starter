@@ -3019,12 +3019,12 @@ autoprefixer@10.4.2, autoprefixer@^10.4.2:
     picocolors "^1.0.0"
     postcss-value-parser "^4.2.0"
 
-axios@0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.25.0.tgz#349cfbb31331a9b4453190791760a8d35b093e0a"
-  integrity sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==
+axios@0.26.0:
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.0.tgz#9a318f1c69ec108f8cd5f3c3d390366635e13928"
+  integrity sha512-lKoGLMYtHvFrPVt3r+RBMp9nh34N0M8zEfCWqdWZx6phynIEhQqAdydpyBAAG211zlhX9Rgu08cOamy6XjE5Og==
   dependencies:
-    follow-redirects "^1.14.7"
+    follow-redirects "^1.14.8"
 
 axios@^0.21.1:
   version "0.21.4"
@@ -4313,7 +4313,7 @@ css@^3.0.0:
     source-map "^0.6.1"
     source-map-resolve "^0.6.0"
 
-cssdb@^6.2.1:
+cssdb@^6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/cssdb/-/cssdb-6.3.0.tgz#d5df430a6ff7bb09af377b8c6d8da61d8f4017a4"
   integrity sha512-U/nJSGsM0NIEsVPwat6r6QrvtqZ8m+eYb8qLoSFXXWNghy5x3z6ftubzbb6AMFcvaYVVRXKAmgD1I1e2A31qug==
@@ -5893,7 +5893,7 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.5.tgz#76c8584f4fc843db64702a6bd04ab7a8bd666da3"
   integrity sha512-WIWGi2L3DyTUvUrwRKgGi9TwxQMUEqPOPQBVi71R96jZXJdFskXEmf54BoZaS1kknGODoIGASGEzBUYdyMCBJg==
 
-follow-redirects@^1.0.0, follow-redirects@^1.14.0, follow-redirects@^1.14.7:
+follow-redirects@^1.0.0, follow-redirects@^1.14.0, follow-redirects@^1.14.8:
   version "1.14.8"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.8.tgz#016996fb9a11a100566398b1c6839337d7bfa8fc"
   integrity sha512-1x0S9UVJHsQprFcEC/qnNzBLcIxsjAV905f/UkQxbclCsoTWlacCNOpQa/anodLl2uaEKFhfWOvM2Qg77+15zA==
@@ -7958,10 +7958,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
-lint-staged@^12.3.3:
-  version "12.3.3"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.3.3.tgz#0a465962fe53baa2b4b9da50801ead49a910e03b"
-  integrity sha512-OqcLsqcPOqzvsfkxjeBpZylgJ3SRG1RYqc9LxC6tkt6tNsq1bNVkAixBwX09f6CobcHswzqVOCBpFR1Fck0+ag==
+lint-staged@^12.3.4:
+  version "12.3.4"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.3.4.tgz#4b1ff8c394c3e6da436aaec5afd4db18b5dac360"
+  integrity sha512-yv/iK4WwZ7/v0GtVkNb3R82pdL9M+ScpIbJLJNyCXkJ1FGaXvRCOg/SeL59SZtPpqZhE7BD6kPKFLIDUhDx2/w==
   dependencies:
     cli-truncate "^3.1.0"
     colorette "^2.0.16"
@@ -9620,10 +9620,10 @@ postcss-position@1.1.0:
   dependencies:
     postcss "^6.0.7"
 
-postcss-preset-env@7.3.2:
-  version "7.3.2"
-  resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-7.3.2.tgz#67565c1970859b12724ea5da449c30c96c29e4e2"
-  integrity sha512-bxKNZu7/JWTiePds3IJlDdnCaYkIQt38KkfMX9mKmDw0+D8tpf/a+1sog34BuiDsRsKWYYGaPvfKw61gJs7f6A==
+postcss-preset-env@7.3.3:
+  version "7.3.3"
+  resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-7.3.3.tgz#2c08a717549b282c89be7c90827147814d41809b"
+  integrity sha512-/4EIceyxf6LKihp88YnQ0uExt//EHozxOspsCQbLq9/RB4W0zutdk52XJZzDYtCkvergw0NTTQvB7TpdxBRbvQ==
   dependencies:
     "@csstools/postcss-font-format-keywords" "^1.0.0"
     "@csstools/postcss-hwb-function" "^1.0.0"
@@ -9635,7 +9635,7 @@ postcss-preset-env@7.3.2:
     css-blank-pseudo "^3.0.3"
     css-has-pseudo "^3.0.4"
     css-prefers-color-scheme "^6.0.3"
-    cssdb "^6.2.1"
+    cssdb "^6.3.0"
     postcss-attribute-case-insensitive "^5.0.0"
     postcss-clamp "^3.0.0"
     postcss-color-functional-notation "^4.2.2"
