@@ -238,7 +238,7 @@
     "react-loading-skeleton": "^3.0.3",
     "react-maskedinput": "4.0.1",
     "react-progressive-image": "0.6.0",
-    "react-query": "^3.34.18",
+    "react-query": "^3.34.19",
     "react-redux": "^7.2.6",
     "react-router-dom": "6.2.2",
     "react-use-localstorage": "3.5.3",
