@@ -1,7 +1,9 @@
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { render, screen } from '@testing-library/react';
 
 import App from './App';
+
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;
 
 jest.mock('react-redux', () => ({
   useDispatch: () => {},
@@ -25,8 +27,10 @@ describe('renders without crashing', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<App />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const root = createRoot(div);
+
+    root.render(<App />);
+    root.unmount();
   });
 
   it('Should render and match the snapshot', () => {
