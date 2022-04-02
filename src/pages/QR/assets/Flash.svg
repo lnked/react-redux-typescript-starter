@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="18px" viewBox="0 0 14 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Untitled</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flash" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M0,4.2574 L0,1.5 C0,0.6716 0.6716,0 1.5,0 L12.5,0 C13.3284,0 14,0.6716 14,1.5 L14,4.2574 C14,5.053 13.6839,5.8161 13.1213,6.3787 L11.3787,8.1213 C10.8161,8.6839 10.5,9.447 10.5,10.2426 L10.5,16.5 C10.5,17.3284 9.8284,18 9,18 L5,18 C4.1716,18 3.5,17.3284 3.5,16.5 L3.5,10.2426 C3.5,9.447 3.1839,8.6839 2.6213,8.1213 L0.8787,6.3787 C0.3161,5.8161 0,5.053 0,4.2574 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

@@ -10,5 +10,6 @@ module.exports = {
     sourceMapFilename: '[name].[contenthash:5].js.map',
     assetModuleFilename: `${staticPath}/images/[hash][ext][query]`,
     crossOriginLoading: 'anonymous',
+    webassemblyModuleFilename: '[hash].wasm',
   },
 };

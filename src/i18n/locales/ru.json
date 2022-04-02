@@ -5,6 +5,7 @@
   "home": { "label": "Дом" },
   "name": { "label": "Имя" },
   "navigation": {
+    "QR": "QR",
     "shop": "Магазин",
     "product": "Товар",
     "cart": "Корзина",
