@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 
 import { useCamera } from './hooks/useCamera';
 import { Modal } from './components/Modal';
+import { CAMERA_LIFETIME } from './constants';
 
 const CurrentStatus = styled.div`
   font-size: 16px;
@@ -39,9 +40,23 @@ export const QR = () => {
     });
   };
 
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleTimeout = (time: number) => {
+    console.log({ time });
+
+    if (time === CAMERA_LIFETIME) {
+      alert('limit');
+    }
+  };
+
   return (
     <>
-      <Modal isOpen={isOpen} />
+      {JSON.stringify({ isOpen })}
+
+      <Modal isOpen={isOpen} onClose={handleClose} onTimeout={handleTimeout} />
 
       <CurrentStatus>
         Статус разрешения <StatusName type={status}>{statusList?.[status] || ''}</StatusName>

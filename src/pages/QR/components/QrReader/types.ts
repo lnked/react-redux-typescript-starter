@@ -38,6 +38,8 @@ export type QrReaderProps = {
    * Property that represents a style for the video
    */
   videoStyle?: any;
+
+  isActive?: boolean;
 };
 
 export type OnResultFunction = (
@@ -72,6 +74,8 @@ export type UseQrReaderHookProps = {
    * Property that represents the ID of the video element
    */
   videoId?: string;
+
+  isActive?: boolean;
 };
 
 export type UseQrReaderHook = (props: UseQrReaderHookProps) => void;

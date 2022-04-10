@@ -1,5 +1,6 @@
 /* eslint-disable smells/no-complex-chaining */
 import { useEffect, useState } from 'react';
+import { scanImageData } from 'zbar.wasm';
 
 import { requestMediaPermissions } from '../utils';
 
@@ -62,8 +63,47 @@ export const useCamera = () => {
     });
   };
 
+  const scanData = async () => {
+    // const width = video.videoWidth;
+    // const height = video.videoHeight;
+    // canvas.width = width;
+    // canvas.height = height;
+    // const ctx = canvas.getContext('2d');
+    // ctx.drawImage(video, 0, 0, width, height);
+    // const imgData = ctx.getImageData(0, 0, width, height);
+    // const res = await scanImageData(imgData);
+    // console.log(res?.[0]?.decode(), Date.now());
+    // render(res);
+  };
+
+  // const sleep = (ms) =>
+  //   new Promise((r) => {
+  //     setTimeout(r, ms);
+  //   });
+
+  // const main = async () => {
+  //   try {
+  //     await init();
+  //     while (true) {
+  //       await scan();
+  //       await sleep(SCAN_PROID_MS);
+  //     }
+  //   } catch (err) {
+  //     const div = document.createElement("div");
+  //     div.className = "full middle";
+  //     div.style =
+  //       "height: 72px; width: 100%; text-align: center; font-size: 36px";
+  //     div.innerText = "Cannot get cammera: " + err;
+  //     document.body.appendChild(div);
+  //     console.error(err);
+  //   }
+  // };
+
+  // main();
+
   return {
     status,
+    scanData,
     requestPermission,
   };
 };

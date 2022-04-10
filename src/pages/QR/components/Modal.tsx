@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, useCallback } from 'react';
 import { Flex } from 'reflexbox/styled-components';
 import styled from 'styled-components/macro';
 
-import { CameraIcon, ImageIcon, FlashIcon } from '../assets';
+import { CameraIcon, CloseIcon, ImageIcon, FlashIcon } from '../assets';
 import { locale } from '../locale';
 import { QrReader } from './QrReader';
 import { Timer } from './Timer';
@@ -71,6 +71,23 @@ const Icon = styled.button<{ logo: string }>`
   }
 `;
 
+const CloseButton = styled.button`
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  z-index: 300;
+  border: 0;
+  cursor: pointer;
+  background-image: url(${CloseIcon});
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 14px 14px;
+`;
+
 const Camera = styled.div`
   width: 100%;
   height: 100vh;
@@ -86,28 +103,24 @@ const previewStyle = {
   border: '1px solid lime',
 };
 
-export const Modal = ({ isOpen }: any) => {
+export const Modal = ({ isOpen, onClose, onTimeout }: any) => {
   const [data, setData] = useState();
+
+  const handleScan = (data: any) => {
+    console.log('handleScan', { isOpen });
+    setData(data);
+  };
 
   if (!isOpen) {
     return null;
   }
 
-  const handleError = (err: any) => {
-    console.log('handleError');
-    console.error(err);
-  };
-
-  const handleScan = (data: any) => {
-    console.log('handleScan');
-
-    setData(data);
-  };
-
   return (
     <ModalWindow>
+      <CloseButton type="button" onClick={onClose} />
+
       <Title>
-        {locale.title} <Timer />
+        {locale.titles.base} <Timer onTik={onTimeout} />
       </Title>
 
       {/* {JSON.stringify({ data })} */}
@@ -121,6 +134,7 @@ export const Modal = ({ isOpen }: any) => {
         videoStyle={{ width: '100%', height: '100%' }}
         scanDelay={readerDelay}
         onResult={handleScan}
+        isActive={isOpen}
         // videoId="qrCamera"
         // ViewFinder={}
       />

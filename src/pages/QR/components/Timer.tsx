@@ -1,11 +1,13 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 
-export const Timer = () => {
+export const Timer = ({ onTik }: any) => {
   const timeout = useRef<ReturnType<typeof setTimeout>>();
   const [time, setTime] = useState(0);
 
   const resetTimeout = () => {
-    timeout.current && clearTimeout(timeout.current);
+    if (timeout.current) {
+      clearTimeout(timeout.current);
+    }
   };
 
   const startTimer = useCallback(() => {
@@ -18,9 +20,15 @@ export const Timer = () => {
   }, []);
 
   useEffect(() => {
+    onTik(time);
+  }, [onTik, time]);
+
+  useEffect(() => {
     startTimer();
 
-    return resetTimeout;
+    return () => {
+      resetTimeout();
+    };
   }, [startTimer]);
 
   return <>({time} сек.)</>;

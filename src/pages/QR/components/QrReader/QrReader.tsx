@@ -13,13 +13,19 @@ export const QrReader = ({
   className,
   onResult,
   videoId,
+  isActive = false,
 }: QrReaderProps) => {
   useQrReader({
     constraints,
     scanDelay,
+    isActive,
     onResult,
     videoId,
   });
+
+  if (!isActive) {
+    return null;
+  }
 
   return (
     <section className={className} style={containerStyle}>

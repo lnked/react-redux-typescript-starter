@@ -1,5 +1,10 @@
 const { dist, hashName, staticPath, publicPath } = require('../options');
 
+// const buildPath = process.env.BUILD_PATH || 'build';
+
+// appBuild: resolveApp(buildPath),
+// path: paths.appBuild,
+
 module.exports = {
   output: {
     path: dist,

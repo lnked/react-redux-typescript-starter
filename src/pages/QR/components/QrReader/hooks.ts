@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable complexity */
 /* eslint-disable smells/no-complex-chaining */
 import { MutableRefObject, useEffect, useRef } from 'react';
 import { BrowserQRCodeReader, IScannerControls } from '@zxing/browser';
@@ -12,40 +14,43 @@ export const useQrReader: UseQrReaderHook = ({
   constraints: video,
   onResult,
   videoId,
+  isActive = false,
 }) => {
   const controlsRef: MutableRefObject<IScannerControls | null> = useRef(null);
 
   useEffect(() => {
-    const codeReader = new BrowserQRCodeReader(undefined, {
-      delayBetweenScanAttempts,
-    });
+    if (isActive) {
+      const codeReader = new BrowserQRCodeReader(undefined, {
+        delayBetweenScanAttempts,
+      });
 
-    if (!isMediaDevicesSupported() && isValidType(onResult, 'onResult', 'function')) {
-      const message =
-        'MediaDevices API has no support for your browser. You can fix this by running "npm i webrtc-adapter"';
+      if (!isMediaDevicesSupported() && isValidType(onResult, 'onResult', 'function')) {
+        const message =
+          'MediaDevices API has no support for your browser. You can fix this by running "npm i webrtc-adapter"';
 
-      if (onResult) {
-        onResult(null, new Error(message), codeReader);
+        if (onResult) {
+          onResult(null, new Error(message), codeReader);
+        }
       }
-    }
 
-    if (isValidType(video, 'constraints', 'object')) {
-      codeReader
-        .decodeFromConstraints({ video }, videoId, (result, error) => {
-          if (isValidType(onResult, 'onResult', 'function')) {
-            onResult && onResult(result, error, codeReader);
-          }
-        })
-        .then((controls: IScannerControls) => (controlsRef.current = controls))
-        .catch((error: Error) => {
-          if (isValidType(onResult, 'onResult', 'function')) {
-            onResult && onResult(null, error, codeReader);
-          }
-        });
+      if (isValidType(video, 'constraints', 'object')) {
+        codeReader
+          .decodeFromConstraints({ video }, videoId, (result, error) => {
+            if (isValidType(onResult, 'onResult', 'function')) {
+              onResult && onResult(result, error, codeReader);
+            }
+          })
+          .then((controls: IScannerControls) => (controlsRef.current = controls))
+          .catch((error: Error) => {
+            if (isValidType(onResult, 'onResult', 'function')) {
+              onResult && onResult(null, error, codeReader);
+            }
+          });
+      }
     }
 
     return () => {
       controlsRef.current?.stop();
     };
-  }, [delayBetweenScanAttempts, onResult, video, videoId]);
+  }, [delayBetweenScanAttempts, onResult, video, videoId, isActive]);
 };
