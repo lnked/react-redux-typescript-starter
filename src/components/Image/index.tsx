@@ -14,7 +14,7 @@ export interface OuterProps {
 export const Image = ({ src, className, ...props }: OuterProps) => {
   return (
     <Picture className={className}>
-      <ProgressiveImage src={src} placeholder={src}>
+      {/* <ProgressiveImage src={src} placeholder={src}>
         {(resource = '', loading = true) => {
           if (loading) {
             return <Loading>Loading...</Loading>;
@@ -22,7 +22,7 @@ export const Image = ({ src, className, ...props }: OuterProps) => {
 
           return <Source {...props} src={resource} />;
         }}
-      </ProgressiveImage>
+      </ProgressiveImage> */}
     </Picture>
   );
 };

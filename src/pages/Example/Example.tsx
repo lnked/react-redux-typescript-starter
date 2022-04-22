@@ -9,7 +9,8 @@ export const Example = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
-  const fetchNews = useCallback(() => dispatch(actions.fetchItems()), [dispatch]);
+  // const fetchNews = useCallback(() => dispatch(actions.fetchItems()), [dispatch]);
+  const fetchNews = useCallback(() => null, []);
 
   useEffect(() => {
     fetchNews();
