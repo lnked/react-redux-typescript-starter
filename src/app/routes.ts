@@ -10,14 +10,6 @@ export const Example = lazy(
     ),
 );
 
-export const QRCode = lazy(
-  () =>
-    import(
-      /* webpackChunkName: "QRCode", webpackPrefetch: true */
-      '@pages/QRCode'
-    ),
-);
-
 export const NoMatch = lazy(
   () =>
     import(
@@ -35,7 +27,6 @@ export type RouteProps = {
 
 export const routes: RouteProps[] = [
   { keyName: 'navigation.home', to: '/', element: Home },
-  { keyName: 'navigation.QR', to: '/qr', element: QRCode },
   { keyName: 'navigation.about', to: '/about', element: Example },
   {
     keyName: 'navigation.shop',

@@ -5,7 +5,6 @@
   "home": { "label": "Home" },
   "name": { "label": "Name" },
   "navigation": {
-    "QR": "QR",
     "shop": "Shop",
     "cart": "Cart",
     "product": "Product",
