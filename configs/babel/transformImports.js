@@ -39,6 +39,10 @@ const transformImports = (dirname, preventFullImport = false, skipDefaultConvers
 };
 
 module.exports = {
+  'react-router': {
+    transform: 'react-router/${member}',
+    preventFullImport: true,
+  },
   // '\.\/components(\/(\w*)?\/?)?': transformImports('./components', false),
   // '\.\.\/i18n\/?(((\\w*)?\/?)*)': transformImports('i18n', false, true),
   // '\.\.\/utils\/?(((\\w*)?\/?)*)': transformImports('utils', false, true),
