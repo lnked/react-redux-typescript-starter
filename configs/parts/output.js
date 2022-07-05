@@ -1,5 +1,10 @@
 const { dist, hashName, staticPath, publicPath } = require('../options');
 
+// const buildPath = process.env.BUILD_PATH || 'build';
+
+// appBuild: resolveApp(buildPath),
+// path: paths.appBuild,
+
 module.exports = {
   output: {
     path: dist,
@@ -10,5 +15,6 @@ module.exports = {
     sourceMapFilename: '[name].[contenthash:5].js.map',
     assetModuleFilename: `${staticPath}/images/[hash][ext][query]`,
     crossOriginLoading: 'anonymous',
+    webassemblyModuleFilename: '[hash].wasm',
   },
 };

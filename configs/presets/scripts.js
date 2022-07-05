@@ -39,5 +39,10 @@ module.exports = () => {
       },
       false,
     ),
+
+    {
+      test: /\.wasm$/,
+      type: 'webassembly/async',
+    },
   ];
 };
