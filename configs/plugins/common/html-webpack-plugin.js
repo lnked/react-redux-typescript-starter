@@ -23,18 +23,16 @@ const options = production
       minify: false,
     };
 
-module.exports = () => {
-  return [
-    new HtmlWebpackPlugin({
-      alwaysWriteToDisk: true,
-      template: resolve(root, 'public/index.html'),
-      filename: 'index.html',
-      PUBLIC_URL: '/',
-      title: JSON.parse(environment.APP_NAME),
-      description: JSON.parse(environment.APP_DESCRIPTION),
-      excludeAssets: [/runtime.*.js/],
-      ...options,
-    }),
-    new ResourceHintWebpackPlugin(),
-  ];
-};
+module.exports = () => [
+  new HtmlWebpackPlugin({
+    alwaysWriteToDisk: true,
+    template: resolve(root, 'public/index.html'),
+    filename: 'index.html',
+    PUBLIC_URL: '/',
+    title: JSON.parse(environment.APP_NAME),
+    description: JSON.parse(environment.APP_DESCRIPTION),
+    excludeAssets: [/runtime.*.js/],
+    ...options,
+  }),
+  new ResourceHintWebpackPlugin(),
+];
