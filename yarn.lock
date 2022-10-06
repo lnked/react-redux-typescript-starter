@@ -1636,7 +1636,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.18.3", "@babel/runtime@^7.18.9":
+"@babel/runtime@^7.18.3":
   version "7.18.9"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.18.9.tgz#b4fcfce55db3d2e5e080d2490f608a3b9f407f4a"
   integrity sha512-lkqXDcvlFT5rvEjiu6+QYO+1GXrEHRo2LOtS7E4GtX5ESIZOgepqsZBVIj6Pv+a6zqsya9VCgiK1KAK4BvJDAw==
@@ -2627,10 +2627,10 @@
     redux-thunk "^2.4.1"
     reselect "^4.1.5"
 
-"@remix-run/router@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.0.1.tgz#88d7ac31811ab0cef14aaaeae2a0474923b278bc"
-  integrity sha512-eBV5rvW4dRFOU1eajN7FmYxjAIVz/mRHgUE9En9mBn6m3mulK3WTR5C3iQhL9MZ14rWAq+xOlEaCkDiW0/heOg==
+"@remix-run/router@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.0.2.tgz#1c17eadb2fa77f80a796ad5ea9bf108e6993ef06"
+  integrity sha512-GRSOFhJzjGN+d4sKHTMSvNeUPoZiDHWmRnXfzaxrqe7dE/Nzlc8BiMSJdLDESZlndM7jIUrZ/F4yWqVYlI0rwQ==
 
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
@@ -3142,10 +3142,10 @@
     jest-matcher-utils "^28.0.0"
     pretty-format "^28.0.0"
 
-"@types/jest@29.1.1":
-  version "29.1.1"
-  resolved "https://registry.npmjs.org/@types/jest/-/jest-29.1.1.tgz#cf21a0835a1ba9a30ea1966019f1261c6a114c92"
-  integrity sha512-U9Ey07dGWl6fUFaIaUQUKWG5NoKi/zizeVQCGV8s4nSU0jPgqphVZvS64+8BtWYvrc3ZGw6wo943NSYPxkrp/g==
+"@types/jest@29.1.2":
+  version "29.1.2"
+  resolved "https://registry.npmjs.org/@types/jest/-/jest-29.1.2.tgz#7ad8077043ab5f6c108c8111bcc1d224e5600a87"
+  integrity sha512-y+nlX0h87U0R+wsGn6EBuoRWYyv3KFtwRNP3QWp9+k2tJ2/bqcGS3UxD7jgT+tiwJWWq3UsyV4Y+T6rsMT4XMg==
   dependencies:
     expect "^29.0.0"
     pretty-format "^29.0.0"
@@ -3196,10 +3196,10 @@
   resolved "https://registry.npmjs.org/@types/node/-/node-18.0.3.tgz#463fc47f13ec0688a33aec75d078a0541a447199"
   integrity sha512-HzNRZtp4eepNitP+BD6k2L6DROIDG4Q0fm4x+dwfsr6LGmROENnok75VGw40628xf+iR24WeMFcHuuBDUAzzsQ==
 
-"@types/node@^18.8.2":
-  version "18.8.2"
-  resolved "https://registry.npmjs.org/@types/node/-/node-18.8.2.tgz#17d42c6322d917764dd3d2d3a10d7884925de067"
-  integrity sha512-cRMwIgdDN43GO4xMWAfJAecYn8wV4JbsOGHNfNUIDiuYkUYAR5ec4Rj7IO2SAhFPEfpPtLtUTbbny/TCT7aDwA==
+"@types/node@^18.8.3":
+  version "18.8.3"
+  resolved "https://registry.npmjs.org/@types/node/-/node-18.8.3.tgz#ce750ab4017effa51aed6a7230651778d54e327c"
+  integrity sha512-0os9vz6BpGwxGe9LOhgP/ncvYN5Tx1fNcd2TM3rD/aCGBkysb+ZWpXEocG24h6ZzOi13+VB8HndAQFezsSOw1w==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -4098,10 +4098,10 @@ autoprefixer@^10.4.11:
     picocolors "^1.0.0"
     postcss-value-parser "^4.2.0"
 
-axios@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/axios/-/axios-1.0.0.tgz#16ded6096c1d37650db9f6a8d48a2f7c1bb58622"
-  integrity sha512-SsHsGFN1qNPFT5QhSoSD37SHDfGyLSW5AESmyLk2JeCMHv5g0I9g0Hz/zQHx2KNe0jGXh2q2hAm7OdkXm360CA==
+axios@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/axios/-/axios-1.1.0.tgz#94d25e6524743c7fc33954dd536687bbb957793a"
+  integrity sha512-hsJgcqz4JY7f+HZ4cWTrPZ6tZNCNFPTRx1MjRqu/hbpgpHdSCUpLVuplc+jE/h7dOvyANtw/ERA3HC2Rz/QoMg==
   dependencies:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
@@ -5357,14 +5357,14 @@ css-loader@6.7.1:
     postcss-value-parser "^4.2.0"
     semver "^7.3.5"
 
-css-minimizer-webpack-plugin@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.npmjs.org/css-minimizer-webpack-plugin/-/css-minimizer-webpack-plugin-4.2.0.tgz#99b453efcbc4c13d80327d94767f5aa41ee509e7"
-  integrity sha512-9FKGMGafKmYEbHoPh78nrrvumS5yU1rhptqdC2RfTH78MohjxpGMTW2tvdY/iYbD2sLnhzZMKTQ4n9Ja48kxZQ==
+css-minimizer-webpack-plugin@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.npmjs.org/css-minimizer-webpack-plugin/-/css-minimizer-webpack-plugin-4.2.1.tgz#ed5631d8d266b4e2d1389c502a746a93453423e8"
+  integrity sha512-ub12STsk3uXfHFTn9dtkI9nebvUKQ9rB0pn/6WNMRV77nqAOlOOJrrvsP8S8jngcnu+8ll3/9/xa7RCUNBVdOA==
   dependencies:
     cssnano "^5.1.8"
-    jest-worker "^29.0.3"
-    postcss "^8.4.13"
+    jest-worker "^29.1.2"
+    postcss "^8.4.17"
     schema-utils "^4.0.0"
     serialize-javascript "^6.0.0"
     source-map "^0.6.1"
@@ -7832,12 +7832,12 @@ husky@^8.0.0:
   resolved "https://registry.npmjs.org/husky/-/husky-8.0.1.tgz#511cb3e57de3e3190514ae49ed50f6bc3f50b3e9"
   integrity sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==
 
-i18next-browser-languagedetector@6.1.5:
-  version "6.1.5"
-  resolved "https://registry.npmjs.org/i18next-browser-languagedetector/-/i18next-browser-languagedetector-6.1.5.tgz#ed8c9319a8d246995d8ec8fccb5bf5f4248d0fb1"
-  integrity sha512-11t7b39oKeZe4uyMxLSPnfw28BCPNLZgUk7zyufex0zKXZ+Bv+JnmJgoB+IfQLZwDt1d71PM8vwBX1NCgliY3g==
+i18next-browser-languagedetector@6.1.6:
+  version "6.1.6"
+  resolved "https://registry.npmjs.org/i18next-browser-languagedetector/-/i18next-browser-languagedetector-6.1.6.tgz#c8a13185bc0d445bd9afcc8be5ab8d343bb259b1"
+  integrity sha512-5ZErazMh/8ZF5bNmJ9OCvSTzMXzefK9vJMtXekXUkwZ6ZX3XUSagWseQgtbWjo8iiZyCP2lxveKwIBikfVRGDg==
   dependencies:
-    "@babel/runtime" "^7.18.9"
+    "@babel/runtime" "^7.19.0"
 
 i18next@*:
   version "21.8.13"
@@ -7846,10 +7846,10 @@ i18next@*:
   dependencies:
     "@babel/runtime" "^7.17.2"
 
-i18next@21.9.2:
-  version "21.9.2"
-  resolved "https://registry.npmjs.org/i18next/-/i18next-21.9.2.tgz#3f7c5594393eb27117c1db4c38f5ec766e68de0e"
-  integrity sha512-00fVrLQOwy45nm3OtC9l1WiLK3nJlIYSljgCt0qzTaAy65aciMdRy9GsuW+a2AtKtdg9/njUGfRH30LRupV7ZQ==
+i18next@21.10.0:
+  version "21.10.0"
+  resolved "https://registry.npmjs.org/i18next/-/i18next-21.10.0.tgz#85429af55fdca4858345d0e16b584ec29520197d"
+  integrity sha512-YeuIBmFsGjUfO3qBmMOc0rQaun4mIpGKET5WDwvu8lU7gvwpcariZLNtL0Fzj+zazcHUrlXHiptcFhBMFaxzfg==
   dependencies:
     "@babel/runtime" "^7.17.2"
 
@@ -9171,15 +9171,6 @@ jest-worker@^28.0.2:
   version "28.1.1"
   resolved "https://registry.npmjs.org/jest-worker/-/jest-worker-28.1.1.tgz#3480c73247171dfd01eda77200f0063ab6a3bf28"
   integrity sha512-Au7slXB08C6h+xbJPp7VIb6U0XX5Kc9uel/WFc6/rcTzGiaVCBRngBExSYuXSLFPULPSYU3cJ3ybS988lNFQhQ==
-  dependencies:
-    "@types/node" "*"
-    merge-stream "^2.0.0"
-    supports-color "^8.0.0"
-
-jest-worker@^29.0.3:
-  version "29.1.0"
-  resolved "https://registry.npmjs.org/jest-worker/-/jest-worker-29.1.0.tgz#374d741b976a868e39141d63fb401abacc07a8c9"
-  integrity sha512-yr7RFRAxI+vhL/cGB9B0FhD+QfaWh1qSxurx7gLP16dfmqhG8w75D/CQFU8ZetvhiQqLZh8X0C4rxwsZy6HITQ==
   dependencies:
     "@types/node" "*"
     merge-stream "^2.0.0"
@@ -11011,12 +11002,12 @@ postcss-modules-values@^4.0.0:
   dependencies:
     icss-utils "^5.0.0"
 
-postcss-nested@5.0.6:
-  version "5.0.6"
-  resolved "https://registry.npmjs.org/postcss-nested/-/postcss-nested-5.0.6.tgz#466343f7fc8d3d46af3e7dba3fcd47d052a945bc"
-  integrity sha512-rKqm2Fk0KbA8Vt3AdGN0FB9OBOMDVajMG6ZCf/GoHgdxUJ4sBFp0A/uMIRm+MJUdo33YXEtjqIz8u7DAp8B7DA==
+postcss-nested@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npmjs.org/postcss-nested/-/postcss-nested-6.0.0.tgz#1572f1984736578f360cffc7eb7dca69e30d1735"
+  integrity sha512-0DkamqrPcmkBDsLn+vQDIrtkSbNkv5AD/M322ySo9kqFkCIYklym2xEmWkwo+Y3/qZo34tzEPNUw4y7yMCdv5w==
   dependencies:
-    postcss-selector-parser "^6.0.6"
+    postcss-selector-parser "^6.0.10"
 
 postcss-nesting@^10.2.0:
   version "10.2.0"
@@ -11222,7 +11213,7 @@ postcss-selector-not@^6.0.1:
   dependencies:
     postcss-selector-parser "^6.0.10"
 
-postcss-selector-parser@^6.0.10, postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4, postcss-selector-parser@^6.0.5, postcss-selector-parser@^6.0.6, postcss-selector-parser@^6.0.9:
+postcss-selector-parser@^6.0.10, postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4, postcss-selector-parser@^6.0.5, postcss-selector-parser@^6.0.9:
   version "6.0.10"
   resolved "https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-6.0.10.tgz#79b61e2c0d1bfc2602d549e11d0876256f8df88d"
   integrity sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==
@@ -11283,7 +11274,7 @@ postcss-will-change@4.0.1:
   resolved "https://registry.npmjs.org/postcss-will-change/-/postcss-will-change-4.0.1.tgz#7604320aa8ba147e4d00732a37d32658aeb436d4"
   integrity sha512-nJIHJ+mwWviIPVs/vuUfa/w8XAOXUjfYSIfNgdnZdo9uHC96x4nrY2ByEkdwYLvnxKto09JYDSWH8sWYLoUhUA==
 
-postcss@8.4.17:
+postcss@8.4.17, postcss@^8.4.17:
   version "8.4.17"
   resolved "https://registry.npmjs.org/postcss/-/postcss-8.4.17.tgz#f87863ec7cd353f81f7ab2dec5d67d861bbb1be5"
   integrity sha512-UNxNOLQydcOFi41yHNMcKRZ39NeXlr8AxGuZJsdub8vIb12fHzcq37DTU/QtbI6WLxNg2gF9Z+8qtRwTj1UI1Q==
@@ -11309,7 +11300,7 @@ postcss@^7.0.7:
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@^8.4.13, postcss@^8.4.7:
+postcss@^8.4.7:
   version "8.4.14"
   resolved "https://registry.npmjs.org/postcss/-/postcss-8.4.14.tgz#ee9274d5622b4858c1007a74d76e42e56fd21caf"
   integrity sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig==
@@ -11737,20 +11728,20 @@ react-refresh@^0.14.0:
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
 
-react-router-dom@6.4.1:
-  version "6.4.1"
-  resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.4.1.tgz#99c9b7c4967890701c888517475aa5d54d25760e"
-  integrity sha512-MY7NJCrGNVJtGp8ODMOBHu20UaIkmwD2V3YsAOUQoCXFk7Ppdwf55RdcGyrSj+ycSL9Uiwrb3gTLYSnzcRoXww==
+react-router-dom@6.4.2:
+  version "6.4.2"
+  resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.4.2.tgz#115b37d501d6d8ac870683694978c51c43e6c0d2"
+  integrity sha512-yM1kjoTkpfjgczPrcyWrp+OuQMyB1WleICiiGfstnQYo/S8hPEEnVjr/RdmlH6yKK4Tnj1UGXFSa7uwAtmDoLQ==
   dependencies:
-    "@remix-run/router" "1.0.1"
-    react-router "6.4.1"
+    "@remix-run/router" "1.0.2"
+    react-router "6.4.2"
 
-react-router@6.4.1:
-  version "6.4.1"
-  resolved "https://registry.npmjs.org/react-router/-/react-router-6.4.1.tgz#dd9cc4dfa264751d143a4b6c9d4faa60ab3ce26c"
-  integrity sha512-OJASKp5AykDWFewgWUim1vlLr7yfD4vO/h+bSgcP/ix8Md+LMHuAjovA74MQfsfhQJGGN1nHRhwS5qQQbbBt3A==
+react-router@6.4.2:
+  version "6.4.2"
+  resolved "https://registry.npmjs.org/react-router/-/react-router-6.4.2.tgz#300628ee9ed81b8ef1597b5cb98b474efe9779b8"
+  integrity sha512-Rb0BAX9KHhVzT1OKhMvCDMw776aTYM0DtkxqUBP8dNBom3mPXlfNs76JNGK8wKJ1IZEY1+WGj+cvZxHVk/GiKw==
   dependencies:
-    "@remix-run/router" "1.0.1"
+    "@remix-run/router" "1.0.2"
 
 react-shallow-renderer@^16.15.0:
   version "16.15.0"
@@ -13499,10 +13490,10 @@ uglify-js@3.4.x:
     commander "~2.19.0"
     source-map "~0.6.1"
 
-uglify-js@^3.17.2:
-  version "3.17.2"
-  resolved "https://registry.npmjs.org/uglify-js/-/uglify-js-3.17.2.tgz#f55f668b9a64b213977ae688703b6bbb7ca861c6"
-  integrity sha512-bbxglRjsGQMchfvXZNusUcYgiB9Hx2K4AHYXQy2DITZ9Rd+JzhX7+hoocE5Winr7z2oHvPsekkBwXtigvxevXg==
+uglify-js@^3.17.3:
+  version "3.17.3"
+  resolved "https://registry.npmjs.org/uglify-js/-/uglify-js-3.17.3.tgz#f0feedf019c4510f164099e8d7e72ff2d7304377"
+  integrity sha512-JmMFDME3iufZnBpyKL+uS78LRiC+mK55zWfM5f/pWBJfpOttXAqYfdDGRukYhJuyRinvPVAtUhvy7rlDybNtFg==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
