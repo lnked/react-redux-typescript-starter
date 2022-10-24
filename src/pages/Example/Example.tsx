@@ -1,12 +1,10 @@
 import { useCallback, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
-import * as actions from '@stores/providers/news/actions';
 import * as selectors from '@stores/providers/news/selectors';
 
 export const Example = () => {
-  const dispatch = useDispatch();
   const { t } = useTranslation();
 
   // const fetchNews = useCallback(() => dispatch(actions.fetchItems()), [dispatch]);
