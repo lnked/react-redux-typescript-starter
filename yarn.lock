@@ -1676,10 +1676,10 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.20.0":
-  version "7.20.0"
-  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.20.0.tgz#824a9ef325ffde6f78056059db3168c08785e24a"
-  integrity sha512-NDYdls71fTXoU8TZHfbBWg7DiZfNzClcKui/+kyi6ppD2L1qnWW3VV6CjtaBXSUGGhiTWJ6ereOIkUvenif66Q==
+"@babel/runtime@^7.20.1":
+  version "7.20.1"
+  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.20.1.tgz#1148bb33ab252b165a06698fde7576092a78b4a9"
+  integrity sha512-mrzLkl6U9YLF8qpqI7TB82PESyEGjm/0Ly91jG575eVxMMlb8fYfOXFZIJ8XfLrJZQbm7dlKry2bJmXBUEkdFg==
   dependencies:
     regenerator-runtime "^0.13.10"
 
@@ -2675,10 +2675,10 @@
     redux-thunk "^2.4.1"
     reselect "^4.1.5"
 
-"@remix-run/router@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.0.2.tgz#1c17eadb2fa77f80a796ad5ea9bf108e6993ef06"
-  integrity sha512-GRSOFhJzjGN+d4sKHTMSvNeUPoZiDHWmRnXfzaxrqe7dE/Nzlc8BiMSJdLDESZlndM7jIUrZ/F4yWqVYlI0rwQ==
+"@remix-run/router@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.0.3.tgz#953b88c20ea00d0eddaffdc1b115c08474aa295d"
+  integrity sha512-ceuyTSs7PZ/tQqi19YZNBc5X7kj1f8p+4DIyrcIYFY9h+hd1OKm4RqtiWldR9eGEvIiJfsqwM4BsuCtRIuEw6Q==
 
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
@@ -3190,10 +3190,10 @@
     jest-matcher-utils "^28.0.0"
     pretty-format "^28.0.0"
 
-"@types/jest@29.2.0":
-  version "29.2.0"
-  resolved "https://registry.npmjs.org/@types/jest/-/jest-29.2.0.tgz#fa98e08b46ab119f1a74a9552c48c589f5378a96"
-  integrity sha512-KO7bPV21d65PKwv3LLsD8Jn3E05pjNjRZvkm+YTacWhVmykAb07wW6IkZUmQAltwQafNcDUEUrMO2h3jeBSisg==
+"@types/jest@29.2.1":
+  version "29.2.1"
+  resolved "https://registry.npmjs.org/@types/jest/-/jest-29.2.1.tgz#31fda30bdf2861706abc5f1730be78bed54f83ee"
+  integrity sha512-nKixEdnGDqFOZkMTF74avFNr3yRqB1ZJ6sRZv5/28D5x2oLN14KApv7F9mfDT/vUic0L3tRCsh3XWpWjtJisUQ==
   dependencies:
     expect "^29.0.0"
     pretty-format "^29.0.0"
@@ -3244,10 +3244,10 @@
   resolved "https://registry.npmjs.org/@types/node/-/node-18.0.3.tgz#463fc47f13ec0688a33aec75d078a0541a447199"
   integrity sha512-HzNRZtp4eepNitP+BD6k2L6DROIDG4Q0fm4x+dwfsr6LGmROENnok75VGw40628xf+iR24WeMFcHuuBDUAzzsQ==
 
-"@types/node@^18.11.8":
-  version "18.11.8"
-  resolved "https://registry.npmjs.org/@types/node/-/node-18.11.8.tgz#16d222a58d4363a2a359656dd20b28414de5d265"
-  integrity sha512-uGwPWlE0Hj972KkHtCDVwZ8O39GmyjfMane1Z3GUBGGnkZ2USDq7SxLpVIiIHpweY9DS0QTDH0Nw7RNBsAAZ5A==
+"@types/node@^18.11.9":
+  version "18.11.9"
+  resolved "https://registry.npmjs.org/@types/node/-/node-18.11.9.tgz#02d013de7058cea16d36168ef2fc653464cfbad4"
+  integrity sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -4190,10 +4190,10 @@ babel-jest@29.2.2, babel-jest@^29.2.2:
     graceful-fs "^4.2.9"
     slash "^3.0.0"
 
-babel-loader@9.0.1:
-  version "9.0.1"
-  resolved "https://registry.npmjs.org/babel-loader/-/babel-loader-9.0.1.tgz#d473f30a6ffc2f2abca610c01775c40fc5c2a970"
-  integrity sha512-szYjslOXFlj/po5KfrVmiuBAcI6GVHFuAgC96Qd6mMPHdwl4lmAJkYtvjQ1RxxPjgdkKjd3LQgXDE4jxEutNuw==
+babel-loader@9.1.0:
+  version "9.1.0"
+  resolved "https://registry.npmjs.org/babel-loader/-/babel-loader-9.1.0.tgz#839e9ae88aea930864ef9ec0f356dfca96ecf238"
+  integrity sha512-Antt61KJPinUMwHwIIz9T5zfMgevnfZkEVWYDWlG888fgdvRRGD0JTuf/fFozQnfT+uq64sk1bmdHDy/mOEWnA==
   dependencies:
     find-cache-dir "^3.3.2"
     schema-utils "^4.0.0"
@@ -7948,10 +7948,10 @@ husky@^8.0.0:
   resolved "https://registry.npmjs.org/husky/-/husky-8.0.1.tgz#511cb3e57de3e3190514ae49ed50f6bc3f50b3e9"
   integrity sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==
 
-i18next-browser-languagedetector@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.npmjs.org/i18next-browser-languagedetector/-/i18next-browser-languagedetector-7.0.0.tgz#eb0775b6f26b7a6bb6ed0289351899e8a152cfbd"
-  integrity sha512-RrH7z5/DbhzhgCLDFIKXBTZlb2aXi38ZHa5e5oZaPt9zGLWmgAX49mzkQL/E7R6Y9fTE8QbZFuyMV0ronu4H/Q==
+i18next-browser-languagedetector@7.0.1:
+  version "7.0.1"
+  resolved "https://registry.npmjs.org/i18next-browser-languagedetector/-/i18next-browser-languagedetector-7.0.1.tgz#ead34592edc96c6c3a618a51cb57ad027c5b5d87"
+  integrity sha512-Pa5kFwaczXJAeHE56CHG2aWzFBMJNUNghf0Pm4SwSrEMps/PTKqW90EYWlIvhuYStf3Sn1K0vw+gH3+TLdkH1g==
   dependencies:
     "@babel/runtime" "^7.19.4"
 
@@ -9831,10 +9831,10 @@ markdown-loader@8.0.0:
   dependencies:
     marked "^4.0.12"
 
-marked@4.1.1:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/marked/-/marked-4.1.1.tgz#2f709a4462abf65a283f2453dc1c42ab177d302e"
-  integrity sha512-0cNMnTcUJPxbA6uWmCmjWz4NJRe/0Xfk2NhXCUHjew9qJzFN20krFnsUe7QynwqOwa5m1fZ4UDg0ycKFVC0ccw==
+marked@4.2.1:
+  version "4.2.1"
+  resolved "https://registry.npmjs.org/marked/-/marked-4.2.1.tgz#eaa32594e45b4e58c02e4d118531fd04345de3b4"
+  integrity sha512-VK1/jNtwqDLvPktNpL0Fdg3qoeUZhmRsuiIjPEy/lHwXW4ouLoZfO4XoWd4ClDt+hupV1VLpkZhEovjU0W/kqA==
 
 marked@^4.0.12:
   version "4.0.17"
@@ -11953,20 +11953,20 @@ react-refresh@^0.14.0:
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
 
-react-router-dom@6.4.2:
-  version "6.4.2"
-  resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.4.2.tgz#115b37d501d6d8ac870683694978c51c43e6c0d2"
-  integrity sha512-yM1kjoTkpfjgczPrcyWrp+OuQMyB1WleICiiGfstnQYo/S8hPEEnVjr/RdmlH6yKK4Tnj1UGXFSa7uwAtmDoLQ==
+react-router-dom@6.4.3:
+  version "6.4.3"
+  resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.4.3.tgz#70093b5f65f85f1df9e5d4182eb7ff3a08299275"
+  integrity sha512-MiaYQU8CwVCaOfJdYvt84KQNjT78VF0TJrA17SIQgNHRvLnXDJO6qsFqq8F/zzB1BWZjCFIrQpu4QxcshitziQ==
   dependencies:
-    "@remix-run/router" "1.0.2"
-    react-router "6.4.2"
+    "@remix-run/router" "1.0.3"
+    react-router "6.4.3"
 
-react-router@6.4.2:
-  version "6.4.2"
-  resolved "https://registry.npmjs.org/react-router/-/react-router-6.4.2.tgz#300628ee9ed81b8ef1597b5cb98b474efe9779b8"
-  integrity sha512-Rb0BAX9KHhVzT1OKhMvCDMw776aTYM0DtkxqUBP8dNBom3mPXlfNs76JNGK8wKJ1IZEY1+WGj+cvZxHVk/GiKw==
+react-router@6.4.3:
+  version "6.4.3"
+  resolved "https://registry.npmjs.org/react-router/-/react-router-6.4.3.tgz#9ed3ee4d6e95889e9b075a5d63e29acc7def0d49"
+  integrity sha512-BT6DoGn6aV1FVP5yfODMOiieakp3z46P1Fk0RNzJMACzE7C339sFuHebfvWtnB4pzBvXXkHP2vscJzWRuUjTtA==
   dependencies:
-    "@remix-run/router" "1.0.2"
+    "@remix-run/router" "1.0.3"
 
 react-shallow-renderer@^16.15.0:
   version "16.15.0"
