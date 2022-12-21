@@ -243,7 +243,7 @@
     "react-progressive-image": "0.6.0",
     "react-query": "^4.0.0",
     "react-redux": "^8.0.5",
-    "react-router-dom": "6.5.0",
+    "react-router-dom": "6.6.0",
     "react-use-localstorage": "3.5.3",
     "redux": "^4.2.0",
     "redux-immutable-state-invariant": "^2.1.0",
